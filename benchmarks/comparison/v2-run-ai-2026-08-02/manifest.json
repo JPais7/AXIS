@@ -1,14 +1,15 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "status": "partial_internal_ai_run",
   "protocol": "scoped workflow comparison v2",
   "accession": "GSE18781",
   "completed_workflows": [
     "axis",
-    "manual_statistics"
+    "manual_statistics",
+    "limma_local"
   ],
   "incomplete_workflows": [
-    "geo2r",
+    "geo2r_server",
     "expressanalyst"
   ],
   "publishable_comparison": false,
@@ -27,11 +28,27 @@
     },
     {
       "path": "compare.py",
-      "sha256": "4547fbac76b1291352dca0dc5620202e95f06b5096daa28764789ce64ae84a4c"
+      "sha256": "8485bc630dad6fa4acde05233cc373ff1c43520cf1134cb7d96375e93a2a7ca7"
     },
     {
       "path": "comparison-report.json",
-      "sha256": "93d8514ab5be9c1a64cf5f984eab56ee4c0c2c4626b252e1d2beda048f12a53d"
+      "sha256": "6c77898c42c95eb740243127be7212e0387c622369947a0e3bac11db0563e8a6"
+    },
+    {
+      "path": "limma-local/analyze.R",
+      "sha256": "764704d1c9f2829a96957d0e4f3766082ae7c2bdaa00c71147ad03706f6903e9"
+    },
+    {
+      "path": "limma-local/differential-expression.tsv",
+      "sha256": "464020d9a66902206454377fe77957cef8edae6106be48f20ef598cc13fdbd15"
+    },
+    {
+      "path": "limma-local/methods.tsv",
+      "sha256": "469854f49c5e7721904879f09ae91c6ada4d809f0e1144d9c010296e12a034bf"
+    },
+    {
+      "path": "limma-local/session-info.txt",
+      "sha256": "5ec530e34359ff1ec440e41f2dd66c2c6781019438f4b89ae63a1d1562fc1c51"
     },
     {
       "path": "manual/analyze.py",
@@ -47,7 +64,7 @@
     },
     {
       "path": "RUN-REPORT.md",
-      "sha256": "96073c777d8a735ba7ae352dc850d1a051f69585fc1a4eda69fa13866222670d"
+      "sha256": "966f896734739a307be45c603b54b96fa7313ea813dbdacad9144dbc05148f06"
     },
     {
       "path": "WEB-ATTEMPTS.md",

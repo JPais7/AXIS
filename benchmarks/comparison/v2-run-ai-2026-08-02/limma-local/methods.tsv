@@ -1,0 +1,12 @@
+accession	GSE18781
+platform	GPL570
+status	local_limma_reproduction_not_geo2r_server
+case_samples	18
+control_samples	25
+design	~0 + group
+contrast	case - control
+empirical_bayes_proportion	0.01
+multiple_testing	Benjamini-Hochberg
+elapsed_seconds	3.22
+R	4.6.1
+limma	3.68.4

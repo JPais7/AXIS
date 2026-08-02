@@ -5,16 +5,47 @@
   "platform": "GPL570",
   "completed_workflows": [
     "axis",
-    "manual_statistics"
+    "manual_statistics",
+    "limma_local"
   ],
   "incomplete_workflows": [
-    "geo2r",
+    "geo2r_server",
     "expressanalyst"
   ],
-  "shared_probes": 54675,
-  "effect_spearman": 0.9999999999999999,
-  "direction_agreement_fraction": 1.0,
-  "top_100_overlap": 2,
-  "top_500_overlap": 361,
+  "pairwise": [
+    {
+      "left": "axis",
+      "right": "manual_statistics",
+      "shared_probes": 54675,
+      "effect_spearman": 0.9999999999999999,
+      "adjusted_p_spearman": 0.9853165142959485,
+      "maximum_absolute_effect_difference": 4.445777079808977e-12,
+      "direction_agreement_fraction": 1.0,
+      "top_100_overlap": 2,
+      "top_500_overlap": 361
+    },
+    {
+      "left": "axis",
+      "right": "limma_local",
+      "shared_probes": 54675,
+      "effect_spearman": 0.9999999999999999,
+      "adjusted_p_spearman": 1.0,
+      "maximum_absolute_effect_difference": 4.4502179719074775e-12,
+      "direction_agreement_fraction": 1.0,
+      "top_100_overlap": 100,
+      "top_500_overlap": 500
+    },
+    {
+      "left": "manual_statistics",
+      "right": "limma_local",
+      "shared_probes": 54675,
+      "effect_spearman": 0.9999999999999999,
+      "adjusted_p_spearman": 0.9853165142959486,
+      "maximum_absolute_effect_difference": 3.222422328974517e-14,
+      "direction_agreement_fraction": 1.0,
+      "top_100_overlap": 2,
+      "top_500_overlap": 361
+    }
+  ],
   "interpretation": "Method agreement for one public contrast; neither workflow is truth and the four-workflow comparison is incomplete."
 }

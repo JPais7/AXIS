@@ -26,9 +26,7 @@ def read_results(path: Path) -> dict[str, tuple[float, float]]:
 
 axis = read_results(ROOT / "axis/differential-expression.tsv")
 manual = read_results(ROOT / "manual/differential-expression.tsv")
-shared = sorted(set(axis) & set(manual))
-axis_effects = np.array([axis[probe][0] for probe in shared])
-manual_effects = np.array([manual[probe][0] for probe in shared])
+limma = read_results(ROOT / "limma-local/differential-expression.tsv")
 
 
 def top_set(values: dict[str, tuple[float, float]], size: int) -> set[str]:
@@ -41,20 +39,50 @@ def top_set(values: dict[str, tuple[float, float]], size: int) -> set[str]:
     }
 
 
+def pairwise(
+    left_name: str,
+    left: dict[str, tuple[float, float]],
+    right_name: str,
+    right: dict[str, tuple[float, float]],
+) -> dict[str, object]:
+    shared = sorted(set(left) & set(right))
+    left_effects = np.array([left[probe][0] for probe in shared])
+    right_effects = np.array([right[probe][0] for probe in shared])
+    left_adjusted = np.array([left[probe][1] for probe in shared])
+    right_adjusted = np.array([right[probe][1] for probe in shared])
+    return {
+        "left": left_name,
+        "right": right_name,
+        "shared_probes": len(shared),
+        "effect_spearman": float(
+            spearmanr(left_effects, right_effects).statistic
+        ),
+        "adjusted_p_spearman": float(
+            spearmanr(left_adjusted, right_adjusted).statistic
+        ),
+        "maximum_absolute_effect_difference": float(
+            np.max(np.abs(left_effects - right_effects))
+        ),
+        "direction_agreement_fraction": float(
+            np.mean(np.sign(left_effects) == np.sign(right_effects))
+        ),
+        "top_100_overlap": len(top_set(left, 100) & top_set(right, 100)),
+        "top_500_overlap": len(top_set(left, 500) & top_set(right, 500)),
+    }
+
+
 report = {
     "schema_version": 1,
     "status": "partial",
     "accession": "GSE18781",
     "platform": "GPL570",
-    "completed_workflows": ["axis", "manual_statistics"],
-    "incomplete_workflows": ["geo2r", "expressanalyst"],
-    "shared_probes": len(shared),
-    "effect_spearman": float(spearmanr(axis_effects, manual_effects).statistic),
-    "direction_agreement_fraction": float(
-        np.mean(np.sign(axis_effects) == np.sign(manual_effects))
-    ),
-    "top_100_overlap": len(top_set(axis, 100) & top_set(manual, 100)),
-    "top_500_overlap": len(top_set(axis, 500) & top_set(manual, 500)),
+    "completed_workflows": ["axis", "manual_statistics", "limma_local"],
+    "incomplete_workflows": ["geo2r_server", "expressanalyst"],
+    "pairwise": [
+        pairwise("axis", axis, "manual_statistics", manual),
+        pairwise("axis", axis, "limma_local", limma),
+        pairwise("manual_statistics", manual, "limma_local", limma),
+    ],
     "interpretation": (
         "Method agreement for one public contrast; neither workflow is truth and "
         "the four-workflow comparison is incomplete."

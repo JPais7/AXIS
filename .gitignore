@@ -16,6 +16,7 @@ __pycache__/
 .coverage
 dist/
 .venv/
+.tools/
 data/
 demo-output/
 benchmark-output/
