@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "comparison": "AXIS moderated model versus native limma",
+  "primary_model": "unadjusted case-control",
+  "studies": [
+    {
+      "accession": "GSE18781",
+      "platform": "GPL570",
+      "shared_probes": 54675,
+      "effect_spearman": 0.9999999999999999,
+      "adjusted_p_spearman": 1.0,
+      "maximum_absolute_effect_difference": 4.4502179719074775e-12,
+      "direction_agreement_fraction": 1.0,
+      "top_100_overlap": 100,
+      "top_500_overlap": 500,
+      "axis_sha256": "ac1a39609bbd84f3381ba5ef433539c931d68264c868d66fbb783e37e045886a",
+      "limma_sha256": "464020d9a66902206454377fe77957cef8edae6106be48f20ef598cc13fdbd15"
+    },
+    {
+      "accession": "GSE25101",
+      "platform": "GPL6947",
+      "shared_probes": 18168,
+      "effect_spearman": 0.9999999999994998,
+      "adjusted_p_spearman": 1.0,
+      "maximum_absolute_effect_difference": 5.000000413701855e-12,
+      "direction_agreement_fraction": 1.0,
+      "top_100_overlap": 100,
+      "top_500_overlap": 500,
+      "axis_sha256": "fb875c3388b2b0fede9dcd208c26c3ede08a90f1a69191c5af77e04e95a5cad3",
+      "limma_sha256": "e327dce33e1bdd3bbead99632666afc354c56014b04d94a7b1a1a9f49322d23d"
+    },
+    {
+      "accession": "GSE73754",
+      "platform": "GPL10558",
+      "shared_probes": 47323,
+      "effect_spearman": 0.9999999999999718,
+      "adjusted_p_spearman": 1.0,
+      "maximum_absolute_effect_difference": 5.150047055479945e-13,
+      "direction_agreement_fraction": 1.0,
+      "top_100_overlap": 100,
+      "top_500_overlap": 500,
+      "axis_sha256": "59a1ff5189435c95f748d2a0960cd754aa52d1e5e7317a3237c16b0950980005",
+      "limma_sha256": "61dba47981940db95f995462303101e8796c94d1c960a5861f1bbd9795107bad"
+    },
+    {
+      "accession": "GSE11886",
+      "platform": "GPL570",
+      "shared_probes": 54675,
+      "effect_spearman": 0.9999999999999999,
+      "adjusted_p_spearman": 1.0,
+      "maximum_absolute_effect_difference": 3.3300029400606945e-12,
+      "direction_agreement_fraction": 1.0,
+      "top_100_overlap": 100,
+      "top_500_overlap": 500,
+      "axis_sha256": "2c24ebc4d8892280cbf1323318e8ba29fce4258fb6d129df4af7b34cfd31ef41",
+      "limma_sha256": "160a72e19c07f0ed063a8690952ed7925e0aede46269155992ea70edd8202c7d"
+    }
+  ],
+  "claim_limit": "Technical agreement only; no workflow is biological truth."
+}

@@ -1,0 +1,5 @@
+accession	platform	case_samples	control_samples	axis_model	limma_model	R	limma	limma_elapsed_seconds
+GSE18781	GPL570	18	25	unadjusted moderated group contrast	unadjusted eBayes group contrast	4.6.1	3.68.4	3.22
+GSE25101	GPL6947	16	16	unadjusted moderated group contrast	unadjusted eBayes group contrast	4.6.1	3.68.4	0.38
+GSE73754	GPL10558	51	20	unadjusted moderated group contrast	unadjusted eBayes group contrast	4.6.1	3.68.4	1.69
+GSE11886	GPL570	8	9	unadjusted moderated group contrast	unadjusted eBayes group contrast	4.6.1	3.68.4	0.99

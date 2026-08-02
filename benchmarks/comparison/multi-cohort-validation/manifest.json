@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "comparison": "AXIS moderated model versus native limma across public GEO cohorts",
+  "studies": 4,
+  "platforms": [
+    "GPL570",
+    "GPL6947",
+    "GPL10558"
+  ],
+  "samples": 163,
+  "files": [
+    {
+      "path": "analyze-limma.R",
+      "sha256": "84ae545c19b7b8017e394dd14797dbb758f391b541eb883e2c220c89a6a9dd76"
+    },
+    {
+      "path": "compare.py",
+      "sha256": "5fb6226df9a9d6d95d038df0bfc97cef237a788088af833261ddc29217a3f4bf"
+    },
+    {
+      "path": "execution-summary.tsv",
+      "sha256": "c5901f3ebae43c16428cae7353a2e5b54a5fc177b2bef7ebdab56b5135ecbd60"
+    },
+    {
+      "path": "README.md",
+      "sha256": "d5aff7276ee4c4d7c5b1644dd1b18e08864738d480d90b6ef40aae427590982a"
+    },
+    {
+      "path": "validation-report.json",
+      "sha256": "e3331b81bfba953e001dba092737e7fed4e3fca7c7ccdd1e4252b4af488c0636"
+    },
+    {
+      "path": "validation-summary.tsv",
+      "sha256": "9d3e218b4a59bde468af17736d9f40915b037f74f9b750381ab5c77337298464"
+    }
+  ]
+}
