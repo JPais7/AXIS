@@ -18,6 +18,16 @@ def _copy_frozen_study(tmp_path: Path) -> Path:
             / "reproducibility/ddx24-study/manifest.json"
         ).read_text(encoding="utf-8")
     )
+    missing_inputs = [
+        item["path"]
+        for item in manifest["inputs"].values()
+        if not (PROJECT_ROOT / item["path"]).is_file()
+    ]
+    if missing_inputs:
+        pytest.skip(
+            "DDX24 frozen participant-level inputs are not distributed in "
+            "the public repository: " + ", ".join(missing_inputs)
+        )
     for item in manifest["inputs"].values():
         source = PROJECT_ROOT / item["path"]
         target = tmp_path / item["path"]
