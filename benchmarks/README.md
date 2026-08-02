@@ -29,8 +29,11 @@ and per-run TSV table.
 
 ## Guarded workflow comparison
 
-Prepare identical synthetic tasks for AXIS, GEO2R, a manual statistical
-workflow and NetworkAnalyst:
+Prepare two scoped comparisons:
+
+- differential expression on the public GSE18781/GPL570 contrast for AXIS,
+  GEO2R, manual statistics and ExpressAnalyst;
+- synthetic evidence governance for AXIS and documented manual review.
 
 ```shell
 axis prepare-workflow-comparison
@@ -43,6 +46,8 @@ Give reviewers only `workflow-comparison/evaluator-package`. Keep
 `result-template.tsv`, and apply the criterion-specific rules in
 `rating-rubric.tsv`. Unsupported or failed functionality is not labelled
 `not_applicable`; that label is restricted to structurally irrelevant criteria.
+The generated summary includes a `comparison` column and explicitly prohibits
+ranking workflows across the two scopes.
 Then combine the initial ratings:
 
 ```shell

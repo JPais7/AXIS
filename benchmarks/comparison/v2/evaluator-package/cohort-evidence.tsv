@@ -1,0 +1,6 @@
+cohort	participants	effect	cell_definition	role_hint	participant_source
+COHORT-A	20	-0.2	CD8_memory	primary	COHORT-A
+COHORT-B	16	-0.12	CD8_memory	primary	COHORT-B
+COHORT-B-REPOSITORY-COPY	16	-0.12	CD8_memory	duplicate	COHORT-B
+COHORT-H	12	-0.08	broad_CD8	sensitivity	COHORT-H
+COHORT-I	18	0.04	whole_blood	incompatible	COHORT-I

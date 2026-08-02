@@ -12,6 +12,8 @@ All notable changes to AXIS are documented in this file. The project follows
 - Independent installation-validation protocol and structured GitHub report.
 - Guarded synthetic workflow-comparison package with separate blinded evaluator
   materials, coordinator reference, two-reviewer ratings and article tables.
+- Scoped comparison v2 separates real-accession differential expression from
+  synthetic evidence governance and prohibits cross-scope rankings.
 
 ## [0.1.0] - 2026-08-02
 

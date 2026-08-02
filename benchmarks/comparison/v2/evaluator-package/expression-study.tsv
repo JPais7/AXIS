@@ -1,0 +1,2 @@
+accession	platform	contrast	cases	controls	primary_model	secondary_model	source
+GSE18781	GPL570	SpA case minus healthy control	18	25	unadjusted case-control	batch-adjusted where supported; report separately	https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE18781

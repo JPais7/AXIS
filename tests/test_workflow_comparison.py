@@ -47,10 +47,19 @@ def test_comparison_preparation_separates_reference_and_checksums(
     result = WorkflowComparisonPreparer().prepare(output_root=tmp_path / "comparison")
     manifest = json.loads(result.manifest_path.read_text(encoding="utf-8"))
 
-    assert manifest["synthetic"] is True
+    assert manifest["synthetic"] is False
+    assert set(manifest["comparisons"]) == {
+        "differential_expression",
+        "evidence_governance",
+    }
     assert manifest["no_weighted_overall_score"] is True
     assert result.assessment_template_path.is_file()
     assert (result.output_root / "evaluator-package/candidate-studies.tsv").is_file()
+    groups = result.output_root / "evaluator-package/expression-sample-groups.tsv"
+    with groups.open(encoding="utf-8", newline="") as handle:
+        sample_groups = list(csv.DictReader(handle, delimiter="\t"))
+    assert len(sample_groups) == 43
+    assert sum(row["group"] == "case" for row in sample_groups) == 18
     procedure = (
         result.output_root / "evaluator-package/STANDARD-OPERATING-PROCEDURE.md"
     ).read_text(encoding="utf-8")
@@ -104,6 +113,11 @@ def test_comparison_summary_preserves_disagreement_and_has_no_score(
     assert report["status"] == "consensus_required"
     assert report["no_weighted_overall_score"] is True
     assert {row["weighted_score"] for row in article_rows} == {"not_calculated"}
+    assert {row["cross_comparison_ranking"] for row in article_rows} == {"prohibited"}
+    assert {row["comparison"] for row in article_rows} == {
+        "differential_expression",
+        "evidence_governance",
+    }
     assert sum(int(row["unresolved"]) for row in article_rows) == 1
     assert result.consensus_template_path.is_file()
 

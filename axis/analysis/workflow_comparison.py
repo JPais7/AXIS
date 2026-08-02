@@ -11,7 +11,26 @@ from dataclasses import dataclass
 from datetime import UTC, datetime
 from pathlib import Path
 
-WORKFLOWS = ("axis", "geo2r", "manual_statistics", "networkanalyst")
+COMPARISON_WORKFLOWS = {
+    "differential_expression": (
+        "axis",
+        "geo2r",
+        "manual_statistics",
+        "expressanalyst",
+    ),
+    "evidence_governance": ("axis", "manual_evidence_review"),
+}
+COMPARISON_TASKS = {
+    "differential_expression": ("A", "C"),
+    "evidence_governance": ("B", "D"),
+}
+WORKFLOWS = tuple(
+    dict.fromkeys(
+        workflow
+        for workflows in COMPARISON_WORKFLOWS.values()
+        for workflow in workflows
+    )
+)
 RATINGS = ("pass", "fail", "not_applicable")
 TASK_CRITERIA = {
     "A": (
@@ -30,8 +49,8 @@ TASK_CRITERIA = {
         "repository_duplicate_detected",
     ),
     "C": (
-        "gene_identifiers_preserved",
-        "effect_direction_correct",
+        "sample_groups_preserved",
+        "effect_estimates_exported",
         "multiplicity_correction_recorded",
         "method_record_complete",
         "executable_or_machine_readable_export",
@@ -78,10 +97,14 @@ class WorkflowComparisonPreparer:
         reference.mkdir(parents=True, exist_ok=True)
 
         self._write_rows(public / "candidate-studies.tsv", self._candidate_studies())
-        self._write_rows(public / "sample-metadata.tsv", self._sample_metadata())
-        self._write_rows(public / "expression-matrix.tsv", self._expression_matrix())
         self._write_rows(public / "cohort-evidence.tsv", self._cohort_evidence())
         self._write_rows(public / "tasks.tsv", self._tasks())
+        self._write_rows(public / "comparison-design.tsv", self._comparison_design())
+        self._write_rows(public / "expression-study.tsv", self._expression_study())
+        self._write_rows(
+            public / "expression-sample-groups.tsv",
+            self._expression_sample_groups(),
+        )
         self._write_rows(public / "rating-rubric.tsv", self._rating_rubric())
         self._write_rows(public / "result-template.tsv", self._result_template())
         (public / "STANDARD-OPERATING-PROCEDURE.md").write_text(
@@ -91,6 +114,7 @@ class WorkflowComparisonPreparer:
         template_rows = [
             {
                 "reviewer": "",
+                "comparison": comparison,
                 "workflow": workflow,
                 "task": task,
                 "criterion": criterion,
@@ -100,9 +124,10 @@ class WorkflowComparisonPreparer:
                 "evidence": "",
                 "notes": "",
             }
-            for workflow in WORKFLOWS
-            for task, criteria in TASK_CRITERIA.items()
-            for criterion in criteria
+            for comparison, workflows in COMPARISON_WORKFLOWS.items()
+            for workflow in workflows
+            for task in COMPARISON_TASKS[comparison]
+            for criterion in TASK_CRITERIA[task]
         ]
         template = public / "assessment-template.tsv"
         self._write_rows(template, template_rows)
@@ -110,7 +135,8 @@ class WorkflowComparisonPreparer:
             reference / "expected-study-decisions.tsv", self._study_reference()
         )
         self._write_rows(
-            reference / "expected-expression.tsv", self._expression_reference()
+            reference / "expression-assessment-policy.tsv",
+            self._expression_reference(),
         )
         self._write_rows(
             reference / "expected-evidence-roles.tsv", self._evidence_reference()
@@ -136,9 +162,16 @@ class WorkflowComparisonPreparer:
         manifest_path.write_text(
             json.dumps(
                 {
-                    "schema_version": 1,
-                    "protocol": "AXIS workflow comparison v1",
-                    "synthetic": True,
+                    "schema_version": 2,
+                    "protocol": "AXIS scoped workflow comparisons v2",
+                    "synthetic": False,
+                    "comparisons": {
+                        name: {
+                            "workflows": list(COMPARISON_WORKFLOWS[name]),
+                            "tasks": list(COMPARISON_TASKS[name]),
+                        }
+                        for name in COMPARISON_WORKFLOWS
+                    },
                     "created_at": datetime.now(UTC).isoformat(),
                     "workflows": list(WORKFLOWS),
                     "ratings": list(RATINGS),
@@ -157,6 +190,62 @@ class WorkflowComparisonPreparer:
             encoding="utf-8",
         )
         return ComparisonPreparation(output, manifest_path, template)
+
+    @staticmethod
+    def _comparison_design() -> list[dict[str, str]]:
+        return [
+            {
+                "comparison": "differential_expression",
+                "question": (
+                    "Can the workflow reproduce the same unadjusted "
+                    "case-control contrast?"
+                ),
+                "workflows": "|".join(COMPARISON_WORKFLOWS["differential_expression"]),
+                "tasks": "A|C",
+                "input_scope": "GSE18781; GPL570; frozen 18-case/25-control groups",
+                "allowed_claim": (
+                    "Agreement, usability and reproducibility for this contrast only"
+                ),
+            },
+            {
+                "comparison": "evidence_governance",
+                "question": (
+                    "Can the workflow preserve eligibility, independence "
+                    "and evidence roles?"
+                ),
+                "workflows": "|".join(COMPARISON_WORKFLOWS["evidence_governance"]),
+                "tasks": "B|D",
+                "input_scope": "Synthetic metadata with known governance traps",
+                "allowed_claim": (
+                    "Guardrail detection for the supplied synthetic scenarios only"
+                ),
+            },
+        ]
+
+    @staticmethod
+    def _expression_study() -> list[dict[str, str]]:
+        return [
+            {
+                "accession": "GSE18781",
+                "platform": "GPL570",
+                "contrast": "SpA case minus healthy control",
+                "cases": "18",
+                "controls": "25",
+                "primary_model": "unadjusted case-control",
+                "secondary_model": "batch-adjusted where supported; report separately",
+                "source": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE18781",
+            }
+        ]
+
+    @staticmethod
+    def _expression_sample_groups() -> list[dict[str, str]]:
+        return [
+            {
+                "sample_id": f"GSM{accession}",
+                "group": "case" if accession <= 465924 else "control",
+            }
+            for accession in range(465907, 465950)
+        ]
 
     @staticmethod
     def _candidate_studies() -> list[dict[str, object]]:
@@ -333,11 +422,11 @@ class WorkflowComparisonPreparer:
         return [
             {
                 "task": "A",
-                "title": "Installation check",
-                "inputs": "AXIS v0.1.0 synthetic demo",
+                "title": "Access and environment check",
+                "inputs": "Declared differential-expression workflow",
                 "objective": (
-                    "Install and run the demo; record time, memory method, "
-                    "output size and manual decisions."
+                    "Open or install the workflow and record environment, "
+                    "timing method, output size and manual decisions."
                 ),
             },
             {
@@ -352,10 +441,10 @@ class WorkflowComparisonPreparer:
             {
                 "task": "C",
                 "title": "Within-study expression",
-                "inputs": "sample-metadata.tsv; expression-matrix.tsv",
+                "inputs": "GSE18781; expression-sample-groups.tsv",
                 "objective": (
-                    "Estimate case-control direction per gene, adjust for "
-                    "multiplicity and export methods and results."
+                    "Run the frozen primary case-control contrast, adjust for "
+                    "multiplicity and export probe-level methods and results."
                 ),
             },
             {
@@ -402,23 +491,22 @@ class WorkflowComparisonPreparer:
             "repository_duplicate_detected": (
                 "SYN007 is linked to and not double-counted with SYN006."
             ),
-            "gene_identifiers_preserved": (
-                "GENEA, GENEB and GENEC appear unchanged in the export."
+            "sample_groups_preserved": (
+                "All frozen GSE18781 case and control assignments are preserved."
             ),
-            "effect_direction_correct": (
-                "All three directions match the frozen coordinator reference."
+            "effect_estimates_exported": (
+                "Probe-level effects and directions are exported for the primary "
+                "contrast."
             ),
             "multiplicity_correction_recorded": (
-                "Benjamini-Hochberg FDR is applied across the three genes "
-                "and exported."
+                "Benjamini-Hochberg FDR is applied across the three genes and exported."
             ),
             "method_record_complete": (
                 "Test, contrast, effect definition, multiplicity method and "
                 "software version are recorded."
             ),
             "executable_or_machine_readable_export": (
-                "A complete TSV or CSV result is exported without manual "
-                "transcription."
+                "A complete TSV or CSV result is exported without manual transcription."
             ),
             "participants_counted_correctly": (
                 "The primary evidence contains 36 unique participants."
@@ -458,6 +546,7 @@ class WorkflowComparisonPreparer:
         return [
             {
                 "reviewer": "",
+                "comparison": comparison,
                 "workflow": workflow,
                 "task": task,
                 "started_at_utc": "",
@@ -468,8 +557,9 @@ class WorkflowComparisonPreparer:
                 "version_or_access_date": "",
                 "deviations": "",
             }
-            for workflow in WORKFLOWS
-            for task in TASK_CRITERIA
+            for comparison, workflows in COMPARISON_WORKFLOWS.items()
+            for workflow in workflows
+            for task in COMPARISON_TASKS[comparison]
         ]
 
     @staticmethod
@@ -492,9 +582,22 @@ class WorkflowComparisonPreparer:
     @staticmethod
     def _expression_reference() -> list[dict[str, str]]:
         return [
-            {"gene": "GENEA", "expected_direction": "higher_in_case"},
-            {"gene": "GENEB", "expected_direction": "lower_in_case"},
-            {"gene": "GENEC", "expected_direction": "no_difference"},
+            {
+                "metric": "sample_assignment",
+                "policy": "Exact match to expression-sample-groups.tsv",
+            },
+            {
+                "metric": "cross_workflow_effect_agreement",
+                "policy": "Report pairwise Spearman correlation on shared probes",
+            },
+            {
+                "metric": "top_set_overlap",
+                "policy": "Report overlap at prespecified top 100 and top 500 probes",
+            },
+            {
+                "metric": "reference_truth",
+                "policy": "None; no workflow output is treated as biological truth",
+            },
         ]
 
     @staticmethod
@@ -514,16 +617,14 @@ class WorkflowComparisonPreparer:
     def _instructions() -> str:
         return """# AXIS workflow comparison evaluator package
 
-Use the same files for every workflow. Complete one copy of
-`assessment-template.tsv` per reviewer without consulting the coordinator
-reference. Ratings are `pass`, `fail` or `not_applicable`. Record elapsed time,
-manual decisions, exported evidence and every deviation. Do not calculate an
-overall weighted score. Freeze both initial assessments before consensus.
-All inputs are synthetic and support no biomedical claim.
+This package contains two separate comparisons. Differential-expression
+workflows use the real public GSE18781 accession and Tasks A/C. Evidence-governance
+workflows use synthetic metadata and Tasks B/D. Never compare pass counts between
+the two comparisons.
 Follow `STANDARD-OPERATING-PROCEDURE.md` and `rating-rubric.tsv`. Complete
 `result-template.tsv` while operating each workflow, then complete the assessment
 only from frozen outputs. A failed or unavailable operation is not automatically
-`not_applicable`.
+`not_applicable`. Freeze both reviewers' initial files before consensus.
 """
 
     @staticmethod
@@ -532,14 +633,14 @@ only from frozen outputs. A failed or unavailable operation is not automatically
 
 ## Roles and blinding
 
-Each reviewer operates every workflow independently. Reviewers must not consult
+Each reviewer operates every in-scope workflow independently. Reviewers must not consult
 each other or the `coordinator-reference` directory before both initial result
 and assessment files are frozen. Use coded reviewer identifiers. Record all
 deviations; do not repair an output after seeing a reference answer.
 
 ## Common environment and timing
 
-Use the same computer and normal network connection for all workflows. Record OS,
+Within each comparison, use the same computer and network for all workflows. Record OS,
 hardware, workflow version or web access date, browser where relevant, and every
 manual decision. One untimed familiarisation attempt per workflow is permitted.
 For each measured task, start timing immediately before the first workflow action
@@ -551,31 +652,46 @@ record `measurement_unavailable_hosted_service` and the method attempted.
 
 ## Allowed operations
 
-Use only the named workflow, its official documentation and the supplied files.
-Do not use another workflow to repair, transform or transcribe results. The
-`manual_statistics` condition may use a spreadsheet or one general-purpose
-statistics environment, but every formula or command and software version must be
-exported. Web workflows may be used only if their normal upload interface accepts
-the supplied synthetic data. Record rejection of an input as a failed attempt.
+Use only the named workflow, official documentation and declared comparison
+inputs. Do not use another workflow to repair or transcribe results.
+`manual_statistics` may use a spreadsheet or one general-purpose statistics
+environment; `manual_evidence_review` may use a spreadsheet or text editor.
+Export every formula, command and version.
+
+## Differential-expression comparison
+
+Use `expression-study.tsv` and `expression-sample-groups.tsv`. Retrieve
+GSE18781 through each workflow's normal GEO route. Run the same unadjusted
+case-control contrast on GPL570 with the frozen 18 case and 25 control samples.
+Report probe-level results with the workflow's standard moderated or classical
+test and Benjamini-Hochberg adjustment. Batch-adjusted results are secondary and
+must not replace the primary contrast. ExpressAnalyst replaces NetworkAnalyst
+because the latter explicitly redirects transcriptomic tables there.
+
+## Evidence-governance comparison
+
+Use only `candidate-studies.tsv` and `cohort-evidence.tsv`. Compare AXIS with
+a documented manual evidence review. Do not include GEO2R or ExpressAnalyst:
+study eligibility, duplicate-participant detection and evidence-role separation
+are outside this comparison's declared differential-expression scope.
 
 ## Required outputs
 
 For every workflow and task, preserve a machine-readable result where the workflow
 supports export, a plain-text methods record, and the corresponding row in
 `result-template.tsv`. Task B must output one decision and rationale per study.
-Task C must output gene, case mean, control mean, case-minus-control effect,
-direction, raw p-value and Benjamini-Hochberg adjusted p-value. Use a two-sided
-Welch t-test and define positive effects as higher in cases. Task D must output one
-role per cohort, the unique primary-participant total, excluded duplicates,
+Task C must export probe identifier, effect or log fold-change, direction, raw
+p-value and Benjamini-Hochberg adjusted p-value, plus the exact group assignment.
+Task D must output one role per cohort, the unique primary-participant total,
+excluded duplicates,
 excluded incompatible evidence and one bounded conclusion.
 
 ## Task A
 
-Start from a new local environment or a private browser session. Follow only the
-official installation/access instructions. Run the supplied AXIS synthetic demo
-for AXIS; for hosted workflows, confirm access and record installation as
-`not_applicable` only because no installation exists. Do not transfer AXIS demo
-performance to another workflow.
+Start from a new local environment or private browser session. Follow official
+installation/access instructions. For hosted workflows, installation is
+`not_applicable` only because no local installation exists. Time Task C
+separately; Task A access timing must not be presented as analysis speed.
 
 ## Rating
 
@@ -584,7 +700,8 @@ stated evidence, and missing evidence is `fail`. `not_applicable` is restricted
 to a criterion that is structurally irrelevant, never merely unsupported or
 failed. Keep both initial assessments unchanged. Resolve disagreements later in
 a separate consensus file with a rationale. Never calculate a weighted overall
-score. These synthetic results evaluate workflow behaviour, not biomedical truth.
+score. The real-expression comparison is limited to one public contrast; the
+synthetic governance comparison supports no biomedical claim.
 """
 
     @staticmethod
@@ -610,6 +727,7 @@ class WorkflowComparisonSummarizer:
 
     REQUIRED = {
         "reviewer",
+        "comparison",
         "workflow",
         "task",
         "criterion",
@@ -641,14 +759,24 @@ class WorkflowComparisonSummarizer:
             raise ValueError("comparison requires exactly two named reviewers")
         self._validate(rows, reviewers)
 
-        grouped: dict[tuple[str, str, str], list[dict[str, str]]] = defaultdict(list)
+        grouped: dict[tuple[str, str, str, str], list[dict[str, str]]] = defaultdict(
+            list
+        )
         for row in rows:
-            grouped[(row["workflow"], row["task"], row["criterion"])].append(row)
+            grouped[
+                (
+                    row["comparison"],
+                    row["workflow"],
+                    row["task"],
+                    row["criterion"],
+                )
+            ].append(row)
         expected_keys = {
-            (workflow, task, criterion)
-            for workflow in WORKFLOWS
-            for task, criteria in TASK_CRITERIA.items()
-            for criterion in criteria
+            (comparison, workflow, task, criterion)
+            for comparison, workflows in COMPARISON_WORKFLOWS.items()
+            for workflow in workflows
+            for task in COMPARISON_TASKS[comparison]
+            for criterion in TASK_CRITERIA[task]
         }
         if set(grouped) != expected_keys or any(
             len(items) != 2
@@ -674,9 +802,10 @@ class WorkflowComparisonSummarizer:
             if not agreement:
                 consensus_rows.append(
                     {
-                        "workflow": key[0],
-                        "task": key[1],
-                        "criterion": key[2],
+                        "comparison": key[0],
+                        "workflow": key[1],
+                        "task": key[2],
+                        "criterion": key[3],
                         "rating_1": items[0]["rating"],
                         "rating_2": items[1]["rating"],
                         "consensus": "" if resolved == "unresolved" else resolved,
@@ -685,9 +814,10 @@ class WorkflowComparisonSummarizer:
                 )
             combined.append(
                 {
-                    "workflow": key[0],
-                    "task": key[1],
-                    "criterion": key[2],
+                    "comparison": key[0],
+                    "workflow": key[1],
+                    "task": key[2],
+                    "criterion": key[3],
                     "reviewer_1": items[0]["reviewer"],
                     "rating_1": items[0]["rating"],
                     "reviewer_2": items[1]["reviewer"],
@@ -710,30 +840,38 @@ class WorkflowComparisonSummarizer:
             )
         else:
             consensus_template_path.write_text(
-                "workflow\ttask\tcriterion\trating_1\trating_2\tconsensus\trationale\n",
+                "comparison\tworkflow\ttask\tcriterion\trating_1\trating_2"
+                "\tconsensus\trationale\n",
                 encoding="utf-8",
             )
 
         article_rows: list[dict[str, object]] = []
-        for workflow in WORKFLOWS:
-            relevant = [item for item in combined if item["workflow"] == workflow]
-            counts = {
-                rating: sum(item["consensus"] == rating for item in relevant)
-                for rating in RATINGS
-            }
-            article_rows.append(
-                {
-                    "workflow": workflow,
-                    "criteria": len(relevant),
-                    "pass": counts["pass"],
-                    "fail": counts["fail"],
-                    "not_applicable": counts["not_applicable"],
-                    "unresolved": sum(
-                        item["consensus"] == "unresolved" for item in relevant
-                    ),
-                    "weighted_score": "not_calculated",
+        for comparison, workflows in COMPARISON_WORKFLOWS.items():
+            for workflow in workflows:
+                relevant = [
+                    item
+                    for item in combined
+                    if item["comparison"] == comparison and item["workflow"] == workflow
+                ]
+                counts = {
+                    rating: sum(item["consensus"] == rating for item in relevant)
+                    for rating in RATINGS
                 }
-            )
+                article_rows.append(
+                    {
+                        "comparison": comparison,
+                        "workflow": workflow,
+                        "criteria": len(relevant),
+                        "pass": counts["pass"],
+                        "fail": counts["fail"],
+                        "not_applicable": counts["not_applicable"],
+                        "unresolved": sum(
+                            item["consensus"] == "unresolved" for item in relevant
+                        ),
+                        "weighted_score": "not_calculated",
+                        "cross_comparison_ranking": "prohibited",
+                    }
+                )
         article_path = output / "article-table.tsv"
         WorkflowComparisonPreparer._write_rows(article_path, article_rows)
         report_path = output / "comparison-report.json"
@@ -741,14 +879,15 @@ class WorkflowComparisonSummarizer:
         report_path.write_text(
             json.dumps(
                 {
-                    "schema_version": 1,
+                    "schema_version": 2,
                     "status": "complete" if unresolved == 0 else "consensus_required",
-                    "synthetic": True,
+                    "mixed_real_and_synthetic_inputs": True,
                     "reviewers": reviewers,
-                    "workflows": list(WORKFLOWS),
-                    "criteria_per_workflow": sum(
-                        len(value) for value in TASK_CRITERIA.values()
-                    ),
+                    "comparisons": {
+                        name: list(workflows)
+                        for name, workflows in COMPARISON_WORKFLOWS.items()
+                    },
+                    "cross_comparison_ranking": "prohibited",
                     "disagreements": disagreements,
                     "unresolved_disagreements": unresolved,
                     "no_weighted_overall_score": True,
@@ -773,17 +912,29 @@ class WorkflowComparisonSummarizer:
     @staticmethod
     def _read_consensus(
         consensus_path: str | Path | None,
-    ) -> dict[tuple[str, str, str], tuple[str, str]]:
+    ) -> dict[tuple[str, str, str, str], tuple[str, str]]:
         if consensus_path is None:
             return {}
         with Path(consensus_path).open(encoding="utf-8", newline="") as handle:
             reader = csv.DictReader(handle, delimiter="\t")
-            required = {"workflow", "task", "criterion", "consensus", "rationale"}
+            required = {
+                "comparison",
+                "workflow",
+                "task",
+                "criterion",
+                "consensus",
+                "rationale",
+            }
             if not required.issubset(reader.fieldnames or []):
                 raise ValueError("consensus file is missing required columns")
-            result: dict[tuple[str, str, str], tuple[str, str]] = {}
+            result: dict[tuple[str, str, str, str], tuple[str, str]] = {}
             for row in reader:
-                key = (row["workflow"], row["task"], row["criterion"])
+                key = (
+                    row["comparison"],
+                    row["workflow"],
+                    row["task"],
+                    row["criterion"],
+                )
                 if row["consensus"] not in RATINGS:
                     raise ValueError("consensus must be pass, fail or not_applicable")
                 if not row["rationale"].strip():
@@ -798,8 +949,13 @@ class WorkflowComparisonSummarizer:
         for row in rows:
             if row["reviewer"].strip() not in reviewers:
                 raise ValueError("every assessment row requires a reviewer")
-            if row["workflow"] not in WORKFLOWS:
-                raise ValueError(f"unknown workflow: {row['workflow']}")
+            comparison = row["comparison"]
+            if comparison not in COMPARISON_WORKFLOWS:
+                raise ValueError(f"unknown comparison: {comparison}")
+            if row["workflow"] not in COMPARISON_WORKFLOWS[comparison]:
+                raise ValueError("workflow is outside the declared comparison scope")
+            if row["task"] not in COMPARISON_TASKS[comparison]:
+                raise ValueError("task is outside the declared comparison scope")
             if (
                 row["task"] not in TASK_CRITERIA
                 or row["criterion"] not in TASK_CRITERIA[row["task"]]

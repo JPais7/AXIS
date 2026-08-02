@@ -1,0 +1,9 @@
+study_id	disease	tissue	treatment	design	participant_source	repository
+SYN001	axSpA	blood	untreated	individual	COHORT-A	GEO
+SYN002	rheumatoid arthritis	blood	untreated	individual	COHORT-C	GEO
+SYN003	axSpA	synovium	untreated	individual	COHORT-D	GEO
+SYN004	axSpA	blood	post-treatment	individual	COHORT-E	GEO
+SYN005	axSpA	blood	untreated	pooled	COHORT-F	SRA
+SYN006	axSpA	blood	untreated	individual	COHORT-B	GEO
+SYN007	axSpA	blood	untreated	individual	COHORT-B	ArrayExpress
+SYN008	axSpA	blood	untreated	repeated	COHORT-G	GEO

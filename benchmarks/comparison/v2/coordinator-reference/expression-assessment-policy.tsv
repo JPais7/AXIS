@@ -1,0 +1,5 @@
+metric	policy
+sample_assignment	Exact match to expression-sample-groups.tsv
+cross_workflow_effect_agreement	Report pairwise Spearman correlation on shared probes
+top_set_overlap	Report overlap at prespecified top 100 and top 500 probes
+reference_truth	None; no workflow output is treated as biological truth

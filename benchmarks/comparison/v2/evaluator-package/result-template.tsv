@@ -1,0 +1,13 @@
+reviewer	comparison	workflow	task	started_at_utc	elapsed_seconds	manual_decisions	status	output_files	version_or_access_date	deviations
+	differential_expression	axis	A							
+	differential_expression	axis	C							
+	differential_expression	geo2r	A							
+	differential_expression	geo2r	C							
+	differential_expression	manual_statistics	A							
+	differential_expression	manual_statistics	C							
+	differential_expression	expressanalyst	A							
+	differential_expression	expressanalyst	C							
+	evidence_governance	axis	B							
+	evidence_governance	axis	D							
+	evidence_governance	manual_evidence_review	B							
+	evidence_governance	manual_evidence_review	D							

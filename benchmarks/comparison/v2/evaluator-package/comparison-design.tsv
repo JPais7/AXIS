@@ -1,0 +1,3 @@
+comparison	question	workflows	tasks	input_scope	allowed_claim
+differential_expression	Can the workflow reproduce the same unadjusted case-control contrast?	axis|geo2r|manual_statistics|expressanalyst	A|C	GSE18781; GPL570; frozen 18-case/25-control groups	Agreement, usability and reproducibility for this contrast only
+evidence_governance	Can the workflow preserve eligibility, independence and evidence roles?	axis|manual_evidence_review	B|D	Synthetic metadata with known governance traps	Guardrail detection for the supplied synthetic scenarios only
