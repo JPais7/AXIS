@@ -1,6 +1,7 @@
 # DDX24 preprint package
 
-The primary question is whether donor-level DDX24 expression is lower in
+The descriptive evidence map contains eight independent cohorts and 217
+participants. The primary question is whether donor-level DDX24 expression is lower in
 peripheral CD8 T-cell populations from people with axial or ankylosing
 spondylitis than in healthy controls.
 
@@ -22,3 +23,14 @@ AXIS version 0.2.0 is archived at
 https://doi.org/10.5281/zenodo.21762169. The Word manuscript is a preprint draft
 requiring final approval by both authors and independent scientific review
 before journal submission.
+
+Recompute the two compatible-cohort primary synthesis and the broader-CD8
+sensitivity result from the public aggregate effects:
+
+```shell
+python paper/ddx24-preprint/reproduce_summary.py
+```
+
+The command writes `reproduced-summary.json`. Aggregate effects are public;
+participant-derived expression matrices remain retrievable from their source
+repositories and are not redistributed here.

@@ -152,8 +152,8 @@ def add_cover(doc: Document) -> None:
     status.alignment = WD_ALIGN_PARAGRAPH.CENTER
     set_font(
         status.add_run(
-            "Primary synthesis: 2 CD8 cohorts, 47 participants • "
-            "5 additional contextual blood cohorts"
+            "8 independent cohorts • 217 participants mapped • Primary CD8 "
+            "synthesis: 2 cohorts, 47 participants"
         ),
         size=10,
         color=GRAY,
@@ -236,15 +236,25 @@ def add_figures(doc: Document) -> None:
     doc.add_heading("Figures", level=1)
     captions = [
         (
+            FIGURES / "figure-4-cd8-forest.png",
+            "Figure 1. Participant-level DDX24 effects in the two compatible "
+            "CD8 cohorts and their random-effects synthesis. Negative values "
+            "indicate lower donor-pseudobulk log2-CPM in cases. GSE194315 "
+            "provided cell-context refinement; the direction was locked before "
+            "external evaluation in GSE288581.",
+        ),
+        (
             FIGURES / "figure-1-cohort-effects.png",
-            "Figure 1. DDX24 case-minus-control effects in seven independent "
+            "Figure 2. DDX24 case-minus-control effects in seven independent "
             "cohorts, separated into compatible assay contexts. Negative "
             "values indicate lower expression in cases. Effects are not pooled "
-            "across panels because assay scales differ.",
+            "across panels because assay scales differ. The later GSE163314 "
+            "broad-CD8 sensitivity cohort is reported separately in the text "
+            "and Table 1.",
         ),
         (
             FIGURES / "figure-2-context-concordance.png",
-            "Figure 2. Directional concordance for DDX24 and ADA. Values show "
+            "Figure 3. Directional concordance for DDX24 and ADA. Values show "
             "the fraction of independent cohorts within each context whose "
             "case-minus-control effect was below zero.",
         ),
@@ -267,11 +277,19 @@ def add_study_table(doc: Document) -> None:
     doc.add_heading("Table 1. Included cohorts", level=1)
     with STUDIES.open(encoding="utf-8", newline="") as source:
         rows = list(csv.DictReader(source, delimiter="\t"))
-    headers = ("Cohort", "Context", "Cases", "Controls", "Effect", "Direction")
+    headers = (
+        "Cohort",
+        "Context",
+        "Cases",
+        "Controls",
+        "Effect",
+        "Direction",
+        "Evidence role",
+    )
     table = doc.add_table(rows=1, cols=len(headers))
     table.alignment = WD_TABLE_ALIGNMENT.CENTER
     table.autofit = False
-    widths = (1350, 3000, 900, 900, 1100, 2110)
+    widths = (1050, 1750, 650, 750, 900, 1300, 2960)
     for _index, (cell, label, width) in enumerate(
         zip(table.rows[0].cells, headers, widths, strict=True)
     ):
@@ -288,6 +306,7 @@ def add_study_table(doc: Document) -> None:
             row["control_samples"],
             f"{float(row['effect']):.3f}",
             row["direction"].replace("_", " "),
+            row["inferential_role"].replace("_", " "),
         )
         data_row = table.add_row()
         data_row._tr.get_or_add_trPr().append(OxmlElement("w:cantSplit"))
@@ -296,7 +315,7 @@ def add_study_table(doc: Document) -> None:
             set_cell_width(cell, width)
             cell.vertical_alignment = WD_CELL_VERTICAL_ALIGNMENT.CENTER
             cell.paragraphs[0].alignment = WD_ALIGN_PARAGRAPH.CENTER
-            set_font(cell.paragraphs[0].add_run(value), size=8.5)
+            set_font(cell.paragraphs[0].add_run(value), size=8)
     table.rows[0]._tr.get_or_add_trPr().append(OxmlElement("w:tblHeader"))
     note = doc.add_paragraph()
     note.paragraph_format.space_before = Pt(4)
@@ -397,6 +416,20 @@ def add_references(doc: Document) -> None:
         "Pais J, Koshman D. AXIS: auditable molecular evidence synthesis and "
         "therapeutic hypothesis generation. Version 0.2.0. Zenodo. 2026. "
         "doi:10.5281/zenodo.21762169.",
+        "Murphy AE, Skene NG. A balanced measure shows superior performance "
+        "of pseudobulk methods in single-cell RNA-sequencing analysis. Nat "
+        "Commun. 2022;13:7851. doi:10.1038/s41467-022-35519-4.",
+        "Ritchie ME, et al. limma powers differential expression analyses for "
+        "RNA-sequencing and microarray studies. Nucleic Acids Res. "
+        "2015;43:e47. doi:10.1093/nar/gkv007.",
+        "DerSimonian R, Laird N. Meta-analysis in clinical trials. Control "
+        "Clin Trials. 1986;7:177-188. doi:10.1016/0197-2456(86)90046-2.",
+        "Benjamini Y, Hochberg Y. Controlling the false discovery rate: a "
+        "practical and powerful approach to multiple testing. J R Stat Soc B. "
+        "1995;57:289-300. doi:10.1111/j.2517-6161.1995.tb02031.x.",
+        "Barrett T, et al. NCBI GEO: archive for functional genomics data "
+        "sets-update. Nucleic Acids Res. 2013;41:D991-D995. "
+        "doi:10.1093/nar/gks1193.",
     ]
     for _index, reference in enumerate(references, start=1):
         p = doc.add_paragraph(style="List Number")

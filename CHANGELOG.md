@@ -7,6 +7,9 @@ All notable changes to AXIS are documented in this file. The project follows
 
 ### Changed
 
+- Strengthened the DDX24 preprint by separating candidate generation,
+  cell-context refinement, locked external validation, sensitivity analysis
+  and contextual evidence; added a public aggregate-effect reproduction.
 - Updated citation, manuscript and project links to the version-specific AXIS
   0.2.0 Zenodo DOI and the public `axis-bio` PyPI distribution.
 - Advanced the development version after the immutable 0.2.0 publication.

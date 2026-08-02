@@ -1,0 +1,27 @@
+{
+  "method": "inverse-variance DerSimonian-Laird random effects",
+  "effect_definition": "case minus control donor-pseudobulk log2-CPM",
+  "primary": {
+    "cohorts": 2,
+    "participants": 47,
+    "random_effect": -0.1480766703457841,
+    "standard_error": 0.06326689688189437,
+    "ci_low": -0.272079788234297,
+    "ci_high": -0.024073552457271136,
+    "p_value": 0.01925753230829841,
+    "tau_squared": 0.0016703005396435926,
+    "i_squared_percent": 19.53257712773074
+  },
+  "broad_cd8_sensitivity": {
+    "cohorts": 3,
+    "participants": 51,
+    "random_effect": -0.1451305725737641,
+    "standard_error": 0.05288942702864409,
+    "ci_low": -0.24879384954990652,
+    "ci_high": -0.04146729559762169,
+    "p_value": 0.0060688599680698285,
+    "tau_squared": 0.0,
+    "i_squared_percent": 0.0
+  },
+  "guardrail": "GSE163314 is sensitivity-only because its author-annotated CD8_T population is broader than the primary memory/effector definition."
+}

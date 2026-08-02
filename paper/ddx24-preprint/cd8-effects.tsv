@@ -1,0 +1,4 @@
+cohort	effect_log2_cpm	standard_error	cases	controls	role
+GSE194315	-0.2299874100327299	0.0950882168172443	10	29	primary_cell_context
+GSE288581	-0.09921005949155237	0.06870476954185627	4	4	locked_external_validation
+GSE163314	-0.15492537050523403	0.1689296879866409	2	2	broad_cd8_sensitivity_only
