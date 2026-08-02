@@ -1,0 +1,2 @@
+accession	platform	model	shared_probes	effect_spearman	adjusted_p_spearman	maximum_absolute_effect_difference	direction_agreement_fraction	top_100_overlap	top_500_overlap	axis_sha256	limma_sha256
+GSE73754	GPL10558	group + sex + age + numeric batch	47323	0.9999999999999999	1.0	4.519939977853937e-12	1.0	100	500	dd7b2b311cdc73125c14b801085677473613e1bea80732e72724489bfe649973	c0f7882c1b611b7a4695afd405deda62a83003e38c50a2aa72463ca3dd999f8e

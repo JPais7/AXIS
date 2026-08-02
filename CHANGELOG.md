@@ -7,6 +7,8 @@ All notable changes to AXIS are documented in this file. The project follows
 
 ### Added
 
+- Native-limma validation across four GEO cohorts, including a covariate-adjusted
+  contrast, an offline regression guard and a publication-ready figure.
 - Public `axis benchmark` command for repeated, offline measurement of the
   synthetic demonstration, with aggregate JSON and per-run TSV outputs.
 - Independent installation-validation protocol and structured GitHub report.

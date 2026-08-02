@@ -96,6 +96,56 @@ for accession, (platform, _matrix) in STUDIES.items():
         }
     )
 
+adjusted_axis_path = (
+    ROOT
+    / "data/geo/GSE73754/prepared/GSE73754_series_matrix"
+    / "differential-expression.tsv"
+)
+adjusted_limma_path = (
+    WORK / "GSE73754-adjusted/limma-adjusted-results.tsv.gz"
+)
+adjusted_axis = read_results(adjusted_axis_path)
+adjusted_limma = read_results(adjusted_limma_path)
+adjusted_shared = sorted(set(adjusted_axis) & set(adjusted_limma))
+adjusted_axis_effect = np.array(
+    [adjusted_axis[probe][0] for probe in adjusted_shared]
+)
+adjusted_limma_effect = np.array(
+    [adjusted_limma[probe][0] for probe in adjusted_shared]
+)
+adjusted_axis_p = np.array(
+    [adjusted_axis[probe][1] for probe in adjusted_shared]
+)
+adjusted_limma_p = np.array(
+    [adjusted_limma[probe][1] for probe in adjusted_shared]
+)
+adjusted_row: dict[str, object] = {
+    "accession": "GSE73754",
+    "platform": "GPL10558",
+    "model": "group + sex + age + numeric batch",
+    "shared_probes": len(adjusted_shared),
+    "effect_spearman": float(
+        spearmanr(adjusted_axis_effect, adjusted_limma_effect).statistic
+    ),
+    "adjusted_p_spearman": float(
+        spearmanr(adjusted_axis_p, adjusted_limma_p).statistic
+    ),
+    "maximum_absolute_effect_difference": float(
+        np.max(np.abs(adjusted_axis_effect - adjusted_limma_effect))
+    ),
+    "direction_agreement_fraction": float(
+        np.mean(np.sign(adjusted_axis_effect) == np.sign(adjusted_limma_effect))
+    ),
+    "top_100_overlap": len(
+        top_set(adjusted_axis, 100) & top_set(adjusted_limma, 100)
+    ),
+    "top_500_overlap": len(
+        top_set(adjusted_axis, 500) & top_set(adjusted_limma, 500)
+    ),
+    "axis_sha256": sha256(adjusted_axis_path),
+    "limma_sha256": sha256(adjusted_limma_path),
+}
+
 output = Path(__file__).resolve().parent
 with (output / "validation-summary.tsv").open(
     "w", encoding="utf-8", newline=""
@@ -108,6 +158,17 @@ with (output / "validation-summary.tsv").open(
     )
     writer.writeheader()
     writer.writerows(rows)
+with (output / "adjusted-validation.tsv").open(
+    "w", encoding="utf-8", newline=""
+) as handle:
+    writer = csv.DictWriter(
+        handle,
+        fieldnames=tuple(adjusted_row),
+        delimiter="\t",
+        lineterminator="\n",
+    )
+    writer.writeheader()
+    writer.writerow(adjusted_row)
 (output / "validation-report.json").write_text(
     json.dumps(
         {
@@ -116,6 +177,7 @@ with (output / "validation-summary.tsv").open(
             "comparison": "AXIS moderated model versus native limma",
             "primary_model": "unadjusted case-control",
             "studies": rows,
+            "adjusted_model": adjusted_row,
             "claim_limit": (
                 "Technical agreement only; no workflow is biological truth."
             ),

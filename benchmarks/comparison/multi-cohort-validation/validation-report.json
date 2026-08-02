@@ -57,5 +57,19 @@
       "limma_sha256": "160a72e19c07f0ed063a8690952ed7925e0aede46269155992ea70edd8202c7d"
     }
   ],
+  "adjusted_model": {
+    "accession": "GSE73754",
+    "platform": "GPL10558",
+    "model": "group + sex + age + numeric batch",
+    "shared_probes": 47323,
+    "effect_spearman": 0.9999999999999999,
+    "adjusted_p_spearman": 1.0,
+    "maximum_absolute_effect_difference": 4.519939977853937e-12,
+    "direction_agreement_fraction": 1.0,
+    "top_100_overlap": 100,
+    "top_500_overlap": 500,
+    "axis_sha256": "dd7b2b311cdc73125c14b801085677473613e1bea80732e72724489bfe649973",
+    "limma_sha256": "c0f7882c1b611b7a4695afd405deda62a83003e38c50a2aa72463ca3dd999f8e"
+  },
   "claim_limit": "Technical agreement only; no workflow is biological truth."
 }

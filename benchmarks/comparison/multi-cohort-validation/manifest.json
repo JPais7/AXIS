@@ -3,36 +3,21 @@
   "status": "complete",
   "comparison": "AXIS moderated model versus native limma across public GEO cohorts",
   "studies": 4,
-  "platforms": [
-    "GPL570",
-    "GPL6947",
-    "GPL10558"
-  ],
+  "platforms": ["GPL570", "GPL6947", "GPL10558"],
   "samples": 163,
+  "adjusted_models": 1,
   "files": [
-    {
-      "path": "analyze-limma.R",
-      "sha256": "84ae545c19b7b8017e394dd14797dbb758f391b541eb883e2c220c89a6a9dd76"
-    },
-    {
-      "path": "compare.py",
-      "sha256": "5fb6226df9a9d6d95d038df0bfc97cef237a788088af833261ddc29217a3f4bf"
-    },
-    {
-      "path": "execution-summary.tsv",
-      "sha256": "c5901f3ebae43c16428cae7353a2e5b54a5fc177b2bef7ebdab56b5135ecbd60"
-    },
-    {
-      "path": "README.md",
-      "sha256": "d5aff7276ee4c4d7c5b1644dd1b18e08864738d480d90b6ef40aae427590982a"
-    },
-    {
-      "path": "validation-report.json",
-      "sha256": "e3331b81bfba953e001dba092737e7fed4e3fca7c7ccdd1e4252b4af488c0636"
-    },
-    {
-      "path": "validation-summary.tsv",
-      "sha256": "9d3e218b4a59bde468af17736d9f40915b037f74f9b750381ab5c77337298464"
-    }
+    {"path": "adjusted-validation.tsv", "sha256": "18125082d480f9819bf9e2737e48152ebc098d5470c3a9e8a5fad938ab1f78e7"},
+    {"path": "analyze-limma.R", "sha256": "84ae545c19b7b8017e394dd14797dbb758f391b541eb883e2c220c89a6a9dd76"},
+    {"path": "analyze-limma-adjusted.R", "sha256": "d7257d63debdfe8a01db3c8261bb5f3828947f90080d4f7ad0dd31975864aa29"},
+    {"path": "axis-limma-validation.pdf", "sha256": "e39e44d066c7a84ba5ebc26ed91df1db9eb95f16e864f839051c60327d791b66"},
+    {"path": "axis-limma-validation.png", "sha256": "9ae1db2b7f2def7112e89d9395f23b31bab77adece9e0d24352f9b5e0112ccd9"},
+    {"path": "compare.py", "sha256": "9b4b02803f36d8d1cbeb85651ccbe1fd03428707554f0b8c2cec4a5dd995b4ed"},
+    {"path": "execution-summary.tsv", "sha256": "c5901f3ebae43c16428cae7353a2e5b54a5fc177b2bef7ebdab56b5135ecbd60"},
+    {"path": "generate-regression-reference.R", "sha256": "a2d73d613eda617afa130cef826a4fe2a33db093e4e4dfb8d31f6e00293b89e1"},
+    {"path": "make-figure.py", "sha256": "6473dee086c2ed2b806bce5840e9cfae23db8e07ecd5d90ab1c7bbbac72ad09f"},
+    {"path": "README.md", "sha256": "7b7a6c9a104d3ee0593fd0adb65b9c17cab123ddabb6682c8f4fb2936668d867"},
+    {"path": "validation-report.json", "sha256": "3a867b7c90a3e084ad00e7b69ee30928aaaee039aaed43265b57e122aced8f0c"},
+    {"path": "validation-summary.tsv", "sha256": "9d3e218b4a59bde468af17736d9f40915b037f74f9b750381ab5c77337298464"}
   ]
 }
