@@ -36,6 +36,19 @@ jobs:
       - name: Run tests
         run: python -m pytest -q
 
+      - name: Benchmark synthetic demonstration
+        run: axis benchmark --repetitions 10 --warmups 1
+
+      - name: Upload benchmark report
+        uses: actions/upload-artifact@v6
+        with:
+          name: axis-benchmark-${{ matrix.os }}-python-3.12
+          path: |
+            benchmark-output/benchmark-report.json
+            benchmark-output/benchmark-runs.tsv
+          if-no-files-found: error
+          retention-days: 90
+
       - name: Check formatting and lint rules
         if: runner.os == 'Linux'
         run: ruff check axis tests

@@ -21,3 +21,8 @@ The first report produced by the public command is retained under
 [`results/windows-v0.2.0-dev`](results/windows-v0.2.0-dev). It records ten
 measured runs after one warmup on Windows; raw per-run timing values are kept
 in TSV form alongside the aggregate JSON report.
+
+The GitHub Actions matrix also runs the command on Ubuntu, Windows and macOS.
+Successful workflow runs expose one 90-day artifact per operating system,
+named `axis-benchmark-<os>-python-3.12`, containing only the aggregate report
+and per-run TSV table.

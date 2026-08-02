@@ -73,6 +73,10 @@ demonstration after the interpreter and dependencies are loaded; they do not
 include installation or Python start-up time. Python-traced memory is not the
 same as total process memory and is labelled accordingly in every output.
 
+Continuous integration runs the same ten-repetition benchmark on Linux,
+Windows and macOS. Each workflow run retains the aggregate JSON report and
+per-run TSV values for 90 days as separately named downloadable artefacts.
+
 ## Public project information
 
 - Apache 2.0 license: [`LICENSE`](LICENSE)
