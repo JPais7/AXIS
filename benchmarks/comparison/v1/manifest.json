@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "protocol": "AXIS workflow comparison v1",
+  "synthetic": true,
+  "created_at": "2026-08-02T15:16:39.919192+00:00",
+  "workflows": [
+    "axis",
+    "geo2r",
+    "manual_statistics",
+    "networkanalyst"
+  ],
+  "ratings": [
+    "pass",
+    "fail",
+    "not_applicable"
+  ],
+  "no_weighted_overall_score": true,
+  "files": [
+    {
+      "path": "coordinator-reference/expected-evidence-roles.tsv",
+      "sha256": "8b936b733b3d2ad1e065be62c2600aeef2b7754851ed9532935fe2f00242b21a"
+    },
+    {
+      "path": "coordinator-reference/expected-expression.tsv",
+      "sha256": "374f4eca13b30bf45e9a064e3e58a1e4966e631c40bcacabfd0bc1d7766fd637"
+    },
+    {
+      "path": "coordinator-reference/expected-study-decisions.tsv",
+      "sha256": "cadeb3bd983b2f5949a3c96aafa3f0c2cfcb6de45871ffc5c21daa2513a7d9b7"
+    },
+    {
+      "path": "coordinator-reference/README.md",
+      "sha256": "aa7149b820396b321e4693985d13b726d8570b993ae212e1f39db1a725141082"
+    },
+    {
+      "path": "evaluator-package/assessment-template.tsv",
+      "sha256": "a50c6368bec56a67770fd590bfd133c72801239d5777983543232af3a12b0efa"
+    },
+    {
+      "path": "evaluator-package/candidate-studies.tsv",
+      "sha256": "1efdf544dce7ca081f4fa6835b4fc2c19b3f3c024f820808ca713033dba4abbc"
+    },
+    {
+      "path": "evaluator-package/cohort-evidence.tsv",
+      "sha256": "b737ca1c6fe69c459a4a975c4dc2f0b6214ad3753ce1121049b2e3628af5bf87"
+    },
+    {
+      "path": "evaluator-package/expression-matrix.tsv",
+      "sha256": "a941c9e932db69ddbe3fef58cd28d81a5162ffafb75923279734399a27202069"
+    },
+    {
+      "path": "evaluator-package/README.md",
+      "sha256": "ce4c6590444e97afd0fe67b3129a83638b44283dae3037797756bf41b38a6b60"
+    },
+    {
+      "path": "evaluator-package/sample-metadata.tsv",
+      "sha256": "f95772013c8779109bffae9562c91ce64e47deecbcea0b7d07cf0f99638a70d7"
+    },
+    {
+      "path": "evaluator-package/tasks.tsv",
+      "sha256": "08ac8ac4bb9620435bdc77c6e8c64e6c9fd66338542e93f2837aaa162632287d"
+    }
+  ]
+}

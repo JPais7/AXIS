@@ -171,6 +171,12 @@ from axis.analysis.validation_cohort_selection import (
     ValidationCohortSelectionRun,
     ValidationCohortSelector,
 )
+from axis.analysis.workflow_comparison import (
+    ComparisonPreparation,
+    ComparisonSummary,
+    WorkflowComparisonPreparer,
+    WorkflowComparisonSummarizer,
+)
 
 __all__ = [
     "DifferentialAnalysis",
@@ -276,6 +282,10 @@ __all__ = [
     "TargetMetaAnalyzer",
     "ValidationCohortSelectionRun",
     "ValidationCohortSelector",
+    "ComparisonPreparation",
+    "ComparisonSummary",
+    "WorkflowComparisonPreparer",
+    "WorkflowComparisonSummarizer",
     "SingleCellTranscriptomeAnalyzer",
     "SingleCellTranscriptomeRun",
     "SraReprocessingPlan",

@@ -1,0 +1,5 @@
+task	title	inputs	objective
+A	Installation check	AXIS v0.1.0 synthetic demo	Install and run the demo; record time, memory method, output size and manual decisions.
+B	Blinded study triage	candidate-studies.tsv	Identify disease, tissue, treatment, pooling, repeated-participant and repository-duplicate risks.
+C	Within-study expression	sample-metadata.tsv; expression-matrix.tsv	Estimate case-control direction per gene, adjust for multiplicity and export methods and results.
+D	Cross-study conclusion	cohort-evidence.tsv	Separate primary, duplicate, sensitivity and incompatible evidence and state a bounded conclusion.

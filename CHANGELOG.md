@@ -10,6 +10,8 @@ All notable changes to AXIS are documented in this file. The project follows
 - Public `axis benchmark` command for repeated, offline measurement of the
   synthetic demonstration, with aggregate JSON and per-run TSV outputs.
 - Independent installation-validation protocol and structured GitHub report.
+- Guarded synthetic workflow-comparison package with separate blinded evaluator
+  materials, coordinator reference, two-reviewer ratings and article tables.
 
 ## [0.1.0] - 2026-08-02
 

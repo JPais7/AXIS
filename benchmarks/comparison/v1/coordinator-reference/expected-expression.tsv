@@ -1,0 +1,4 @@
+gene	expected_direction
+GENEA	higher_in_case
+GENEB	lower_in_case
+GENEC	no_difference

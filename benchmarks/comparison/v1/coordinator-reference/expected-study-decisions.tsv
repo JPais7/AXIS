@@ -1,0 +1,9 @@
+study_id	expected_decision
+SYN001	eligible
+SYN002	disease_mismatch
+SYN003	tissue_mismatch
+SYN004	treated
+SYN005	pooled
+SYN006	eligible
+SYN007	repository_duplicate_of_SYN006
+SYN008	repeated_participants

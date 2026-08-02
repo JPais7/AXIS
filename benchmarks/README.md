@@ -26,3 +26,32 @@ The GitHub Actions matrix also runs the command on Ubuntu, Windows and macOS.
 Successful workflow runs expose one 90-day artifact per operating system,
 named `axis-benchmark-<os>-python-3.12`, containing only the aggregate report
 and per-run TSV table.
+
+## Guarded workflow comparison
+
+Prepare identical synthetic tasks for AXIS, GEO2R, a manual statistical
+workflow and NetworkAnalyst:
+
+```shell
+axis prepare-workflow-comparison
+```
+
+Give reviewers only `workflow-comparison/evaluator-package`. Keep
+`coordinator-reference` hidden until two completed copies of
+`assessment-template.tsv` have been frozen. Then combine the initial ratings:
+
+```shell
+axis summarize-workflow-comparison reviewer-a.tsv reviewer-b.tsv
+```
+
+The summary preserves both ratings, flags unresolved disagreements and writes
+`consensus-template.tsv`. After resolving each disagreement against the frozen
+reference and recording a rationale, run:
+
+```shell
+axis summarize-workflow-comparison reviewer-a.tsv reviewer-b.tsv \
+  --consensus workflow-comparison-summary/consensus-template.tsv
+```
+
+The resulting article-ready count table deliberately does not calculate a weighted
+overall score; speed cannot compensate for a failed scientific guardrail.

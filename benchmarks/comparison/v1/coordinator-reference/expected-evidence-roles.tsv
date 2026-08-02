@@ -1,0 +1,6 @@
+cohort	expected_role
+COHORT-A	primary
+COHORT-B	primary
+COHORT-B-REPOSITORY-COPY	duplicate_exclude
+COHORT-H	sensitivity
+COHORT-I	incompatible_exclude

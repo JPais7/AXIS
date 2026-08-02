@@ -80,3 +80,8 @@ Report versions, operating system, hardware, dates, all deviations, failures
 and raw assessment tables. Keep the synthetic benchmark separate from the
 DDX24 biological result. Do not claim superiority until the protocol has been
 executed by an independent reviewer.
+
+The versioned synthetic evaluator package is generated with
+`axis prepare-workflow-comparison`. Two frozen initial reviewer tables are
+combined with `axis summarize-workflow-comparison`; unresolved disagreements
+remain explicit until a separately documented consensus step.

@@ -1,4 +1,4 @@
-"""Daily command-line interface for the AXIS Evidence Store."""
+﻿"""Daily command-line interface for the AXIS Evidence Store."""
 
 from __future__ import annotations
 
@@ -68,6 +68,8 @@ from axis.analysis import (
     TargetMetaAnalyzer,
     TargetStabilityAnalyzer,
     ValidationCohortSelector,
+    WorkflowComparisonPreparer,
+    WorkflowComparisonSummarizer,
     write_sample_sheet_template,
 )
 from axis.domain import Study
@@ -3123,6 +3125,63 @@ def run_benchmark(
     )
     console.print(f"Report: {result.report_path}")
     console.print(f"Runs: {result.runs_path}")
+
+
+@app.command("prepare-workflow-comparison")
+def prepare_workflow_comparison(
+    output: Annotated[
+        Path,
+        typer.Option("--output", file_okay=False),
+    ] = Path("workflow-comparison"),
+) -> None:
+    """Create the blinded, synthetic package used to compare analysis workflows."""
+    try:
+        result = WorkflowComparisonPreparer().prepare(output_root=output)
+    except (OSError, ValueError) as error:
+        error_console.print(f"Comparison preparation failed: {error}", style="bold red")
+        raise typer.Exit(code=1) from error
+
+    console.print(f"Evaluator package: {result.output_root / 'evaluator-package'}")
+    console.print(
+        f"Coordinator reference: {result.output_root / 'coordinator-reference'}"
+    )
+    console.print(f"Manifest: {result.manifest_path}")
+
+
+@app.command("summarize-workflow-comparison")
+def summarize_workflow_comparison(
+    assessments: Annotated[
+        list[Path],
+        typer.Argument(
+            exists=True,
+            dir_okay=False,
+            help="Exactly two reviewer TSV files.",
+        ),
+    ],
+    output: Annotated[
+        Path,
+        typer.Option("--output", file_okay=False),
+    ] = Path("workflow-comparison-summary"),
+    consensus: Annotated[
+        Path | None,
+        typer.Option("--consensus", exists=True, dir_okay=False),
+    ] = None,
+) -> None:
+    """Summarize two independent workflow assessments without a weighted score."""
+    try:
+        result = WorkflowComparisonSummarizer().summarize(
+            assessments,
+            consensus_path=consensus,
+            output_root=output,
+        )
+    except (OSError, ValueError) as error:
+        error_console.print(f"Comparison summary failed: {error}", style="bold red")
+        raise typer.Exit(code=1) from error
+
+    console.print(f"Report: {result.report_path}")
+    console.print(f"Article table: {result.article_table_path}")
+    console.print(f"Consensus template: {result.consensus_template_path}")
+    console.print(f"Unresolved disagreements: {result.unresolved_disagreements}")
 
 
 @app.command("analyze-single-cell-transcriptome")

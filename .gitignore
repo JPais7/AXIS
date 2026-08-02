@@ -20,4 +20,6 @@ data/
 demo-output/
 benchmark-output/
 benchmarks/results/**/runs/
+workflow-comparison/
+workflow-comparison-summary/
 .benchmark-run/
