@@ -7,10 +7,17 @@ demo and cannot establish superiority over another tool.
 Run ten repetitions from the repository root:
 
 ```shell
-python benchmarks/benchmark_demo.py --repetitions 10
+axis benchmark --repetitions 10 --warmups 1
 ```
 
-The JSON result reports environment, wall-clock time, Python allocation peak,
+The command writes an aggregate JSON report and a TSV file containing every
+measured run. It reports environment, wall-clock time, Python allocation peak,
 output size and check status. `tracemalloc` measures Python allocations rather
 than total operating-system resident memory; the distinction is retained in
-the output.
+the outputs. `benchmark_demo.py` remains as a compatibility entry point and
+uses the same implementation as the public command.
+
+The first report produced by the public command is retained under
+[`results/windows-v0.2.0-dev`](results/windows-v0.2.0-dev). It records ten
+measured runs after one warmup on Windows; raw per-run timing values are kept
+in TSV form alongside the aggregate JSON report.

@@ -3,6 +3,14 @@
 All notable changes to AXIS are documented in this file. The project follows
 [Semantic Versioning](https://semver.org/).
 
+## [Unreleased]
+
+### Added
+
+- Public `axis benchmark` command for repeated, offline measurement of the
+  synthetic demonstration, with aggregate JSON and per-run TSV outputs.
+- Independent installation-validation protocol and structured GitHub report.
+
 ## [0.1.0] - 2026-08-02
 
 ### Added

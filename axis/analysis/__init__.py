@@ -1,6 +1,7 @@
 """Reproducible analyses over prepared AXIS evidence."""
 
 from axis.analysis.article_finalization import ArticleFinalizationRun, ArticleFinalizer
+from axis.analysis.benchmark import DemoBenchmarker, DemoBenchmarkRun
 from axis.analysis.cd8_cross_cohort import Cd8CrossCohortAnalyzer, Cd8CrossCohortRun
 from axis.analysis.cd8_evidence_review import Cd8EvidenceReviewer, Cd8EvidenceReviewRun
 from axis.analysis.cell_composition import (
@@ -173,6 +174,8 @@ from axis.analysis.validation_cohort_selection import (
 
 __all__ = [
     "DifferentialAnalysis",
+    "DemoBenchmarker",
+    "DemoBenchmarkRun",
     "ArticleFinalizationRun",
     "ArticleFinalizer",
     "DifferentialAnalyzer",

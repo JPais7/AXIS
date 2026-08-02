@@ -172,3 +172,27 @@ def test_download_saves_matrix_and_reports_manifest(
     assert "42 bytes" in result.stdout
     # Rich may wrap long paths at different columns on each CI terminal.
     assert "manifest.json" in "".join(result.stdout.split())
+
+
+def test_benchmark_runs_synthetic_demo(tmp_path: Path) -> None:
+    output = tmp_path / "benchmark"
+
+    result = runner.invoke(
+        main.app,
+        [
+            "benchmark",
+            "--repetitions",
+            "2",
+            "--warmups",
+            "0",
+            "--workspace",
+            str(tmp_path),
+            "--output",
+            str(output),
+        ],
+    )
+
+    assert result.exit_code == 0
+    assert "2 measured runs" in result.stdout
+    assert (output / "benchmark-report.json").is_file()
+    assert (output / "benchmark-runs.tsv").is_file()

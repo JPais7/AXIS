@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "axis"
-version = "0.1.0"
+version = "0.2.0.dev0"
 description = "AI for Axial Spondyloarthritis Insights & Solutions"
 authors = ["João Pais", "Diana Koshman"]
 license = "Apache-2.0"

@@ -56,6 +56,23 @@ reporting. Successful execution reports `9/9 checks`. See
 For an installation test performed by someone outside the development process,
 follow the [independent validation protocol](docs/independent-installation-validation.md).
 
+## Reproducible synthetic benchmark
+
+Measure repeated executions of the packaged demonstration without downloading
+biomedical data:
+
+```shell
+axis benchmark --repetitions 10 --warmups 1
+```
+
+The command writes `benchmark-output/benchmark-report.json`, an aggregate
+machine-readable report, and `benchmark-output/benchmark-runs.tsv`, with one
+row per measured run. It records elapsed time, Python-traced peak memory,
+output size, platform, Python and AXIS versions. Timings cover the in-process
+demonstration after the interpreter and dependencies are loaded; they do not
+include installation or Python start-up time. Python-traced memory is not the
+same as total process memory and is labelled accordingly in every output.
+
 ## Public project information
 
 - Apache 2.0 license: [`LICENSE`](LICENSE)

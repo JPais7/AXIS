@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "benchmark": "synthetic-demo",
+  "status": "passed",
+  "synthetic": true,
+  "offline_during_timed_runs": true,
+  "created_at": "2026-08-02T14:49:14.736673+00:00",
+  "axis_version": "0.2.0.dev0",
+  "runtime": {
+    "python": "3.12.13",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD"
+  },
+  "method": {
+    "repetitions": 10,
+    "warmups": 1,
+    "timer": "time.perf_counter",
+    "memory": "tracemalloc peak Python-traced allocations",
+    "scope": "in-process demo execution after interpreter and dependencies are loaded; excludes installation"
+  },
+  "elapsed_seconds": {
+    "minimum": 0.0027316000196151435,
+    "median": 0.002937950019259006,
+    "mean": 0.003044820006471127,
+    "maximum": 0.0036165000055916607,
+    "population_standard_deviation": 0.00028334480743543214
+  },
+  "peak_traced_memory_bytes": {
+    "minimum": 1059930.0,
+    "median": 1059930.0,
+    "mean": 1059930.0,
+    "maximum": 1059930.0,
+    "population_standard_deviation": 0.0
+  },
+  "output_bytes": {
+    "minimum": 1595.0,
+    "median": 1595.0,
+    "mean": 1595.0,
+    "maximum": 1595.0,
+    "population_standard_deviation": 0.0
+  },
+  "checks": {
+    "expected_per_run": 9,
+    "all_runs_passed": true
+  },
+  "runs": "benchmark-runs.tsv"
+}

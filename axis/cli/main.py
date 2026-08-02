@@ -27,6 +27,7 @@ from axis.analysis import (
     CohortSelectionBuilder,
     ConfoundingFreezeBuilder,
     Ddx24ValidationPlanner,
+    DemoBenchmarker,
     DesignInspector,
     DifferentialAnalyzer,
     DirectionConcordanceAnalyzer,
@@ -3079,6 +3080,49 @@ def run_demo(
         f"Synthetic demo passed: {result.passed}/{result.checks} checks."
     )
     console.print(f"Report: {result.report_path}")
+
+
+@app.command("benchmark")
+def run_benchmark(
+    repetitions: Annotated[
+        int,
+        typer.Option("--repetitions", "-n", min=1, max=1000),
+    ] = 10,
+    warmups: Annotated[
+        int,
+        typer.Option("--warmups", min=0, max=100),
+    ] = 1,
+    workspace: Annotated[
+        Path,
+        typer.Option("--workspace", file_okay=False, help="AXIS workspace root."),
+    ] = Path("."),
+    manifest: Annotated[
+        Path,
+        typer.Option("--manifest", dir_okay=False),
+    ] = Path("examples/demo/manifest.json"),
+    output: Annotated[
+        Path,
+        typer.Option("--output", file_okay=False),
+    ] = Path("benchmark-output"),
+) -> None:
+    """Benchmark repeated offline runs of the synthetic demonstration."""
+    try:
+        result = DemoBenchmarker().run(
+            repetitions=repetitions,
+            warmups=warmups,
+            workspace=workspace,
+            manifest_path=manifest,
+            output_root=output,
+        )
+    except (FileNotFoundError, OSError, ValueError) as error:
+        error_console.print(f"Benchmark failed: {error}", style="bold red")
+        raise typer.Exit(code=1) from error
+    console.print(
+        f"Synthetic benchmark passed: {result.repetitions} measured runs "
+        f"after {result.warmups} warmup runs."
+    )
+    console.print(f"Report: {result.report_path}")
+    console.print(f"Runs: {result.runs_path}")
 
 
 @app.command("analyze-single-cell-transcriptome")

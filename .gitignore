@@ -18,4 +18,6 @@ dist/
 .venv/
 data/
 demo-output/
+benchmark-output/
+benchmarks/results/**/runs/
 .benchmark-run/
