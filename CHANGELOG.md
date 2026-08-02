@@ -5,6 +5,8 @@ All notable changes to AXIS are documented in this file. The project follows
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-08-02
+
 ### Added
 
 - Collision-safe `axis-bio` package metadata and a trusted-publishing workflow
@@ -37,4 +39,6 @@ All notable changes to AXIS are documented in this file. The project follows
 AXIS 0.1.0 generates auditable research hypotheses. Its outputs are not
 clinical recommendations and do not establish causality, efficacy or safety.
 
+[Unreleased]: https://github.com/JPais7/AXIS/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/JPais7/AXIS/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/JPais7/AXIS/releases/tag/v0.1.0

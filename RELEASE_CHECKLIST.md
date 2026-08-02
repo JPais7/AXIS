@@ -1,8 +1,8 @@
 # AXIS release checklist
 
-Status on 2 August 2026: **version 0.1.0 is archived** and development now
-targets 0.2.0. Version 1.0.0 remains conditional on external validation and
-the remaining gates below.
+Status on 2 August 2026: **version 0.2.0 is prepared for release**. Version
+1.0.0 remains conditional on external validation and the remaining gates
+below.
 
 ## Completed locally
 
@@ -38,6 +38,5 @@ the remaining gates below.
 - [x] obtain author approval for joint authorship and copyright
 - [ ] obtain final author approval of the exact public repository contents
 
-The version in `pyproject.toml` remains a 0.2.0 development version until the
-next release is approved. Passing local checks is necessary but is not
-external portability.
+The version in `pyproject.toml` is 0.2.0 for the prepared release. Passing
+local checks is necessary but is not external portability.

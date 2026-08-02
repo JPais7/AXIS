@@ -24,7 +24,7 @@ evidence and must not be silently excluded.
 python --version
 python -m venv axis-validation
 .\axis-validation\Scripts\python.exe -m pip install --upgrade pip
-.\axis-validation\Scripts\python.exe -m pip install https://github.com/JPais7/AXIS/archive/refs/tags/v0.1.0.zip
+.\axis-validation\Scripts\python.exe -m pip install https://github.com/JPais7/AXIS/archive/refs/tags/v0.2.0.zip
 .\axis-validation\Scripts\axis.exe demo --output axis-demo-output
 ```
 
@@ -34,7 +34,7 @@ python -m venv axis-validation
 python3.12 --version
 python3.12 -m venv axis-validation
 ./axis-validation/bin/python -m pip install --upgrade pip
-./axis-validation/bin/python -m pip install https://github.com/JPais7/AXIS/archive/refs/tags/v0.1.0.zip
+./axis-validation/bin/python -m pip install https://github.com/JPais7/AXIS/archive/refs/tags/v0.2.0.zip
 ./axis-validation/bin/axis demo --output axis-demo-output
 ```
 
