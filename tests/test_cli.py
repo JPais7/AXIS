@@ -170,4 +170,5 @@ def test_download_saves_matrix_and_reports_manifest(
     assert result.exit_code == 0
     assert "Downloaded GSE234339" in result.stdout
     assert "42 bytes" in result.stdout
-    assert "manifest.json" in result.stdout
+    # Rich may wrap long paths at different columns on each CI terminal.
+    assert "manifest.json" in "".join(result.stdout.split())
