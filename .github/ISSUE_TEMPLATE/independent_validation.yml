@@ -1,0 +1,71 @@
+name: Independent installation validation
+description: Report an independent installation and synthetic AXIS demonstration.
+title: "[Independent validation]: AXIS v0.1.0"
+labels: [validation]
+body:
+  - type: markdown
+    attributes:
+      value: >-
+        Follow docs/independent-installation-validation.md. Do not include
+        credentials, private data or biomedical participant data.
+  - type: checkboxes
+    id: independence
+    attributes:
+      label: Independence
+      options:
+        - label: I did not develop AXIS or configure this AXIS environment.
+          required: true
+  - type: input
+    id: operating_system
+    attributes:
+      label: Operating system
+      placeholder: For example, Windows 11, Ubuntu 24.04 or macOS 15
+    validations:
+      required: true
+  - type: input
+    id: python_version
+    attributes:
+      label: Python version
+      placeholder: For example, 3.12.10
+    validations:
+      required: true
+  - type: dropdown
+    id: outcome
+    attributes:
+      label: Outcome
+      options:
+        - Passed 9/9 without intervention
+        - Passed 9/9 after intervention
+        - Failed
+    validations:
+      required: true
+  - type: textarea
+    id: console_result
+    attributes:
+      label: Final console output
+      description: Include the final demo result or complete error.
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: report
+    attributes:
+      label: demo-report.json
+      description: Paste this synthetic, non-sensitive report without editing it.
+      render: json
+    validations:
+      required: true
+  - type: textarea
+    id: intervention
+    attributes:
+      label: Manual intervention or difficulty
+      description: State "None" or describe every additional step required.
+    validations:
+      required: true
+  - type: checkboxes
+    id: responsibility
+    attributes:
+      label: Data responsibility
+      options:
+        - label: I have not included credentials, private data or participant data.
+          required: true

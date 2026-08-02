@@ -53,6 +53,9 @@ primary and sensitivity evidence, numerical synthesis and machine-readable
 reporting. Successful execution reports `9/9 checks`. See
 [`examples/demo/README.md`](examples/demo/README.md).
 
+For an installation test performed by someone outside the development process,
+follow the [independent validation protocol](docs/independent-installation-validation.md).
+
 ## Public project information
 
 - Apache 2.0 license: [`LICENSE`](LICENSE)
