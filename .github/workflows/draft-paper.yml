@@ -1,0 +1,33 @@
+name: Draft JOSS paper
+
+on:
+  push:
+    paths:
+      - "paper/**"
+      - ".github/workflows/draft-paper.yml"
+  pull_request:
+    paths:
+      - "paper/**"
+      - ".github/workflows/draft-paper.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  paper:
+    runs-on: ubuntu-latest
+    name: Compile paper
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v5
+      - name: Build draft PDF
+        uses: openjournals/openjournals-draft-action@master
+        with:
+          journal: joss
+          paper-path: paper/paper.md
+      - name: Upload draft
+        uses: actions/upload-artifact@v6
+        with:
+          name: joss-paper
+          path: paper/paper.pdf
