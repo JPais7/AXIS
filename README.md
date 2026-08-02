@@ -3,7 +3,8 @@
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 [![Research software](https://img.shields.io/badge/use-research%20only-17365D.svg)](SCIENTIFIC_POLICY.md)
 [![AXIS checks](https://github.com/JPais7/AXIS/actions/workflows/ci.yml/badge.svg)](https://github.com/JPais7/AXIS/actions/workflows/ci.yml)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21760202.svg)](https://doi.org/10.5281/zenodo.21760202)
+[![PyPI version](https://img.shields.io/pypi/v/axis-bio.svg)](https://pypi.org/project/axis-bio/)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21760201.svg)](https://doi.org/10.5281/zenodo.21760201)
 
 AXIS is a local scientific discovery system for public axial
 spondyloarthritis (axSpA) data. Its first goal is deliberately narrow:
@@ -39,8 +40,8 @@ python -m pip install axis-bio
 axis demo
 ```
 
-Until the first PyPI publication is complete, install the current public
-source directly:
+To test the current public source instead of a released package, install it
+directly:
 
 ```shell
 python -m pip install "git+https://github.com/JPais7/AXIS.git"
@@ -100,6 +101,8 @@ per-run TSV values for 90 days as separately named downloadable artefacts.
 
 - Apache 2.0 license: [`LICENSE`](LICENSE)
 - citation metadata: [`CITATION.cff`](CITATION.cff)
+- stable Python package: [`axis-bio`](https://pypi.org/project/axis-bio/)
+- version 0.2.0 archive: [Zenodo DOI 10.5281/zenodo.21762169](https://doi.org/10.5281/zenodo.21762169)
 - release history: [`CHANGELOG.md`](CHANGELOG.md)
 - contribution guide: [`CONTRIBUTING.md`](CONTRIBUTING.md)
 - support and security: [`SUPPORT.md`](SUPPORT.md), [`SECURITY.md`](SECURITY.md)

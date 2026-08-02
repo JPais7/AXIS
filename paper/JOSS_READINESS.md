@@ -53,8 +53,8 @@ readiness record, not evidence that the manuscript has been submitted.
 - [ ] Run the complete tests and cross-platform CI.
 - [ ] Create a stable semantic-version tag; do not describe a development build
   as the reviewed release.
-- [ ] Archive that exact tag in Zenodo and replace `archive_doi` in `paper.md`
-  with the version-specific DOI if the current DOI does not identify it.
+- [x] Archive release `v0.2.0` in Zenodo and record its version-specific DOI in
+  `paper.md`. Repeat this step for the exact future JOSS-reviewed release.
 - [ ] Confirm that installation and the synthetic demonstration work from the
   archived release on a clean computer.
 - [ ] Submit through JOSS only after every blocking item above is satisfied.

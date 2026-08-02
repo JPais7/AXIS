@@ -1,8 +1,8 @@
 # AXIS release checklist
 
-Status on 2 August 2026: **version 0.2.0 is prepared for release**. Version
-1.0.0 remains conditional on external validation and the remaining gates
-below.
+Status on 2 August 2026: **version 0.2.0 is published on GitHub, PyPI and
+Zenodo**. Development has advanced to 0.2.1.dev0. Version 1.0.0 remains
+conditional on external validation and the remaining gates below.
 
 ## Completed locally
 
@@ -24,6 +24,8 @@ below.
 - [x] collision-safe `axis-bio` distribution metadata
 - [x] token-free PyPI trusted-publishing workflow with clean-wheel smoke test
 - [x] documented PyPI release procedure
+- [x] publish `axis-bio` 0.2.0 through trusted publishing
+- [x] archive release 0.2.0 in Zenodo with a version-specific DOI
 
 ## Required before tagging 1.0.0
 
@@ -38,5 +40,6 @@ below.
 - [x] obtain author approval for joint authorship and copyright
 - [ ] obtain final author approval of the exact public repository contents
 
-The version in `pyproject.toml` is 0.2.0 for the prepared release. Passing
-local checks is necessary but is not external portability.
+The version in `pyproject.toml` is now 0.2.1.dev0; `CITATION.cff` continues to
+describe the latest stable release, 0.2.0. Passing local checks is necessary
+but is not external portability.

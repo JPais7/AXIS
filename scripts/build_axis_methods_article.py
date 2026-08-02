@@ -286,7 +286,7 @@ def build():
     ])
 
     add_heading(doc, "8. Availability")
-    availability = add_body(doc, "AXIS is implemented in Python 3.12 and exposes a command-line interface. Source code is publicly available at https://github.com/JPais7/AXIS under the Apache License 2.0. The archived Zenodo record is available at https://doi.org/10.5281/zenodo.21760202. The repository includes locked dependencies, automated cross-platform tests, a packaged synthetic demonstration, frozen reproduction manifests, validation scripts, checksums and auditable tabular/JSON outputs. Raw public data that can be retrieved reproducibly and frozen participant-level data that should not be redistributed are excluded from the software archive.")
+    availability = add_body(doc, "AXIS is implemented in Python 3.12 and exposes a command-line interface. Source code is publicly available at https://github.com/JPais7/AXIS under the Apache License 2.0. Version 0.2.0 is archived at https://doi.org/10.5281/zenodo.21762169 and distributed from https://pypi.org/project/axis-bio/. The repository includes locked dependencies, automated cross-platform tests, a packaged synthetic demonstration, frozen reproduction manifests, validation scripts, checksums and auditable tabular/JSON outputs. Raw public data that can be retrieved reproducibly and frozen participant-level data that should not be redistributed are excluded from the software archive.")
     availability.paragraph_format.keep_together = True
 
     add_heading(doc, "9. AI usage disclosure")
@@ -307,7 +307,7 @@ def build():
         "5. Alber S, et al. Single cell transcriptome and surface epitope analysis of ankylosing spondylitis facilitates disease classification by machine learning. Frontiers in Immunology. 2022;13:838636. doi:10.3389/fimmu.2022.838636.",
         "6. Tang M, Qaiyum Z, Lim M, Inman RD. Single cell immune profiling in ankylosing spondylitis reveals resistance of CD8+ T cells to immune exhaustion. iScience. 2025;28:112715. doi:10.1016/j.isci.2025.112715.",
         "7. Ritchie ME, et al. limma powers differential expression analyses for RNA-sequencing and microarray studies. Nucleic Acids Research. 2015;43(7):e47. doi:10.1093/nar/gkv007.",
-        "8. Pais J, Koshman D. AXIS: AI for Axial Spondyloarthritis Insights & Solutions [software]. Zenodo. 2026. doi:10.5281/zenodo.21760202.",
+        "8. Pais J, Koshman D. AXIS: AI for Axial Spondyloarthritis Insights & Solutions. Version 0.2.0 [software]. Zenodo. 2026. doi:10.5281/zenodo.21762169.",
     ]
     for ref in refs:
         p = doc.add_paragraph(style="List Number")

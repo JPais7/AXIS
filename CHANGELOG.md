@@ -5,6 +5,12 @@ All notable changes to AXIS are documented in this file. The project follows
 
 ## [Unreleased]
 
+### Changed
+
+- Updated citation, manuscript and project links to the version-specific AXIS
+  0.2.0 Zenodo DOI and the public `axis-bio` PyPI distribution.
+- Advanced the development version after the immutable 0.2.0 publication.
+
 ## [0.2.0] - 2026-08-02
 
 ### Added

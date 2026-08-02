@@ -18,6 +18,8 @@ affiliations:
     index: 1
 date: 2 August 2026
 bibliography: paper.bib
+repository: https://github.com/JPais7/AXIS
+archive_doi: 10.5281/zenodo.21762169
 ---
 
 # Summary
