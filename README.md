@@ -3,6 +3,7 @@
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 [![Research software](https://img.shields.io/badge/use-research%20only-17365D.svg)](SCIENTIFIC_POLICY.md)
 [![AXIS checks](https://github.com/JPais7/AXIS/actions/workflows/ci.yml/badge.svg)](https://github.com/JPais7/AXIS/actions/workflows/ci.yml)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21760202.svg)](https://doi.org/10.5281/zenodo.21760202)
 
 AXIS is a local scientific discovery system for public axial
 spondyloarthritis (axSpA) data. Its first goal is deliberately narrow:

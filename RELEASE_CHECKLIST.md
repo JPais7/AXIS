@@ -30,7 +30,7 @@ remains conditional on external validation and the remaining gates below.
 - [ ] ask an independent person to install and execute the demonstration
 - [ ] record runtime and peak memory for the demo and frozen case study
 - [ ] complete the predeclared comparison with alternative workflows
-- [ ] archive the tagged release and add its DOI to `CITATION.cff`
+- [x] archive the tagged release and add its DOI to `CITATION.cff`
 - [x] obtain author approval for joint authorship and copyright
 - [ ] obtain final author approval of the exact public repository contents
 
