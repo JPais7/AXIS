@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "status": "partial_internal_ai_run",
+  "protocol": "scoped workflow comparison v2",
+  "accession": "GSE18781",
+  "completed_workflows": [
+    "axis",
+    "manual_statistics"
+  ],
+  "incomplete_workflows": [
+    "geo2r",
+    "expressanalyst"
+  ],
+  "publishable_comparison": false,
+  "files": [
+    {
+      "path": "axis/differential-analysis.json",
+      "sha256": "0d8324bbbc130370777c5cee4a187aca641d1a0ca0a38d94433e2e7ab15156f1"
+    },
+    {
+      "path": "axis/differential-expression.tsv",
+      "sha256": "ac1a39609bbd84f3381ba5ef433539c931d68264c868d66fbb783e37e045886a"
+    },
+    {
+      "path": "axis/sample-groups.tsv",
+      "sha256": "541ac68754023ae3623bde6150ed98bf26dd62d82aec478b0a33d3d37ac0a24c"
+    },
+    {
+      "path": "compare.py",
+      "sha256": "4547fbac76b1291352dca0dc5620202e95f06b5096daa28764789ce64ae84a4c"
+    },
+    {
+      "path": "comparison-report.json",
+      "sha256": "93d8514ab5be9c1a64cf5f984eab56ee4c0c2c4626b252e1d2beda048f12a53d"
+    },
+    {
+      "path": "manual/analyze.py",
+      "sha256": "9da2a556617b588454b55897f433dbde0c1397e2e18701372e4304fd3f5c7f1e"
+    },
+    {
+      "path": "manual/differential-expression.tsv",
+      "sha256": "94a013e2d7adfd6e31daddb182440c32ded92ad97c476693db714f6fd6183f72"
+    },
+    {
+      "path": "manual/methods.json",
+      "sha256": "bf949cc55f86e3dfe7c45a07683f19c980ed9a3192d19e42db41b42f3e9d5d99"
+    },
+    {
+      "path": "RUN-REPORT.md",
+      "sha256": "96073c777d8a735ba7ae352dc850d1a051f69585fc1a4eda69fa13866222670d"
+    },
+    {
+      "path": "WEB-ATTEMPTS.md",
+      "sha256": "9a75d6e9f50646292819541aebc233e5332468b60fbe7d7d926244cfdb3fb335"
+    }
+  ]
+}

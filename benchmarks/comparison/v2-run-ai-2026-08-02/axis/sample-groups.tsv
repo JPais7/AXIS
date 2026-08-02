@@ -1,0 +1,56 @@
+accession	group	title	source	characteristics
+GSM465907	case	Blood - Axial Spondyloarthropathy - 015A	peripheral blood	uveitis status: No uveitis | gender: Male | age: 39 | set: 1 | tissue: Blood | disease state: Axial Spondyloarthropathy
+GSM465908	case	Blood - Axial Spondyloarthropathy - 019A	peripheral blood	uveitis status: Uveitis | gender: Male | age: 37 | set: 1 | tissue: Blood | disease state: Axial Spondyloarthropathy
+GSM465909	case	Blood - Axial Spondyloarthropathy - 029A	peripheral blood	uveitis status: No uveitis | gender: Female | age: 37 | set: 1 | tissue: Blood | disease state: Axial Spondyloarthropathy
+GSM465910	case	Blood - Axial Spondyloarthropathy - 030A	peripheral blood	uveitis status: No uveitis | gender: Female | age: 45 | set: 1 | tissue: Blood | disease state: Axial Spondyloarthropathy
+GSM465911	case	Blood - Axial Spondyloarthropathy - 033A	peripheral blood	uveitis status: Uveitis | gender: Male | age: 62 | set: 1 | tissue: Blood | disease state: Axial Spondyloarthropathy
+GSM465912	case	Blood - Axial Spondyloarthropathy - 058A	peripheral blood	uveitis status: Uveitis | gender: Male | age: 35 | set: 1 | tissue: Blood | disease state: Axial Spondyloarthropathy
+GSM465913	case	Blood - Axial Spondyloarthropathy - 062A	peripheral blood	uveitis status: No uveitis | gender: Male | age: 67 | set: 1 | tissue: Blood | disease state: Axial Spondyloarthropathy
+GSM465914	case	Blood - Axial Spondyloarthropathy - 066A	peripheral blood	uveitis status: Uveitis | gender: Male | age: 68 | set: 1 | tissue: Blood | disease state: Axial Spondyloarthropathy
+GSM465915	case	Blood - Axial Spondyloarthropathy - 069A	peripheral blood	uveitis status: Uveitis | gender: Male | age: 58 | set: 1 | tissue: Blood | disease state: Axial Spondyloarthropathy
+GSM465916	case	Blood - Axial Spondyloarthropathy - 074A	peripheral blood	uveitis status: Uveitis | gender: Male | age: 61 | set: 1 | tissue: Blood | disease state: Axial Spondyloarthropathy
+GSM465917	case	Blood - Axial Spondyloarthropathy - 083A	peripheral blood	uveitis status: Uveitis | gender: Male | age: 51 | set: 1 | tissue: Blood | disease state: Axial Spondyloarthropathy
+GSM465918	case	Blood - Axial Spondyloarthropathy - 083B	peripheral blood	uveitis status: Uveitis | gender: Male | age: 51 | set: 2 | tissue: Blood | disease state: Axial Spondyloarthropathy
+GSM465919	case	Blood - Axial Spondyloarthropathy - 089A	peripheral blood	uveitis status: Uveitis | gender: Female | age: 32 | set: 2 | tissue: Blood | disease state: Axial Spondyloarthropathy
+GSM465920	case	Blood - Axial Spondyloarthropathy - 096A	peripheral blood	uveitis status: Uveitis | gender: Female | age: 33 | set: 2 | tissue: Blood | disease state: Axial Spondyloarthropathy
+GSM465921	case	Blood - Axial Spondyloarthropathy - 097A	peripheral blood	uveitis status: Uveitis | gender: Female | age: 51 | set: 2 | tissue: Blood | disease state: Axial Spondyloarthropathy
+GSM465922	case	Blood - Axial Spondyloarthropathy - 152A	peripheral blood	uveitis status: Uveitis | gender: Male | age: 63 | set: 2 | tissue: Blood | disease state: Axial Spondyloarthropathy
+GSM465923	case	Blood - Axial Spondyloarthropathy - 159A	peripheral blood	uveitis status: Uveitis | gender: Male | age: 34 | set: 2 | tissue: Blood | disease state: Axial Spondyloarthropathy
+GSM465924	case	Blood - Axial Spondyloarthropathy - 162A	peripheral blood	uveitis status: Uveitis | gender: Male | age: 63 | set: 2 | tissue: Blood | disease state: Axial Spondyloarthropathy
+GSM465925	control	Blood - Control - 017A	peripheral blood	uveitis status: No uveitis | gender: Female | age: 68 | set: 1 | tissue: Blood | disease state: Control
+GSM465926	control	Blood - Control - 020A	peripheral blood	uveitis status: No uveitis | gender: Female | age: 69 | set: 1 | tissue: Blood | disease state: Control
+GSM465927	control	Blood - Control - 021A	peripheral blood	uveitis status: No uveitis | gender: Female | age: 59 | set: 1 | tissue: Blood | disease state: Control
+GSM465928	control	Blood - Control - 022A	peripheral blood	uveitis status: No uveitis | gender: Male | age: 57 | set: 1 | tissue: Blood | disease state: Control
+GSM465929	control	Blood - Control - 023A	peripheral blood	uveitis status: No uveitis | gender: Female | age: 83 | set: 1 | tissue: Blood | disease state: Control
+GSM465930	control	Blood - Control - 032A	peripheral blood	uveitis status: No uveitis | gender: Male | age: 70 | set: 1 | tissue: Blood | disease state: Control
+GSM465931	control	Blood - Control - 051A	peripheral blood	uveitis status: No uveitis | gender: Male | age: 32 | set: 1 | tissue: Blood | disease state: Control
+GSM465932	control	Blood - Control - 052A	peripheral blood	uveitis status: No uveitis | gender: Female | age: 22 | set: 1 | tissue: Blood | disease state: Control
+GSM465933	control	Blood - Control - 055A	peripheral blood	uveitis status: No uveitis | gender: Female | age: 36 | set: 1 | tissue: Blood | disease state: Control
+GSM465934	control	Blood - Control - 056A	peripheral blood	uveitis status: No uveitis | gender: Male | age: 41 | set: 1 | tissue: Blood | disease state: Control
+GSM465935	control	Blood - Control - 065A	peripheral blood	uveitis status: No uveitis | gender: Female | age: 25 | set: 1 | tissue: Blood | disease state: Control
+GSM465936	control	Blood - Control - 067A	peripheral blood	uveitis status: No uveitis | gender: Female | age: 23 | set: 1 | tissue: Blood | disease state: Control
+GSM465937	control	Blood - Control - 088A	peripheral blood	uveitis status: No uveitis | gender: Female | age: 34 | set: 2 | tissue: Blood | disease state: Control
+GSM465938	control	Blood - Control - 090A	peripheral blood	uveitis status: No uveitis | gender: Female | age: 49 | set: 2 | tissue: Blood | disease state: Control
+GSM465939	control	Blood - Control - 092A	peripheral blood	uveitis status: No uveitis | gender: Female | age: 24 | set: 2 | tissue: Blood | disease state: Control
+GSM465940	control	Blood - Control - 111A	peripheral blood	uveitis status: No uveitis | gender: Female | age: 25 | set: 2 | tissue: Blood | disease state: Control
+GSM465941	control	Blood - Control - 112A	peripheral blood	uveitis status: No uveitis | gender: Female | age: 24 | set: 2 | tissue: Blood | disease state: Control
+GSM465942	control	Blood - Control - 138A	peripheral blood	uveitis status: No uveitis | gender: Female | age: 47 | set: 2 | tissue: Blood | disease state: Control
+GSM465943	control	Blood - Control - 140A	peripheral blood	uveitis status: No uveitis | gender: Female | age: 32 | set: 2 | tissue: Blood | disease state: Control
+GSM465944	control	Blood - Control - 141A	peripheral blood	uveitis status: No uveitis | gender: Female | age: 27 | set: 2 | tissue: Blood | disease state: Control
+GSM465945	control	Blood - Control - 153A	peripheral blood	uveitis status: No uveitis | gender: Female | age: 29 | set: 2 | tissue: Blood | disease state: Control
+GSM465946	control	Blood - Control - 154A	peripheral blood	uveitis status: No uveitis | gender: Female | age: 33 | set: 2 | tissue: Blood | disease state: Control
+GSM465947	control	Blood - Control - 155A	peripheral blood	uveitis status: No uveitis | gender: Male | age: 45 | set: 2 | tissue: Blood | disease state: Control
+GSM465948	control	Blood - Control - 156A	peripheral blood	uveitis status: No uveitis | gender: Female | age: 45 | set: 2 | tissue: Blood | disease state: Control
+GSM465949	control	Blood - Control - 157A	peripheral blood	uveitis status: No uveitis | gender: Female | age: 45 | set: 2 | tissue: Blood | disease state: Control
+GSM465950	unassigned	Blood - Sarcoidosis - 001A	peripheral blood	uveitis status: Uveitis | gender: Male | age: 49 | set: 1 | tissue: Blood | disease state: Sarcoidosis
+GSM465951	unassigned	Blood - Sarcoidosis - 003A	peripheral blood	uveitis status: No uveitis | gender: Male | age: 45 | set: 1 | tissue: Blood | disease state: Sarcoidosis
+GSM465952	unassigned	Blood - Sarcoidosis - 005A	peripheral blood	uveitis status: Uveitis | gender: Female | age: 48 | set: 1 | tissue: Blood | disease state: Sarcoidosis
+GSM465953	unassigned	Blood - Sarcoidosis - 013A	peripheral blood	uveitis status: Uveitis | gender: Female | age: 41 | set: 1 | tissue: Blood | disease state: Sarcoidosis
+GSM465954	unassigned	Blood - Sarcoidosis - 031A	peripheral blood	uveitis status: Uveitis | gender: Female | age: 68 | set: 1 | tissue: Blood | disease state: Sarcoidosis
+GSM465955	unassigned	Blood - Sarcoidosis - 034A	peripheral blood	uveitis status: Uveitis | gender: Female | age: 59 | set: 1 | tissue: Blood | disease state: Sarcoidosis
+GSM465956	unassigned	Blood - Sarcoidosis - 049A	peripheral blood	uveitis status: No uveitis | gender: Female | age: 63 | set: 1 | tissue: Blood | disease state: Sarcoidosis
+GSM465957	unassigned	Blood - Sarcoidosis - 050A	peripheral blood	uveitis status: Uveitis | gender: Male | age: 28 | set: 1 | tissue: Blood | disease state: Sarcoidosis
+GSM465958	unassigned	Blood - Sarcoidosis - 059A	peripheral blood	uveitis status: No uveitis | gender: Female | age: 57 | set: 1 | tissue: Blood | disease state: Sarcoidosis
+GSM465959	unassigned	Blood - Sarcoidosis - 064A	peripheral blood	uveitis status: No uveitis | gender: Female | age: 59 | set: 1 | tissue: Blood | disease state: Sarcoidosis
+GSM465960	unassigned	Blood - Sarcoidosis - 077A	peripheral blood	uveitis status: Uveitis | gender: Female | age: 70 | set: 1 | tissue: Blood | disease state: Sarcoidosis
+GSM465961	unassigned	Blood - Sarcoidosis - 086A	peripheral blood	uveitis status: No uveitis | gender: Female | age: 60 | set: 1 | tissue: Blood | disease state: Sarcoidosis

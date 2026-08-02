@@ -1,0 +1,44 @@
+{
+  "accession": "GSE18781",
+  "platform": "GPL570",
+  "method": {
+    "selected": "linear-model",
+    "requested": "moderated",
+    "name": "moderated general linear model",
+    "native_limma": false,
+    "modeled_covariates": [],
+    "declared_but_unmodeled_covariates": [
+      "sex",
+      "age",
+      "batch"
+    ],
+    "design_columns": [
+      "intercept",
+      "group_case"
+    ],
+    "contrast": "group_case",
+    "sample_sheet": "data\\designs\\GSE18781.tsv",
+    "subject_column": null,
+    "prior_variance": 0.029541756067374556,
+    "prior_degrees_of_freedom": 1.4018866765508458,
+    "residual_degrees_of_freedom": 41,
+    "design_rank": 2
+  },
+  "multiple_testing": "Benjamini-Hochberg",
+  "alpha": 0.05,
+  "minimum_absolute_mean_difference": 0.0,
+  "case_samples": 18,
+  "control_samples": 25,
+  "features": 54675,
+  "mapped_features": 45118,
+  "significant_features": 0,
+  "gene_aggregation": {
+    "effect": "median probe mean difference",
+    "p_value": "Simes combination across probes",
+    "multiple_testing": "Benjamini-Hochberg across genes"
+  },
+  "genes": 22836,
+  "significant_genes": 0,
+  "annotation_path": "platforms\\GPL570\\GPL570.annot.gz",
+  "warning": "Exploratory result. Confirm study design, preprocessing, pairing, covariates and biological replication before scientific interpretation."
+}

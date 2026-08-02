@@ -1,0 +1,13 @@
+{
+  "accession": "GSE18781",
+  "platform": "GPL570",
+  "contrast": "case minus control",
+  "case_samples": 18,
+  "control_samples": 25,
+  "test": "two-sided Welch t-test per probe",
+  "multiple_testing": "Benjamini-Hochberg across all probes",
+  "elapsed_seconds": 4.035263400000986,
+  "peak_python_traced_bytes": 165763497,
+  "python": "3.12.13",
+  "scipy": "1.18.0"
+}
