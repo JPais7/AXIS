@@ -1,0 +1,6 @@
+cohort	role	participants_in_primary	rationale
+COHORT-A	primary	20	compatible independent primary cohort
+COHORT-B	primary	16	compatible independent primary cohort
+COHORT-B-REPOSITORY-COPY	duplicate_exclude	0	same participant_source as COHORT-B
+COHORT-H	sensitivity	0	broader CD8 definition
+COHORT-I	incompatible_exclude	0	whole blood rather than CD8 memory

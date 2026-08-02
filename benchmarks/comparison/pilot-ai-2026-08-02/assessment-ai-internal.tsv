@@ -1,0 +1,85 @@
+reviewer	workflow	task	criterion	rating	elapsed_seconds	manual_decisions	evidence	notes
+AI_INTERNAL_PILOT	axis	A	installation_success	pass	0.003312	0	axis-task-a/benchmark-report.json	Measured AXIS demo; installation already available in project environment.
+AI_INTERNAL_PILOT	axis	A	wall_clock_time_recorded	pass	0.003312	0	axis-task-a/benchmark-report.json	Measured AXIS demo; installation already available in project environment.
+AI_INTERNAL_PILOT	axis	A	memory_method_declared	pass	0.003312	0	axis-task-a/benchmark-report.json	Measured AXIS demo; installation already available in project environment.
+AI_INTERNAL_PILOT	axis	A	output_size_recorded	pass	0.003312	0	axis-task-a/benchmark-report.json	Measured AXIS demo; installation already available in project environment.
+AI_INTERNAL_PILOT	axis	A	manual_decisions_recorded	pass	0.003312	0	axis-task-a/benchmark-report.json	Measured AXIS demo; installation already available in project environment.
+AI_INTERNAL_PILOT	axis	B	disease_mismatch_detected	fail	0	0	PILOT-REPORT.md	No AXIS adapter accepted the supplied task schema.
+AI_INTERNAL_PILOT	axis	B	tissue_mismatch_detected	fail	0	0	PILOT-REPORT.md	No AXIS adapter accepted the supplied task schema.
+AI_INTERNAL_PILOT	axis	B	treatment_detected	fail	0	0	PILOT-REPORT.md	No AXIS adapter accepted the supplied task schema.
+AI_INTERNAL_PILOT	axis	B	pooled_samples_detected	fail	0	0	PILOT-REPORT.md	No AXIS adapter accepted the supplied task schema.
+AI_INTERNAL_PILOT	axis	B	repeated_participants_detected	fail	0	0	PILOT-REPORT.md	No AXIS adapter accepted the supplied task schema.
+AI_INTERNAL_PILOT	axis	B	repository_duplicate_detected	fail	0	0	PILOT-REPORT.md	No AXIS adapter accepted the supplied task schema.
+AI_INTERNAL_PILOT	axis	C	gene_identifiers_preserved	fail	0	0	PILOT-REPORT.md	No AXIS adapter accepted the supplied task schema.
+AI_INTERNAL_PILOT	axis	C	effect_direction_correct	fail	0	0	PILOT-REPORT.md	No AXIS adapter accepted the supplied task schema.
+AI_INTERNAL_PILOT	axis	C	multiplicity_correction_recorded	fail	0	0	PILOT-REPORT.md	No AXIS adapter accepted the supplied task schema.
+AI_INTERNAL_PILOT	axis	C	method_record_complete	fail	0	0	PILOT-REPORT.md	No AXIS adapter accepted the supplied task schema.
+AI_INTERNAL_PILOT	axis	C	executable_or_machine_readable_export	fail	0	0	PILOT-REPORT.md	No AXIS adapter accepted the supplied task schema.
+AI_INTERNAL_PILOT	axis	D	participants_counted_correctly	fail	0	0	PILOT-REPORT.md	No AXIS adapter accepted the supplied task schema.
+AI_INTERNAL_PILOT	axis	D	duplicate_participants_not_double_counted	fail	0	0	PILOT-REPORT.md	No AXIS adapter accepted the supplied task schema.
+AI_INTERNAL_PILOT	axis	D	incompatible_evidence_not_pooled	fail	0	0	PILOT-REPORT.md	No AXIS adapter accepted the supplied task schema.
+AI_INTERNAL_PILOT	axis	D	input_output_provenance_preserved	fail	0	0	PILOT-REPORT.md	No AXIS adapter accepted the supplied task schema.
+AI_INTERNAL_PILOT	axis	D	conclusion_bounded_to_association	fail	0	0	PILOT-REPORT.md	No AXIS adapter accepted the supplied task schema.
+AI_INTERNAL_PILOT	geo2r	A	installation_success	not_applicable	15	0	PILOT-REPORT.md	Hosted service; no local installation.
+AI_INTERNAL_PILOT	geo2r	A	wall_clock_time_recorded	pass	15	0	PILOT-REPORT.md	Access/attempt recorded; zero exported output bytes.
+AI_INTERNAL_PILOT	geo2r	A	memory_method_declared	pass	15	0	PILOT-REPORT.md	Access/attempt recorded; zero exported output bytes.
+AI_INTERNAL_PILOT	geo2r	A	output_size_recorded	pass	15	0	PILOT-REPORT.md	Access/attempt recorded; zero exported output bytes.
+AI_INTERNAL_PILOT	geo2r	A	manual_decisions_recorded	pass	15	0	PILOT-REPORT.md	Access/attempt recorded; zero exported output bytes.
+AI_INTERNAL_PILOT	geo2r	B	disease_mismatch_detected	fail	0	0	PILOT-REPORT.md	Visible interface required a GEO accession; supplied local inputs unsupported.
+AI_INTERNAL_PILOT	geo2r	B	tissue_mismatch_detected	fail	0	0	PILOT-REPORT.md	Visible interface required a GEO accession; supplied local inputs unsupported.
+AI_INTERNAL_PILOT	geo2r	B	treatment_detected	fail	0	0	PILOT-REPORT.md	Visible interface required a GEO accession; supplied local inputs unsupported.
+AI_INTERNAL_PILOT	geo2r	B	pooled_samples_detected	fail	0	0	PILOT-REPORT.md	Visible interface required a GEO accession; supplied local inputs unsupported.
+AI_INTERNAL_PILOT	geo2r	B	repeated_participants_detected	fail	0	0	PILOT-REPORT.md	Visible interface required a GEO accession; supplied local inputs unsupported.
+AI_INTERNAL_PILOT	geo2r	B	repository_duplicate_detected	fail	0	0	PILOT-REPORT.md	Visible interface required a GEO accession; supplied local inputs unsupported.
+AI_INTERNAL_PILOT	geo2r	C	gene_identifiers_preserved	fail	0	0	PILOT-REPORT.md	Visible interface required a GEO accession; supplied local inputs unsupported.
+AI_INTERNAL_PILOT	geo2r	C	effect_direction_correct	fail	0	0	PILOT-REPORT.md	Visible interface required a GEO accession; supplied local inputs unsupported.
+AI_INTERNAL_PILOT	geo2r	C	multiplicity_correction_recorded	fail	0	0	PILOT-REPORT.md	Visible interface required a GEO accession; supplied local inputs unsupported.
+AI_INTERNAL_PILOT	geo2r	C	method_record_complete	fail	0	0	PILOT-REPORT.md	Visible interface required a GEO accession; supplied local inputs unsupported.
+AI_INTERNAL_PILOT	geo2r	C	executable_or_machine_readable_export	fail	0	0	PILOT-REPORT.md	Visible interface required a GEO accession; supplied local inputs unsupported.
+AI_INTERNAL_PILOT	geo2r	D	participants_counted_correctly	fail	0	0	PILOT-REPORT.md	Visible interface required a GEO accession; supplied local inputs unsupported.
+AI_INTERNAL_PILOT	geo2r	D	duplicate_participants_not_double_counted	fail	0	0	PILOT-REPORT.md	Visible interface required a GEO accession; supplied local inputs unsupported.
+AI_INTERNAL_PILOT	geo2r	D	incompatible_evidence_not_pooled	fail	0	0	PILOT-REPORT.md	Visible interface required a GEO accession; supplied local inputs unsupported.
+AI_INTERNAL_PILOT	geo2r	D	input_output_provenance_preserved	fail	0	0	PILOT-REPORT.md	Visible interface required a GEO accession; supplied local inputs unsupported.
+AI_INTERNAL_PILOT	geo2r	D	conclusion_bounded_to_association	fail	0	0	PILOT-REPORT.md	Visible interface required a GEO accession; supplied local inputs unsupported.
+AI_INTERNAL_PILOT	manual_statistics	A	installation_success	pass	1.4	0	manual-methods.txt	Python/scipy environment available; execution recorded.
+AI_INTERNAL_PILOT	manual_statistics	A	wall_clock_time_recorded	pass	1.4	0	manual-methods.txt	Python/scipy environment available; execution recorded.
+AI_INTERNAL_PILOT	manual_statistics	A	memory_method_declared	pass	1.4	0	manual-methods.txt	Python/scipy environment available; execution recorded.
+AI_INTERNAL_PILOT	manual_statistics	A	output_size_recorded	pass	1.4	0	manual-methods.txt	Python/scipy environment available; execution recorded.
+AI_INTERNAL_PILOT	manual_statistics	A	manual_decisions_recorded	pass	1.4	0	manual-methods.txt	Python/scipy environment available; execution recorded.
+AI_INTERNAL_PILOT	manual_statistics	B	disease_mismatch_detected	pass	120	8	manual-task-b.tsv	Internal AI execution; not independent or blinded.
+AI_INTERNAL_PILOT	manual_statistics	B	tissue_mismatch_detected	pass	120	8	manual-task-b.tsv	Internal AI execution; not independent or blinded.
+AI_INTERNAL_PILOT	manual_statistics	B	treatment_detected	pass	120	8	manual-task-b.tsv	Internal AI execution; not independent or blinded.
+AI_INTERNAL_PILOT	manual_statistics	B	pooled_samples_detected	pass	120	8	manual-task-b.tsv	Internal AI execution; not independent or blinded.
+AI_INTERNAL_PILOT	manual_statistics	B	repeated_participants_detected	pass	120	8	manual-task-b.tsv	Internal AI execution; not independent or blinded.
+AI_INTERNAL_PILOT	manual_statistics	B	repository_duplicate_detected	pass	120	8	manual-task-b.tsv	Internal AI execution; not independent or blinded.
+AI_INTERNAL_PILOT	manual_statistics	C	gene_identifiers_preserved	pass	1.4	1	manual-task-c.tsv	Internal AI execution; not independent or blinded.
+AI_INTERNAL_PILOT	manual_statistics	C	effect_direction_correct	pass	1.4	1	manual-task-c.tsv	Internal AI execution; not independent or blinded.
+AI_INTERNAL_PILOT	manual_statistics	C	multiplicity_correction_recorded	pass	1.4	1	manual-task-c.tsv	Internal AI execution; not independent or blinded.
+AI_INTERNAL_PILOT	manual_statistics	C	method_record_complete	pass	1.4	1	manual-task-c.tsv	Internal AI execution; not independent or blinded.
+AI_INTERNAL_PILOT	manual_statistics	C	executable_or_machine_readable_export	pass	1.4	1	manual-task-c.tsv	Internal AI execution; not independent or blinded.
+AI_INTERNAL_PILOT	manual_statistics	D	participants_counted_correctly	pass	90	5	manual-task-d.tsv	Internal AI execution; not independent or blinded.
+AI_INTERNAL_PILOT	manual_statistics	D	duplicate_participants_not_double_counted	pass	90	5	manual-task-d.tsv	Internal AI execution; not independent or blinded.
+AI_INTERNAL_PILOT	manual_statistics	D	incompatible_evidence_not_pooled	pass	90	5	manual-task-d.tsv	Internal AI execution; not independent or blinded.
+AI_INTERNAL_PILOT	manual_statistics	D	input_output_provenance_preserved	pass	90	5	manual-task-d.tsv	Internal AI execution; not independent or blinded.
+AI_INTERNAL_PILOT	manual_statistics	D	conclusion_bounded_to_association	pass	90	5	manual-task-d.tsv	Internal AI execution; not independent or blinded.
+AI_INTERNAL_PILOT	networkanalyst	A	installation_success	not_applicable	30	0	PILOT-REPORT.md	Hosted service; no local installation.
+AI_INTERNAL_PILOT	networkanalyst	A	wall_clock_time_recorded	pass	30	0	PILOT-REPORT.md	Access/attempt recorded; zero exported output bytes.
+AI_INTERNAL_PILOT	networkanalyst	A	memory_method_declared	pass	30	0	PILOT-REPORT.md	Access/attempt recorded; zero exported output bytes.
+AI_INTERNAL_PILOT	networkanalyst	A	output_size_recorded	pass	30	0	PILOT-REPORT.md	Access/attempt recorded; zero exported output bytes.
+AI_INTERNAL_PILOT	networkanalyst	A	manual_decisions_recorded	pass	30	0	PILOT-REPORT.md	Access/attempt recorded; zero exported output bytes.
+AI_INTERNAL_PILOT	networkanalyst	B	disease_mismatch_detected	fail	0	0	PILOT-REPORT.md	Named service did not complete the supplied task.
+AI_INTERNAL_PILOT	networkanalyst	B	tissue_mismatch_detected	fail	0	0	PILOT-REPORT.md	Named service did not complete the supplied task.
+AI_INTERNAL_PILOT	networkanalyst	B	treatment_detected	fail	0	0	PILOT-REPORT.md	Named service did not complete the supplied task.
+AI_INTERNAL_PILOT	networkanalyst	B	pooled_samples_detected	fail	0	0	PILOT-REPORT.md	Named service did not complete the supplied task.
+AI_INTERNAL_PILOT	networkanalyst	B	repeated_participants_detected	fail	0	0	PILOT-REPORT.md	Named service did not complete the supplied task.
+AI_INTERNAL_PILOT	networkanalyst	B	repository_duplicate_detected	fail	0	0	PILOT-REPORT.md	Named service did not complete the supplied task.
+AI_INTERNAL_PILOT	networkanalyst	C	gene_identifiers_preserved	fail	0	0	PILOT-REPORT.md	Named service did not complete the supplied task.
+AI_INTERNAL_PILOT	networkanalyst	C	effect_direction_correct	fail	0	0	PILOT-REPORT.md	Named service did not complete the supplied task.
+AI_INTERNAL_PILOT	networkanalyst	C	multiplicity_correction_recorded	fail	0	0	PILOT-REPORT.md	Named service did not complete the supplied task.
+AI_INTERNAL_PILOT	networkanalyst	C	method_record_complete	fail	0	0	PILOT-REPORT.md	Named service did not complete the supplied task.
+AI_INTERNAL_PILOT	networkanalyst	C	executable_or_machine_readable_export	fail	0	0	PILOT-REPORT.md	Named service did not complete the supplied task.
+AI_INTERNAL_PILOT	networkanalyst	D	participants_counted_correctly	fail	0	0	PILOT-REPORT.md	Named service did not complete the supplied task.
+AI_INTERNAL_PILOT	networkanalyst	D	duplicate_participants_not_double_counted	fail	0	0	PILOT-REPORT.md	Named service did not complete the supplied task.
+AI_INTERNAL_PILOT	networkanalyst	D	incompatible_evidence_not_pooled	fail	0	0	PILOT-REPORT.md	Named service did not complete the supplied task.
+AI_INTERNAL_PILOT	networkanalyst	D	input_output_provenance_preserved	fail	0	0	PILOT-REPORT.md	Named service did not complete the supplied task.
+AI_INTERNAL_PILOT	networkanalyst	D	conclusion_bounded_to_association	fail	0	0	PILOT-REPORT.md	Named service did not complete the supplied task.

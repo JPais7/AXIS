@@ -1,0 +1,4 @@
+gene	case_mean	control_mean	case_minus_control	direction	raw_p_value	bh_adjusted_p_value
+GENEA	10	5	5	higher_in_case	0.00013070665033946811	0.00019605997550920217
+GENEB	2.5	8	-5.5	lower_in_case	0.00006689354238559141	0.00019605997550920217
+GENEC	6	6	0	no_difference	1	1

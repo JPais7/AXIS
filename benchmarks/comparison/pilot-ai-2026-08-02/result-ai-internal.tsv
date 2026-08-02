@@ -1,0 +1,17 @@
+reviewer	workflow	task	started_at_utc	elapsed_seconds	manual_decisions	status	output_files	version_or_access_date	deviations
+AI_INTERNAL_PILOT	axis	A	2026-08-02T15:25:46Z	0.003312	0	completed	axis-task-a/benchmark-report.json;axis-task-a/benchmark-runs.tsv	0.2.0.dev0	Existing environment; installation time excluded
+AI_INTERNAL_PILOT	axis	B	2026-08-02T15:30:00Z	0	0	input_not_supported	PILOT-REPORT.md	0.2.0.dev0	No adapter for comparison schema
+AI_INTERNAL_PILOT	axis	C	2026-08-02T15:30:00Z	0	0	input_not_supported	PILOT-REPORT.md	0.2.0.dev0	No adapter for comparison schema
+AI_INTERNAL_PILOT	axis	D	2026-08-02T15:30:00Z	0	0	input_not_supported	PILOT-REPORT.md	0.2.0.dev0	No adapter for comparison schema
+AI_INTERNAL_PILOT	geo2r	A	2026-08-02T15:31:00Z	15	0	accessed	PILOT-REPORT.md	accessed 2026-08-02	Hosted service; memory unavailable
+AI_INTERNAL_PILOT	geo2r	B	2026-08-02T15:31:15Z	0	0	input_not_supported	PILOT-REPORT.md	accessed 2026-08-02	Interface requires GEO accession
+AI_INTERNAL_PILOT	geo2r	C	2026-08-02T15:31:15Z	0	0	input_not_supported	PILOT-REPORT.md	accessed 2026-08-02	Local matrix upload unavailable
+AI_INTERNAL_PILOT	geo2r	D	2026-08-02T15:31:15Z	0	0	input_not_supported	PILOT-REPORT.md	accessed 2026-08-02	Local cohort table unsupported
+AI_INTERNAL_PILOT	manual_statistics	A	2026-08-02T15:33:00Z	1.4	0	completed	manual-methods.txt	Python 3.12.13; scipy	Existing environment
+AI_INTERNAL_PILOT	manual_statistics	B	2026-08-02T15:34:00Z	120	8	completed	manual-task-b.tsv	Python 3.12.13	AI classification; not human-independent
+AI_INTERNAL_PILOT	manual_statistics	C	2026-08-02T15:36:00Z	1.4	1	completed	manual-task-c.tsv	Python 3.12.13; scipy	AI execution; not blinded
+AI_INTERNAL_PILOT	manual_statistics	D	2026-08-02T15:37:00Z	90	5	completed	manual-task-d.tsv	Python 3.12.13	AI classification; not human-independent
+AI_INTERNAL_PILOT	networkanalyst	A	2026-08-02T15:38:00Z	30	0	attempt_failed	PILOT-REPORT.md	accessed 2026-08-02	Start action timed out; memory unavailable
+AI_INTERNAL_PILOT	networkanalyst	B	2026-08-02T15:38:30Z	0	0	not_executed	PILOT-REPORT.md	accessed 2026-08-02	Named service did not accept task
+AI_INTERNAL_PILOT	networkanalyst	C	2026-08-02T15:38:30Z	0	0	not_executed	PILOT-REPORT.md	accessed 2026-08-02	Site directs transcriptomic tables to ExpressAnalyst
+AI_INTERNAL_PILOT	networkanalyst	D	2026-08-02T15:38:30Z	0	0	not_executed	PILOT-REPORT.md	accessed 2026-08-02	Named service did not accept task

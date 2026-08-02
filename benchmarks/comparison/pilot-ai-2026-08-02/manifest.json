@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "status": "internal_non_independent_pilot",
+  "created_date": "2026-08-02",
+  "publishable_comparison": false,
+  "reason": "Input and scope incompatibility invalidates comparative ranking.",
+  "files": [
+    {
+      "path": "assessment-ai-internal.tsv",
+      "sha256": "83d20936b25868235b4589bc4a3746ebd7f5e5ff6b4980933fe0a539d14337c9"
+    },
+    {
+      "path": "axis-task-a/benchmark-report.json",
+      "sha256": "df8a01ce83806bb064d04fdfaff6e480faf953250c00a7dce7e3a0908cf230e5"
+    },
+    {
+      "path": "axis-task-a/benchmark-runs.tsv",
+      "sha256": "380165c72dbb7fa149acb65ac78e4ced94b9110b6912f92788081952aafeadb8"
+    },
+    {
+      "path": "axis-task-a/runs/run-001/checks.tsv",
+      "sha256": "613853b684a59e1d594648f14459223232e8e2cfac62c680f8c409c7168763a2"
+    },
+    {
+      "path": "axis-task-a/runs/run-001/demo-report.json",
+      "sha256": "dfe5b667a02ea7ba89fae65c0b846f487828bfc5ce115a7067fa74e7add86583"
+    },
+    {
+      "path": "axis-task-a/runs/run-001/synthesis.json",
+      "sha256": "cb0e4f32c7a6a277850ab69210cb9379e55ea92c97a40b03832ef75c393e482e"
+    },
+    {
+      "path": "axis-task-a/runs/run-002/checks.tsv",
+      "sha256": "613853b684a59e1d594648f14459223232e8e2cfac62c680f8c409c7168763a2"
+    },
+    {
+      "path": "axis-task-a/runs/run-002/demo-report.json",
+      "sha256": "046a4d03aed67e8bb650322dbb040804eb1449ac123caf051acc7a63253c2ed0"
+    },
+    {
+      "path": "axis-task-a/runs/run-002/synthesis.json",
+      "sha256": "cb0e4f32c7a6a277850ab69210cb9379e55ea92c97a40b03832ef75c393e482e"
+    },
+    {
+      "path": "axis-task-a/runs/run-003/checks.tsv",
+      "sha256": "613853b684a59e1d594648f14459223232e8e2cfac62c680f8c409c7168763a2"
+    },
+    {
+      "path": "axis-task-a/runs/run-003/demo-report.json",
+      "sha256": "afc13ef9c908e2a8e3ab0f09b39c7fa22ce978e57145312d6d932ca6ebf9417b"
+    },
+    {
+      "path": "axis-task-a/runs/run-003/synthesis.json",
+      "sha256": "cb0e4f32c7a6a277850ab69210cb9379e55ea92c97a40b03832ef75c393e482e"
+    },
+    {
+      "path": "axis-task-a/runs/run-004/checks.tsv",
+      "sha256": "613853b684a59e1d594648f14459223232e8e2cfac62c680f8c409c7168763a2"
+    },
+    {
+      "path": "axis-task-a/runs/run-004/demo-report.json",
+      "sha256": "f74c5ca33c8646a7d4fff2f67755abaa106186a9bfa5b1cdfb1ebc8d20c6dc01"
+    },
+    {
+      "path": "axis-task-a/runs/run-004/synthesis.json",
+      "sha256": "cb0e4f32c7a6a277850ab69210cb9379e55ea92c97a40b03832ef75c393e482e"
+    },
+    {
+      "path": "axis-task-a/runs/run-005/checks.tsv",
+      "sha256": "613853b684a59e1d594648f14459223232e8e2cfac62c680f8c409c7168763a2"
+    },
+    {
+      "path": "axis-task-a/runs/run-005/demo-report.json",
+      "sha256": "1e6bb66c152b0b54d7b0ad968ec52d097884c39c9daea7edb2dab2305195b77b"
+    },
+    {
+      "path": "axis-task-a/runs/run-005/synthesis.json",
+      "sha256": "cb0e4f32c7a6a277850ab69210cb9379e55ea92c97a40b03832ef75c393e482e"
+    },
+    {
+      "path": "manual-methods.txt",
+      "sha256": "e2c0679bbb1b8dcb27e27b9691b66dd64e143b5cda79d6e11c711bd487fa95b5"
+    },
+    {
+      "path": "manual-task-b.tsv",
+      "sha256": "754af34412ad651a9ecaec6cc2590ebd5d8022ed8b57b902382d38bd27f89b03"
+    },
+    {
+      "path": "manual-task-c.tsv",
+      "sha256": "17193b75245c0019fe15edaa43b5163231ca6753cc99b72e9108819e317cef00"
+    },
+    {
+      "path": "manual-task-d.tsv",
+      "sha256": "265465e1b61c73328daf8c697a476fbbf522048e6fa4950967f75b57de073b46"
+    },
+    {
+      "path": "PILOT-REPORT.md",
+      "sha256": "079199621bfc7ce418e1ed53803b35515beef93899b18264388c10f8353ee62d"
+    },
+    {
+      "path": "result-ai-internal.tsv",
+      "sha256": "c94866d0cfbdd00ff4d7490e3cdc3cbc980913f6681c3ade4d481a2e14af9f70"
+    }
+  ]
+}

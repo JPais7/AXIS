@@ -1,0 +1,24 @@
+{
+  "synthetic": true,
+  "primary": {
+    "effect": -0.15901639344262294,
+    "standard_error": 0.07682212795973759,
+    "ci_low": -0.3095877642437086,
+    "ci_high": -0.008445022641537292,
+    "p_value": 0.03845894141042733,
+    "tau_squared": 0.0,
+    "cohorts": 2,
+    "participants": 30
+  },
+  "sensitivity": {
+    "effect": -0.15606046808123122,
+    "standard_error": 0.06298294876383374,
+    "ci_low": -0.27950704765834533,
+    "ci_high": -0.03261388850411709,
+    "p_value": 0.013218747269001456,
+    "tau_squared": 0.0,
+    "cohorts": 3,
+    "participants": 42
+  },
+  "interpretation": "Demonstration only: no biological or clinical claim."
+}

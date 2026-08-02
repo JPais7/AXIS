@@ -1,0 +1,9 @@
+study_id	decision	rationale
+SYN001	eligible	axSpA; blood; untreated; individual
+SYN002	disease_mismatch	rheumatoid arthritis rather than axSpA
+SYN003	tissue_mismatch	synovium rather than blood
+SYN004	treated	post-treatment sample
+SYN005	pooled	pooled design
+SYN006	eligible	axSpA; blood; untreated; individual
+SYN007	repository_duplicate_of_SYN006	same participant_source COHORT-B
+SYN008	repeated_participants	repeated design

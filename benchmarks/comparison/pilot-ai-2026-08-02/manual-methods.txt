@@ -1,0 +1,6 @@
+Internal AI pilot; not an independent human assessment.
+Environment: Python 3.12.13; scipy from the AXIS virtual environment.
+Task B: direct rule-based review of supplied metadata; eight manual classifications.
+Task C: case minus control means; two-sided Welch t-tests; Benjamini-Hochberg correction across three genes.
+Task D: roles read from supplied role_hint and checked against participant_source; primary unique participant total = 36.
+Conclusion: Two independent compatible primary cohorts show a same-direction negative association. This synthetic result is associative only and supports no causal, therapeutic or biomedical claim.
