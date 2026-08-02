@@ -5,19 +5,17 @@ import re
 from pathlib import Path
 
 from docx import Document
-from docx.enum.section import WD_SECTION
 from docx.enum.table import WD_CELL_VERTICAL_ALIGNMENT, WD_TABLE_ALIGNMENT
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
 from docx.shared import Inches, Pt, RGBColor
 
-
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "data/publication/ddx24-study/manuscript-draft.md"
 FIGURES = ROOT / "data/publication/ddx24-study/figures"
 STUDIES = ROOT / "data/publication/ddx24-study/study-characteristics.tsv"
-OUTPUT = ROOT / "data/publication/ddx24-study/DDX24_article_Joao_Pais_Diana_Koshman.docx"
+OUTPUT = ROOT / "paper/ddx24-preprint/DDX24_preprint_Joao_Pais_Diana_Koshman.docx"
 
 NAVY = RGBColor(31, 77, 120)
 BLUE = RGBColor(46, 116, 181)
@@ -106,7 +104,7 @@ def add_cover(doc: Document) -> None:
         doc.add_paragraph()
     kicker = doc.add_paragraph()
     kicker.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    set_font(kicker.add_run("ORIGINAL RESEARCH ARTICLE"), size=10, bold=True,
+    set_font(kicker.add_run("PREPRINT • ORIGINAL RESEARCH"), size=10, bold=True,
              color=BLUE)
     kicker.paragraph_format.space_after = Pt(18)
 
@@ -115,8 +113,8 @@ def add_cover(doc: Document) -> None:
     title.paragraph_format.space_after = Pt(14)
     set_font(
         title.add_run(
-            "Recurrent context-dependent reduction of DDX24 in "
-            "ankylosing spondylitis"
+            "Reduced DDX24 expression in CD8 T cells in axial "
+            "spondyloarthritis"
         ),
         size=25,
         bold=True,
@@ -128,8 +126,8 @@ def add_cover(doc: Document) -> None:
     subtitle.paragraph_format.space_after = Pt(28)
     set_font(
         subtitle.add_run(
-            "A reproducible multimodal integration of seven independent "
-            "human transcriptomic cohorts"
+            "A participant-level meta-analysis with cross-context "
+            "transcriptomic assessment"
         ),
         size=13,
         italic=True,
@@ -154,7 +152,8 @@ def add_cover(doc: Document) -> None:
     status.alignment = WD_ALIGN_PARAGRAPH.CENTER
     set_font(
         status.add_run(
-            "Computational secondary analysis • 7 cohorts • 213 participants"
+            "Primary synthesis: 2 CD8 cohorts, 47 participants • "
+            "5 additional contextual blood cohorts"
         ),
         size=10,
         color=GRAY,
@@ -273,7 +272,7 @@ def add_study_table(doc: Document) -> None:
     table.alignment = WD_TABLE_ALIGNMENT.CENTER
     table.autofit = False
     widths = (1350, 3000, 900, 900, 1100, 2110)
-    for index, (cell, label, width) in enumerate(
+    for _index, (cell, label, width) in enumerate(
         zip(table.rows[0].cells, headers, widths, strict=True)
     ):
         set_cell_width(cell, width)
@@ -313,6 +312,64 @@ def add_study_table(doc: Document) -> None:
     )
 
 
+def add_declarations(doc: Document) -> None:
+    doc.add_heading("Declarations", level=1)
+    declarations = (
+        (
+            "Ethics",
+            "This study reanalysed previously published, publicly accessible, "
+            "de-identified datasets and involved no new participant recruitment "
+            "or intervention. The ethical and consent conditions of each source "
+            "study remain applicable.",
+        ),
+        (
+            "Data and code availability",
+            "Source datasets are available from the public accessions listed in "
+            "Table 1. AXIS source code is available at "
+            "https://github.com/JPais7/AXIS under Apache-2.0. AXIS version 0.2.0 "
+            "is archived at https://doi.org/10.5281/zenodo.21762169 and "
+            "installable as axis-bio from PyPI. Participant-derived frozen "
+            "working files are not redistributed; accessions, checksums, "
+            "eligibility rules and reconstruction code preserve the audit trail.",
+        ),
+        (
+            "Funding",
+            "No specific funding was reported during drafting; both authors "
+            "must confirm this statement before posting.",
+        ),
+        (
+            "Competing interests",
+            "The final declaration must be confirmed by both authors before "
+            "posting.",
+        ),
+        (
+            "Author contributions",
+            "João Pais: conceptualization, software, formal analysis, data "
+            "curation, visualization and writing-original draft. Diana Koshman: "
+            "methodology, validation, interpretation and writing-review and "
+            "editing. This proposed contribution statement and the complete "
+            "manuscript require approval by both authors before circulation.",
+        ),
+        (
+            "Use of artificial intelligence",
+            "AI-assisted tools supported software development, document "
+            "structuring and language editing. Scientific inclusion decisions, "
+            "interpretation, numerical verification and authorship responsibility "
+            "remained with the authors.",
+        ),
+        (
+            "Version and correspondence",
+            "Preprint draft 1, 2 August 2026. Correspondence: "
+            "joaopais2000@hotmail.com.",
+        ),
+    )
+    for label, value in declarations:
+        paragraph = doc.add_paragraph()
+        paragraph.paragraph_format.space_after = Pt(6)
+        set_font(paragraph.add_run(f"{label}. "), size=10.5, bold=True)
+        set_font(paragraph.add_run(value), size=10.5)
+
+
 def add_references(doc: Document) -> None:
     doc.add_page_break()
     doc.add_heading("References", level=1)
@@ -337,8 +394,11 @@ def add_references(doc: Document) -> None:
         "sequencing of single cells involved in spondyloarthritis.",
         "NCBI Gene Expression Omnibus. GSE288581: Single Cell Immune Profiling "
         "in Ankylosing Spondylitis.",
+        "Pais J, Koshman D. AXIS: auditable molecular evidence synthesis and "
+        "therapeutic hypothesis generation. Version 0.2.0. Zenodo. 2026. "
+        "doi:10.5281/zenodo.21762169.",
     ]
-    for index, reference in enumerate(references, start=1):
+    for _index, reference in enumerate(references, start=1):
         p = doc.add_paragraph(style="List Number")
         p.paragraph_format.left_indent = Inches(0.28)
         p.paragraph_format.first_line_indent = Inches(-0.18)
@@ -358,16 +418,17 @@ def main() -> None:
     configure_styles(doc)
     header = section.header.paragraphs[0]
     header.alignment = WD_ALIGN_PARAGRAPH.LEFT
-    set_font(header.add_run("DDX24 in ankylosing spondylitis"), size=9, color=GRAY)
+    set_font(header.add_run("DDX24 in axial spondyloarthritis"), size=9, color=GRAY)
     add_page_number(section.footer.paragraphs[0])
     add_cover(doc)
     add_manuscript_body(doc)
+    add_declarations(doc)
     add_figures(doc)
     add_study_table(doc)
     add_references(doc)
     properties = doc.core_properties
     properties.title = (
-        "Recurrent context-dependent reduction of DDX24 in ankylosing spondylitis"
+        "Reduced DDX24 expression in CD8 T cells in axial spondyloarthritis"
     )
     properties.author = "João Pais; Diana Koshman"
     properties.subject = "Computational transcriptomic integration"
