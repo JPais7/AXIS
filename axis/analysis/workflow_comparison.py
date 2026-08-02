@@ -82,6 +82,11 @@ class WorkflowComparisonPreparer:
         self._write_rows(public / "expression-matrix.tsv", self._expression_matrix())
         self._write_rows(public / "cohort-evidence.tsv", self._cohort_evidence())
         self._write_rows(public / "tasks.tsv", self._tasks())
+        self._write_rows(public / "rating-rubric.tsv", self._rating_rubric())
+        self._write_rows(public / "result-template.tsv", self._result_template())
+        (public / "STANDARD-OPERATING-PROCEDURE.md").write_text(
+            self._standard_operating_procedure(), encoding="utf-8"
+        )
 
         template_rows = [
             {
@@ -365,6 +370,109 @@ class WorkflowComparisonPreparer:
         ]
 
     @staticmethod
+    def _rating_rubric() -> list[dict[str, str]]:
+        pass_rules = {
+            "installation_success": (
+                "Workflow becomes usable and its version or access date is recorded."
+            ),
+            "wall_clock_time_recorded": (
+                "Elapsed seconds use the common timing boundary."
+            ),
+            "memory_method_declared": (
+                "A measured value and method, or an explicit unavailable "
+                "measurement, is recorded."
+            ),
+            "output_size_recorded": (
+                "Total bytes of exported result files are recorded."
+            ),
+            "manual_decisions_recorded": (
+                "Every operator choice outside fixed instructions is counted "
+                "and described."
+            ),
+            "disease_mismatch_detected": "SYN002 is excluded for disease mismatch.",
+            "tissue_mismatch_detected": "SYN003 is excluded for tissue mismatch.",
+            "treatment_detected": "SYN004 is excluded or separated as post-treatment.",
+            "pooled_samples_detected": (
+                "SYN005 is flagged as pooled and not counted as individual "
+                "participants."
+            ),
+            "repeated_participants_detected": (
+                "SYN008 is flagged as repeated-participant data."
+            ),
+            "repository_duplicate_detected": (
+                "SYN007 is linked to and not double-counted with SYN006."
+            ),
+            "gene_identifiers_preserved": (
+                "GENEA, GENEB and GENEC appear unchanged in the export."
+            ),
+            "effect_direction_correct": (
+                "All three directions match the frozen coordinator reference."
+            ),
+            "multiplicity_correction_recorded": (
+                "Benjamini-Hochberg FDR is applied across the three genes "
+                "and exported."
+            ),
+            "method_record_complete": (
+                "Test, contrast, effect definition, multiplicity method and "
+                "software version are recorded."
+            ),
+            "executable_or_machine_readable_export": (
+                "A complete TSV or CSV result is exported without manual "
+                "transcription."
+            ),
+            "participants_counted_correctly": (
+                "The primary evidence contains 36 unique participants."
+            ),
+            "duplicate_participants_not_double_counted": (
+                "The repository copy of COHORT-B adds zero participants."
+            ),
+            "incompatible_evidence_not_pooled": (
+                "COHORT-I is excluded from the primary pooled conclusion."
+            ),
+            "input_output_provenance_preserved": (
+                "Inputs, workflow version/access date and exports are identified."
+            ),
+            "conclusion_bounded_to_association": (
+                "Conclusion states a same-direction association in two independent "
+                "primary cohorts without causal or drug claims."
+            ),
+        }
+        unavailable = (
+            "Allowed only when structurally irrelevant to a hosted workflow; explain "
+            "why. Unsupported functionality or an unsuccessful attempt is fail."
+        )
+        return [
+            {
+                "task": task,
+                "criterion": criterion,
+                "pass_rule": pass_rules[criterion],
+                "fail_rule": "The pass rule is not met or required evidence is absent.",
+                "not_applicable_rule": unavailable,
+            }
+            for task, criteria in TASK_CRITERIA.items()
+            for criterion in criteria
+        ]
+
+    @staticmethod
+    def _result_template() -> list[dict[str, str]]:
+        return [
+            {
+                "reviewer": "",
+                "workflow": workflow,
+                "task": task,
+                "started_at_utc": "",
+                "elapsed_seconds": "",
+                "manual_decisions": "",
+                "status": "",
+                "output_files": "",
+                "version_or_access_date": "",
+                "deviations": "",
+            }
+            for workflow in WORKFLOWS
+            for task in TASK_CRITERIA
+        ]
+
+    @staticmethod
     def _study_reference() -> list[dict[str, str]]:
         decisions = {
             "SYN001": "eligible",
@@ -412,6 +520,71 @@ reference. Ratings are `pass`, `fail` or `not_applicable`. Record elapsed time,
 manual decisions, exported evidence and every deviation. Do not calculate an
 overall weighted score. Freeze both initial assessments before consensus.
 All inputs are synthetic and support no biomedical claim.
+Follow `STANDARD-OPERATING-PROCEDURE.md` and `rating-rubric.tsv`. Complete
+`result-template.tsv` while operating each workflow, then complete the assessment
+only from frozen outputs. A failed or unavailable operation is not automatically
+`not_applicable`.
+"""
+
+    @staticmethod
+    def _standard_operating_procedure() -> str:
+        return """# Standard operating procedure
+
+## Roles and blinding
+
+Each reviewer operates every workflow independently. Reviewers must not consult
+each other or the `coordinator-reference` directory before both initial result
+and assessment files are frozen. Use coded reviewer identifiers. Record all
+deviations; do not repair an output after seeing a reference answer.
+
+## Common environment and timing
+
+Use the same computer and normal network connection for all workflows. Record OS,
+hardware, workflow version or web access date, browser where relevant, and every
+manual decision. One untimed familiarisation attempt per workflow is permitted.
+For each measured task, start timing immediately before the first workflow action
+after opening the required input and stop when all required exports are saved.
+Include uploads and downloads; exclude the familiarisation attempt. Record failed
+attempts. Measure output size as the sum of exported result files. Record peak
+memory with the same OS tool where possible; if a hosted service prevents this,
+record `measurement_unavailable_hosted_service` and the method attempted.
+
+## Allowed operations
+
+Use only the named workflow, its official documentation and the supplied files.
+Do not use another workflow to repair, transform or transcribe results. The
+`manual_statistics` condition may use a spreadsheet or one general-purpose
+statistics environment, but every formula or command and software version must be
+exported. Web workflows may be used only if their normal upload interface accepts
+the supplied synthetic data. Record rejection of an input as a failed attempt.
+
+## Required outputs
+
+For every workflow and task, preserve a machine-readable result where the workflow
+supports export, a plain-text methods record, and the corresponding row in
+`result-template.tsv`. Task B must output one decision and rationale per study.
+Task C must output gene, case mean, control mean, case-minus-control effect,
+direction, raw p-value and Benjamini-Hochberg adjusted p-value. Use a two-sided
+Welch t-test and define positive effects as higher in cases. Task D must output one
+role per cohort, the unique primary-participant total, excluded duplicates,
+excluded incompatible evidence and one bounded conclusion.
+
+## Task A
+
+Start from a new local environment or a private browser session. Follow only the
+official installation/access instructions. Run the supplied AXIS synthetic demo
+for AXIS; for hosted workflows, confirm access and record installation as
+`not_applicable` only because no installation exists. Do not transfer AXIS demo
+performance to another workflow.
+
+## Rating
+
+Apply `rating-rubric.tsv` literally to frozen evidence. `pass` requires the
+stated evidence, and missing evidence is `fail`. `not_applicable` is restricted
+to a criterion that is structurally irrelevant, never merely unsupported or
+failed. Keep both initial assessments unchanged. Resolve disagreements later in
+a separate consensus file with a rationale. Never calculate a weighted overall
+score. These synthetic results evaluate workflow behaviour, not biomedical truth.
 """
 
     @staticmethod

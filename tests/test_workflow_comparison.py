@@ -51,6 +51,23 @@ def test_comparison_preparation_separates_reference_and_checksums(
     assert manifest["no_weighted_overall_score"] is True
     assert result.assessment_template_path.is_file()
     assert (result.output_root / "evaluator-package/candidate-studies.tsv").is_file()
+    procedure = (
+        result.output_root / "evaluator-package/STANDARD-OPERATING-PROCEDURE.md"
+    ).read_text(encoding="utf-8")
+    rubric_path = result.output_root / "evaluator-package/rating-rubric.tsv"
+    result_template = result.output_root / "evaluator-package/result-template.tsv"
+    assert rubric_path.is_file()
+    assert result_template.is_file()
+    assert "start timing immediately before" in procedure
+    assert "unsuccessful attempt is fail" in rubric_path.read_text(encoding="utf-8")
+    with rubric_path.open(encoding="utf-8", newline="") as handle:
+        rubric = list(csv.DictReader(handle, delimiter="\t"))
+    with result.assessment_template_path.open(encoding="utf-8", newline="") as handle:
+        assessment = list(csv.DictReader(handle, delimiter="\t"))
+    assert len(rubric) == 21
+    assert {row["criterion"] for row in rubric} == {
+        row["criterion"] for row in assessment
+    }
     assert (
         result.output_root / "coordinator-reference/expected-study-decisions.tsv"
     ).is_file()

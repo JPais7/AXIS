@@ -1,0 +1,17 @@
+reviewer	workflow	task	started_at_utc	elapsed_seconds	manual_decisions	status	output_files	version_or_access_date	deviations
+	axis	A							
+	axis	B							
+	axis	C							
+	axis	D							
+	geo2r	A							
+	geo2r	B							
+	geo2r	C							
+	geo2r	D							
+	manual_statistics	A							
+	manual_statistics	B							
+	manual_statistics	C							
+	manual_statistics	D							
+	networkanalyst	A							
+	networkanalyst	B							
+	networkanalyst	C							
+	networkanalyst	D							

@@ -38,7 +38,12 @@ axis prepare-workflow-comparison
 
 Give reviewers only `workflow-comparison/evaluator-package`. Keep
 `coordinator-reference` hidden until two completed copies of
-`assessment-template.tsv` have been frozen. Then combine the initial ratings:
+`assessment-template.tsv` have been frozen. Each reviewer must first follow
+`STANDARD-OPERATING-PROCEDURE.md`, record the measured run in
+`result-template.tsv`, and apply the criterion-specific rules in
+`rating-rubric.tsv`. Unsupported or failed functionality is not labelled
+`not_applicable`; that label is restricted to structurally irrelevant criteria.
+Then combine the initial ratings:
 
 ```shell
 axis summarize-workflow-comparison reviewer-a.tsv reviewer-b.tsv

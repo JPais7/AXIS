@@ -2,7 +2,7 @@
   "schema_version": 1,
   "protocol": "AXIS workflow comparison v1",
   "synthetic": true,
-  "created_at": "2026-08-02T15:16:39.919192+00:00",
+  "created_at": "2026-08-02T15:30:21.117639+00:00",
   "workflows": [
     "axis",
     "geo2r",
@@ -49,12 +49,24 @@
       "sha256": "a941c9e932db69ddbe3fef58cd28d81a5162ffafb75923279734399a27202069"
     },
     {
+      "path": "evaluator-package/rating-rubric.tsv",
+      "sha256": "d3041f04f677eaeb0431c2f8f3af5042f0afa76fe46c00cadbad022cb1622977"
+    },
+    {
       "path": "evaluator-package/README.md",
-      "sha256": "ce4c6590444e97afd0fe67b3129a83638b44283dae3037797756bf41b38a6b60"
+      "sha256": "6b12aff1176d606faa14edc999ff6fa44a9fabff73ab616cd23edb17423e62db"
+    },
+    {
+      "path": "evaluator-package/result-template.tsv",
+      "sha256": "0d946e23bb61c90b2aadd6cc5336ef9a1db483d00d30be282e59e4cfccdaacad"
     },
     {
       "path": "evaluator-package/sample-metadata.tsv",
       "sha256": "f95772013c8779109bffae9562c91ce64e47deecbcea0b7d07cf0f99638a70d7"
+    },
+    {
+      "path": "evaluator-package/STANDARD-OPERATING-PROCEDURE.md",
+      "sha256": "bfbf81965c26fd8adaa5fd403458e88befb7c9bb0934bbf14086a42ee2eabf46"
     },
     {
       "path": "evaluator-package/tasks.tsv",
