@@ -1,7 +1,8 @@
 # AXIS release checklist
 
-Status on 2 August 2026: **ready to tag version 0.1.0**. Version 1.0.0
-remains conditional on external validation and the remaining gates below.
+Status on 2 August 2026: **version 0.1.0 is archived** and development now
+targets 0.2.0. Version 1.0.0 remains conditional on external validation and
+the remaining gates below.
 
 ## Completed locally
 
@@ -20,6 +21,9 @@ remains conditional on external validation and the remaining gates below.
 - [x] Ruff and strict mypy checks passing
 - [x] DDX24 frozen reproduction with 25/25 checks
 - [x] first formal AXIS methods-manuscript draft
+- [x] collision-safe `axis-bio` distribution metadata
+- [x] token-free PyPI trusted-publishing workflow with clean-wheel smoke test
+- [x] documented PyPI release procedure
 
 ## Required before tagging 1.0.0
 
@@ -34,5 +38,6 @@ remains conditional on external validation and the remaining gates below.
 - [x] obtain author approval for joint authorship and copyright
 - [ ] obtain final author approval of the exact public repository contents
 
-The version in `pyproject.toml` remains `0.1.0` until these release gates are
-met. Passing local checks is necessary but is not external portability.
+The version in `pyproject.toml` remains a 0.2.0 development version until the
+next release is approved. Passing local checks is necessary but is not
+external portability.

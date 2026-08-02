@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "axis"
+name = "axis-bio"
 version = "0.2.0.dev0"
 description = "AI for Axial Spondyloarthritis Insights & Solutions"
 authors = ["João Pais", "Diana Koshman"]
@@ -9,6 +9,23 @@ repository = "https://github.com/JPais7/AXIS"
 readme = "README.md"
 packages = [{ include = "axis" }]
 include = ["axis/resources/demo/*.tsv", "axis/resources/demo/*.json"]
+keywords = [
+    "bioinformatics",
+    "transcriptomics",
+    "meta-analysis",
+    "drug-discovery",
+    "axial-spondyloarthritis",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
 
 [tool.poetry.scripts]
 axis = "axis.cli.main:app"

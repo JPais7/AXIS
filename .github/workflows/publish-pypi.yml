@@ -1,0 +1,65 @@
+name: Publish Python package
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build and verify distributions
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install build tools
+        run: python -m pip install --upgrade build twine
+
+      - name: Build wheel and source distribution
+        run: python -m build
+
+      - name: Check package metadata
+        run: python -m twine check dist/*
+
+      - name: Verify wheel in a clean environment
+        shell: bash
+        run: |
+          python -m venv /tmp/axis-wheel-check
+          /tmp/axis-wheel-check/bin/python -m pip install dist/*.whl
+          /tmp/axis-wheel-check/bin/axis demo --output /tmp/axis-demo
+
+      - name: Upload distributions
+        uses: actions/upload-artifact@v6
+        with:
+          name: python-distributions
+          path: dist/
+          if-no-files-found: error
+
+  publish:
+    name: Publish to PyPI
+    if: github.event_name == 'release'
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: pypi
+      url: https://pypi.org/project/axis-bio/
+    permissions:
+      id-token: write
+    steps:
+      - name: Download distributions
+        uses: actions/download-artifact@v7
+        with:
+          name: python-distributions
+          path: dist/
+
+      - name: Publish with trusted publishing
+        uses: pypa/gh-action-pypi-publish@release/v1

@@ -182,9 +182,9 @@ class DemoBenchmarker:
         if project.is_file():
             payload = tomllib.loads(project.read_text(encoding="utf-8"))
             poetry = payload.get("tool", {}).get("poetry", {})
-            if poetry.get("name") == "axis" and poetry.get("version"):
+            if poetry.get("name") in {"axis", "axis-bio"} and poetry.get("version"):
                 return str(poetry["version"])
         try:
-            return version("axis")
+            return version("axis-bio")
         except PackageNotFoundError:
             return "source-tree"

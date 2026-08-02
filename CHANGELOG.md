@@ -7,6 +7,8 @@ All notable changes to AXIS are documented in this file. The project follows
 
 ### Added
 
+- Collision-safe `axis-bio` package metadata and a trusted-publishing workflow
+  that verifies a clean wheel before publishing it to PyPI.
 - Native-limma validation across four GEO cohorts, including a covariate-adjusted
   contrast, an offline regression guard and a publication-ready figure.
 - Public `axis benchmark` command for repeated, offline measurement of the

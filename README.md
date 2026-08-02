@@ -28,6 +28,25 @@ stable.
 See [docs/first-vertical-slice.md](docs/first-vertical-slice.md) for the
 acceptance criteria and domain decisions.
 
+## Installation
+
+The distribution name is `axis-bio` because `axis` is already assigned to an
+unrelated project on PyPI. The installed Python module and command remain
+`axis`:
+
+```shell
+python -m pip install axis-bio
+axis demo
+```
+
+Until the first PyPI publication is complete, install the current public
+source directly:
+
+```shell
+python -m pip install "git+https://github.com/JPais7/AXIS.git"
+axis demo
+```
+
 ## Development
 
 The target runtime is Python 3.12.
