@@ -1,6 +1,7 @@
-# AXIS 1.0 release checklist
+# AXIS release checklist
 
-Status on 2 August 2026: **release candidate, not yet version 1.0.0**.
+Status on 2 August 2026: **ready to tag version 0.1.0**. Version 1.0.0
+remains conditional on external validation and the remaining gates below.
 
 ## Completed locally
 
@@ -22,10 +23,10 @@ Status on 2 August 2026: **release candidate, not yet version 1.0.0**.
 
 ## Required before tagging 1.0.0
 
-- [ ] create the public GitHub repository at `JPais7/AXIS`
+- [x] create the public GitHub repository at `JPais7/AXIS`
 - [x] add a private security and conduct contact
-- [ ] enable and observe the first successful CI run on all three systems
-- [ ] install a built wheel in a clean environment and run `axis demo`
+- [x] enable and observe the first successful CI run on all three systems
+- [x] install a built wheel in a clean environment and run `axis demo`
 - [ ] ask an independent person to install and execute the demonstration
 - [ ] record runtime and peak memory for the demo and frozen case study
 - [ ] complete the predeclared comparison with alternative workflows

@@ -56,6 +56,7 @@ reporting. Successful execution reports `9/9 checks`. See
 
 - Apache 2.0 license: [`LICENSE`](LICENSE)
 - citation metadata: [`CITATION.cff`](CITATION.cff)
+- release history: [`CHANGELOG.md`](CHANGELOG.md)
 - contribution guide: [`CONTRIBUTING.md`](CONTRIBUTING.md)
 - support and security: [`SUPPORT.md`](SUPPORT.md), [`SECURITY.md`](SECURITY.md)
 - scientific-use policy: [`SCIENTIFIC_POLICY.md`](SCIENTIFIC_POLICY.md)
