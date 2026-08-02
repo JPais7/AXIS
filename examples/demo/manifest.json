@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "name": "axis-synthetic-demo",
+  "synthetic": true,
+  "input": {
+    "path": "cohort-effects.tsv",
+    "relative_to": "manifest",
+    "sha256": "6c4f1bf3d8c8e9ea7d0d277d0ee433f0866058dd1f1e161438c8ed1e6839dfc2"
+  },
+  "expected": {
+    "primary_effect": -0.15901639344262294,
+    "broad_effect": -0.15606046808123122
+  }
+}

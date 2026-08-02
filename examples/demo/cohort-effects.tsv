@@ -1,0 +1,4 @@
+cohort	role	cases	controls	effect	standard_error
+DEMO_A	primary	6	8	-0.20	0.10
+DEMO_B	primary	7	9	-0.10	0.12
+DEMO_C	sensitivity	5	7	-0.15	0.11

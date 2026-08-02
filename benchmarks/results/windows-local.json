@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "benchmark": "axis_synthetic_demo",
+  "created_at": "2026-08-02T13:12:07.732350+00:00",
+  "offline": true,
+  "synthetic": true,
+  "repetitions": 10,
+  "environment": {
+    "python": "3.12.13",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD"
+  },
+  "wall_seconds": {
+    "median": 0.0027713500312529504,
+    "minimum": 0.002515600004699081,
+    "maximum": 0.03343949996633455,
+    "all": [
+      0.03343949996633455,
+      0.002840600034687668,
+      0.0028924999642185867,
+      0.00301799998851493,
+      0.0025812999811023474,
+      0.0034422000171616673,
+      0.002608400012832135,
+      0.0027021000278182328,
+      0.002636499993968755,
+      0.002515600004699081
+    ]
+  },
+  "python_allocation_peak_bytes": {
+    "measurement": "tracemalloc; excludes non-Python native allocations",
+    "median": 1060260.0,
+    "maximum": 1060432,
+    "all": [
+      1060432,
+      1060288,
+      1060280,
+      1060272,
+      1060264,
+      1060256,
+      1060248,
+      1060232,
+      1060224,
+      1060216
+    ]
+  },
+  "output_bytes": {
+    "median": 1562.0,
+    "all": [
+      1562,
+      1562,
+      1562,
+      1562,
+      1562,
+      1562,
+      1562,
+      1562,
+      1562,
+      1563
+    ]
+  },
+  "checks": {
+    "expected_per_run": 9,
+    "passed_per_run": [
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9
+    ],
+    "all_runs_passed": true
+  },
+  "interpretation": "Installation-scale performance only; no biological claim and no cross-tool superiority claim."
+}

@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use AXIS in research, please cite the software and its methods paper when available."
+title: "AXIS: auditable molecular evidence synthesis and therapeutic hypothesis generation"
+type: software
+authors:
+  - given-names: João
+    family-names: Pais
+  - given-names: Diana
+    family-names: Koshman
+version: 0.1.0
+date-released: 2026-08-02
+license: Apache-2.0
+repository-code: "https://github.com/JPais7/AXIS"
+url: "https://github.com/JPais7/AXIS"
+abstract: >-
+  AXIS is participant-aware research software for discovering, reviewing,
+  synthesizing and reproducing molecular evidence across public biomedical
+  studies while preserving provenance and scientific guardrails.
+keywords:
+  - transcriptomics
+  - reproducible research
+  - evidence synthesis
+  - single-cell RNA sequencing
+  - target prioritization

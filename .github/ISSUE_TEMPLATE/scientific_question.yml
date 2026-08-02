@@ -1,0 +1,41 @@
+name: Scientific-method question
+description: Ask about evidence eligibility, analysis or interpretation.
+title: "[Method]: "
+labels: [science]
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Research question
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Disease, population, tissue, assay and comparison
+    validations:
+      required: true
+  - type: dropdown
+    id: role
+    attributes:
+      label: Intended evidence role
+      options:
+        - Discovery
+        - Independent validation
+        - Sensitivity
+        - Mechanistic
+        - Treatment response
+        - Unsure
+    validations:
+      required: true
+  - type: textarea
+    id: accessions
+    attributes:
+      label: Public study accessions and relevant metadata
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Data responsibility
+      options:
+        - label: I have not included identifiable participants, credentials or controlled data.
+          required: true

@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "study": "ddx24-study",
+  "frozen_at": "2026-07-31",
+  "description": "Offline donor-level reproduction of the primary DDX24 CD8 synthesis and the independent broad-CD8 sensitivity analysis.",
+  "inputs": {
+    "gse194315": {
+      "path": "data/single-cell/GSE194315/robustness/batch-adjusted-targets.tsv",
+      "sha256": "d448997b76045801586a17a902b62e9bf451105323806d8a4df327d5f08290b0",
+      "role": "Primary donor-level CD8 TEM and CD8 Naive effects"
+    },
+    "gse288581": {
+      "path": "data/analysis/single-cell-validation/GSE288581/target-validation.tsv",
+      "sha256": "bc51daf28aa8980b5d83c7c478a322f035182f1d47e9a22abeb18d3b6485ddc0",
+      "role": "Primary independent CD45RO-positive CD8 memory validation"
+    },
+    "gse163314": {
+      "path": "data/analysis/single-cell-validation/GSE163314/donor-pseudobulk.tsv",
+      "sha256": "7b9188b6196b8c1de00c8aa394c0210fe6e5cd1d15111dd613b66bcbb6399a48",
+      "role": "Independent broad-CD8 sensitivity cohort"
+    }
+  },
+  "environment": {
+    "python": ">=3.12,<4.0",
+    "poetry_lock": "poetry.lock",
+    "poetry_lock_sha256": "71cb6dd8232af8c46117d45a11a53d8a271623f7318f8d9e8e8b05ab04689e50"
+  },
+  "expected": {
+    "primary": {
+      "cohorts": 2,
+      "case_donors": 14,
+      "control_donors": 33,
+      "random_effect": -0.1480766703457841,
+      "ci_low": -0.272079788234297,
+      "ci_high": -0.024073552457271136,
+      "p_value": 0.01925753230829829
+    },
+    "broad_sensitivity": {
+      "cohorts": 3,
+      "participants": 51,
+      "random_effect": -0.1451305725737641,
+      "ci_low": -0.24879384954990652,
+      "ci_high": -0.04146729559762169,
+      "p_value": 0.006068859968069864
+    }
+  },
+  "guardrails": [
+    "The participant, not the cell, is the statistical unit.",
+    "GSE194315 and GSE288581 are the only primary compatible cohorts.",
+    "GSE163314 is sensitivity-only because CD8_T is broader than memory/effector CD8.",
+    "HRA001027 is excluded because it has one pooled library per group.",
+    "Publications or cell subsets from the same participants are not independent cohorts.",
+    "The result is associative and does not establish causality or therapeutic benefit."
+  ]
+}
