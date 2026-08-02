@@ -1,17 +1,21 @@
+# ruff: noqa: E501
+
 from pathlib import Path
 
 from docx import Document
-from docx.enum.section import WD_SECTION
 from docx.enum.table import WD_CELL_VERTICAL_ALIGNMENT, WD_TABLE_ALIGNMENT
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
 from docx.shared import Inches, Pt, RGBColor
 
-
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "publication" / "axis-methods"
 DOCX = OUT / "AXIS_methods_manuscript_Joao_Pais_Diana_Koshman.docx"
+VALIDATION_FIGURE = (
+    ROOT
+    / "benchmarks/comparison/multi-cohort-validation/axis-limma-validation.png"
+)
 
 NAVY = "17365D"
 BLUE = "2F75B5"
@@ -166,7 +170,7 @@ def configure(doc):
         style.paragraph_format.space_after = Pt(4)
     header = section.header.paragraphs[0]
     header.alignment = WD_ALIGN_PARAGRAPH.RIGHT
-    font(header.add_run("AXIS | Methods manuscript | Draft 1.0"), size=8.5, color=GRAY)
+    font(header.add_run("AXIS | Software and methods manuscript | Draft 2.0"), size=8.5, color=GRAY)
     footer = section.footer.paragraphs[0]
     footer.alignment = WD_ALIGN_PARAGRAPH.CENTER
     field = OxmlElement("w:fldSimple")
@@ -197,14 +201,14 @@ def build():
     p = doc.add_paragraph()
     p.alignment = WD_ALIGN_PARAGRAPH.CENTER
     p.paragraph_format.space_before = Pt(30)
-    font(p.add_run("Software/methods manuscript - pre-submission draft"), size=10.5, bold=True, color=NAVY)
+    font(p.add_run("Software and methods manuscript - pre-submission draft"), size=10.5, bold=True, color=NAVY)
     p = doc.add_paragraph()
     p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    font(p.add_run("Version 1.0 release candidate | 2 August 2026"), size=9.5, color=GRAY)
+    font(p.add_run("Draft 2.0 | 2 August 2026"), size=9.5, color=GRAY)
 
     doc.add_page_break()
     add_heading(doc, "Abstract")
-    add_body(doc, "Public molecular datasets can support therapeutic hypothesis generation, but reuse is hindered by inconsistent sample metadata, incompatible tissues and assays, pseudoreplication, and weak provenance. AXIS is a local Python platform that organizes study discovery, eligibility review, expression analysis, cross-cohort synthesis, single-cell pseudobulk validation, target evidence integration, and frozen reproduction as one guarded workflow. It distinguishes discovery, independent validation, sensitivity analysis, mechanistic evidence, and treatment response; preserves participant-level independence; and records checksums and method decisions for audit. In a case study in axial spondyloarthritis, AXIS synthesized DDX24 expression in two compatible CD8 cohorts (14 cases and 33 controls) and retained a broader third CD8 cohort as sensitivity evidence. The frozen offline run passed 25 of 25 claim checks and reproduced an associative decrease in DDX24 expression, while explicitly preventing causal or therapeutic overinterpretation. The current codebase contains 84 Python modules and 138 automated tests. AXIS is intended as research software for generating falsifiable priorities, not as an autonomous drug-discovery or clinical decision system.")
+    add_body(doc, "Public molecular datasets can support therapeutic hypothesis generation, but reuse is hindered by inconsistent sample metadata, incompatible tissues and assays, pseudoreplication, and weak provenance. AXIS is an open-source Python platform that organizes study discovery, eligibility review, expression analysis, cross-cohort synthesis, single-cell pseudobulk validation, target evidence integration, and frozen reproduction as one guarded workflow. It distinguishes discovery, independent validation, sensitivity analysis, mechanistic evidence, and treatment response; preserves participant-level independence; and records checksums and method decisions for audit. In an axial-spondyloarthritis case study, AXIS synthesized DDX24 expression in two compatible CD8 cohorts (14 cases and 33 controls) and retained a broader third CD8 cohort as sensitivity evidence. Technical validation against native limma covered four GEO cohorts, 163 samples, three microarray platforms and an additional covariate-adjusted analysis. Effect rankings, adjusted-p-value rankings and leading probe lists were concordant. The current suite contains 146 automated tests and passes on Linux, macOS and Windows. AXIS is intended as research software for generating falsifiable priorities, not as an autonomous drug-discovery or clinical decision system.")
     add_body(doc, "Keywords: axial spondyloarthritis; transcriptomics; single-cell RNA sequencing; pseudobulk; meta-analysis; target prioritization; reproducible research")
 
     add_heading(doc, "1. Summary")
@@ -242,8 +246,30 @@ def build():
     ], [2050, 1100, 1400, 4810])
 
     add_heading(doc, "5. Verification and reproducibility")
-    add_body(doc, "On 2 August 2026, the complete local test suite passed 138 of 138 tests. Ruff and strict mypy checks also passed. A 290 KB wheel was built locally and its packaged synthetic demonstration passed 9 of 9 checks outside the source tree. The DDX24 offline reproduction verifies three frozen participant-level inputs and the Poetry lockfile by SHA-256, recomputes the primary and sensitivity summaries, compares numerical values within tight tolerances, and enforces 25 scientific and computational checks. All 25 checks passed in the frozen Windows/Python 3.12 environment.")
-    add_body(doc, "These results demonstrate internal re-executability and claim binding. They do not yet demonstrate portability to an independent computer. A lightweight redistributable example dataset, continuous integration across operating systems, a public version-controlled repository, and an independent installation test remain release requirements.")
+    add_body(doc, "On 2 August 2026, the complete suite passed 146 of 146 tests. Ruff and strict mypy checks also passed. GitHub Actions reproduced the checks with Python 3.12 on Linux, macOS and Windows. A packaged synthetic demonstration runs without distributing participant-level source data. The DDX24 offline reproduction verifies three frozen participant-level inputs and the Poetry lockfile by SHA-256, recomputes the primary and sensitivity summaries, compares numerical values within tight tolerances, and enforces 25 scientific and computational checks.")
+
+    add_heading(doc, "5.1 Native-limma technical validation", 2)
+    add_body(doc, "AXIS differential-expression results were compared with native limma 3.68.4 under R 4.6.1 in four public GEO cohorts: GSE18781/GPL570, GSE25101/GPL6947, GSE73754/GPL10558 and GSE11886/GPL570. Together, the comparisons covered 163 samples and three platform contexts. Across all four unadjusted contrasts, every probe-level effect direction agreed, effect Spearman correlations were approximately 1.0, adjusted-p-value Spearman correlations were 1.0, and the top-100 and top-500 probe sets overlapped completely. Maximum absolute effect differences were below 5.2 x 10^-12.")
+    add_body(doc, "A separate GSE73754 comparison used the declared covariate-adjusted design containing group, sex, age and numeric batch. Across 47,323 shared probes, effect and adjusted-p-value rankings were concordant, all directions agreed, the top-100 and top-500 sets overlapped completely, and the maximum absolute effect difference was 4.52 x 10^-12. An offline synthetic regression test freezes a native-limma reference so that routine continuous integration can detect future changes in coefficients, directions and rankings without requiring R.")
+
+    p = doc.add_paragraph()
+    p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    p.paragraph_format.keep_with_next = True
+    run = p.add_run()
+    picture = run.add_picture(str(VALIDATION_FIGURE), width=Inches(6.35))
+    picture._inline.docPr.set(
+        "descr",
+        "Five-cohort comparison showing near-perfect agreement between AXIS "
+        "and native limma for effect rankings, leading probes and numerical "
+        "estimates.",
+    )
+    caption = doc.add_paragraph()
+    caption.paragraph_format.space_after = Pt(8)
+    caption.paragraph_format.keep_together = True
+    font(caption.add_run("Figure 1. "), size=9, bold=True)
+    font(caption.add_run("Technical agreement between AXIS and native limma. Four unadjusted GEO contrasts and one covariate-adjusted contrast show near-perfect effect correlation, complete leading-list overlap and numerical differences on the order of 10^-12. This validates implementation for the tested designs; it does not establish biological truth or clinical validity."), size=9)
+
+    add_body(doc, "These results demonstrate cross-platform re-executability, claim binding and numerical agreement for the tested microarray designs. They do not demonstrate that AXIS is biologically correct in every setting, superior to limma, or equivalent for paired designs, RNA sequencing, single-cell models or untested covariate structures.")
 
     add_heading(doc, "6. Research impact and intended use")
     add_body(doc, "AXIS has already supported a structured axial-spondyloarthritis case study and the preparation of a prospective DDX24 laboratory validation protocol. Its intended impact is methodological: to make the path from public data to experiment selection more conservative, inspectable, and reproducible. The platform can be adapted through a research manifest defining disease, population, tissue, cell type, comparison, treatments, and exclusion criteria. It should be used to prioritize experiments and evidence gaps, not to recommend treatment or claim clinical efficacy.")
@@ -251,22 +277,23 @@ def build():
     add_heading(doc, "7. Limitations")
     add_bullets(doc, [
         "The current demonstration is disease-specific and based on few compatible cohorts.",
-        "External reproduction on a second computer has not yet been completed.",
-        "Benchmarking against alternative end-to-end tools and formal runtime/memory profiling remain pending.",
+        "The native-limma comparison covers four public microarray cohorts; broader platform, disease and design coverage remains necessary.",
+        "The offline regression fixture is intentionally small and protects rankings and coefficients more strongly than exact empirical-Bayes statistics.",
+        "Benchmarking against additional end-to-end tools and formal runtime/memory profiling remain incomplete.",
         "Human review is still required for sample interpretation, eligibility, confounders and biological meaning.",
         "RCT evidence, pharmacovigilance and clinical outcomes are not yet implemented as a dedicated evidence layer.",
-        "The project is not yet eligible for a software-journal submission that requires a mature public development history and public issue tracking.",
+        "The public development history is recent and therefore does not yet demonstrate long-term community adoption or maintenance.",
     ])
 
-    add_heading(doc, "8. Availability and release plan")
-    availability = add_body(doc, "AXIS is implemented in Python 3.12 and exposes a command-line interface. The release candidate includes an Apache 2.0 license, citation and community guidance, locked dependencies, automated tests, a packaged synthetic demonstration, a cross-platform continuous-integration definition, frozen reproduction manifests and auditable tabular/JSON outputs. Version 1.0 should be tagged only after publication in a public repository, observation of successful cross-platform CI, independent installation and reproduction, benchmarking, and archived release metadata. Current status: version 1.0 release candidate.")
+    add_heading(doc, "8. Availability")
+    availability = add_body(doc, "AXIS is implemented in Python 3.12 and exposes a command-line interface. Source code is publicly available at https://github.com/JPais7/AXIS under the Apache License 2.0. The archived Zenodo record is available at https://doi.org/10.5281/zenodo.21760202. The repository includes locked dependencies, automated cross-platform tests, a packaged synthetic demonstration, frozen reproduction manifests, validation scripts, checksums and auditable tabular/JSON outputs. Raw public data that can be retrieved reproducibly and frozen participant-level data that should not be redistributed are excluded from the software archive.")
     availability.paragraph_format.keep_together = True
 
     add_heading(doc, "9. AI usage disclosure")
     add_body(doc, "Generative AI was used interactively to assist software implementation, documentation, test design and manuscript drafting. Scientific claims were constrained by explicit programmatic checks, source artifacts and author review. AI output was not treated as evidence, and the authors remain responsible for verification, interpretation and the final submitted text.")
 
     add_heading(doc, "10. Author contributions")
-    add_body(doc, "João Pais: conceptualization, investigation, project direction and manuscript review. Diana Koshman: scientific collaboration, validation planning and manuscript review. Software engineering and manuscript drafting included AI-assisted work under author supervision. Final CRediT roles should be confirmed by both authors before submission.")
+    add_body(doc, "João Pais: conceptualization, investigation, software, validation, project administration, visualization, and writing - original draft and review. Diana Koshman: investigation, validation planning, and writing - review and editing. Software engineering and manuscript drafting included AI-assisted work under author supervision. Both authors must approve the submitted version.")
 
     add_heading(doc, "11. Funding, competing interests and data ethics")
     add_body(doc, "Funding: none declared. Competing interests: none declared. AXIS reuses de-identified public datasets and does not itself recruit participants. The ethical and consent conditions of each source study remain applicable. These statements must be reconfirmed before submission.")
@@ -279,6 +306,8 @@ def build():
         "4. Open Targets Consortium. Open Targets Platform: facilitating therapeutic hypotheses building in drug discovery. Nucleic Acids Research. 2025;53(D1):D1467-D1475. doi:10.1093/nar/gkae1072.",
         "5. Alber S, et al. Single cell transcriptome and surface epitope analysis of ankylosing spondylitis facilitates disease classification by machine learning. Frontiers in Immunology. 2022;13:838636. doi:10.3389/fimmu.2022.838636.",
         "6. Tang M, Qaiyum Z, Lim M, Inman RD. Single cell immune profiling in ankylosing spondylitis reveals resistance of CD8+ T cells to immune exhaustion. iScience. 2025;28:112715. doi:10.1016/j.isci.2025.112715.",
+        "7. Ritchie ME, et al. limma powers differential expression analyses for RNA-sequencing and microarray studies. Nucleic Acids Research. 2015;43(7):e47. doi:10.1093/nar/gkv007.",
+        "8. Pais J, Koshman D. AXIS: AI for Axial Spondyloarthritis Insights & Solutions [software]. Zenodo. 2026. doi:10.5281/zenodo.21760202.",
     ]
     for ref in refs:
         p = doc.add_paragraph(style="List Number")
