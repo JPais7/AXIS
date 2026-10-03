@@ -8,6 +8,13 @@ const source = await readFile(new URL('../src/components.ts', import.meta.url), 
 const { outputText } = ts.transpileModule(source, { compilerOptions: { target: ts.ScriptTarget.ES2022, module: ts.ModuleKind.ES2022 } });
 const components = await import(`data:text/javascript;base64,${Buffer.from(outputText).toString('base64')}`);
 
+test('compact cards separate context lines and strategies retain compact visible details', async () => {
+  const css = await readFile(new URL('../src/hardening.css', import.meta.url), 'utf8');
+  assert.match(css, /\.compact-card > span:not\(\.badge\)\{display:block/);
+  assert.match(css, /\.strategy-card \.state\{padding:10px 12px/);
+  assert.doesNotMatch(css, /\.strategy-card[^}]*display:none/);
+});
+
 test('knowledge kind and empty scientific states remain distinguishable', () => {
   assert.match(components.KnowledgeKindBadge('ai_suggestion'), /proposal/);
   assert.match(components.KnowledgeKindBadge('source_assertion'), /source assertion/);
