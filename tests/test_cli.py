@@ -1,3 +1,4 @@
+import re
 from datetime import UTC, datetime
 from pathlib import Path
 
@@ -42,7 +43,9 @@ def test_info_creates_database_and_reports_empty_store(tmp_path: Path) -> None:
     assert result.exit_code == 0
     assert database.exists()
     assert "Schema version" in result.stdout
-    assert "2" in result.stdout
+    assert re.search(r"Schema version\s*[│|]\s*4\b", result.stdout)
+    with EvidenceStore(database, read_only=True) as store:
+        assert store.statistics().schema_version == 4
     assert "Studies" in result.stdout
 
 

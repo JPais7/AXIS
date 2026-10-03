@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "benchmark_id": "axis-sle-type-i-interferon-permuted-v1",
+  "frozen_on": "2026-08-06",
+  "status": "frozen_before_execution",
+  "control_type": "negative",
+  "source_benchmark": "axis-sle-type-i-interferon-v1",
+  "permutation": {
+    "seed": 20260806,
+    "scope": "within each cohort",
+    "preserves": ["sample identifiers", "case count", "control count"],
+    "changes": "case-control labels only"
+  },
+  "success_criteria": {
+    "top_n": 100,
+    "minimum_reference_hits": 5,
+    "maximum_enrichment_p_value": 0.05,
+    "required_direction": "higher_in_case"
+  },
+  "expected_evaluator_status": "not_passed",
+  "failure_policy": "If the positive-control evaluator passes after label permutation, investigate leakage, confounding or an invalid null before making further biological claims.",
+  "claim_boundary": "One deterministic permutation is a software and leakage check, not a calibrated false-positive-rate estimate."
+}

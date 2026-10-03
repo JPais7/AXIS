@@ -172,6 +172,7 @@ class SingleCellTranscriptomeAnalyzer:
                             gene_counts=gene_counts,
                             library_counts=library_counts,
                             cell_counts=cell_counts,
+                            positive_cells=None,
                             seen_cells=seen_cells,
                         )
                         completed_runs += 1

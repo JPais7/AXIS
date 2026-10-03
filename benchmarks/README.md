@@ -65,3 +65,11 @@ axis summarize-workflow-comparison reviewer-a.tsv reviewer-b.tsv \
 
 The resulting article-ready count table deliberately does not calculate a weighted
 overall score; speed cannot compensate for a failed scientific guardrail.
+
+## Biological positive control
+
+`biological/lupus-ifn-v1` freezes a separate test of whether AXIS recovers the
+established type-I-interferon signature in systemic lupus erythematosus. It
+predeclares biological strata, eligibility guardrails, a locked reference set,
+success criteria and a failure policy. Candidate accessions are not automatically
+eligible. See its README before preparing any data.

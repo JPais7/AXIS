@@ -57,3 +57,11 @@ def test_streaming_pseudobulk_uses_subject_level_values(tmp_path: Path) -> None:
     assert len(rows) == 2
     assert {row["library_count"] for row in rows} == {"100"}
     assert {row["raw_pseudobulk_count"] for row in rows} == {"10", "2"}
+    assert {row["positive_cells"] for row in rows} == {"1"}
+    assert {row["positive_cell_fraction"] for row in rows} == {"1.0"}
+
+    with result.output_path.open(encoding="utf-8", newline="") as source:
+        comparison = next(csv.DictReader(source, delimiter="\t"))
+    assert comparison["analysis_status"] == "insufficient_subjects"
+    assert comparison["p_value"] == "nan"
+    assert comparison["adjusted_p_value"] == ""

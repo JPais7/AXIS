@@ -1,5 +1,10 @@
 # First vertical slice
 
+This document describes the original recurrence-focused slice. The subsequent
+minimal discovery foundation is documented in
+[discovery-domain.md](discovery-domain.md); it preserves this evidence model
+and the existing analysis workflow.
+
 ## Scientific question
 
 Which genes recur in independent GEO datasets about axial

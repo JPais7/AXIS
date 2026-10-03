@@ -29,6 +29,7 @@ from axis.domain import (
     Study,
     Transformation,
 )
+from axis.storage.ownership import StoreOwnership
 
 
 class RecordNotFoundError(LookupError):
@@ -50,18 +51,80 @@ class StoreStatistics:
 class EvidenceStore:
     """Owns the DuckDB connection and exposes focused repositories."""
 
-    def __init__(self, database: str | Path = ":memory:") -> None:
+    def __init__(
+        self, database: str | Path = ":memory:", *, read_only: bool = False
+    ) -> None:
         database_path = Path(database) if database != ":memory:" else None
+        if read_only and database_path is None:
+            raise ValueError("read-only store requires an existing database file")
+        self._ownership: StoreOwnership | None = None
         if database_path is not None:
-            database_path.parent.mkdir(parents=True, exist_ok=True)
-        self._connection = duckdb.connect(
-            str(database_path) if database_path is not None else ":memory:"
-        )
+            if read_only and not database_path.is_file():
+                raise ValueError(
+                    "read-only database does not exist; initialize it first"
+                )
+            if not read_only:
+                database_path.parent.mkdir(parents=True, exist_ok=True)
+            self._ownership = StoreOwnership(database_path)
+            self._ownership.acquire()
+        try:
+            self._connection = duckdb.connect(
+                str(database_path) if database_path is not None else ":memory:",
+                read_only=read_only,
+            )
+        except Exception:
+            if self._ownership is not None:
+                self._ownership.release()
+            raise
         self._closed = False
-        self._apply_migrations()
+        self._transaction_depth = 0
+        self._transaction_failed = False
+        try:
+            if read_only:
+                root = resources.files("axis.storage.migrations")
+                expected = max(
+                    int(item.name[:3])
+                    for item in root.iterdir()
+                    if item.name.endswith(".sql") and item.name[:3].isdigit()
+                )
+                row = self._connection.execute(
+                    "SELECT coalesce(max(version),0) FROM schema_migrations"
+                ).fetchone()
+                if row is None or row[0] != expected:
+                    raise ValueError(
+                        "database requires an explicit writable migration "
+                        "before read-only serving"
+                    )
+            else:
+                self._apply_migrations()
+        except Exception:
+            self.close()
+            raise
         self.claims = ClaimRepository(self)
         self.hypotheses = HypothesisRepository(self)
         self.studies = StudyRepository(self)
+        # Import here to keep the repositories dependent on this store boundary.
+        from axis.storage.discovery import (
+            DiscoveryProjectRepository,
+            EvidenceAssessmentRepository,
+            InterventionStrategyRepository,
+            MechanisticAssessmentRepository,
+            OpenQuestionRepository,
+            OutcomeScenarioRepository,
+            PerturbationRepository,
+            ProposedExperimentRepository,
+            TargetDiseasePairRepository,
+        )
+
+        self.target_disease_pairs = TargetDiseasePairRepository(self)
+        self.projects = DiscoveryProjectRepository(self)
+        self.perturbations = PerturbationRepository(self)
+        self.strategies = InterventionStrategyRepository(self)
+        self.questions = OpenQuestionRepository(self)
+        self.evidence_assessments = EvidenceAssessmentRepository(self)
+        self.mechanistic_assessments = MechanisticAssessmentRepository(self)
+        self.proposed_experiments = ProposedExperimentRepository(self)
+        self.outcome_scenarios = OutcomeScenarioRepository(self)
 
     def __enter__(self) -> Self:
         return self
@@ -76,8 +139,12 @@ class EvidenceStore:
 
     def close(self) -> None:
         if not self._closed:
-            self._connection.close()
-            self._closed = True
+            try:
+                self._connection.close()
+            finally:
+                if self._ownership is not None:
+                    self._ownership.release()
+                self._closed = True
 
     def statistics(self) -> StoreStatistics:
         studies = self._connection.execute("SELECT count(*) FROM studies").fetchone()
@@ -104,14 +171,26 @@ class EvidenceStore:
 
     @contextmanager
     def _transaction(self) -> Iterator[None]:
-        self._connection.execute("BEGIN TRANSACTION")
+        outermost = self._transaction_depth == 0
+        if outermost:
+            self._connection.execute("BEGIN TRANSACTION")
+            self._transaction_failed = False
+        self._transaction_depth += 1
         try:
             yield
         except Exception:
-            self._connection.execute("ROLLBACK")
+            self._transaction_failed = True
+            if outermost:
+                self._connection.execute("ROLLBACK")
             raise
         else:
-            self._connection.execute("COMMIT")
+            if outermost:
+                if self._transaction_failed:
+                    self._connection.execute("ROLLBACK")
+                    raise RuntimeError("transaction aborted by a nested operation")
+                self._connection.execute("COMMIT")
+        finally:
+            self._transaction_depth -= 1
 
     def _apply_migrations(self) -> None:
         self._connection.execute(
@@ -171,9 +250,17 @@ class ClaimRepository:
             self._upsert_entity(claim.object)
             connection.execute(
                 """
-                INSERT INTO claims VALUES (
+                INSERT INTO claims (
+                    identifier, subject_kind, subject_namespace, subject_identifier,
+                    predicate, object_kind, object_namespace, object_identifier,
+                    knowledge_kind, confidence, tissue, assay, population,
+                    comparison, treatment, species, source_kind, source_identifier,
+                    retrieved_at, source_uri, checksum,
+                    cell_type, genotype, hla_status, allotype,
+                    experimental_system, endpoint
+                ) VALUES (
                     ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,
-                    ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?
+                    ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?
                 )
                 """,
                 [
@@ -198,6 +285,12 @@ class ClaimRepository:
                     claim.provenance.retrieved_at,
                     claim.provenance.source_uri,
                     claim.provenance.checksum,
+                    claim.context.cell_type,
+                    claim.context.genotype,
+                    claim.context.hla_status,
+                    claim.context.allotype,
+                    claim.context.experimental_system,
+                    claim.context.endpoint,
                 ],
             )
             for transformation_ordinal, transformation in enumerate(
@@ -249,7 +342,9 @@ class ClaimRepository:
                 c.tissue, c.assay, c.population, c.comparison,
                 c.treatment, c.species,
                 c.source_kind, c.source_identifier, c.retrieved_at,
-                c.source_uri, c.checksum
+                c.source_uri, c.checksum,
+                c.cell_type, c.genotype, c.hla_status, c.allotype,
+                c.experimental_system, c.endpoint
             FROM claims c
             JOIN entities se ON
                 se.kind = c.subject_kind
@@ -309,6 +404,12 @@ class ClaimRepository:
                 comparison=row[15],
                 treatment=row[16],
                 species=row[17],
+                cell_type=row[23],
+                genotype=row[24],
+                hla_status=row[25],
+                allotype=row[26],
+                experimental_system=row[27],
+                endpoint=row[28],
             ),
             provenance=Provenance(
                 source_kind=SourceKind(row[18]),
@@ -333,6 +434,29 @@ class ClaimRepository:
             [subject.kind.value, subject.namespace, subject.identifier],
         ).fetchall()
         return tuple(self.get(row[0]) for row in rows)
+
+    def list_by_source(
+        self, source_id: str, *, project_id: str, limit: int = 50, offset: int = 0
+    ) -> tuple[Claim, ...]:
+        if not 1 <= limit <= 100 or offset < 0:
+            raise ValueError("invalid source pagination")
+        self._store.projects.get(project_id)
+        rows = self._store._connection.execute(
+            "SELECT c.identifier FROM claims c JOIN project_claims p "
+            "ON p.claim_id=c.identifier WHERE p.project_id=? "
+            "AND c.source_identifier=? ORDER BY c.identifier LIMIT ? OFFSET ?",
+            [project_id, source_id, limit, offset],
+        ).fetchall()
+        return tuple(self.get(row[0]) for row in rows)
+
+    def count_by_source(self, source_id: str, *, project_id: str) -> int:
+        row = self._store._connection.execute(
+            "SELECT count(*) FROM claims c JOIN project_claims p "
+            "ON p.claim_id=c.identifier WHERE p.project_id=? AND c.source_identifier=?",
+            [project_id, source_id],
+        ).fetchone()
+        assert row is not None
+        return int(row[0])
 
     def _upsert_entity(self, entity: EntityRef) -> None:
         row = self._store._connection.execute(
@@ -410,6 +534,24 @@ class StudyRepository:
                 study,
                 study.publication_ids,
             )
+            for ordinal, transformation in enumerate(study.provenance.transformations):
+                self._store._connection.execute(
+                    "INSERT INTO study_transformations VALUES (?, ?, ?, ?)",
+                    [
+                        study.identifier,
+                        ordinal,
+                        transformation.name,
+                        transformation.version,
+                    ],
+                )
+                for parameter_ordinal, (key, value) in enumerate(
+                    transformation.parameters
+                ):
+                    self._store._connection.execute(
+                        "INSERT INTO study_transformation_parameters "
+                        "VALUES (?, ?, ?, ?, ?)",
+                        [study.identifier, ordinal, parameter_ordinal, key, value],
+                    )
 
     def get(self, identifier: str) -> Study:
         study = self.get_optional(identifier)
@@ -447,6 +589,27 @@ class StudyRepository:
                 retrieved_at=row[10],
                 source_uri=row[11],
                 checksum=row[12],
+                transformations=tuple(
+                    Transformation(
+                        name=step[1],
+                        version=step[2],
+                        parameters=tuple(
+                            (parameter[0], parameter[1])
+                            for parameter in self._store._connection.execute(
+                                "SELECT key, value "
+                                "FROM study_transformation_parameters "
+                                "WHERE study_identifier = ? "
+                                "AND transformation_ordinal = ? ORDER BY ordinal",
+                                [identifier, step[0]],
+                            ).fetchall()
+                        ),
+                    )
+                    for step in self._store._connection.execute(
+                        "SELECT ordinal, name, version FROM study_transformations "
+                        "WHERE study_identifier = ? ORDER BY ordinal",
+                        [identifier],
+                    ).fetchall()
+                ),
             ),
             organisms=self._get_values("study_organisms", "organism", identifier),
             platform_ids=self._get_values(

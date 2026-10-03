@@ -2,6 +2,10 @@
 
 from axis.analysis.article_finalization import ArticleFinalizationRun, ArticleFinalizer
 from axis.analysis.benchmark import DemoBenchmarker, DemoBenchmarkRun
+from axis.analysis.biological_benchmark import (
+    BiologicalBenchmarkEvaluator,
+    BiologicalBenchmarkRun,
+)
 from axis.analysis.cd8_cross_cohort import Cd8CrossCohortAnalyzer, Cd8CrossCohortRun
 from axis.analysis.cd8_evidence_review import Cd8EvidenceReviewer, Cd8EvidenceReviewRun
 from axis.analysis.cell_composition import (
@@ -167,6 +171,10 @@ from axis.analysis.target_meta_analysis import (
     TargetMetaAnalysisRun,
     TargetMetaAnalyzer,
 )
+from axis.analysis.trm17_tcr_enrichment import (
+    Trm17TcrEnrichmentAnalyzer,
+    Trm17TcrEnrichmentRun,
+)
 from axis.analysis.validation_cohort_selection import (
     ValidationCohortSelectionRun,
     ValidationCohortSelector,
@@ -182,6 +190,8 @@ __all__ = [
     "DifferentialAnalysis",
     "DemoBenchmarker",
     "DemoBenchmarkRun",
+    "BiologicalBenchmarkEvaluator",
+    "BiologicalBenchmarkRun",
     "ArticleFinalizationRun",
     "ArticleFinalizer",
     "DifferentialAnalyzer",
@@ -280,6 +290,8 @@ __all__ = [
     "TargetDeepDiveRun",
     "TargetMetaAnalysisRun",
     "TargetMetaAnalyzer",
+    "Trm17TcrEnrichmentAnalyzer",
+    "Trm17TcrEnrichmentRun",
     "ValidationCohortSelectionRun",
     "ValidationCohortSelector",
     "ComparisonPreparation",

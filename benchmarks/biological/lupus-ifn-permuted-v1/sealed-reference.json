@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "benchmark_id": "axis-sle-type-i-interferon-permuted-v1",
+  "locked_on": "2026-08-06",
+  "genes": [
+    "IFI27",
+    "IFI44",
+    "IFI44L",
+    "IFI6",
+    "IFIT1",
+    "IFIT3",
+    "ISG15",
+    "MX1",
+    "OAS1",
+    "OAS2",
+    "RSAD2",
+    "SIGLEC1"
+  ],
+  "expected_direction": "higher_in_case",
+  "note": "Same locked genes as the positive control; labels alone are permuted."
+}

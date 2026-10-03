@@ -13,9 +13,17 @@ __pycache__/
 .pytest-*/
 .test-*/
 .tmp/
+web/node_modules/
+web/test-results/
+web/playwright-report/
+*.axis-lock
 .coverage
 dist/
 .venv/
+.runtime/
+.env
+.env.*
+!.env.example
 .tools/
 .comparison-work/
 data/

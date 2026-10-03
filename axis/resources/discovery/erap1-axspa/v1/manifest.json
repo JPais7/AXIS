@@ -1,0 +1,700 @@
+{
+  "package_id": "axis-erap1-axspa-curated",
+  "package_version": "1.0.0",
+  "importer_version": "1",
+  "project_id": "AXIS-DD-ERAP1-CURATED-001",
+  "pair_id": "AXIS-TD-ERAP1-CURATED-AXSPA",
+  "curation_status": "AI-assisted primary-source extraction; scientific expert review pending",
+  "curation_date": "2026-10-03",
+  "target": {
+    "kind": "gene",
+    "identifier": "ERAP1",
+    "label": "ERAP1",
+    "namespace": "HGNC-symbol"
+  },
+  "disease": {
+    "kind": "disease",
+    "identifier": "axSpA",
+    "label": "axial spondyloarthritis",
+    "namespace": "AXIS"
+  },
+  "indication_scope": "Ankylosing spondylitis primary evidence; extrapolation to broader axSpA unassessed",
+  "objective": "Evaluate the evidence for pharmacological modulation of ERAP1 as a therapeutic strategy in axial spondyloarthritis.",
+  "sources": [
+    {
+      "source_id": "PMID:21743469",
+      "source_kind": "publication",
+      "title": "Interaction between ERAP1 and HLA-B27 in ankylosing spondylitis implicates peptide handling in the mechanism for HLA-B27 in disease susceptibility.",
+      "authors": "Evans DM, Spencer CC, Pointon JJ, Su Z, Harvey D, Kochan G, Oppermann U, Dilthey A, Pirinen M, Stone MA, Appleton L, Moutsianas L, Leslie S, Wordsworth T, Kenna TJ, Karaderi T, Thomas GP, Ward MM, Weisman MH, Farrar C, Bradbury LA, Danoy P, Inman RD, Maksymowych W, Gladman D, Rahman P, Spondyloarthritis Research Consortium of Canada (SPARCC), Morgan A, Marzo-Ortega H, Bowness P, Gaffney K, Gaston JS, Smith M, Bruges-Armas J, Couto AR, Sorrentino R, Paladini F, Ferreira MA, Xu H, Liu Y, Jiang L, Lopez-Larrea C, Díaz-Peña R, López-Vázquez A, Zayats T, Band G, Bellenguez C, Blackburn H, Blackwell JM, Bramon E, Bumpstead SJ, Casas JP, Corvin A, Craddock N, Deloukas P, Dronov S, Duncanson A, Edkins S, Freeman C, Gillman M, Gray E, Gwilliam R, Hammond N, Hunt SE, Jankowski J, Jayakumar A, Langford C, Liddle J, Markus HS, Mathew CG, McCann OT, McCarthy MI, Palmer CN, Peltonen L, Plomin R, Potter SC, Rautanen A, Ravindrarajah R, Ricketts M, Samani N, Sawcer SJ, Strange A, Trembath RC, Viswanathan AC, Waller M, Weston P, Whittaker P, Widaa S, Wood NW, McVean G, Reveille JD, Wordsworth BP, Brown MA, Donnelly P, Australo-Anglo-American Spondyloarthritis Consortium (TASC), Wellcome Trust Case Control Consortium 2 (WTCCC2).",
+      "year": "2011",
+      "doi": "10.1038/ng.873",
+      "pmcid": "PMC3640413",
+      "source_uri": "https://pubmed.ncbi.nlm.nih.gov/21743469/",
+      "retrieved_at": "2026-10-03T14:02:42.492882+00:00",
+      "retrieval_uri": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A21743469+AND+SRC%3AMED&format=json&resultType=core",
+      "response_sha256": "fd4fcbc2f983b39ee73d27fffcf4e520741fa5ddc7976c2be42f8ee9bbd74f85",
+      "access": "Primary article abstract and bibliographic record"
+    },
+    {
+      "source_id": "PMID:25994336",
+      "source_kind": "publication",
+      "title": "Major histocompatibility complex associations of ankylosing spondylitis are complex and involve further epistasis with ERAP1.",
+      "authors": "Cortes A, Pulit SL, Leo PJ, Pointon JJ, Robinson PC, Weisman MH, Ward M, Gensler LS, Zhou X, Garchon HJ, Chiocchia G, Nossent J, Lie BA, Førre Ø, Tuomilehto J, Laiho K, Bradbury LA, Elewaut D, Burgos-Vargas R, Stebbings S, Appleton L, Farrah C, Lau J, Haroon N, Mulero J, Blanco FJ, Gonzalez-Gay MA, Lopez-Larrea C, Bowness P, Gaffney K, Gaston H, Gladman DD, Rahman P, Maksymowych WP, Crusius JB, van der Horst-Bruinsma IE, Valle-Oñate R, Romero-Sánchez C, Hansen IM, Pimentel-Santos FM, Inman RD, Martin J, Breban M, Wordsworth BP, Reveille JD, Evans DM, de Bakker PI, Brown MA.",
+      "year": "2015",
+      "doi": "10.1038/ncomms8146",
+      "pmcid": "PMC4443427",
+      "source_uri": "https://pubmed.ncbi.nlm.nih.gov/25994336/",
+      "retrieved_at": "2026-10-03T14:02:42.562436+00:00",
+      "retrieval_uri": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A25994336+AND+SRC%3AMED&format=json&resultType=core",
+      "response_sha256": "8c3c6bea95467ca1e0ee7a5fca7c4e6dfe50992f0c33f22840b6a001f1db2939",
+      "access": "Primary article abstract and bibliographic record"
+    },
+    {
+      "source_id": "PMID:16286653",
+      "source_kind": "publication",
+      "title": "The ER aminopeptidase, ERAP1, trims precursors to lengths of MHC class I peptides by a \"molecular ruler\" mechanism.",
+      "authors": "Chang SC, Momburg F, Bhutani N, Goldberg AL.",
+      "year": "2005",
+      "doi": "10.1073/pnas.0500721102",
+      "pmcid": "PMC1287962",
+      "source_uri": "https://pubmed.ncbi.nlm.nih.gov/16286653/",
+      "retrieved_at": "2026-10-03T14:02:42.614034+00:00",
+      "retrieval_uri": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A16286653+AND+SRC%3AMED&format=json&resultType=core",
+      "response_sha256": "ccbd09d22a84168d4be7b3171b4a82ac96edadf2da4f6a42bc4b86507ba3b7ee",
+      "access": "Primary article abstract and bibliographic record"
+    },
+    {
+      "source_id": "PMID:24504800",
+      "source_kind": "publication",
+      "title": "Critical role of endoplasmic reticulum aminopeptidase 1 in determining the length and sequence of peptides bound and presented by HLA-B27.",
+      "authors": "Chen L, Fischer R, Peng Y, Reeves E, McHugh K, Ternette N, Hanke T, Dong T, Elliott T, Shastri N, Kollnberger S, James E, Kessler B, Bowness P.",
+      "year": "2014",
+      "doi": "10.1002/art.38249",
+      "pmcid": null,
+      "source_uri": "https://pubmed.ncbi.nlm.nih.gov/24504800/",
+      "retrieved_at": "2026-10-03T14:02:42.666411+00:00",
+      "retrieval_uri": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A24504800+AND+SRC%3AMED&format=json&resultType=core",
+      "response_sha256": "53475af475d598c37e930ae6baa1478174a92d417ef0cef726a819be1036eaec",
+      "access": "Primary article abstract and bibliographic record"
+    },
+    {
+      "source_id": "PMID:26130142",
+      "source_kind": "publication",
+      "title": "Silencing or inhibition of endoplasmic reticulum aminopeptidase 1 (ERAP1) suppresses free heavy chain expression and Th17 responses in ankylosing spondylitis.",
+      "authors": "Chen L, Ridley A, Hammitzsch A, Al-Mossawi MH, Bunting H, Georgiadis D, Chan A, Kollnberger S, Bowness P.",
+      "year": "2016",
+      "doi": "10.1136/annrheumdis-2014-206996",
+      "pmcid": "PMC4853590",
+      "source_uri": "https://pubmed.ncbi.nlm.nih.gov/26130142/",
+      "retrieved_at": "2026-10-03T14:02:42.716439+00:00",
+      "retrieval_uri": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A26130142+AND+SRC%3AMED&format=json&resultType=core",
+      "response_sha256": "7f11a11fa51ebf329970bd6f20577e642cb6e1bb35f341d88d516a0621373b1b",
+      "access": "Primary full text (PMC4853590), methods and results inspected; response_sha256 hashes metadata; fulltext_sha256 separately identifies the retrieved XML.",
+      "fulltext_uri": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4853590/",
+      "fulltext_sha256": "4425070f24b7407603c80c8562e75f42dda2886a9ed156b69b6c0292db3d5bca",
+      "fulltext_retrieved_at": "2026-10-03T14:05:11.122040+00:00"
+    },
+    {
+      "source_id": "PMID:27107845",
+      "source_kind": "publication",
+      "title": "ERAP1 reduces accumulation of aberrant and disulfide-linked forms of HLA-B27 on the cell surface.",
+      "authors": "Tran TM, Hong S, Edwan JH, Colbert RA.",
+      "year": "2016",
+      "doi": "10.1016/j.molimm.2016.04.002",
+      "pmcid": "PMC5425939",
+      "source_uri": "https://pubmed.ncbi.nlm.nih.gov/27107845/",
+      "retrieved_at": "2026-10-03T14:02:42.761200+00:00",
+      "retrieval_uri": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A27107845+AND+SRC%3AMED&format=json&resultType=core",
+      "response_sha256": "6ececb4528e385f89d047d9b8463fbc884a6202fab3583247518d0eac578797b",
+      "access": "Primary abstract/bibliographic metadata retrieved; cell/HLA details checked against indexed primary full text on PMC5425939. Direct full-text XML download unavailable; response_sha256 hashes metadata only."
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C01",
+      "source_id": "PMID:21743469",
+      "domain": "human_genetics",
+      "subject": {
+        "kind": "gene",
+        "identifier": "ERAP1",
+        "label": "ERAP1",
+        "namespace": "HGNC-symbol"
+      },
+      "predicate": "variants_associated_with",
+      "object": {
+        "kind": "disease",
+        "identifier": "ankylosing-spondylitis",
+        "label": "ankylosing spondylitis",
+        "namespace": "AXIS-curated"
+      },
+      "statement": "ERAP1 polymorphisms were associated with ankylosing spondylitis risk in HLA-B27-positive individuals in this study.",
+      "context": {
+        "population": "Ankylosing spondylitis cases and controls; European-descent cohorts",
+        "hla_status": "HLA-B27-positive risk association in this study",
+        "assay": "Genome-wide association and replication",
+        "comparison": "AS cases versus controls",
+        "species": "Homo sapiens"
+      },
+      "locator": "Abstract; HLA-B27 × ERAP1 interaction results",
+      "knowledge_kind": "source_assertion",
+      "inclusion_rationale": "Provides an atomic observation relevant to the evidence-to-experiment chain.",
+      "limitation": "Association does not establish therapeutic direction; AS is not all axSpA."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C02",
+      "source_id": "PMID:25994336",
+      "domain": "human_genetics",
+      "subject": {
+        "kind": "gene",
+        "identifier": "ERAP1",
+        "label": "ERAP1",
+        "namespace": "HGNC-symbol"
+      },
+      "predicate": "rs30187_associated_with",
+      "object": {
+        "kind": "disease",
+        "identifier": "ankylosing-spondylitis",
+        "label": "ankylosing spondylitis",
+        "namespace": "AXIS-curated"
+      },
+      "statement": "ERAP1 rs30187 was also associated with ankylosing spondylitis in HLA-B*40:01 carriers without HLA-B*27.",
+      "context": {
+        "population": "AS cases and population controls of European descent",
+        "hla_status": "HLA-B*40:01-positive; HLA-B*27-negative stratum",
+        "genotype": "ERAP1 rs30187",
+        "assay": "Immunochip genotyping and HLA imputation",
+        "comparison": "AS cases versus population controls",
+        "species": "Homo sapiens"
+      },
+      "locator": "Abstract; ERAP1 and HLA-B*40 interaction results",
+      "knowledge_kind": "source_assertion",
+      "inclusion_rationale": "Provides an atomic observation relevant to the evidence-to-experiment chain.",
+      "limitation": "Extends the HLA context of the earlier finding; not a refutation of its HLA-B27-positive association."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C03",
+      "source_id": "PMID:16286653",
+      "domain": "biological_function",
+      "subject": {
+        "kind": "gene",
+        "identifier": "ERAP1",
+        "label": "ERAP1",
+        "namespace": "HGNC-symbol"
+      },
+      "predicate": "trims",
+      "object": {
+        "kind": "pathway",
+        "identifier": "peptide-processing",
+        "label": "N-terminal peptide processing",
+        "namespace": "AXIS-curated"
+      },
+      "statement": "Purified ERAP1 trimmed a model 13-residue precursor to a 9-residue product and then trimming stopped in that assay.",
+      "context": {
+        "experimental_system": "Purified human ERAP1 with model peptide substrates",
+        "assay": "Biochemical peptide-trimming assay",
+        "endpoint": "Peptide length after trimming",
+        "species": "Homo sapiens"
+      },
+      "locator": "Abstract; length-dependent trimming results",
+      "knowledge_kind": "source_assertion",
+      "inclusion_rationale": "Provides an atomic observation relevant to the evidence-to-experiment chain.",
+      "limitation": "General biochemical function, not an AS therapeutic experiment."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C04",
+      "source_id": "PMID:16286653",
+      "domain": "biological_function",
+      "subject": {
+        "kind": "gene",
+        "identifier": "ERAP1",
+        "label": "ERAP1",
+        "namespace": "HGNC-symbol"
+      },
+      "predicate": "substrate_processing_depends_on",
+      "object": {
+        "kind": "biomarker",
+        "identifier": "c-terminal-sequence",
+        "label": "Peptide C-terminal sequence",
+        "namespace": "AXIS-curated"
+      },
+      "statement": "ERAP1 processing activity depended on the substrate C-terminal residue in purified-enzyme assays.",
+      "context": {
+        "experimental_system": "Purified ERAP1 with peptide substrates",
+        "assay": "Biochemical substrate-processing assay",
+        "endpoint": "Sequence-dependent processing",
+        "species": "Homo sapiens"
+      },
+      "locator": "Abstract; substrate C-terminal specificity results",
+      "knowledge_kind": "source_assertion",
+      "inclusion_rationale": "Provides an atomic observation relevant to the evidence-to-experiment chain.",
+      "limitation": "Substrate dependence limits any simple global activity interpretation."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C05",
+      "source_id": "PMID:24504800",
+      "domain": "hla_mechanism",
+      "subject": {
+        "kind": "gene",
+        "identifier": "ERAP1",
+        "label": "ERAP1",
+        "namespace": "HGNC-symbol"
+      },
+      "predicate": "silencing_decreases",
+      "object": {
+        "kind": "biomarker",
+        "identifier": "b27-9mer",
+        "label": "9-residue HLA-B27-bound peptides",
+        "namespace": "AXIS-curated"
+      },
+      "statement": "ERAP1 silencing decreased the proportion of 9-residue HLA-B27-bound peptides in HeLa.B27 and C1R.B27 cells.",
+      "context": {
+        "experimental_system": "ERAP1-silenced HeLa.B27 and C1R.B27 cells",
+        "hla_status": "HLA-B27 expressed",
+        "assay": "HLA-bound peptide tandem mass spectrometry",
+        "comparison": "ERAP1-silenced versus competent cells",
+        "species": "Homo sapiens",
+        "endpoint": "Proportion of 9-residue HLA-B27 ligands"
+      },
+      "locator": "Abstract, Results",
+      "knowledge_kind": "source_assertion",
+      "inclusion_rationale": "Provides an atomic observation relevant to the evidence-to-experiment chain.",
+      "limitation": "Cell-line immunopeptidome result; not clinical benefit."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C06",
+      "source_id": "PMID:24504800",
+      "domain": "hla_mechanism",
+      "subject": {
+        "kind": "gene",
+        "identifier": "ERAP1",
+        "label": "ERAP1",
+        "namespace": "HGNC-symbol"
+      },
+      "predicate": "silencing_increases",
+      "object": {
+        "kind": "biomarker",
+        "identifier": "b27-long-peptides",
+        "label": "11–13-residue HLA-B27-bound peptides",
+        "namespace": "AXIS-curated"
+      },
+      "statement": "ERAP1 silencing increased the proportion of longer 11–13-residue HLA-B27-bound peptides in the tested cell lines.",
+      "context": {
+        "experimental_system": "ERAP1-silenced HeLa.B27 and C1R.B27 cells",
+        "hla_status": "HLA-B27 expressed",
+        "assay": "HLA-bound peptide tandem mass spectrometry",
+        "comparison": "ERAP1-silenced versus competent cells",
+        "species": "Homo sapiens",
+        "endpoint": "Proportion of 11–13-residue HLA-B27 ligands"
+      },
+      "locator": "Abstract, Results",
+      "knowledge_kind": "source_assertion",
+      "inclusion_rationale": "Provides an atomic observation relevant to the evidence-to-experiment chain.",
+      "limitation": "Peptide-length change alone does not specify favorable disease biology."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C07",
+      "source_id": "PMID:24504800",
+      "domain": "hla_mechanism",
+      "subject": {
+        "kind": "gene",
+        "identifier": "ERAP1",
+        "label": "ERAP1",
+        "namespace": "HGNC-symbol"
+      },
+      "predicate": "K528R_reduces",
+      "object": {
+        "kind": "biomarker",
+        "identifier": "kk10-recognition",
+        "label": "Viral KK10-specific CTL recognition",
+        "namespace": "AXIS-curated"
+      },
+      "statement": "The K528R ERAP1 variant reduced KK10-specific CTL recognition relative to wild type after extended KK10 minigene expression.",
+      "context": {
+        "experimental_system": "HLA-B27-expressing cells with extended viral KK10 minigenes",
+        "hla_status": "HLA-B27 expressed",
+        "genotype": "ERAP1 K528R versus wild type",
+        "assay": "Antigen presentation to KK10-specific CTLs",
+        "endpoint": "Viral epitope recognition",
+        "species": "Homo sapiens"
+      },
+      "locator": "Abstract, Results",
+      "knowledge_kind": "source_assertion",
+      "inclusion_rationale": "Provides an atomic observation relevant to the evidence-to-experiment chain.",
+      "limitation": "Viral epitope assay, not an identified arthritogenic peptide or disease rescue."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C08",
+      "source_id": "PMID:26130142",
+      "domain": "perturbation_evidence",
+      "subject": {
+        "kind": "gene",
+        "identifier": "ERAP1",
+        "label": "ERAP1",
+        "namespace": "HGNC-symbol"
+      },
+      "predicate": "silencing_decreases",
+      "object": {
+        "kind": "biomarker",
+        "identifier": "b27-fhc",
+        "label": "HLA-B27 free-heavy-chain surface expression",
+        "namespace": "AXIS-curated"
+      },
+      "statement": "ERAP1 silencing reduced HLA-B27 free-heavy-chain surface expression in the tested antigen-presenting cell models.",
+      "context": {
+        "experimental_system": "HeLa.B27 and C1R.B27 antigen-presenting cell models",
+        "hla_status": "HLA-B27 expressed",
+        "assay": "Antibody-based flow cytometry",
+        "endpoint": "Cell-surface free heavy chains",
+        "species": "Homo sapiens",
+        "comparison": "ERAP1 silencing versus control"
+      },
+      "locator": "Results, Figure 2",
+      "knowledge_kind": "source_assertion",
+      "inclusion_rationale": "Provides an atomic observation relevant to the evidence-to-experiment chain.",
+      "limitation": "Endpoint- and system-specific; other cell systems report a different direction."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C09",
+      "source_id": "PMID:26130142",
+      "domain": "disease_pharmacology",
+      "subject": {
+        "kind": "gene",
+        "identifier": "ERAP1",
+        "label": "ERAP1",
+        "namespace": "HGNC-symbol"
+      },
+      "predicate": "DG013A_treatment_decreases",
+      "object": {
+        "kind": "biomarker",
+        "identifier": "b27-fhc",
+        "label": "HLA-B27 free-heavy-chain surface expression",
+        "namespace": "AXIS-curated"
+      },
+      "statement": "DG013A treatment reduced free-heavy-chain expression in HeLa.B27 and C1R.B27 cells.",
+      "context": {
+        "experimental_system": "HeLa.B27 and C1R.B27 antigen-presenting cell models",
+        "hla_status": "HLA-B27 expressed",
+        "assay": "Antibody-based flow cytometry",
+        "endpoint": "Cell-surface free heavy chains",
+        "species": "Homo sapiens",
+        "treatment": "DG013A",
+        "comparison": "DG013A-treated versus control"
+      },
+      "locator": "Results, Figure 2E–H",
+      "knowledge_kind": "source_assertion",
+      "inclusion_rationale": "Provides an atomic observation relevant to the evidence-to-experiment chain.",
+      "limitation": "DG013A is not selective for ERAP1; no clinical efficacy conclusion."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C10",
+      "source_id": "PMID:26130142",
+      "domain": "disease_pharmacology",
+      "subject": {
+        "kind": "gene",
+        "identifier": "ERAP1",
+        "label": "ERAP1",
+        "namespace": "HGNC-symbol"
+      },
+      "predicate": "APC_silencing_or_inhibition_suppresses",
+      "object": {
+        "kind": "biomarker",
+        "identifier": "th17-expansion",
+        "label": "Th17 expansion in AS CD4+ T-cell cocultures",
+        "namespace": "AXIS-curated"
+      },
+      "statement": "ERAP1 silencing or inhibition in antigen-presenting cells suppressed Th17 expansion in cocultures with AS CD4+ T cells.",
+      "context": {
+        "experimental_system": "HLA-B27-expressing APC and AS CD4+ T-cell coculture",
+        "population": "CD4+ T cells from patients with ankylosing spondylitis",
+        "hla_status": "HLA-B27 expressed by APCs",
+        "cell_type": "CD4+ T cells and antigen-presenting cells",
+        "assay": "Intracellular cytokine staining",
+        "endpoint": "Th17 expansion",
+        "species": "Homo sapiens"
+      },
+      "locator": "Abstract, Results; coculture experiments",
+      "knowledge_kind": "source_assertion",
+      "inclusion_rationale": "Provides an atomic observation relevant to the evidence-to-experiment chain.",
+      "limitation": "Ex vivo/coculture response does not establish in vivo efficacy or distinguish complete from partial inhibition."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C11",
+      "source_id": "PMID:26130142",
+      "domain": "disease_pharmacology",
+      "subject": {
+        "kind": "gene",
+        "identifier": "ERAP1",
+        "label": "ERAP1",
+        "namespace": "HGNC-symbol"
+      },
+      "predicate": "DG013A_also_inhibits",
+      "object": {
+        "kind": "biomarker",
+        "identifier": "other-aminopeptidases",
+        "label": "ERAP2 and LNPEP",
+        "namespace": "AXIS-curated"
+      },
+      "statement": "The study reports that DG013A also inhibits ERAP2 and LNPEP.",
+      "context": {
+        "treatment": "DG013A",
+        "experimental_system": "Pharmacological perturbation interpretation",
+        "endpoint": "Inhibitor target selectivity"
+      },
+      "locator": "Results, DG013A description; Discussion, selectivity limitation",
+      "knowledge_kind": "source_assertion",
+      "inclusion_rationale": "Provides an atomic observation relevant to the evidence-to-experiment chain.",
+      "limitation": "An author-reported pharmacological caveat, not a new AXIS selectivity measurement."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C12",
+      "source_id": "PMID:27107845",
+      "domain": "perturbation_evidence",
+      "subject": {
+        "kind": "gene",
+        "identifier": "ERAP1",
+        "label": "ERAP1",
+        "namespace": "HGNC-symbol"
+      },
+      "predicate": "knockdown_increases",
+      "object": {
+        "kind": "biomarker",
+        "identifier": "b27-fhc",
+        "label": "HLA-B27 free-heavy-chain surface expression",
+        "namespace": "AXIS-curated"
+      },
+      "statement": "ERAP1 shRNA knockdown increased surface HC10-reactive free heavy chains in the HLA-B27-transfected U937 system.",
+      "context": {
+        "experimental_system": "U937.B27 human monocytic cells with ERAP1-targeting shRNA",
+        "cell_type": "U937 monocytic cell line",
+        "hla_status": "HLA-B*27:05 transfected; endogenous HLA-B*18:01 and HLA-B*51:01",
+        "genotype": "U937 heterozygous at ERAP1 rs30187 and rs27044",
+        "assay": "Immunoprecipitation, immunoblot and flow cytometry",
+        "comparison": "ERAP1 shRNA versus scrambled shRNA",
+        "species": "Homo sapiens",
+        "endpoint": "HC10-reactive surface free-heavy-chain expression"
+      },
+      "locator": "Results, Figure 2; Methods, cell lines",
+      "knowledge_kind": "source_assertion",
+      "inclusion_rationale": "Provides an atomic observation relevant to the evidence-to-experiment chain.",
+      "limitation": "Different cell background, assay and HLA context from Chen; not a universal contradiction."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C13",
+      "source_id": "PMID:27107845",
+      "domain": "perturbation_evidence",
+      "subject": {
+        "kind": "gene",
+        "identifier": "ERAP1",
+        "label": "ERAP1",
+        "namespace": "HGNC-symbol"
+      },
+      "predicate": "knockdown_increases",
+      "object": {
+        "kind": "biomarker",
+        "identifier": "b27-dimers",
+        "label": "Disulfide-linked surface HLA-B27 dimers",
+        "namespace": "AXIS-curated"
+      },
+      "statement": "ERAP1 knockdown increased disulfide-linked HLA-B27 dimers on the surface of U937.B27 cells.",
+      "context": {
+        "experimental_system": "U937.B27 human monocytic cells with ERAP1-targeting shRNA",
+        "cell_type": "U937 monocytic cell line",
+        "hla_status": "HLA-B*27:05 transfected; endogenous HLA-B*18:01 and HLA-B*51:01",
+        "genotype": "U937 heterozygous at ERAP1 rs30187 and rs27044",
+        "assay": "Immunoprecipitation, immunoblot and flow cytometry",
+        "comparison": "ERAP1 shRNA versus scrambled shRNA",
+        "species": "Homo sapiens",
+        "endpoint": "Disulfide-linked HLA-B27 dimers"
+      },
+      "locator": "Results, Figure 3; Methods, cell lines",
+      "knowledge_kind": "source_assertion",
+      "inclusion_rationale": "Provides an atomic observation relevant to the evidence-to-experiment chain.",
+      "limitation": "A mechanistic cell-line endpoint; no clinical harm or benefit demonstrated."
+    }
+  ],
+  "coverage": "Six purposefully selected primary publications; not a systematic review or comprehensive current corpus.",
+  "mechanisms": [
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C03",
+      "classification": "directly_demonstrated",
+      "reasoning": "Direct observation reported by the authors within the stored experimental context; not a demonstration of clinical benefit."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C05",
+      "classification": "directly_demonstrated",
+      "reasoning": "Direct observation reported by the authors within the stored experimental context; not a demonstration of clinical benefit."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C06",
+      "classification": "directly_demonstrated",
+      "reasoning": "Direct observation reported by the authors within the stored experimental context; not a demonstration of clinical benefit."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C07",
+      "classification": "directly_demonstrated",
+      "reasoning": "Direct observation reported by the authors within the stored experimental context; not a demonstration of clinical benefit."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C08",
+      "classification": "directly_demonstrated",
+      "reasoning": "Direct observation reported by the authors within the stored experimental context; not a demonstration of clinical benefit."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C10",
+      "classification": "directly_demonstrated",
+      "reasoning": "Direct observation reported by the authors within the stored experimental context; not a demonstration of clinical benefit."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C13",
+      "classification": "directly_demonstrated",
+      "reasoning": "Direct observation reported by the authors within the stored experimental context; not a demonstration of clinical benefit."
+    }
+  ],
+  "assessments": [
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C01",
+      "subject": "question",
+      "role": "untyped_considered",
+      "reasoning": "Informs the central uncertainty; does not resolve it. Association does not establish therapeutic direction; AS is not all axSpA."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C02",
+      "subject": "question",
+      "role": "untyped_considered",
+      "reasoning": "Informs the central uncertainty; does not resolve it. Extends the HLA context of the earlier finding; not a refutation of its HLA-B27-positive association."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C03",
+      "subject": "question",
+      "role": "untyped_considered",
+      "reasoning": "Informs the central uncertainty; does not resolve it. General biochemical function, not an AS therapeutic experiment."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C04",
+      "subject": "question",
+      "role": "untyped_considered",
+      "reasoning": "Informs the central uncertainty; does not resolve it. Substrate dependence limits any simple global activity interpretation."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C05",
+      "subject": "question",
+      "role": "untyped_considered",
+      "reasoning": "Informs the central uncertainty; does not resolve it. Cell-line immunopeptidome result; not clinical benefit."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C06",
+      "subject": "question",
+      "role": "untyped_considered",
+      "reasoning": "Informs the central uncertainty; does not resolve it. Peptide-length change alone does not specify favorable disease biology."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C07",
+      "subject": "question",
+      "role": "untyped_considered",
+      "reasoning": "Informs the central uncertainty; does not resolve it. Viral epitope assay, not an identified arthritogenic peptide or disease rescue."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C08",
+      "subject": "question",
+      "role": "untyped_considered",
+      "reasoning": "Informs the central uncertainty; does not resolve it. Endpoint- and system-specific; other cell systems report a different direction."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C09",
+      "subject": "question",
+      "role": "untyped_considered",
+      "reasoning": "Informs the central uncertainty; does not resolve it. DG013A is not selective for ERAP1; no clinical efficacy conclusion."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C10",
+      "subject": "question",
+      "role": "untyped_considered",
+      "reasoning": "Informs the central uncertainty; does not resolve it. Ex vivo/coculture response does not establish in vivo efficacy or distinguish complete from partial inhibition."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C11",
+      "subject": "question",
+      "role": "untyped_considered",
+      "reasoning": "Informs the central uncertainty; does not resolve it. An author-reported pharmacological caveat, not a new AXIS selectivity measurement."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C12",
+      "subject": "question",
+      "role": "untyped_considered",
+      "reasoning": "Informs the central uncertainty; does not resolve it. Different cell background, assay and HLA context from Chen; not a universal contradiction."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C13",
+      "subject": "question",
+      "role": "untyped_considered",
+      "reasoning": "Informs the central uncertainty; does not resolve it. A mechanistic cell-line endpoint; no clinical harm or benefit demonstrated."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C09",
+      "subject": "inhibit",
+      "role": "weakly_supports",
+      "reasoning": "Cellular pharmacology is compatible with investigating reduced activity; magnitude and selectivity remain unresolved."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C10",
+      "subject": "inhibit",
+      "role": "weakly_supports",
+      "reasoning": "Coculture response supports further testing, not clinical efficacy or a preferred intervention."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C11",
+      "subject": "inhibit",
+      "role": "inconclusive",
+      "reasoning": "Off-target activity prevents attribution to selective ERAP1 modulation."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C12",
+      "subject": "inhibit",
+      "role": "inconclusive",
+      "reasoning": "Different direction in U937.B27 limits extrapolation between systems."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C13",
+      "subject": "inhibit",
+      "role": "inconclusive",
+      "reasoning": "Dimer endpoint is context-dependent and not a clinical outcome."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C09",
+      "subject": "partially_inhibit",
+      "role": "weakly_supports",
+      "reasoning": "Cellular pharmacology is compatible with investigating reduced activity; magnitude and selectivity remain unresolved."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C10",
+      "subject": "partially_inhibit",
+      "role": "weakly_supports",
+      "reasoning": "Coculture response supports further testing, not clinical efficacy or a preferred intervention."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C11",
+      "subject": "partially_inhibit",
+      "role": "inconclusive",
+      "reasoning": "Off-target activity prevents attribution to selective ERAP1 modulation."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C12",
+      "subject": "partially_inhibit",
+      "role": "inconclusive",
+      "reasoning": "Different direction in U937.B27 limits extrapolation between systems."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C13",
+      "subject": "partially_inhibit",
+      "role": "inconclusive",
+      "reasoning": "Dimer endpoint is context-dependent and not a clinical outcome."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C07",
+      "subject": "allele_specific_modulation",
+      "role": "neutral",
+      "reasoning": "Variant-dependent antigen presentation motivates a question about specificity but is not evidence for an allele-specific drug."
+    }
+  ],
+  "curated_at": "2026-10-03T14:48:26.084469+00:00"
+}

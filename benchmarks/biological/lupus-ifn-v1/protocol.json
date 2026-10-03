@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "benchmark_id": "axis-sle-type-i-interferon-v1",
+  "frozen_on": "2026-08-06",
+  "status": "frozen_before_execution",
+  "question": "Does AXIS recover a reproducible type-I-interferon blood signature in human systemic lupus erythematosus while keeping incompatible biological contexts separate?",
+  "population": "human systemic lupus erythematosus cases and non-autoimmune controls",
+  "primary_stratum": "peripheral whole blood, case-control, untreated contrast where identifiable",
+  "separate_strata": [
+    "PBMC",
+    "purified immune-cell populations",
+    "paediatric cohorts",
+    "treatment-response or longitudinal samples"
+  ],
+  "candidate_accessions_not_yet_approved": [
+    "GSE49454",
+    "GSE50772",
+    "GSE65391",
+    "GSE72509",
+    "GSE88884"
+  ],
+  "eligibility_guardrails": [
+    "human participants",
+    "participant-level case and control assignment recoverable",
+    "no repeated participant counted as independent",
+    "disease, tissue, platform, treatment and age reviewed before role assignment",
+    "no pooling across whole blood, PBMC or purified-cell strata",
+    "candidate accessions require manual eligibility approval"
+  ],
+  "success_criteria": {
+    "top_n": 100,
+    "minimum_reference_hits": 5,
+    "maximum_enrichment_p_value": 0.05,
+    "required_direction": "higher_in_case"
+  },
+  "failure_policy": "Report not_passed without changing criteria or substituting cohorts after seeing the ranked genes.",
+  "claim_boundary": "A pass supports recovery of known SLE interferon biology only; it is not a new biomarker claim or proof of general superiority."
+}

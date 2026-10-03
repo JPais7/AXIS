@@ -1,4 +1,4 @@
-﻿"""Daily command-line interface for the AXIS Evidence Store."""
+"""Daily command-line interface for the AXIS Evidence Store."""
 
 from __future__ import annotations
 
@@ -21,6 +21,7 @@ from axis.analysis import (
     ArticleFinalizer,
     AxisDemoRunner,
     AxisProjectPipeline,
+    BiologicalBenchmarkEvaluator,
     Cd8CrossCohortAnalyzer,
     Cd8EvidenceReviewer,
     CellCompositionDiagnostic,
@@ -67,11 +68,14 @@ from axis.analysis import (
     TargetDeepDiveBuilder,
     TargetMetaAnalyzer,
     TargetStabilityAnalyzer,
+    Trm17TcrEnrichmentAnalyzer,
     ValidationCohortSelector,
     WorkflowComparisonPreparer,
     WorkflowComparisonSummarizer,
     write_sample_sheet_template,
 )
+from axis.cli.discovery import app as discovery_app
+from axis.cli.workspace import serve
 from axis.domain import Study
 from axis.ingestion import (
     BioStudiesCandidateAuditor,
@@ -122,6 +126,9 @@ app = typer.Typer(
     help="Local scientific discovery tools for axial spondyloarthritis.",
     no_args_is_help=True,
 )
+app.add_typer(discovery_app, name="discovery")
+
+app.command("serve")(serve)
 console = Console()
 error_console = Console(stderr=True)
 
@@ -303,9 +310,7 @@ def build_cross_repository_catalog(
 def audit_biostudies_candidates(
     accessions: Annotated[
         list[str] | None,
-        typer.Argument(
-            help="ArrayExpress accessions to audit at participant level."
-        ),
+        typer.Argument(help="ArrayExpress accessions to audit at participant level."),
     ] = None,
     output: Annotated[
         Path,
@@ -415,9 +420,7 @@ def audit_repository_priority(
         for row in rows
         if row.get("source") == "BioStudies-ArrayExpress"
     )
-    sra = tuple(
-        row["accession"] for row in rows if row.get("source") == "NCBI-SRA"
-    )
+    sra = tuple(row["accession"] for row in rows if row.get("source") == "NCBI-SRA")
     try:
         if biostudies:
             with BioStudiesClient() as client:
@@ -505,9 +508,7 @@ def plan_sra_reprocessing(
             output_root=output,
         )
     except (OSError, ValueError) as error:
-        error_console.print(
-            f"SRA workflow planning failed: {error}", style="bold red"
-        )
+        error_console.print(f"SRA workflow planning failed: {error}", style="bold red")
         raise typer.Exit(code=1) from error
     typer.echo(
         f"Planned {result.samples} samples; estimated working space "
@@ -636,9 +637,7 @@ def collapse_participants(
             output_root=output,
         )
     except (OSError, ValueError) as error:
-        error_console.print(
-            f"Participant collapsing failed: {error}", style="bold red"
-        )
+        error_console.print(f"Participant collapsing failed: {error}", style="bold red")
         raise typer.Exit(code=1) from error
     typer.echo(
         f"Resolved {result.participants} participants across {result.studies} studies."
@@ -982,9 +981,7 @@ def analyze_mirna(
         typer.Option("--data-root", file_okay=False, help="Root GEO data directory."),
     ] = Path("data/geo"),
     alpha: Annotated[float, typer.Option("--alpha", min=0.000001, max=0.999999)] = 0.05,
-    min_base_mean: Annotated[
-        float, typer.Option("--min-base-mean", min=0.0)
-    ] = 10.0,
+    min_base_mean: Annotated[float, typer.Option("--min-base-mean", min=0.0)] = 10.0,
 ) -> None:
     """Run three covariate-adjusted microRNA comparisons."""
     try:
@@ -1022,9 +1019,7 @@ def audit_karow_supplement(
     ),
 ) -> None:
     """Audit Karow data access and validate candidates against published lists."""
-    result = KarowSupplementAuditor().audit(
-        workbook, candidates, output_root=output
-    )
+    result = KarowSupplementAuditor().audit(workbook, candidates, output_root=output)
     console.print(
         f"Extracted {result.cohort1_features} cohort-1 features and "
         f"{result.cohort2_genes} cohort-2 genes."
@@ -1049,8 +1044,7 @@ def build_gene_evidence(
             "data/single-cell/GSE194315/transcriptome/integrated-candidates.tsv"
         ),
         causal_review_path=(
-            "data/single-cell/GSE194315/candidate-review/"
-            "candidate-causal-review.tsv"
+            "data/single-cell/GSE194315/candidate-review/candidate-causal-review.tsv"
         ),
         karow_signature_path="data/analysis/karow/published-signatures.tsv",
         genetics_path=(
@@ -1085,23 +1079,19 @@ def deep_dive_targets(
             "data/analysis/three-study-concordance/direction-concordance.tsv"
         ),
         external_validation_path=(
-            "data/analysis/external-validation/"
-            "GSE181364-candidate-validation.tsv"
+            "data/analysis/external-validation/GSE181364-candidate-validation.tsv"
         ),
         single_cell_path=(
             "data/single-cell/GSE194315/transcriptome/integrated-candidates.tsv"
         ),
         karow_path="data/analysis/karow/candidate-validation.tsv",
         genetics_path=(
-            "data/analysis/gene-evidence/deep-dive/genetics/"
-            "as-genetic-evidence.tsv"
+            "data/analysis/gene-evidence/deep-dive/genetics/as-genetic-evidence.tsv"
         ),
         intelligence_path=(
             "data/analysis/gene-evidence/deep-dive/target-intelligence.tsv"
         ),
-        dossier_directory=(
-            "data/analysis/gene-evidence/deep-dive/dossiers"
-        ),
+        dossier_directory=("data/analysis/gene-evidence/deep-dive/dossiers"),
         meta_analysis_path=(
             "data/analysis/target-meta-analysis/target-meta-analysis.tsv"
         ),
@@ -1149,8 +1139,7 @@ def plan_ddx24_validation(
     try:
         result = Ddx24ValidationPlanner().build(
             decisions_path=(
-                "data/analysis/gene-evidence/deep-dive/decisions/"
-                "target-decisions.tsv"
+                "data/analysis/gene-evidence/deep-dive/decisions/target-decisions.tsv"
             ),
             output_root=output,
             donors_per_group=donors_per_group,
@@ -1220,10 +1209,7 @@ def meta_analyze_targets(
     """Run a guarded random-effects analysis for DDX24 and ADA."""
     studies = {
         accession: (
-            Path("data/geo")
-            / accession
-            / "prepared"
-            / f"{accession}_series_matrix"
+            Path("data/geo") / accession / "prepared" / f"{accession}_series_matrix"
         )
         for accession in ("GSE25101", "GSE18781", "GSE73754")
     }
@@ -1251,10 +1237,7 @@ def diagnose_cell_composition(
     accessions = ("GSE25101", "GSE18781", "GSE73754")
     studies = {
         accession: (
-            Path("data/geo")
-            / accession
-            / "prepared"
-            / f"{accession}_series_matrix"
+            Path("data/geo") / accession / "prepared" / f"{accession}_series_matrix"
         )
         for accession in accessions
     }
@@ -1307,15 +1290,9 @@ def select_validation_cohorts(
 ) -> None:
     """Prioritize independent bulk and single-cell validation cohorts."""
     result = ValidationCohortSelector().select(
-        quarantine_path=(
-            "data/catalog/incremental-quarantine/study-review-queue.tsv"
-        ),
-        cohort_evaluation_path=(
-            "data/catalog/cohort-selection/cohort-evaluation.tsv"
-        ),
-        sample_validation_path=(
-            "data/catalog/sample-proposals/study-validation.tsv"
-        ),
+        quarantine_path=("data/catalog/incremental-quarantine/study-review-queue.tsv"),
+        cohort_evaluation_path=("data/catalog/cohort-selection/cohort-evaluation.tsv"),
+        sample_validation_path=("data/catalog/sample-proposals/study-validation.tsv"),
         participant_cohorts_path=(
             "data/catalog/participant-expansion/participant-cohorts.tsv"
         ),
@@ -1343,11 +1320,9 @@ def review_gse299639(
     try:
         result = Gse299639Reviewer().review(
             abundance_path=(
-                "data/geo/GSE299639/supplementary/"
-                "GSE299639_genes_TPM.anno.txt.gz"
+                "data/geo/GSE299639/supplementary/GSE299639_genes_TPM.anno.txt.gz"
             ),
-            full_results_path=root
-            / "rnaseq-normalized/gene-level-results.tsv",
+            full_results_path=root / "rnaseq-normalized/gene-level-results.tsv",
             sensitivity_results_path=root
             / "rnaseq-normalized-without-AS-M1/gene-level-results.tsv",
             qc_path=root / "rnaseq-normalized/qc/qc-report.json",
@@ -1358,9 +1333,7 @@ def review_gse299639(
     except (OSError, ValueError, KeyError) as error:
         error_console.print(f"GSE299639 review failed: {error}")
         raise typer.Exit(code=1) from error
-    console.print(
-        f"Reviewed {result.samples} samples; decision: {result.decision}."
-    )
+    console.print(f"Reviewed {result.samples} samples; decision: {result.decision}.")
     console.print(f"Target validation: {result.target_validation_path}")
 
 
@@ -1386,9 +1359,7 @@ def review_emtab10948(
     ),
 ) -> None:
     """Freeze the paired-tissue role of E-MTAB-10948."""
-    source = Path(
-        "data/catalog/cross-repository/sample-audit/E-MTAB-10948"
-    )
+    source = Path("data/catalog/cross-repository/sample-audit/E-MTAB-10948")
     try:
         result = Emtab10948Reviewer().review(
             study_audit_path=source / "study-audit.json",
@@ -1445,14 +1416,11 @@ def improve_inspect(
             "data/analysis/cell-composition-diagnostic/"
             "target-composition-adjustment.tsv"
         ),
-        quarantine_path=(
-            "data/catalog/incremental-quarantine/study-review-queue.tsv"
-        ),
+        quarantine_path=("data/catalog/incremental-quarantine/study-review-queue.tsv"),
         output_root=output,
     )
     console.print(
-        f"Improvement audit: {result.findings} findings, "
-        f"{result.critical} critical."
+        f"Improvement audit: {result.findings} findings, {result.critical} critical."
     )
     console.print(f"Backlog: {result.backlog_path}")
 
@@ -1469,38 +1437,29 @@ def build_publication_package(
         "meta_analysis": (
             "data/analysis/target-meta-analysis/target-meta-analysis.tsv"
         ),
-        "leave_one_out": (
-            "data/analysis/target-meta-analysis/leave-one-study-out.tsv"
-        ),
+        "leave_one_out": ("data/analysis/target-meta-analysis/leave-one-study-out.tsv"),
         "ddx24_forest_plot": (
             "data/analysis/target-meta-analysis/ddx24-forest-plot.png"
         ),
-        "ada_forest_plot": (
-            "data/analysis/target-meta-analysis/ada-forest-plot.png"
-        ),
+        "ada_forest_plot": ("data/analysis/target-meta-analysis/ada-forest-plot.png"),
         "composition": (
             "data/analysis/cell-composition-diagnostic/"
             "target-composition-adjustment.tsv"
         ),
         "external_validation": (
-            "data/analysis/external-validation/"
-            "GSE181364-candidate-validation.tsv"
+            "data/analysis/external-validation/GSE181364-candidate-validation.tsv"
         ),
         "gse299639_review": (
-            "data/analysis/external-validation/GSE299639/"
-            "eligibility-review.json"
+            "data/analysis/external-validation/GSE299639/eligibility-review.json"
         ),
         "gse299639_targets": (
-            "data/analysis/external-validation/GSE299639/"
-            "target-validation.tsv"
+            "data/analysis/external-validation/GSE299639/target-validation.tsv"
         ),
         "emtab12805_review": (
-            "data/analysis/single-cell-validation/E-MTAB-12805/"
-            "eligibility-review.json"
+            "data/analysis/single-cell-validation/E-MTAB-12805/eligibility-review.json"
         ),
         "emtab12805_overlap": (
-            "data/analysis/single-cell-validation/E-MTAB-12805/"
-            "repository-overlap.tsv"
+            "data/analysis/single-cell-validation/E-MTAB-12805/repository-overlap.tsv"
         ),
         "gse232131_sample_audit": (
             "data/analysis/single-cell-validation/E-MTAB-12805/"
@@ -1511,8 +1470,7 @@ def build_publication_package(
             "sample-audit/library-donor-condition.tsv"
         ),
         "emtab10948_review": (
-            "data/analysis/single-cell-validation/E-MTAB-10948/"
-            "eligibility-review.json"
+            "data/analysis/single-cell-validation/E-MTAB-10948/eligibility-review.json"
         ),
         "emtab10948_sample_sheet": (
             "data/analysis/single-cell-validation/E-MTAB-10948/"
@@ -1523,16 +1481,13 @@ def build_publication_package(
             "target-cell-type-validation.tsv"
         ),
         "gse194315_robustness": (
-            "data/single-cell/GSE194315/robustness/"
-            "robustness-analysis.json"
+            "data/single-cell/GSE194315/robustness/robustness-analysis.json"
         ),
         "gse194315_batch_adjusted": (
-            "data/single-cell/GSE194315/robustness/"
-            "batch-adjusted-targets.tsv"
+            "data/single-cell/GSE194315/robustness/batch-adjusted-targets.tsv"
         ),
         "gse194315_leave_one_out": (
-            "data/single-cell/GSE194315/robustness/"
-            "leave-one-out-stability.tsv"
+            "data/single-cell/GSE194315/robustness/leave-one-out-stability.tsv"
         ),
         "secondary_single_cell_review": (
             "data/analysis/single-cell-validation/secondary-cohorts/"
@@ -1543,12 +1498,10 @@ def build_publication_package(
             "candidate-decisions.tsv"
         ),
         "gse288581_validation": (
-            "data/analysis/single-cell-validation/GSE288581/"
-            "target-validation.tsv"
+            "data/analysis/single-cell-validation/GSE288581/target-validation.tsv"
         ),
         "gse288581_sensitivity": (
-            "data/analysis/single-cell-validation/GSE288581/"
-            "leave-one-donor-out.tsv"
+            "data/analysis/single-cell-validation/GSE288581/leave-one-donor-out.tsv"
         ),
         "cd8_cross_cohort_summary": (
             "data/analysis/single-cell-validation/CD8-cross-cohort/"
@@ -1571,8 +1524,7 @@ def build_publication_package(
             "literature-search-log.tsv"
         ),
         "hierarchical_target_synthesis": (
-            "data/analysis/hierarchical-target-evidence/"
-            "hierarchical-synthesis.tsv"
+            "data/analysis/hierarchical-target-evidence/hierarchical-synthesis.tsv"
         ),
         "hierarchical_context_summary": (
             "data/analysis/hierarchical-target-evidence/context-summary.tsv"
@@ -1581,34 +1533,27 @@ def build_publication_package(
             "data/analysis/ddx24-evidence-freeze/confounding-audit.tsv"
         ),
         "ddx24_confirmation_criteria": (
-            "data/analysis/ddx24-evidence-freeze/"
-            "confirmation-refutation-criteria.tsv"
+            "data/analysis/ddx24-evidence-freeze/confirmation-refutation-criteria.tsv"
         ),
         "ddx24_evidence_freeze": (
             "data/analysis/ddx24-evidence-freeze/evidence-freeze.json"
         ),
-        "ddx24_manuscript_draft": (
-            "data/publication/ddx24-study/manuscript-draft.md"
-        ),
+        "ddx24_manuscript_draft": ("data/publication/ddx24-study/manuscript-draft.md"),
         "ddx24_rt_qpcr_protocol": (
             "data/publication/ddx24-study/rt-qpcr-operational-protocol.md"
         ),
         "ddx24_figure_cohorts": (
-            "data/publication/ddx24-study/figures/"
-            "figure-1-cohort-effects.png"
+            "data/publication/ddx24-study/figures/figure-1-cohort-effects.png"
         ),
         "ddx24_figure_contexts": (
-            "data/publication/ddx24-study/figures/"
-            "figure-2-context-concordance.png"
+            "data/publication/ddx24-study/figures/figure-2-context-concordance.png"
         ),
         "ddx24_references": "data/publication/ddx24-study/references.bib",
         "single_cell": (
-            "data/single-cell/GSE194315/transcriptome/"
-            "integrated-candidates.tsv"
+            "data/single-cell/GSE194315/transcriptome/integrated-candidates.tsv"
         ),
         "target_decisions": (
-            "data/analysis/gene-evidence/deep-dive/decisions/"
-            "target-decisions.tsv"
+            "data/analysis/gene-evidence/deep-dive/decisions/target-decisions.tsv"
         ),
         "laboratory_plan": (
             "data/analysis/gene-evidence/deep-dive/ddx24-validation/"
@@ -2731,6 +2676,32 @@ def analyze_single_cell(
     )
 
 
+@app.command("analyze-trm17-tcr")
+def analyze_trm17_tcr(
+    metadata: Annotated[
+        Path, typer.Option("--metadata", exists=True, dir_okay=False)
+    ] = Path("data/single-cell/GSE290921/converted/cell-metadata.tsv.gz"),
+    repertoire: Annotated[
+        Path | None, typer.Option("--repertoire", dir_okay=False)
+    ] = None,
+    output: Annotated[Path, typer.Option("--output", "-o", file_okay=False)] = Path(
+        "data/single-cell/GSE290921/trm17-tcr-enrichment"
+    ),
+) -> None:
+    """Audit or test participant-aware TRBV enrichment in Oxford TRM17 cells."""
+    result = Trm17TcrEnrichmentAnalyzer().analyze(
+        metadata,
+        repertoire_path=repertoire,
+        output_root=output,
+    )
+    console.print(f"Status: {result.status}")
+    console.print(f"Matched TCR cells: {result.cells}")
+    console.print(f"Participants: {result.participants}")
+    console.print(f"TRBV results: {result.segment_path}")
+    console.print(f"Causal-evidence audit: {result.causal_path}")
+    console.print(f"Method and missing requirements: {result.summary_path}")
+
+
 @app.command("expand-single-cell-reference")
 def expand_single_cell_reference(
     output: Annotated[Path, typer.Option("--output", file_okay=False)] = Path(
@@ -2744,9 +2715,7 @@ def expand_single_cell_reference(
                 "data/single-cell/GSE194315/"
                 "GSE194315_PBMC-01-07_processed_data_files.tar.gz"
             ),
-            metadata_path=(
-                "data/single-cell/GSE194315/cell-metadata.tsv.gz"
-            ),
+            metadata_path=("data/single-cell/GSE194315/cell-metadata.tsv.gz"),
             cell_type_design_path=(
                 "data/single-cell/GSE194315/plan/cell-type-design.tsv"
             ),
@@ -2799,9 +2768,7 @@ def review_secondary_single_cell(
         gse277117_matrices=tuple(
             sorted(Path("data/geo/GSE277117").glob("*_series_matrix.txt.gz"))
         ),
-        gse288581_matrix=(
-            "data/geo/GSE288581/GSE288581_series_matrix.txt.gz"
-        ),
+        gse288581_matrix=("data/geo/GSE288581/GSE288581_series_matrix.txt.gz"),
         output_root=output,
     )
     console.print(
@@ -2846,12 +2813,10 @@ def synthesize_cd8_cohorts(
     try:
         result = Cd8CrossCohortAnalyzer().analyze(
             gse194315_path=(
-                "data/single-cell/GSE194315/robustness/"
-                "batch-adjusted-targets.tsv"
+                "data/single-cell/GSE194315/robustness/batch-adjusted-targets.tsv"
             ),
             gse288581_path=(
-                "data/analysis/single-cell-validation/GSE288581/"
-                "target-validation.tsv"
+                "data/analysis/single-cell-validation/GSE288581/target-validation.tsv"
             ),
             output_root=output,
         )
@@ -2889,8 +2854,7 @@ def synthesize_hierarchical_evidence(
     """Compare target evidence across CD8 and bulk blood assay strata."""
     result = HierarchicalEvidenceAnalyzer().analyze(
         cd8_effects_path=(
-            "data/analysis/single-cell-validation/CD8-cross-cohort/"
-            "cohort-effects.tsv"
+            "data/analysis/single-cell-validation/CD8-cross-cohort/cohort-effects.tsv"
         ),
         cd8_summary_path=(
             "data/analysis/single-cell-validation/CD8-cross-cohort/"
@@ -2903,8 +2867,7 @@ def synthesize_hierarchical_evidence(
             "data/analysis/target-meta-analysis/target-meta-analysis.tsv"
         ),
         gse181364_path=(
-            "data/analysis/external-validation/"
-            "GSE181364-candidate-validation.tsv"
+            "data/analysis/external-validation/GSE181364-candidate-validation.tsv"
         ),
         gse299639_path=(
             "data/analysis/external-validation/GSE299639/target-validation.tsv"
@@ -2927,27 +2890,20 @@ def freeze_ddx24_evidence(
     """Audit final confounding and freeze DDX24 confirmation gates."""
     result = ConfoundingFreezeBuilder().build(
         covariates_path=(
-            "data/single-cell/GSE194315/robustness/"
-            "covariate-availability.tsv"
+            "data/single-cell/GSE194315/robustness/covariate-availability.tsv"
         ),
         batch_adjusted_path=(
-            "data/single-cell/GSE194315/robustness/"
-            "batch-adjusted-targets.tsv"
+            "data/single-cell/GSE194315/robustness/batch-adjusted-targets.tsv"
         ),
         leave_one_out_path=(
-            "data/single-cell/GSE194315/robustness/"
-            "leave-one-out-stability.tsv"
+            "data/single-cell/GSE194315/robustness/leave-one-out-stability.tsv"
         ),
         hierarchical_path=(
-            "data/analysis/hierarchical-target-evidence/"
-            "hierarchical-synthesis.tsv"
+            "data/analysis/hierarchical-target-evidence/hierarchical-synthesis.tsv"
         ),
-        context_path=(
-            "data/analysis/hierarchical-target-evidence/context-summary.tsv"
-        ),
+        context_path=("data/analysis/hierarchical-target-evidence/context-summary.tsv"),
         gse288581_sensitivity_path=(
-            "data/analysis/single-cell-validation/GSE288581/"
-            "leave-one-donor-out.tsv"
+            "data/analysis/single-cell-validation/GSE288581/leave-one-donor-out.tsv"
         ),
         output_root=output,
     )
@@ -2967,18 +2923,12 @@ def prepare_ddx24_publication(
     """Build the DDX24 manuscript draft and prospective RT-qPCR protocol."""
     result = PublicationReadinessBuilder().build(
         hierarchical_path=(
-            "data/analysis/hierarchical-target-evidence/"
-            "hierarchical-synthesis.tsv"
+            "data/analysis/hierarchical-target-evidence/hierarchical-synthesis.tsv"
         ),
-        context_path=(
-            "data/analysis/hierarchical-target-evidence/context-summary.tsv"
-        ),
-        decision_path=(
-            "data/analysis/ddx24-evidence-freeze/decision-summary.json"
-        ),
+        context_path=("data/analysis/hierarchical-target-evidence/context-summary.tsv"),
+        decision_path=("data/analysis/ddx24-evidence-freeze/decision-summary.json"),
         criteria_path=(
-            "data/analysis/ddx24-evidence-freeze/"
-            "confirmation-refutation-criteria.tsv"
+            "data/analysis/ddx24-evidence-freeze/confirmation-refutation-criteria.tsv"
         ),
         output_root=output,
     )
@@ -2994,12 +2944,8 @@ def finalize_ddx24_article(
 ) -> None:
     """Generate final article figures, references and external-review form."""
     result = ArticleFinalizer().finalize(
-        cohort_path=(
-            "data/analysis/hierarchical-target-evidence/cohort-evidence.tsv"
-        ),
-        context_path=(
-            "data/analysis/hierarchical-target-evidence/context-summary.tsv"
-        ),
+        cohort_path=("data/analysis/hierarchical-target-evidence/cohort-evidence.tsv"),
+        context_path=("data/analysis/hierarchical-target-evidence/context-summary.tsv"),
         output_root=output,
     )
     console.print(
@@ -3047,8 +2993,7 @@ def reproduce_study(
         error_console.print(f"Reproduction failed: {error}", style="bold red")
         raise typer.Exit(code=1) from error
     console.print(
-        f"Reproduced {result.study}: "
-        f"{result.passed}/{result.checks} checks passed."
+        f"Reproduced {result.study}: {result.passed}/{result.checks} checks passed."
     )
     console.print(f"Report: {result.report_path}")
 
@@ -3078,9 +3023,7 @@ def run_demo(
     except (FileNotFoundError, OSError, ValueError) as error:
         error_console.print(f"Demo failed: {error}", style="bold red")
         raise typer.Exit(code=1) from error
-    console.print(
-        f"Synthetic demo passed: {result.passed}/{result.checks} checks."
-    )
+    console.print(f"Synthetic demo passed: {result.passed}/{result.checks} checks.")
     console.print(f"Report: {result.report_path}")
 
 
@@ -3125,6 +3068,41 @@ def run_benchmark(
     )
     console.print(f"Report: {result.report_path}")
     console.print(f"Runs: {result.runs_path}")
+
+
+@app.command("evaluate-biological-benchmark")
+def evaluate_biological_benchmark(
+    ranking: Annotated[Path, typer.Argument(exists=True, dir_okay=False)],
+    protocol: Annotated[
+        Path, typer.Option("--protocol", exists=True, dir_okay=False)
+    ] = Path("benchmarks/biological/lupus-ifn-v1/protocol.json"),
+    reference: Annotated[
+        Path, typer.Option("--reference", exists=True, dir_okay=False)
+    ] = Path("benchmarks/biological/lupus-ifn-v1/sealed-reference.json"),
+    output: Annotated[Path, typer.Option("--output", file_okay=False)] = Path(
+        "biological-benchmark-output"
+    ),
+) -> None:
+    """Evaluate a ranking against a predeclared positive-control reference."""
+    try:
+        result = BiologicalBenchmarkEvaluator().evaluate(
+            ranking,
+            protocol_path=protocol,
+            reference_path=reference,
+            output_root=output,
+        )
+    except (OSError, ValueError, KeyError, json.JSONDecodeError) as error:
+        error_console.print(f"Biological benchmark failed: {error}", style="bold red")
+        raise typer.Exit(code=1) from error
+    console.print(f"Biological benchmark status: {result.status}")
+    report = json.loads(result.report_path.read_text(encoding="utf-8"))
+    if report.get("control_type") == "negative":
+        console.print(
+            "Negative-control expectation met: "
+            f"{report.get('control_expectation_met', False)}"
+        )
+    console.print(f"Report: {result.report_path}")
+    console.print(f"Reference genes: {result.gene_results_path}")
 
 
 @app.command("prepare-workflow-comparison")

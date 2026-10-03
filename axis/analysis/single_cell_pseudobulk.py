@@ -56,6 +56,7 @@ class SingleCellPseudobulkAnalyzer:
         gene_counts: dict[tuple[str, str, str, str], int] = defaultdict(int)
         library_counts: dict[tuple[str, str, str], int] = defaultdict(int)
         cell_counts: dict[tuple[str, str, str], int] = defaultdict(int)
+        positive_cells: dict[tuple[str, str, str, str], set[str]] = defaultdict(set)
         seen_cells: set[str] = set()
         run_parts: dict[str, dict[str, object]] = defaultdict(dict)
         completed_runs = 0
@@ -93,6 +94,7 @@ class SingleCellPseudobulkAnalyzer:
                             gene_counts=gene_counts,
                             library_counts=library_counts,
                             cell_counts=cell_counts,
+                            positive_cells=positive_cells,
                             seen_cells=seen_cells,
                         )
                         completed_runs += 1
@@ -106,6 +108,7 @@ class SingleCellPseudobulkAnalyzer:
             gene_counts,
             library_counts,
             cell_counts,
+            positive_cells,
             genes=target_genes,
         )
         results = self._results(
@@ -143,6 +146,8 @@ class SingleCellPseudobulkAnalyzer:
                     "statistical_unit": "subject",
                     "normalisation": "log2(raw pseudobulk CPM + 0.5)",
                     "test": "Welch independent two-sample t-test across subjects",
+                    "minimum_subjects_per_group": 2,
+                    "effect_interval": "Welch 95% confidence interval",
                     "multiple_testing": (
                         "Benjamini-Hochberg across predeclared target genes "
                         "within each cell type"
@@ -249,6 +254,7 @@ class SingleCellPseudobulkAnalyzer:
         gene_counts: dict[tuple[str, str, str, str], int],
         library_counts: dict[tuple[str, str, str], int],
         cell_counts: dict[tuple[str, str, str], int],
+        positive_cells: dict[tuple[str, str, str, str], set[str]] | None,
         seen_cells: set[str],
     ) -> None:
         dimensions_seen = False
@@ -275,12 +281,15 @@ class SingleCellPseudobulkAnalyzer:
                 gene = features.get(feature_index)
                 if gene is not None:
                     gene_counts[(*group, gene)] += raw_value
+                    if positive_cells is not None and raw_value > 0:
+                        positive_cells[(*group, gene)].add(cell_name)
 
     @staticmethod
     def _pseudobulk_rows(
         gene_counts: dict[tuple[str, str, str, str], int],
         library_counts: dict[tuple[str, str, str], int],
         cell_counts: dict[tuple[str, str, str], int],
+        positive_cells: dict[tuple[str, str, str, str], set[str]],
         *,
         genes: tuple[str, ...],
     ) -> list[dict[str, object]]:
@@ -289,6 +298,7 @@ class SingleCellPseudobulkAnalyzer:
             subject, status, cell_type = group
             for gene in genes:
                 count = gene_counts.get((*group, gene), 0)
+                detected = len(positive_cells.get((*group, gene), set()))
                 cpm = count / library * 1_000_000 if library else 0.0
                 rows.append(
                     {
@@ -297,6 +307,12 @@ class SingleCellPseudobulkAnalyzer:
                         "cell_type": cell_type,
                         "gene_symbol": gene,
                         "cells": cell_counts[group],
+                        "positive_cells": detected,
+                        "positive_cell_fraction": (
+                            detected / cell_counts[group]
+                            if cell_counts[group]
+                            else 0.0
+                        ),
                         "raw_pseudobulk_count": count,
                         "library_count": library,
                         "cpm": cpm,
@@ -348,34 +364,88 @@ class SingleCellPseudobulkAnalyzer:
                         and int(str(row["cells"])) >= minimum_cells
                     ]
                 )
-                statistic, p_value = stats.ttest_ind(case, control, equal_var=False)
-                effect = float(np.mean(case) - np.mean(control))
+                case_mean = float(np.mean(case)) if len(case) else math.nan
+                control_mean = float(np.mean(control)) if len(control) else math.nan
+                effect = case_mean - control_mean
+                enough_subjects = len(case) >= 2 and len(control) >= 2
+                case_variance = (
+                    float(np.var(case, ddof=1)) if len(case) >= 2 else math.nan
+                )
+                control_variance = (
+                    float(np.var(control, ddof=1))
+                    if len(control) >= 2
+                    else math.nan
+                )
+                standard_error = (
+                    math.sqrt(
+                        case_variance / len(case)
+                        + control_variance / len(control)
+                    )
+                    if enough_subjects
+                    else math.nan
+                )
+                testable = enough_subjects and standard_error > 0
+                if testable:
+                    denominator = (
+                        (case_variance / len(case)) ** 2 / (len(case) - 1)
+                        + (control_variance / len(control)) ** 2
+                        / (len(control) - 1)
+                    )
+                    degrees = (
+                        (case_variance / len(case) + control_variance / len(control))
+                        ** 2
+                        / denominator
+                        if denominator > 0
+                        else math.inf
+                    )
+                    statistic = effect / standard_error
+                    p_value = float(2.0 * stats.t.sf(abs(statistic), degrees))
+                    critical = float(stats.t.ppf(0.975, degrees))
+                    ci_low = effect - critical * standard_error
+                    ci_high = effect + critical * standard_error
+                else:
+                    statistic, p_value = math.nan, math.nan
+                    ci_low, ci_high = math.nan, math.nan
+                if not enough_subjects:
+                    analysis_status = "insufficient_subjects"
+                elif not testable:
+                    analysis_status = "insufficient_variance"
+                else:
+                    analysis_status = "tested"
                 results.append(
                     {
                         "gene_symbol": gene,
                         "cell_type": cell_type,
                         "case_subjects": len(case),
                         "control_subjects": len(control),
-                        "case_mean_log2_cpm": float(np.mean(case)),
-                        "control_mean_log2_cpm": float(np.mean(control)),
+                        "case_mean_log2_cpm": case_mean,
+                        "control_mean_log2_cpm": control_mean,
                         "log2_cpm_difference": effect,
+                        "standard_error": standard_error,
+                        "confidence_interval_95_low": ci_low,
+                        "confidence_interval_95_high": ci_high,
                         "direction": (
                             "higher_in_case"
                             if effect > 0
                             else "lower_in_case"
                             if effect < 0
                             else "unchanged"
+                            if effect == 0
+                            else "not_estimable"
                         ),
                         "welch_statistic": float(statistic),
                         "p_value": float(p_value),
                         "adjusted_p_value": 1.0,
+                        "analysis_status": analysis_status,
                     }
                 )
                 indices.append(len(results) - 1)
-                p_values.append(float(p_value))
+                p_values.append(float(p_value) if testable else 1.0)
             adjusted = SingleCellPseudobulkAnalyzer._bh(p_values)
             for index, value in zip(indices, adjusted, strict=True):
-                results[index]["adjusted_p_value"] = value
+                results[index]["adjusted_p_value"] = (
+                    value if results[index]["analysis_status"] == "tested" else ""
+                )
         return results
 
     @staticmethod
