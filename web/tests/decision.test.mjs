@@ -33,6 +33,8 @@ test('decision page states framing, never scores and never a bare directive',()=
   assert.doesNotMatch(claims,/\d+\s*%|\bscore\b|probabilit|information gain|confidence/i);
   assert.doesNotMatch(html,/Run experiment [A-Z]/);
   assert.match(html,/Why this experiment\?/);
+  assert.match(html,/Recommended next discriminating experiment/);assert.doesNotMatch(html,/[Bb]est experiment/);
+  assert.match(html,/Conditional on current evidence, current rules and current constraints/);
   assert.match(html,/prospective — not observed/);
 });
 test('outcome tree has a textual equivalent for every branch and a conditional next action',()=>{
@@ -58,7 +60,7 @@ test('critical card lists rejected alternatives and escapes source text',()=>{
 test('no open uncertainty yields an explicit empty state, not an invented experiment',()=>{
   const html=view.criticalCard(state({critical:{selected:null,reasons:[],alternatives:[]}}));
   assert.match(html,/No open, testable uncertainty/);
-  assert.match(view.recommendation(state({recommendation:null})),/No experiment is recommended/);
+  assert.match(view.recommendation(state({recommendation:null})),/No next discriminating experiment is currently justified/);
 });
 test('explanations show AI provenance and non-admitted suggestions',()=>{
   const html=view.explanationCards(state());
@@ -67,4 +69,26 @@ test('explanations show AI provenance and non-admitted suggestions',()=>{
 test('history shows the diff since the previous state',()=>{
   const html=view.historySection([state({version:2,supersedes_id:'x',diff:{changes:['Engagement: not assessed → supported'],new_evidence:[]}}),state()]);
   assert.match(html,/Since previous decision/);assert.match(html,/not assessed → supported/);assert.match(html,/First decision state/);
+});
+
+test('pending expert review is shown above the decision, not hidden in the trace',()=>{
+  const html=view.decisionView(state({review:{pending_expert_review:37,accepted:0,message:'This recommendation depends on evidence that has not yet received independent scientific acceptance.'}}),[state()]);
+  assert.match(html,/Pending scientific review/);assert.match(html,/has not yet received independent scientific acceptance/);
+  assert.ok(html.indexOf('Pending scientific review')<html.indexOf('id="position"'));
+  assert.doesNotMatch(view.decisionView(state(),[state()]),/Pending scientific review/);
+});
+test('robustness lists decisive and non-decisive evidence without scores',()=>{
+  const sensitivity={method:'categorical leave-group-out; no probabilities',decision_sensitive:[{group:'pending_review_cellular',removed:'all cellular assessments pending expert review',changes:['critical uncertainty: a → b']}],explanation_sensitive:[],non_decisive:[{group:'structure',removed:'structural evidence',changes:[]}]};
+  const html=view.robustness(state({sensitivity}));
+  assert.match(html,/Evidence the recommendation depends on/);assert.match(html,/critical uncertainty: a → b/);assert.match(html,/Supportive but non-decisive evidence \(1\)/);
+  assert.doesNotMatch(html.replaceAll('No probabilities or scores',''),/\d+\s*%|probabilit|score/i);
+});
+test('no actionable uncertainty yields an explicit statement, never an invented experiment',()=>{
+  const none=state({critical:{selected:null,reasons:[],alternatives:[],message:'No open, testable uncertainty meets the criticality criteria; no next discriminating experiment is currently justified.'},recommendation:null,recommended_experiment_id:null,no_experiment_message:'No next discriminating experiment is currently justified by the represented evidence and rules.'});
+  const html=view.decisionView(none,[none]);
+  assert.match(html,/no next discriminating experiment is currently justified/i);assert.doesNotMatch(html,/Why this experiment\?/);
+});
+test('history states whether evidence or methodology changed',()=>{
+  const html=view.historySection([state({version:2,supersedes_id:'x',diff:{changes:['c'],new_evidence:[],cause:['methodology'],cause_summary:'This decision differs because the AXIS decision methodology changed.'}})]);
+  assert.match(html,/differs because the AXIS decision methodology changed/);
 });

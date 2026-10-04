@@ -7,14 +7,13 @@ uncertainty and the recommendation are derived here by ``axis.decision.rules``.
 
 import hashlib
 import json
-from dataclasses import replace
 from datetime import UTC, datetime
 from importlib import resources
 from pathlib import Path
 from typing import Any
 
 from axis.cellular.service import CellularPharmacologyService
-from axis.decision import rules
+from axis.decision import engine, rules
 from axis.domain.decision import (
     CandidateExperimentProfile,
     CompetingExplanation,
@@ -248,9 +247,20 @@ class DecisionService:
             for e in chain["edges"]
         }
         repo = self.store.cellular
-        experiments = repo.collection(project, protein, "experiments", 100)["items"]
-        assessments = repo.collection(project, protein, "assessments", 100)["items"]
-        readouts = repo.collection(project, protein, "readouts", 100)["items"]
+        windows = {
+            kind: repo.collection(project, protein, kind, 100)
+            for kind in ("experiments", "assessments", "readouts")
+        }
+        truncated = [kind for kind, page in windows.items() if page["has_more"]]
+        if chain["has_more"] or truncated:
+            raise ValueError(
+                "evidence window exceeded the bounded read size ("
+                + ", ".join(truncated or ["evidence chain"])
+                + "); the decision engine refuses to run on truncated evidence"
+            )
+        experiments = windows["experiments"]["items"]
+        assessments = windows["assessments"]["items"]
+        readouts = windows["readouts"]["items"]
         modality = {e["id"]: e["modality"] for e in experiments}
         phenotype = [a for a in assessments if a["edge"] in ("hla", "immune")]
 
@@ -268,9 +278,15 @@ class DecisionService:
             if modality[a["experiment_id"]] in GENETIC
             and a["dependency"] == "supported"
         )
-        selectivity = self.store.pharmacology.collection(
+        selectivity_page = self.store.pharmacology.collection(
             project, protein, "selectivity", 100, 0
-        )["items"]
+        )
+        if selectivity_page["has_more"]:
+            raise ValueError(
+                "selectivity window exceeded the bounded read size; the decision "
+                "engine refuses to run on truncated evidence"
+            )
+        selectivity = selectivity_page["items"]
         unresolved = sorted(
             s["id"] for s in selectivity if s["comparability_status"] != "Comparable"
         )
@@ -305,7 +321,81 @@ class DecisionService:
                 [project],
             ).fetchall()
         ]
+        protein_record = self.store.targets.protein(protein)
+        experiment_by_id = {e["id"]: e for e in experiments}
+        biochemical_items = [
+            m
+            for e in chain["edges"]
+            if e["edge"] == "biochemical"
+            for m in e["measurements"]
+        ]
+        compounds = sorted(
+            c["id"]
+            for c in self.store.pharmacology.collection(
+                project, protein, "compounds", 100, 0
+            )["items"]
+        )
+        with_phenotype = {
+            modality_compound
+            for e in experiments
+            for modality_compound in [e.get("compound_id")]
+            if modality_compound
+            and any(
+                a["experiment_id"] == e["id"]
+                and a["edge"] in ("hla", "immune")
+                and a["state"] == "supported"
+                for a in assessments
+            )
+        }
+        with_biochemical = {m["compound_id"] for m in biochemical_items}
+        unresolved_identity = sorted(
+            {
+                e.get("reported_perturbagen") or e["label"]
+                for e in experiments
+                if e["modality"] == "small_molecule"
+                and not e.get("compound_id")
+                and any(
+                    a["experiment_id"] == e["id"]
+                    and a["edge"] in ("hla", "immune")
+                    and a["state"] == "supported"
+                    for a in assessments
+                )
+            }
+        )
+        pending = sum(
+            a.get("review_status") == "pending_expert_review" for a in assessments
+        )
         return {
+            "context_of": {
+                a["id"]: " / ".join(
+                    part
+                    for part in (
+                        experiment_by_id[a["experiment_id"]]["context"]["cell_line"],
+                        experiment_by_id[a["experiment_id"]]["context"]["hla_allele"]
+                        or "no HLA allele reported",
+                    )
+                    if part
+                )
+                for a in phenotype
+            },
+            "target_label": protein_record.gene_symbol
+            or protein_record.recommended_name
+            or protein_record.primary_accession,
+            "compound_coverage": {
+                "compounds": [
+                    {
+                        "compound_id": c,
+                        "biochemical": c in with_biochemical,
+                        "cellular_phenotype": c in with_phenotype,
+                    }
+                    for c in compounds
+                ],
+                "unresolved_identity_perturbagens": unresolved_identity,
+            },
+            "review": {
+                "pending_expert_review": pending,
+                "accepted": len(assessments) - pending,
+            },
             "edges": edges,
             "biochemical_ids": [
                 i for i in edges["biochemical"]["ids"] if i.startswith("measurement")
@@ -329,9 +419,22 @@ class DecisionService:
             if edges["engagement"]["state"] != "supported"
             else [],
             "selectivity": {
+                "by_status": {
+                    status: sum(
+                        s["comparability_status"] == status for s in selectivity
+                    )
+                    for status in sorted(
+                        {s["comparability_status"] for s in selectivity}
+                    )
+                },
                 "total": len(selectivity),
                 "comparable": len(selectivity) - len(unresolved),
                 "unresolved_ids": unresolved,
+                "comparable_ids": sorted(
+                    s["id"]
+                    for s in selectivity
+                    if s["comparability_status"] == "Comparable"
+                ),
             },
             "concordance": {
                 "concordant": sum(c["state"] == "concordant" for c in comparisons),
@@ -350,7 +453,7 @@ class DecisionService:
                 "allotype_reported": any(
                     e["context"]["erap1_allotype"] for e in experiments
                 ),
-                "non_b27_experiments": sum(
+                "unmatched_context_experiments": sum(
                     not e["context"]["hla_allele"] for e in experiments
                 ),
                 "hla_alleles": sorted(
@@ -372,62 +475,6 @@ class DecisionService:
             ),
         }
 
-    # -- feasibility -------------------------------------------------------
-
-    @staticmethod
-    def feasibility(
-        profile: dict[str, Any], constraints: dict[str, Any] | None
-    ) -> dict[str, Any]:
-        if constraints is None:
-            return {
-                "level": "unknown",
-                "missing": [],
-                "note": "Feasibility not assessed against local resource constraints.",
-            }
-        if profile["experiment_id"] in constraints.get("excluded_experiment_ids", []):
-            return {
-                "level": "blocked",
-                "missing": [],
-                "note": "Investigator constraints exclude this experiment.",
-            }
-        pool = {
-            "models": constraints["available_models"],
-            "reagents": constraints["available_compounds"],
-            "assays": constraints["available_assays"],
-        }
-        missing = [
-            item
-            for kind, items in profile["required"].items()
-            for item in items
-            if item.casefold() not in {v.casefold() for v in pool.get(kind, [])}
-            and item.casefold()
-            not in {v.casefold() for v in constraints["available_equipment"]}
-        ]
-        if not missing:
-            return {
-                "level": "feasible_with_current_resources",
-                "missing": [],
-                "note": "",
-            }
-        covered = [
-            m
-            for m in missing
-            if any(
-                m.casefold() in c.casefold() or c.casefold() in m.casefold()
-                for c in constraints["external_collaborations"]
-            )
-        ]
-        level = (
-            "external_collaboration"
-            if len(covered) == len(missing)
-            else "requires_new_capability"
-        )
-        return {
-            "level": level,
-            "missing": missing,
-            "note": "Compared with investigator-entered resources.",
-        }
-
     # -- build -------------------------------------------------------------
 
     def _statuses(self, project: str) -> dict[str, str]:
@@ -436,6 +483,13 @@ class DecisionService:
             if event["event_type"] == "status":
                 status[event["subject_id"]] = event["to_value"]
         return status
+
+    def _results(self, project: str) -> dict[str, str]:
+        return {
+            e["subject_id"]: e["result_claim_id"]
+            for e in self.store.decisions.events(project)
+            if e["event_type"] == "status" and e["result_claim_id"]
+        }
 
     def _promoted(self, project: str) -> list[str]:
         return sorted(
@@ -446,6 +500,121 @@ class DecisionService:
             }
         )
 
+    def inputs(self, project: str, protein: str) -> engine.Inputs:
+        """Load every decision input from the store; the engine reads nothing else."""
+        defs = self.store.decisions.explanations(project, protein)
+        profiles = self.store.decisions.profiles(project, protein)
+        if not defs or not profiles:
+            raise ValueError("decision package not imported for this project")
+        hyp = self.store.hypotheses.get(defs[0]["hypothesis_id"])
+        statuses = self._statuses(project)
+        results = self._results(project)
+        candidates = []
+        for profile in profiles:
+            experiment = self.store.proposed_experiments.get(profile["experiment_id"])
+            consequences = {
+                c["scenario_id"]: c
+                for c in self.store.decisions.consequences(profile["experiment_id"])
+            }
+            effects: dict[str, dict[str, dict[str, str]]] = {}
+            for row in self.store.decisions.interpretations(profile["experiment_id"]):
+                effects.setdefault(row["scenario_id"], {})[row["explanation_id"]] = {
+                    "effect": row["effect"],
+                    "rationale": row["rationale"],
+                }
+            scenarios = []
+            for scenario in self.store.outcome_scenarios.list_for_experiment(
+                experiment.experiment_id
+            ):
+                cons = consequences.get(scenario.scenario_id)
+                if cons is None:
+                    raise ValueError(
+                        f"outcome scenario {scenario.scenario_id!r} of "
+                        f"{experiment.experiment_id!r} has no stored "
+                        "DecisionConsequence; an incomplete scenario cannot be "
+                        "interpreted"
+                    )
+                scenarios.append(
+                    {
+                        "scenario_id": scenario.scenario_id,
+                        "kind": cons["scenario_kind"],
+                        "outcome": scenario.possible_outcome,
+                        "interpretation": scenario.interpretation,
+                        "effects": effects.get(scenario.scenario_id, {}),
+                        "consequence": {
+                            "category": cons["category"],
+                            "statement": cons["conditional_statement"],
+                            "new_uncertainty": cons["new_uncertainty"],
+                        },
+                    }
+                )
+            candidates.append(
+                {
+                    "experiment_id": experiment.experiment_id,
+                    "title": experiment.title,
+                    "rationale": experiment.rationale,
+                    "experimental_system": experiment.experimental_system,
+                    "intervention_description": experiment.intervention_description,
+                    "endpoint_description": experiment.endpoint_description,
+                    "knowledge_kind": experiment.knowledge_kind.value,
+                    "profile": profile,
+                    "status": statuses.get(profile["experiment_id"], "proposed"),
+                    "result_claim_id": results.get(profile["experiment_id"]),
+                    "scenarios": scenarios,
+                }
+            )
+        return {
+            "evidence": self.evidence(project, protein),
+            "explanations": defs,
+            "hypothesis": {
+                "id": hyp.identifier,
+                "title": hyp.title,
+                "description": hyp.current.description,
+                "state": hyp.current.state.value,
+                "revision": hyp.current.revision,
+            },
+            "candidates": candidates,
+            "constraints": self.store.decisions.latest_constraints(project),
+            "promoted": self._promoted(project),
+            "statuses": statuses,
+        }
+
+    @staticmethod
+    def digests(project: str, protein: str, inputs: engine.Inputs) -> dict[str, str]:
+        """Separate what changed: evidence, investigator input, or methodology."""
+        constraints = inputs["constraints"]
+        evidence = digest_of(inputs["evidence"])
+        investigator = digest_of(
+            {
+                "constraints": constraints and constraints["id"],
+                "statuses": inputs["statuses"],
+                "promoted": inputs["promoted"],
+                "results": {
+                    c["experiment_id"]: c["result_claim_id"]
+                    for c in inputs["candidates"]
+                },
+            }
+        )
+        methodology = digest_of(
+            {
+                "rules": rules.fingerprint(),
+                "candidates": sorted(c["experiment_id"] for c in inputs["candidates"]),
+                "explanations": sorted(e["id"] for e in inputs["explanations"]),
+                "hypothesis": [
+                    inputs["hypothesis"]["id"],
+                    inputs["hypothesis"]["revision"],
+                ],
+            }
+        )
+        return {
+            "evidence": evidence,
+            "investigator_input": investigator,
+            "methodology": methodology,
+            "combined": digest_of(
+                [project, protein, evidence, investigator, methodology]
+            ),
+        }
+
     def build(
         self,
         project: str,
@@ -454,229 +623,16 @@ class DecisionService:
         created_at: datetime | None = None,
         created_by: str = ENGINE,
     ) -> dict[str, Any]:
-        defs = self.store.decisions.explanations(project, protein)
-        profiles = self.store.decisions.profiles(project, protein)
-        if not defs or not profiles:
-            raise ValueError("decision package not imported for this project")
-        ev = self.evidence(project, protein)
-        constraints = self.store.decisions.latest_constraints(project)
-        statuses = self._statuses(project)
-        promoted = self._promoted(project)
-        digest = digest_of(
-            {
-                "project": project,
-                "protein": protein,
-                "rules": rules.RULES_VERSION,
-                "evidence": ev,
-                "constraints": constraints and constraints["id"],
-                "statuses": statuses,
-                "promoted": promoted,
-                "candidates": [p["experiment_id"] for p in profiles],
-            }
-        )
+        inputs = self.inputs(project, protein)
+        parts = self.digests(project, protein, inputs)
         latest = self.store.decisions.latest_state(project, protein)
-        if latest and latest["evidence_digest"] == digest:
+        if latest and latest["evidence_digest"] == parts["combined"]:
             return latest
-        hyp = self.store.hypotheses.get(defs[0]["hypothesis_id"])
-        uncertainties = rules.derive_uncertainties(ev)
-
-        # explanations: ungrounded suggestions never enter the state
-        explanation_rows: list[dict[str, Any]] = []
-        excluded_explanations: list[dict[str, str]] = []
-        for definition in defs:
-            links = rules.explanation_links(ev, definition["ground"], definition["id"])
-            if not links:
-                excluded_explanations.append(
-                    {
-                        "id": definition["id"],
-                        "reason": "no grounded evidence link in the current evidence "
-                        "state; not admitted to the DecisionState",
-                    }
-                )
-                continue
-            kind = (
-                "researcher_hypothesis"
-                if definition["id"] in promoted
-                else definition["knowledge_kind"]
-            )
-            explanation_rows.append(
-                {
-                    "id": definition["id"],
-                    "label": definition["label"],
-                    "statement": definition["statement"],
-                    "ground": definition["ground"],
-                    "knowledge_kind": kind,
-                    "status": rules.explanation_status(links),
-                    "links": [
-                        {
-                            "relationship": link.relationship,
-                            "evidence_type": link.evidence_type,
-                            "evidence_id": link.evidence_id,
-                            "rule_id": link.rule_id,
-                            "rationale": link.rationale,
-                        }
-                        for link in links
-                    ],
-                    "rule_ids": [
-                        rules.GROUND_RULES[definition["ground"]],
-                        "DECISION-EXPL-001",
-                    ],
-                }
-            )
-        present = {e["id"] for e in explanation_rows}
-        viable = {e["id"] for e in explanation_rows if e["status"] != "contradicted"}
-        resolved_uncertainties = [
-            replace(
-                u,
-                affected_explanation_ids=tuple(
-                    i for i in u.affected_explanation_ids if i in present
-                ),
-            )
-            for u in uncertainties
-        ]
-
-        candidates = []
-        for profile in profiles:
-            experiment = self.store.proposed_experiments.get(profile["experiment_id"])
-            interpretations: dict[str, dict[str, str]] = {}
-            for row in self.store.decisions.interpretations(profile["experiment_id"]):
-                interpretations.setdefault(row["scenario_id"], {})[
-                    row["explanation_id"]
-                ] = row["effect"]
-            consequences = self.store.decisions.consequences(profile["experiment_id"])
-            kinds = [c["scenario_kind"] for c in consequences]
-            candidates.append(
-                {
-                    "experiment_id": profile["experiment_id"],
-                    "title": experiment.title,
-                    "profile": profile,
-                    "status": statuses.get(profile["experiment_id"], "proposed"),
-                    "discrimination": rules.discrimination(interpretations, viable),
-                    "interpretability": rules.interpretability(profile, kinds),
-                    "distinct_consequences": len({c["category"] for c in consequences}),
-                    "consequence_categories": sorted(
-                        {c["category"] for c in consequences}
-                    ),
-                    "feasibility": self.feasibility(profile, constraints),
-                    "cost": profile["cost"] or "not provided",
-                }
-            )
-        info: dict[str, dict[str, int]] = {}
-        for category in {c for p in profiles for c in p["considered_for"]}:
-            considered = [
-                x for x in candidates if category in x["profile"]["considered_for"]
-            ]
-            info[category] = {
-                "count": len(considered),
-                "consequences": len(
-                    {c for x in considered for c in x["consequence_categories"]}
-                ),
-            }
-        critical = rules.select_critical(resolved_uncertainties, viable, info)
-        names = {e["id"]: e["label"] for e in explanation_rows}
-        critical["reasons"] = [_named(reason, names) for reason in critical["reasons"]]
-        selected = next(
-            (u for u in resolved_uncertainties if u.id == critical["selected"]), None
-        )
-        ranked: list[dict[str, Any]] = []
-        if selected is not None:
-            ranked = rules.rank_candidates(
-                [
-                    x
-                    for x in candidates
-                    if selected.category in x["profile"]["considered_for"]
-                ]
-            )
-        recommended = next((x for x in ranked if x["excluded"] is None), None)
-        considered_ids = {x["experiment_id"] for x in ranked}
-        for place, item in enumerate(ranked, start=1):
-            item["rank"] = place
-            if item["excluded"]:
-                item["reason"] = item["excluded"]
-            elif item is recommended:
-                item["reason"] = "recommended: " + "; ".join(
-                    [
-                        f"separates {len(item['discrimination']['separated_pairs'])} "
-                        "pair(s) of viable explanations",
-                        f"{item['distinct_consequences']} distinct next actions "
-                        "across outcomes",
-                        f"interpretability {item['interpretability']['level']}",
-                        f"{_label(item['profile']['target_proximity'])} endpoint",
-                    ]
-                )
-            else:
-                assert recommended is not None
-                deciding = next(
-                    i
-                    for i, (a, b) in enumerate(
-                        zip(recommended["rank_key"], item["rank_key"], strict=True)
-                    )
-                    if a != b
-                )
-                item["reason"] = (
-                    "not recommended: lower on "
-                    + CRITERIA_NAMES[deciding]
-                    + (
-                        "; separates no pair of explanations (low discrimination)"
-                        if item["discrimination"]["low_discrimination"]
-                        else ""
-                    )
-                )
-        for item in candidates:
-            if item["experiment_id"] not in considered_ids:
-                item["rank"] = None
-                item["reason"] = (
-                    "not compared: considered for "
-                    + ", ".join(_label(c) for c in item["profile"]["considered_for"])
-                    + ", not for the critical uncertainty"
-                )
-            item["low_discrimination"] = item["discrimination"]["low_discrimination"]
-            item.pop("rank_key", None)
-            item["role_label"] = (
-                "low discrimination — "
-                + _label(item["profile"]["role"]).replace(
-                    "mechanism discrimination", "not mechanism discrimination"
-                )
-                if item["low_discrimination"]
-                else _label(item["profile"]["role"])
-            )
-
-        position = self._position(ev, resolved_uncertainties, explanation_rows)
-        change_mind = self._change_mind(
-            hyp.identifier, recommended, candidates, project
-        )
-        recommendation = self._recommendation(selected, recommended, project, critical)
+        analysis = engine.analyze(inputs)
         version = 1 if latest is None else latest["version"] + 1
         now = created_at or datetime.now(UTC)
-        state_id = f"decision-state:{version}:{digest[:16]}"
-        uncertainty_rows: list[dict[str, Any]] = [
-            {
-                "id": u.id,
-                "category": u.category,
-                "question": u.question,
-                "status": u.status,
-                "decision_relevance": u.decision_relevance,
-                "resolvability": u.resolvability,
-                "rationale": u.rationale,
-                "fired_rules": list(u.fired_rules),
-                "reasons": list(u.reasons),
-                "source_gap_ids": list(u.source_gap_ids),
-                "affected_explanation_ids": list(u.affected_explanation_ids),
-                "evidence_refs": [list(r) for r in u.evidence_refs],
-            }
-            for u in resolved_uncertainties
-        ]
-        fired = sorted(
-            {r for u in uncertainty_rows for r in u["fired_rules"]}
-            | {r for e in explanation_rows for r in e["rule_ids"]}
-            | {
-                "DECISION-CRIT-001",
-                "DECISION-EXP-001",
-                "DECISION-EXP-002",
-                "DECISION-EXP-003",
-                "DECISION-EXP-004",
-            }
-        )
+        state_id = f"decision-state:{version}:{parts['combined'][:16]}"
+        hyp = inputs["hypothesis"]
         payload: dict[str, Any] = {
             "id": state_id,
             "project_id": project,
@@ -684,386 +640,53 @@ class DecisionService:
             "version": version,
             "supersedes_id": latest["id"] if latest else None,
             "status": "recorded",
-            "hypothesis_id": hyp.identifier,
-            "hypothesis_revision": hyp.current.revision,
+            "hypothesis_id": hyp["id"],
+            "hypothesis_revision": hyp["revision"],
             "hypothesis": {
-                "title": hyp.title,
-                "description": hyp.current.description,
-                "state": hyp.current.state.value,
+                "title": hyp["title"],
+                "description": hyp["description"],
+                "state": hyp["state"],
                 "knowledge_kind": "researcher_hypothesis"
-                if hyp.identifier in promoted
+                if hyp["id"] in inputs["promoted"]
                 else "ai_suggestion",
             },
             "rules_version": rules.RULES_VERSION,
-            "evidence_digest": digest,
-            "evidence": ev,
+            "methodology": {
+                "rules_version": rules.RULES_VERSION,
+                "rules_fingerprint": rules.fingerprint(),
+                "digest": parts["methodology"],
+            },
+            "digests": parts,
+            "evidence_digest": parts["combined"],
+            "evidence": inputs["evidence"],
             "created_at": now.isoformat(),
             "created_by": created_by,
-            "position": position,
-            "explanations": explanation_rows,
-            "excluded_explanations": excluded_explanations,
-            "uncertainties": uncertainty_rows,
-            "critical": critical,
-            "critical_uncertainty_id": critical["selected"],
-            "candidates": candidates,
-            "recommended_experiment_id": recommended["experiment_id"]
-            if recommended
-            else None,
-            "recommendation": recommendation,
-            "what_would_change_our_mind": change_mind,
-            "constraints": {
-                "id": constraints["id"] if constraints else None,
-                "note": None
-                if constraints
-                else "Feasibility not assessed against local resource constraints.",
-            },
-            "provenance": {
-                "ai_generated": sorted(
-                    [
-                        e["id"]
-                        for e in explanation_rows
-                        if e["knowledge_kind"] == "ai_suggestion"
-                    ]
-                    + [c["experiment_id"] for c in candidates]
-                ),
-                "investigator_approved": sorted(
-                    set(promoted) | {k for k, v in statuses.items() if v != "proposed"}
-                ),
-                "deterministic_rules": fired,
-            },
+            **analysis,
             "disclaimer": "Decision framing given the evidence currently represented "
-            "in "
-            "AXIS; not scientific truth. All wording is an AI suggestion pending "
+            "in AXIS; not scientific truth. All wording is an AI suggestion pending "
             "researcher review. No experiment has been performed.",
-            "rationale": (
-                f"Critical uncertainty: {selected.category.replace('_', ' ')}."
-                if selected
-                else "No open, testable uncertainty remains in the current evidence "
-                "state."
-            ),
         }
-        payload["trace"] = self._trace(payload, ranked, excluded_explanations)
-        payload["graph"] = self._graph(payload)
         payload["diff"] = self.diff(latest, payload) if latest else None
         state = DecisionState(
             state_id,
             project,
             protein,
             version,
-            hyp.identifier,
-            hyp.current.revision,
+            hyp["id"],
+            hyp["revision"],
             now,
             created_by,
-            digest,
+            parts["combined"],
             rules.RULES_VERSION,
             payload["rationale"],
-            critical["selected"],
-            payload["recommended_experiment_id"],
+            analysis["critical_uncertainty_id"],
+            analysis["recommended_experiment_id"],
             latest["id"] if latest else None,
         )
         payload = json.loads(canonical(payload))
         with self.store._transaction():
             self.store.decisions.add_state(state, payload)
         return payload
-
-    # -- projections -------------------------------------------------------
-
-    @staticmethod
-    def _position(
-        ev: rules.Evidence, uncertainties: list[Any], explanations: list[dict[str, Any]]
-    ) -> dict[str, list[dict[str, Any]]]:
-        supported, contradicted, unresolved = [], [], []
-        for edge, value in ev["edges"].items():
-            statement = (
-                f"{_label(edge).capitalize()} evidence is {_label(value['state'])}."
-            )
-            row = {
-                "statement": statement,
-                "refs": [["edge", edge], *[["id", i] for i in value["ids"][:6]]],
-            }
-            if value["state"] == "supported":
-                supported.append(row)
-            elif value["state"] in ("contradicted", "mixed"):
-                contradicted.append(row)
-        for item in ev["source_disagreements"]:
-            contradicted.append(
-                {
-                    "statement": "Sources disagree on the direction of "
-                    f"{item['endpoint']} "
-                    f"after ERAP1 perturbation ({' vs '.join(item['directions'])}).",
-                    "refs": [["readout", i] for i in item["readout_ids"]],
-                }
-            )
-        for u in uncertainties:
-            if u.status in ("open", "partially_resolved"):
-                unresolved.append(
-                    {
-                        "statement": u.question,
-                        "refs": [
-                            ["uncertainty", u.id],
-                            *[list(r) for r in u.evidence_refs[:4]],
-                        ],
-                    }
-                )
-        return {
-            "supported": supported,
-            "contradicted": contradicted,
-            "unresolved": unresolved,
-        }
-
-    def _change_mind(
-        self,
-        hypothesis_id: str,
-        recommended: dict[str, Any] | None,
-        candidates: list[dict[str, Any]],
-        project: str,
-    ) -> dict[str, Any]:
-        weaken, strengthen = [], []
-        ordered = sorted(
-            candidates,
-            key=lambda c: (
-                c["experiment_id"] != (recommended or {}).get("experiment_id"),
-                c["experiment_id"],
-            ),
-        )
-        for item in ordered:
-            interpretations = self.store.decisions.interpretations(
-                item["experiment_id"]
-            )
-            for c in self.store.decisions.consequences(item["experiment_id"]):
-                row = {
-                    "hypothesis_id": hypothesis_id,
-                    "experiment_id": item["experiment_id"],
-                    "scenario_id": c["scenario_id"],
-                    "category": c["category"],
-                    "statement": c["conditional_statement"],
-                    "explanation_effects": [
-                        {"explanation_id": i["explanation_id"], "effect": i["effect"]}
-                        for i in interpretations
-                        if i["scenario_id"] == c["scenario_id"]
-                        and i["effect"] != "does_not_discriminate"
-                    ],
-                    "prospective": True,
-                }
-                if c["category"] in WEAKENING:
-                    weaken.append(row)
-                elif c["category"] in STRENGTHENING:
-                    strengthen.append(row)
-        return {
-            "question": "What result would make us reconsider the current strategy?",
-            "would_weaken": weaken,
-            "would_strengthen": strengthen,
-            "label": "prospective / hypothetical — no result has been observed",
-        }
-
-    def _recommendation(
-        self,
-        selected: Any,
-        recommended: dict[str, Any] | None,
-        project: str,
-        critical: dict[str, Any],
-    ) -> dict[str, Any] | None:
-        if selected is None or recommended is None:
-            return None
-        experiment = self.store.proposed_experiments.get(recommended["experiment_id"])
-        profile = recommended["profile"]
-        scenarios = []
-        interpretations = self.store.decisions.interpretations(experiment.experiment_id)
-        consequences = {
-            c["scenario_id"]: c
-            for c in self.store.decisions.consequences(experiment.experiment_id)
-        }
-        for scenario in self.store.outcome_scenarios.list_for_experiment(
-            experiment.experiment_id
-        ):
-            cons = consequences[scenario.scenario_id]
-            scenarios.append(
-                {
-                    "scenario_id": scenario.scenario_id,
-                    "kind": cons["scenario_kind"],
-                    "outcome": scenario.possible_outcome,
-                    "interpretation": scenario.interpretation,
-                    "explanation_effects": [
-                        {k: i[k] for k in ("explanation_id", "effect", "rationale")}
-                        for i in interpretations
-                        if i["scenario_id"] == scenario.scenario_id
-                    ],
-                    "consequence": {
-                        "category": cons["category"],
-                        "statement": cons["conditional_statement"],
-                        "new_uncertainty": cons["new_uncertainty"],
-                    },
-                    "prospective": True,
-                }
-            )
-        return {
-            "question": selected.question,
-            "why_now": f"{selected.category.replace('_', ' ')} is the "
-            f"{_label(selected.decision_relevance)} uncertainty: "
-            + "; ".join(critical["reasons"][:1] + list(selected.reasons)),
-            "experiment_id": experiment.experiment_id,
-            "title": experiment.title,
-            "experiment": experiment.intervention_description,
-            "biological_context": experiment.experimental_system,
-            "controls": {
-                "negative": profile["controls_negative"],
-                "positive": profile["controls_positive"]
-                or ["No validated positive control identified in the curated corpus."],
-            },
-            "primary_endpoint": profile["primary_endpoint"],
-            "secondary_endpoints": profile["secondary_endpoints"],
-            "outcome_scenarios": scenarios,
-            "limitations": profile["limitations"],
-            "remaining_after": profile["limitations"],
-            "knowledge_kind": experiment.knowledge_kind.value,
-            "status": recommended["status"],
-            "why_this_experiment": {
-                "uncertainty": selected.question,
-                "explanations_separated": [
-                    list(pair)
-                    for pair in recommended["discrimination"]["separated_pairs"]
-                ],
-                "why_current_evidence_cannot_answer": "; ".join(selected.reasons),
-                "why_outcome_changes_decision": " ".join(
-                    s["consequence"]["statement"] for s in scenarios[:3]
-                ),
-                "remains_unresolved": profile["limitations"],
-            },
-        }
-
-    def _trace(
-        self,
-        payload: dict[str, Any],
-        ranked: list[dict[str, Any]],
-        excluded_explanations: list[dict[str, str]],
-    ) -> dict[str, Any]:
-        return {
-            "evidence_considered": {
-                "digest": payload["evidence_digest"],
-                "edges": {
-                    k: v["state"] for k, v in payload["evidence"]["edges"].items()
-                },
-                "selectivity": payload["evidence"]["selectivity"],
-                "concordance": payload["evidence"]["concordance"],
-            },
-            "rules_fired": [
-                {
-                    "id": r,
-                    "version": rules.RULES[r].version,
-                    "description": rules.RULES[r].description,
-                }
-                for r in payload["provenance"]["deterministic_rules"]
-            ],
-            "uncertainties_generated": [
-                {
-                    "id": u["id"],
-                    "status": u["status"],
-                    "relevance": u["decision_relevance"],
-                    "rules": u["fired_rules"],
-                }
-                for u in payload["uncertainties"]
-            ],
-            "explanations_affected": {
-                u["id"]: u["affected_explanation_ids"] for u in payload["uncertainties"]
-            },
-            "explanations_not_admitted": excluded_explanations,
-            "candidates_considered": [
-                {
-                    "experiment_id": c["experiment_id"],
-                    "rank": c["rank"],
-                    "reason": c["reason"],
-                    "low_discrimination": c["low_discrimination"],
-                }
-                for c in payload["candidates"]
-            ],
-            "critical_selection": payload["critical"],
-            "outcome_logic": "Experiment -> OutcomeScenario -> OutcomeInterpretation "
-            "-> CompetingExplanation -> DecisionConsequence (all prospective).",
-            "ranked_for_critical": [c["experiment_id"] for c in ranked],
-        }
-
-    @staticmethod
-    def _graph(payload: dict[str, Any]) -> dict[str, Any]:
-        nodes: list[dict[str, str]] = [
-            {
-                "id": payload["hypothesis_id"],
-                "type": "Hypothesis",
-                "label": payload["hypothesis"]["title"],
-            },
-            {
-                "id": payload["id"],
-                "type": "DecisionState",
-                "label": f"Decision state v{payload['version']}",
-            },
-        ]
-        edges: list[dict[str, str]] = [
-            {
-                "from": payload["id"],
-                "to": payload["hypothesis_id"],
-                "kind": "frames",
-                "basis": "DecisionState references this hypothesis revision.",
-            }
-        ]
-        for e in payload["explanations"]:
-            nodes.append(
-                {"id": e["id"], "type": "CompetingExplanation", "label": e["label"]}
-            )
-            edges.append(
-                {
-                    "from": e["id"],
-                    "to": payload["hypothesis_id"],
-                    "kind": "competes_for",
-                    "basis": "Alternative explanation of the same evidence.",
-                }
-            )
-        for u in payload["uncertainties"]:
-            nodes.append(
-                {"id": u["id"], "type": "ScientificUncertainty", "label": u["question"]}
-            )
-            for gap in u["source_gap_ids"]:
-                nodes.append({"id": gap, "type": "EvidenceGap", "label": gap})
-                edges.append(
-                    {
-                        "from": gap,
-                        "to": u["id"],
-                        "kind": "informs",
-                        "basis": "Cellular evidence gap behind this uncertainty.",
-                    }
-                )
-            for expl in u["affected_explanation_ids"]:
-                edges.append(
-                    {
-                        "from": u["id"],
-                        "to": expl,
-                        "kind": "affects",
-                        "basis": "Rule " + ", ".join(u["fired_rules"]),
-                    }
-                )
-        for c in payload["candidates"]:
-            nodes.append(
-                {"id": c["experiment_id"], "type": "Experiment", "label": c["title"]}
-            )
-            for gap in c["profile"]["addressed_gap_ids"]:
-                edges.append(
-                    {
-                        "from": gap,
-                        "to": c["experiment_id"],
-                        "kind": "addressed_by",
-                        "basis": "Candidate experiment is linked to this gap.",
-                    }
-                )
-            for pair in c["discrimination"]["separated_pairs"]:
-                for expl in pair:
-                    edges.append(
-                        {
-                            "from": c["experiment_id"],
-                            "to": expl,
-                            "kind": "discriminates",
-                            "basis": "Outcomes move this explanation opposite to "
-                            "another viable one.",
-                        }
-                    )
-        return {"nodes": nodes, "edges": edges}
 
     # -- diff --------------------------------------------------------------
 
@@ -1080,6 +703,26 @@ class DecisionService:
             }
         changes: list[str] = []
         new_evidence: list[str] = []
+        before, after = previous.get("digests", {}), current.get("digests", {})
+        cause = [
+            name
+            for name in ("evidence", "investigator_input", "methodology")
+            if before.get(name) != after.get(name)
+        ]
+        wording = {
+            "evidence": "the stored evidence changed",
+            "investigator_input": "investigator input (constraints, status or "
+            "promotion) changed",
+            "methodology": "the AXIS decision methodology (rules, candidate set or "
+            "hypothesis revision) changed",
+        }
+        summary = (
+            "This decision differs because "
+            + "; and ".join(wording[c] for c in cause)
+            + "."
+            if cause
+            else "No input digest changed."
+        )
         for key, value in current["evidence"].items():
             old = previous["evidence"].get(key)
             if isinstance(value, list) and isinstance(old, list):
@@ -1141,6 +784,8 @@ class DecisionService:
             "to": current["id"],
             "changes": changes,
             "new_evidence": new_evidence,
+            "cause": cause,
+            "cause_summary": summary,
         }
 
     # -- reads (never build, never network) --------------------------------
@@ -1231,7 +876,7 @@ class DecisionService:
                         "refs": [[link["evidence_type"], link["evidence_id"]]],
                     }
                     for e in state["explanations"]
-                    if e["id"] == "explanation:on_target"
+                    if e["ground"] == "on_target"
                     for link in e["links"]
                     if link["relationship"] in ("contradicts", "context_limits")
                 ],

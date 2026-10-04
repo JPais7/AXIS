@@ -47,13 +47,12 @@ formulation of the project objective).
 
 ## Rules
 
-`axis/decision/rules.py` defines versioned rules (`axis-decision-1`), each with a
-stable id, version, description, inputs, output and rationale: `DECISION-GAP-001`
-and `-002`, `DEP-001`, `SEL-001`, `CTX-001`, `REPRO-001`, `BRIDGE-001`, `DIS-001`,
-`CLIN-001`, `STRUCT-001` (uncertainties); `EXPL-001`, `EXPL-010`…`013`
-(explanations); `CRIT-001` (critical selection); `EXP-001`…`004` (discrimination,
-interpretability, recommendation, low-discrimination flag). Every state records
-the rules that fired.
+`axis/decision/rules.py` defines 23 versioned rules (rule set `axis-decision-2`), each
+with a stable id, version, description, inputs, output and rationale; the full
+inventory with conditions, failure behaviour and covering tests is in
+[the rule audit](phase35-decision-rule-audit.md). Every state records the rules
+that fired. The rules are pure functions (`rules.py`) composed by a pure
+`engine.analyze` (`engine.py`); the service only loads inputs and persists.
 
 There are **no** numeric scores, probabilities, information-gain, entropy or
 confidence values anywhere in the decision layer; a test walks the payload to
@@ -62,7 +61,8 @@ enforce this.
 ### Explanation status (DECISION-EXPL-001)
 
 Read from link relationships only:
-`supports` and `contradicts` → *weakened*; only `contradicts` → *contradicted*;
+`contradicts` together with `supports` **or** with any open item → *weakened*;
+`contradicts` alone → *contradicted*;
 `supports` with open items → *partially supported*; `supports` alone →
 *supported*; `leaves_unresolved` only → *viable*; `context_limits` only →
 *unresolved*; no link at all → the explanation is **not admitted**. Absence of
@@ -177,3 +177,53 @@ project contains no performed Phase 3.5 experiment and none is invented.
 * Not implemented, by design: wet-lab execution, literature ingestion, docking,
   molecular dynamics, virtual screening, QSAR, generative chemistry, PK/ADME/
   toxicity prediction, clinical or patient recommendations, portfolio valuation.
+
+## Phase 3.5A hardening (acceptance audit)
+
+The acceptance audit ([report](phase35-scientific-decision-acceptance-report.md))
+changed the engine in these ways; behaviour for the reference vertical is
+unchanged apart from rule-set version `axis-decision-2`.
+
+* **Pure engine.** `axis/decision/engine.py::analyze` takes explicit inputs
+  (evidence, explanation definitions, candidate designs, constraints, statuses)
+  and returns the whole analysis. It canonicalizes every set-like input, so
+  insertion, database and shuffling order cannot change a result; ties are
+  *reported* (`tied_with`) instead of being resolved by identifier.
+* **Evidence vs methodology.** A state stores `digests.evidence`,
+  `digests.investigator_input` and `digests.methodology` (rule fingerprint, rules
+  version, candidate and explanation set, hypothesis revision). The diff names the
+  `cause` — "the stored evidence changed", "investigator input changed", "the AXIS
+  decision methodology changed" — so a changed recommendation can be attributed.
+* **Target-neutral rules.** Rule text uses the target label from the evidence;
+  uncertainties name explanation *grounds* (`on_target`, `off_target`,
+  `indirect_pathway`, `context_dependent`), never explanation ids.
+* **New rules.** `DECISION-TRANS-001` (biochemical activity without cellular
+  phenotype → assay-translation uncertainty), `DECISION-BRIDGE-002` (engagement
+  without phenotype), `DECISION-EXP-005` (falsification: a candidate that cannot
+  weaken a preferred explanation ranks after those that can). A *contradicted*
+  engagement answers the engagement question negatively and supports the
+  off-target explanation; comparable selectivity *weakens* but never eliminates it.
+* **Honest empty states.** If no open, testable uncertainty exists the state says
+  "No next discriminating experiment is currently justified"; if a critical
+  uncertainty has no unblocked candidate it says so. Nothing is manufactured.
+* **Review status.** Pending expert review of cellular assessments propagates into
+  the state and is shown above the decision.
+* **Decision robustness.** A categorical leave-group-out analysis lists the evidence
+  groups whose removal changes the critical uncertainty or recommendation, those
+  that change only explanation statuses, and the non-decisive rest. No numbers.
+* **Compound scope.** Evidence carries per-compound coverage; the engagement
+  uncertainty states that evidence is not pooled across compounds and that
+  phenotype-producing perturbagens with unresolved identity (DG013A) cannot be
+  linked to any compound.
+* **Integrity.** Evidence reads refuse to run on truncated windows; an outcome
+  scenario with no stored consequence makes the build fail with an explicit error.
+
+### What is derived and what is authored
+
+The recommendation is a function of three things: the stored evidence, the
+versioned rules, and the **frozen candidate designs, including their authored
+outcome→explanation mappings**. The first two are deterministic and auditable. The
+third is AI-suggested scientific judgement and decides how well each candidate
+separates explanations; flattening one candidate's mappings changes the
+recommendation (tested). The decision therefore establishes *consistency with the
+stated designs*, not that those designs are scientifically correct.

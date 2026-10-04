@@ -1,19 +1,23 @@
 """Versioned, transparent decision rules over a plain evidence-state mapping.
 
-Every function is pure and unit-testable without a store. There are no numeric
-scores, probabilities or information-gain figures: ordering is lexicographic over
+Every function is pure: explicit inputs, deterministic output, no clock, network,
+randomness or global state, and inputs are never mutated. There are no numeric
+scores, probabilities or information-gain figures; ordering is lexicographic over
 documented categorical criteria and every comparison reports the criterion that
-decided it.
+decided it. Ties are reported as ties, never broken silently by insertion order.
 """
 
+import hashlib
+import json
 from dataclasses import dataclass
 from typing import Any
 
 from axis.domain.decision import ExplanationEvidenceLink, ScientificUncertainty
 
-RULES_VERSION = "axis-decision-1"
+RULES_VERSION = "axis-decision-2"
 Evidence = dict[str, Any]
 Ref = tuple[str, str]
+TARGET = "the target"
 
 
 @dataclass(frozen=True)
@@ -35,19 +39,28 @@ RULES: dict[str, Rule] = dict(
         _rule(
             "DECISION-GAP-001",
             "Engagement uncertainty when biochemical activity and a compound "
-            "phenotype exist but direct cellular engagement is not supported.",
+            "phenotype are supported but direct cellular engagement is not.",
             "edges.biochemical, edges.engagement, compound_phenotype_ids",
             "target_engagement uncertainty (decision_material)",
             "A phenotype is not engagement; the bridge is unobserved, not refuted.",
         ),
         _rule(
             "DECISION-GAP-002",
-            "Raise engagement to decision_blocking while an off-target explanation "
-            "remains viable because selectivity is unresolved.",
-            "selectivity.unresolved_ids, uncertainty target_engagement",
+            "Raise engagement to decision_blocking while selectivity is unresolved, "
+            "because an off-target explanation then cannot be excluded.",
+            "selectivity.comparable, uncertainty target_engagement",
             "target_engagement decision_blocking",
-            "Without engagement or selectivity, the compound phenotype cannot be "
-            "attributed to ERAP1 and the strategy decision cannot be taken.",
+            "Without engagement or comparable selectivity the compound phenotype "
+            "cannot be attributed to the target and the strategy decision cannot "
+            "be taken.",
+        ),
+        _rule(
+            "DECISION-TRANS-001",
+            "Assay-translation uncertainty when biochemical activity is supported "
+            "and no cellular phenotype or engagement is supported.",
+            "edges.biochemical, edges.engagement, compound_phenotype_ids",
+            "assay_translation uncertainty (decision_blocking)",
+            "Biochemical activity alone says nothing about activity in cells.",
         ),
         _rule(
             "DECISION-DEP-001",
@@ -61,7 +74,7 @@ RULES: dict[str, Rule] = dict(
         _rule(
             "DECISION-SEL-001",
             "Selectivity uncertainty when no selectivity comparison is directly "
-            "comparable.",
+            "comparable; quantity of incompatible data never counts as resolution.",
             "selectivity",
             "selectivity uncertainty (decision_material, indirectly_testable)",
             "A cellular experiment alone cannot resolve selectivity; it needs a "
@@ -69,12 +82,12 @@ RULES: dict[str, Rule] = dict(
         ),
         _rule(
             "DECISION-CTX-001",
-            "Genetic-context uncertainty when ERAP1 allotype is unreported in every "
-            "experiment or an experiment lacks HLA-B27 context.",
+            "Genetic-context uncertainty when the target allotype/genotype is "
+            "unreported in every experiment or an experiment lacks the "
+            "disease-relevant context.",
             "contexts",
             "genetic_context uncertainty (decision_material)",
-            "ERAP1 x HLA-B27 biology is context sensitive; contexts are not "
-            "interchangeable.",
+            "Target biology is context sensitive; contexts are not interchangeable.",
         ),
         _rule(
             "DECISION-REPRO-001",
@@ -91,7 +104,16 @@ RULES: dict[str, Rule] = dict(
             "insufficiently shown.",
             "functional_insufficient_ids",
             "mechanistic_bridge uncertainty (decision_material)",
-            "Downstream phenotype alone does not show proximal catalytic modulation.",
+            "Downstream phenotype alone does not show proximal modulation.",
+        ),
+        _rule(
+            "DECISION-BRIDGE-002",
+            "Mechanistic-bridge uncertainty when engagement is supported but no "
+            "relevant cellular phenotype is supported.",
+            "edges.engagement, compound_phenotype_ids, edges.hla, edges.immune",
+            "mechanistic_bridge uncertainty (decision_material)",
+            "Engagement without phenotype is a distinct state from phenotype "
+            "without engagement.",
         ),
         _rule(
             "DECISION-DIS-001",
@@ -126,28 +148,32 @@ RULES: dict[str, Rule] = dict(
         ),
         _rule(
             "DECISION-EXPL-010",
-            "Ground: compound phenotype arises through direct ERAP1 modulation.",
+            "Ground on_target: the compound phenotype arises from direct target "
+            "modulation.",
             "compound phenotype, biochemical, engagement, selectivity",
             "evidence links",
             "Admitted only when a compound phenotype exists.",
         ),
         _rule(
             "DECISION-EXPL-011",
-            "Ground: phenotype arises through off-target activity.",
+            "Ground off_target: the phenotype arises from off-target activity.",
             "selectivity, engagement, concordance",
             "evidence links",
-            "Admitted while selectivity or engagement leave it open.",
+            "Admitted whenever a compound phenotype exists; comparable selectivity "
+            "weakens but does not eliminate it.",
         ),
         _rule(
             "DECISION-EXPL-012",
-            "Ground: ERAP1 is perturbed but the phenotype is indirect.",
+            "Ground indirect_pathway: the target is perturbed but the phenotype is "
+            "indirect.",
             "functional_insufficient_ids",
             "evidence links",
             "Admitted while proximal functional modulation is insufficient.",
         ),
         _rule(
             "DECISION-EXPL-013",
-            "Ground: effect depends on HLA / ERAP1 genetic context.",
+            "Ground context_dependent: the effect depends on genetic or disease "
+            "context.",
             "contexts, source_disagreements",
             "evidence links",
             "Admitted when contexts are unmatched or sources disagree.",
@@ -155,10 +181,10 @@ RULES: dict[str, Rule] = dict(
         _rule(
             "DECISION-CRIT-001",
             "Critical uncertainty: lexicographic over relevance, explanations "
-            "separated, resolvability, candidate availability, and distinct next "
-            "actions; unresolved and testable only.",
+            "separated, resolvability, candidate availability and distinct next "
+            "actions; unresolved and testable only; ties are reported.",
             "uncertainties, explanations, candidates",
-            "one critical uncertainty with per-criterion reasons",
+            "one critical uncertainty with per-criterion reasons, or none",
             "Deterministic and explainable; no opaque score.",
         ),
         _rule(
@@ -180,10 +206,10 @@ RULES: dict[str, Rule] = dict(
         ),
         _rule(
             "DECISION-EXP-003",
-            "Recommended experiment among those considered for the critical "
-            "uncertainty: exclude blocked; then separated pairs, distinct next "
-            "actions, interpretability, proximity, fewer unestablished "
-            "prerequisites, id.",
+            "Recommended next discriminating experiment among those considered "
+            "for the critical uncertainty: exclude blocked; then falsifying, "
+            "separated pairs, distinct next actions, interpretability, proximity "
+            "and fewer unestablished prerequisites; ties are reported.",
             "candidate analyses",
             "recommended experiment with reasons; alternatives with reasons",
             "Complexity and cost are reported but never preferred automatically.",
@@ -197,8 +223,34 @@ RULES: dict[str, Rule] = dict(
             "Replication or precision gain must not be presented as mechanism "
             "discrimination.",
         ),
+        _rule(
+            "DECISION-EXP-005",
+            "Falsification: an experiment is falsifying only if some "
+            "interpretable scenario weakens a currently preferred explanation.",
+            "outcome interpretations, explanation statuses",
+            "falsifying flag; non-falsifying candidates rank after falsifying ones",
+            "AXIS should favour experiments able to change its mind.",
+        ),
     ]
 )
+
+
+def fingerprint() -> str:
+    """Identify the methodology: rule ids, versions and texts plus the rules version.
+
+    Changes when the decision rules change, independently of any evidence.
+    """
+    material = {
+        "version": RULES_VERSION,
+        "rules": {
+            key: [r.version, r.description, r.inputs, r.output, r.rationale]
+            for key, r in sorted(RULES.items())
+        },
+    }
+    return hashlib.sha256(
+        json.dumps(material, sort_keys=True, separators=(",", ":")).encode()
+    ).hexdigest()
+
 
 RELEVANCE_RANK = {
     "decision_blocking": 0,
@@ -228,7 +280,7 @@ EFFECT_SIGN = {
     "contradicts": -1,
     "does_not_discriminate": 0,
 }
-VIABLE_STATUSES = {"supported", "partially_supported", "viable", "unresolved"}
+PREFERRED_STATUSES = {"supported", "partially_supported"}
 
 
 def _edge(ev: Evidence, name: str) -> str:
@@ -237,6 +289,10 @@ def _edge(ev: Evidence, name: str) -> str:
 
 def _ids(ev: Evidence, key: str) -> list[str]:
     return list(ev.get(key, []))
+
+
+def _target(ev: Evidence) -> str:
+    return str(ev.get("target_label") or TARGET)
 
 
 def has_compound_phenotype(ev: Evidence) -> bool:
@@ -249,6 +305,7 @@ def selectivity_unresolved(ev: Evidence) -> bool:
 
 
 def off_target_viable(ev: Evidence) -> bool:
+    """Off-target explanation can be excluded neither by selectivity nor engagement."""
     return has_compound_phenotype(ev) and (
         selectivity_unresolved(ev) or _edge(ev, "engagement") != "supported"
     )
@@ -258,18 +315,52 @@ def _refs(*groups: tuple[str, list[str]]) -> tuple[Ref, ...]:
     return tuple((kind, value) for kind, values in groups for value in sorted(values))
 
 
+def _selectivity_breakdown(selectivity: dict[str, Any]) -> list[str]:
+    """Keep 'not assessed' and 'not directly comparable' distinct (Phase 3.3)."""
+    by_status = selectivity.get("by_status") or {}
+    return [
+        f"{count} {status.lower()}"
+        for status, count in sorted(by_status.items())
+        if status != "Comparable" and count
+    ]
+
+
+def _coverage_reason(ev: Evidence) -> list[str]:
+    coverage = ev.get("compound_coverage")
+    if not coverage:
+        return []
+    reasons = []
+    rows = coverage.get("compounds", [])
+    both = [c for c in rows if c["biochemical"] and c["cellular_phenotype"]]
+    if rows:
+        reasons.append(
+            f"{len(both)} of {len(rows)} compounds have both biochemical activity "
+            "and a cellular phenotype; evidence is not pooled across compounds"
+        )
+    if coverage.get("unresolved_identity_perturbagens"):
+        reasons.append(
+            f"{len(coverage['unresolved_identity_perturbagens'])} phenotype-producing "
+            "perturbagen(s) have unresolved chemical identity and cannot be linked "
+            "to any compound's biochemical data"
+        )
+    return reasons
+
+
 def derive_uncertainties(ev: Evidence) -> list[ScientificUncertainty]:
     """Apply DECISION-* uncertainty rules; each result names the rules that fired."""
     result: list[ScientificUncertainty] = []
+    target = _target(ev)
     phenotype = has_compound_phenotype(ev)
     engagement = _edge(ev, "engagement")
-    gaps = _ids(ev, "gap_ids")
+    biochemical = _edge(ev, "biochemical") == "supported"
+    gaps = sorted(_ids(ev, "gap_ids"))
     unresolved_sel = ev.get("selectivity", {}).get("unresolved_ids", [])
-    blocking_offtarget = off_target_viable(ev)
+    selectivity = ev.get("selectivity", {"total": 0, "comparable": 0})
 
-    if phenotype and _edge(ev, "biochemical") == "supported":
+    if phenotype and biochemical:
         status = {
             "supported": "resolved_for_current_decision",
+            "contradicted": "resolved_for_current_decision",
             "mixed": "partially_resolved",
         }.get(engagement, "open")
         fired = ["DECISION-GAP-001"]
@@ -279,38 +370,65 @@ def derive_uncertainties(ev: Evidence) -> list[ScientificUncertainty]:
             "a compound-treated cellular phenotype is supported",
             f"direct cellular engagement is {engagement.replace('_', ' ')}",
         ]
-        if status == "open" and blocking_offtarget:
+        if status == "open" and selectivity_unresolved(ev):
             relevance = "decision_blocking"
             fired.append("DECISION-GAP-002")
             reasons.append(
                 "selectivity is unresolved, so an off-target explanation remains viable"
             )
+        elif status == "open":
+            reasons.append(
+                "comparable selectivity data exist, so engagement is material "
+                "rather than blocking"
+            )
         if status != "open":
             relevance = "informative"
+        reasons += _coverage_reason(ev)
         result.append(
             ScientificUncertainty(
                 "uncertainty:target_engagement",
                 "target_engagement",
-                "Do the phenotype-producing compounds directly engage ERAP1 in cells "
-                "at those exposures?",
+                f"Do the phenotype-producing compounds directly engage {target} in "
+                "cells at those exposures?",
                 status,
                 relevance,
                 "directly_testable",
-                "Engagement is the missing link between biochemical activity and the "
-                "cellular phenotype.",
+                "Engagement is the missing link between biochemical activity and "
+                "the cellular phenotype.",
                 tuple(fired),
                 tuple(reasons),
                 tuple(gaps),
-                (
-                    "explanation:on_target",
-                    "explanation:off_target",
-                    "explanation:indirect",
-                ),
+                (),
                 _refs(
                     ("edge", ["biochemical", "engagement"]),
                     ("gap", gaps),
                     ("cellular_assessment", _ids(ev, "compound_phenotype_ids")),
                 ),
+                ("on_target", "off_target", "indirect_pathway"),
+            )
+        )
+
+    if biochemical and not phenotype and engagement != "supported":
+        result.append(
+            ScientificUncertainty(
+                "uncertainty:assay_translation",
+                "assay_translation",
+                f"Does biochemical activity against {target} translate to a "
+                "cellular effect?",
+                "open",
+                "decision_blocking",
+                "directly_testable",
+                "Biochemical activity alone says nothing about activity in cells.",
+                ("DECISION-TRANS-001",),
+                (
+                    "biochemical activity is supported",
+                    "no cellular phenotype is supported",
+                    f"direct cellular engagement is {engagement.replace('_', ' ')}",
+                ),
+                (),
+                (),
+                _refs(("edge", ["biochemical", "engagement"])),
+                ("on_target",),
             )
         )
 
@@ -325,13 +443,13 @@ def derive_uncertainties(ev: Evidence) -> list[ScientificUncertainty]:
             ScientificUncertainty(
                 "uncertainty:target_dependency",
                 "target_dependency",
-                "Is the compound phenotype ERAP1-dependent, as the genetic "
+                f"Is the compound phenotype {target}-dependent, as the genetic "
                 "perturbation phenotype is?",
                 "resolved_for_current_decision" if resolved else "open",
                 "informative" if resolved else "decision_material",
                 "directly_testable",
-                "Genetic dependency does not transfer to a compound without a matched "
-                "chemical-genetic comparison.",
+                "Genetic dependency does not transfer to a compound without a "
+                "matched chemical-genetic comparison.",
                 ("DECISION-DEP-001",),
                 (
                     "genetic perturbation phenotypes are dependency-supported",
@@ -340,7 +458,7 @@ def derive_uncertainties(ev: Evidence) -> list[ScientificUncertainty]:
                     "chemical-genetic comparisons are not comparable",
                 ),
                 tuple(gaps),
-                ("explanation:on_target", "explanation:off_target"),
+                (),
                 _refs(
                     ("cellular_assessment", _ids(ev, "genetic_dependency_ids")),
                     (
@@ -348,18 +466,18 @@ def derive_uncertainties(ev: Evidence) -> list[ScientificUncertainty]:
                         _ids(ev, "compound_dependency_uncertain_ids"),
                     ),
                 ),
+                ("on_target", "off_target"),
             )
         )
 
-    selectivity = ev.get("selectivity", {"total": 0, "comparable": 0})
-    if phenotype and selectivity["total"] >= 0:
+    if phenotype:
         resolved = selectivity["comparable"] > 0 and not unresolved_sel
         partial = selectivity["comparable"] > 0 and bool(unresolved_sel)
         result.append(
             ScientificUncertainty(
                 "uncertainty:selectivity",
                 "selectivity",
-                "Is the compound phenotype attributable to ERAP1 rather than to "
+                f"Is the compound phenotype attributable to {target} rather than to "
                 "paralogue or other off-target activity?",
                 "resolved_for_current_decision"
                 if resolved
@@ -373,46 +491,49 @@ def derive_uncertainties(ev: Evidence) -> list[ScientificUncertainty]:
                 ("DECISION-SEL-001",),
                 (
                     f"{selectivity['comparable']} of {selectivity['total']} "
-                    "selectivity "
-                    "comparisons are directly comparable",
+                    "selectivity comparisons are directly comparable",
+                    *_selectivity_breakdown(selectivity),
                 ),
                 tuple(gaps),
-                ("explanation:on_target", "explanation:off_target"),
+                (),
                 _refs(("selectivity_assessment", list(unresolved_sel))),
+                ("on_target", "off_target"),
             )
         )
 
     contexts = ev.get("contexts", {})
     if contexts:
-        missing = not contexts.get("allotype_reported", False) or contexts.get(
-            "non_b27_experiments", 0
-        )
+        unmatched = contexts.get("unmatched_context_experiments", 0)
+        missing = not contexts.get("allotype_reported", False) or unmatched
         reasons = []
         if not contexts.get("allotype_reported", False):
-            reasons.append("ERAP1 allotype is unreported in every experiment")
-        if contexts.get("non_b27_experiments", 0):
             reasons.append(
-                f"{contexts['non_b27_experiments']} experiments lack an HLA-B27 context"
+                f"{target} allotype/genotype is unreported in every experiment"
             )
+        if unmatched:
+            reasons.append(f"{unmatched} experiments lack the disease-relevant context")
         result.append(
             ScientificUncertainty(
                 "uncertainty:genetic_context",
                 "genetic_context",
-                "Does the effect depend on the HLA-B27 subtype or ERAP1 allotype "
-                "context?",
+                f"Does the effect depend on the disease-relevant context or on the "
+                f"{target} genotype/allotype?",
                 "open" if missing else "resolved_for_current_decision",
                 "decision_material" if missing else "informative",
                 "directly_testable",
-                "ERAP1 x HLA-B27 biology is context sensitive.",
+                f"{target} biology is context sensitive.",
                 ("DECISION-CTX-001",),
                 tuple(reasons) or ("contexts are reported and matched",),
                 (),
-                ("explanation:context", "explanation:on_target"),
+                (),
                 _refs(("context", list(contexts.get("hla_alleles", [])))),
+                ("context_dependent", "on_target"),
             )
         )
 
-    disagreements = ev.get("source_disagreements", [])
+    disagreements = sorted(
+        ev.get("source_disagreements", []), key=lambda d: d["endpoint"]
+    )
     if disagreements:
         result.append(
             ScientificUncertainty(
@@ -427,12 +548,17 @@ def derive_uncertainties(ev: Evidence) -> list[ScientificUncertainty]:
                 "in different systems.",
                 ("DECISION-REPRO-001",),
                 tuple(
-                    f"{d['endpoint']}: {' vs '.join(d['directions'])}"
+                    f"{d['endpoint']}: {' vs '.join(sorted(d['directions']))}"
                     for d in disagreements
                 ),
                 (),
-                ("explanation:context",),
-                tuple(("readout", r) for d in disagreements for r in d["readout_ids"]),
+                (),
+                tuple(
+                    ("readout", r)
+                    for d in disagreements
+                    for r in sorted(d["readout_ids"])
+                ),
+                ("context_dependent",),
             )
         )
 
@@ -441,8 +567,8 @@ def derive_uncertainties(ev: Evidence) -> list[ScientificUncertainty]:
             ScientificUncertainty(
                 "uncertainty:mechanistic_bridge",
                 "mechanistic_bridge",
-                "Is proximal ERAP1 catalytic modulation shown between engagement and "
-                "the downstream HLA phenotype?",
+                f"Is proximal {target} catalytic modulation shown between "
+                "engagement and the downstream phenotype?",
                 "open",
                 "decision_material",
                 "directly_testable",
@@ -450,14 +576,43 @@ def derive_uncertainties(ev: Evidence) -> list[ScientificUncertainty]:
                 ("DECISION-BRIDGE-001",),
                 ("functional modulation is insufficiently shown",),
                 (),
-                ("explanation:indirect", "explanation:on_target"),
+                (),
                 _refs(("cellular_assessment", _ids(ev, "functional_insufficient_ids"))),
+                ("indirect_pathway", "on_target"),
+            )
+        )
+    elif engagement == "supported" and not phenotype:
+        result.append(
+            ScientificUncertainty(
+                "uncertainty:mechanistic_bridge",
+                "mechanistic_bridge",
+                f"Does demonstrated {target} engagement lead to the relevant "
+                "cellular phenotype?",
+                "open",
+                "decision_material",
+                "directly_testable",
+                "Engagement without phenotype is a distinct state from phenotype "
+                "without engagement.",
+                ("DECISION-BRIDGE-002",),
+                (
+                    "direct cellular engagement is supported",
+                    "no relevant cellular phenotype is supported",
+                ),
+                (),
+                (),
+                _refs(("edge", ["engagement"])),
+                ("indirect_pathway", "on_target"),
             )
         )
 
     disease = _edge(ev, "disease")
     upstream_open = any(
-        u.id in ("uncertainty:target_engagement", "uncertainty:target_dependency")
+        u.id
+        in (
+            "uncertainty:target_engagement",
+            "uncertainty:target_dependency",
+            "uncertainty:assay_translation",
+        )
         and u.status == "open"
         for u in result
     )
@@ -479,13 +634,14 @@ def derive_uncertainties(ev: Evidence) -> list[ScientificUncertainty]:
             (),
             (),
             _refs(("edge", ["disease"])),
+            (),
         )
     )
     result.append(
         ScientificUncertainty(
             "uncertainty:clinical_translation",
             "clinical_translation",
-            "Does modulation have clinical benefit in axial spondyloarthritis?",
+            f"Does modulation of {target} have clinical benefit?",
             "not_actionable",
             "peripheral",
             "currently_not_testable",
@@ -495,6 +651,7 @@ def derive_uncertainties(ev: Evidence) -> list[ScientificUncertainty]:
             (),
             (),
             _refs(("edge", ["clinical"])),
+            (),
         )
     )
     if _ids(ev, "structure_ids"):
@@ -512,6 +669,7 @@ def derive_uncertainties(ev: Evidence) -> list[ScientificUncertainty]:
                 (),
                 (),
                 _refs(("structure", _ids(ev, "structure_ids"))),
+                (),
             )
         )
     return result
@@ -530,6 +688,7 @@ def explanation_links(
 ) -> list[ExplanationEvidenceLink]:
     """Evidence links for one explanation ground; an empty list means ungrounded."""
     rule = GROUND_RULES[ground]
+    target = _target(ev)
     links: list[ExplanationEvidenceLink] = []
 
     def add(relationship: str, kind: str, identifier: str, why: str) -> None:
@@ -545,16 +704,28 @@ def explanation_links(
     phenotype = has_compound_phenotype(ev)
     if ground == "on_target" and phenotype:
         for item in _ids(ev, "biochemical_ids"):
-            add("supports", "measurement", item, "Biochemical activity against ERAP1.")
+            add(
+                "supports",
+                "measurement",
+                item,
+                f"Biochemical activity against {target}.",
+            )
         for item in _ids(ev, "compound_phenotype_ids"):
-            add("supports", "cellular_assessment", item, "Compound phenotype reported.")
+            where = ev.get("context_of", {}).get(item)
+            add(
+                "supports",
+                "cellular_assessment",
+                item,
+                "Compound phenotype reported"
+                + (f" (system: {where})." if where else "."),
+            )
         for item in _ids(ev, "genetic_dependency_ids"):
             add(
                 "supports",
                 "cellular_assessment",
                 item,
-                "Genetic ERAP1 perturbation produces a dependent phenotype in this "
-                "system.",
+                f"Genetic {target} perturbation produces a dependent phenotype in "
+                "this system.",
             )
         if engagement == "supported":
             add("supports", "edge", "engagement", "Direct cellular engagement shown.")
@@ -604,7 +775,7 @@ def explanation_links(
                     "leaves_unresolved",
                     "gap",
                     item,
-                    "Without engagement the phenotype is not attributed to ERAP1.",
+                    f"Without engagement the phenotype is not attributed to {target}.",
                 )
         for item in concordance.get("discordant_ids", []):
             add(
@@ -612,6 +783,21 @@ def explanation_links(
                 "concordance",
                 item,
                 "Compound and genetic phenotypes differ.",
+            )
+        for item in ev.get("selectivity", {}).get("comparable_ids", []):
+            add(
+                "contradicts",
+                "selectivity_assessment",
+                item,
+                "Comparable selectivity reduces, but does not eliminate, off-target "
+                "contribution.",
+            )
+        if engagement == "contradicted":
+            add(
+                "supports",
+                "edge",
+                "engagement",
+                "Phenotype persists although direct engagement was not observed.",
             )
         if engagement == "supported" and selectivity["comparable"] > 0:
             add(
@@ -635,18 +821,20 @@ def explanation_links(
             add(
                 "leaves_unresolved",
                 "context",
-                "erap1_allotype",
-                "ERAP1 allotype is unreported in every experiment.",
+                "target_allotype",
+                f"{target} allotype is unreported in every experiment.",
             )
-        if contexts.get("non_b27_experiments", 0):
+        if contexts.get("unmatched_context_experiments", 0):
             add(
                 "context_limits",
                 "context",
-                "non_b27_systems",
-                "Some systems lack an HLA-B27 context.",
+                "unmatched_context_systems",
+                "Some systems lack the disease-relevant context.",
             )
-        for item in ev.get("source_disagreements", []):
-            for readout in item["readout_ids"]:
+        for item in sorted(
+            ev.get("source_disagreements", []), key=lambda d: d["endpoint"]
+        ):
+            for readout in sorted(item["readout_ids"]):
                 add(
                     "context_limits",
                     "readout",
@@ -657,7 +845,11 @@ def explanation_links(
 
 
 def explanation_status(links: list[ExplanationEvidenceLink]) -> str:
-    """DECISION-EXPL-001; raises for an ungrounded explanation."""
+    """DECISION-EXPL-001; raises for an ungrounded explanation.
+
+    Counter-evidence that leaves open items (or coexists with support) is
+    *weakened*; counter-evidence with nothing else is *contradicted*.
+    """
     if not links:
         raise ValueError("explanation has no grounded evidence link")
     count = {
@@ -668,7 +860,7 @@ def explanation_status(links: list[ExplanationEvidenceLink]) -> str:
         count[link.relationship] += 1
     support, contradict = count["supports"], count["contradicts"]
     open_items = count["leaves_unresolved"] + count["context_limits"]
-    if support and contradict:
+    if contradict and (support or open_items):
         return "weakened"
     if contradict:
         return "contradicted"
@@ -699,6 +891,29 @@ def discrimination(
     }
 
 
+def falsification(
+    interpretations: dict[str, dict[str, str]],
+    scenario_kinds: dict[str, str],
+    statuses: dict[str, str],
+) -> dict[str, Any]:
+    """DECISION-EXP-005: can an interpretable scenario weaken a preferred one?"""
+    preferred = sorted(e for e, s in statuses.items() if s in PREFERRED_STATUSES)
+    if not preferred:
+        preferred = sorted(e for e, s in statuses.items() if s != "contradicted")
+    weakening = sorted(
+        scenario
+        for scenario, effects in interpretations.items()
+        if scenario_kinds.get(scenario) != "non_interpretable"
+        and any(EFFECT_SIGN.get(effects.get(e, ""), 0) < 0 for e in preferred)
+    )
+    return {
+        "falsifying": bool(weakening),
+        "preferred_explanations": preferred,
+        "weakening_scenarios": weakening,
+        "rule": "DECISION-EXP-005",
+    }
+
+
 def interpretability(
     profile: dict[str, Any], scenario_kinds: list[str]
 ) -> dict[str, Any]:
@@ -724,23 +939,55 @@ def _unestablished(profile: dict[str, Any]) -> int:
     )
 
 
+CANDIDATE_CRITERIA = (
+    "falsification (able to weaken a preferred explanation)",
+    "explanation pairs separated",
+    "distinct next actions across outcomes",
+    "interpretability",
+    "target proximity",
+    "unestablished prerequisites",
+)
+
+
+def candidate_key(item: dict[str, Any]) -> list[int]:
+    """Scientific criteria only; the identifier is deliberately not a criterion."""
+    return [
+        0 if item["falsification"]["falsifying"] else 1,
+        -len(item["discrimination"]["separated_pairs"]),
+        -item["distinct_consequences"],
+        INTERPRETABILITY_RANK[item["interpretability"]["level"]],
+        PROXIMITY_RANK[item["profile"]["target_proximity"]],
+        _unestablished(item["profile"]),
+    ]
+
+
 def rank_candidates(analyses: list[dict[str, Any]]) -> list[dict[str, Any]]:
-    """DECISION-EXP-003. Adds ``rank_key`` and ``excluded`` to each analysis."""
+    """DECISION-EXP-003. Adds ``rank_key``, ``excluded`` and ``tied_with``.
+
+    Input order never matters: candidates are sorted by criteria, then by id only to
+    give ties a stable display order; ties are reported, not resolved.
+    """
     for item in analyses:
-        item["rank_key"] = [
-            -len(item["discrimination"]["separated_pairs"]),
-            -item["distinct_consequences"],
-            INTERPRETABILITY_RANK[item["interpretability"]["level"]],
-            PROXIMITY_RANK[item["profile"]["target_proximity"]],
-            _unestablished(item["profile"]),
-            item["experiment_id"],
-        ]
+        item["rank_key"] = candidate_key(item)
         item["excluded"] = (
             "feasibility is blocked"
             if item["feasibility"]["level"] == "blocked"
             else None
         )
-    return sorted(analyses, key=lambda a: (a["excluded"] is not None, a["rank_key"]))
+    ordered = sorted(
+        analyses,
+        key=lambda a: (a["excluded"] is not None, a["rank_key"], a["experiment_id"]),
+    )
+    for item in ordered:
+        item["tied_with"] = sorted(
+            other["experiment_id"]
+            for other in ordered
+            if other is not item
+            and other["excluded"] is None
+            and item["excluded"] is None
+            and other["rank_key"] == item["rank_key"]
+        )
+    return ordered
 
 
 CRITERIA = (
@@ -752,12 +999,32 @@ CRITERIA = (
 )
 
 
+def _critical_key(
+    u: ScientificUncertainty,
+    viable_explanations: set[str],
+    candidate_info: dict[str, dict[str, int]],
+) -> tuple[int, ...]:
+    info = candidate_info.get(u.category, {"count": 0, "consequences": 0})
+    affected = len([e for e in u.affected_explanation_ids if e in viable_explanations])
+    return (
+        RELEVANCE_RANK[u.decision_relevance],
+        -affected,
+        RESOLVABILITY_RANK[u.resolvability],
+        0 if info["count"] else 1,
+        -info["consequences"],
+    )
+
+
 def select_critical(
     uncertainties: list[ScientificUncertainty],
     viable_explanations: set[str],
     candidate_info: dict[str, dict[str, int]],
 ) -> dict[str, Any]:
-    """DECISION-CRIT-001: pick one open, testable uncertainty and say why."""
+    """DECISION-CRIT-001: pick one open, testable uncertainty and say why.
+
+    Input order does not matter; exact ties on every criterion are reported in
+    ``tied_with`` and only then ordered by id for stable display.
+    """
     eligible = [
         u
         for u in uncertainties
@@ -766,21 +1033,11 @@ def select_critical(
     ]
 
     def key(u: ScientificUncertainty) -> tuple[int, ...]:
-        info = candidate_info.get(u.category, {"count": 0, "consequences": 0})
-        affected = len(
-            [e for e in u.affected_explanation_ids if e in viable_explanations]
-        )
-        return (
-            RELEVANCE_RANK[u.decision_relevance],
-            -affected,
-            RESOLVABILITY_RANK[u.resolvability],
-            0 if info["count"] else 1,
-            -info["consequences"],
-        )
+        return _critical_key(u, viable_explanations, candidate_info)
 
     ranked = sorted(eligible, key=lambda u: (key(u), u.id))
     others = []
-    for u in uncertainties:
+    for u in sorted(uncertainties, key=lambda u: u.id):
         if ranked and u.id == ranked[0].id:
             continue
         if u not in eligible:
@@ -805,24 +1062,32 @@ def select_critical(
                     )
                     if a != b
                 ),
-                len(CRITERIA),
+                None,
             )
-            others.append(
-                {
-                    "uncertainty_id": u.id,
-                    "reason": "not selected: lower on "
-                    + (
-                        CRITERIA[deciding]
-                        if deciding < len(CRITERIA)
-                        else "the final identifier tie-break"
-                    )
+            if deciding is None:
+                reason = (
+                    "not selected: tied with the selected uncertainty on every "
+                    "criterion; identifier order is a display convention only"
+                )
+            else:
+                reason = (
+                    "not selected: lower on "
+                    + CRITERIA[deciding]
                     + f" ({u.decision_relevance.replace('_', ' ')}, "
                     f"{u.resolvability.replace('_', ' ')}) than "
-                    f"{winner.category.replace('_', ' ')}",
-                }
-            )
+                    f"{winner.category.replace('_', ' ')}"
+                )
+            others.append({"uncertainty_id": u.id, "reason": reason})
     if not ranked:
-        return {"selected": None, "reasons": [], "alternatives": others}
+        return {
+            "selected": None,
+            "reasons": [],
+            "alternatives": others,
+            "tied_with": [],
+            "rule": "DECISION-CRIT-001",
+            "message": "No open, testable uncertainty meets the criticality criteria; "
+            "no next discriminating experiment is currently justified.",
+        }
     winner = ranked[0]
     info = candidate_info.get(winner.category, {"count": 0, "consequences": 0})
     return {
@@ -844,5 +1109,6 @@ def select_critical(
             *winner.reasons,
         ],
         "alternatives": others,
+        "tied_with": sorted(u.id for u in ranked[1:] if key(u) == key(winner)),
         "rule": "DECISION-CRIT-001",
     }

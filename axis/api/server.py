@@ -80,6 +80,8 @@ class ReadAPI:
             "trace": state["trace"],
             "graph": state["graph"],
             "diff": state["diff"],
+            "sensitivity": state["sensitivity"],
+            "review": state["review"],
         }
 
     def get(self, path: str, query: dict[str, list[str]]) -> dict[str, Any]:

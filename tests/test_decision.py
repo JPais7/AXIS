@@ -262,7 +262,7 @@ def test_resolved_gap_changes_status_and_critical(imported):
 
 
 def test_rules_have_stable_identifiers_and_versions():
-    assert rules.RULES_VERSION == "axis-decision-1"
+    assert rules.RULES_VERSION == "axis-decision-2"
     for rule_id, rule in rules.RULES.items():
         assert rule.id == rule_id and rule.version == "1"
         assert rule.description and rule.inputs and rule.output and rule.rationale

@@ -2,6 +2,10 @@
 
 Companion to [the design document](phase3-experimental-decision-engine.md).
 
+> Updated by Phase 3.5A: rule counts (20 → 23), rule-set version (`axis-decision-1` →
+> `axis-decision-2`), the `weakened` status definition and test totals changed during
+> the acceptance audit. See [the acceptance report](phase35-scientific-decision-acceptance-report.md).
+
 ## 1–5. Baseline and commits
 
 | Field | Value |

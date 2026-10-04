@@ -184,6 +184,8 @@ class ScientificUncertainty:
     source_gap_ids: tuple[str, ...] = ()
     affected_explanation_ids: tuple[str, ...] = ()
     evidence_refs: tuple[tuple[str, str], ...] = ()
+    affected_grounds: tuple[str, ...] = ()
+    epistemic_kind: str = "axis_inference"
 
     def __post_init__(self) -> None:
         _in(self.category, UNCERTAINTY_CATEGORIES, "category")
