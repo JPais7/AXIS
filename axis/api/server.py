@@ -14,6 +14,7 @@ from urllib.parse import parse_qs, unquote, urlsplit
 
 from axis.discovery.workspace import WorkspaceService, page
 from axis.storage import EvidenceStore, RecordNotFoundError
+from axis.structures.service import StructureIdentityService
 from axis.targets.identity import TargetIdentityService
 
 
@@ -78,6 +79,46 @@ class ReadAPI:
                         limit,
                         offset,
                     )
+                if len(parts) >= 6 and parts[5] == "structures":
+                    structural = StructureIdentityService(self.store)
+                    protein = parts[4]
+                    if len(parts) == 6:
+                        ids = self.store.structures.list_ids(project_id, protein)
+                        return page(
+                            [
+                                structural.projection(project_id, protein, i)
+                                for i in ids[offset : offset + limit]
+                            ],
+                            len(ids),
+                            limit,
+                            offset,
+                        )
+                    if len(parts) not in (7, 8):
+                        raise RecordNotFoundError("structure route not found")
+                    identity = parts[6]
+                    data = structural.projection(project_id, protein, identity)
+                    if len(parts) == 7:
+                        return data
+                    if parts[7] == "chains":
+                        return {"chains": data["chains"]}
+                    if parts[7] == "mapping":
+                        return structural.mapping(project_id, protein, identity)
+                    if parts[7] == "provenance":
+                        return {
+                            "snapshot": data["snapshot"],
+                            "mappings": structural.mapping(
+                                project_id, protein, identity
+                            ),
+                        }
+                    if parts[7] == "coordinates":
+                        return {
+                            "format": "mmcif",
+                            "raw_sha256": data["structure"]["raw_file_checksum"],
+                            "content": self.store.structures.coordinates(
+                                identity
+                            ).decode(),
+                        }
+                    raise RecordNotFoundError("structure route not found")
                 if len(parts) not in (5, 6):
                     raise RecordNotFoundError("target route not found")
                 projection = service.projection(project_id, parts[4])

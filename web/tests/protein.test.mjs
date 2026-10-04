@@ -33,6 +33,13 @@ test('sequence numbering and copy are explicit and sequence area is keyboard foc
   assert.match(html, /role="status"/);
 });
 
+test('imported structures replace the absence message with scoped navigation', () => {
+  const html = views.TargetIdentityCard({...item,structure_count:1});
+  assert.match(html,/View 1 imported experimental structure/);
+  assert.match(html,/data-structures="P1"/);
+  assert.doesNotMatch(html,/No structure records have been imported/);
+});
+
 test('provenance drawer preserves unknown release and exposes both checksums', () => {
   const html = views.ProteinProvenance(item);
   assert.match(html, /Close protein provenance/);

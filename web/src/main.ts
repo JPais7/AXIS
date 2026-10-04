@@ -1,4 +1,5 @@
 import './style.css';
+import { mountStructure, structureContent } from './structure-ui';
 import { ProteinProvenance, TargetIdentityCard } from './protein';
 import type { TargetProjection } from './types';
 import { AppShell, ClaimButton, ContextComparison, ContextTable, EmptyState, ErrorState, escape, EvidenceGraph, EvidenceMatrix, EvidenceState, ExperimentCard, KnowledgeKindBadge, label, LoadingState, OpenQuestionCard, PerformedPerturbationPreview, ProjectHeader, ProvenanceBadge, SourceCard, StrategyCard, Transformations } from './components';
@@ -9,6 +10,7 @@ if (!root) throw new Error('Workspace root is missing');
 const app = root;
 let projectId = 'AXIS-DD-ERAP1-CURATED-001';
 let route = 'overview';
+let structureCleanup: (() => void) | null = null;
 let offset = 0;
 let domain = '';
 let generation = 0;
@@ -59,6 +61,7 @@ async function strategyView(): Promise<string> {
   }).join('')}</div>${pagination(strategies)}<p class="caption">Related assessments and perturbations are bounded to 100 each. ${assessments.has_more || perturbations.has_more || evidence.has_more ? 'Additional related records exist; inspect Evidence and Perturbations pages.' : 'All current related records fit within these bounds.'}</p>`;
 }
 async function content(project: Project): Promise<string> {
+  if (route === 'structures') return structureContent(api,projectId);
   if (route === 'protein') {
     const page = await collection<TargetProjection>('targets');
     return `<p class="intro">Gene → source-backed mapping → protein → isoform → snapshot. Identity infrastructure is separate from disease evidence.</p>${page.items.map(TargetIdentityCard).join('') || EmptyState('No protein identity imported for this project. Use an explicit frozen-package or live source import.')}<p><a data-nav href="${path('evidence')}">Return to disease evidence →</a></p>${pagination(page)}`;
@@ -90,6 +93,8 @@ async function content(project: Project): Promise<string> {
   return `<p class="intro">Primary publications and proposal provenance remain distinct. Open a source to trace its derived claims and import transformations.</p><div class="source-grid">${page.items.map(SourceCard).join('')}</div>${pagination(page)}`;
 }
 async function render(): Promise<void> {
+  structureCleanup?.();
+  structureCleanup = null;
   const current = ++generation;
   const parts = location.pathname.split('/').filter(Boolean);
   if (parts[0] === 'projects' && parts[1]) {
@@ -99,7 +104,7 @@ async function render(): Promise<void> {
   }
   route = parts[0] === 'projects' && parts[1] ? (parts[2] || 'overview') : (parts[0] || 'overview');
   const allowed = ['home', 'projects', 'targets', 'overview', 'evidence', 'mechanism', 'perturbations', 'strategies', 'questions', 'experiments', 'sources'];
-  if (!allowed.includes(route) && route !== 'protein') route = 'overview';
+  if (!allowed.includes(route) && !['protein','structures'].includes(route)) route = 'overview';
   const params = new URLSearchParams(location.search);
   offset = Number(params.get('offset')) || 0;
   domain = params.get('domain') || '';
@@ -112,9 +117,12 @@ async function render(): Promise<void> {
     } else {
       const project = await api<Project>(`projects/${encodeURIComponent(projectId)}`);
       const titles: Record<string, string> = { overview: 'ERAP1 × Axial Spondyloarthritis', evidence: 'Evidence', mechanism: 'Mechanism', perturbations: 'Perturbations', strategies: 'Competing intervention strategies', questions: 'Open questions', experiments: 'Next experiment', sources: 'Sources & provenance' };
-      html = ProjectHeader(project, route === 'protein' ? 'Target / Protein' : titles[route] || 'Overview') + await content(project);
+      html = ProjectHeader(project, route === 'protein' ? 'Target / Protein' : route === 'structures' ? 'Experimental structures' : titles[route] || 'Overview') + await content(project);
     }
-    if (current === generation) app.innerHTML = AppShell(projectId, route, html);
+    if (current === generation) {
+      app.innerHTML = AppShell(projectId, route, html);
+      if (route === 'structures') structureCleanup = await mountStructure();
+    }
   } catch (error) { if (current === generation) app.innerHTML = AppShell(projectId, route, ErrorState(error instanceof Error ? error.message : 'Unable to read records.')); }
 }
 function navigate(url: string): void { history.pushState({}, '', new URL(url, location.href)); void render().then(() => document.querySelector<HTMLElement>('#main')?.focus()); window.scrollTo(0, 0); }
@@ -180,6 +188,7 @@ document.addEventListener('click', event => {
   if (!target || target.hasAttribute('disabled')) return;
   if (target.matches('a[data-nav]')) { event.preventDefault(); navigate(target.getAttribute('href') || '/'); }
   else if (target.dataset.claim) void EvidenceDrawer(target.dataset.claim);
+  else if (target.dataset.structures) navigate(`${path('structures')}?protein=${encodeURIComponent(target.dataset.structures)}`);
   else if (target.dataset.proteinSource) void proteinDrawer(target.dataset.proteinSource);
   else if (target.dataset.copySequence) {
     const status = target.parentElement?.querySelector('.copy-status');

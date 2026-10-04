@@ -128,6 +128,9 @@ class EvidenceStore:
         from axis.storage.targets import TargetRepository
 
         self.targets = TargetRepository(self)
+        from axis.storage.structures import StructureRepository
+
+        self.structures = StructureRepository(self)
 
     def __enter__(self) -> Self:
         return self

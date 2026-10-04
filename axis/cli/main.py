@@ -75,6 +75,7 @@ from axis.analysis import (
     write_sample_sheet_template,
 )
 from axis.cli.discovery import app as discovery_app
+from axis.cli.structure_identity import app as structure_app
 from axis.cli.target_identity import app as target_app
 from axis.cli.workspace import serve
 from axis.domain import Study
@@ -129,6 +130,7 @@ app = typer.Typer(
 )
 app.add_typer(discovery_app, name="discovery")
 app.add_typer(target_app, name="target")
+app.add_typer(structure_app, name="structure")
 
 app.command("serve")(serve)
 console = Console()

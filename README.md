@@ -791,3 +791,15 @@ spondylitis evidence is not silently generalized to all axSpA.
 The server exclusively owns its store; stop it before CLI access to that file.
 See [workspace instructions](web/README.md) and
 [the Phase 2 implementation report](docs/phase2-erap1-workspace-report.md).
+
+### Protein and experimental structure identity (Phases 3.1–3.2)
+
+The identity workspace supports the pinned ERAP1 UniProt sequence and a frozen
+experimental 3QNF reference: explicit deposited construct, three protein chains,
+chain-specific residue mapping/coordinate coverage, source snapshots and a
+lazy-loaded local NGL 3D viewer. Schema 6 is additive. Imported structural
+components are observations, not compounds, inhibitors or drugs.
+
+See [structure identity and reproduction instructions](docs/phase3-structure-identity.md)
+and [validation report](docs/phase3-structure-identity-implementation-report.md).
+The structure alone does not establish druggability, efficacy or disease relevance.

@@ -74,7 +74,8 @@ axis --database identity.duckdb target verify Q9NZ08
 axis --database identity.duckdb serve
 ```
 
-The server requires schema 5 to have been initialized explicitly before read-only
+Phase 3.1 introduced schema 5; Phase 3.2 extends it additively to schema 6.
+The current server requires the latest schema initialized before read-only
 serving. Stop any server owning a database before attempting CLI migration/import.
 Use `--directory` to import an explicitly selected frozen directory.
 `target verify` checks persisted sequence integrity; it does not establish authenticity

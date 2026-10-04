@@ -8,7 +8,7 @@ homepage = "https://github.com/JPais7/AXIS"
 repository = "https://github.com/JPais7/AXIS"
 readme = "README.md"
 packages = [{ include = "axis" }]
-include = ["axis/resources/demo/*.tsv", "axis/resources/demo/*.json", "axis/resources/discovery/**/*", "axis/resources/workspace/**/*", "axis/resources/targets/**/*"]
+include = ["axis/resources/demo/*.tsv", "axis/resources/demo/*.json", "axis/resources/discovery/**/*", "axis/resources/workspace/**/*", "axis/resources/targets/**/*", "axis/resources/structures/**/*"]
 keywords = [
     "bioinformatics",
     "transcriptomics",
@@ -40,6 +40,7 @@ rich = ">=14,<15"
 numpy = ">=2.3,<3.0"
 scipy = ">=1.16,<2.0"
 matplotlib = ">=3.10,<4.0"
+gemmi = "0.7.5"
 
 [tool.poetry.group.dev.dependencies]
 mypy = "^1.17"

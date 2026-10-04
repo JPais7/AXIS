@@ -10,7 +10,9 @@ test('protein identity, sequence and snapshot remain separate from disease evide
     await expect(page.getByRole('heading', { name: 'Target / Protein', exact: true })).toBeVisible();
     await expect(page.getByRole('heading', { name: /Q9NZ08 · Endoplasmic/ })).toBeVisible();
     for (const name of ['Gene', 'Protein', 'Isoform', 'Source']) await expect(page.getByRole('heading', { name, exact: true })).toBeVisible();
-    await expect(page.getByText('No structure records have been imported into AXIS for this target.', { exact: true })).toBeVisible();
+    const structures = page.getByRole('button', { name: /View \d+ imported experimental structure/ });
+    if (await structures.count()) await expect(structures).toBeVisible();
+    else await expect(page.getByText('No structure records have been imported into AXIS for this target.', { exact: true })).toBeVisible();
     await expect(page.locator('.protein-sequence')).toContainText('941');
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBeTruthy();
     const source = page.getByRole('button', { name: 'UniProt · Q9NZ08 · inspect provenance', exact: true });
