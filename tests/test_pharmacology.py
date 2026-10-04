@@ -397,7 +397,7 @@ def test_migration_6_to_7_preserves_legacy(tmp_path):
     with pytest.raises(ValueError, match="migration"):
         EvidenceStore(path, read_only=True)
     with EvidenceStore(path) as store:
-        assert store.statistics().schema_version == 11
+        assert store.statistics().schema_version == 12
         protein, service = init(store)
         service.import_package(PROJECT, protein)
     with EvidenceStore(path, read_only=True) as store:

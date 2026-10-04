@@ -182,7 +182,7 @@ def test_unknown_or_different_hla_not_contradiction():
 
 def test_imported_boundaries_and_scopes(imported):
     store, protein, service = imported
-    assert store.statistics().schema_version == 11
+    assert store.statistics().schema_version == 12
     assert store.cellular.collection(PROJECT, protein, "experiments")["total"] == 11
     assert (
         store.cellular.collection(PROJECT, protein, "assessments", 100)["total"] == 37
@@ -346,7 +346,7 @@ def test_migration_7_to_8(tmp_path):
     with pytest.raises(ValueError, match="migration"):
         EvidenceStore(path, read_only=True)
     with EvidenceStore(path) as store:
-        assert store.statistics().schema_version == 11
+        assert store.statistics().schema_version == 12
         protein, service = init(store)
         expected = service.chain(PROJECT, protein)
     with EvidenceStore(path, read_only=True) as store:

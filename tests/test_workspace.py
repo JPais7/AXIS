@@ -157,7 +157,7 @@ def test_store_exclusive_ownership_readonly_and_release(tmp_path):
         with pytest.raises(duckdb.Error):
             store._connection.execute("CREATE TABLE forbidden (value INTEGER)")
     with EvidenceStore(database) as store:
-        assert store.statistics().schema_version == 11
+        assert store.statistics().schema_version == 12
     broken = tmp_path / "broken.duckdb"
     broken.write_text("not a DuckDB database")
     for _ in range(2):
