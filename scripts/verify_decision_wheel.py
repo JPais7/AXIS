@@ -3,6 +3,7 @@
 import hashlib
 import json
 import socket
+from datetime import UTC, datetime
 from importlib import resources
 from unittest.mock import patch
 
@@ -11,12 +12,14 @@ import httpx
 import axis
 from axis.api.server import ReadAPI
 from axis.cellular.service import CellularPharmacologyService
+from axis.decision.service import DecisionService
 from axis.discovery.curation import import_curated_erap1
 from axis.pharmacology.service import PharmacologyService
 from axis.storage import EvidenceStore
 from axis.targets.identity import TargetIdentityService
 
 PROJECT = "AXIS-DD-ERAP1-CURATED-001"
+FIXED = datetime(2026, 10, 4, 18, 0, tzinfo=UTC)
 
 
 def deny(*args: object, **kwargs: object) -> None:
@@ -24,9 +27,14 @@ def deny(*args: object, **kwargs: object) -> None:
 
 
 def main() -> None:
-    root = resources.files("axis").joinpath("resources/cellular/erap1-axspa/v1")
+    root = resources.files("axis").joinpath("resources/decision/erap1-axspa/v1")
     digest = hashlib.sha256(root.joinpath("manifest.json").read_bytes()).hexdigest()
     assert digest == root.joinpath("manifest.sha256").read_text().strip()
+    assert (
+        resources.files("axis.storage.migrations")
+        .joinpath("009_experimental_decision.sql")
+        .is_file()
+    )
     results = []
     with (
         patch.object(socket.socket, "connect", deny),
@@ -38,30 +46,25 @@ def main() -> None:
                 import_curated_erap1(store)
                 protein = TargetIdentityService(store).import_package(PROJECT)
                 PharmacologyService(store).import_package(PROJECT, protein)
-                service = CellularPharmacologyService(store)
+                CellularPharmacologyService(store).import_package(PROJECT, protein)
+                service = DecisionService(store)
                 assert service.import_package(PROJECT, protein) == (
                     service.import_package(PROJECT, protein)
                 )
                 assert store.statistics().schema_version == 9
-                result = [
-                    store.cellular.collection(PROJECT, protein, k, 100)
-                    for k in (
-                        "experiments",
-                        "readouts",
-                        "assessments",
-                        "immunopeptidome",
-                    )
-                ]
-                result += [
-                    service.chain(PROJECT, protein),
-                    service.gaps(PROJECT, protein),
-                    service.review_packet(PROJECT, protein),
-                ]
+                state = service.build(PROJECT, protein, created_at=FIXED)
+                assert state == service.build(PROJECT, protein, created_at=FIXED)
                 api = ReadAPI(store)
-                assert api.get(
-                    f"/api/projects/{PROJECT}/targets/{protein}/cellular", {}
-                )
-                results.append(result)
+                for route in (
+                    "decision",
+                    "decision/history",
+                    "uncertainties",
+                    "explanations",
+                    "candidate-experiments",
+                    "decision-trace",
+                ):
+                    assert api.get(f"/api/projects/{PROJECT}/{route}", {})
+                results.append(json.dumps(state, sort_keys=True, default=str))
     assert results[0] == results[1]
     print(
         json.dumps(
@@ -70,9 +73,9 @@ def main() -> None:
                 "schema": 9,
                 "manifest_sha256": digest,
                 "two_store_offline_replay": True,
-                "experiments": results[0][0]["total"],
-                "readouts": results[0][1]["total"],
-                "assessments": results[0][2]["total"],
+                "critical_uncertainty": state["critical_uncertainty_id"],
+                "recommended_experiment": state["recommended_experiment_id"],
+                "rules_version": state["rules_version"],
             },
             indent=2,
         )

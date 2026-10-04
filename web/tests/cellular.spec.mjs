@@ -38,8 +38,8 @@ for(const width of [1440,1024]) {
     const engagement=page.locator('.evidence-ladder li').filter({has:page.getByRole('heading',{name:'Direct cellular target engagement',exact:true})});
     await expect(engagement).toContainText('not assessed');
     await engagement.scrollIntoViewIfNeeded();await shot('missing-engagement');
-    await page.goto(`${project}/decision?compound=compound%3Amaben-2`);
-    await expect(page.getByRole('heading',{name:'Decision',exact:true})).toBeVisible();
+    await page.goto(`${project}/cellular-decision?compound=compound%3Amaben-2`);
+    await expect(page.getByRole('heading',{name:'Cellular decision view',exact:true})).toBeVisible();
     await expect(page.getByText(/Does Maben compound 2 directly engage ERAP1/)).toBeVisible();
     await shot('decision');
     await page.goto(`${project}/cellular-next?compound=compound%3Amaben-2`);

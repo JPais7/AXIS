@@ -52,7 +52,7 @@ with (
             assert data["compounds"]["total"] == 3
             assert data["measurements"]["total"] == 15
             assert data["assays"]["total"] == 7
-            assert store.statistics().schema_version == 8
+            assert store.statistics().schema_version == 9
             data["details"] = [
                 service.detail(project, protein, "compounds", i) for i in ids
             ]

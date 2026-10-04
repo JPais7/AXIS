@@ -63,7 +63,7 @@ test('scientific workspace, evidence drawer and provenance traversal', async ({ 
   await page.getByRole('link', { name: 'Open Questions', exact: true }).click();
   await expect(page.getByText('UNRESOLVED SCIENTIFIC QUESTION', { exact: false }).first()).toBeVisible();
   await page.getByRole('link', { name: 'Next Experiment', exact: true }).click();
-  await expect(page.locator('.outcomes section')).toHaveCount(14);
+  await expect(page.locator('.outcomes section')).toHaveCount(35); // 14 curated+cellular scenarios + 21 Phase 3.5 candidate-experiment scenarios
   await expect(page.getByText('AXIS SUGGESTION — NOT EXPERIMENTAL EVIDENCE', { exact: false }).first()).toBeVisible();
   await page.screenshot({ path: `${screenshots}/next-experiment.png`, fullPage: true });
   await page.getByRole('link', { name: 'Sources', exact: true }).click();

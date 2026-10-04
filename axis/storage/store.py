@@ -137,6 +137,9 @@ class EvidenceStore:
         from axis.storage.cellular import CellularRepository
 
         self.cellular = CellularRepository(self)
+        from axis.storage.decision import DecisionRepository
+
+        self.decisions = DecisionRepository(self)
 
     def __enter__(self) -> Self:
         return self

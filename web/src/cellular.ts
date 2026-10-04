@@ -34,7 +34,7 @@ export async function cellularContent(api: API, project: string, route: string):
   const compound=params.get('compound');
   const prefix=`projects/${encodeURIComponent(project)}/targets/${encodeURIComponent(protein)}/cellular`;
   const q=compound?'?compound='+encodeURIComponent(compound):'';
-  const navigation: [string,string][] = [['chemistry','Chemistry'],['pharmacology','Pharmacology'],['cellular','Cellular Evidence'],['cellular-comparison','Genetic vs chemical'],['cellular-phenotypes','HLA phenotype'],['decision','Decision'],['cellular-next','Next discriminating experiment']];
+  const navigation: [string,string][] = [['chemistry','Chemistry'],['pharmacology','Pharmacology'],['cellular','Cellular Evidence'],['cellular-comparison','Genetic vs chemical'],['cellular-phenotypes','HLA phenotype'],['cellular-decision','Cellular decision view'],['cellular-next','Next discriminating experiment']];
   const nav=`<p>${navigation.map(([r,t])=>`<a data-nav href="${link(project,r,compound)}">${t}</a>`).join(' · ')}</p>`;
   const intro='<p class="intro">AI-assisted curation · pending expert review. Chemical exposure ≠ direct engagement ≠ functional modulation ≠ phenotype ≠ therapeutic efficacy. No overall score.</p>';
   if(route==='cellular-comparison') {
@@ -46,7 +46,7 @@ export async function cellularContent(api: API, project: string, route: string):
     return intro+nav+page.items.map(r=>`<article class="card"><h2>${escape(text(r.endpoint))}</h2>${cellularFields(r)}<button data-cellular-experiment="${escape(text(r.experiment_id))}" data-cellular-protein="${escape(protein)}">Inspect experiment and HLA context</button>${r.claim_id?`<button data-claim="${escape(text(r.claim_id))}">Inspect historical source assertion</button>`:''}</article>`).join('');
   }
   const chain=await api<Chain>(prefix+'/evidence-chain'+q);
-  if(route==='decision'||route==='cellular-next') {
+  if(route==='cellular-decision'||route==='cellular-next') {
     const gaps=await api<{items:Fields[]}>(prefix+'/gaps'+q);
     return intro+nav+'<h2>What we know / what we do not know</h2>'+evidenceLadder(chain,protein)+'<h2>Critical uncertainty and next discriminating experiment</h2>'+gaps.items.map(g=>`<article class="card"><h3>${escape(text(g.question))}</h3><p>AXIS proposal — not experimental evidence.</p><p>${escape(text(g.proposal_title))}</p><a data-nav href="${link(project,'experiments',null)}">Inspect proposal controls and alternative outcome scenarios</a></article>`).join('')+(gaps.items.length?'':EmptyState('No generated proposal imported; do not infer a next experiment.'));
   }

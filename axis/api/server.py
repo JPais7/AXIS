@@ -13,6 +13,7 @@ from typing import Any
 from urllib.parse import parse_qs, unquote, urlsplit
 
 from axis.cellular.service import CellularPharmacologyService
+from axis.decision.service import DecisionService
 from axis.discovery.workspace import WorkspaceService, page
 from axis.pharmacology.service import PharmacologyService
 from axis.storage import EvidenceStore, RecordNotFoundError
@@ -30,6 +31,56 @@ class ReadAPI:
     def __init__(self, store: EvidenceStore) -> None:
         self.store = store
         self.workspace = WorkspaceService(store)
+
+    def _decision(self, parts: list[str], limit: int, offset: int) -> dict[str, Any]:
+        project, kind = parts[2], parts[3]
+        proteins = self.store.targets.project_ids(project)
+        if len(proteins) != 1:
+            raise RecordNotFoundError("decision requires exactly one project protein")
+        protein = proteins[0]
+        service = DecisionService(self.store)
+        tail = parts[4:]
+        if kind == "decision" and tail == ["history"]:
+            return self.store.decisions.history(project, protein, limit, offset)
+        if kind == "candidate-experiments" and len(tail) == 1:
+            return service.candidate(project, protein, tail[0])
+        if tail:
+            raise RecordNotFoundError("decision route not found")
+        if kind == "decision":
+            state = self.store.decisions.latest_state(project, protein)
+            if state is None:
+                return {
+                    "state": None,
+                    "message": "No DecisionState has been built for this project; "
+                    "run `axis decision build`.",
+                }
+            return {"state": state}
+        state = service.current(project, protein)
+        if kind == "uncertainties":
+            return {
+                "items": state["uncertainties"],
+                "critical": state["critical"],
+                "state_id": state["id"],
+            }
+        if kind == "explanations":
+            return {
+                "items": state["explanations"],
+                "not_admitted": state["excluded_explanations"],
+                "state_id": state["id"],
+            }
+        if kind == "candidate-experiments":
+            return {
+                "items": state["candidates"],
+                "recommended_experiment_id": state["recommended_experiment_id"],
+                "constraints": state["constraints"],
+                "state_id": state["id"],
+            }
+        return {
+            "state_id": state["id"],
+            "trace": state["trace"],
+            "graph": state["graph"],
+            "diff": state["diff"],
+        }
 
     def get(self, path: str, query: dict[str, list[str]]) -> dict[str, Any]:
         if any(
@@ -75,6 +126,22 @@ class ReadAPI:
             and parts[3] == "targets"
             and parts[5] == "cellular"
         )
+        decision_route = (
+            len(parts) >= 4
+            and parts[:2] == ["api", "projects"]
+            and parts[3]
+            in {
+                "decision",
+                "uncertainties",
+                "explanations",
+                "candidate-experiments",
+                "decision-trace",
+            }
+        )
+        if decision_route:
+            if chemical_filters:
+                raise ValueError("decision routes do not support filters")
+            return self._decision(parts, limit, offset)
         if cellular_route:
             if any(k != "compound" for k in chemical_filters):
                 raise ValueError("cellular route only supports compound filter")
