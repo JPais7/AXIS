@@ -16,7 +16,14 @@
 No method was tuned on Maben activity data, and none is claimed to predict it. Maben
 compounds appear only as reference chemistry. No held-out evaluation set exists.
 
+## External identity
+
+Bestatin, captopril and vorinostat were verified against PubChem by InChIKey
+(frozen in `erap1/v1/external-identity.json`). The check caught a wrong hand-typed
+captopril stereocentre, now corrected. Identity verification is not pharmacology: their
+inclusion is a hypothesis, and AXIS indexes no ERAP1 evidence for them.
+
 ## Residual risks
 
-Three exploration molecules are researcher-typed SMILES, unverified against
-ChEMBL/PubChem; their inclusion is a hypothesis, not a finding.
+Similarity depends on the fingerprint and reference set; clustering on its threshold;
+chemical diversity is not hypothesis diversity (2 scaffolds, 1 of 2 hypotheses here).
