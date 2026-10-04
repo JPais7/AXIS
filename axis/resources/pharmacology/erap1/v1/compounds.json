@@ -1,0 +1,38 @@
+[
+  {
+    "id": "compound:maben-1",
+    "preferred_name": "Maben compound 1",
+    "source_snapshot_id": "primary:maben-2020",
+    "original_smiles": "N=C(NCCc1c[nH]c2ccccc12)NS(=O)(=O)c1cc(F)ccc1F",
+    "expected_formula": "C17H16F2N4O2S",
+    "identity_status": "resolved",
+    "stereochemistry_status": "unknown",
+    "aliases": [
+      "10.1021/acs.jmedchem.9b00293: compound 1"
+    ]
+  },
+  {
+    "id": "compound:maben-2",
+    "preferred_name": "Maben compound 2",
+    "source_snapshot_id": "primary:maben-2020",
+    "original_smiles": "CC(=O)N1CCN(C(=O)C2(NC(=O)Nc3ccc(C)cc3)CCCCC2)CC1",
+    "expected_formula": "C21H30N4O3",
+    "identity_status": "resolved",
+    "stereochemistry_status": "not_applicable",
+    "aliases": [
+      "10.1021/acs.jmedchem.9b00293: compound 2"
+    ]
+  },
+  {
+    "id": "compound:maben-3",
+    "preferred_name": "Maben compound 3",
+    "source_snapshot_id": "primary:maben-2020",
+    "original_smiles": "COc1ccc(C(=O)O)cc1S(=O)(=O)Nc1cc(C(F)(F)F)ccc1N1CCCCC1",
+    "expected_formula": "C20H21F3N2O5S",
+    "identity_status": "resolved",
+    "stereochemistry_status": "not_applicable",
+    "aliases": [
+      "10.1021/acs.jmedchem.9b00293: compound 3"
+    ]
+  }
+]

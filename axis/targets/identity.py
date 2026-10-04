@@ -154,4 +154,8 @@ class TargetIdentityService:
             "snapshot": asdict(self.store.targets.snapshot(protein.source_snapshot_id)),
             "boundary": "Imported identity is not evidence of therapeutic efficacy.",
             "structure_count": len(self.store.structures.list_ids(project, identifier)),
+            "project_id": project,
+            "chemical_count": self.store.pharmacology.collection(
+                project, identifier, "compounds", 1, 0
+            )["total"],
         }

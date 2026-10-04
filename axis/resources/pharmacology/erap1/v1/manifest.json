@@ -1,0 +1,43 @@
+{
+  "package_version": "erap1-pharmacology-v1",
+  "importer_version": "axis-pharmacology-1",
+  "rdkit_version": "2025.09.3",
+  "retrieved_at": "2026-10-04T13:34:20.060032+00:00",
+  "files": {
+    "assays.json": "95377d7d4a1cee56b38383e89af2678c15bb9c6528def06d43cb3aa6b4c466d2",
+    "measurements.json": "dbc4076fb5d2faed198aa21324653187187095809a3a7b3e430bd2dd9e8f6d85",
+    "compounds.json": "89b209399c247b63f376e2240fd9cd3aece30c5f4e2f537bf018d9fd4f791a19",
+    "forms.json": "40fda4acfc0a61575ffb8afed8b751237daf85b267668a0ae05426334b26af8c",
+    "curation-audit.json": "bc68072c8e9b5488bc7152dfff4fa5a46ea6e57c013cd2b301177233132d7d75",
+    "chembl-extract.json": "c967f225c19e6d46eacf268bac81b6a818ba85150e94563d501beb05edad273b",
+    "identifiers.json": "2d73c3d1d702de463b9bbad2742959839e01b0fa2e6f18de40426f3cef247a96"
+  },
+  "snapshots": [
+    {
+      "id": "primary:maben-2020",
+      "provider": "primary-publication",
+      "provider_record_id": "10.1021/acs.jmedchem.9b00293",
+      "retrieval_timestamp": "2026-10-04T13:34:20.060032+00:00",
+      "request_url": "https://biochemistry.chem.uoa.gr/fileadmin/depts/chem.uoa.gr/biochemistry/uploads/Papers/2019_Maben_JMC.pdf",
+      "raw_content_checksum": "71d25266ab080c213dfcd3e071fd80f7807eb64c3521a52a1354a4d5489e9a6e",
+      "content_type": "application/pdf",
+      "importer_version": "axis-pharmacology-1",
+      "provider_release": "J Med Chem 2020;63:103–121",
+      "local_resource_path": null,
+      "metadata_json": "{\"copyright\":\"ACS 2019; original PDF not redistributed\",\"extract\":\"axis/resources/pharmacology/erap1/v1/curation-audit.json\",\"license\":\"Factual manual curation; publication rights retained\",\"locators\":\"Schemes1–3; Tables1–2; Figures2,4,5,9; experimental pp116–118\",\"review_status\":\"agent curated; independent chemical review recommended\"}"
+    },
+    {
+      "id": "chembl:maben-37",
+      "provider": "ChEMBL",
+      "provider_record_id": "CHEMBL4376857 selected records",
+      "retrieval_timestamp": "2026-10-04T13:34:20.060032+00:00",
+      "request_url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?document_chembl_id=CHEMBL4376857&limit=1000",
+      "raw_content_checksum": "70240ef22a57ac4f7b34cb8f71f90d2ebdb9fda7e752718b74b43e0735bbbc0b",
+      "content_type": "application/json",
+      "importer_version": "axis-chembl-1",
+      "provider_release": "ChEMBL_37",
+      "local_resource_path": "axis/resources/pharmacology/erap1/v1/chembl-extract.json",
+      "metadata_json": "{\"license\":\"CC BY-SA 3.0\",\"extract_sha256\":\"c967f225c19e6d46eacf268bac81b6a818ba85150e94563d501beb05edad273b\",\"raw_response_redistributed\":false,\"selection\":\"3 compounds; original raw checksum differs from selected extract checksum\",\"upstream_checksums\":{\"activities\":\"70240ef22a57ac4f7b34cb8f71f90d2ebdb9fda7e752718b74b43e0735bbbc0b\",\"molecules\":\"b24f694553fc6b0eca8fd69f3951c050fa51bc8ba926aef137c95dd3959c8336\",\"assays\":\"6602ed1b618492343f4bcb1221746a00889526fd109f97f7c00bd38156d1f59b\",\"status\":\"29dc1fb09487a8d2962253a4d0d92c4ded0aa0d831effab42445d0c3483d4740\",\"document\":\"c4b4a1dc2d531293b8673edffde1d42e73e9975c00f6ef0577a49aec10fb9a2d\"},\"retrieval_timestamp_basis\":\"PDF retrieval timestamp records curation session; provider requests occurred earlier in same session; exact per-request timestamps unavailable\"}"
+    }
+  ]
+}

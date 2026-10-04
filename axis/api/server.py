@@ -13,6 +13,7 @@ from typing import Any
 from urllib.parse import parse_qs, unquote, urlsplit
 
 from axis.discovery.workspace import WorkspaceService, page
+from axis.pharmacology.service import PharmacologyService
 from axis.storage import EvidenceStore, RecordNotFoundError
 from axis.structures.service import StructureIdentityService
 from axis.targets.identity import TargetIdentityService
@@ -31,7 +32,19 @@ class ReadAPI:
 
     def get(self, path: str, query: dict[str, list[str]]) -> dict[str, Any]:
         if any(
-            key not in ("limit", "offset", "project_id", "domain", "claim_ids")
+            key
+            not in (
+                "limit",
+                "offset",
+                "project_id",
+                "domain",
+                "claim_ids",
+                "compound",
+                "target",
+                "endpoint",
+                "assay_type",
+                "source",
+            )
             for key in query
         ):
             raise ValueError("unsupported query parameter")
@@ -44,6 +57,41 @@ class ReadAPI:
         if not 1 <= limit <= 100 or not 0 <= offset <= 100000:
             raise ValueError("limit must be 1–100; offset must be 0–100000")
         parts = [unquote(part) for part in path.strip("/").split("/")]
+        chemical_filters: dict[str, str] = {
+            key: query[key][0]
+            for key in ("compound", "target", "endpoint", "assay_type", "source")
+            if key in query
+        }
+        chemical_route = (
+            len(parts) >= 6
+            and parts[:2] == ["api", "projects"]
+            and parts[3] == "targets"
+            and parts[5] in {"compounds", "assays", "measurements", "selectivity"}
+        )
+        if chemical_filters and not chemical_route:
+            raise ValueError("pharmacology filters require a pharmacology route")
+        if chemical_route:
+            project, protein, kind = parts[2], parts[4], parts[5]
+            if len(parts) == 6:
+                result = self.store.pharmacology.collection(
+                    project, protein, kind, limit, offset, chemical_filters
+                )
+                if kind == "measurements":
+                    for item in result["items"]:
+                        item["assay"] = self.store.pharmacology.record(
+                            "assays", item["assay_id"]
+                        )
+                        item["compound_name"] = self.store.pharmacology.record(
+                            "compounds", item["compound_id"]
+                        )["preferred_name"]
+                return result
+            if chemical_filters:
+                raise ValueError("filters apply only to collections")
+            if len(parts) == 7 or len(parts) == 8 and parts[7] == "provenance":
+                return PharmacologyService(self.store).detail(
+                    project, protein, kind, parts[6]
+                )
+            raise RecordNotFoundError("pharmacology route not found")
         if parts == ["api", "projects"]:
             projects = self.store.projects.list_all(limit=limit, offset=offset)
             return page(

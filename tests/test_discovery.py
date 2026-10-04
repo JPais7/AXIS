@@ -447,7 +447,7 @@ def test_demo_traversal_reopens_and_is_repeatable(tmp_path: Path) -> None:
             DiscoveryService(reopened).inspect_project(traversal.project.project_id)
             == traversal
         )
-        assert reopened.statistics().schema_version == 6
+        assert reopened.statistics().schema_version == 7
 
 
 def test_demo_creation_rolls_back_conflicting_fixture(tmp_path: Path) -> None:
@@ -531,7 +531,7 @@ def test_version_2_migration_backup_and_reopen(tmp_path: Path) -> None:
         assert claim.context.genotype is None
         assert store.hypotheses.get("legacy-hyp").current.evidence_ids == ("legacy",)
         assert store.evidence_assessments.list_all() == ()
-        assert store.statistics().schema_version == 6
+        assert store.statistics().schema_version == 7
     with EvidenceStore(database) as reopened:
         assert reopened.claims.get("legacy") == claim
     with duckdb.connect(str(backup), read_only=True) as connection:

@@ -109,7 +109,7 @@ for (const width of [1440, 1024]) {
     await page.screenshot({ path: `${screenshots}/context-comparison-${width}.png` });
     await page.keyboard.press('Escape');
     await expect(page.getByRole('button', { name: 'Compare evidence', exact: true })).toBeFocused();
-    await page.locator('[data-claim="AXIS-ERAP1-CURATED-C12"]').click();
+    await page.locator('#main [data-claim="AXIS-ERAP1-CURATED-C12"]').click();
     await expect(drawer.getByRole('heading', { name: 'Context', exact: true })).toBeVisible();
     await page.screenshot({ path: `${screenshots}/drawer-${width}.png` });
     await drawer.getByRole('button', { name: 'Source → derived claims → project' }).click();

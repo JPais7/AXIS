@@ -1,4 +1,5 @@
 import './style.css';
+import { pharmacologyContent, pharmacologyDrawer } from './pharmacology';
 import { mountStructure, structureContent } from './structure-ui';
 import { ProteinProvenance, TargetIdentityCard } from './protein';
 import type { TargetProjection } from './types';
@@ -61,6 +62,7 @@ async function strategyView(): Promise<string> {
   }).join('')}</div>${pagination(strategies)}<p class="caption">Related assessments and perturbations are bounded to 100 each. ${assessments.has_more || perturbations.has_more || evidence.has_more ? 'Additional related records exist; inspect Evidence and Perturbations pages.' : 'All current related records fit within these bounds.'}</p>`;
 }
 async function content(project: Project): Promise<string> {
+  if (['chemistry','pharmacology','selectivity'].includes(route)) return pharmacologyContent(api,projectId,route);
   if (route === 'structures') return structureContent(api,projectId);
   if (route === 'protein') {
     const page = await collection<TargetProjection>('targets');
@@ -104,7 +106,7 @@ async function render(): Promise<void> {
   }
   route = parts[0] === 'projects' && parts[1] ? (parts[2] || 'overview') : (parts[0] || 'overview');
   const allowed = ['home', 'projects', 'targets', 'overview', 'evidence', 'mechanism', 'perturbations', 'strategies', 'questions', 'experiments', 'sources'];
-  if (!allowed.includes(route) && !['protein','structures'].includes(route)) route = 'overview';
+  if (!allowed.includes(route) && !['protein','structures','chemistry','pharmacology','selectivity'].includes(route)) route = 'overview';
   const params = new URLSearchParams(location.search);
   offset = Number(params.get('offset')) || 0;
   domain = params.get('domain') || '';
@@ -117,7 +119,7 @@ async function render(): Promise<void> {
     } else {
       const project = await api<Project>(`projects/${encodeURIComponent(projectId)}`);
       const titles: Record<string, string> = { overview: 'ERAP1 × Axial Spondyloarthritis', evidence: 'Evidence', mechanism: 'Mechanism', perturbations: 'Perturbations', strategies: 'Competing intervention strategies', questions: 'Open questions', experiments: 'Next experiment', sources: 'Sources & provenance' };
-      html = ProjectHeader(project, route === 'protein' ? 'Target / Protein' : route === 'structures' ? 'Experimental structures' : titles[route] || 'Overview') + await content(project);
+      html = ProjectHeader(project, route === 'protein' ? 'Target / Protein' : route === 'structures' ? 'Experimental structures' : ({chemistry:'Chemistry',pharmacology:'Pharmacology',selectivity:'Selectivity'} as Record<string,string>)[route] || titles[route] || 'Overview') + await content(project);
     }
     if (current === generation) {
       app.innerHTML = AppShell(projectId, route, html);
@@ -186,6 +188,12 @@ function updateComparisonSelection(): void {
 document.addEventListener('click', event => {
   const target = event.target instanceof Element ? event.target.closest<HTMLElement>('a[data-nav], button') : null;
   if (!target || target.hasAttribute('disabled')) return;
+  if (target.dataset.pharmaId && target.dataset.pharmaKind && target.dataset.pharmaProtein) {
+    const drawer = openDrawer();
+    const current = ++drawerGeneration;
+    void pharmacologyDrawer(api,projectId,target.dataset.pharmaProtein,target.dataset.pharmaKind,target.dataset.pharmaId).then(html => { if (current===drawerGeneration && drawer.open) { drawer.innerHTML=html; focusDrawer(); } }).catch(error => { if (current===drawerGeneration && drawer.open) { drawer.innerHTML='<button data-close class="drawer-close">×</button><h2 id="drawer-title">Pharmacology unavailable</h2>'+ErrorState(error instanceof Error?error.message:'Read failed'); focusDrawer(); } });
+    return;
+  }
   if (target.matches('a[data-nav]')) { event.preventDefault(); navigate(target.getAttribute('href') || '/'); }
   else if (target.dataset.claim) void EvidenceDrawer(target.dataset.claim);
   else if (target.dataset.structures) navigate(`${path('structures')}?protein=${encodeURIComponent(target.dataset.structures)}`);
@@ -203,6 +211,7 @@ document.addEventListener('click', event => {
   else if (target.hasAttribute('data-retry')) void render();
 });
 document.addEventListener('change', event => {
+  if (event.target instanceof HTMLSelectElement && event.target.id==='pharma-compound') navigate(`${path('selectivity')}?compound=${encodeURIComponent(event.target.value)}`);
   if (event.target instanceof HTMLSelectElement && event.target.id === 'domain') navigate(`${path('evidence')}?domain=${encodeURIComponent(event.target.value)}`);
   if (event.target instanceof HTMLInputElement && event.target.dataset.selectClaim) {
     const id = event.target.dataset.selectClaim;
@@ -210,6 +219,13 @@ document.addEventListener('change', event => {
     else if (!event.target.checked) selectedClaims.delete(id);
     updateComparisonSelection();
   }
+});
+document.addEventListener('submit', event => {
+  if (!(event.target instanceof HTMLFormElement) || event.target.id!=='pharma-filter') return;
+  event.preventDefault();
+  const params = new URLSearchParams();
+  new FormData(event.target).forEach((value,key)=>{if(typeof value==='string' && value)params.set(key,value);});
+  navigate(`${path('pharmacology')}?${params}`);
 });
 window.addEventListener('popstate', () => void render());
 void render();

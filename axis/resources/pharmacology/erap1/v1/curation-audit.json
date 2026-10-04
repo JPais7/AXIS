@@ -1,0 +1,18 @@
+{
+  "primary_doi": "10.1021/acs.jmedchem.9b00293",
+  "primary_pdf_sha256": "71d25266ab080c213dfcd3e071fd80f7807eb64c3521a52a1354a4d5489e9a6e",
+  "primary_pdf_url": "https://biochemistry.chem.uoa.gr/fileadmin/depts/chem.uoa.gr/biochemistry/uploads/Papers/2019_Maben_JMC.pdf",
+  "manual_structure_2": "Scheme 2 p.104 and compound-2 synthesis/HRMS p.115 establish urea C21H30N4O3. Manual SMILES transcription; independent human chemical review still recommended.",
+  "rejected_provider_mappings": [
+    {
+      "entity": "CHEMBL4456470",
+      "reason": "Guanidine representation C21H31N5O2 conflicts with source urea. Identifier mapping rejected."
+    },
+    {
+      "entity": "CHEMBL3414413",
+      "reason": "IL1 receptor antagonist is not mouse insulin-regulated aminopeptidase Q8C129. Do not import target mapping."
+    }
+  ],
+  "operator_conflicts": "ChEMBL C2 off-target <=200 µM conflicts with primary Tables 1/2 >200 µM. Primary values used; original provider records preserved in extract.",
+  "omissions": "C1 off-target numeric bounds not curated: figure/source-screen threshold and provider records inconsistent. Not assessed here does not imply source had no counter-screen. DG013A unchanged/not imported; no structure ligand bridges, no chemical series or ranking."
+}

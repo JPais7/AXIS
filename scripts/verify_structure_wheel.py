@@ -38,7 +38,7 @@ with patch.object(httpx.Client, "get", side_effect=AssertionError("network disab
             assert service.import_package(project, protein) == structure
             detail = service.projection(project, protein, structure)
             mapping = service.mapping(project, protein, structure)
-            assert store.statistics().schema_version == 6
+            assert store.statistics().schema_version == 7
             assert store.statistics().claims == 14
             base = (
                 f"/api/projects/{project}/targets/{quote(protein, safe='')}"
@@ -53,7 +53,7 @@ print(
     json.dumps(
         {
             "loaded_axis": axis.__file__,
-            "schema": 6,
+            "schema": 7,
             "raw_sha256": manifest["raw_sha256"],
             "two_clean_stores_equal": True,
             "network_entry_point_disabled": True,

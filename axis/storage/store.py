@@ -131,6 +131,9 @@ class EvidenceStore:
         from axis.storage.structures import StructureRepository
 
         self.structures = StructureRepository(self)
+        from axis.storage.pharmacology import PharmacologyRepository
+
+        self.pharmacology = PharmacologyRepository(self)
 
     def __enter__(self) -> Self:
         return self

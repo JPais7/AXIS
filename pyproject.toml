@@ -8,7 +8,7 @@ homepage = "https://github.com/JPais7/AXIS"
 repository = "https://github.com/JPais7/AXIS"
 readme = "README.md"
 packages = [{ include = "axis" }]
-include = ["axis/resources/demo/*.tsv", "axis/resources/demo/*.json", "axis/resources/discovery/**/*", "axis/resources/workspace/**/*", "axis/resources/targets/**/*", "axis/resources/structures/**/*"]
+include = ["axis/resources/demo/*.tsv", "axis/resources/demo/*.json", "axis/resources/discovery/**/*", "axis/resources/workspace/**/*", "axis/resources/targets/**/*", "axis/resources/structures/**/*", "axis/resources/pharmacology/**/*"]
 keywords = [
     "bioinformatics",
     "transcriptomics",
@@ -41,6 +41,7 @@ numpy = ">=2.3,<3.0"
 scipy = ">=1.16,<2.0"
 matplotlib = ">=3.10,<4.0"
 gemmi = "0.7.5"
+rdkit = "2025.9.3"
 
 [tool.poetry.group.dev.dependencies]
 mypy = "^1.17"
@@ -65,3 +66,7 @@ select = ["E", "F", "I", "UP", "B", "SIM"]
 python_version = "3.12"
 strict = true
 packages = ["axis"]
+
+[[tool.mypy.overrides]]
+module = ["rdkit.*"]
+ignore_missing_imports = true
