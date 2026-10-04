@@ -3103,8 +3103,9 @@ def run_demo(
     console.print(f"Report: {result.report_path}")
 
 
-@app.command("benchmark")
+@benchmark_app.callback(invoke_without_command=True)
 def run_benchmark(
+    context: typer.Context,
     repetitions: Annotated[
         int,
         typer.Option("--repetitions", "-n", min=1, max=1000),
@@ -3126,7 +3127,12 @@ def run_benchmark(
         typer.Option("--output", file_okay=False),
     ] = Path("benchmark-output"),
 ) -> None:
-    """Benchmark repeated offline runs of the synthetic demonstration."""
+    """Without a subcommand: benchmark repeated offline synthetic-demo runs.
+
+    Subcommands (list, run, reveal, ...) are retrospective validation.
+    """
+    if context.invoked_subcommand is not None:
+        return
     try:
         result = DemoBenchmarker().run(
             repetitions=repetitions,
