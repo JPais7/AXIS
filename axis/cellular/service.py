@@ -57,6 +57,45 @@ def experiment(data: dict[str, Any]) -> CellularExperiment:
     )
 
 
+def comparisons_of(
+    experiments: list[dict[str, Any]],
+    readouts: list[dict[str, Any]],
+    has_more: bool = False,
+) -> dict[str, Any]:
+    """Pure genetic-versus-chemical comparisons over plain records (first 20 pairs)."""
+    exps = {"items": experiments[:20]}
+    reads = {"items": readouts[:100]}
+    result: list[dict[str, Any]] = []
+    for i, a in enumerate(exps["items"]):
+        for b in exps["items"][i + 1 :]:
+            if not (
+                "small_molecule" in {a["modality"], b["modality"]}
+                and (
+                    {a["modality"], b["modality"]}
+                    & {"knockdown", "knockout", "variant_expression", "CRISPR"}
+                )
+            ):
+                continue
+            for x in reads["items"]:
+                for y in reads["items"]:
+                    if (
+                        x["experiment_id"] == a["id"]
+                        and y["experiment_id"] == b["id"]
+                        and x["endpoint"] == y["endpoint"]
+                    ):
+                        result.append(
+                            concordance(
+                                experiment(a),
+                                experiment(b),
+                                ExperimentalReadout(**x),
+                                ExperimentalReadout(**y),
+                            )
+                        )
+                        if len(result) == 20:
+                            return {"items": result, "has_more": True}
+    return {"items": result, "has_more": has_more}
+
+
 class CellularPharmacologyService:
     def __init__(self, store: EvidenceStore) -> None:
         self.store = store
@@ -315,35 +354,9 @@ class CellularPharmacologyService:
     def comparisons(self, project: str, protein: str) -> dict[str, Any]:
         exps = self.store.cellular.collection(project, protein, "experiments", 20)
         reads = self.store.cellular.collection(project, protein, "readouts", 100)
-        result = []
-        for i, a in enumerate(exps["items"]):
-            for b in exps["items"][i + 1 :]:
-                if not (
-                    "small_molecule" in {a["modality"], b["modality"]}
-                    and (
-                        {a["modality"], b["modality"]}
-                        & {"knockdown", "knockout", "variant_expression", "CRISPR"}
-                    )
-                ):
-                    continue
-                for x in reads["items"]:
-                    for y in reads["items"]:
-                        if (
-                            x["experiment_id"] == a["id"]
-                            and y["experiment_id"] == b["id"]
-                            and x["endpoint"] == y["endpoint"]
-                        ):
-                            result.append(
-                                concordance(
-                                    experiment(a),
-                                    experiment(b),
-                                    ExperimentalReadout(**x),
-                                    ExperimentalReadout(**y),
-                                )
-                            )
-                            if len(result) == 20:
-                                return {"items": result, "has_more": True}
-        return {"items": result, "has_more": exps["has_more"] or reads["has_more"]}
+        return comparisons_of(
+            exps["items"], reads["items"], exps["has_more"] or reads["has_more"]
+        )
 
     def gaps(
         self, project: str, protein: str, compound: str | None = None

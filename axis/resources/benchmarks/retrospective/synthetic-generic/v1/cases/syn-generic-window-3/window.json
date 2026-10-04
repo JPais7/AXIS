@@ -1,0 +1,408 @@
+{
+  "decisions": [
+    {
+      "decision": "window",
+      "reason": "available_on_or_before_cutoff",
+      "record": "experiments:syn:e1-genetic",
+      "source": "SYN:S1"
+    },
+    {
+      "decision": "window",
+      "reason": "available_on_or_before_cutoff",
+      "record": "experiments:syn:e2-compound",
+      "source": "SYN:S1"
+    },
+    {
+      "decision": "window",
+      "reason": "available_on_or_before_cutoff",
+      "record": "experiments:syn:e3-engagement",
+      "source": "SYN:S2"
+    },
+    {
+      "decision": "window",
+      "reason": "available_on_or_before_cutoff",
+      "record": "experiments:syn:e4-negative",
+      "source": "SYN:S3"
+    },
+    {
+      "decision": "window",
+      "reason": "available_on_or_before_cutoff",
+      "record": "assessments:syn:e1-genetic:hla",
+      "source": "SYN:S1"
+    },
+    {
+      "decision": "window",
+      "reason": "available_on_or_before_cutoff",
+      "record": "assessments:syn:e1-genetic:immune",
+      "source": "SYN:S1"
+    },
+    {
+      "decision": "window",
+      "reason": "available_on_or_before_cutoff",
+      "record": "assessments:syn:e2-compound:exposure",
+      "source": "SYN:S1"
+    },
+    {
+      "decision": "window",
+      "reason": "available_on_or_before_cutoff",
+      "record": "assessments:syn:e2-compound:hla",
+      "source": "SYN:S1"
+    },
+    {
+      "decision": "window",
+      "reason": "available_on_or_before_cutoff",
+      "record": "assessments:syn:e2-compound:engagement",
+      "source": "SYN:S1"
+    },
+    {
+      "decision": "window",
+      "reason": "available_on_or_before_cutoff",
+      "record": "assessments:syn:e3-engagement:engagement",
+      "source": "SYN:S2"
+    },
+    {
+      "decision": "window",
+      "reason": "available_on_or_before_cutoff",
+      "record": "assessments:syn:e4-negative:engagement",
+      "source": "SYN:S3"
+    },
+    {
+      "decision": "window",
+      "reason": "available_on_or_before_cutoff",
+      "record": "readouts:syn:e1-genetic:readout",
+      "source": "SYN:S1"
+    },
+    {
+      "decision": "window",
+      "reason": "available_on_or_before_cutoff",
+      "record": "readouts:syn:e2-compound:readout",
+      "source": "SYN:S1"
+    },
+    {
+      "decision": "window",
+      "reason": "available_on_or_before_cutoff",
+      "record": "gaps:syn:e2-compound:gap",
+      "source": "SYN:S1"
+    }
+  ],
+  "record_sources": {
+    "assessments:syn:e1-genetic:hla": "SYN:S1",
+    "assessments:syn:e1-genetic:immune": "SYN:S1",
+    "assessments:syn:e2-compound:engagement": "SYN:S1",
+    "assessments:syn:e2-compound:exposure": "SYN:S1",
+    "assessments:syn:e2-compound:hla": "SYN:S1",
+    "assessments:syn:e3-engagement:engagement": "SYN:S2",
+    "assessments:syn:e4-negative:engagement": "SYN:S3",
+    "experiments:syn:e1-genetic": "SYN:S1",
+    "experiments:syn:e2-compound": "SYN:S1",
+    "experiments:syn:e3-engagement": "SYN:S2",
+    "experiments:syn:e4-negative": "SYN:S3",
+    "gaps:syn:e2-compound:gap": "SYN:S1",
+    "readouts:syn:e1-genetic:readout": "SYN:S1",
+    "readouts:syn:e2-compound:readout": "SYN:S1"
+  },
+  "records": {
+    "assessments": [
+      {
+        "contradicting_readout_ids": [],
+        "created_by": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE",
+        "dependency": "supported",
+        "directness": "not_assessed",
+        "disease_relevance": "unknown",
+        "edge": "hla",
+        "experiment_id": "syn:e1-genetic",
+        "id": "syn:e1-genetic:hla",
+        "rationale": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE",
+        "review_status": "pending_expert_review",
+        "rule_version": "synthetic",
+        "state": "supported",
+        "supporting_readout_ids": []
+      },
+      {
+        "contradicting_readout_ids": [],
+        "created_by": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE",
+        "dependency": "supported",
+        "directness": "not_assessed",
+        "disease_relevance": "unknown",
+        "edge": "immune",
+        "experiment_id": "syn:e1-genetic",
+        "id": "syn:e1-genetic:immune",
+        "rationale": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE",
+        "review_status": "pending_expert_review",
+        "rule_version": "synthetic",
+        "state": "supported",
+        "supporting_readout_ids": []
+      },
+      {
+        "contradicting_readout_ids": [],
+        "created_by": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE",
+        "dependency": "not_assessed",
+        "directness": "not_assessed",
+        "disease_relevance": "unknown",
+        "edge": "exposure",
+        "experiment_id": "syn:e2-compound",
+        "id": "syn:e2-compound:exposure",
+        "rationale": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE",
+        "review_status": "pending_expert_review",
+        "rule_version": "synthetic",
+        "state": "supported",
+        "supporting_readout_ids": []
+      },
+      {
+        "contradicting_readout_ids": [],
+        "created_by": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE",
+        "dependency": "uncertain",
+        "directness": "not_assessed",
+        "disease_relevance": "unknown",
+        "edge": "hla",
+        "experiment_id": "syn:e2-compound",
+        "id": "syn:e2-compound:hla",
+        "rationale": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE",
+        "review_status": "pending_expert_review",
+        "rule_version": "synthetic",
+        "state": "supported",
+        "supporting_readout_ids": []
+      },
+      {
+        "contradicting_readout_ids": [],
+        "created_by": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE",
+        "dependency": "not_assessed",
+        "directness": "not_assessed",
+        "disease_relevance": "unknown",
+        "edge": "engagement",
+        "experiment_id": "syn:e2-compound",
+        "id": "syn:e2-compound:engagement",
+        "rationale": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE",
+        "review_status": "pending_expert_review",
+        "rule_version": "synthetic",
+        "state": "not_assessed",
+        "supporting_readout_ids": []
+      },
+      {
+        "contradicting_readout_ids": [],
+        "created_by": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE",
+        "dependency": "not_assessed",
+        "directness": "not_assessed",
+        "disease_relevance": "unknown",
+        "edge": "engagement",
+        "experiment_id": "syn:e3-engagement",
+        "id": "syn:e3-engagement:engagement",
+        "rationale": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE",
+        "review_status": "pending_expert_review",
+        "rule_version": "synthetic",
+        "state": "supported",
+        "supporting_readout_ids": []
+      },
+      {
+        "contradicting_readout_ids": [],
+        "created_by": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE",
+        "dependency": "not_assessed",
+        "directness": "not_assessed",
+        "disease_relevance": "unknown",
+        "edge": "engagement",
+        "experiment_id": "syn:e4-negative",
+        "id": "syn:e4-negative:engagement",
+        "rationale": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE",
+        "review_status": "pending_expert_review",
+        "rule_version": "synthetic",
+        "state": "contradicted",
+        "supporting_readout_ids": []
+      }
+    ],
+    "biochemical_measurements": [],
+    "compounds": [],
+    "experiments": [
+      {
+        "compound_id": null,
+        "concentration": null,
+        "context": {
+          "cell_line": "SYN-CELLS",
+          "disease_status": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE",
+          "erap1_allotype": null,
+          "hla_allele": "SYN-ALLELE-1",
+          "scientific_context": {
+            "allotype": null,
+            "assay": "SYN-ASSAY",
+            "cell_type": "SYN-CELLS",
+            "comparison": null,
+            "endpoint": "SYN-ENDPOINT",
+            "experimental_system": "SYN-CELLS",
+            "genotype": null,
+            "hla_status": "SYN-CONTEXT expressed",
+            "population": null,
+            "species": "synthetic",
+            "tissue": null,
+            "treatment": null
+          }
+        },
+        "controls": [],
+        "dosing_schedule": null,
+        "duration": null,
+        "id": "syn:e1-genetic",
+        "label": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE: syn:e1-genetic",
+        "limitation": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE",
+        "locator": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE",
+        "modality": "knockdown",
+        "perturbation_id": "syn:pert:syn:e1-genetic",
+        "reported_perturbagen": null,
+        "source_id": "SYN:S1",
+        "vehicle": null
+      },
+      {
+        "compound_id": "syn:cmpd-1",
+        "concentration": null,
+        "context": {
+          "cell_line": "SYN-CELLS",
+          "disease_status": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE",
+          "erap1_allotype": null,
+          "hla_allele": "SYN-ALLELE-1",
+          "scientific_context": {
+            "allotype": null,
+            "assay": "SYN-ASSAY",
+            "cell_type": "SYN-CELLS",
+            "comparison": null,
+            "endpoint": "SYN-ENDPOINT",
+            "experimental_system": "SYN-CELLS",
+            "genotype": null,
+            "hla_status": "SYN-CONTEXT expressed",
+            "population": null,
+            "species": "synthetic",
+            "tissue": null,
+            "treatment": null
+          }
+        },
+        "controls": [],
+        "dosing_schedule": null,
+        "duration": null,
+        "id": "syn:e2-compound",
+        "label": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE: syn:e2-compound",
+        "limitation": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE",
+        "locator": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE",
+        "modality": "small_molecule",
+        "perturbation_id": "syn:pert:syn:e2-compound",
+        "reported_perturbagen": null,
+        "source_id": "SYN:S1",
+        "vehicle": null
+      },
+      {
+        "compound_id": "syn:cmpd-1",
+        "concentration": null,
+        "context": {
+          "cell_line": "SYN-CELLS",
+          "disease_status": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE",
+          "erap1_allotype": null,
+          "hla_allele": "SYN-ALLELE-1",
+          "scientific_context": {
+            "allotype": null,
+            "assay": "SYN-ASSAY",
+            "cell_type": "SYN-CELLS",
+            "comparison": null,
+            "endpoint": "SYN-ENDPOINT",
+            "experimental_system": "SYN-CELLS",
+            "genotype": null,
+            "hla_status": "SYN-CONTEXT expressed",
+            "population": null,
+            "species": "synthetic",
+            "tissue": null,
+            "treatment": null
+          }
+        },
+        "controls": [],
+        "dosing_schedule": null,
+        "duration": null,
+        "id": "syn:e3-engagement",
+        "label": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE: syn:e3-engagement",
+        "limitation": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE",
+        "locator": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE",
+        "modality": "small_molecule",
+        "perturbation_id": "syn:pert:syn:e3-engagement",
+        "reported_perturbagen": null,
+        "source_id": "SYN:S2",
+        "vehicle": null
+      },
+      {
+        "compound_id": "syn:cmpd-2",
+        "concentration": null,
+        "context": {
+          "cell_line": "SYN-CELLS",
+          "disease_status": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE",
+          "erap1_allotype": null,
+          "hla_allele": "SYN-ALLELE-1",
+          "scientific_context": {
+            "allotype": null,
+            "assay": "SYN-ASSAY",
+            "cell_type": "SYN-CELLS",
+            "comparison": null,
+            "endpoint": "SYN-ENDPOINT",
+            "experimental_system": "SYN-CELLS",
+            "genotype": null,
+            "hla_status": "SYN-CONTEXT expressed",
+            "population": null,
+            "species": "synthetic",
+            "tissue": null,
+            "treatment": null
+          }
+        },
+        "controls": [],
+        "dosing_schedule": null,
+        "duration": null,
+        "id": "syn:e4-negative",
+        "label": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE: syn:e4-negative",
+        "limitation": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE",
+        "locator": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE",
+        "modality": "small_molecule",
+        "perturbation_id": "syn:pert:syn:e4-negative",
+        "reported_perturbagen": null,
+        "source_id": "SYN:S3",
+        "vehicle": null
+      }
+    ],
+    "gaps": [
+      {
+        "claim_ids": [],
+        "compound_id": "syn:cmpd-1",
+        "edge": "engagement",
+        "id": "syn:e2-compound:gap",
+        "perturbation_id": "syn:pert:syn:e2-compound",
+        "proposal_title": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE",
+        "question": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE"
+      }
+    ],
+    "readouts": [
+      {
+        "claim_id": "syn:claim:syn:e1-genetic",
+        "direction": "decrease",
+        "endpoint": "SYN-ENDPOINT",
+        "experiment_id": "syn:e1-genetic",
+        "id": "syn:e1-genetic:readout",
+        "locator": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE",
+        "measurement_id": null,
+        "original_unit": null,
+        "original_value": null,
+        "proximity": "HLA_molecular",
+        "qualitative_result": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE",
+        "replicate_information": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE",
+        "statistical_result": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE"
+      },
+      {
+        "claim_id": "syn:claim:syn:e2-compound",
+        "direction": "decrease",
+        "endpoint": "SYN-ENDPOINT",
+        "experiment_id": "syn:e2-compound",
+        "id": "syn:e2-compound:readout",
+        "locator": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE",
+        "measurement_id": null,
+        "original_unit": null,
+        "original_value": null,
+        "proximity": "HLA_molecular",
+        "qualitative_result": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE",
+        "replicate_information": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE",
+        "statistical_result": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE"
+      }
+    ],
+    "selectivity": [],
+    "strategy_ids": [],
+    "structure_ids": [],
+    "target_label": "SYN-TARGET-A"
+  }
+}

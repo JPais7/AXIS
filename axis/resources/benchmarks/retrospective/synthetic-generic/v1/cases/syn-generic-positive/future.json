@@ -1,0 +1,85 @@
+{
+  "decisions": [
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "experiments:syn:e3-engagement",
+      "source": "SYN:S2"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "assessments:syn:e3-engagement:engagement",
+      "source": "SYN:S2"
+    }
+  ],
+  "record_sources": {
+    "assessments:syn:e3-engagement:engagement": "SYN:S2",
+    "experiments:syn:e3-engagement": "SYN:S2"
+  },
+  "records": {
+    "assessments": [
+      {
+        "contradicting_readout_ids": [],
+        "created_by": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE",
+        "dependency": "not_assessed",
+        "directness": "not_assessed",
+        "disease_relevance": "unknown",
+        "edge": "engagement",
+        "experiment_id": "syn:e3-engagement",
+        "id": "syn:e3-engagement:engagement",
+        "rationale": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE",
+        "review_status": "pending_expert_review",
+        "rule_version": "synthetic",
+        "state": "supported",
+        "supporting_readout_ids": []
+      }
+    ],
+    "biochemical_measurements": [],
+    "compounds": [],
+    "experiments": [
+      {
+        "compound_id": "syn:cmpd-1",
+        "concentration": null,
+        "context": {
+          "cell_line": "SYN-CELLS",
+          "disease_status": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE",
+          "erap1_allotype": null,
+          "hla_allele": "SYN-ALLELE-1",
+          "scientific_context": {
+            "allotype": null,
+            "assay": "SYN-ASSAY",
+            "cell_type": "SYN-CELLS",
+            "comparison": null,
+            "endpoint": "SYN-ENDPOINT",
+            "experimental_system": "SYN-CELLS",
+            "genotype": null,
+            "hla_status": "SYN-CONTEXT expressed",
+            "population": null,
+            "species": "synthetic",
+            "tissue": null,
+            "treatment": null
+          }
+        },
+        "controls": [],
+        "dosing_schedule": null,
+        "duration": null,
+        "id": "syn:e3-engagement",
+        "label": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE: syn:e3-engagement",
+        "limitation": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE",
+        "locator": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE",
+        "modality": "small_molecule",
+        "perturbation_id": "syn:pert:syn:e3-engagement",
+        "reported_perturbagen": null,
+        "source_id": "SYN:S2",
+        "vehicle": null
+      }
+    ],
+    "gaps": [],
+    "readouts": [],
+    "selectivity": [],
+    "strategy_ids": [],
+    "structure_ids": [],
+    "target_label": "SYN-TARGET-A"
+  }
+}

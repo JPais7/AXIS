@@ -72,6 +72,7 @@ from axis.analysis import (
     WorkflowComparisonSummarizer,
     write_sample_sheet_template,
 )
+from axis.cli.benchmark import app as benchmark_app
 from axis.cli.cellular import app as cellular_app
 from axis.cli.decision import app as decision_app
 from axis.cli.discovery import app as discovery_app
@@ -137,6 +138,7 @@ app.add_typer(pharmacology_app, name="pharmacology")
 app.add_typer(cellular_app, name="cellular")
 app.add_typer(decision_app, name="decision")
 app.add_typer(experiment_app, name="experiment")
+app.add_typer(benchmark_app, name="benchmark")
 
 app.command("serve")(serve)
 console = Console()
@@ -3101,8 +3103,9 @@ def run_demo(
     console.print(f"Report: {result.report_path}")
 
 
-@app.command("benchmark")
+@benchmark_app.callback(invoke_without_command=True)
 def run_benchmark(
+    context: typer.Context,
     repetitions: Annotated[
         int,
         typer.Option("--repetitions", "-n", min=1, max=1000),
@@ -3124,7 +3127,12 @@ def run_benchmark(
         typer.Option("--output", file_okay=False),
     ] = Path("benchmark-output"),
 ) -> None:
-    """Benchmark repeated offline runs of the synthetic demonstration."""
+    """Without a subcommand: benchmark repeated offline synthetic-demo runs.
+
+    Subcommands (list, run, reveal, ...) are retrospective validation.
+    """
+    if context.invoked_subcommand is not None:
+        return
     try:
         result = DemoBenchmarker().run(
             repetitions=repetitions,

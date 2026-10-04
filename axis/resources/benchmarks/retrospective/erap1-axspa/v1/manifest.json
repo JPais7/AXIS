@@ -1,0 +1,26 @@
+{
+  "benchmark_kind": "development",
+  "cases": [
+    "erap1-axspa-t2011",
+    "erap1-axspa-t2014",
+    "erap1-axspa-t2016"
+  ],
+  "files": {
+    "cases/erap1-axspa-t2011/future.json": "f0c44405aba11e6e7fb6ec760a2705b2fc034596c65dd7877f872a2be2507f16",
+    "cases/erap1-axspa-t2011/protocol.json": "e9d3b7e141645b078e0a8ab01c368e8868c5e805811d2261ffac8121c962ac9f",
+    "cases/erap1-axspa-t2011/window.json": "ec1f6ea73e5ec88a52f9bc2b2cd15e310cfb7f8dcb0e1d3d005248dcc17ef1a2",
+    "cases/erap1-axspa-t2014/future.json": "376dadc8f0cffec49cf7edfd62b7627e43a82a585ceead8464e0962677aca302",
+    "cases/erap1-axspa-t2014/protocol.json": "983760dda2afa559f5fdc521fcb1208c8517d5004002c2aa92dfd3dae0302d9b",
+    "cases/erap1-axspa-t2014/window.json": "b21e87ff10521aa970c9f200b2290a83dbf7378f9f885c777dac4d817887d288",
+    "cases/erap1-axspa-t2016/future.json": "e0b4aace46bea657624ff74aaeb49a2fde719710249fd7b4dd9ee6e079b90695",
+    "cases/erap1-axspa-t2016/protocol.json": "9d465ece3633bd8ffb07e9ba699245cf2fcf7196d61fe5c8ea771adbe19c9de9",
+    "cases/erap1-axspa-t2016/window.json": "4638870899c55f9945128a4137bed3c911c6a6b36eddd0aea9a616ea976c6069",
+    "decision-template.json": "501d3dbe2d66bbac095adae454e023f369878a0216c7b492ae3469920dcd64d0",
+    "temporal-availability.json": "ce633e0b0c5db22d2f1f08650560cebbdd262e0771dd3760b43598ab617ea5ee"
+  },
+  "schema": "axis-retrospective-benchmark-1",
+  "selection_bias_note": "These cases were chosen by the developers, who had read the later literature; ERAP1 x axSpA is also the dataset the decision rules were developed on, so every case here is a DEVELOPMENT benchmark, not an independent validation. The three cutoffs were fixed by publication chronology (before the first cellular study, after it, after the second wave) rather than chosen to produce an outcome, but the set is small and not a sample of any population of decisions.",
+  "set_id": "erap1-axspa",
+  "synthetic": false,
+  "title": "ERAP1 x axial spondyloarthritis \u2014 temporal backtest (development)"
+}

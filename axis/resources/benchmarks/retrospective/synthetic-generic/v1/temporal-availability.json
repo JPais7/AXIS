@@ -1,0 +1,55 @@
+{
+  "note": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE",
+  "resource": "temporal-availability",
+  "sources": {
+    "SYN:S1": {
+      "availability_basis": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE",
+      "availability_kind": "bounded",
+      "first_publicly_accessible_date": "2018-03-01",
+      "nominal_publication_date": "2018-03-01",
+      "title": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE \u2014 invented source SYN:S1"
+    },
+    "SYN:S2": {
+      "availability_basis": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE",
+      "availability_kind": "bounded",
+      "first_publicly_accessible_date": "2019-09-01",
+      "nominal_publication_date": "2019-09-01",
+      "title": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE \u2014 invented source SYN:S2"
+    },
+    "SYN:S3": {
+      "availability_basis": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE",
+      "availability_kind": "bounded",
+      "first_publicly_accessible_date": "2020-06-01",
+      "nominal_publication_date": "2020-06-01",
+      "title": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE \u2014 invented source SYN:S3"
+    },
+    "SYN:S4": {
+      "availability_basis": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE",
+      "availability_kind": "bounded",
+      "first_publicly_accessible_date": "2021-01-15",
+      "nominal_publication_date": "2021-01-15",
+      "title": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE \u2014 invented source SYN:S4"
+    },
+    "SYN:S5": {
+      "availability_basis": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE",
+      "availability_kind": "bounded",
+      "first_publicly_accessible_date": "2021-09-01",
+      "nominal_publication_date": "2021-09-01",
+      "title": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE \u2014 invented source SYN:S5"
+    },
+    "SYN:S6": {
+      "availability_basis": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE",
+      "availability_kind": "unknown",
+      "first_publicly_accessible_date": null,
+      "nominal_publication_date": "unknown",
+      "title": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE \u2014 invented source SYN:S6"
+    },
+    "SYN:S7": {
+      "availability_basis": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE",
+      "availability_kind": "bounded",
+      "first_publicly_accessible_date": "2019-03-01",
+      "nominal_publication_date": "2019-03-01",
+      "title": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE \u2014 invented source SYN:S7"
+    }
+  }
+}

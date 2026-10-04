@@ -12,9 +12,8 @@ from importlib import resources
 from pathlib import Path
 from typing import Any
 
-from axis.cellular.rules import aggregate
-from axis.cellular.service import CellularPharmacologyService
 from axis.decision import engine, rules
+from axis.decision.evidence import assemble_evidence, load_records
 from axis.domain.decision import (
     CandidateExperimentProfile,
     CompetingExplanation,
@@ -43,7 +42,6 @@ from axis.storage import EvidenceStore, RecordNotFoundError
 
 VERSION = "axis-decision-1"
 ENGINE = "AXIS deterministic decision engine"
-GENETIC = {"knockdown", "knockout", "CRISPR", "variant_expression"}
 TRANSITIONS = {
     "proposed": {"investigator_selected", "cancelled"},
     "investigator_selected": {"planned", "cancelled"},
@@ -250,323 +248,23 @@ class DecisionService:
         protein: str,
         mode: str = "exploratory",
         ledger: list[dict[str, Any]] | None = None,
+        records: dict[str, Any] | None = None,
     ) -> rules.Evidence:
-        self.store.targets.require_member(project, protein)
-        cell = CellularPharmacologyService(self.store)
-        chain = cell.chain(project, protein)
-        assessment_reviews = self._review_states(project, "evidence_assessment")
+        """Read the store once (``load_records``), then assemble purely.
 
-        def keep(identifier: str) -> bool:
-            state = assessment_reviews.get(identifier, "pending")
-            return state in ("accepted", "accepted_with_caveat") or (
-                state == "pending" and mode == "exploratory"
-            )
-
-        edges = {}
-        for e in chain["edges"]:
-            kept = [a for a in e["assessments"] if keep(a["id"])]
-            state = e["state"]
-            if len(kept) != len(e["assessments"]):
-                state = aggregate([a["state"] for a in kept])
-                if e["edge"] == "biochemical" and e["measurements"]:
-                    state = "supported"
-            edges[e["edge"]] = {
-                "state": state,
-                "ids": sorted(
-                    [a["id"] for a in kept] + [m["id"] for m in e["measurements"]]
-                ),
-            }
-        repo = self.store.cellular
-        windows = {
-            kind: repo.collection(project, protein, kind, 100)
-            for kind in ("experiments", "assessments", "readouts")
-        }
-        truncated = [kind for kind, page in windows.items() if page["has_more"]]
-        if chain["has_more"] or truncated:
-            raise ValueError(
-                "evidence window exceeded the bounded read size ("
-                + ", ".join(truncated or ["evidence chain"])
-                + "); the decision engine refuses to run on truncated evidence"
-            )
-        experiments = windows["experiments"]["items"]
-        all_assessments = windows["assessments"]["items"]
-        assessments = [a for a in all_assessments if keep(a["id"])]
-        pending_assessments = sum(
-            assessment_reviews.get(a["id"], "pending") == "pending" for a in assessments
-        )
-        readouts = windows["readouts"]["items"]
-        modality = {e["id"]: e["modality"] for e in experiments}
-        phenotype = [a for a in assessments if a["edge"] in ("hla", "immune")]
-
-        def pick(compound: bool, **match: str) -> list[str]:
-            return sorted(
-                a["id"]
-                for a in phenotype
-                if (modality[a["experiment_id"]] == "small_molecule") == compound
-                and all(a[k] == v for k, v in match.items())
-            )
-
-        genetic = sorted(
-            a["id"]
-            for a in phenotype
-            if modality[a["experiment_id"]] in GENETIC
-            and a["dependency"] == "supported"
-        )
-        selectivity_page = self.store.pharmacology.collection(
-            project, protein, "selectivity", 100, 0
-        )
-        if selectivity_page["has_more"]:
-            raise ValueError(
-                "selectivity window exceeded the bounded read size; the decision "
-                "engine refuses to run on truncated evidence"
-            )
-        selectivity = selectivity_page["items"]
-        unresolved = sorted(
-            s["id"] for s in selectivity if s["comparability_status"] != "Comparable"
-        )
-        comparisons = cell.comparisons(project, protein)["items"]
-        gaps = cell.gaps(project, protein)["items"]
-        by_endpoint: dict[str, list[dict[str, Any]]] = {}
-        sources = {e["id"]: e["source_id"] for e in experiments}
-        for r in readouts:
-            if modality[r["experiment_id"]] in GENETIC and r["direction"] in (
-                "increase",
-                "decrease",
-            ):
-                by_endpoint.setdefault(r["endpoint"], []).append(r)
-        disagreements = []
-        for endpoint, items in sorted(by_endpoint.items()):
-            if (
-                len({sources[r["experiment_id"]] for r in items}) > 1
-                and len({r["direction"] for r in items}) > 1
-            ):
-                disagreements.append(
-                    {
-                        "endpoint": endpoint,
-                        "directions": sorted({r["direction"] for r in items}),
-                        "readout_ids": sorted(r["id"] for r in items),
-                    }
-                )
-        structure_ids = [
-            row[0]
-            for row in self.store._connection.execute(
-                "SELECT structure_id FROM project_structures WHERE project_id=? "
-                "ORDER BY structure_id",
-                [project],
-            ).fetchall()
-        ]
-        protein_record = self.store.targets.protein(protein)
-        experiment_by_id = {e["id"]: e for e in experiments}
-        biochemical_items = [
-            m
-            for e in chain["edges"]
-            if e["edge"] == "biochemical"
-            for m in e["measurements"]
-        ]
-        compounds = sorted(
-            c["id"]
-            for c in self.store.pharmacology.collection(
-                project, protein, "compounds", 100, 0
-            )["items"]
-        )
-        with_phenotype = {
-            modality_compound
-            for e in experiments
-            for modality_compound in [e.get("compound_id")]
-            if modality_compound
-            and any(
-                a["experiment_id"] == e["id"]
-                and a["edge"] in ("hla", "immune")
-                and a["state"] == "supported"
-                for a in assessments
-            )
-        }
-        with_biochemical = {m["compound_id"] for m in biochemical_items}
-        unresolved_identity = sorted(
-            {
-                e.get("reported_perturbagen") or e["label"]
-                for e in experiments
-                if e["modality"] == "small_molecule"
-                and not e.get("compound_id")
-                and any(
-                    a["experiment_id"] == e["id"]
-                    and a["edge"] in ("hla", "immune")
-                    and a["state"] == "supported"
-                    for a in assessments
-                )
-            }
-        )
-        pending = pending_assessments
-        by_experiment = {e["id"]: e for e in experiments}
-        gap_scopes = {}
-        for g in gaps:
-            if g.get("compound_id"):
-                gap_scopes[g["id"]] = f"compound:{g['compound_id']}"
-            else:
-                owner = by_experiment.get(g["id"].removesuffix(":gap"), {})
-                label = owner.get("reported_perturbagen") or owner.get("label")
-                if label:
-                    gap_scopes[g["id"]] = f"perturbagen:{label}"
-        coverage_rows = [
-            {"scope_type": "compound", "scope_id": c} for c in sorted(with_phenotype)
-        ] + [{"scope_type": "perturbagen", "scope_id": p} for p in unresolved_identity]
-        entries = (
-            ledger
+        ``records`` lets a caller (retrospective validation) supply an already
+        time-filtered window; the store is then not consulted for evidence at all.
+        """
+        if records is None:
+            records = load_records(self.store, project, protein)
+        return assemble_evidence(
+            records,
+            mode=mode,
+            assessment_reviews=self._review_states(project, "evidence_assessment"),
+            ledger=ledger
             if ledger is not None
-            else ResultsService(self.store).ledger(project, mode)
+            else ResultsService(self.store).ledger(project, mode),
         )
-        contributions = [
-            {
-                "id": x["interpretation_id"],
-                "result_id": x["result_id"],
-                "result_row": x["result_row"],
-                "experiment_id": x["experiment_id"],
-                "edge": x["edge"],
-                "scope_type": x["scope_type"],
-                "scope_id": x["scope_id"],
-                "state": x["state"],
-                "statement": x["statement"],
-                "context": x["context"],
-                "caveats": [
-                    c
-                    for c in x["eligibility"]["caveats"]
-                    if c not in x["eligibility"].get("review_caveats", [])
-                ],
-                "review_caveats": x["eligibility"].get("review_caveats", []),
-                "review_state": x["interpretation_review"],
-                "eligibility_state": x["eligibility"]["state"],
-                "independent_replicates": x["independent_replicates"],
-                "synthetic": x["synthetic"],
-            }
-            for x in entries
-            if x["eligibility"]["eligible"]
-        ]
-        unexpected = sorted(
-            {
-                x["result_id"]
-                for x in entries
-                if x["scenario_match"] == "outside_predefined_scenarios"
-                and x["eligibility"]["state"]
-                not in ("withdrawn", "superseded", "ineligible_qc_failure")
-            }
-        )
-        return {
-            "contributions": contributions,
-            "required_scopes": coverage_rows,
-            "gap_scopes": gap_scopes,
-            "unexpected_results": [
-                {"result_id": r, "relationship": "outside_predefined_scenarios"}
-                for r in unexpected
-            ],
-            "context_of": {
-                a["id"]: " / ".join(
-                    part
-                    for part in (
-                        experiment_by_id[a["experiment_id"]]["context"]["cell_line"],
-                        experiment_by_id[a["experiment_id"]]["context"]["hla_allele"]
-                        or "no HLA allele reported",
-                    )
-                    if part
-                )
-                for a in phenotype
-            },
-            "target_label": protein_record.gene_symbol
-            or protein_record.recommended_name
-            or protein_record.primary_accession,
-            "compound_coverage": {
-                "compounds": [
-                    {
-                        "compound_id": c,
-                        "biochemical": c in with_biochemical,
-                        "cellular_phenotype": c in with_phenotype,
-                    }
-                    for c in compounds
-                ],
-                "unresolved_identity_perturbagens": unresolved_identity,
-            },
-            "review": {
-                "pending_expert_review": pending,
-                "accepted": len(assessments) - pending,
-            },
-            "review_mode": mode,
-            "edges": edges,
-            "biochemical_ids": [
-                i for i in edges["biochemical"]["ids"] if i.startswith("measurement")
-            ],
-            "compound_phenotype_ids": pick(True, state="supported"),
-            "genetic_phenotype_ids": pick(False, state="supported"),
-            "genetic_dependency_ids": genetic,
-            "compound_dependency_uncertain_ids": sorted(
-                a["id"]
-                for a in phenotype
-                if modality[a["experiment_id"]] == "small_molecule"
-                and a["dependency"] in ("uncertain", "not_assessed")
-            ),
-            "compound_dependency_supported_ids": pick(True, dependency="supported"),
-            "functional_insufficient_ids": sorted(
-                a["id"]
-                for a in assessments
-                if a["edge"] == "functional" and a["state"] == "insufficient"
-            ),
-            "gap_ids": sorted(g["id"] for g in gaps)
-            if edges["engagement"]["state"] != "supported"
-            else [],
-            "selectivity": {
-                "by_status": {
-                    status: sum(
-                        s["comparability_status"] == status for s in selectivity
-                    )
-                    for status in sorted(
-                        {s["comparability_status"] for s in selectivity}
-                    )
-                },
-                "total": len(selectivity),
-                "comparable": len(selectivity) - len(unresolved),
-                "unresolved_ids": unresolved,
-                "comparable_ids": sorted(
-                    s["id"]
-                    for s in selectivity
-                    if s["comparability_status"] == "Comparable"
-                ),
-            },
-            "concordance": {
-                "concordant": sum(c["state"] == "concordant" for c in comparisons),
-                "discordant": sum(c["state"] == "discordant" for c in comparisons),
-                "not_comparable": sum(
-                    c["state"] == "not_comparable" for c in comparisons
-                ),
-                "discordant_ids": sorted(
-                    ":".join(c["experiment_ids"])
-                    for c in comparisons
-                    if c["state"] == "discordant"
-                ),
-            },
-            "source_disagreements": disagreements,
-            "contexts": {
-                "allotype_reported": any(
-                    e["context"]["erap1_allotype"] for e in experiments
-                ),
-                "unmatched_context_experiments": sum(
-                    not e["context"]["hla_allele"] for e in experiments
-                ),
-                "hla_alleles": sorted(
-                    {
-                        e["context"]["hla_allele"]
-                        for e in experiments
-                        if e["context"]["hla_allele"]
-                    }
-                ),
-            },
-            "structure_ids": structure_ids,
-            "strategy_ids": sorted(
-                row[0]
-                for row in self.store._connection.execute(
-                    "SELECT strategy_id FROM intervention_strategies "
-                    "WHERE project_id=?",
-                    [project],
-                ).fetchall()
-            ),
-        }
 
     # -- build -------------------------------------------------------------
 
@@ -599,6 +297,7 @@ class DecisionService:
         protein: str,
         mode: str = "exploratory",
         overrides: dict[str, str] | None = None,
+        records: dict[str, Any] | None = None,
     ) -> engine.Inputs:
         """Load every decision input from the store; the engine reads nothing else.
 
@@ -675,7 +374,7 @@ class DecisionService:
         mapping_reviews = self._review_states(project, "scenario_mapping")
         design_reviews = self._review_states(project, "candidate_design")
         return {
-            "evidence": self.evidence(project, protein, mode, ledger),
+            "evidence": self.evidence(project, protein, mode, ledger, records),
             "review": {
                 "mode": mode,
                 "policy_id": policy.POLICY_ID,

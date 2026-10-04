@@ -1,0 +1,32 @@
+{
+  "decisions": [
+    {
+      "decision": "window",
+      "reason": "available_on_or_before_cutoff",
+      "record": "structure_ids:structure:pdb:3QNF:04b29d420769a6ce405c85d90e6888289de20381e17e64c1a31c3e4f835b8f75:2026-10-04T12:25:57+00:00:3654c195689a5327",
+      "source": "PDB:3QNF"
+    }
+  ],
+  "record_sources": {
+    "structure_ids:structure:pdb:3QNF:04b29d420769a6ce405c85d90e6888289de20381e17e64c1a31c3e4f835b8f75:2026-10-04T12:25:57+00:00:3654c195689a5327": "PDB:3QNF"
+  },
+  "records": {
+    "assessments": [],
+    "biochemical_measurements": [],
+    "compounds": [],
+    "experiments": [],
+    "gaps": [],
+    "readouts": [],
+    "selectivity": [],
+    "strategy_ids": [
+      "AXIS-ERAP1-CURATED-STRATEGY-allele_specific_modulation",
+      "AXIS-ERAP1-CURATED-STRATEGY-allosterically_modulate",
+      "AXIS-ERAP1-CURATED-STRATEGY-inhibit",
+      "AXIS-ERAP1-CURATED-STRATEGY-partially_inhibit"
+    ],
+    "structure_ids": [
+      "structure:pdb:3QNF:04b29d420769a6ce405c85d90e6888289de20381e17e64c1a31c3e4f835b8f75:2026-10-04T12:25:57+00:00:3654c195689a5327"
+    ],
+    "target_label": "ERAP1"
+  }
+}

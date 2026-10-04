@@ -1,0 +1,1991 @@
+{
+  "decisions": [
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "experiments:cellular:chen-coculture",
+      "source": "PMID:26130142"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "experiments:cellular:chen-dg013a-C1R.B27",
+      "source": "PMID:26130142"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "experiments:cellular:chen-dg013a-HeLa.B27",
+      "source": "PMID:26130142"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "experiments:cellular:chen-knockdown-C1R.B27",
+      "source": "PMID:26130142"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "experiments:cellular:chen-knockdown-HeLa.B27",
+      "source": "PMID:26130142"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "experiments:cellular:maben-2",
+      "source": "PMID:31841350"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "experiments:cellular:maben-3",
+      "source": "PMID:31841350"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "experiments:cellular:tran-dimer",
+      "source": "PMID:27107845"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "experiments:cellular:tran-fhc",
+      "source": "PMID:27107845"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "assessments:cellular:chen-coculture:engagement",
+      "source": "PMID:26130142"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "assessments:cellular:chen-coculture:functional",
+      "source": "PMID:26130142"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "assessments:cellular:chen-coculture:immune",
+      "source": "PMID:26130142"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "assessments:cellular:chen-dg013a-C1R.B27:engagement",
+      "source": "PMID:26130142"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "assessments:cellular:chen-dg013a-C1R.B27:exposure",
+      "source": "PMID:26130142"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "assessments:cellular:chen-dg013a-C1R.B27:functional",
+      "source": "PMID:26130142"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "assessments:cellular:chen-dg013a-C1R.B27:hla",
+      "source": "PMID:26130142"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "assessments:cellular:chen-dg013a-HeLa.B27:engagement",
+      "source": "PMID:26130142"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "assessments:cellular:chen-dg013a-HeLa.B27:exposure",
+      "source": "PMID:26130142"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "assessments:cellular:chen-dg013a-HeLa.B27:functional",
+      "source": "PMID:26130142"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "assessments:cellular:chen-dg013a-HeLa.B27:hla",
+      "source": "PMID:26130142"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "assessments:cellular:chen-knockdown-C1R.B27:engagement",
+      "source": "PMID:26130142"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "assessments:cellular:chen-knockdown-C1R.B27:functional",
+      "source": "PMID:26130142"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "assessments:cellular:chen-knockdown-C1R.B27:hla",
+      "source": "PMID:26130142"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "assessments:cellular:chen-knockdown-HeLa.B27:engagement",
+      "source": "PMID:26130142"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "assessments:cellular:chen-knockdown-HeLa.B27:functional",
+      "source": "PMID:26130142"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "assessments:cellular:chen-knockdown-HeLa.B27:hla",
+      "source": "PMID:26130142"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "assessments:cellular:maben-2:engagement",
+      "source": "PMID:31841350"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "assessments:cellular:maben-2:exposure",
+      "source": "PMID:31841350"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "assessments:cellular:maben-2:functional",
+      "source": "PMID:31841350"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "assessments:cellular:maben-2:hla",
+      "source": "PMID:31841350"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "assessments:cellular:maben-3:engagement",
+      "source": "PMID:31841350"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "assessments:cellular:maben-3:exposure",
+      "source": "PMID:31841350"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "assessments:cellular:maben-3:functional",
+      "source": "PMID:31841350"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "assessments:cellular:maben-3:hla",
+      "source": "PMID:31841350"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "assessments:cellular:tran-dimer:engagement",
+      "source": "PMID:27107845"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "assessments:cellular:tran-dimer:functional",
+      "source": "PMID:27107845"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "assessments:cellular:tran-dimer:hla",
+      "source": "PMID:27107845"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "assessments:cellular:tran-fhc:engagement",
+      "source": "PMID:27107845"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "assessments:cellular:tran-fhc:functional",
+      "source": "PMID:27107845"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "assessments:cellular:tran-fhc:hla",
+      "source": "PMID:27107845"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "readouts:cellular:chen-coculture:readout",
+      "source": "PMID:26130142"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "readouts:cellular:chen-dg013a-C1R.B27:readout",
+      "source": "PMID:26130142"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "readouts:cellular:chen-dg013a-HeLa.B27:readout",
+      "source": "PMID:26130142"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "readouts:cellular:chen-knockdown-C1R.B27:readout",
+      "source": "PMID:26130142"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "readouts:cellular:chen-knockdown-HeLa.B27:readout",
+      "source": "PMID:26130142"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "readouts:cellular:maben-2:readout",
+      "source": "PMID:31841350"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "readouts:cellular:maben-3:readout",
+      "source": "PMID:31841350"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "readouts:cellular:tran-dimer:readout",
+      "source": "PMID:27107845"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "readouts:cellular:tran-fhc:readout",
+      "source": "PMID:27107845"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "biochemical_measurements:measurement:maben:1",
+      "source": "PMID:31841350"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "biochemical_measurements:measurement:maben:10",
+      "source": "PMID:31841350"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "biochemical_measurements:measurement:maben:13",
+      "source": "PMID:31841350"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "biochemical_measurements:measurement:maben:14",
+      "source": "PMID:31841350"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "biochemical_measurements:measurement:maben:2",
+      "source": "PMID:31841350"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "biochemical_measurements:measurement:maben:3",
+      "source": "PMID:31841350"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "biochemical_measurements:measurement:maben:6",
+      "source": "PMID:31841350"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "biochemical_measurements:measurement:maben:7",
+      "source": "PMID:31841350"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "biochemical_measurements:measurement:maben:9",
+      "source": "PMID:31841350"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "selectivity:selectivity:measurement:maben:10:measurement:maben:11",
+      "source": "PMID:31841350"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "selectivity:selectivity:measurement:maben:10:measurement:maben:12",
+      "source": "PMID:31841350"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "selectivity:selectivity:measurement:maben:13:measurement:maben:11",
+      "source": "PMID:31841350"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "selectivity:selectivity:measurement:maben:13:measurement:maben:12",
+      "source": "PMID:31841350"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "selectivity:selectivity:measurement:maben:14:measurement:maben:11",
+      "source": "PMID:31841350"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "selectivity:selectivity:measurement:maben:14:measurement:maben:12",
+      "source": "PMID:31841350"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "selectivity:selectivity:measurement:maben:1:ERAP2",
+      "source": "PMID:31841350"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "selectivity:selectivity:measurement:maben:1:LNPEP",
+      "source": "PMID:31841350"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "selectivity:selectivity:measurement:maben:2:ERAP2",
+      "source": "PMID:31841350"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "selectivity:selectivity:measurement:maben:2:LNPEP",
+      "source": "PMID:31841350"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "selectivity:selectivity:measurement:maben:3:measurement:maben:4",
+      "source": "PMID:31841350"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "selectivity:selectivity:measurement:maben:3:measurement:maben:5",
+      "source": "PMID:31841350"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "selectivity:selectivity:measurement:maben:6:measurement:maben:4",
+      "source": "PMID:31841350"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "selectivity:selectivity:measurement:maben:6:measurement:maben:5",
+      "source": "PMID:31841350"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "selectivity:selectivity:measurement:maben:7:measurement:maben:4",
+      "source": "PMID:31841350"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "selectivity:selectivity:measurement:maben:7:measurement:maben:5",
+      "source": "PMID:31841350"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "selectivity:selectivity:measurement:maben:9:measurement:maben:11",
+      "source": "PMID:31841350"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "selectivity:selectivity:measurement:maben:9:measurement:maben:12",
+      "source": "PMID:31841350"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "compounds:compound:maben-1",
+      "source": "PMID:31841350"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "compounds:compound:maben-2",
+      "source": "PMID:31841350"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "compounds:compound:maben-3",
+      "source": "PMID:31841350"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "gaps:cellular:chen-dg013a-C1R.B27:gap",
+      "source": "PMID:26130142"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "gaps:cellular:chen-dg013a-HeLa.B27:gap",
+      "source": "PMID:26130142"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "gaps:cellular:maben-2:gap",
+      "source": "PMID:31841350"
+    },
+    {
+      "decision": "future",
+      "reason": "record_after_cutoff",
+      "record": "gaps:cellular:maben-3:gap",
+      "source": "PMID:31841350"
+    }
+  ],
+  "record_sources": {
+    "assessments:cellular:chen-coculture:engagement": "PMID:26130142",
+    "assessments:cellular:chen-coculture:functional": "PMID:26130142",
+    "assessments:cellular:chen-coculture:immune": "PMID:26130142",
+    "assessments:cellular:chen-dg013a-C1R.B27:engagement": "PMID:26130142",
+    "assessments:cellular:chen-dg013a-C1R.B27:exposure": "PMID:26130142",
+    "assessments:cellular:chen-dg013a-C1R.B27:functional": "PMID:26130142",
+    "assessments:cellular:chen-dg013a-C1R.B27:hla": "PMID:26130142",
+    "assessments:cellular:chen-dg013a-HeLa.B27:engagement": "PMID:26130142",
+    "assessments:cellular:chen-dg013a-HeLa.B27:exposure": "PMID:26130142",
+    "assessments:cellular:chen-dg013a-HeLa.B27:functional": "PMID:26130142",
+    "assessments:cellular:chen-dg013a-HeLa.B27:hla": "PMID:26130142",
+    "assessments:cellular:chen-knockdown-C1R.B27:engagement": "PMID:26130142",
+    "assessments:cellular:chen-knockdown-C1R.B27:functional": "PMID:26130142",
+    "assessments:cellular:chen-knockdown-C1R.B27:hla": "PMID:26130142",
+    "assessments:cellular:chen-knockdown-HeLa.B27:engagement": "PMID:26130142",
+    "assessments:cellular:chen-knockdown-HeLa.B27:functional": "PMID:26130142",
+    "assessments:cellular:chen-knockdown-HeLa.B27:hla": "PMID:26130142",
+    "assessments:cellular:maben-2:engagement": "PMID:31841350",
+    "assessments:cellular:maben-2:exposure": "PMID:31841350",
+    "assessments:cellular:maben-2:functional": "PMID:31841350",
+    "assessments:cellular:maben-2:hla": "PMID:31841350",
+    "assessments:cellular:maben-3:engagement": "PMID:31841350",
+    "assessments:cellular:maben-3:exposure": "PMID:31841350",
+    "assessments:cellular:maben-3:functional": "PMID:31841350",
+    "assessments:cellular:maben-3:hla": "PMID:31841350",
+    "assessments:cellular:tran-dimer:engagement": "PMID:27107845",
+    "assessments:cellular:tran-dimer:functional": "PMID:27107845",
+    "assessments:cellular:tran-dimer:hla": "PMID:27107845",
+    "assessments:cellular:tran-fhc:engagement": "PMID:27107845",
+    "assessments:cellular:tran-fhc:functional": "PMID:27107845",
+    "assessments:cellular:tran-fhc:hla": "PMID:27107845",
+    "biochemical_measurements:measurement:maben:1": "PMID:31841350",
+    "biochemical_measurements:measurement:maben:10": "PMID:31841350",
+    "biochemical_measurements:measurement:maben:13": "PMID:31841350",
+    "biochemical_measurements:measurement:maben:14": "PMID:31841350",
+    "biochemical_measurements:measurement:maben:2": "PMID:31841350",
+    "biochemical_measurements:measurement:maben:3": "PMID:31841350",
+    "biochemical_measurements:measurement:maben:6": "PMID:31841350",
+    "biochemical_measurements:measurement:maben:7": "PMID:31841350",
+    "biochemical_measurements:measurement:maben:9": "PMID:31841350",
+    "compounds:compound:maben-1": "PMID:31841350",
+    "compounds:compound:maben-2": "PMID:31841350",
+    "compounds:compound:maben-3": "PMID:31841350",
+    "experiments:cellular:chen-coculture": "PMID:26130142",
+    "experiments:cellular:chen-dg013a-C1R.B27": "PMID:26130142",
+    "experiments:cellular:chen-dg013a-HeLa.B27": "PMID:26130142",
+    "experiments:cellular:chen-knockdown-C1R.B27": "PMID:26130142",
+    "experiments:cellular:chen-knockdown-HeLa.B27": "PMID:26130142",
+    "experiments:cellular:maben-2": "PMID:31841350",
+    "experiments:cellular:maben-3": "PMID:31841350",
+    "experiments:cellular:tran-dimer": "PMID:27107845",
+    "experiments:cellular:tran-fhc": "PMID:27107845",
+    "gaps:cellular:chen-dg013a-C1R.B27:gap": "PMID:26130142",
+    "gaps:cellular:chen-dg013a-HeLa.B27:gap": "PMID:26130142",
+    "gaps:cellular:maben-2:gap": "PMID:31841350",
+    "gaps:cellular:maben-3:gap": "PMID:31841350",
+    "readouts:cellular:chen-coculture:readout": "PMID:26130142",
+    "readouts:cellular:chen-dg013a-C1R.B27:readout": "PMID:26130142",
+    "readouts:cellular:chen-dg013a-HeLa.B27:readout": "PMID:26130142",
+    "readouts:cellular:chen-knockdown-C1R.B27:readout": "PMID:26130142",
+    "readouts:cellular:chen-knockdown-HeLa.B27:readout": "PMID:26130142",
+    "readouts:cellular:maben-2:readout": "PMID:31841350",
+    "readouts:cellular:maben-3:readout": "PMID:31841350",
+    "readouts:cellular:tran-dimer:readout": "PMID:27107845",
+    "readouts:cellular:tran-fhc:readout": "PMID:27107845",
+    "selectivity:selectivity:measurement:maben:10:measurement:maben:11": "PMID:31841350",
+    "selectivity:selectivity:measurement:maben:10:measurement:maben:12": "PMID:31841350",
+    "selectivity:selectivity:measurement:maben:13:measurement:maben:11": "PMID:31841350",
+    "selectivity:selectivity:measurement:maben:13:measurement:maben:12": "PMID:31841350",
+    "selectivity:selectivity:measurement:maben:14:measurement:maben:11": "PMID:31841350",
+    "selectivity:selectivity:measurement:maben:14:measurement:maben:12": "PMID:31841350",
+    "selectivity:selectivity:measurement:maben:1:ERAP2": "PMID:31841350",
+    "selectivity:selectivity:measurement:maben:1:LNPEP": "PMID:31841350",
+    "selectivity:selectivity:measurement:maben:2:ERAP2": "PMID:31841350",
+    "selectivity:selectivity:measurement:maben:2:LNPEP": "PMID:31841350",
+    "selectivity:selectivity:measurement:maben:3:measurement:maben:4": "PMID:31841350",
+    "selectivity:selectivity:measurement:maben:3:measurement:maben:5": "PMID:31841350",
+    "selectivity:selectivity:measurement:maben:6:measurement:maben:4": "PMID:31841350",
+    "selectivity:selectivity:measurement:maben:6:measurement:maben:5": "PMID:31841350",
+    "selectivity:selectivity:measurement:maben:7:measurement:maben:4": "PMID:31841350",
+    "selectivity:selectivity:measurement:maben:7:measurement:maben:5": "PMID:31841350",
+    "selectivity:selectivity:measurement:maben:9:measurement:maben:11": "PMID:31841350",
+    "selectivity:selectivity:measurement:maben:9:measurement:maben:12": "PMID:31841350"
+  },
+  "records": {
+    "assessments": [
+      {
+        "contradicting_readout_ids": [],
+        "created_by": "AXIS AI-assisted curation",
+        "dependency": "not_assessed",
+        "directness": "not_assessed",
+        "disease_relevance": "unknown",
+        "edge": "engagement",
+        "experiment_id": "cellular:chen-coculture",
+        "id": "cellular:chen-coculture:engagement",
+        "rationale": "No direct cellular compound\u2013ERAP1 interaction assay in this experiment. Genetic perturbation is not compound binding.",
+        "review_status": "pending_expert_review",
+        "rule_version": "axis-cellular-1",
+        "state": "not_applicable",
+        "supporting_readout_ids": []
+      },
+      {
+        "contradicting_readout_ids": [],
+        "created_by": "AXIS AI-assisted curation",
+        "dependency": "supported",
+        "directness": "indirect",
+        "disease_relevance": "unknown",
+        "edge": "functional",
+        "experiment_id": "cellular:chen-coculture",
+        "id": "cellular:chen-coculture:functional",
+        "rationale": "Downstream phenotype alone does not demonstrate proximal ERAP1 catalytic modulation or drug-specific target dependency.",
+        "review_status": "pending_expert_review",
+        "rule_version": "axis-cellular-1",
+        "state": "insufficient",
+        "supporting_readout_ids": []
+      },
+      {
+        "contradicting_readout_ids": [],
+        "created_by": "AXIS AI-assisted curation",
+        "dependency": "supported",
+        "directness": "downstream_phenotype",
+        "disease_relevance": "direct_disease_context",
+        "edge": "immune",
+        "experiment_id": "cellular:chen-coculture",
+        "id": "cellular:chen-coculture:immune",
+        "rationale": "Source reports this readout in the specified system; not therapeutic efficacy.",
+        "review_status": "pending_expert_review",
+        "rule_version": "axis-cellular-1",
+        "state": "supported",
+        "supporting_readout_ids": [
+          "cellular:chen-coculture:readout"
+        ]
+      },
+      {
+        "contradicting_readout_ids": [],
+        "created_by": "AXIS AI-assisted curation",
+        "dependency": "not_assessed",
+        "directness": "not_assessed",
+        "disease_relevance": "unknown",
+        "edge": "engagement",
+        "experiment_id": "cellular:chen-dg013a-C1R.B27",
+        "id": "cellular:chen-dg013a-C1R.B27:engagement",
+        "rationale": "No direct cellular compound\u2013ERAP1 interaction assay in this experiment. Genetic perturbation is not compound binding.",
+        "review_status": "pending_expert_review",
+        "rule_version": "axis-cellular-1",
+        "state": "not_assessed",
+        "supporting_readout_ids": []
+      },
+      {
+        "contradicting_readout_ids": [],
+        "created_by": "AXIS AI-assisted curation",
+        "dependency": "not_assessed",
+        "directness": "chemical_exposure",
+        "disease_relevance": "unknown",
+        "edge": "exposure",
+        "experiment_id": "cellular:chen-dg013a-C1R.B27",
+        "id": "cellular:chen-dg013a-C1R.B27:exposure",
+        "rationale": "Compound applied; nominal exposure does not establish intracellular concentration or occupancy.",
+        "review_status": "pending_expert_review",
+        "rule_version": "axis-cellular-1",
+        "state": "supported",
+        "supporting_readout_ids": [
+          "cellular:chen-dg013a-C1R.B27:readout"
+        ]
+      },
+      {
+        "contradicting_readout_ids": [],
+        "created_by": "AXIS AI-assisted curation",
+        "dependency": "uncertain",
+        "directness": "indirect",
+        "disease_relevance": "unknown",
+        "edge": "functional",
+        "experiment_id": "cellular:chen-dg013a-C1R.B27",
+        "id": "cellular:chen-dg013a-C1R.B27:functional",
+        "rationale": "Downstream phenotype alone does not demonstrate proximal ERAP1 catalytic modulation or drug-specific target dependency.",
+        "review_status": "pending_expert_review",
+        "rule_version": "axis-cellular-1",
+        "state": "insufficient",
+        "supporting_readout_ids": []
+      },
+      {
+        "contradicting_readout_ids": [],
+        "created_by": "AXIS AI-assisted curation",
+        "dependency": "uncertain",
+        "directness": "downstream_phenotype",
+        "disease_relevance": "disease_relevant_molecular_context",
+        "edge": "hla",
+        "experiment_id": "cellular:chen-dg013a-C1R.B27",
+        "id": "cellular:chen-dg013a-C1R.B27:hla",
+        "rationale": "Source reports this readout in the specified system; not therapeutic efficacy.",
+        "review_status": "pending_expert_review",
+        "rule_version": "axis-cellular-1",
+        "state": "supported",
+        "supporting_readout_ids": [
+          "cellular:chen-dg013a-C1R.B27:readout"
+        ]
+      },
+      {
+        "contradicting_readout_ids": [],
+        "created_by": "AXIS AI-assisted curation",
+        "dependency": "not_assessed",
+        "directness": "not_assessed",
+        "disease_relevance": "unknown",
+        "edge": "engagement",
+        "experiment_id": "cellular:chen-dg013a-HeLa.B27",
+        "id": "cellular:chen-dg013a-HeLa.B27:engagement",
+        "rationale": "No direct cellular compound\u2013ERAP1 interaction assay in this experiment. Genetic perturbation is not compound binding.",
+        "review_status": "pending_expert_review",
+        "rule_version": "axis-cellular-1",
+        "state": "not_assessed",
+        "supporting_readout_ids": []
+      },
+      {
+        "contradicting_readout_ids": [],
+        "created_by": "AXIS AI-assisted curation",
+        "dependency": "not_assessed",
+        "directness": "chemical_exposure",
+        "disease_relevance": "unknown",
+        "edge": "exposure",
+        "experiment_id": "cellular:chen-dg013a-HeLa.B27",
+        "id": "cellular:chen-dg013a-HeLa.B27:exposure",
+        "rationale": "Compound applied; nominal exposure does not establish intracellular concentration or occupancy.",
+        "review_status": "pending_expert_review",
+        "rule_version": "axis-cellular-1",
+        "state": "supported",
+        "supporting_readout_ids": [
+          "cellular:chen-dg013a-HeLa.B27:readout"
+        ]
+      },
+      {
+        "contradicting_readout_ids": [],
+        "created_by": "AXIS AI-assisted curation",
+        "dependency": "uncertain",
+        "directness": "indirect",
+        "disease_relevance": "unknown",
+        "edge": "functional",
+        "experiment_id": "cellular:chen-dg013a-HeLa.B27",
+        "id": "cellular:chen-dg013a-HeLa.B27:functional",
+        "rationale": "Downstream phenotype alone does not demonstrate proximal ERAP1 catalytic modulation or drug-specific target dependency.",
+        "review_status": "pending_expert_review",
+        "rule_version": "axis-cellular-1",
+        "state": "insufficient",
+        "supporting_readout_ids": []
+      },
+      {
+        "contradicting_readout_ids": [],
+        "created_by": "AXIS AI-assisted curation",
+        "dependency": "uncertain",
+        "directness": "downstream_phenotype",
+        "disease_relevance": "disease_relevant_molecular_context",
+        "edge": "hla",
+        "experiment_id": "cellular:chen-dg013a-HeLa.B27",
+        "id": "cellular:chen-dg013a-HeLa.B27:hla",
+        "rationale": "Source reports this readout in the specified system; not therapeutic efficacy.",
+        "review_status": "pending_expert_review",
+        "rule_version": "axis-cellular-1",
+        "state": "supported",
+        "supporting_readout_ids": [
+          "cellular:chen-dg013a-HeLa.B27:readout"
+        ]
+      },
+      {
+        "contradicting_readout_ids": [],
+        "created_by": "AXIS AI-assisted curation",
+        "dependency": "not_assessed",
+        "directness": "not_assessed",
+        "disease_relevance": "unknown",
+        "edge": "engagement",
+        "experiment_id": "cellular:chen-knockdown-C1R.B27",
+        "id": "cellular:chen-knockdown-C1R.B27:engagement",
+        "rationale": "No direct cellular compound\u2013ERAP1 interaction assay in this experiment. Genetic perturbation is not compound binding.",
+        "review_status": "pending_expert_review",
+        "rule_version": "axis-cellular-1",
+        "state": "not_applicable",
+        "supporting_readout_ids": []
+      },
+      {
+        "contradicting_readout_ids": [],
+        "created_by": "AXIS AI-assisted curation",
+        "dependency": "supported",
+        "directness": "indirect",
+        "disease_relevance": "unknown",
+        "edge": "functional",
+        "experiment_id": "cellular:chen-knockdown-C1R.B27",
+        "id": "cellular:chen-knockdown-C1R.B27:functional",
+        "rationale": "Downstream phenotype alone does not demonstrate proximal ERAP1 catalytic modulation or drug-specific target dependency.",
+        "review_status": "pending_expert_review",
+        "rule_version": "axis-cellular-1",
+        "state": "insufficient",
+        "supporting_readout_ids": []
+      },
+      {
+        "contradicting_readout_ids": [],
+        "created_by": "AXIS AI-assisted curation",
+        "dependency": "supported",
+        "directness": "downstream_phenotype",
+        "disease_relevance": "disease_relevant_molecular_context",
+        "edge": "hla",
+        "experiment_id": "cellular:chen-knockdown-C1R.B27",
+        "id": "cellular:chen-knockdown-C1R.B27:hla",
+        "rationale": "Source reports this readout in the specified system; not therapeutic efficacy.",
+        "review_status": "pending_expert_review",
+        "rule_version": "axis-cellular-1",
+        "state": "supported",
+        "supporting_readout_ids": [
+          "cellular:chen-knockdown-C1R.B27:readout"
+        ]
+      },
+      {
+        "contradicting_readout_ids": [],
+        "created_by": "AXIS AI-assisted curation",
+        "dependency": "not_assessed",
+        "directness": "not_assessed",
+        "disease_relevance": "unknown",
+        "edge": "engagement",
+        "experiment_id": "cellular:chen-knockdown-HeLa.B27",
+        "id": "cellular:chen-knockdown-HeLa.B27:engagement",
+        "rationale": "No direct cellular compound\u2013ERAP1 interaction assay in this experiment. Genetic perturbation is not compound binding.",
+        "review_status": "pending_expert_review",
+        "rule_version": "axis-cellular-1",
+        "state": "not_applicable",
+        "supporting_readout_ids": []
+      },
+      {
+        "contradicting_readout_ids": [],
+        "created_by": "AXIS AI-assisted curation",
+        "dependency": "supported",
+        "directness": "indirect",
+        "disease_relevance": "unknown",
+        "edge": "functional",
+        "experiment_id": "cellular:chen-knockdown-HeLa.B27",
+        "id": "cellular:chen-knockdown-HeLa.B27:functional",
+        "rationale": "Downstream phenotype alone does not demonstrate proximal ERAP1 catalytic modulation or drug-specific target dependency.",
+        "review_status": "pending_expert_review",
+        "rule_version": "axis-cellular-1",
+        "state": "insufficient",
+        "supporting_readout_ids": []
+      },
+      {
+        "contradicting_readout_ids": [],
+        "created_by": "AXIS AI-assisted curation",
+        "dependency": "supported",
+        "directness": "downstream_phenotype",
+        "disease_relevance": "disease_relevant_molecular_context",
+        "edge": "hla",
+        "experiment_id": "cellular:chen-knockdown-HeLa.B27",
+        "id": "cellular:chen-knockdown-HeLa.B27:hla",
+        "rationale": "Source reports this readout in the specified system; not therapeutic efficacy.",
+        "review_status": "pending_expert_review",
+        "rule_version": "axis-cellular-1",
+        "state": "supported",
+        "supporting_readout_ids": [
+          "cellular:chen-knockdown-HeLa.B27:readout"
+        ]
+      },
+      {
+        "contradicting_readout_ids": [],
+        "created_by": "AXIS AI-assisted curation",
+        "dependency": "not_assessed",
+        "directness": "not_assessed",
+        "disease_relevance": "unknown",
+        "edge": "engagement",
+        "experiment_id": "cellular:maben-2",
+        "id": "cellular:maben-2:engagement",
+        "rationale": "No direct cellular compound\u2013ERAP1 interaction assay in this experiment. Genetic perturbation is not compound binding.",
+        "review_status": "pending_expert_review",
+        "rule_version": "axis-cellular-1",
+        "state": "not_assessed",
+        "supporting_readout_ids": []
+      },
+      {
+        "contradicting_readout_ids": [],
+        "created_by": "AXIS AI-assisted curation",
+        "dependency": "not_assessed",
+        "directness": "chemical_exposure",
+        "disease_relevance": "unknown",
+        "edge": "exposure",
+        "experiment_id": "cellular:maben-2",
+        "id": "cellular:maben-2:exposure",
+        "rationale": "Compound applied; nominal exposure does not establish intracellular concentration or occupancy.",
+        "review_status": "pending_expert_review",
+        "rule_version": "axis-cellular-1",
+        "state": "supported",
+        "supporting_readout_ids": [
+          "cellular:maben-2:readout"
+        ]
+      },
+      {
+        "contradicting_readout_ids": [],
+        "created_by": "AXIS AI-assisted curation",
+        "dependency": "uncertain",
+        "directness": "indirect",
+        "disease_relevance": "unknown",
+        "edge": "functional",
+        "experiment_id": "cellular:maben-2",
+        "id": "cellular:maben-2:functional",
+        "rationale": "Downstream phenotype alone does not demonstrate proximal ERAP1 catalytic modulation or drug-specific target dependency.",
+        "review_status": "pending_expert_review",
+        "rule_version": "axis-cellular-1",
+        "state": "insufficient",
+        "supporting_readout_ids": []
+      },
+      {
+        "contradicting_readout_ids": [],
+        "created_by": "AXIS AI-assisted curation",
+        "dependency": "uncertain",
+        "directness": "downstream_phenotype",
+        "disease_relevance": "mechanistic_model",
+        "edge": "hla",
+        "experiment_id": "cellular:maben-2",
+        "id": "cellular:maben-2:hla",
+        "rationale": "Source reports this readout in the specified system; not therapeutic efficacy.",
+        "review_status": "pending_expert_review",
+        "rule_version": "axis-cellular-1",
+        "state": "supported",
+        "supporting_readout_ids": [
+          "cellular:maben-2:readout"
+        ]
+      },
+      {
+        "contradicting_readout_ids": [],
+        "created_by": "AXIS AI-assisted curation",
+        "dependency": "not_assessed",
+        "directness": "not_assessed",
+        "disease_relevance": "unknown",
+        "edge": "engagement",
+        "experiment_id": "cellular:maben-3",
+        "id": "cellular:maben-3:engagement",
+        "rationale": "No direct cellular compound\u2013ERAP1 interaction assay in this experiment. Genetic perturbation is not compound binding.",
+        "review_status": "pending_expert_review",
+        "rule_version": "axis-cellular-1",
+        "state": "not_assessed",
+        "supporting_readout_ids": []
+      },
+      {
+        "contradicting_readout_ids": [],
+        "created_by": "AXIS AI-assisted curation",
+        "dependency": "not_assessed",
+        "directness": "chemical_exposure",
+        "disease_relevance": "unknown",
+        "edge": "exposure",
+        "experiment_id": "cellular:maben-3",
+        "id": "cellular:maben-3:exposure",
+        "rationale": "Compound applied; nominal exposure does not establish intracellular concentration or occupancy.",
+        "review_status": "pending_expert_review",
+        "rule_version": "axis-cellular-1",
+        "state": "supported",
+        "supporting_readout_ids": [
+          "cellular:maben-3:readout"
+        ]
+      },
+      {
+        "contradicting_readout_ids": [],
+        "created_by": "AXIS AI-assisted curation",
+        "dependency": "uncertain",
+        "directness": "indirect",
+        "disease_relevance": "unknown",
+        "edge": "functional",
+        "experiment_id": "cellular:maben-3",
+        "id": "cellular:maben-3:functional",
+        "rationale": "Downstream phenotype alone does not demonstrate proximal ERAP1 catalytic modulation or drug-specific target dependency.",
+        "review_status": "pending_expert_review",
+        "rule_version": "axis-cellular-1",
+        "state": "insufficient",
+        "supporting_readout_ids": []
+      },
+      {
+        "contradicting_readout_ids": [],
+        "created_by": "AXIS AI-assisted curation",
+        "dependency": "uncertain",
+        "directness": "downstream_phenotype",
+        "disease_relevance": "mechanistic_model",
+        "edge": "hla",
+        "experiment_id": "cellular:maben-3",
+        "id": "cellular:maben-3:hla",
+        "rationale": "Source reports this readout in the specified system; not therapeutic efficacy.",
+        "review_status": "pending_expert_review",
+        "rule_version": "axis-cellular-1",
+        "state": "supported",
+        "supporting_readout_ids": [
+          "cellular:maben-3:readout"
+        ]
+      },
+      {
+        "contradicting_readout_ids": [],
+        "created_by": "AXIS AI-assisted curation",
+        "dependency": "not_assessed",
+        "directness": "not_assessed",
+        "disease_relevance": "unknown",
+        "edge": "engagement",
+        "experiment_id": "cellular:tran-dimer",
+        "id": "cellular:tran-dimer:engagement",
+        "rationale": "No direct cellular compound\u2013ERAP1 interaction assay in this experiment. Genetic perturbation is not compound binding.",
+        "review_status": "pending_expert_review",
+        "rule_version": "axis-cellular-1",
+        "state": "not_applicable",
+        "supporting_readout_ids": []
+      },
+      {
+        "contradicting_readout_ids": [],
+        "created_by": "AXIS AI-assisted curation",
+        "dependency": "supported",
+        "directness": "indirect",
+        "disease_relevance": "unknown",
+        "edge": "functional",
+        "experiment_id": "cellular:tran-dimer",
+        "id": "cellular:tran-dimer:functional",
+        "rationale": "Downstream phenotype alone does not demonstrate proximal ERAP1 catalytic modulation or drug-specific target dependency.",
+        "review_status": "pending_expert_review",
+        "rule_version": "axis-cellular-1",
+        "state": "insufficient",
+        "supporting_readout_ids": []
+      },
+      {
+        "contradicting_readout_ids": [],
+        "created_by": "AXIS AI-assisted curation",
+        "dependency": "supported",
+        "directness": "downstream_phenotype",
+        "disease_relevance": "disease_relevant_molecular_context",
+        "edge": "hla",
+        "experiment_id": "cellular:tran-dimer",
+        "id": "cellular:tran-dimer:hla",
+        "rationale": "Source reports this readout in the specified system; not therapeutic efficacy.",
+        "review_status": "pending_expert_review",
+        "rule_version": "axis-cellular-1",
+        "state": "supported",
+        "supporting_readout_ids": [
+          "cellular:tran-dimer:readout"
+        ]
+      },
+      {
+        "contradicting_readout_ids": [],
+        "created_by": "AXIS AI-assisted curation",
+        "dependency": "not_assessed",
+        "directness": "not_assessed",
+        "disease_relevance": "unknown",
+        "edge": "engagement",
+        "experiment_id": "cellular:tran-fhc",
+        "id": "cellular:tran-fhc:engagement",
+        "rationale": "No direct cellular compound\u2013ERAP1 interaction assay in this experiment. Genetic perturbation is not compound binding.",
+        "review_status": "pending_expert_review",
+        "rule_version": "axis-cellular-1",
+        "state": "not_applicable",
+        "supporting_readout_ids": []
+      },
+      {
+        "contradicting_readout_ids": [],
+        "created_by": "AXIS AI-assisted curation",
+        "dependency": "supported",
+        "directness": "indirect",
+        "disease_relevance": "unknown",
+        "edge": "functional",
+        "experiment_id": "cellular:tran-fhc",
+        "id": "cellular:tran-fhc:functional",
+        "rationale": "Downstream phenotype alone does not demonstrate proximal ERAP1 catalytic modulation or drug-specific target dependency.",
+        "review_status": "pending_expert_review",
+        "rule_version": "axis-cellular-1",
+        "state": "insufficient",
+        "supporting_readout_ids": []
+      },
+      {
+        "contradicting_readout_ids": [],
+        "created_by": "AXIS AI-assisted curation",
+        "dependency": "supported",
+        "directness": "downstream_phenotype",
+        "disease_relevance": "disease_relevant_molecular_context",
+        "edge": "hla",
+        "experiment_id": "cellular:tran-fhc",
+        "id": "cellular:tran-fhc:hla",
+        "rationale": "Source reports this readout in the specified system; not therapeutic efficacy.",
+        "review_status": "pending_expert_review",
+        "rule_version": "axis-cellular-1",
+        "state": "supported",
+        "supporting_readout_ids": [
+          "cellular:tran-fhc:readout"
+        ]
+      }
+    ],
+    "biochemical_measurements": [
+      {
+        "assay_id": "assay:maben:ERAP1-AMC",
+        "chemical_form_id": null,
+        "compound_id": "compound:maben-1",
+        "created_at": "2026-10-04T13:34:20.060032+00:00",
+        "endpoint": "IC50",
+        "epistemic_type": "source_reported_experiment",
+        "id": "measurement:maben:1",
+        "limitations": "No therapeutic efficacy or direct cellular target engagement demonstrated. Exact assay construct and tested substance form unresolved.",
+        "locator": "p.106, Dose dependence; Figure 2A",
+        "normalization_method": {
+          "factor": 1000.0,
+          "input": "9.2",
+          "input_unit": "\u00b5M",
+          "method": "AXIS concentration conversion v1",
+          "output_unit": "nM"
+        },
+        "normalized_unit": "nM",
+        "normalized_value": 9200.0,
+        "original_unit": "\u00b5M",
+        "original_value": "9.2",
+        "provider_pchembl": "5.04",
+        "provider_snapshot_id": "chembl:maben-37",
+        "relation_operator": "=",
+        "replicate_count": null,
+        "source_record_id": "10.1021/acs.jmedchem.9b00293:1:ERAP1-AMC:IC50; ChEMBL activity 19151080",
+        "source_snapshot_id": "primary:maben-2020",
+        "uncertainty": null,
+        "value": 9.2
+      },
+      {
+        "assay_id": "assay:maben:ERAP1-AMC",
+        "chemical_form_id": null,
+        "compound_id": "compound:maben-3",
+        "created_at": "2026-10-04T13:34:20.060032+00:00",
+        "endpoint": "fold activity",
+        "epistemic_type": "source_reported_experiment",
+        "id": "measurement:maben:10",
+        "limitations": "No therapeutic efficacy or direct cellular target engagement demonstrated. Exact assay construct and tested substance form unresolved.",
+        "locator": "Table 2, compound 3, footnote a",
+        "normalization_method": {},
+        "normalized_unit": null,
+        "normalized_value": null,
+        "original_unit": "fold",
+        "original_value": "4.1",
+        "provider_pchembl": null,
+        "provider_snapshot_id": null,
+        "relation_operator": "=",
+        "replicate_count": null,
+        "source_record_id": "10.1021/acs.jmedchem.9b00293:3:ERAP1-AMC:fold activity",
+        "source_snapshot_id": "primary:maben-2020",
+        "uncertainty": null,
+        "value": 4.1
+      },
+      {
+        "assay_id": "assay:maben:ERAP1-WK10",
+        "chemical_form_id": null,
+        "compound_id": "compound:maben-3",
+        "created_at": "2026-10-04T13:34:20.060032+00:00",
+        "endpoint": "IC50",
+        "epistemic_type": "source_reported_experiment",
+        "id": "measurement:maben:13",
+        "limitations": "No therapeutic efficacy or direct cellular target engagement demonstrated. Exact assay construct and tested substance form unresolved.",
+        "locator": "Table 2, compound 3",
+        "normalization_method": {
+          "factor": 1000.0,
+          "input": "5.3",
+          "input_unit": "\u00b5M",
+          "method": "AXIS concentration conversion v1",
+          "output_unit": "nM"
+        },
+        "normalized_unit": "nM",
+        "normalized_value": 5300.0,
+        "original_unit": "\u00b5M",
+        "original_value": "5.3",
+        "provider_pchembl": "5.28",
+        "provider_snapshot_id": "chembl:maben-37",
+        "relation_operator": "=",
+        "replicate_count": null,
+        "source_record_id": "10.1021/acs.jmedchem.9b00293:3:ERAP1-WK10:IC50; ChEMBL activity 19151158",
+        "source_snapshot_id": "primary:maben-2020",
+        "uncertainty": null,
+        "value": 5.3
+      },
+      {
+        "assay_id": "assay:maben:ERAP1-LF9",
+        "chemical_form_id": null,
+        "compound_id": "compound:maben-3",
+        "created_at": "2026-10-04T13:34:20.060032+00:00",
+        "endpoint": "Ki",
+        "epistemic_type": "source_reported_experiment",
+        "id": "measurement:maben:14",
+        "limitations": "No therapeutic efficacy or direct cellular target engagement demonstrated. Exact assay construct and tested substance form unresolved.",
+        "locator": "p.109, mechanism studies; Figure 5B",
+        "normalization_method": {
+          "factor": 1000.0,
+          "input": "3.8",
+          "input_unit": "\u00b5M",
+          "method": "AXIS concentration conversion v1",
+          "output_unit": "nM"
+        },
+        "normalized_unit": "nM",
+        "normalized_value": 3800.0,
+        "original_unit": "\u00b5M",
+        "original_value": "3.8",
+        "provider_pchembl": "5.42",
+        "provider_snapshot_id": "chembl:maben-37",
+        "relation_operator": "=",
+        "replicate_count": null,
+        "source_record_id": "10.1021/acs.jmedchem.9b00293:3:ERAP1-LF9:Ki; ChEMBL activity 19151188",
+        "source_snapshot_id": "primary:maben-2020",
+        "uncertainty": "\u00b10.7 \u00b5M; uncertainty type not specified in prose",
+        "value": 3.8
+      },
+      {
+        "assay_id": "assay:maben:ERAP1-pNA",
+        "chemical_form_id": null,
+        "compound_id": "compound:maben-1",
+        "created_at": "2026-10-04T13:34:20.060032+00:00",
+        "endpoint": "Ki",
+        "epistemic_type": "source_reported_experiment",
+        "id": "measurement:maben:2",
+        "limitations": "No therapeutic efficacy or direct cellular target engagement demonstrated. Exact assay construct and tested substance form unresolved.",
+        "locator": "p.108, mechanism studies; Figure 4A",
+        "normalization_method": {
+          "factor": 1000.0,
+          "input": "51.7",
+          "input_unit": "\u00b5M",
+          "method": "AXIS concentration conversion v1",
+          "output_unit": "nM"
+        },
+        "normalized_unit": "nM",
+        "normalized_value": 51700.0,
+        "original_unit": "\u00b5M",
+        "original_value": "51.7",
+        "provider_pchembl": "4.29",
+        "provider_snapshot_id": "chembl:maben-37",
+        "relation_operator": "=",
+        "replicate_count": null,
+        "source_record_id": "10.1021/acs.jmedchem.9b00293:1:ERAP1-pNA:Ki; ChEMBL activity 19151185",
+        "source_snapshot_id": "primary:maben-2020",
+        "uncertainty": "\u00b14.3 \u00b5M; uncertainty type not specified in prose",
+        "value": 51.7
+      },
+      {
+        "assay_id": "assay:maben:ERAP1-AMC",
+        "chemical_form_id": null,
+        "compound_id": "compound:maben-2",
+        "created_at": "2026-10-04T13:34:20.060032+00:00",
+        "endpoint": "IC50",
+        "epistemic_type": "source_reported_experiment",
+        "id": "measurement:maben:3",
+        "limitations": "No therapeutic efficacy or direct cellular target engagement demonstrated. Exact assay construct and tested substance form unresolved.",
+        "locator": "Table 1, compound 2",
+        "normalization_method": {
+          "factor": 1000.0,
+          "input": "6.9",
+          "input_unit": "\u00b5M",
+          "method": "AXIS concentration conversion v1",
+          "output_unit": "nM"
+        },
+        "normalized_unit": "nM",
+        "normalized_value": 6900.0,
+        "original_unit": "\u00b5M",
+        "original_value": "6.9",
+        "provider_pchembl": null,
+        "provider_snapshot_id": null,
+        "relation_operator": "=",
+        "replicate_count": null,
+        "source_record_id": "10.1021/acs.jmedchem.9b00293:2:ERAP1-AMC:IC50",
+        "source_snapshot_id": "primary:maben-2020",
+        "uncertainty": null,
+        "value": 6.9
+      },
+      {
+        "assay_id": "assay:maben:ERAP1-WK10",
+        "chemical_form_id": null,
+        "compound_id": "compound:maben-2",
+        "created_at": "2026-10-04T13:34:20.060032+00:00",
+        "endpoint": "IC50",
+        "epistemic_type": "source_reported_experiment",
+        "id": "measurement:maben:6",
+        "limitations": "Partial inhibition: less than 90% at highest concentration tested. Not equivalent to unconstrained full-inhibition IC50.",
+        "locator": "Table 1, compound 2, footnote a",
+        "normalization_method": {
+          "factor": 1000.0,
+          "input": "6.9",
+          "input_unit": "\u00b5M",
+          "method": "AXIS concentration conversion v1",
+          "output_unit": "nM"
+        },
+        "normalized_unit": "nM",
+        "normalized_value": 6900.0,
+        "original_unit": "\u00b5M",
+        "original_value": "6.9",
+        "provider_pchembl": null,
+        "provider_snapshot_id": null,
+        "relation_operator": "=",
+        "replicate_count": null,
+        "source_record_id": "10.1021/acs.jmedchem.9b00293:2:ERAP1-WK10:IC50",
+        "source_snapshot_id": "primary:maben-2020",
+        "uncertainty": null,
+        "value": 6.9
+      },
+      {
+        "assay_id": "assay:maben:ERAP1-pNA",
+        "chemical_form_id": null,
+        "compound_id": "compound:maben-2",
+        "created_at": "2026-10-04T13:34:20.060032+00:00",
+        "endpoint": "Ki",
+        "epistemic_type": "source_reported_experiment",
+        "id": "measurement:maben:7",
+        "limitations": "No therapeutic efficacy or direct cellular target engagement demonstrated. Exact assay construct and tested substance form unresolved.",
+        "locator": "p.108, mechanism studies; Figure 4B",
+        "normalization_method": {
+          "factor": 1000.0,
+          "input": "12.8",
+          "input_unit": "\u00b5M",
+          "method": "AXIS concentration conversion v1",
+          "output_unit": "nM"
+        },
+        "normalized_unit": "nM",
+        "normalized_value": 12800.0,
+        "original_unit": "\u00b5M",
+        "original_value": "12.8",
+        "provider_pchembl": null,
+        "provider_snapshot_id": null,
+        "relation_operator": "=",
+        "replicate_count": null,
+        "source_record_id": "10.1021/acs.jmedchem.9b00293:2:ERAP1-pNA:Ki",
+        "source_snapshot_id": "primary:maben-2020",
+        "uncertainty": "\u00b11.0 \u00b5M; uncertainty type not specified in prose",
+        "value": 12.8
+      },
+      {
+        "assay_id": "assay:maben:ERAP1-AMC",
+        "chemical_form_id": null,
+        "compound_id": "compound:maben-3",
+        "created_at": "2026-10-04T13:34:20.060032+00:00",
+        "endpoint": "AC50",
+        "epistemic_type": "source_reported_experiment",
+        "id": "measurement:maben:9",
+        "limitations": "No therapeutic efficacy or direct cellular target engagement demonstrated. Exact assay construct and tested substance form unresolved.",
+        "locator": "Table 2, compound 3",
+        "normalization_method": {
+          "factor": 1000.0,
+          "input": "4.1",
+          "input_unit": "\u00b5M",
+          "method": "AXIS concentration conversion v1",
+          "output_unit": "nM"
+        },
+        "normalized_unit": "nM",
+        "normalized_value": 4100.0,
+        "original_unit": "\u00b5M",
+        "original_value": "4.1",
+        "provider_pchembl": "5.39",
+        "provider_snapshot_id": "chembl:maben-37",
+        "relation_operator": "=",
+        "replicate_count": null,
+        "source_record_id": "10.1021/acs.jmedchem.9b00293:3:ERAP1-AMC:AC50; ChEMBL activity 19151136",
+        "source_snapshot_id": "primary:maben-2020",
+        "uncertainty": null,
+        "value": 4.1
+      }
+    ],
+    "compounds": [
+      "compound:maben-1",
+      "compound:maben-2",
+      "compound:maben-3"
+    ],
+    "experiments": [
+      {
+        "compound_id": null,
+        "concentration": null,
+        "context": {
+          "cell_line": "HeLa.B27/C1R.B27 + AS CD4+ T cells",
+          "disease_status": "Ankylosing spondylitis donor CD4+ cells; engineered APCs",
+          "donor_context": "AS CD4+ T cells n=5; not five independent cell lines",
+          "erap1_allotype": null,
+          "hla_allele": "HLA-B*27:05",
+          "hla_expression": "engineered",
+          "mhc_allele": null,
+          "scientific_context": {
+            "allotype": null,
+            "assay": "IL-17A ELISA and intracellular cytokine staining",
+            "cell_type": "HeLa.B27/C1R.B27 + AS CD4+ T cells",
+            "comparison": null,
+            "endpoint": "Th17 expansion and IL-17A secretion",
+            "experimental_system": "HeLa.B27/C1R.B27 + AS CD4+ T cells",
+            "genotype": null,
+            "hla_status": "HLA-B27 expressed",
+            "population": null,
+            "species": "Homo sapiens",
+            "tissue": null,
+            "treatment": null
+          }
+        },
+        "controls": [
+          "control shRNA or untreated APCs",
+          "SEB and IL-2 stimulation"
+        ],
+        "dosing_schedule": null,
+        "duration": "Day 3 IL-17A ELISA; day 6 intracellular Th17 staining",
+        "id": "cellular:chen-coculture",
+        "label": "Chen APC/CD4+ coculture, silencing or inhibition",
+        "limitation": "Composite historical claim: chemical and genetic arms retained in label, not treated as a single modality or compound-specific evidence; ex vivo response is not disease improvement.",
+        "locator": "Figure 4C\u2013D; Methods CD4+ coculture",
+        "modality": "other",
+        "perturbation_id": "cellular:perturbation:chen-coculture",
+        "reported_perturbagen": null,
+        "source_id": "PMID:26130142",
+        "vehicle": null
+      },
+      {
+        "compound_id": null,
+        "concentration": "10, 100, 1000 nM titration; 1000 nM subsequent inhibition",
+        "context": {
+          "cell_line": "C1R.B27",
+          "disease_status": "cell line; no patient disease",
+          "donor_context": null,
+          "erap1_allotype": null,
+          "hla_allele": "HLA-B*27:05",
+          "hla_expression": "engineered",
+          "mhc_allele": null,
+          "scientific_context": {
+            "allotype": null,
+            "assay": "Antibody-based flow cytometry",
+            "cell_type": "C1R.B27",
+            "comparison": null,
+            "endpoint": "surface free heavy chain",
+            "experimental_system": "C1R.B27",
+            "genotype": null,
+            "hla_status": "HLA-B27 expressed",
+            "population": null,
+            "species": "Homo sapiens",
+            "tissue": null,
+            "treatment": null
+          }
+        },
+        "controls": [
+          "untreated cells",
+          "isotype",
+          "ME-1 classical HLA staining"
+        ],
+        "dosing_schedule": null,
+        "duration": null,
+        "id": "cellular:chen-dg013a-C1R.B27",
+        "label": "Chen DG013A \u2014 C1R.B27",
+        "limitation": "Exact ERAP1 allotype not reported; AI-assisted extraction pending expert review. Off-target contribution cannot be excluded for chemical intervention.",
+        "locator": "Figure 2E\u2013H; Methods ERAP1 inhibition",
+        "modality": "small_molecule",
+        "perturbation_id": "AXIS-ERAP1-CURATED-P09",
+        "reported_perturbagen": "DG013A",
+        "source_id": "PMID:26130142",
+        "vehicle": null
+      },
+      {
+        "compound_id": null,
+        "concentration": "10, 100, 1000 nM titration; 1000 nM subsequent inhibition",
+        "context": {
+          "cell_line": "HeLa.B27",
+          "disease_status": "cell line; no patient disease",
+          "donor_context": null,
+          "erap1_allotype": null,
+          "hla_allele": "HLA-B*27:05",
+          "hla_expression": "engineered",
+          "mhc_allele": null,
+          "scientific_context": {
+            "allotype": null,
+            "assay": "Antibody-based flow cytometry",
+            "cell_type": "HeLa.B27",
+            "comparison": null,
+            "endpoint": "surface free heavy chain",
+            "experimental_system": "HeLa.B27",
+            "genotype": null,
+            "hla_status": "HLA-B27 expressed",
+            "population": null,
+            "species": "Homo sapiens",
+            "tissue": null,
+            "treatment": null
+          }
+        },
+        "controls": [
+          "untreated cells",
+          "isotype",
+          "ME-1 classical HLA staining"
+        ],
+        "dosing_schedule": null,
+        "duration": null,
+        "id": "cellular:chen-dg013a-HeLa.B27",
+        "label": "Chen DG013A \u2014 HeLa.B27",
+        "limitation": "Exact ERAP1 allotype not reported; AI-assisted extraction pending expert review. Off-target contribution cannot be excluded for chemical intervention.",
+        "locator": "Figure 2E\u2013H; Methods ERAP1 inhibition",
+        "modality": "small_molecule",
+        "perturbation_id": "AXIS-ERAP1-CURATED-P09",
+        "reported_perturbagen": "DG013A",
+        "source_id": "PMID:26130142",
+        "vehicle": null
+      },
+      {
+        "compound_id": null,
+        "concentration": null,
+        "context": {
+          "cell_line": "C1R.B27",
+          "disease_status": "cell line; no patient disease",
+          "donor_context": null,
+          "erap1_allotype": null,
+          "hla_allele": "HLA-B*27:05",
+          "hla_expression": "engineered",
+          "mhc_allele": null,
+          "scientific_context": {
+            "allotype": null,
+            "assay": "Antibody-based flow cytometry",
+            "cell_type": "C1R.B27",
+            "comparison": null,
+            "endpoint": "surface free heavy chain",
+            "experimental_system": "C1R.B27",
+            "genotype": null,
+            "hla_status": "HLA-B27 expressed",
+            "population": null,
+            "species": "Homo sapiens",
+            "tissue": null,
+            "treatment": null
+          }
+        },
+        "controls": [
+          "control shRNA",
+          "isotype",
+          "ME-1 classical HLA staining"
+        ],
+        "dosing_schedule": null,
+        "duration": null,
+        "id": "cellular:chen-knockdown-C1R.B27",
+        "label": "Chen ERAP1 silencing \u2014 C1R.B27",
+        "limitation": "Exact ERAP1 allotype not reported; AI-assisted extraction pending expert review. Off-target contribution cannot be excluded for chemical intervention.",
+        "locator": "Figure 2A\u2013D; Methods ERAP1 silencing",
+        "modality": "knockdown",
+        "perturbation_id": "cellular:perturbation:chen2016-shrna",
+        "reported_perturbagen": null,
+        "source_id": "PMID:26130142",
+        "vehicle": null
+      },
+      {
+        "compound_id": null,
+        "concentration": null,
+        "context": {
+          "cell_line": "HeLa.B27",
+          "disease_status": "cell line; no patient disease",
+          "donor_context": null,
+          "erap1_allotype": null,
+          "hla_allele": "HLA-B*27:05",
+          "hla_expression": "engineered",
+          "mhc_allele": null,
+          "scientific_context": {
+            "allotype": null,
+            "assay": "Antibody-based flow cytometry",
+            "cell_type": "HeLa.B27",
+            "comparison": null,
+            "endpoint": "surface free heavy chain",
+            "experimental_system": "HeLa.B27",
+            "genotype": null,
+            "hla_status": "HLA-B27 expressed",
+            "population": null,
+            "species": "Homo sapiens",
+            "tissue": null,
+            "treatment": null
+          }
+        },
+        "controls": [
+          "control shRNA",
+          "isotype",
+          "ME-1 classical HLA staining"
+        ],
+        "dosing_schedule": null,
+        "duration": null,
+        "id": "cellular:chen-knockdown-HeLa.B27",
+        "label": "Chen ERAP1 silencing \u2014 HeLa.B27",
+        "limitation": "Exact ERAP1 allotype not reported; AI-assisted extraction pending expert review. Off-target contribution cannot be excluded for chemical intervention.",
+        "locator": "Figure 2A\u2013D; Methods ERAP1 silencing",
+        "modality": "knockdown",
+        "perturbation_id": "cellular:perturbation:chen2016-shrna",
+        "reported_perturbagen": null,
+        "source_id": "PMID:26130142",
+        "vehicle": null
+      },
+      {
+        "compound_id": "compound:maben-2",
+        "concentration": null,
+        "context": {
+          "cell_line": "Engineered HeLa H-2Kb",
+          "disease_status": "cell line; no patient disease",
+          "donor_context": null,
+          "erap1_allotype": null,
+          "hla_allele": null,
+          "hla_expression": "engineered",
+          "mhc_allele": "H-2Kb",
+          "scientific_context": {
+            "allotype": null,
+            "assay": "25D1 flow cytometry; ssLEQLE\u2013SIINFEKL and Ub-SIINFEKL control",
+            "cell_type": "Engineered HeLa H-2Kb",
+            "comparison": null,
+            "endpoint": "antigen presentation",
+            "experimental_system": "Engineered HeLa H-2Kb",
+            "genotype": null,
+            "hla_status": "HLA-B27 not assessed; engineered murine H-2Kb",
+            "population": null,
+            "species": "Homo sapiens",
+            "tissue": null,
+            "treatment": null
+          }
+        },
+        "controls": [
+          "Ub-SIINFEKL processing control"
+        ],
+        "dosing_schedule": null,
+        "duration": "16\u201324 h",
+        "id": "cellular:maben-2",
+        "label": "Maben compound 2",
+        "limitation": "Engineered mouse H-2Kb in human HeLa; not HLA-B27, direct ERAP1 engagement or axSpA evidence.",
+        "locator": "Figure 9D; Phase 3.3 measurement 8",
+        "modality": "small_molecule",
+        "perturbation_id": "cellular:perturbation:maben-2",
+        "reported_perturbagen": "Maben compound 2",
+        "source_id": "PMID:31841350",
+        "vehicle": null
+      },
+      {
+        "compound_id": "compound:maben-3",
+        "concentration": null,
+        "context": {
+          "cell_line": "Engineered HeLa H-2Kb",
+          "disease_status": "cell line; no patient disease",
+          "donor_context": null,
+          "erap1_allotype": null,
+          "hla_allele": null,
+          "hla_expression": "engineered",
+          "mhc_allele": "H-2Kb",
+          "scientific_context": {
+            "allotype": null,
+            "assay": "25D1 flow cytometry; ssLEQLE\u2013SIINFEKL and Ub-SIINFEKL control",
+            "cell_type": "Engineered HeLa H-2Kb",
+            "comparison": null,
+            "endpoint": "antigen presentation",
+            "experimental_system": "Engineered HeLa H-2Kb",
+            "genotype": null,
+            "hla_status": "HLA-B27 not assessed; engineered murine H-2Kb",
+            "population": null,
+            "species": "Homo sapiens",
+            "tissue": null,
+            "treatment": null
+          }
+        },
+        "controls": [
+          "Ub-SIINFEKL processing control"
+        ],
+        "dosing_schedule": null,
+        "duration": "16\u201324 h",
+        "id": "cellular:maben-3",
+        "label": "Maben compound 3",
+        "limitation": "Engineered mouse H-2Kb in human HeLa; not HLA-B27, direct ERAP1 engagement or axSpA evidence.",
+        "locator": "Figure 9D; Phase 3.3 measurement 15",
+        "modality": "small_molecule",
+        "perturbation_id": "cellular:perturbation:maben-3",
+        "reported_perturbagen": "Maben compound 3",
+        "source_id": "PMID:31841350",
+        "vehicle": null
+      },
+      {
+        "compound_id": null,
+        "concentration": null,
+        "context": {
+          "cell_line": "U937.B27",
+          "disease_status": "cell line; no patient disease",
+          "donor_context": null,
+          "erap1_allotype": null,
+          "hla_allele": "HLA-B*27:05",
+          "hla_expression": "engineered",
+          "mhc_allele": null,
+          "scientific_context": {
+            "allotype": null,
+            "assay": "Immunoprecipitation, immunoblot and flow cytometry",
+            "cell_type": "U937.B27",
+            "comparison": null,
+            "endpoint": "disulfide-linked HLA-B27 dimers",
+            "experimental_system": "U937.B27",
+            "genotype": "Heterozygous rs30187 and rs27044; allotype not inferred",
+            "hla_status": "HLA-B27 expressed",
+            "population": null,
+            "species": "Homo sapiens",
+            "tissue": null,
+            "treatment": null
+          }
+        },
+        "controls": [
+          "scrambled shRNA"
+        ],
+        "dosing_schedule": null,
+        "duration": null,
+        "id": "cellular:tran-dimer",
+        "label": "Tran U937.B27 disulfide-linked HLA-B27 dimers",
+        "limitation": "Endogenous HLA-B*18:01 and HLA-B*51:01; different cell/assay background from Chen. Full-text XML retrieval failed; retains previous frozen curation.",
+        "locator": "Figure 3; frozen Methods context",
+        "modality": "knockdown",
+        "perturbation_id": "AXIS-ERAP1-CURATED-P13",
+        "reported_perturbagen": null,
+        "source_id": "PMID:27107845",
+        "vehicle": null
+      },
+      {
+        "compound_id": null,
+        "concentration": null,
+        "context": {
+          "cell_line": "U937.B27",
+          "disease_status": "cell line; no patient disease",
+          "donor_context": null,
+          "erap1_allotype": null,
+          "hla_allele": "HLA-B*27:05",
+          "hla_expression": "engineered",
+          "mhc_allele": null,
+          "scientific_context": {
+            "allotype": null,
+            "assay": "Immunoprecipitation, immunoblot and flow cytometry",
+            "cell_type": "U937.B27",
+            "comparison": null,
+            "endpoint": "surface free heavy chain",
+            "experimental_system": "U937.B27",
+            "genotype": "Heterozygous rs30187 and rs27044; allotype not inferred",
+            "hla_status": "HLA-B27 expressed",
+            "population": null,
+            "species": "Homo sapiens",
+            "tissue": null,
+            "treatment": null
+          }
+        },
+        "controls": [
+          "scrambled shRNA"
+        ],
+        "dosing_schedule": null,
+        "duration": null,
+        "id": "cellular:tran-fhc",
+        "label": "Tran U937.B27 surface free heavy chain",
+        "limitation": "Endogenous HLA-B*18:01 and HLA-B*51:01; different cell/assay background from Chen. Full-text XML retrieval failed; retains previous frozen curation.",
+        "locator": "Figure 2; frozen Methods context",
+        "modality": "knockdown",
+        "perturbation_id": "AXIS-ERAP1-CURATED-P13",
+        "reported_perturbagen": null,
+        "source_id": "PMID:27107845",
+        "vehicle": null
+      }
+    ],
+    "gaps": [
+      {
+        "claim_ids": [
+          "AXIS-ERAP1-CURATED-C09",
+          "AXIS-ERAP1-CURATED-C11"
+        ],
+        "compound_id": null,
+        "edge": "engagement",
+        "id": "cellular:chen-dg013a-C1R.B27:gap",
+        "perturbation_id": "AXIS-ERAP1-CURATED-P09",
+        "proposal_title": "Resolve cellular ERAP1 engagement and dependency \u2014 Chen DG013A \u2014 C1R.B27",
+        "question": "Does Chen DG013A \u2014 C1R.B27 directly engage ERAP1 at exposures producing the reported phenotype, and is that phenotype ERAP1-dependent?"
+      },
+      {
+        "claim_ids": [
+          "AXIS-ERAP1-CURATED-C09",
+          "AXIS-ERAP1-CURATED-C11"
+        ],
+        "compound_id": null,
+        "edge": "engagement",
+        "id": "cellular:chen-dg013a-HeLa.B27:gap",
+        "perturbation_id": "AXIS-ERAP1-CURATED-P09",
+        "proposal_title": "Resolve cellular ERAP1 engagement and dependency \u2014 Chen DG013A \u2014 HeLa.B27",
+        "question": "Does Chen DG013A \u2014 HeLa.B27 directly engage ERAP1 at exposures producing the reported phenotype, and is that phenotype ERAP1-dependent?"
+      },
+      {
+        "claim_ids": [],
+        "compound_id": "compound:maben-2",
+        "edge": "engagement",
+        "id": "cellular:maben-2:gap",
+        "perturbation_id": "cellular:perturbation:maben-2",
+        "proposal_title": "Resolve cellular ERAP1 engagement and dependency \u2014 Maben compound 2",
+        "question": "Does Maben compound 2 directly engage ERAP1 at exposures producing the reported phenotype, and is that phenotype ERAP1-dependent?"
+      },
+      {
+        "claim_ids": [],
+        "compound_id": "compound:maben-3",
+        "edge": "engagement",
+        "id": "cellular:maben-3:gap",
+        "perturbation_id": "cellular:perturbation:maben-3",
+        "proposal_title": "Resolve cellular ERAP1 engagement and dependency \u2014 Maben compound 3",
+        "question": "Does Maben compound 3 directly engage ERAP1 at exposures producing the reported phenotype, and is that phenotype ERAP1-dependent?"
+      }
+    ],
+    "readouts": [
+      {
+        "claim_id": "AXIS-ERAP1-CURATED-C10",
+        "direction": "decrease",
+        "endpoint": "Th17 expansion and IL-17A secretion",
+        "experiment_id": "cellular:chen-coculture",
+        "id": "cellular:chen-coculture:readout",
+        "locator": "Figure 4C\u2013D; Methods CD4+ coculture",
+        "measurement_id": null,
+        "original_unit": null,
+        "original_value": null,
+        "proximity": "immune_cell",
+        "qualitative_result": "Th17 expansion and IL-17A secretion decreased with APC silencing or inhibition; arms not pooled into numeric potency",
+        "replicate_information": "Five AS donors; genetic and chemical arms source-separated; no new raw values",
+        "statistical_result": "Paired two-tailed t test; mean and SE"
+      },
+      {
+        "claim_id": "AXIS-ERAP1-CURATED-C09",
+        "direction": "decrease",
+        "endpoint": "surface free heavy chain",
+        "experiment_id": "cellular:chen-dg013a-C1R.B27",
+        "id": "cellular:chen-dg013a-C1R.B27:readout",
+        "locator": "Figure 2E\u2013H; Methods ERAP1 inhibition",
+        "measurement_id": null,
+        "original_unit": null,
+        "original_value": null,
+        "proximity": "HLA_molecular",
+        "qualitative_result": "HC-10-reactive surface signal decreased after DG013A titration",
+        "replicate_information": "Experiments repeated three times; biological/technical distinction not specified",
+        "statistical_result": "Unpaired two-tailed t test; mean and SD"
+      },
+      {
+        "claim_id": "AXIS-ERAP1-CURATED-C09",
+        "direction": "decrease",
+        "endpoint": "surface free heavy chain",
+        "experiment_id": "cellular:chen-dg013a-HeLa.B27",
+        "id": "cellular:chen-dg013a-HeLa.B27:readout",
+        "locator": "Figure 2E\u2013H; Methods ERAP1 inhibition",
+        "measurement_id": null,
+        "original_unit": null,
+        "original_value": null,
+        "proximity": "HLA_molecular",
+        "qualitative_result": "HC-10-reactive surface signal decreased after DG013A titration",
+        "replicate_information": "Experiments repeated three times; biological/technical distinction not specified",
+        "statistical_result": "Unpaired two-tailed t test; mean and SD"
+      },
+      {
+        "claim_id": "AXIS-ERAP1-CURATED-C08",
+        "direction": "decrease",
+        "endpoint": "surface free heavy chain",
+        "experiment_id": "cellular:chen-knockdown-C1R.B27",
+        "id": "cellular:chen-knockdown-C1R.B27:readout",
+        "locator": "Figure 2A\u2013D; Methods ERAP1 silencing",
+        "measurement_id": null,
+        "original_unit": null,
+        "original_value": null,
+        "proximity": "HLA_molecular",
+        "qualitative_result": "HC-10-reactive surface signal decreased",
+        "replicate_information": "Experiments repeated three times; biological/technical distinction not specified",
+        "statistical_result": "Unpaired two-tailed t test; mean and SD"
+      },
+      {
+        "claim_id": "AXIS-ERAP1-CURATED-C08",
+        "direction": "decrease",
+        "endpoint": "surface free heavy chain",
+        "experiment_id": "cellular:chen-knockdown-HeLa.B27",
+        "id": "cellular:chen-knockdown-HeLa.B27:readout",
+        "locator": "Figure 2A\u2013D; Methods ERAP1 silencing",
+        "measurement_id": null,
+        "original_unit": null,
+        "original_value": null,
+        "proximity": "HLA_molecular",
+        "qualitative_result": "HC-10-reactive surface signal decreased",
+        "replicate_information": "Experiments repeated three times; biological/technical distinction not specified",
+        "statistical_result": "Unpaired two-tailed t test; mean and SD"
+      },
+      {
+        "claim_id": null,
+        "direction": "decrease",
+        "endpoint": "antigen presentation",
+        "experiment_id": "cellular:maben-2",
+        "id": "cellular:maben-2:readout",
+        "locator": "Figure 9D; Phase 3.3 measurement 8",
+        "measurement_id": "measurement:maben:8",
+        "original_unit": null,
+        "original_value": null,
+        "proximity": "HLA_molecular",
+        "qualitative_result": "Reduced extended antigen presentation; cellular IC50 45 \u00b5M",
+        "replicate_information": null,
+        "statistical_result": null
+      },
+      {
+        "claim_id": null,
+        "direction": "decrease",
+        "endpoint": "antigen presentation",
+        "experiment_id": "cellular:maben-3",
+        "id": "cellular:maben-3:readout",
+        "locator": "Figure 9D; Phase 3.3 measurement 15",
+        "measurement_id": "measurement:maben:15",
+        "original_unit": null,
+        "original_value": null,
+        "proximity": "HLA_molecular",
+        "qualitative_result": "Reduced extended antigen presentation; cellular IC50 1 \u00b5M",
+        "replicate_information": null,
+        "statistical_result": null
+      },
+      {
+        "claim_id": "AXIS-ERAP1-CURATED-C13",
+        "direction": "increase",
+        "endpoint": "disulfide-linked HLA-B27 dimers",
+        "experiment_id": "cellular:tran-dimer",
+        "id": "cellular:tran-dimer:readout",
+        "locator": "Figure 3; frozen Methods context",
+        "measurement_id": null,
+        "original_unit": null,
+        "original_value": null,
+        "proximity": "HLA_molecular",
+        "qualitative_result": "Reported increase in the specific U937.B27 system",
+        "replicate_information": null,
+        "statistical_result": null
+      },
+      {
+        "claim_id": "AXIS-ERAP1-CURATED-C12",
+        "direction": "increase",
+        "endpoint": "surface free heavy chain",
+        "experiment_id": "cellular:tran-fhc",
+        "id": "cellular:tran-fhc:readout",
+        "locator": "Figure 2; frozen Methods context",
+        "measurement_id": null,
+        "original_unit": null,
+        "original_value": null,
+        "proximity": "HLA_molecular",
+        "qualitative_result": "Reported increase in the specific U937.B27 system",
+        "replicate_information": null,
+        "statistical_result": null
+      }
+    ],
+    "selectivity": [
+      {
+        "comparability_status": "Not directly comparable",
+        "id": "selectivity:measurement:maben:10:measurement:maben:11"
+      },
+      {
+        "comparability_status": "Not directly comparable",
+        "id": "selectivity:measurement:maben:10:measurement:maben:12"
+      },
+      {
+        "comparability_status": "Not directly comparable",
+        "id": "selectivity:measurement:maben:13:measurement:maben:11"
+      },
+      {
+        "comparability_status": "Not directly comparable",
+        "id": "selectivity:measurement:maben:13:measurement:maben:12"
+      },
+      {
+        "comparability_status": "Not directly comparable",
+        "id": "selectivity:measurement:maben:14:measurement:maben:11"
+      },
+      {
+        "comparability_status": "Not directly comparable",
+        "id": "selectivity:measurement:maben:14:measurement:maben:12"
+      },
+      {
+        "comparability_status": "Not assessed",
+        "id": "selectivity:measurement:maben:1:ERAP2"
+      },
+      {
+        "comparability_status": "Not assessed",
+        "id": "selectivity:measurement:maben:1:LNPEP"
+      },
+      {
+        "comparability_status": "Not assessed",
+        "id": "selectivity:measurement:maben:2:ERAP2"
+      },
+      {
+        "comparability_status": "Not assessed",
+        "id": "selectivity:measurement:maben:2:LNPEP"
+      },
+      {
+        "comparability_status": "Not directly comparable",
+        "id": "selectivity:measurement:maben:3:measurement:maben:4"
+      },
+      {
+        "comparability_status": "Not directly comparable",
+        "id": "selectivity:measurement:maben:3:measurement:maben:5"
+      },
+      {
+        "comparability_status": "Not directly comparable",
+        "id": "selectivity:measurement:maben:6:measurement:maben:4"
+      },
+      {
+        "comparability_status": "Not directly comparable",
+        "id": "selectivity:measurement:maben:6:measurement:maben:5"
+      },
+      {
+        "comparability_status": "Not directly comparable",
+        "id": "selectivity:measurement:maben:7:measurement:maben:4"
+      },
+      {
+        "comparability_status": "Not directly comparable",
+        "id": "selectivity:measurement:maben:7:measurement:maben:5"
+      },
+      {
+        "comparability_status": "Not directly comparable",
+        "id": "selectivity:measurement:maben:9:measurement:maben:11"
+      },
+      {
+        "comparability_status": "Not directly comparable",
+        "id": "selectivity:measurement:maben:9:measurement:maben:12"
+      }
+    ],
+    "strategy_ids": [],
+    "structure_ids": [],
+    "target_label": "ERAP1"
+  }
+}
