@@ -68,6 +68,8 @@ select = ["E", "F", "I", "UP", "B", "SIM"]
 "axis/experiments/results.py" = ["E501"]
 "axis/storage/results.py" = ["E501"]
 "tests/test_results_loop.py" = ["E501"]
+"axis/computational/prioritize.py" = ["E501"]
+"axis/computational/service.py" = ["E501"]
 
 [tool.mypy]
 python_version = "3.12"

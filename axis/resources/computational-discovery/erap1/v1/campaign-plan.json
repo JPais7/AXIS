@@ -1,0 +1,210 @@
+{
+  "assay_options": [
+    "biochemical ERAP1 peptidase assay (construct and substrate to be fixed with the assay provider)",
+    "orthogonal counterscreen for assay interference and aggregation"
+  ],
+  "campaign_id": "campaign:erap1:bounded-chemistry-v1",
+  "constraints": {
+    "cluster_threshold": 0.7,
+    "descriptor_ranges": {
+      "crippen_logp": [
+        null,
+        5.0
+      ],
+      "hba": [
+        null,
+        10
+      ],
+      "hbd": [
+        null,
+        5
+      ],
+      "molecular_weight": [
+        150.0,
+        600.0
+      ],
+      "rotatable_bonds": [
+        null,
+        10
+      ],
+      "tpsa": [
+        null,
+        140.0
+      ]
+    },
+    "exploit_threshold": 0.4,
+    "panel": {
+      "exploitation": 3,
+      "exploration": 3,
+      "per_cluster": 1
+    },
+    "require_structural_compatibility": false,
+    "require_structure": true,
+    "structural_compatibility_reason": "docking is not validated for this site, so it cannot be a selection requirement"
+  },
+  "decision_link": {
+    "note": "chemical matter is needed to address the engagement/dependency uncertainties of the current decision state",
+    "requires": "decision package imported for the project"
+  },
+  "hypotheses": [
+    {
+      "constraints": [
+        "standard docking cannot represent metal coordination",
+        "proximity is not chelation"
+      ],
+      "contradicting_chemistry": [],
+      "desired_effect": "reduce catalytic trimming in a biochemical assay",
+      "epistemic_status": "researcher_hypothesis",
+      "falsification": [
+        "No measurable activity in the biochemical ERAP1 assay at adequate concentration",
+        "Activity disappears under the orthogonal counterscreen (assay artefact)",
+        "A direct-engagement experiment contradicts the proposed binding mechanism"
+      ],
+      "id": "hypothesis:erap1:zinc-binding-chemotype",
+      "rationale": "Aminopeptidases are zinc metalloenzymes; chemotypes with metal-binding groups are the generic way to engage such a site.",
+      "revision": 1,
+      "site_id": "site:erap1:3qnf:A:zinc-shell-8A",
+      "statement": "A molecule carrying a metal-binding group that reaches the catalytic zinc region may inhibit ERAP1 catalytic trimming.",
+      "strategy": "inhibit",
+      "structural_state": "open state (3QNF chain A)",
+      "supporting_chemistry": [],
+      "uncertainties": [
+        "whether the site is therapeutically relevant",
+        "ERAP1 versus ERAP2/IRAP selectivity",
+        "no ERAP1 evidence indexed for these compounds"
+      ]
+    },
+    {
+      "constraints": [
+        "no observed SAR is indexed beyond three compounds"
+      ],
+      "contradicting_chemistry": [],
+      "desired_effect": "retain biochemical modulation of the indexed series",
+      "epistemic_status": "ai_suggestion",
+      "falsification": [
+        "Analog inactive in the same biochemical assay as the parent"
+      ],
+      "id": "hypothesis:erap1:maben-series-analog",
+      "rationale": "Analog follow-up of indexed chemistry is the lowest-risk way to use known SAR.",
+      "revision": 1,
+      "site_id": null,
+      "statement": "A scaffold related to an indexed experimentally characterised series may preserve ERAP1 modulation while changing selectivity.",
+      "strategy": "modulate",
+      "structural_state": "not specified",
+      "supporting_chemistry": [
+        "compound:maben-1",
+        "compound:maben-2",
+        "compound:maben-3"
+      ],
+      "uncertainties": [
+        "whether any analog exists in this bounded space"
+      ]
+    }
+  ],
+  "intervention_strategy": "pharmacological modulation of ERAP1 (working formulation; direction of benefit not assumed)",
+  "methods": [
+    "descriptors",
+    "similarity",
+    "clustering",
+    "scaffolds",
+    "docking"
+  ],
+  "project_id": "AXIS-DD-ERAP1-CURATED-001",
+  "protein_id": "UniProt Q9NZ08",
+  "question": "Given the currently indexed ERAP1 structural and chemical evidence, which molecules in this bounded chemical space justify experimental testing of specific ERAP1 binding/modulation hypotheses, and which hypotheses remain untested by it?",
+  "site": {
+    "around": "ZN",
+    "id": "site:erap1:3qnf:A:zinc-shell-8A",
+    "radius": 8.0
+  },
+  "space": {
+    "deduplication": "by reference id",
+    "filters": "none applied",
+    "identity_policy": "indexed compounds keep their CompoundIdentity; supplied compounds are campaign-local and unverified",
+    "members": [
+      {
+        "compound_identity": "compound:maben-1",
+        "hypothesis_ids": [],
+        "inclusion_rationale": "Experimentally characterised chemistry already indexed by AXIS (Phase 3.3); reference chemistry, not a candidate.",
+        "input_stereochemistry": "unknown",
+        "name": "Maben compound 1",
+        "origin": "indexed_experimental",
+        "ref": "compound:maben-1",
+        "smiles": "N=C(NCCc1c[nH]c2ccccc12)NS(=O)(=O)c1cc(F)ccc1F"
+      },
+      {
+        "compound_identity": "compound:maben-2",
+        "hypothesis_ids": [],
+        "inclusion_rationale": "Experimentally characterised chemistry already indexed by AXIS (Phase 3.3); reference chemistry, not a candidate.",
+        "input_stereochemistry": "not_applicable",
+        "name": "Maben compound 2",
+        "origin": "indexed_experimental",
+        "ref": "compound:maben-2",
+        "smiles": "CC(=O)N1CCN(C(=O)C2(NC(=O)Nc3ccc(C)cc3)CCCCC2)CC1"
+      },
+      {
+        "compound_identity": "compound:maben-3",
+        "hypothesis_ids": [],
+        "inclusion_rationale": "Experimentally characterised chemistry already indexed by AXIS (Phase 3.3); reference chemistry, not a candidate.",
+        "input_stereochemistry": "not_applicable",
+        "name": "Maben compound 3",
+        "origin": "indexed_experimental",
+        "ref": "compound:maben-3",
+        "smiles": "COc1ccc(C(=O)O)cc1S(=O)(=O)Nc1cc(C(F)(F)F)ccc1N1CCCCC1"
+      },
+      {
+        "compound_identity": null,
+        "hypothesis_ids": [
+          "hypothesis:erap1:zinc-binding-chemotype"
+        ],
+        "inclusion_rationale": "Known drug carrying a metal-binding group (hydroxamate, thiol or alpha-hydroxy-beta-amino amide), supplied as a researcher hypothesis to explore the catalytic-metal region. Structure typed by hand and NOT verified against ChEMBL/PubChem; AXIS indexes no ERAP1 evidence for it.",
+        "input_stereochemistry": null,
+        "name": "Bestatin",
+        "origin": "researcher_supplied",
+        "ref": "compound:supplied:bestatin",
+        "smiles": "CC(C)C[C@H](NC(=O)[C@@H](O)[C@H](N)Cc1ccccc1)C(=O)O"
+      },
+      {
+        "compound_identity": null,
+        "hypothesis_ids": [
+          "hypothesis:erap1:zinc-binding-chemotype"
+        ],
+        "inclusion_rationale": "Known drug carrying a metal-binding group (hydroxamate, thiol or alpha-hydroxy-beta-amino amide), supplied as a researcher hypothesis to explore the catalytic-metal region. Structure typed by hand and NOT verified against ChEMBL/PubChem; AXIS indexes no ERAP1 evidence for it.",
+        "input_stereochemistry": null,
+        "name": "Captopril",
+        "origin": "researcher_supplied",
+        "ref": "compound:supplied:captopril",
+        "smiles": "C[C@@H](CS)C(=O)N1CCC[C@H]1C(=O)O"
+      },
+      {
+        "compound_identity": null,
+        "hypothesis_ids": [
+          "hypothesis:erap1:zinc-binding-chemotype"
+        ],
+        "inclusion_rationale": "Known drug carrying a metal-binding group (hydroxamate, thiol or alpha-hydroxy-beta-amino amide), supplied as a researcher hypothesis to explore the catalytic-metal region. Structure typed by hand and NOT verified against ChEMBL/PubChem; AXIS indexes no ERAP1 evidence for it.",
+        "input_stereochemistry": null,
+        "name": "Vorinostat",
+        "origin": "researcher_supplied",
+        "ref": "compound:supplied:vorinostat",
+        "smiles": "ONC(=O)CCCCCCC(=O)Nc1ccccc1"
+      }
+    ],
+    "retrieval_date": "no live retrieval; offline fixture",
+    "selection_criteria": "all indexed ERAP1 compounds; metal-binding-group exploration set chosen by the researcher",
+    "size_before_filtering": 6,
+    "source": "indexed AXIS ERAP1 pharmacology package (3 compounds) plus 3 researcher-supplied molecules",
+    "source_version": "axis-erap1-pharmacology v1; supplied set frozen 2026-10"
+  },
+  "structure": {
+    "canonical_mapping": "UniProt Q9NZ08 via the AXIS structure-identity package",
+    "chain": "A",
+    "construct": "as deposited in 3QNF (see structure package)",
+    "ligands_cofactors": "ZN retained; NAG and water removed; no drug-like ligand bound",
+    "resource": "resources/structures/erap1/3qnf/v1/structure.cif",
+    "source_sha256": "04b29d420769a6ce405c85d90e6888289de20381e17e64c1a31c3e4f835b8f75",
+    "source_structure_id": "PDB:3QNF",
+    "structural_state": "open state as deposited; not shown to be the disease-relevant conformation"
+  },
+  "target_label": "ERAP1",
+  "title": "ERAP1 bounded chemical-hypothesis campaign"
+}

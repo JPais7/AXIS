@@ -146,6 +146,9 @@ class EvidenceStore:
         from axis.storage.benchmarks import BenchmarkRepository
 
         self.benchmarks = BenchmarkRepository(self)
+        from axis.storage.computational import ComputationalRepository
+
+        self.computational = ComputationalRepository(self)
 
     def __enter__(self) -> Self:
         return self

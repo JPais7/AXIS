@@ -1,0 +1,180 @@
+{
+  "assay_options": [
+    "synthetic assay"
+  ],
+  "campaign_id": "campaign:synthetic:generic-v1",
+  "constraints": {
+    "cluster_threshold": 0.7,
+    "descriptor_ranges": {
+      "crippen_logp": [
+        null,
+        5.0
+      ],
+      "hba": [
+        null,
+        10
+      ],
+      "hbd": [
+        null,
+        5
+      ],
+      "molecular_weight": [
+        150.0,
+        600.0
+      ],
+      "rotatable_bonds": [
+        null,
+        10
+      ],
+      "tpsa": [
+        null,
+        140.0
+      ]
+    },
+    "exploit_threshold": 0.5,
+    "panel": {
+      "exploitation": 2,
+      "exploration": 2,
+      "per_cluster": 1
+    },
+    "require_structural_compatibility": false,
+    "require_structure": false
+  },
+  "decision_link": null,
+  "hypotheses": [
+    {
+      "constraints": [],
+      "contradicting_chemistry": [],
+      "desired_effect": "synthetic",
+      "epistemic_status": "researcher_hypothesis",
+      "falsification": [
+        "synthetic falsification condition"
+      ],
+      "id": "hypothesis:synthetic:h1",
+      "rationale": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE",
+      "revision": 1,
+      "site_id": null,
+      "statement": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE: an invented hypothesis.",
+      "strategy": "synthetic",
+      "structural_state": "none",
+      "supporting_chemistry": [],
+      "uncertainties": [
+        "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE"
+      ]
+    }
+  ],
+  "intervention_strategy": "synthetic strategy",
+  "methods": [
+    "descriptors",
+    "similarity",
+    "clustering",
+    "scaffolds"
+  ],
+  "project_id": "SYNTHETIC-PROJECT",
+  "protein_id": null,
+  "question": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE: which compounds of this invented space would be prioritized for testing?",
+  "site": null,
+  "space": {
+    "deduplication": "by reference id",
+    "filters": "none",
+    "identity_policy": "synthetic",
+    "members": [
+      {
+        "compound_identity": null,
+        "fixture_evidence": "SYNTHETIC reference activity record",
+        "hypothesis_ids": [],
+        "inclusion_rationale": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE",
+        "input_stereochemistry": null,
+        "name": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE compound 1",
+        "origin": "known",
+        "ref": "synthetic:cmpd-1",
+        "smiles": "CC(=O)Nc1ccc(O)cc1"
+      },
+      {
+        "compound_identity": null,
+        "fixture_evidence": null,
+        "hypothesis_ids": [
+          "hypothesis:synthetic:h1"
+        ],
+        "inclusion_rationale": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE",
+        "input_stereochemistry": null,
+        "name": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE compound 2",
+        "origin": "supplied",
+        "ref": "synthetic:cmpd-2",
+        "smiles": "CC(=O)Nc1ccc(OC)cc1"
+      },
+      {
+        "compound_identity": null,
+        "fixture_evidence": null,
+        "hypothesis_ids": [
+          "hypothesis:synthetic:h1"
+        ],
+        "inclusion_rationale": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE",
+        "input_stereochemistry": null,
+        "name": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE compound 3",
+        "origin": "supplied",
+        "ref": "synthetic:cmpd-3",
+        "smiles": "CC(=O)Nc1ccc(OCC)cc1"
+      },
+      {
+        "compound_identity": null,
+        "fixture_evidence": null,
+        "hypothesis_ids": [
+          "hypothesis:synthetic:h1"
+        ],
+        "inclusion_rationale": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE",
+        "input_stereochemistry": null,
+        "name": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE compound 4",
+        "origin": "supplied",
+        "ref": "synthetic:cmpd-4",
+        "smiles": "c1ccc2ccccc2c1"
+      },
+      {
+        "compound_identity": null,
+        "fixture_evidence": null,
+        "hypothesis_ids": [
+          "hypothesis:synthetic:h1"
+        ],
+        "inclusion_rationale": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE",
+        "input_stereochemistry": null,
+        "name": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE compound 5",
+        "origin": "supplied",
+        "ref": "synthetic:cmpd-5",
+        "smiles": "OC(=O)c1ccccc1"
+      },
+      {
+        "compound_identity": null,
+        "fixture_evidence": null,
+        "hypothesis_ids": [
+          "hypothesis:synthetic:h1"
+        ],
+        "inclusion_rationale": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE",
+        "input_stereochemistry": null,
+        "name": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE compound 6",
+        "origin": "supplied",
+        "ref": "synthetic:cmpd-6",
+        "smiles": "CCCCCCCCCCCC(=O)O"
+      },
+      {
+        "compound_identity": null,
+        "fixture_evidence": null,
+        "hypothesis_ids": [
+          "hypothesis:synthetic:h1"
+        ],
+        "inclusion_rationale": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE",
+        "input_stereochemistry": null,
+        "name": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE compound 7",
+        "origin": "supplied",
+        "ref": "synthetic:cmpd-7",
+        "smiles": "not-a-smiles"
+      }
+    ],
+    "retrieval_date": "n/a",
+    "selection_criteria": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE",
+    "source": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE",
+    "source_version": "n/a"
+  },
+  "structure": null,
+  "target_label": "SYN-TARGET-A",
+  "title": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE \u2014 generic campaign"
+}

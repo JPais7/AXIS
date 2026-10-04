@@ -1,0 +1,8 @@
+{
+  "files": {
+    "README.md": "889268ddaebba830c67796ddf1191e1b67e85083edde62dc4f9c1fd34e53a59e",
+    "campaign-plan.json": "fd4726c25e08cafbe5fb7d0e30ed37897fc7b239de44c05142c4238bd521daca"
+  },
+  "set_id": "campaign:synthetic:generic-v1",
+  "synthetic": true
+}

@@ -13,6 +13,7 @@ from typing import Any
 from urllib.parse import parse_qs, unquote, urlsplit
 
 from axis.cellular.service import CellularPharmacologyService
+from axis.computational.service import CampaignError, CampaignService
 from axis.decision.service import DecisionService
 from axis.discovery.workspace import WorkspaceService, page
 from axis.experiments.results import ResultsService
@@ -127,6 +128,41 @@ class ReadAPI:
                 "value": view[sections[tail[1]]],
             }
         raise RecordNotFoundError("benchmark route not found")
+
+    def _campaigns(self, project: str, kind: str, tail: list[str]) -> dict[str, Any]:
+        """Read-only computational-campaign views, isolated by project."""
+        service = CampaignService(self.store)
+        repo = self.store.computational
+        if kind == "chemical-hypotheses":
+            rows = repo.rows("chemical_hypotheses", "WHERE project_id=?", [project])
+            return {"items": [{"id": r["id"], **r["payload"]} for r in rows]}
+        if kind == "chemical-spaces":
+            rows = repo.rows("chemical_spaces", "WHERE project_id=?", [project])
+            return {"items": [{"id": r["id"], **r["payload"]} for r in rows]}
+        if not tail:
+            return {"items": service.list_campaigns(project)}
+        try:
+            view = service.view(tail[0], project)
+        except CampaignError as error:
+            raise RecordNotFoundError(str(error)) from error
+        if len(tail) == 1:
+            return view
+        prio = view["prioritization"] or {}
+        sections: dict[str, Any] = {
+            "observations": view["observations"],
+            "candidates": prio.get("panel", []),
+            "rationale": [
+                {"compound_ref": e["compound_ref"], "why": e["why_this_molecule"],
+                 "against": e["strongest_reason_against"]}
+                for e in prio.get("panel", [])
+            ],
+            "report": {"markdown": service.report(tail[0])},
+            "reviews": view["reviews"],
+        }
+        if len(tail) == 2 and tail[1] in sections:
+            return {"campaign_id": tail[0], "label": view["campaign"]["label"],
+                    "section": tail[1], "value": sections[tail[1]]}
+        raise RecordNotFoundError("campaign route not found")
 
     def _decision_diff(
         self, project: str, protein: str, versions: dict[str, str] | None
@@ -311,6 +347,12 @@ class ReadAPI:
         parts = [unquote(part) for part in path.strip("/").split("/")]
         if parts[:2] == ["api", "benchmarks"]:
             return self._benchmarks(parts[2:])
+        if (
+            len(parts) >= 4
+            and parts[:2] == ["api", "projects"]
+            and parts[3] in {"campaigns", "chemical-hypotheses", "chemical-spaces"}
+        ):
+            return self._campaigns(parts[2], parts[3], parts[4:])
         chemical_filters: dict[str, str] = {
             key: query[key][0]
             for key in ("compound", "target", "endpoint", "assay_type", "source")
