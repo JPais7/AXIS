@@ -17,6 +17,7 @@ from rdkit.Chem import (
     rdFingerprintGenerator,
     rdMolDescriptors,
 )
+from rdkit.Chem.Draw import rdMolDraw2D
 from rdkit.Chem.Scaffolds import MurckoScaffold
 from rdkit.ML.Cluster import Butina
 
@@ -112,6 +113,7 @@ def prepare_compound(
         ),
     }
     result["operations_performed"].append("canonical SMILES (RDKit)")
+    result["depiction_svg"] = depiction(mol)
     conformer = _conformer(mol)
     result["conformer"] = conformer
     if conformer["status"] == "generated":
@@ -124,6 +126,13 @@ def prepare_compound(
         | {"mol": conformer.get("molblock_sha256")}
     )
     return result
+
+
+def depiction(mol: Chem.Mol) -> str:
+    drawer = rdMolDraw2D.MolDraw2DSVG(260, 180)
+    drawer.DrawMolecule(mol)
+    drawer.FinishDrawing()
+    return str(drawer.GetDrawingText())
 
 
 def _conformer(mol: Chem.Mol) -> dict[str, Any]:

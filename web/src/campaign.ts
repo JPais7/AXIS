@@ -1,0 +1,84 @@
+import { EmptyState, escape, label } from './components';
+
+type API = <T>(path: string) => Promise<T>;
+type Json = Record<string, unknown>;
+interface Candidate {
+  compound_ref: string; name: string | null; role: string; cluster: number; why_this_molecule: string;
+  dimensions: { known_experimental_evidence: { has_experimental_evidence: boolean; summary: string }; similarity_to_reference: { value: number | null; reference: string | null; meaning: string }; docking: { status: string }; chemical_novelty: { value: number | null; meaning: string }; cellular_evidence: string; selectivity_evidence: string; descriptors: Record<string, number>; descriptor_flags: { descriptor: string; value: number }[]; scaffold: string };
+  supporting_evidence: string[]; contradicting_evidence: string[]; missing_evidence: string[]; strongest_reason_against: string;
+  hypotheses_tested: string[]; distinguishes_from: string[]; what_would_change_our_mind: string[]; review_state: string; epistemic_status: string;
+  experimental_package: { title: string; suggested_assays: string[]; positive_control_candidates: string[]; negative_control: string; outcomes: Record<string, string>; decision_consequence: string; decision_link: Json | null; requires: string };
+}
+export interface CampaignView {
+  campaign: { campaign_id: string; status: string; label: string; question: string; synthetic: boolean; intervention_strategy: string; software: { rdkit: string } };
+  hypotheses: { id: string; statement: string; epistemic_status: string; falsification: string[]; uncertainties: string[] }[];
+  chemical_space: { checksum: string; source: string; members: { ref: string; name?: string; origin: string; inclusion_rationale: string }[] };
+  prepared_structure: { source_structure_id: string; chain: string; source_sha256: string; output_sha256: string; metals: string; waters: string; hydrogens: string; limitations: string[]; site: { site_type: string; status: string; radius_angstrom?: number; centre_component?: string; residues?: unknown[]; druggability?: string; type_note?: string } } | null;
+  prepared_compounds: { compound_ref: string; depiction_svg?: string; input_smiles: string; stereochemistry?: { status: string }; status: string }[];
+  observations: { id: string; compound_ref: string; method: string; epistemic_class: string; tool: string; tool_version: string; parameters: Json }[];
+  prioritization: { outcome: string; failure_states: string[]; failed_preparation: string[]; statements: string[]; panel: Candidate[]; not_selected: { ref: string; reason: string }[]; reference_chemistry: { compound_ref: string; name: string | null; evidence: { summary: string } }[]; docking: { status: string; reasons: string[]; boundaries: string[] }; rules_fingerprint: string; untested_hypotheses: string[]; method_disagreements: { compound: string; statement: string }[]; diversity: { clusters_represented: number[]; panel_size: number } } | null;
+  reviews: { id: string; reviewer: string; decision: string; rationale: string }[];
+}
+interface CampaignRow { campaign_id: string; status: string; title: string; label: string }
+
+const SYNTHETIC = 'SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE';
+const pill = (text: string): string => `<span class="badge">${escape(label(text))}</span>`;
+const predicted = (text: string): string => `<span class="badge proposal">◇ PREDICTED — ${escape(text)}</span>`;
+const experimental = (text: string): string => `<span class="badge">▪ EXPERIMENTAL (indexed) — ${escape(text)}</span>`;
+
+export const campaignBanner = (v: CampaignView): string => v.campaign.synthetic
+  ? `<p class="proposal-banner synthetic" role="note"><strong>${SYNTHETIC}.</strong> Invented compounds exercising the machinery.</p>`
+  : '<p class="proposal-banner" role="note"><strong>Computational prioritization for experimental validation.</strong> Nothing here is an experimental result, an active compound or a drug candidate. Predictions never override observations.</p>';
+
+export const campaignList = (rows: CampaignRow[], selected: string): string => rows.length
+  ? `<nav aria-label="Campaigns" class="strategy-grid">${rows.map(r => `<a data-nav class="compact-card" ${r.campaign_id === selected ? 'aria-current="page"' : ''} href="?campaign=${encodeURIComponent(r.campaign_id)}"><strong>${escape(r.title)}</strong>${pill(r.status)}${r.label ? `<span class="source-tag">${SYNTHETIC}</span>` : ''}</a>`).join('')}</nav>`
+  : EmptyState('No computational campaign has been registered for this project.');
+
+export const hypothesesSection = (v: CampaignView): string => `<section class="section"><h2>Chemical hypotheses</h2>${v.hypotheses.map(h => `<article class="card"><strong>${escape(h.id)}</strong> ${pill(h.epistemic_status)} ${pill('review pending')}<p>${escape(h.statement)}</p><h3>What would change our mind</h3><ul class="plain">${h.falsification.map(f => `<li>${escape(f)}</li>`).join('')}</ul><h3>Uncertainties</h3><ul class="plain">${h.uncertainties.map(f => `<li>${escape(f)}</li>`).join('')}</ul></article>`).join('')}<p class="caption">Hypotheses are not observations.</p></section>`;
+
+export const structureSection = (v: CampaignView): string => {
+  const s = v.prepared_structure;
+  if (!s) return '<section class="section"><h2>Structural context</h2><p class="caption">No structure is part of this campaign.</p></section>';
+  return `<section class="section"><h2>Structural context</h2><dl class="context"><dt>Source structure</dt><dd>${escape(s.source_structure_id)} chain ${escape(s.chain)}</dd><dt>Source sha256</dt><dd><code>${escape(s.source_sha256.slice(0, 16))}</code></dd><dt>Prepared output</dt><dd><code>${escape(s.output_sha256.slice(0, 16))}</code></dd><dt>Metals</dt><dd>${escape(s.metals)}</dd><dt>Waters / hydrogens</dt><dd>${escape(s.waters)} / ${escape(s.hydrogens)}</dd><dt>Site</dt><dd>${escape(label(s.site.site_type))} (${escape(s.site.status)}), ${(s.site.residues ?? []).length} residues within ${escape(s.site.radius_angstrom ?? '')} Å of ${escape(s.site.centre_component ?? '')}</dd></dl><p class="caption">${escape(s.site.druggability ?? '')} ${escape(s.site.type_note ?? '')}</p><ul class="plain">${s.limitations.map(l => `<li>${escape(l)}</li>`).join('')}</ul></section>`;
+};
+
+export const spaceSection = (v: CampaignView): string => `<section class="section"><h2>Chemical space</h2><p class="caption">${v.chemical_space.members.length} members, frozen checksum <code>${escape(v.chemical_space.checksum.slice(0, 16))}</code>. Source: ${escape(v.chemical_space.source)}</p><div class="table-scroll"><table><caption>Members and why they are included</caption><thead><tr><th scope="col">Compound</th><th scope="col">Origin</th><th scope="col">Rationale</th></tr></thead><tbody>${v.chemical_space.members.map(m => `<tr><th scope="row">${escape(m.name ?? m.ref)}</th><td>${pill(m.origin)}</td><td>${escape(m.inclusion_rationale)}</td></tr>`).join('')}</tbody></table></div></section>`;
+
+export const methodsSection = (v: CampaignView): string => {
+  const p = v.prioritization;
+  if (!p) return '';
+  return `<section class="section"><h2>Methods</h2><ul class="plain"><li>Descriptors, Morgan/Tanimoto similarity, Butina clustering, Murcko scaffolds (RDKit ${escape(v.campaign.software.rdkit)})</li><li>Docking: ${pill(p.docking.status)} — ${escape(p.docking.reasons.join('; '))}</li></ul><p class="caption">${escape(p.docking.boundaries.join('. '))}.</p></section>`;
+};
+
+export const knownSection = (v: CampaignView): string => {
+  const p = v.prioritization;
+  if (!p) return '';
+  return `<section class="section"><h2>Known experimental chemistry</h2><p class="caption">Indexed experimental evidence is kept apart from every prediction below.</p><ul class="plain">${p.reference_chemistry.map(r => `<li>${experimental(r.name ?? r.compound_ref)} ${escape(r.evidence.summary)}</li>`).join('') || '<li>none indexed</li>'}</ul></section>`;
+};
+
+const depiction = (v: CampaignView, ref: string): string => v.prepared_compounds.find(c => c.compound_ref === ref)?.depiction_svg ?? '';
+
+export const candidateCard = (v: CampaignView, c: Candidate): string => `<article class="card" id="${escape(c.compound_ref)}"><h3>${escape(c.name ?? c.compound_ref)} ${pill(c.role)} ${pill(c.review_state)}</h3><div class="depiction" style="background:#fff;display:inline-block;border:1px solid #cfd8dc" role="img" aria-label="2D depiction (computational)">${depiction(v, c.compound_ref)}</div><h4>Why this molecule?</h4><p>${escape(c.why_this_molecule)}</p><dl class="context"><dt>Identity</dt><dd>${escape(c.compound_ref)}</dd><dt>Known experimental evidence</dt><dd>${experimental(c.dimensions.known_experimental_evidence.summary)}</dd><dt>Similarity</dt><dd>${predicted('chemical similarity')} ${escape(c.dimensions.similarity_to_reference.value ?? 'n/a')} to ${escape(c.dimensions.similarity_to_reference.reference ?? 'n/a')} — ${escape(c.dimensions.similarity_to_reference.meaning)}</dd><dt>Structural / docking</dt><dd>${predicted('no pose')} docking ${escape(label(c.dimensions.docking.status))}; there is no predicted pose to inspect</dd><dt>Properties</dt><dd>${Object.entries(c.dimensions.descriptors).map(([k, x]) => `${escape(label(k))} ${escape(x)}`).join(', ')}</dd><dt>Flags</dt><dd>${c.dimensions.descriptor_flags.map(f => escape(f.descriptor)).join(', ') || 'none'}</dd><dt>Hypothesis tested</dt><dd>${c.hypotheses_tested.map(escape).join(', ')}</dd></dl><h4>Supporting evidence</h4><ul class="plain">${c.supporting_evidence.map(x => `<li>${escape(x)}</li>`).join('') || '<li>none</li>'}</ul><h4>Contradicting evidence</h4><ul class="plain">${c.contradicting_evidence.map(x => `<li>${escape(x)}</li>`).join('') || '<li>none identified</li>'}</ul><h4>Missing evidence</h4><ul class="plain">${c.missing_evidence.map(x => `<li>${escape(x)}</li>`).join('')}</ul><h4>Strongest reason not to prioritize it</h4><p>${escape(c.strongest_reason_against)}</p><h4>What would change our mind</h4><ul class="plain">${c.what_would_change_our_mind.map(x => `<li>${escape(x)}</li>`).join('')}</ul><details><summary>Experimental validation package (AI suggestion, review pending)</summary><p>${escape(c.experimental_package.requires)}</p><ul class="plain"><li>Assays: ${c.experimental_package.suggested_assays.map(escape).join('; ')}</li><li>Controls: ${c.experimental_package.positive_control_candidates.map(escape).join(', ') || 'none'}; ${escape(c.experimental_package.negative_control)}</li>${Object.entries(c.experimental_package.outcomes).map(([k, x]) => `<li><strong>${escape(label(k))}:</strong> ${escape(x)}</li>`).join('')}<li>Decision link: ${escape(String((c.experimental_package.decision_link ?? {}).critical_uncertainty_id ?? 'not linked'))}</li><li>${escape(c.experimental_package.decision_consequence)}</li></ul></details></article>`;
+
+export const comparisonSection = (p: NonNullable<CampaignView['prioritization']>): string => p.panel.length < 2 ? '' : `<section class="section"><h2>Candidate comparison</h2><div class="table-scroll"><table><caption>Each dimension stands alone; there is no total</caption><thead><tr><th scope="col">Dimension</th>${p.panel.map(c => `<th scope="col">${escape(c.name ?? c.compound_ref)}</th>`).join('')}</tr></thead><tbody><tr><th scope="row">Role</th>${p.panel.map(c => `<td>${escape(c.role)}</td>`).join('')}</tr><tr><th scope="row">Known experimental evidence</th>${p.panel.map(c => `<td>${c.dimensions.known_experimental_evidence.has_experimental_evidence ? 'indexed' : 'none indexed'}</td>`).join('')}</tr><tr><th scope="row">Similarity to reference (predicted)</th>${p.panel.map(c => `<td>${escape(c.dimensions.similarity_to_reference.value ?? 'n/a')}</td>`).join('')}</tr><tr><th scope="row">Docking</th>${p.panel.map(c => `<td>${escape(label(c.dimensions.docking.status))}</td>`).join('')}</tr><tr><th scope="row">Descriptor flags</th>${p.panel.map(c => `<td>${escape(c.dimensions.descriptor_flags.length)}</td>`).join('')}</tr><tr><th scope="row">Cellular evidence</th>${p.panel.map(c => `<td>${escape(c.dimensions.cellular_evidence)}</td>`).join('')}</tr></tbody></table></div></section>`;
+
+export const panelSection = (v: CampaignView): string => {
+  const p = v.prioritization;
+  if (!p) return '<section class="section"><h2>Candidate panel</h2><p class="caption">Not run yet.</p></section>';
+  if (p.outcome === 'failed') return `<section class="critical-uncertainty" role="alert"><h2>Campaign failed — no candidate was produced</h2><ul>${p.failure_states.map(f => `<li>${escape(f)}</li>`).join('')}</ul><p>A failed campaign never produces fake candidates.</p></section>`;
+  return `<section class="section"><h2>Candidate panel ${pill(p.outcome)}</h2>${p.statements.map(s => `<p class="caption">${escape(s)}</p>`).join('')}${p.panel.map(c => candidateCard(v, c)).join('')}${p.panel.length ? '' : '<p>No candidate is prioritized for experimental testing.</p>'}</section>${comparisonSection(p)}${p.method_disagreements.length ? `<section class="section"><h2>Method disagreement</h2><ul class="plain">${p.method_disagreements.map(d => `<li>${escape(d.compound)}: ${escape(d.statement)}</li>`).join('')}</ul></section>` : ''}`;
+};
+
+export const provenanceSection = (v: CampaignView): string => `<section class="section"><h2>Computational provenance</h2><p class="caption">Every observation is computational (class axis_observation), never an experimental result.</p><ul class="plain">${v.observations.filter(o => o.compound_ref !== '*').slice(0, 24).map(o => `<li>${escape(o.compound_ref)} · ${escape(o.method)} · ${escape(o.tool)} ${escape(o.tool_version)} · ${escape(o.epistemic_class)}</li>`).join('')}</ul></section>`;
+
+export const unknownSection = (v: CampaignView): string => `<section class="section"><h2>What is still unknown and what requires experimental validation</h2><ul class="plain"><li>Whether any panel member modulates the target in a biochemical assay.</li><li>Whether a defined region is a druggable or therapeutically relevant site.</li>${(v.prioritization?.untested_hypotheses ?? []).map(h => `<li>Hypothesis ${escape(h)} is untested by this chemical space.</li>`).join('')}<li>Nothing here establishes efficacy; external experiments are required.</li></ul></section>`;
+
+export const campaignView = (v: CampaignView): string => `${campaignBanner(v)}<h2>${escape(v.campaign.campaign_id)} ${pill(v.campaign.status)}</h2><section class="section"><h2>Campaign question</h2><p>${escape(v.campaign.question)}</p><p class="caption">Strategy: ${escape(v.campaign.intervention_strategy)}</p></section>${hypothesesSection(v)}${structureSection(v)}${spaceSection(v)}${methodsSection(v)}${knownSection(v)}${panelSection(v)}${provenanceSection(v)}${unknownSection(v)}`;
+
+export async function campaignContent(api: API, projectId: string): Promise<string> {
+  const base = `projects/${encodeURIComponent(projectId)}/campaigns`;
+  const list = await api<{ items: CampaignRow[] }>(base);
+  const selected = new URLSearchParams(location.search).get('campaign') || list.items[0]?.campaign_id || '';
+  const body = selected ? campaignView(await api<CampaignView>(`${base}/${encodeURIComponent(selected)}`)) : '';
+  return `<p class="intro">From a therapeutic hypothesis to a bounded, reproducible computational search. AXIS prioritizes molecules for experimental testing; it does not discover drugs.</p>${campaignList(list.items, selected)}${body}`;
+}
