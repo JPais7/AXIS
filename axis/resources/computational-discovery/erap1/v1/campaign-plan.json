@@ -154,10 +154,17 @@
       },
       {
         "compound_identity": null,
+        "external_identity": {
+          "provider": "PubChem PUG REST",
+          "provider_inchikey": "VGGGPCQERPFHOB-RDBSUJKOSA-N",
+          "provider_record": "CID 72172",
+          "scope": "chemical identity only; says nothing about ERAP1 pharmacology",
+          "status": "externally_verified_identity"
+        },
         "hypothesis_ids": [
           "hypothesis:erap1:zinc-binding-chemotype"
         ],
-        "inclusion_rationale": "Known drug carrying a metal-binding group (hydroxamate, thiol or alpha-hydroxy-beta-amino amide), supplied as a researcher hypothesis to explore the catalytic-metal region. Structure typed by hand and NOT verified against ChEMBL/PubChem; AXIS indexes no ERAP1 evidence for it.",
+        "inclusion_rationale": "Known drug carrying a metal-binding group (hydroxamate, thiol or alpha-hydroxy-beta-amino amide), supplied as a researcher hypothesis to explore the catalytic-metal region. Structure verified against PubChem by InChIKey (identity only); AXIS indexes no ERAP1 evidence for it.",
         "input_stereochemistry": null,
         "name": "Bestatin",
         "origin": "researcher_supplied",
@@ -166,22 +173,36 @@
       },
       {
         "compound_identity": null,
+        "external_identity": {
+          "provider": "PubChem PUG REST",
+          "provider_inchikey": "FAKRSMQSSFJEIM-RQJHMYQMSA-N",
+          "provider_record": "CID 44093",
+          "scope": "chemical identity only; says nothing about ERAP1 pharmacology",
+          "status": "externally_verified_identity"
+        },
         "hypothesis_ids": [
           "hypothesis:erap1:zinc-binding-chemotype"
         ],
-        "inclusion_rationale": "Known drug carrying a metal-binding group (hydroxamate, thiol or alpha-hydroxy-beta-amino amide), supplied as a researcher hypothesis to explore the catalytic-metal region. Structure typed by hand and NOT verified against ChEMBL/PubChem; AXIS indexes no ERAP1 evidence for it.",
+        "inclusion_rationale": "Known drug carrying a metal-binding group (hydroxamate, thiol or alpha-hydroxy-beta-amino amide), supplied as a researcher hypothesis to explore the catalytic-metal region. Structure verified against PubChem by InChIKey (identity only); AXIS indexes no ERAP1 evidence for it.",
         "input_stereochemistry": null,
         "name": "Captopril",
         "origin": "researcher_supplied",
         "ref": "compound:supplied:captopril",
-        "smiles": "C[C@@H](CS)C(=O)N1CCC[C@H]1C(=O)O"
+        "smiles": "C[C@H](CS)C(=O)N1CCC[C@H]1C(=O)O"
       },
       {
         "compound_identity": null,
+        "external_identity": {
+          "provider": "PubChem PUG REST",
+          "provider_inchikey": "WAEXFXRVDQXREF-UHFFFAOYSA-N",
+          "provider_record": "CID 5311",
+          "scope": "chemical identity only; says nothing about ERAP1 pharmacology",
+          "status": "externally_verified_identity"
+        },
         "hypothesis_ids": [
           "hypothesis:erap1:zinc-binding-chemotype"
         ],
-        "inclusion_rationale": "Known drug carrying a metal-binding group (hydroxamate, thiol or alpha-hydroxy-beta-amino amide), supplied as a researcher hypothesis to explore the catalytic-metal region. Structure typed by hand and NOT verified against ChEMBL/PubChem; AXIS indexes no ERAP1 evidence for it.",
+        "inclusion_rationale": "Known drug carrying a metal-binding group (hydroxamate, thiol or alpha-hydroxy-beta-amino amide), supplied as a researcher hypothesis to explore the catalytic-metal region. Structure verified against PubChem by InChIKey (identity only); AXIS indexes no ERAP1 evidence for it.",
         "input_stereochemistry": null,
         "name": "Vorinostat",
         "origin": "researcher_supplied",

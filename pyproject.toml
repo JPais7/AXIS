@@ -71,6 +71,9 @@ select = ["E", "F", "I", "UP", "B", "SIM"]
 "axis/computational/prioritize.py" = ["E501"]
 "axis/computational/service.py" = ["E501"]
 "scripts/build_computational_fixtures.py" = ["E501"]
+"scripts/fetch_external_identities.py" = ["E501"]
+"scripts/verify_computational_wheel.py" = ["E501"]
+"tests/test_computational.py" = ["E501"]
 
 [tool.mypy]
 python_version = "3.12"

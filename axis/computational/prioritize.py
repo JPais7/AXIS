@@ -160,6 +160,7 @@ def prioritize(
     entries = [
         _entry(
             m,
+            prepared,
             known,
             descriptors,
             flags,
@@ -194,6 +195,22 @@ def prioritize(
         )
     tested = {h for e in entries for h in e["hypotheses_tested"]}
     untested = sorted(h["id"] for h in hypotheses if h["id"] not in tested)
+    coverage = {
+        h["id"]: sorted(
+            e["compound_ref"] for e in entries if h["id"] in e["hypotheses_tested"]
+        )
+        for h in hypotheses
+    }
+    if entries and len(tested) < 2 and len(entries) > 1:
+        statements.append(
+            "The panel is chemically diverse but tests "
+            f"{len(tested)} hypothesis; chemical diversity is not hypothesis diversity."
+        )
+    if not references:
+        statements.append(
+            "No reference chemistry with indexed experimental evidence exists in this space; "
+            "every candidate is exploration by default and similarity cannot be interpreted."
+        )
     for hid in untested:
         statements.append(
             f"Hypothesis {hid} is not tested by any panel member of this chemical space."
@@ -218,7 +235,19 @@ def prioritize(
         ],
         "panel": entries,
         "not_selected": not_selected,
+        "hypothesis_coverage": coverage,
         "diversity": {
+            "chemical_diversity": {
+                "clusters_represented": sorted({e["cluster"] for e in entries}),
+                "distinct_scaffolds": len(
+                    {scaffolds.get(e["compound_ref"], "") for e in entries}
+                ),
+            },
+            "hypothesis_diversity": {
+                "hypotheses_tested": sorted(tested),
+                "hypotheses_total": len(hypotheses),
+                "note": "chemical diversity does not imply independent mechanistic hypotheses",
+            },
             "clusters_represented": sorted({e["cluster"] for e in entries}),
             "panel_size": len(entries),
             "per_cluster_limit": per_cluster,
@@ -235,6 +264,7 @@ def prioritize(
 
 def _entry(
     m: dict[str, Any],
+    prepared: dict[str, dict[str, Any]],
     known: dict[str, dict[str, Any]],
     descriptors: dict[str, dict[str, Any]],
     flags: dict[str, list[dict[str, Any]]],
@@ -276,6 +306,17 @@ def _entry(
         "descriptors": descriptors.get(ref, {}),
         "descriptor_flags": flags.get(ref, []),
         "scaffold": scaffolds.get(ref, ""),
+        "identity": {
+            "compound_ref": ref,
+            "identity_provenance": prepared[ref].get("identity_provenance"),
+            "external_identity": prepared[ref].get("external_identity"),
+            "isomeric_smiles": prepared[ref].get("isomeric_smiles"),
+            "inchi_key": prepared[ref].get("inchi_key"),
+            "molecular_formula": prepared[ref].get("molecular_formula"),
+            "stereochemistry": prepared[ref].get("stereochemistry"),
+            "chemical_space_origin": m.get("origin"),
+            "inclusion_rationale": m.get("inclusion_rationale"),
+        },
     }
     against_text = (
         "No indexed experimental evidence against the campaign target exists for this compound; every statement about it is computational or a researcher hypothesis."

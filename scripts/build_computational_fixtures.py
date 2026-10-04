@@ -39,6 +39,9 @@ def write(directory: Path, plan: dict[str, Any], synthetic: bool, note: str) -> 
         ).hexdigest()
     }
     (directory / "README.md").write_text(note)
+    extra = directory / "external-identity.json"
+    if extra.exists():
+        files["external-identity.json"] = hashlib.sha256(extra.read_bytes()).hexdigest()
     files["README.md"] = hashlib.sha256(
         (directory / "README.md").read_bytes()
     ).hexdigest()
@@ -84,13 +87,23 @@ def erap1() -> dict[str, Any]:
         (
             "compound:supplied:captopril",
             "Captopril",
-            "C[C@@H](CS)C(=O)N1CCC[C@H]1C(=O)O",
+            "C[C@H](CS)C(=O)N1CCC[C@H]1C(=O)O",
         ),
         ("compound:supplied:vorinostat", "Vorinostat", "ONC(=O)CCCCCCC(=O)Nc1ccccc1"),
     ]
+    identity = json.loads((ROOT / "erap1/v1/external-identity.json").read_text())["entries"]
     for ref, name, smiles in supplied:
+        ext = identity[ref]
+        assert ext["identity_check"] == "match", f"{ref} does not match {ext['provider_record']}"
         members.append(
             {
+                "external_identity": {
+                    "status": "externally_verified_identity",
+                    "provider": ext["provider"],
+                    "provider_record": ext["provider_record"],
+                    "provider_inchikey": ext["provider_inchikey"],
+                    "scope": "chemical identity only; says nothing about ERAP1 pharmacology",
+                },
                 "ref": ref,
                 "name": name,
                 "smiles": smiles,
@@ -98,7 +111,7 @@ def erap1() -> dict[str, Any]:
                 "compound_identity": None,
                 "input_stereochemistry": None,
                 "hypothesis_ids": ["hypothesis:erap1:zinc-binding-chemotype"],
-                "inclusion_rationale": "Known drug carrying a metal-binding group (hydroxamate, thiol or alpha-hydroxy-beta-amino amide), supplied as a researcher hypothesis to explore the catalytic-metal region. Structure typed by hand and NOT verified against ChEMBL/PubChem; AXIS indexes no ERAP1 evidence for it.",
+                "inclusion_rationale": "Known drug carrying a metal-binding group (hydroxamate, thiol or alpha-hydroxy-beta-amino amide), supplied as a researcher hypothesis to explore the catalytic-metal region. Structure verified against PubChem by InChIKey (identity only); AXIS indexes no ERAP1 evidence for it.",
             }
         )
     return {

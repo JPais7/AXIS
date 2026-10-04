@@ -1,7 +1,8 @@
 {
   "files": {
     "README.md": "0fc3097c7ad6041a2ca2c81b2b1286b17514f7b89d31e6459f3f555ad0c91256",
-    "campaign-plan.json": "3831ca8d5e48603a66185417deb723cae98016552dac0fd2836310fe968cba9a"
+    "campaign-plan.json": "b20004d7b7a716f9fa91eca8c5a4d7c573fa9c7dc320f2c5b4c7194a591e5c3a",
+    "external-identity.json": "7217bb711ae5b0d2768a96aeacc22e1e31ad6567f04f8765055a49da1cba7585"
   },
   "set_id": "campaign:erap1:bounded-chemistry-v1",
   "synthetic": false

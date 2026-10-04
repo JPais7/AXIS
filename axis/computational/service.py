@@ -14,11 +14,11 @@ from pathlib import Path
 from typing import Any
 
 from axis.computational import chem, docking, prioritize, structure
+from axis.computational.epistemics import EpistemicError, validate_observation
 from axis.storage import EvidenceStore
 
 CAMPAIGN_VERSION = "axis-campaign-1"
 MAX_SPACE = 1000
-FORBIDDEN_CLASSES = {"experimental_result", "source_assertion"}
 REVIEW_DECISIONS = (
     "pending_review",
     "accepted",
@@ -291,6 +291,10 @@ class CampaignService:
                     m["smiles"],
                     compound_identity=m.get("compound_identity"),
                     input_stereo=m.get("input_stereochemistry"),
+                    identity_provenance="indexed_provider"
+                    if m.get("origin") == "indexed_experimental"
+                    else "researcher_supplied",
+                    external_identity=m.get("external_identity"),
                 )
                 prepared[m["ref"]] = p
                 self.repo.put(
@@ -452,13 +456,22 @@ class CampaignService:
         observations = self._observations(
             campaign, usable, desc, sims, scaffolds, clusters, dock, flags
         )
+        for o in observations:
+            ref = o["compound_ref"]
+            o.setdefault("parameters", {})
+            o["input_sha256"] = (
+                prepared[ref].get("output_sha256", "")
+                if ref in prepared
+                else campaign["plan_fingerprint"]
+            )
+            o["output_sha256"] = digest(o["output"])
         status = "failed" if result["outcome"] == "failed" else "completed"
         with self.store._transaction():
             for o in observations:
-                if o["epistemic_class"] in FORBIDDEN_CLASSES:
-                    raise CampaignError(
-                        "a computational observation cannot be experimental evidence"
-                    )
+                try:
+                    validate_observation(o)
+                except EpistemicError as error:
+                    raise CampaignError(str(error)) from error
                 self.repo.put(
                     "computational_observations",
                     o["id"],
@@ -783,10 +796,24 @@ class CampaignService:
                     "",
                     e["why_this_molecule"],
                     "",
+                    f"- identity: {e['dimensions']['identity']['identity_provenance']}; "
+                    + (
+                        f"{e['dimensions']['identity']['external_identity']['status']} "
+                        f"({e['dimensions']['identity']['external_identity'].get('provider_record', 'no external record')}) "
+                        "— identity only, not target pharmacology"
+                    ),
                     f"- strongest reason against: {e['strongest_reason_against']}",
                     f"- missing: {'; '.join(e['missing_evidence'])}",
                     f"- would change our mind: {'; '.join(e['what_would_change_our_mind']) or 'not specified'}",
                 ]
+            hd = p["diversity"]["hypothesis_diversity"]
+            lines += [
+                "",
+                "## Diversity",
+                "",
+                f"- chemical: {len(p['diversity']['chemical_diversity']['clusters_represented'])} clusters, {p['diversity']['chemical_diversity']['distinct_scaffolds']} scaffolds",
+                f"- hypothesis: {len(hd['hypotheses_tested'])} of {hd['hypotheses_total']} hypotheses tested ({hd['note']})",
+            ]
             lines += [
                 "",
                 "## Not computed",

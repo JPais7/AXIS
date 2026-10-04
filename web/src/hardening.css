@@ -24,3 +24,6 @@ table caption{text-align:left;font-weight:600;padding:6px 0}.table-scroll th[sco
 .proposal-banner.synthetic{background:#fdecec;border:2px solid #b3261e;color:#7a1712;font-size:13px}
 .timeline{list-style:none;padding-left:0;margin:0;border-left:3px solid #527d79}.timeline li{padding:6px 0 6px 14px}.timeline time{color:#526971;font-size:11px;margin-right:8px}
 .card.observed{border-left:4px solid #1c5d99}.card.interpreted{border-left:4px solid #775b22}.card.preview{border:2px dashed #775b22}
+
+/* Phase 3.8: the sidebar has grown past one screen at common heights; keep every item reachable. */
+.sidebar{overflow-y:auto}

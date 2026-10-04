@@ -70,13 +70,22 @@ def stereo_status(mol: Chem.Mol) -> dict[str, Any]:
 
 
 def prepare_compound(
-    ref: str, smiles: str, *, compound_identity: str | None, input_stereo: str | None
+    ref: str,
+    smiles: str,
+    *,
+    compound_identity: str | None,
+    input_stereo: str | None,
+    identity_provenance: str = "researcher_supplied",
+    external_identity: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     """A computational representation linked to, never replacing, the identity."""
     mol = parse(smiles)
     base: dict[str, Any] = {
         "compound_ref": ref,
         "compound_identity": compound_identity,
+        "identity_provenance": identity_provenance,
+        "external_identity": external_identity
+        or {"status": "unverified", "note": "no external database mapping recorded"},
         "input_smiles": smiles,
         "tool": "RDKit",
         "tool_version": rdkit_version(),
@@ -100,7 +109,11 @@ def prepare_compound(
     result: dict[str, Any] = {
         **base,
         "status": "prepared",
-        "canonical_smiles": Chem.MolToSmiles(mol),
+        "canonical_smiles": Chem.MolToSmiles(mol, isomericSmiles=False),
+        "isomeric_smiles": Chem.MolToSmiles(mol),
+        "inchi_key": Chem.MolToInchiKey(mol),
+        "molecular_formula": rdMolDescriptors.CalcMolFormula(mol),
+        "molecular_weight": round(Descriptors.MolWt(mol), 3),
         "fragments": fragments,
         "stereochemistry": {**stereo, "input_claim": input_stereo},
         "protonation_state": "as written in the input; not assigned",

@@ -18,6 +18,9 @@ for (const width of [1440, 1024]) {
     await expect(main).toContainText('there is no total');
     await expect(main).toContainText('no predicted pose');
     await expect(main).toContainText('requires experimental validation');
+    await expect(main).toContainText('externally verified identity');
+    await expect(main).toContainText('Chemical diversity versus hypothesis diversity');
+    await expect(main).toContainText('no candidate in this chemical space');
     await shot('1-erap1-campaign');
     await expect(page.locator('.badge.proposal').first()).toContainText('PREDICTED');
     expect(errors).toEqual([]);

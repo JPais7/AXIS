@@ -1,0 +1,50 @@
+{
+  "entries": {
+    "compound:supplied:bestatin": {
+      "campaign_inchikey": "VGGGPCQERPFHOB-RDBSUJKOSA-N",
+      "campaign_smiles": "CC(C)C[C@H](NC(=O)[C@@H](O)[C@H](N)Cc1ccccc1)C(=O)O",
+      "identity_check": "match",
+      "name": "bestatin",
+      "provider": "PubChem PUG REST",
+      "provider_formula": "C16H24N2O4",
+      "provider_inchikey": "VGGGPCQERPFHOB-RDBSUJKOSA-N",
+      "provider_isomeric_smiles": "CC(C)C[C@@H](C(=O)O)NC(=O)[C@H]([C@@H](CC1=CC=CC=C1)N)O",
+      "provider_record": "CID 72172",
+      "provider_title": "Ubenimex",
+      "request_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/bestatin/property/Title,MolecularFormula,MolecularWeight,IsomericSMILES,InChIKey/JSON",
+      "response_sha256": "dbbeda2b103d319c94880c78b1e96acea2e196e08a5831ac4602af96f347dd9d"
+    },
+    "compound:supplied:captopril": {
+      "campaign_inchikey": "FAKRSMQSSFJEIM-RQJHMYQMSA-N",
+      "campaign_smiles": "C[C@H](CS)C(=O)N1CCC[C@H]1C(=O)O",
+      "identity_check": "match",
+      "name": "captopril",
+      "provider": "PubChem PUG REST",
+      "provider_formula": "C9H15NO3S",
+      "provider_inchikey": "FAKRSMQSSFJEIM-RQJHMYQMSA-N",
+      "provider_isomeric_smiles": "C[C@H](CS)C(=O)N1CCC[C@H]1C(=O)O",
+      "provider_record": "CID 44093",
+      "provider_title": "Captopril",
+      "request_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/captopril/property/Title,MolecularFormula,MolecularWeight,IsomericSMILES,InChIKey/JSON",
+      "response_sha256": "5ba98d60b3922d3b7d95b8f3fea61e7eb7540086c5ff412075c24ba8122b76d0"
+    },
+    "compound:supplied:vorinostat": {
+      "campaign_inchikey": "WAEXFXRVDQXREF-UHFFFAOYSA-N",
+      "campaign_smiles": "ONC(=O)CCCCCCC(=O)Nc1ccccc1",
+      "identity_check": "match",
+      "name": "vorinostat",
+      "provider": "PubChem PUG REST",
+      "provider_formula": "C14H20N2O3",
+      "provider_inchikey": "WAEXFXRVDQXREF-UHFFFAOYSA-N",
+      "provider_isomeric_smiles": "C1=CC=C(C=C1)NC(=O)CCCCCCC(=O)NO",
+      "provider_record": "CID 5311",
+      "provider_title": "Vorinostat",
+      "request_url": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/vorinostat/property/Title,MolecularFormula,MolecularWeight,IsomericSMILES,InChIKey/JSON",
+      "response_sha256": "4b02dad0cdbaddf21a189d39adbb233d8a4164c510c753b040403bc1954fae62"
+    }
+  },
+  "provider_release": "PubChem live service; no release identifier is exposed by PUG REST",
+  "resource": "external-compound-identity",
+  "retrieved_at": "2026-10-04T23:08:43.305538+00:00",
+  "scope": "Verifies chemical identity only. It is not evidence of ERAP1 binding, inhibition, selectivity or cellular activity."
+}

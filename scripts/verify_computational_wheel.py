@@ -9,6 +9,33 @@ import tempfile
 import venv
 from pathlib import Path
 
+ERAP_SNIPPET = """
+import socket, sys
+def refuse(*a, **k): raise RuntimeError('network used')
+socket.socket.connect = refuse
+from pathlib import Path
+from axis.cellular.service import CellularPharmacologyService
+from axis.decision.service import DecisionService
+from axis.discovery.curation import import_curated_erap1
+from axis.pharmacology.service import PharmacologyService
+from axis.storage import EvidenceStore
+from axis.structures.service import StructureIdentityService
+from axis.targets.identity import TargetIdentityService
+from axis.computational.service import CampaignService
+P = 'AXIS-DD-ERAP1-CURATED-001'
+with EvidenceStore(Path(sys.argv[1] + '.erap')) as s:
+    import_curated_erap1(s)
+    p = TargetIdentityService(s).import_package(P)
+    StructureIdentityService(s).import_package(P, p)
+    PharmacologyService(s).import_package(P, p)
+    CellularPharmacologyService(s).import_package(P, p)
+    DecisionService(s).import_package(P, p)
+    c = CampaignService(s)
+    cid = c.register('erap1'); c.prepare(cid); r = c.run(cid)
+    v = c.view(cid)['prioritization']
+    print('ERAP1 campaign', r['outcome'], 'panel', len(v['panel']), 'docking', v['docking']['status'])
+"""
+
 
 def main() -> int:
     wheel = Path(sys.argv[1]).resolve()
@@ -39,7 +66,16 @@ def main() -> int:
         if "campaign:synthetic" not in listing.stdout:
             print(listing.stdout, listing.stderr)
             return 1
-        print("installed wheel replays the computational campaign offline: OK")
+        erap = subprocess.run(
+            [str(bin_dir / "python"), "-c", ERAP_SNIPPET, db],
+            capture_output=True,
+            text=True,
+        )
+        if erap.returncode != 0 or "panel" not in erap.stdout:
+            print(erap.stdout, erap.stderr)
+            return 1
+        print(erap.stdout.strip())
+        print("installed wheel replays the computational campaigns offline: OK")
     return 0
 
 
