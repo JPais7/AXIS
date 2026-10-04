@@ -8,7 +8,6 @@ import json
 import re
 import shutil
 import socket
-import stat
 from pathlib import Path
 from typing import Any
 from unittest.mock import patch
@@ -612,31 +611,41 @@ def test_review_is_human_only_and_validated(syn: CampaignService) -> None:
 # --- docking orchestration (stub engine; test only) -----------------------------------
 
 
+def _stub(tmp_path: Path, name: str, body: str) -> list[str]:
+    """A portable stub engine: a Python script run by the current interpreter."""
+    import sys
+
+    script = tmp_path / f"{name}.py"
+    script.write_text(body)
+    return [sys.executable, str(script)]
+
+
 def test_docking_runner_uses_argument_arrays_and_rejects_partial_output(
     tmp_path: Path,
 ) -> None:
-    ok = tmp_path / "ok.sh"
-    ok.write_text("#!/bin/sh\necho 'REMARK VINA RESULT:  -7.1  0.0  0.0'\n")
-    ok.chmod(ok.stat().st_mode | stat.S_IEXEC)
-    good = docking.run_engine([str(ok)], timeout=10, workdir=tmp_path)
+    line = "print('REMARK VINA RESULT:  -7.1  0.0  0.0')\n"
+    good = docking.run_engine(_stub(tmp_path, "ok", line), timeout=30, workdir=tmp_path)
     assert good["status"] == "completed" and good["poses"][0]["score_kcal_mol"] == -7.1
-    bad = tmp_path / "bad.sh"
-    bad.write_text("#!/bin/sh\necho 'REMARK VINA RESULT:  -7.1  0.0  0.0'\nexit 3\n")
-    bad.chmod(bad.stat().st_mode | stat.S_IEXEC)
-    failed = docking.run_engine([str(bad)], timeout=10, workdir=tmp_path)
+    failed = docking.run_engine(
+        _stub(tmp_path, "bad", line + "raise SystemExit(3)\n"),
+        timeout=30,
+        workdir=tmp_path,
+    )
     assert failed["status"] == "failed" and failed["poses"] == []
-    assert (
-        docking.run_engine(["/nonexistent/engine"], timeout=5, workdir=tmp_path)[
-            "status"
-        ]
-        == "failed"
+    missing = docking.run_engine(["/nonexistent/engine"], timeout=5, workdir=tmp_path)
+    assert missing["status"] == "failed"
+    garbage = docking.run_engine(
+        _stub(tmp_path, "g", "print('REMARK VINA RESULT: nope')\n"),
+        timeout=30,
+        workdir=tmp_path,
     )
-    garbage = tmp_path / "g.sh"
-    garbage.write_text("#!/bin/sh\necho 'REMARK VINA RESULT: nope'\n")
-    garbage.chmod(garbage.stat().st_mode | stat.S_IEXEC)
-    assert (
-        docking.run_engine([str(garbage)], timeout=5, workdir=tmp_path)["poses"] == []
+    assert garbage["poses"] == []
+    slow = docking.run_engine(
+        _stub(tmp_path, "slow", "import time\ntime.sleep(5)\n"),
+        timeout=1,
+        workdir=tmp_path,
     )
+    assert slow["status"] == "failed" and "timeout" in slow["failure"]
 
 
 def test_docking_boundaries_are_stated() -> None:

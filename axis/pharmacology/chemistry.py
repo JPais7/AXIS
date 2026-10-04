@@ -22,8 +22,8 @@ def resolve_structure(smiles: str) -> dict[str, Any]:
         "original_smiles": smiles,
         "canonical_smiles": canonical,
         "isomeric_smiles": isomeric,
-        "canonical_inchi": Chem.MolToInchi(mol),  # type: ignore[no-untyped-call]
-        "inchi_key": Chem.MolToInchiKey(mol),  # type: ignore[no-untyped-call]
+        "canonical_inchi": Chem.MolToInchi(mol),  # type: ignore[no-untyped-call, unused-ignore]
+        "inchi_key": Chem.MolToInchiKey(mol),  # type: ignore[no-untyped-call, unused-ignore]
         "molecular_formula": rdMolDescriptors.CalcMolFormula(mol),
         "molecular_weight": float(Descriptors.MolWt(mol)),  # type: ignore[attr-defined]
         "formal_charge": int(Chem.GetFormalCharge(mol)),
