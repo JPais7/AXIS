@@ -183,3 +183,51 @@ def promote_explanation(
                 )
             )
         )
+
+
+@app.command("rebuild")
+def rebuild(
+    context: typer.Context,
+    project: Project,
+    mode: Annotated[str, typer.Option(help="exploratory | reviewed")] = "exploratory",
+    trigger: Annotated[str, typer.Option()] = "explicit rebuild",
+) -> None:
+    """Create the next immutable DecisionState after results or reviews changed."""
+    with EvidenceStore(database(context)) as store:
+        state = DecisionService(store).rebuild(
+            project, _protein(store, project), mode=mode, trigger=trigger
+        )
+        diff = state.get("diff") or {}
+        typer.echo(
+            f"DecisionState v{state['version']} {state['id']} "
+            f"(mode: {state['review_mode']})"
+        )
+        typer.echo(
+            "Did the decision change? "
+            + (diff.get("decision_changed") or {"answer": "first state"})["answer"]
+        )
+        for line in diff.get("changes", []):
+            typer.echo(f"  - {line}")
+
+
+@app.command("diff")
+def diff(
+    context: typer.Context,
+    project: Project,
+    from_version: Annotated[int | None, typer.Option("--from")] = None,
+    to_version: Annotated[int | None, typer.Option("--to")] = None,
+) -> None:
+    """Show the cause-attributed scientific diff between two stored states."""
+    with EvidenceStore(database(context)) as store:
+        protein = _protein(store, project)
+        items = {
+            s["version"]: s
+            for s in store.decisions.history(project, protein, 100)["items"]
+        }
+        if not items:
+            raise typer.BadParameter("no DecisionState exists")
+        high = to_version or max(items)
+        low = from_version or (high - 1)
+        if low < 1 or high not in items or low not in items:
+            raise typer.BadParameter("unknown version range")
+        _echo(DecisionService.diff(items[low], items[high]))

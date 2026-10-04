@@ -139,6 +139,31 @@ EXTRA: dict[str, tuple[str, str, str]] = {
         "Role is labelled low discrimination, never mechanism discrimination.",
         "test_decision.py::test_replication_is_flagged_low_discrimination",
     ),
+    "DECISION-RESULT-001": (
+        "an eligible contribution folds into its own edge and scope only",
+        "No cascade to other edges; no generalization to other scopes or contexts.",
+        "results_loop::test_edge_must_be_measured_and_does_not_cascade, test_happy_path_*",
+    ),
+    "DECISION-RESULT-002": (
+        "engagement rolled up over required scopes: complete only if all decided",
+        "A result for one scope never decides another; project state stays 'incomplete'.",
+        "results_loop::test_compound_isolation_and_unresolved_identity, test_complete_resolution_*",
+    ),
+    "DECISION-RESULT-003": (
+        "overall scenario match is outside_predefined_scenarios for an eligible result",
+        "The result is preserved and an uncertainty is raised; no scenario is force-fitted.",
+        "results_loop::test_unexpected_result_is_preserved_not_force_fitted",
+    ),
+    "DECISION-REPRO-002": (
+        "eligible contributions for the same edge and scope disagree (supported and contradicted)",
+        "Scope state is 'mixed'; both results stay; reproducibility uncertainty raised.",
+        "results_loop::test_every_phase_36_rule_fired_in_this_module",
+    ),
+    "DECISION-REVIEW-001": (
+        "mapping or design review state not allowed by the review mode is excluded",
+        "Rejected/conflict/needs-revision always excluded; pending only in exploratory mode.",
+        "results_loop::test_scenario_mapping_review_controls_ranking, test_rejected_mapping_*",
+    ),
     "DECISION-EXP-005": (
         "an interpretable scenario weakens a currently preferred explanation",
         "Non-falsifying candidates rank after falsifying ones.",
@@ -179,6 +204,29 @@ def main() -> None:
             "",
         ]
     Path("docs/phase35-decision-rule-audit.md").write_text("\n".join(lines))
+    from axis.experiments import policy
+
+    results = [
+        "# Phase 3.6 — result eligibility rule audit",
+        "",
+        f"Review policy `{policy.POLICY_ID}`, fingerprint `{policy.policy_fingerprint()[:16]}`; "
+        f"scenario matching `{policy.MATCH_RULE_VERSION}`. Pure functions in "
+        "`axis/experiments/policy.py` (no store, clock, network or randomness). "
+        "`exploratory` accepts accepted, accepted-with-caveat and *pending* (labelled); "
+        "`reviewed` accepts only accepted and accepted-with-caveat. Rejected, "
+        "conflicting and needs-revision are excluded in both. Tests: "
+        "`tests/test_results_loop.py`.",
+        "",
+    ]
+    for rule in policy.RESULT_RULES.values():
+        results += [
+            f"## {rule.id}",
+            "",
+            f"* **Rule:** {rule.description}",
+            f"* **Rationale:** {rule.rationale}",
+            "",
+        ]
+    Path("docs/phase36-result-rule-audit.md").write_text("\n".join(results))
 
 
 if __name__ == "__main__":

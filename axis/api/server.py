@@ -15,6 +15,7 @@ from urllib.parse import parse_qs, unquote, urlsplit
 from axis.cellular.service import CellularPharmacologyService
 from axis.decision.service import DecisionService
 from axis.discovery.workspace import WorkspaceService, page
+from axis.experiments.results import ResultsService
 from axis.pharmacology.service import PharmacologyService
 from axis.storage import EvidenceStore, RecordNotFoundError
 from axis.structures.service import StructureIdentityService
@@ -32,7 +33,13 @@ class ReadAPI:
         self.store = store
         self.workspace = WorkspaceService(store)
 
-    def _decision(self, parts: list[str], limit: int, offset: int) -> dict[str, Any]:
+    def _decision(
+        self,
+        parts: list[str],
+        limit: int,
+        offset: int,
+        query_versions: dict[str, str] | None = None,
+    ) -> dict[str, Any]:
         project, kind = parts[2], parts[3]
         proteins = self.store.targets.project_ids(project)
         if len(proteins) != 1:
@@ -42,6 +49,10 @@ class ReadAPI:
         tail = parts[4:]
         if kind == "decision" and tail == ["history"]:
             return self.store.decisions.history(project, protein, limit, offset)
+        if kind == "decision" and tail == ["timeline"]:
+            return {"items": service.timeline(project)}
+        if kind == "decision" and tail == ["diff"]:
+            return self._decision_diff(project, protein, query_versions)
         if kind == "candidate-experiments" and len(tail) == 1:
             return service.candidate(project, protein, tail[0])
         if tail:
@@ -84,6 +95,156 @@ class ReadAPI:
             "review": state["review"],
         }
 
+    def _decision_diff(
+        self, project: str, protein: str, versions: dict[str, str] | None
+    ) -> dict[str, Any]:
+        items = {
+            s["version"]: s
+            for s in self.store.decisions.history(project, protein, 100)["items"]
+        }
+        if len(items) < 2:
+            return {"diff": None, "message": "At least two DecisionStates are needed."}
+        versions = versions or {}
+        high = int(versions.get("to", max(items)))
+        low = int(versions.get("from", high - 1))
+        if low not in items or high not in items or low >= high:
+            raise RecordNotFoundError("decision version range not found")
+        return {
+            "from": low,
+            "to": high,
+            "diff": DecisionService.diff(items[low], items[high]),
+        }
+
+    def _results(
+        self, parts: list[str], query: dict[str, list[str]], limit: int, offset: int
+    ) -> dict[str, Any]:
+        project, kind, tail = parts[2], parts[3], parts[4:]
+        service = ResultsService(self.store)
+        mode = query.get("mode", ["exploratory"])[0]
+        self.store.projects.get(project)
+        if kind == "performed-experiments":
+            if not tail:
+                rows = self.store.results.experiments(project)[offset : offset + limit]
+                return {
+                    "items": [
+                        {
+                            "id": e["id"],
+                            "scope": f"{e['scope_type']}:{e['scope_id']}",
+                            "proposal_id": e["proposal_id"],
+                            "measures_edges": e["measures_edges"],
+                            "results": len(
+                                self.store.results.results(project, e["id"])
+                            ),
+                            "qc": (self.store.results.qc(e["id"]) or {}).get(
+                                "assessment"
+                            ),
+                            "synthetic": e["scientific_status"] != "real",
+                            "scientific_status": e["scientific_status"],
+                        }
+                        for e in rows
+                    ],
+                    "limit": limit,
+                    "offset": offset,
+                }
+            if len(tail) == 1:
+                return service.experiment_detail(project, tail[0])
+            raise RecordNotFoundError("performed-experiment route not found")
+        if kind == "results":
+            if not tail:
+                ledger = service.ledger(project, mode)
+                return {
+                    "items": ledger[offset : offset + limit],
+                    "total": len(ledger),
+                    "limit": limit,
+                    "offset": offset,
+                    "mode": mode,
+                }
+            row = tail[0]
+            if len(tail) == 1:
+                return service.result_detail(project, row)
+            if tail[1:] == ["review"]:
+                return {
+                    "review": service.review_state(project, "experimental_result", row),
+                    "packet": service.review_packet(project, row),
+                    "interpretation_reviews": {
+                        i["id"]: service.review_state(
+                            project, "result_interpretation", i["id"]
+                        )
+                        for i in self.store.results.interpretations(row)
+                    },
+                }
+            if tail[1:] == ["decision-impact"]:
+                proteins = self.store.targets.project_ids(project)
+                if len(proteins) != 1:
+                    raise RecordNotFoundError(
+                        "decision requires exactly one project protein"
+                    )
+                interpretation = query.get("interpretation", [""])[0]
+                if not interpretation:
+                    raise ValueError(
+                        "decision-impact requires an interpretation parameter"
+                    )
+                return DecisionService(self.store).impact_preview(
+                    project, proteins[0], interpretation, mode=mode
+                )
+            raise RecordNotFoundError("result route not found")
+        if kind == "review-queue" and not tail:
+            ledger = service.ledger(project, mode)
+            mappings = self.store._connection.execute(
+                "SELECT scenario_id, explanation_id, effect "
+                "FROM outcome_interpretations "
+                "ORDER BY 1, 2"
+            ).fetchall()
+            counts: dict[str, int] = {}
+            for scenario, explanation, _ in mappings:
+                state = service.review_state(
+                    project, "scenario_mapping", f"{scenario}|{explanation}"
+                )["state"]
+                counts[state] = counts.get(state, 0) + 1
+            return {
+                "pending_results": sorted(
+                    {x["result_row"] for x in ledger if x["result_review"] == "pending"}
+                ),
+                "pending_interpretations": [
+                    x["interpretation_id"]
+                    for x in ledger
+                    if x["interpretation_review"] == "pending"
+                ],
+                "conflicts": [
+                    x["interpretation_id"]
+                    for x in ledger
+                    if "conflict" in (x["result_review"], x["interpretation_review"])
+                ],
+                "scenario_mapping_review_counts": counts,
+                "mappings_total": len(mappings),
+                "mode": mode,
+            }
+        if kind == "scenario-mappings" and not tail:
+            mapping_rows = self.store._connection.execute(
+                "SELECT scenario_id, explanation_id, effect, rationale FROM "
+                "outcome_interpretations ORDER BY 1, 2 LIMIT ? OFFSET ?",
+                [limit, offset],
+            ).fetchall()
+            return {
+                "items": [
+                    {
+                        "id": f"{s}|{e}",
+                        "scenario_id": s,
+                        "explanation_id": e,
+                        "effect": ef,
+                        "rationale": r,
+                        "knowledge_kind": "ai_suggestion",
+                        "review": service.review_state(
+                            project, "scenario_mapping", f"{s}|{e}"
+                        ),
+                    }
+                    for s, e, ef, r in mapping_rows
+                ],
+                "limit": limit,
+                "offset": offset,
+            }
+        raise RecordNotFoundError("results route not found")
+
     def get(self, path: str, query: dict[str, list[str]]) -> dict[str, Any]:
         if any(
             key
@@ -98,6 +259,10 @@ class ReadAPI:
                 "endpoint",
                 "assay_type",
                 "source",
+                "from",
+                "to",
+                "interpretation",
+                "mode",
             )
             for key in query
         ):
@@ -128,6 +293,14 @@ class ReadAPI:
             and parts[3] == "targets"
             and parts[5] == "cellular"
         )
+        results_route = (
+            len(parts) >= 4
+            and parts[:2] == ["api", "projects"]
+            and parts[3]
+            in {"performed-experiments", "results", "review-queue", "scenario-mappings"}
+        )
+        if results_route:
+            return self._results(parts, query, limit, offset)
         decision_route = (
             len(parts) >= 4
             and parts[:2] == ["api", "projects"]
@@ -143,7 +316,12 @@ class ReadAPI:
         if decision_route:
             if chemical_filters:
                 raise ValueError("decision routes do not support filters")
-            return self._decision(parts, limit, offset)
+            return self._decision(
+                parts,
+                limit,
+                offset,
+                {k: query[k][0] for k in ("from", "to") if k in query},
+            )
         if cellular_route:
             if any(k != "compound" for k in chemical_filters):
                 raise ValueError("cellular route only supports compound filter")

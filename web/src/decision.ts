@@ -1,4 +1,5 @@
 import { EmptyState, escape, label } from './components';
+import { decisionAnswer, syntheticBanner } from './results';
 
 type API = <T>(path: string) => Promise<T>;
 type Fields = Record<string, unknown>;
@@ -31,12 +32,18 @@ export interface DecisionState {
   provenance: { ai_generated: string[]; investigator_approved: string[]; deterministic_rules: string[] };
   trace: { rules_fired: { id: string; version: string; description: string }[]; candidates_considered: { experiment_id: string; rank: number | null; reason: string }[]; outcome_logic: string; explanations_not_admitted: { id: string; reason: string }[] };
   graph: { nodes: { id: string; type: string; label: string }[]; edges: { from: string; to: string; kind: string; basis: string }[] };
-  diff: { changes: string[]; new_evidence: string[]; cause?: string[]; cause_summary?: string } | null; supersedes_id: string | null;
+  diff: Diff | null; supersedes_id: string | null;
+  effective_evidence?: { engagement_rollup: { status: string; scopes: { scope_type: string; scope_id: string; state: string; required: boolean; contribution_ids: string[]; caveats: string[]; review_caveats?: string[]; replicated: boolean }[] } | null };
+  results?: { contributions: Contribution[]; unexpected: { result_id: string }[]; synthetic: boolean };
+  review_mode?: string; synthetic?: boolean; trigger?: string;
+  review_dependencies?: { mode: string; pending_mappings_used: number; pending_designs_used: number; pending_contributions: string[]; review_excluded: { object: string; type: string; state: string }[] };
   review?: { pending_expert_review: number; accepted: number; message: string | null };
   sensitivity?: { method: string; decision_sensitive: Sensitive[]; explanation_sensitive: Sensitive[]; non_decisive: Sensitive[] };
   no_experiment_message?: string | null;
 }
 interface Sensitive { group: string; removed: string; changes: string[] }
+interface Contribution { id: string; result_id: string; edge: string; scope_type: string; scope_id: string; state: string; statement: string; review_state: string; eligibility_state: string; caveats: string[]; review_caveats: string[]; synthetic: boolean }
+interface Diff { changes: string[]; new_evidence: string[]; cause?: string[]; cause_summary?: string; causes?: { category: string; items: Fields[] }[]; decision_changed?: { answer: string; why: string }; triggering_results?: string[]; scientific_diff?: { evidence_status_changes: { kind: string; name: string; before: string; after: string; rule?: string; because: Fields[]; caveats?: string[] }[]; explanation_changes: { id: string; label: string; before: string; after: string; rules: string[]; because: Fields[] }[]; uncertainty_changes: { id: string; before: string[] | null; after: string[]; rules: string[] }[]; critical: { before: string | null; after: string | null; because: Fields } | null; recommendation: { before: string | null; after: string | null; because: Fields } | null } }
 const short = (id: string): string => id.replace(/^(explanation|uncertainty|decision:exp):/, '');
 const tag = (text: string, kind = ''): string => `<span class="badge ${kind}">${escape(label(text))}</span>`;
 const list = (items: string[], empty = 'None recorded.'): string => items.length ? `<ul>${items.map(item => `<li>${escape(item)}</li>`).join('')}</ul>` : `<p>${escape(empty)}</p>`;
@@ -121,9 +128,36 @@ export const constraintsSection = (state: DecisionState): string => `<h2 id="con
 
 export const traceSection = (state: DecisionState): string => `<h2 id="trace">Evidence and rule trace</h2><details><summary>Rules fired (${state.trace.rules_fired.length}, ${escape(state.rules_version)})</summary><ul>${state.trace.rules_fired.map(rule => `<li><code>${escape(rule.id)}</code> v${escape(rule.version)} — ${escape(rule.description)}</li>`).join('')}</ul></details><details><summary>Candidates considered and why each ranked as it did</summary><ul>${state.trace.candidates_considered.map(item => `<li>${escape(short(item.experiment_id))}: ${escape(item.reason)}</li>`).join('')}</ul></details><details><summary>Outcome logic and graph paths (text equivalent)</summary><p>${escape(state.trace.outcome_logic)}</p><ul>${state.graph.edges.map(edge => `<li>${escape(short(edge.from))} —${escape(label(edge.kind))}→ ${escape(short(edge.to))}: ${escape(edge.basis)}</li>`).join('')}</ul></details><p class="caption">AI-generated: ${state.provenance.ai_generated.length} components. Investigator-approved: ${state.provenance.investigator_approved.length}. ${escape(state.disclaimer)}</p>`;
 
-export const historySection = (items: DecisionState[]): string => `<h2 id="history">Decision history</h2>${items.map(item => `<article class="card"><h3>Decision state v${item.version}</h3><p class="identifier">${escape(item.id)} · ${escape(item.created_at)}</p>${item.diff && item.diff.changes.length ? `<h4>Since previous decision</h4>${item.diff.cause_summary ? `<p><strong>${escape(item.diff.cause_summary)}</strong></p>` : ''}${list(item.diff.changes)}${item.diff.new_evidence.length ? `<p>New evidence: ${escape(item.diff.new_evidence.join('; '))}</p>` : ''}` : `<p>${item.supersedes_id ? 'No changes recorded.' : 'First decision state; nothing to compare.'}</p>`}</article>`).join('')}`;
+export const scopeBreakdown = (state: DecisionState): string => {
+  const rollup = state.effective_evidence?.engagement_rollup;
+  if (!rollup) return '';
+  return `<h3 id="scopes">Engagement by scope</h3><p class="caption">A result resolves only its own compound, perturbagen or context. Rollup across the phenotype-producing scopes: <strong>${escape(label(rollup.status))}</strong>.</p><div class="table-scroll"><table><caption>Direct cellular engagement per scope</caption><thead><tr><th scope="col">Scope</th><th scope="col">State</th><th scope="col">Required for target-level resolution</th><th scope="col">Caveats</th></tr></thead><tbody>${rollup.scopes.map(s => `<tr><th scope="row">${escape(s.scope_type)}: ${escape(s.scope_id)}</th><td>${escape(label(s.state))}${s.replicated ? ' (replicated)' : ''}</td><td>${s.required ? 'yes' : 'no'}</td><td>${escape([...s.caveats, ...(s.review_caveats ?? [])].join('; ') || '—')}</td></tr>`).join('')}</tbody></table></div>`;
+};
 
-export const decisionView = (state: DecisionState, history: DecisionState[]): string => `<p class="proposal-banner">${escape(state.disclaimer)}</p>${reviewBanner(state)}<nav aria-label="Decision sections"><p>${[['position', 'Position'], ['critical', 'Critical uncertainty'], ['explanations', 'Competing explanations'], ['experiment', 'Recommended experiment'], ['comparison', 'Comparison'], ['mind', 'What would change our mind'], ['robustness', 'Robustness'], ['constraints', 'Constraints'], ['trace', 'Trace'], ['history', 'History']].map(([id, text]) => `<a href="#${id}">${text}</a>`).join(' · ')}</p></nav><p><span class="badge">Decision state v${state.version}</span> <span class="caption">${escape(state.id)} · rules ${escape(state.rules_version)}</span></p>${positionSection(state)}${criticalCard(state)}${explanationCards(state)}${recommendation(state)}${comparisonMatrix(state)}${changeMind(state)}${robustness(state)}${constraintsSection(state)}${traceSection(state)}${historySection(history)}`;
+export const resultsSection = (state: DecisionState): string => {
+  const results = state.results;
+  if (!results || (!results.contributions.length && !results.unexpected.length)) return `<h2 id="results">Experimental results informing this decision</h2><p>None. This decision rests on the stored literature-derived evidence and the reviewed rules; no performed experiment has been imported into it.</p>`;
+  return `<h2 id="results">Experimental results informing this decision</h2>${syntheticBanner(Boolean(state.synthetic))}<ul>${results.contributions.map(c => `<li><strong>${escape(c.result_id)}</strong> → ${escape(label(c.edge))} for ${escape(c.scope_type)}: ${escape(c.scope_id)} = ${escape(label(c.state))} <span class="badge">${escape(label(c.eligibility_state))}</span> <span class="badge">review: ${escape(label(c.review_state))}</span>${[...c.caveats, ...c.review_caveats].length ? `<br><small>Caveats: ${escape([...c.caveats, ...c.review_caveats].join('; '))}</small>` : ''}</li>`).join('')}</ul>${results.unexpected.length ? `<p>Unexpected results outside the predefined scenarios: ${escape(results.unexpected.map(u => u.result_id).join(', '))}.</p>` : ''}`;
+};
+
+export const reviewDependencies = (state: DecisionState): string => {
+  const dep = state.review_dependencies;
+  if (!dep) return '';
+  const excluded = dep.review_excluded.length;
+  return `<p class="caption" role="note">Decision mode: <strong>${escape(state.review_mode ?? dep.mode)}</strong> (policy ${escape('decision-review-policy-v1')}). Uses ${dep.pending_mappings_used} scenario→explanation mappings and ${dep.pending_designs_used} candidate designs still pending review; ${dep.pending_contributions.length} result interpretation(s) pending; ${excluded} reviewed object(s) excluded by policy.</p>`;
+};
+
+export const causalDiff = (diff: Diff | null): string => {
+  if (!diff || !diff.scientific_diff) return '';
+  const sd = diff.scientific_diff;
+  const answer = diff.decision_changed ? `<p><strong>Did the decision change? ${escape(decisionAnswer(diff.decision_changed.answer))}.</strong> ${escape(diff.decision_changed.why)}</p>` : '';
+  const causes = (diff.causes ?? []).map(c => `<li>${escape(label(c.category))}${c.items.length ? `: ${escape(c.items.map(i => String(i.result_id ?? i.interpretation_id ?? i.after ?? '')).filter(Boolean).join(', '))}` : ''}</li>`).join('');
+  return `${answer}${causes ? `<h4>Why it changed</h4><ul>${causes}</ul>` : ''}${sd.evidence_status_changes.length ? `<h4>Evidence</h4><ul>${sd.evidence_status_changes.map(c => `<li>${escape(label(c.name))}: ${escape(label(String(c.before)))} → <strong>${escape(label(String(c.after)))}</strong>${c.rule ? ` <small>(${escape(c.rule)})</small>` : ''}</li>`).join('')}</ul>` : ''}${sd.explanation_changes.length ? `<h4>Competing explanations</h4><ul>${sd.explanation_changes.map(c => `<li>${escape(c.label)}: ${escape(label(c.before))} → <strong>${escape(label(c.after))}</strong> <small>(${escape(c.rules.join(', '))})</small></li>`).join('')}</ul>` : ''}${sd.uncertainty_changes.length ? `<h4>Uncertainties</h4><ul>${sd.uncertainty_changes.map(c => `<li>${escape(c.id.replace('uncertainty:', ''))}: ${escape(c.before ? c.before.map(label).join(' / ') : 'new')} → <strong>${escape(c.after.map(label).join(' / '))}</strong></li>`).join('')}</ul>` : ''}${sd.critical ? `<p>Critical uncertainty: ${escape(String(sd.critical.before))} → <strong>${escape(String(sd.critical.after))}</strong></p>` : ''}${sd.recommendation ? `<p>Recommended experiment: ${escape(String(sd.recommendation.before))} → <strong>${escape(String(sd.recommendation.after))}</strong></p>` : ''}`;
+};
+
+export const historySection = (items: DecisionState[]): string => `<h2 id="history">Decision history</h2>${items.map(item => `<article class="card"><h3>Decision state v${item.version}</h3><p class="identifier">${escape(item.id)} · ${escape(item.created_at)}</p>${item.diff && item.diff.changes.length ? `<h4>Since previous decision</h4>${item.diff.cause_summary ? `<p><strong>${escape(item.diff.cause_summary)}</strong></p>` : ''}${causalDiff(item.diff)}${item.diff.scientific_diff ? '' : list(item.diff.changes)}${item.diff.new_evidence.length ? `<p>New evidence: ${escape(item.diff.new_evidence.join('; '))}</p>` : ''}` : `<p>${item.supersedes_id ? 'No changes recorded.' : 'First decision state; nothing to compare.'}</p>`}</article>`).join('')}`;
+
+export const decisionView = (state: DecisionState, history: DecisionState[]): string => `${syntheticBanner(Boolean(state.synthetic))}<p class="proposal-banner">${escape(state.disclaimer)}</p>${reviewBanner(state)}${reviewDependencies(state)}<nav aria-label="Decision sections"><p>${[['position', 'Position'], ['critical', 'Critical uncertainty'], ['explanations', 'Competing explanations'], ['experiment', 'Recommended experiment'], ['comparison', 'Comparison'], ['results', 'Results'], ['mind', 'What would change our mind'], ['robustness', 'Robustness'], ['constraints', 'Constraints'], ['trace', 'Trace'], ['history', 'History']].map(([id, text]) => `<a href="#${id}">${text}</a>`).join(' · ')}</p></nav><p><span class="badge">Decision state v${state.version}</span> <span class="caption">${escape(state.id)} · rules ${escape(state.rules_version)}</span></p>${positionSection(state)}${criticalCard(state)}${scopeBreakdown(state)}${explanationCards(state)}${recommendation(state)}${comparisonMatrix(state)}${resultsSection(state)}${changeMind(state)}${robustness(state)}${constraintsSection(state)}${traceSection(state)}${historySection(history)}`;
 
 export async function decisionContent(api: API, project: string): Promise<string> {
   const base = `projects/${encodeURIComponent(project)}`;

@@ -14,7 +14,7 @@ from typing import Any
 
 from axis.domain.decision import ExplanationEvidenceLink, ScientificUncertainty
 
-RULES_VERSION = "axis-decision-2"
+RULES_VERSION = "axis-decision-3"
 Evidence = dict[str, Any]
 Ref = tuple[str, str]
 TARGET = "the target"
@@ -231,6 +231,48 @@ RULES: dict[str, Rule] = dict(
             "falsifying flag; non-falsifying candidates rank after falsifying ones",
             "AXIS should favour experiments able to change its mind.",
         ),
+        _rule(
+            "DECISION-RESULT-001",
+            "Apply eligible experimental-result contributions to their own evidence "
+            "edge and scope only; never cascade to another edge or generalize to "
+            "another scope or context.",
+            "contributions (eligible under the review policy)",
+            "scoped edge states; project edge aggregate",
+            "Each edge requires its own evidence; a result is bound to its scope.",
+        ),
+        _rule(
+            "DECISION-RESULT-002",
+            "Roll engagement up over the phenotype-producing scopes: complete only "
+            "when every required scope is decided; otherwise partial or open.",
+            "required scopes, scoped engagement states",
+            "engagement rollup and uncertainty status",
+            "Target-level resolution is distinct from compound-level resolution.",
+        ),
+        _rule(
+            "DECISION-RESULT-003",
+            "A result outside every predefined scenario creates an unexpected-result "
+            "uncertainty instead of being force-fitted.",
+            "unexpected_results",
+            "uncertainty:unexpected_result:<id>",
+            "Unexpected data are preserved and need interpretation.",
+        ),
+        _rule(
+            "DECISION-REPRO-002",
+            "Opposite eligible results for the same edge and scope yield a mixed "
+            "scope state and a reproducibility uncertainty; both are preserved.",
+            "scoped edges",
+            "reproducibility uncertainty",
+            "Contradiction is data; results are never averaged into consensus.",
+        ),
+        _rule(
+            "DECISION-REVIEW-001",
+            "Scenario→explanation mappings and candidate designs enter a decision "
+            "only if their review state is allowed by the review mode; rejected, "
+            "conflicting and needs-revision are always excluded.",
+            "review states, review mode",
+            "filtered mappings and candidate set; review dependencies",
+            "A rejected mapping must not silently stay active.",
+        ),
     ]
 )
 
@@ -346,6 +388,144 @@ def _coverage_reason(ev: Evidence) -> list[str]:
     return reasons
 
 
+def _aggregate_states(states: list[str]) -> str:
+    unique = set(states)
+    if "mixed" in unique or {"supported", "contradicted"} <= unique:
+        return "mixed"
+    for state in ("contradicted", "supported", "insufficient"):
+        if state in unique:
+            return state
+    return "not_assessed"
+
+
+def apply_contributions(ev: Evidence) -> Evidence:
+    """DECISION-RESULT-001/002: fold eligible result contributions into the evidence.
+
+    Pure. Each contribution touches only its own edge and scope; an engagement
+    result never changes functional, HLA, immune or disease edges, and a result for
+    one compound never decides another compound's scope.
+    """
+    out: Evidence = json.loads(json.dumps(ev))
+    contributions = out.get("contributions", [])
+    scoped: dict[str, dict[str, dict[str, Any]]] = {}
+    for item in sorted(
+        contributions,
+        key=lambda c: (c["edge"], c["scope_type"], c["scope_id"], c["id"]),
+    ):
+        key = f"{item['scope_type']}:{item['scope_id']}"
+        entry = scoped.setdefault(item["edge"], {}).setdefault(
+            key,
+            {
+                "states": [],
+                "contribution_ids": [],
+                "caveats": [],
+                "review_caveats": [],
+                "experiments": [],
+                "review_states": [],
+                "contexts": [],
+            },
+        )
+        entry["states"].append(item["state"])
+        entry["contribution_ids"].append(item["id"])
+        entry["caveats"] += [
+            c for c in item.get("caveats", []) if c not in entry["caveats"]
+        ]
+        entry["review_caveats"] += [
+            c
+            for c in item.get("review_caveats", [])
+            if c not in entry["review_caveats"]
+        ]
+        if item["experiment_id"] not in entry["experiments"]:
+            entry["experiments"].append(item["experiment_id"])
+        entry["review_states"].append(item["review_state"])
+        entry["contexts"].append(item.get("context", {}))
+    for scopes in scoped.values():
+        for entry in scopes.values():
+            entry["state"] = _aggregate_states(entry.pop("states"))
+            entry["replicated"] = len(entry["experiments"]) >= 2 and entry["state"] in (
+                "supported",
+                "contradicted",
+            )
+    out["scoped_edges"] = scoped
+    for edge, scopes in scoped.items():
+        if edge == "engagement":
+            continue
+        base = out["edges"].get(edge, {"state": "not_assessed", "ids": []})
+        merged = (
+            _aggregate_states([base["state"]] + [e["state"] for e in scopes.values()])
+            if base["state"] != "insufficient"
+            else _aggregate_states([e["state"] for e in scopes.values()])
+        )
+        out["edges"][edge] = {
+            "state": merged,
+            "ids": sorted(
+                set(base["ids"])
+                | {i for e in scopes.values() for i in e["contribution_ids"]}
+            ),
+        }
+    if "engagement" in scoped:
+        required = [
+            f"{s['scope_type']}:{s['scope_id']}" for s in out.get("required_scopes", [])
+        ]
+        engaged = scoped["engagement"]
+        rows = []
+        for key in sorted(set(required) | set(engaged)):
+            scope_type, _, scope_id = key.partition(":")
+            found = engaged.get(key)
+            rows.append(
+                {
+                    "scope_type": scope_type,
+                    "scope_id": scope_id,
+                    "state": found["state"] if found else "not_assessed",
+                    "required": key in required,
+                    "contribution_ids": found["contribution_ids"] if found else [],
+                    "caveats": found["caveats"] if found else [],
+                    "review_caveats": found["review_caveats"] if found else [],
+                    "replicated": bool(found and found["replicated"]),
+                }
+            )
+        needed = [r for r in rows if r["required"]]
+        decided = [
+            r for r in needed if r["state"] in ("supported", "contradicted", "mixed")
+        ]
+        mixed = any(r["state"] == "mixed" for r in needed)
+        if needed and len(decided) == len(needed) and not mixed:
+            status = "complete"
+        elif decided or mixed:
+            status = "partial"
+        else:
+            status = "open"
+        out["engagement_rollup"] = {"status": status, "scopes": rows}
+        states = {r["state"] for r in needed}
+        if status == "complete" and states == {"supported"}:
+            project_state = "supported"
+        elif status == "complete" and states == {"contradicted"}:
+            project_state = "contradicted"
+        elif mixed or {"supported", "contradicted"} <= states or status == "complete":
+            project_state = "mixed"
+        elif status == "partial":
+            project_state = "incomplete"
+        else:
+            project_state = out["edges"]["engagement"]["state"]
+        out["edges"]["engagement"] = {
+            "state": project_state,
+            "ids": sorted(
+                set(out["edges"]["engagement"]["ids"])
+                | {i for r in rows for i in r["contribution_ids"]}
+            ),
+        }
+        gap_scopes = out.get("gap_scopes", {})
+        decided_keys = {
+            f"{r['scope_type']}:{r['scope_id']}"
+            for r in rows
+            if r["state"] != "not_assessed"
+        }
+        out["gap_ids"] = sorted(
+            g for g in out.get("gap_ids", []) if gap_scopes.get(g) not in decided_keys
+        )
+    return out
+
+
 def derive_uncertainties(ev: Evidence) -> list[ScientificUncertainty]:
     """Apply DECISION-* uncertainty rules; each result names the rules that fired."""
     result: list[ScientificUncertainty] = []
@@ -358,11 +538,18 @@ def derive_uncertainties(ev: Evidence) -> list[ScientificUncertainty]:
     selectivity = ev.get("selectivity", {"total": 0, "comparable": 0})
 
     if phenotype and biochemical:
-        status = {
-            "supported": "resolved_for_current_decision",
-            "contradicted": "resolved_for_current_decision",
-            "mixed": "partially_resolved",
-        }.get(engagement, "open")
+        rollup = ev.get("engagement_rollup")
+        if rollup:
+            status = {
+                "complete": "resolved_for_current_decision",
+                "partial": "partially_resolved",
+            }.get(rollup["status"], "open")
+        else:
+            status = {
+                "supported": "resolved_for_current_decision",
+                "contradicted": "resolved_for_current_decision",
+                "mixed": "partially_resolved",
+            }.get(engagement, "open")
         fired = ["DECISION-GAP-001"]
         relevance = "decision_material"
         reasons = [
@@ -370,6 +557,17 @@ def derive_uncertainties(ev: Evidence) -> list[ScientificUncertainty]:
             "a compound-treated cellular phenotype is supported",
             f"direct cellular engagement is {engagement.replace('_', ' ')}",
         ]
+        breakdown: tuple[tuple[str, str, str], ...] = ()
+        if rollup:
+            fired.append("DECISION-RESULT-002")
+            breakdown = tuple(
+                (s["scope_type"], s["scope_id"], s["state"]) for s in rollup["scopes"]
+            )
+            reasons.append(
+                "scope coverage: "
+                + "; ".join(f"{t}:{i} {s.replace('_', ' ')}" for t, i, s in breakdown)
+                + " (a result for one scope never resolves another)"
+            )
         if status == "open" and selectivity_unresolved(ev):
             relevance = "decision_blocking"
             fired.append("DECISION-GAP-002")
@@ -381,7 +579,7 @@ def derive_uncertainties(ev: Evidence) -> list[ScientificUncertainty]:
                 "comparable selectivity data exist, so engagement is material "
                 "rather than blocking"
             )
-        if status != "open":
+        if status == "resolved_for_current_decision":
             relevance = "informative"
         reasons += _coverage_reason(ev)
         result.append(
@@ -405,6 +603,7 @@ def derive_uncertainties(ev: Evidence) -> list[ScientificUncertainty]:
                     ("cellular_assessment", _ids(ev, "compound_phenotype_ids")),
                 ),
                 ("on_target", "off_target", "indirect_pathway"),
+                scope_breakdown=breakdown,
             )
         )
 
@@ -534,31 +733,73 @@ def derive_uncertainties(ev: Evidence) -> list[ScientificUncertainty]:
     disagreements = sorted(
         ev.get("source_disagreements", []), key=lambda d: d["endpoint"]
     )
-    if disagreements:
+    mixed_scopes = sorted(
+        (edge, scope, entry)
+        for edge, scopes in ev.get("scoped_edges", {}).items()
+        for scope, entry in scopes.items()
+        if entry["state"] == "mixed"
+    )
+    if disagreements or mixed_scopes:
+        fired_repro = ["DECISION-REPRO-001"] if disagreements else []
+        reasons_repro = [
+            f"{d['endpoint']}: {' vs '.join(sorted(d['directions']))}"
+            for d in disagreements
+        ]
+        if mixed_scopes:
+            fired_repro.append("DECISION-REPRO-002")
+            reasons_repro += [
+                f"new results disagree for {edge} / {scope}; both are preserved"
+                for edge, scope, _ in mixed_scopes
+            ]
         result.append(
             ScientificUncertainty(
                 "uncertainty:reproducibility",
                 "reproducibility",
-                "Is the genetic-perturbation phenotype reproducible across cellular "
-                "systems and sources?",
+                "Is the observed phenotype or engagement reproducible across "
+                "cellular systems, sources and experiments?",
                 "open",
                 "decision_material",
                 "requires_multiple_experiments",
-                "Sources report opposite directions for the same genetic endpoint "
-                "in different systems.",
-                ("DECISION-REPRO-001",),
-                tuple(
-                    f"{d['endpoint']}: {' vs '.join(sorted(d['directions']))}"
-                    for d in disagreements
-                ),
+                "Sources or results report opposite directions for the same "
+                "endpoint; contradiction is preserved, not averaged.",
+                tuple(fired_repro),
+                tuple(reasons_repro),
                 (),
                 (),
                 tuple(
                     ("readout", r)
                     for d in disagreements
                     for r in sorted(d["readout_ids"])
+                )
+                + tuple(
+                    ("interpretation", i)
+                    for _, _, entry in mixed_scopes
+                    for i in entry["contribution_ids"]
                 ),
                 ("context_dependent",),
+            )
+        )
+
+    for unexpected in sorted(
+        ev.get("unexpected_results", []), key=lambda u: u["result_id"]
+    ):
+        result.append(
+            ScientificUncertainty(
+                f"uncertainty:unexpected_result:{unexpected['result_id']}",
+                "other",
+                "How should the observed result that fell outside the predefined "
+                f"outcome scenarios ({unexpected['result_id']}) be interpreted?",
+                "open",
+                "decision_material",
+                "unknown",
+                "Observed result falls outside the predefined outcome scenarios; it is "
+                "preserved, not force-fitted.",
+                ("DECISION-RESULT-003",),
+                ("scenario match: outside predefined scenarios",),
+                (),
+                (),
+                (("result", unexpected["result_id"]),),
+                (),
             )
         )
 
@@ -727,7 +968,33 @@ def explanation_links(
                 f"Genetic {target} perturbation produces a dependent phenotype in "
                 "this system.",
             )
-        if engagement == "supported":
+        rollup = ev.get("engagement_rollup")
+        if rollup:
+            for scope in rollup["scopes"]:
+                if scope["state"] == "supported":
+                    add(
+                        "supports",
+                        "interpretation",
+                        scope["contribution_ids"][0],
+                        f"Direct cellular engagement shown for {scope['scope_type']}:"
+                        f"{scope['scope_id']} only.",
+                    )
+                elif scope["state"] == "contradicted":
+                    add(
+                        "contradicts",
+                        "interpretation",
+                        scope["contribution_ids"][0],
+                        f"No engagement observed for {scope['scope_type']}:"
+                        f"{scope['scope_id']} in a valid assay.",
+                    )
+            for item in _ids(ev, "gap_ids"):
+                add(
+                    "leaves_unresolved",
+                    "gap",
+                    item,
+                    "Direct cellular engagement is not assessed for this scope.",
+                )
+        elif engagement == "supported":
             add("supports", "edge", "engagement", "Direct cellular engagement shown.")
         else:
             for item in _ids(ev, "gap_ids"):
@@ -758,7 +1025,7 @@ def explanation_links(
                 item,
                 "Chemical and genetic phenotypes disagree.",
             )
-        if engagement == "contradicted":
+        if engagement == "contradicted" and not rollup:
             add("contradicts", "edge", "engagement", "Engagement assay was negative.")
     elif ground == "off_target" and phenotype:
         for item in ev.get("selectivity", {}).get("unresolved_ids", []):
@@ -792,7 +1059,18 @@ def explanation_links(
                 "Comparable selectivity reduces, but does not eliminate, off-target "
                 "contribution.",
             )
-        if engagement == "contradicted":
+        rollup = ev.get("engagement_rollup")
+        if rollup:
+            for scope in rollup["scopes"]:
+                if scope["state"] == "contradicted":
+                    add(
+                        "supports",
+                        "interpretation",
+                        scope["contribution_ids"][0],
+                        f"Phenotype persists for {scope['scope_type']}:"
+                        f"{scope['scope_id']} although engagement was not observed.",
+                    )
+        elif engagement == "contradicted":
             add(
                 "supports",
                 "edge",

@@ -140,6 +140,9 @@ class EvidenceStore:
         from axis.storage.decision import DecisionRepository
 
         self.decisions = DecisionRepository(self)
+        from axis.storage.results import ResultsRepository
+
+        self.results = ResultsRepository(self)
 
     def __enter__(self) -> Self:
         return self

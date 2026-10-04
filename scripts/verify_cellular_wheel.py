@@ -42,7 +42,7 @@ def main() -> None:
                 assert service.import_package(PROJECT, protein) == (
                     service.import_package(PROJECT, protein)
                 )
-                assert store.statistics().schema_version == 9
+                assert store.statistics().schema_version == 10
                 result = [
                     store.cellular.collection(PROJECT, protein, k, 100)
                     for k in (
@@ -67,7 +67,7 @@ def main() -> None:
         json.dumps(
             {
                 "loaded_axis": axis.__file__,
-                "schema": 9,
+                "schema": 10,
                 "manifest_sha256": digest,
                 "two_store_offline_replay": True,
                 "experiments": results[0][0]["total"],

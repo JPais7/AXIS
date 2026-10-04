@@ -78,7 +78,7 @@ def reference_evidence(imported):
 
 def with_evidence(service, evidence):
     """Make the service read a synthetic evidence state (no store mutation)."""
-    service.evidence = lambda project, protein: copy.deepcopy(evidence)  # type: ignore[method-assign]
+    service.evidence = lambda project, protein, *_: copy.deepcopy(evidence)  # type: ignore[method-assign]
 
 
 # -- frozen package ----------------------------------------------------------
@@ -262,7 +262,7 @@ def test_resolved_gap_changes_status_and_critical(imported):
 
 
 def test_rules_have_stable_identifiers_and_versions():
-    assert rules.RULES_VERSION == "axis-decision-2"
+    assert rules.RULES_VERSION == "axis-decision-3"
     for rule_id, rule in rules.RULES.items():
         assert rule.id == rule_id and rule.version == "1"
         assert rule.description and rule.inputs and rule.output and rule.rationale
@@ -746,16 +746,16 @@ def test_migration_9_clean_and_legacy_upgrade(tmp_path):
                     [int(item.name[:3]), item.name],
                 )
     with EvidenceStore(path) as store:
-        assert store.statistics().schema_version == 9
+        assert store.statistics().schema_version == 10
         protein, service = init(store)
         service.build(PROJECT, protein, created_at=FIXED)
     with EvidenceStore(path, read_only=True) as store:
-        assert store.statistics().schema_version == 9
+        assert store.statistics().schema_version == 10
         assert store.decisions.latest_state(
             PROJECT, store.targets.project_ids(PROJECT)[0]
         )
     with EvidenceStore() as clean:
-        assert clean.statistics().schema_version == 9
+        assert clean.statistics().schema_version == 10
 
 
 def test_referential_integrity_and_child_rows(imported):

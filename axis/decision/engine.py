@@ -200,6 +200,24 @@ def _position(
             supported.append(row)
         elif value["state"] in ("contradicted", "mixed"):
             contradicted.append(row)
+    for edge, scopes in sorted(ev.get("scoped_edges", {}).items()):
+        for key, entry in sorted(scopes.items()):
+            row = {
+                "statement": f"{EDGE_LABELS.get(edge, label(edge))} for {key}: "
+                f"{label(entry['state'])} (experimental result"
+                + (", replicated" if entry.get("replicated") else "")
+                + ").",
+                "edge": edge,
+                "scope": key,
+                "refs": [["interpretation", i] for i in entry["contribution_ids"]],
+                "epistemic_kind": "experimental_result",
+                "review_states": sorted(set(entry["review_states"])),
+                "caveats": entry["caveats"] + entry["review_caveats"],
+            }
+            if entry["state"] == "supported":
+                supported.append(row)
+            elif entry["state"] in ("contradicted", "mixed"):
+                contradicted.append(row)
     for item in ev.get("source_disagreements", []):
         contradicted.append(
             {
@@ -416,12 +434,75 @@ def canonicalize(value: Any) -> Any:
     return value
 
 
+def _allowed(state: str, mode: str) -> bool:
+    """DECISION-REVIEW-001: which review states may inform a decision in this mode."""
+    if state in ("accepted", "accepted_with_caveat"):
+        return True
+    return state == "pending" and mode == "exploratory"
+
+
+def _review_filter(
+    inputs: Inputs,
+) -> tuple[list[dict[str, Any]], list[dict[str, str]], dict[str, Any]]:
+    """Apply the review policy to candidate designs and scenario mappings."""
+    review = inputs.get("review") or {}
+    mode = review.get("mode", "exploratory")
+    mappings = review.get("mappings", {})
+    designs = review.get("designs", {})
+    kept: list[dict[str, Any]] = []
+    excluded: list[dict[str, str]] = []
+    pending_mappings = 0
+    pending_designs = 0
+    for raw in sorted(inputs["candidates"], key=lambda r: r["experiment_id"]):
+        design = designs.get(raw["experiment_id"], "pending")
+        if not _allowed(design, mode):
+            excluded.append(
+                {
+                    "object": raw["experiment_id"],
+                    "type": "candidate_design",
+                    "state": design,
+                }
+            )
+            continue
+        pending_designs += design == "pending"
+        copy_ = copy.deepcopy(raw)
+        for scenario in copy_["scenarios"]:
+            for explanation, effect in list(scenario["effects"].items()):
+                key = f"{scenario['scenario_id']}|{explanation}"
+                state = mappings.get(key, "pending")
+                if effect["effect"] == "does_not_discriminate":
+                    continue
+                if not _allowed(state, mode):
+                    excluded.append(
+                        {"object": key, "type": "scenario_mapping", "state": state}
+                    )
+                    scenario["effects"][explanation] = {
+                        "effect": "does_not_discriminate",
+                        "rationale": f"mapping excluded by review policy ({state})",
+                    }
+                else:
+                    pending_mappings += state == "pending"
+        kept.append(copy_)
+    return (
+        kept,
+        excluded,
+        {
+            "mode": mode,
+            "policy_id": review.get("policy_id", "decision-review-policy-v1"),
+            "pending_mappings_used": pending_mappings,
+            "pending_designs_used": pending_designs,
+        },
+    )
+
+
 def analyze(inputs: Inputs, *, with_sensitivity: bool = True) -> Analysis:
     """Derive the full decision analysis from explicit inputs (pure)."""
-    inputs = {**inputs, "evidence": canonicalize(inputs["evidence"])}
-    ev = inputs["evidence"]
+    raw_inputs = {**inputs, "evidence": canonicalize(inputs["evidence"])}
+    ev = rules.apply_contributions(raw_inputs["evidence"])
+    inputs = {**raw_inputs, "evidence": ev}
     constraints = inputs.get("constraints")
-    raws = {r["experiment_id"]: r for r in inputs["candidates"]}
+    kept, review_excluded, review_dependencies = _review_filter(inputs)
+    raws = {r["experiment_id"]: r for r in kept}
     rows, excluded = _explanations(inputs)
     viable = {e["id"] for e in rows if e["status"] != "contradicted"}
     statuses = {e["id"]: e["status"] for e in rows}
@@ -463,7 +544,14 @@ def analyze(inputs: Inputs, *, with_sensitivity: bool = True) -> Analysis:
                 if selected.category in c["profile"]["considered_for"]
             ]
         )
-    recommended = next((c for c in ranked if c["excluded"] is None), None)
+    recommended = next(
+        (
+            c
+            for c in ranked
+            if c["excluded"] is None and not c["discrimination"]["low_discrimination"]
+        ),
+        None,
+    )
     considered_ids = {c["experiment_id"] for c in ranked}
     for place, item in enumerate(ranked, start=1):
         item["rank"] = place
@@ -493,8 +581,12 @@ def analyze(inputs: Inputs, *, with_sensitivity: bool = True) -> Analysis:
                     else ""
                 )
             )
+        elif recommended is None:
+            item["reason"] = (
+                "not recommended: separates no pair of viable explanations under the "
+                "accepted outcome mappings (low discrimination)"
+            )
         else:
-            assert recommended is not None
             deciding = next(
                 (
                     i
@@ -559,6 +651,9 @@ def analyze(inputs: Inputs, *, with_sensitivity: bool = True) -> Analysis:
             "affected_explanation_ids": list(u.affected_explanation_ids),
             "evidence_refs": [list(r) for r in u.evidence_refs],
             "epistemic_kind": u.epistemic_kind,
+            "scope_type": u.scope_type,
+            "scope_id": u.scope_id,
+            "scope_breakdown": [list(b) for b in u.scope_breakdown],
         }
         for u in sorted(uncertainties, key=lambda u: u.id)
     ]
@@ -593,8 +688,8 @@ def analyze(inputs: Inputs, *, with_sensitivity: bool = True) -> Analysis:
         if recommendation
         else NO_EXPERIMENT
         if selected is None
-        else "A critical uncertainty exists but no unblocked candidate experiment is "
-        "available for it.",
+        else "A critical uncertainty exists but no unblocked candidate experiment "
+        "with accepted discriminating outcome mappings is available for it.",
         "what_would_change_our_mind": _change_mind(
             inputs["hypothesis"]["id"],
             recommended["experiment_id"] if recommended else None,
@@ -671,8 +766,30 @@ def analyze(inputs: Inputs, *, with_sensitivity: bool = True) -> Analysis:
         "ranked_for_critical": [c["experiment_id"] for c in ranked],
     }
     analysis["graph"] = _graph(analysis, inputs)
+    analysis["effective_evidence"] = {
+        "edges": {k: v["state"] for k, v in sorted(ev["edges"].items())},
+        "scoped_edges": ev.get("scoped_edges", {}),
+        "engagement_rollup": ev.get("engagement_rollup"),
+        "gap_ids": ev.get("gap_ids", []),
+    }
+    analysis["review_mode"] = inputs.get("review", {}).get("mode", "exploratory")
+    analysis["review_dependencies"] = review_dependencies | {
+        "pending_contributions": sorted(
+            c["id"]
+            for c in ev.get("contributions", [])
+            if c["review_state"] == "pending"
+        ),
+        "review_excluded": review_excluded,
+    }
+    analysis["results"] = {
+        "contributions": ev.get("contributions", []),
+        "ledger": inputs.get("results_ledger", []),
+        "unexpected": ev.get("unexpected_results", []),
+        "synthetic": any(c.get("synthetic") for c in ev.get("contributions", []))
+        or any(x.get("synthetic") for x in inputs.get("results_ledger", [])),
+    }
     if with_sensitivity:
-        analysis["sensitivity"] = sensitivity(inputs, analysis)
+        analysis["sensitivity"] = sensitivity(raw_inputs, analysis)
     return analysis
 
 
@@ -785,6 +902,31 @@ def ablations(ev: rules.Evidence) -> list[tuple[str, str, rules.Evidence]]:
             _remove_pending_review,
         ),
     ]
+    for result_id in sorted({c["result_id"] for c in ev.get("contributions", [])}):
+        groups.append(
+            (
+                f"result:{result_id}",
+                f"the experimental result {result_id}",
+                lambda e, rid=result_id: e.update(
+                    contributions=[
+                        c for c in e["contributions"] if c["result_id"] != rid
+                    ]
+                ),
+            )
+        )
+    groups.append(
+        (
+            "results_pending_review",
+            "all experimental-result contributions still pending review",
+            lambda e: e.update(
+                contributions=[
+                    c
+                    for c in e.get("contributions", [])
+                    if c["review_state"] != "pending"
+                ]
+            ),
+        )
+    )
     out: list[tuple[str, str, rules.Evidence]] = []
     for key, text, mutate in groups:
         mutated = copy.deepcopy(ev)

@@ -109,6 +109,9 @@ EXPERIMENT_STATUSES = (
     "planned",
     "in_progress",
     "completed",
+    "completed_interpretable",
+    "completed_non_interpretable",
+    "failed_technical",
     "cancelled",
 )
 DISCRIMINATION_ROLES = (
@@ -186,6 +189,9 @@ class ScientificUncertainty:
     evidence_refs: tuple[tuple[str, str], ...] = ()
     affected_grounds: tuple[str, ...] = ()
     epistemic_kind: str = "axis_inference"
+    scope_type: str = "target"
+    scope_id: str | None = None
+    scope_breakdown: tuple[tuple[str, str, str], ...] = ()
 
     def __post_init__(self) -> None:
         _in(self.category, UNCERTAINTY_CATEGORIES, "category")

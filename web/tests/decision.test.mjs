@@ -5,7 +5,9 @@ import ts from 'typescript';
 const compilerOptions={target:ts.ScriptTarget.ES2022,module:ts.ModuleKind.ES2022};
 const c=ts.transpileModule(await readFile(new URL('../src/components.ts',import.meta.url),'utf8'),{compilerOptions}).outputText;
 const componentUrl=`data:text/javascript;base64,${Buffer.from(c).toString('base64')}`;
-const s=ts.transpileModule(await readFile(new URL('../src/decision.ts',import.meta.url),'utf8'),{compilerOptions}).outputText.replace("'./components'",JSON.stringify(componentUrl));
+const r=ts.transpileModule(await readFile(new URL('../src/results.ts',import.meta.url),'utf8'),{compilerOptions}).outputText.replace("'./components'",JSON.stringify(componentUrl));
+const resultsUrl=`data:text/javascript;base64,${Buffer.from(r).toString('base64')}`;
+const s=ts.transpileModule(await readFile(new URL('../src/decision.ts',import.meta.url),'utf8'),{compilerOptions}).outputText.replace("'./components'",JSON.stringify(componentUrl)).replace("'./results'",JSON.stringify(resultsUrl));
 const view=await import(`data:text/javascript;base64,${Buffer.from(s).toString('base64')}`);
 
 const scenario=(kind,effect,category)=>({scenario_id:'s-'+kind,kind,outcome:'Outcome <b>'+kind,interpretation:'i',explanation_effects:[{explanation_id:'e1',effect}],consequence:{category,statement:'If this occurs, the strategy changes.',new_uncertainty:kind==='non_interpretable'?'assay validity':null}});
@@ -91,4 +93,22 @@ test('no actionable uncertainty yields an explicit statement, never an invented 
 test('history states whether evidence or methodology changed',()=>{
   const html=view.historySection([state({version:2,supersedes_id:'x',diff:{changes:['c'],new_evidence:[],cause:['methodology'],cause_summary:'This decision differs because the AXIS decision methodology changed.'}})]);
   assert.match(html,/differs because the AXIS decision methodology changed/);
+});
+
+test('causal diff separates evidence, review and methodology and states whether the decision changed',()=>{
+  const diff={changes:[],new_evidence:[],cause:['evidence'],cause_summary:'This decision differs because the stored evidence changed.',causes:[{category:'new_experimental_evidence',items:[{result_id:'R1'}]},{category:'review_status_change',items:[{result_id:'R2',after:'accepted'}]}],decision_changed:{answer:'pending_review',why:'only pending'},triggering_results:['R1'],
+   scientific_diff:{evidence_status_changes:[{kind:'scope',name:'engagement / compound:x',before:'not_assessed',after:'supported',rule:'DECISION-RESULT-001',because:[]}],explanation_changes:[{id:'e',label:'On-target',before:'partially_supported',after:'supported',rules:['DECISION-EXPL-010'],because:[]}],uncertainty_changes:[{id:'uncertainty:target_engagement',before:['open','decision_blocking'],after:['partially_resolved','decision_material'],rules:['R']}],critical:{before:'a',after:'b',because:{}},recommendation:null}};
+  const html=view.causalDiff(diff);
+  assert.match(html,/Did the decision change\? Pending review/);assert.match(html,/new experimental evidence/);assert.match(html,/review status change/);
+  assert.match(html,/not assessed → <strong>supported/);assert.match(html,/DECISION-RESULT-001/);assert.match(html,/Critical uncertainty: a → <strong>b/);
+  assert.equal(view.causalDiff(null),'');
+});
+test('engagement scope breakdown never lets one scope stand for another',()=>{
+  const html=view.scopeBreakdown(state({effective_evidence:{engagement_rollup:{status:'partial',scopes:[{scope_type:'compound',scope_id:'compound:a',state:'supported',required:true,contribution_ids:['i'],caveats:['one system'],replicated:false},{scope_type:'compound',scope_id:'compound:b',state:'not_assessed',required:true,contribution_ids:[],caveats:[],replicated:false}]}}}));
+  assert.match(html,/resolves only its own compound/);assert.match(html,/partial/);assert.match(html,/compound:b<\/th><td>not assessed/);
+});
+test('decision page states when no performed result informs it',()=>{
+  assert.match(view.resultsSection(state({results:{contributions:[],unexpected:[],synthetic:false}})),/no performed experiment has been imported into it/);
+  const html=view.decisionView(state({synthetic:true,results:{contributions:[{id:'i',result_id:'R1',edge:'engagement',scope_type:'compound',scope_id:'x',state:'supported',statement:'s',review_state:'pending',eligibility_state:'pending_review',caveats:[],review_caveats:['pending scientific review'],synthetic:true}],unexpected:[],synthetic:true}}),[state()]);
+  assert.match(html,/SYNTHETIC DEMONSTRATION/);assert.match(html,/review: pending/);
 });

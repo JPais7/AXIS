@@ -38,7 +38,7 @@ with patch.object(httpx.Client, "get", side_effect=AssertionError("network disab
             assert service.import_package(project, protein) == structure
             detail = service.projection(project, protein, structure)
             mapping = service.mapping(project, protein, structure)
-            assert store.statistics().schema_version == 9
+            assert store.statistics().schema_version == 10
             assert store.statistics().claims == 14
             base = (
                 f"/api/projects/{project}/targets/{quote(protein, safe='')}"

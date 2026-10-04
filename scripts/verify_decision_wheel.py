@@ -51,7 +51,7 @@ def main() -> None:
                 assert service.import_package(PROJECT, protein) == (
                     service.import_package(PROJECT, protein)
                 )
-                assert store.statistics().schema_version == 9
+                assert store.statistics().schema_version == 10
                 state = service.build(PROJECT, protein, created_at=FIXED)
                 assert state == service.build(PROJECT, protein, created_at=FIXED)
                 api = ReadAPI(store)
@@ -70,7 +70,7 @@ def main() -> None:
         json.dumps(
             {
                 "loaded_axis": axis.__file__,
-                "schema": 9,
+                "schema": 10,
                 "manifest_sha256": digest,
                 "two_store_offline_replay": True,
                 "critical_uncertainty": state["critical_uncertainty_id"],
