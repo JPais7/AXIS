@@ -7,7 +7,7 @@
     "typecheck": "tsc --noEmit",
     "lint": "eslint src",
     "build": "vite build",
-    "test": "node --test tests/components.test.mjs",
+    "test": "node --test tests/*.test.mjs",
     "test:browser": "playwright test"
   },
   "devDependencies": {

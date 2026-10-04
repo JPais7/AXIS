@@ -3,6 +3,29 @@ import { mkdir } from 'node:fs/promises';
 
 const project = '/projects/AXIS-DD-ERAP1-CURATED-001';
 const screenshots = '../docs/screenshots/phase2-hardening';
+test('protein identity, sequence and snapshot remain separate from disease evidence', async ({ page }) => {
+  for (const width of [1440, 1024]) {
+    await page.setViewportSize({ width, height: 1000 });
+    await page.goto(`${project}/protein`);
+    await expect(page.getByRole('heading', { name: 'Target / Protein', exact: true })).toBeVisible();
+    await expect(page.getByRole('heading', { name: /Q9NZ08 · Endoplasmic/ })).toBeVisible();
+    for (const name of ['Gene', 'Protein', 'Isoform', 'Source']) await expect(page.getByRole('heading', { name, exact: true })).toBeVisible();
+    await expect(page.getByText('No structure records have been imported into AXIS for this target.', { exact: true })).toBeVisible();
+    await expect(page.locator('.protein-sequence')).toContainText('941');
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBeTruthy();
+    const source = page.getByRole('button', { name: 'UniProt · Q9NZ08 · inspect provenance', exact: true });
+    await source.focus();
+    await page.keyboard.press('Enter');
+    const drawer = page.getByRole('dialog');
+    await expect(drawer.getByRole('heading', { name: 'Protein source snapshot', exact: true })).toBeVisible();
+    await expect(drawer.getByText('Not reported', { exact: true })).toBeVisible();
+    await expect(drawer.getByRole('button', { name: 'Close protein provenance' })).toBeFocused();
+    await page.keyboard.press('Escape');
+    await expect(source).toBeFocused();
+    await page.getByRole('link', { name: 'Return to disease evidence →' }).click();
+    await expect(page.getByRole('heading', { name: 'Evidence', exact: true })).toBeVisible();
+  }
+});
 test('scientific workspace, evidence drawer and provenance traversal', async ({ page }) => {
   const errors = [];
   page.on('pageerror', error => errors.push(error.message));

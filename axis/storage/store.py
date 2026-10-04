@@ -125,6 +125,9 @@ class EvidenceStore:
         self.mechanistic_assessments = MechanisticAssessmentRepository(self)
         self.proposed_experiments = ProposedExperimentRepository(self)
         self.outcome_scenarios = OutcomeScenarioRepository(self)
+        from axis.storage.targets import TargetRepository
+
+        self.targets = TargetRepository(self)
 
     def __enter__(self) -> Self:
         return self

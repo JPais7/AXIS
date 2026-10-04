@@ -18,6 +18,15 @@ stable.
 
 ## Current scope
 
+Phase 3.1 adds a reproducible protein-identity layer, separate from disease
+evidence: gene → source-backed mapping → protein → isoform → source snapshot.
+The pinned human ERAP1 UniProt package supports offline import, sequence SHA-256
+verification, project-scoped read API and a Target / Protein workspace page.
+See [protein identity](docs/phase3-protein-identity.md) and the
+[implementation report](docs/phase3-protein-identity-implementation-report.md).
+Structures and chemical matter are not implemented in this slice; Phase 2 expert
+review and release acceptance remain pending.
+
 - typed references to scientific entities;
 - contextual scientific claims;
 - explicit separation of source assertions, AXIS calculations, AI

@@ -14,6 +14,7 @@ from urllib.parse import parse_qs, unquote, urlsplit
 
 from axis.discovery.workspace import WorkspaceService, page
 from axis.storage import EvidenceStore, RecordNotFoundError
+from axis.targets.identity import TargetIdentityService
 
 
 def json_default(value: object) -> str:
@@ -64,6 +65,35 @@ class ReadAPI:
             project_id = parts[2]
             if len(parts) == 3:
                 return self.workspace.project(project_id)
+            if len(parts) >= 4 and parts[3] == "targets":
+                service = TargetIdentityService(self.store)
+                if len(parts) == 4:
+                    identifiers = self.store.targets.project_ids(project_id)
+                    return page(
+                        [
+                            service.projection(project_id, identifier)
+                            for identifier in identifiers[offset : offset + limit]
+                        ],
+                        len(identifiers),
+                        limit,
+                        offset,
+                    )
+                if len(parts) not in (5, 6):
+                    raise RecordNotFoundError("target route not found")
+                projection = service.projection(project_id, parts[4])
+                if len(parts) == 5:
+                    return projection
+                if parts[5] == "protein":
+                    return {"protein": projection["protein"]}
+                if parts[5] == "isoforms":
+                    return {"isoforms": projection["isoforms"]}
+                if parts[5] == "provenance":
+                    return {
+                        "snapshot": projection["snapshot"],
+                        "mappings": projection["mappings"],
+                        "sequence_checksum": projection["protein"]["sequence_checksum"],
+                    }
+                raise RecordNotFoundError("target route not found")
             if len(parts) != 4:
                 raise RecordNotFoundError("API route not found")
             route = parts[3]

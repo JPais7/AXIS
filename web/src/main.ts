@@ -1,4 +1,6 @@
 import './style.css';
+import { ProteinProvenance, TargetIdentityCard } from './protein';
+import type { TargetProjection } from './types';
 import { AppShell, ClaimButton, ContextComparison, ContextTable, EmptyState, ErrorState, escape, EvidenceGraph, EvidenceMatrix, EvidenceState, ExperimentCard, KnowledgeKindBadge, label, LoadingState, OpenQuestionCard, PerformedPerturbationPreview, ProjectHeader, ProvenanceBadge, SourceCard, StrategyCard, Transformations } from './components';
 import type { Assessment, ClaimSummary, Comparison, Drawer, ExperimentItem, MechanismItem, Page, Perturbation, Project, ProjectItem, QuestionItem, Source, SourceDetail, Strategy } from './types';
 
@@ -57,6 +59,10 @@ async function strategyView(): Promise<string> {
   }).join('')}</div>${pagination(strategies)}<p class="caption">Related assessments and perturbations are bounded to 100 each. ${assessments.has_more || perturbations.has_more || evidence.has_more ? 'Additional related records exist; inspect Evidence and Perturbations pages.' : 'All current related records fit within these bounds.'}</p>`;
 }
 async function content(project: Project): Promise<string> {
+  if (route === 'protein') {
+    const page = await collection<TargetProjection>('targets');
+    return `<p class="intro">Gene → source-backed mapping → protein → isoform → snapshot. Identity infrastructure is separate from disease evidence.</p>${page.items.map(TargetIdentityCard).join('') || EmptyState('No protein identity imported for this project. Use an explicit frozen-package or live source import.')}<p><a data-nav href="${path('evidence')}">Return to disease evidence →</a></p>${pagination(page)}`;
+  }
   if (route === 'overview') return overview(project);
   if (route === 'evidence') {
     const page = await collection<ClaimSummary>('evidence');
@@ -93,7 +99,7 @@ async function render(): Promise<void> {
   }
   route = parts[0] === 'projects' && parts[1] ? (parts[2] || 'overview') : (parts[0] || 'overview');
   const allowed = ['home', 'projects', 'targets', 'overview', 'evidence', 'mechanism', 'perturbations', 'strategies', 'questions', 'experiments', 'sources'];
-  if (!allowed.includes(route)) route = 'overview';
+  if (!allowed.includes(route) && route !== 'protein') route = 'overview';
   const params = new URLSearchParams(location.search);
   offset = Number(params.get('offset')) || 0;
   domain = params.get('domain') || '';
@@ -106,7 +112,7 @@ async function render(): Promise<void> {
     } else {
       const project = await api<Project>(`projects/${encodeURIComponent(projectId)}`);
       const titles: Record<string, string> = { overview: 'ERAP1 × Axial Spondyloarthritis', evidence: 'Evidence', mechanism: 'Mechanism', perturbations: 'Perturbations', strategies: 'Competing intervention strategies', questions: 'Open questions', experiments: 'Next experiment', sources: 'Sources & provenance' };
-      html = ProjectHeader(project, titles[route] || 'Overview') + await content(project);
+      html = ProjectHeader(project, route === 'protein' ? 'Target / Protein' : titles[route] || 'Overview') + await content(project);
     }
     if (current === generation) app.innerHTML = AppShell(projectId, route, html);
   } catch (error) { if (current === generation) app.innerHTML = AppShell(projectId, route, ErrorState(error instanceof Error ? error.message : 'Unable to read records.')); }
@@ -148,6 +154,20 @@ async function compareDrawer(): Promise<void> {
     focusDrawer();
   } catch (error) { if (current !== drawerGeneration || !drawer.open) return; drawer.innerHTML = '<button class="drawer-close" data-close aria-label="Close evidence drawer">×</button><h2 id="drawer-title">Comparison unavailable</h2>' + ErrorState(error instanceof Error ? error.message : 'Unable to compare records.'); focusDrawer(); }
 }
+async function proteinDrawer(id: string): Promise<void> {
+  const drawer = openDrawer();
+  const current = ++drawerGeneration;
+  try {
+    const data = await api<TargetProjection>(`projects/${encodeURIComponent(projectId)}/targets/${encodeURIComponent(id)}`);
+    if (current !== drawerGeneration || !drawer.open) return;
+    drawer.innerHTML = ProteinProvenance(data);
+    focusDrawer();
+  } catch (error) {
+    if (current !== drawerGeneration || !drawer.open) return;
+    drawer.innerHTML = '<button class="drawer-close" data-close aria-label="Close protein provenance">×</button><h2 id="drawer-title">Protein unavailable</h2>' + ErrorState(error instanceof Error ? error.message : 'Unable to read protein.');
+    focusDrawer();
+  }
+}
 function updateComparisonSelection(): void {
   const count = document.querySelector('#comparison-count');
   if (count) count.textContent = `${selectedClaims.size} of 4 selected`;
@@ -160,6 +180,11 @@ document.addEventListener('click', event => {
   if (!target || target.hasAttribute('disabled')) return;
   if (target.matches('a[data-nav]')) { event.preventDefault(); navigate(target.getAttribute('href') || '/'); }
   else if (target.dataset.claim) void EvidenceDrawer(target.dataset.claim);
+  else if (target.dataset.proteinSource) void proteinDrawer(target.dataset.proteinSource);
+  else if (target.dataset.copySequence) {
+    const status = target.parentElement?.querySelector('.copy-status');
+    void navigator.clipboard.writeText(target.dataset.copySequence).then(() => { if (status) status.textContent = 'Sequence copied.'; }).catch(() => { if (status) status.textContent = 'Copy unavailable. Select the sequence manually.'; });
+  }
   else if (target.dataset.source) void sourceDrawer(target.dataset.source, Number(target.dataset.sourceOffset || 0));
   else if (target.dataset.domain) navigate(`${path('evidence')}?domain=${encodeURIComponent(target.dataset.domain)}`);
   else if (target.dataset.page) { const params = new URLSearchParams(location.search); params.set('offset', target.dataset.page); navigate(`${location.pathname}?${params}`); }

@@ -1,0 +1,15 @@
+{
+  "package_id": "axis-erap1-protein-identity",
+  "package_version": "1.0.0",
+  "importer_version": "1",
+  "accession": "Q9NZ08",
+  "gene_namespace": "HGNC-symbol",
+  "gene_identifier": "ERAP1",
+  "taxon_id": 9606,
+  "retrieved_at": "2026-10-03T17:28:00+00:00",
+  "retrieval_timestamp_precision": "download file modification time, one second",
+  "provider_release": null,
+  "record_file": "record.json",
+  "raw_sha256": "159efd863655a143aaaa821e7efab2334a1d7fd606d49586ea86bec2f9e14b65",
+  "request_url": "https://rest.uniprot.org/uniprotkb/Q9NZ08.json"
+}

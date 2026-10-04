@@ -15,3 +15,4 @@
 .strategy-card .claim-meta{margin-top:6px;gap:6px}
 .strategy-card .state{padding:10px 12px;font-size:11px}
 .strategy-card .compact-card{padding:10px 12px;margin-bottom:6px}
+.identity-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.identity-grid section{min-width:0}.protein-sequence{font-family:monospace;overflow-x:auto;max-width:100%;background:#f5f8f8;padding:14px;font-size:12px}.protein-card .checksum{overflow-wrap:anywhere;font-size:11px}.copy-status{margin-left:10px;font-size:12px}@media(max-width:760px){.identity-grid{grid-template-columns:1fr}}
