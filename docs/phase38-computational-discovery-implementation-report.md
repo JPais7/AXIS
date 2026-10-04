@@ -7,7 +7,8 @@
 | Branch | `phase38-computational-discovery` |
 | Base `origin/main` | `42bd276c842cca37fe2e3d427728c33ab38620c0` |
 | Merge base | `42bd276c842cca37fe2e3d427728c33ab38620c0` |
-| Acceptance code commit | `4b726fd37d7e166cff040f391982b1bff369bb40` (all gates below were run on it) |
+| Acceptance code commit | `4b726fd37d7e166cff040f391982b1bff369bb40` (local gates below were run on it) |
+| CI-fix commit | `c63913e9d549e3146c75e588b8881f2449af8824` (portable docking-stub tests; tolerant mypy ignores in untouched `chemistry.py`) |
 | Earlier published HEAD | `bd053438bc2962fd32b296749bb0376283509882` |
 | Ahead / behind main | acceptance code commit: 4 / 0 (`bd05343` plus its ancestors, and the hardening commit); the documentation commit that adds this report follows it |
 | Merges | none; no phase-3.7 or `codex/phase2-transfer` history |
@@ -166,4 +167,10 @@ experiment needed. Not claimed: general superiority.
 
 PASS WITH CONDITIONS — no independent medicinal-chemistry review, deliberately small
 chemical space, no validated docking, incomplete hypothesis coverage, no experimental
-validation; remote CI status is recorded in the final message after the push.
+validation; remote CI is recorded below.
+
+## Remote CI
+
+* `bd05343` (first publication): **failed** — Windows: docking stub test used a `#!/bin/sh` script (Phase 3.8 test defect, fixed); Ubuntu: mypy `unused-ignore` in `axis/pharmacology/chemistry.py` (pre-existing: `origin/main` CI fails identically).
+* `c63913e` (GitHub Actions run 37244259181): **PASS** on Python 3.12 / ubuntu-latest, macos-latest and windows-latest.
+* Local gates were not re-run after the two CI fixes; the remote run covers them.
