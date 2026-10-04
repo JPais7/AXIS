@@ -1,0 +1,52 @@
+import { test, expect } from '@playwright/test';
+
+const project='/projects/AXIS-DD-ERAP1-CURATED-001';
+for(const width of [1440,1024]) {
+  test(`cellular evidence, missing causal links and proposals ${width}`,async({page})=>{
+    await page.setViewportSize({width,height:1000});
+    const errors=[];const remote=[];
+    page.on('pageerror',e=>errors.push(e.message));
+    page.on('request',r=>{if(!r.url().startsWith('http://127.0.0.1:'))remote.push(r.url());});
+    const shot=async(name)=>page.screenshot({path:`test-results/cellular-${width}-${name}.png`});
+    await page.goto(`${project}/cellular`);
+    await expect(page.getByRole('heading',{name:'Cellular Evidence',exact:true})).toBeVisible();
+    await expect(page.getByRole('heading',{name:'Translational evidence ladder'})).toBeVisible();
+    await shot('overview');
+    await page.getByRole('heading',{name:'Direct cellular target engagement',exact:true}).scrollIntoViewIfNeeded();
+    await shot('ladder');
+    await expect(page.locator('.evidence-ladder')).not.toContainText('engagement demonstrated');
+    const entry=page.locator('[data-cellular-experiment]').first();
+    await entry.focus();await page.keyboard.press('Enter');
+    await expect(page.getByRole('dialog')).toContainText('Not reported');
+    await expect(page.getByRole('dialog')).toContainText('Readouts and provenance');
+    await shot('experiment');
+    await page.getByRole('dialog').locator('[data-claim],[data-pharma-id]').first().click();
+    await expect(page.getByRole('dialog')).toContainText('Provenance');
+    await shot('provenance');
+    await page.keyboard.press('Escape');
+    await expect(entry).toBeFocused();
+    await page.goto(`${project}/cellular-comparison`);
+    await expect(page.getByRole('heading',{name:'not comparable',exact:true}).first()).toBeVisible();
+    await shot('comparison');
+    await page.locator('summary').first().click();
+    await shot('non-comparable');
+    await page.goto(`${project}/cellular-phenotypes`);
+    await expect(page.getByRole('heading',{name:'HLA phenotype',exact:true})).toBeVisible();
+    await expect(page.getByRole('heading',{name:'HLA-B27 peptide-length distribution',exact:true})).toBeVisible();
+    await shot('hla');
+    await page.goto(`${project}/cellular?compound=compound%3Amaben-2`);
+    const engagement=page.locator('.evidence-ladder li').filter({has:page.getByRole('heading',{name:'Direct cellular target engagement',exact:true})});
+    await expect(engagement).toContainText('not assessed');
+    await engagement.scrollIntoViewIfNeeded();await shot('missing-engagement');
+    await page.goto(`${project}/decision?compound=compound%3Amaben-2`);
+    await expect(page.getByRole('heading',{name:'Decision',exact:true})).toBeVisible();
+    await expect(page.getByText(/Does Maben compound 2 directly engage ERAP1/)).toBeVisible();
+    await shot('decision');
+    await page.goto(`${project}/cellular-next?compound=compound%3Amaben-2`);
+    await expect(page.getByRole('heading',{name:'Next discriminating experiment',exact:true})).toBeVisible();
+    await page.getByText('AXIS proposal — not experimental evidence.',{exact:true}).scrollIntoViewIfNeeded();
+    await shot('next-experiment');
+    expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+    expect(errors).toEqual([]);expect(remote).toEqual([]);
+  });
+}

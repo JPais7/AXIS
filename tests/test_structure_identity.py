@@ -349,7 +349,7 @@ def test_migration_5_to_6_upgrade_and_readonly_reopen(tmp_path):
     with EvidenceStore(path) as store:
         protein, service = init(store)
         identifier = service.import_package(PROJECT, protein)
-        assert store.statistics().schema_version == 7
+        assert store.statistics().schema_version == 8
     with EvidenceStore(path, read_only=True) as store:
         assert len(store.structures.chains(identifier)) == 3
-        assert store.statistics().schema_version == 7
+        assert store.statistics().schema_version == 8

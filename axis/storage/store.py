@@ -134,6 +134,9 @@ class EvidenceStore:
         from axis.storage.pharmacology import PharmacologyRepository
 
         self.pharmacology = PharmacologyRepository(self)
+        from axis.storage.cellular import CellularRepository
+
+        self.cellular = CellularRepository(self)
 
     def __enter__(self) -> Self:
         return self

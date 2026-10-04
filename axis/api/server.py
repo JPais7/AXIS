@@ -12,6 +12,7 @@ from pathlib import Path
 from typing import Any
 from urllib.parse import parse_qs, unquote, urlsplit
 
+from axis.cellular.service import CellularPharmacologyService
 from axis.discovery.workspace import WorkspaceService, page
 from axis.pharmacology.service import PharmacologyService
 from axis.storage import EvidenceStore, RecordNotFoundError
@@ -68,6 +69,36 @@ class ReadAPI:
             and parts[3] == "targets"
             and parts[5] in {"compounds", "assays", "measurements", "selectivity"}
         )
+        cellular_route = (
+            len(parts) >= 6
+            and parts[:2] == ["api", "projects"]
+            and parts[3] == "targets"
+            and parts[5] == "cellular"
+        )
+        if cellular_route:
+            if any(k != "compound" for k in chemical_filters):
+                raise ValueError("cellular route only supports compound filter")
+            project, protein = parts[2], parts[4]
+            cellular_service = CellularPharmacologyService(self.store)
+            compound = chemical_filters.get("compound")
+            kind = parts[6] if len(parts) > 6 else "overview"
+            if len(parts) == 8 and kind == "experiments" and not compound:
+                return cellular_service.detail(project, protein, parts[7])
+            if len(parts) > 7:
+                raise RecordNotFoundError("cellular route not found")
+            if kind in {"experiments", "readouts", "assessments", "immunopeptidome"}:
+                return self.store.cellular.collection(
+                    project, protein, kind, limit, offset, compound
+                )
+            if kind in {"overview", "evidence-chain", "engagement", "decision"}:
+                return cellular_service.chain(project, protein, compound)
+            if kind == "gaps":
+                return cellular_service.gaps(project, protein, compound)
+            if kind == "concordance" and not compound:
+                return cellular_service.comparisons(project, protein)
+            if kind == "review-packet" and not compound:
+                return cellular_service.review_packet(project, protein)
+            raise RecordNotFoundError("cellular route not found")
         if chemical_filters and not chemical_route:
             raise ValueError("pharmacology filters require a pharmacology route")
         if chemical_route:

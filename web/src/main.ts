@@ -1,5 +1,6 @@
 import './style.css';
 import { pharmacologyContent, pharmacologyDrawer } from './pharmacology';
+import { cellularContent, cellularDrawer } from './cellular';
 import { mountStructure, structureContent } from './structure-ui';
 import { ProteinProvenance, TargetIdentityCard } from './protein';
 import type { TargetProjection } from './types';
@@ -63,6 +64,7 @@ async function strategyView(): Promise<string> {
 }
 async function content(project: Project): Promise<string> {
   if (['chemistry','pharmacology','selectivity'].includes(route)) return pharmacologyContent(api,projectId,route);
+  if (['cellular','cellular-comparison','cellular-phenotypes','decision','cellular-next'].includes(route)) return cellularContent(api,projectId,route);
   if (route === 'structures') return structureContent(api,projectId);
   if (route === 'protein') {
     const page = await collection<TargetProjection>('targets');
@@ -105,7 +107,7 @@ async function render(): Promise<void> {
     projectId = nextProject;
   }
   route = parts[0] === 'projects' && parts[1] ? (parts[2] || 'overview') : (parts[0] || 'overview');
-  const allowed = ['home', 'projects', 'targets', 'overview', 'evidence', 'mechanism', 'perturbations', 'strategies', 'questions', 'experiments', 'sources'];
+  const allowed = ['home', 'projects', 'targets', 'overview', 'evidence', 'mechanism', 'perturbations', 'strategies', 'questions', 'experiments', 'sources','cellular','cellular-comparison','cellular-phenotypes','decision','cellular-next'];
   if (!allowed.includes(route) && !['protein','structures','chemistry','pharmacology','selectivity'].includes(route)) route = 'overview';
   const params = new URLSearchParams(location.search);
   offset = Number(params.get('offset')) || 0;
@@ -118,7 +120,7 @@ async function render(): Promise<void> {
       html = `<header class="project-header"><div class="eyebrow">DISCOVERY WORKSPACE</div><h1>${route === 'targets' ? 'Target Explorer' : route === 'home' ? 'Evidence to therapeutic decisions' : 'Discovery projects'}</h1><p>Inspect evidence, competing strategies and the uncertainty between them.</p></header><div class="source-grid">${page.items.map(item => `<a data-nav class="card project-card" href="/projects/${escape(item.project.project_id)}/overview"><span class="eyebrow">${item.project.project_id.includes('CURATED') ? 'SOURCE-GROUNDED VERTICAL' : 'DEVELOPMENT FIXTURE'}</span><h2>${escape(item.pair.target.label)} × ${escape(item.pair.disease.label)}</h2><p>${escape(item.project.objective)}</p><small>${escape(item.pair.indication_scope)}</small><p>Open project →</p></a>`).join('') || EmptyState('No projects imported. Import the frozen ERAP1 package explicitly before starting the server.')}</div>${pagination(page)}`;
     } else {
       const project = await api<Project>(`projects/${encodeURIComponent(projectId)}`);
-      const titles: Record<string, string> = { overview: 'ERAP1 × Axial Spondyloarthritis', evidence: 'Evidence', mechanism: 'Mechanism', perturbations: 'Perturbations', strategies: 'Competing intervention strategies', questions: 'Open questions', experiments: 'Next experiment', sources: 'Sources & provenance' };
+      const titles: Record<string, string> = { overview: 'ERAP1 × Axial Spondyloarthritis', evidence: 'Evidence', mechanism: 'Mechanism', perturbations: 'Perturbations', strategies: 'Competing intervention strategies', questions: 'Open questions', experiments: 'Next experiment', sources: 'Sources & provenance',cellular:'Cellular Evidence','cellular-comparison':'Genetic vs chemical','cellular-phenotypes':'HLA phenotype',decision:'Decision','cellular-next':'Next discriminating experiment' };
       html = ProjectHeader(project, route === 'protein' ? 'Target / Protein' : route === 'structures' ? 'Experimental structures' : ({chemistry:'Chemistry',pharmacology:'Pharmacology',selectivity:'Selectivity'} as Record<string,string>)[route] || titles[route] || 'Overview') + await content(project);
     }
     if (current === generation) {
@@ -188,13 +190,19 @@ function updateComparisonSelection(): void {
 document.addEventListener('click', event => {
   const target = event.target instanceof Element ? event.target.closest<HTMLElement>('a[data-nav], button') : null;
   if (!target || target.hasAttribute('disabled')) return;
+  if(target.dataset.cellularExperiment && target.dataset.cellularProtein) {
+    const drawer=openDrawer(); const current=++drawerGeneration;
+    void cellularDrawer(api,projectId,target.dataset.cellularProtein,target.dataset.cellularExperiment).then(html=>{if(current===drawerGeneration&&drawer.open){drawer.innerHTML=html;focusDrawer();}}).catch(error=>{if(current===drawerGeneration&&drawer.open){drawer.innerHTML='<button data-close>Close</button>'+ErrorState(error instanceof Error?error.message:'Read failed');focusDrawer();}});
+    return;
+  }
   if (target.dataset.pharmaId && target.dataset.pharmaKind && target.dataset.pharmaProtein) {
     const drawer = openDrawer();
     const current = ++drawerGeneration;
-    void pharmacologyDrawer(api,projectId,target.dataset.pharmaProtein,target.dataset.pharmaKind,target.dataset.pharmaId).then(html => { if (current===drawerGeneration && drawer.open) { drawer.innerHTML=html; focusDrawer(); } }).catch(error => { if (current===drawerGeneration && drawer.open) { drawer.innerHTML='<button data-close class="drawer-close">×</button><h2 id="drawer-title">Pharmacology unavailable</h2>'+ErrorState(error instanceof Error?error.message:'Read failed'); focusDrawer(); } });
+    const cellularLink=target.dataset.pharmaKind==='compounds'?`<h3>Cellular Evidence</h3><a data-nav href="${path('cellular')}?compound=${encodeURIComponent(target.dataset.pharmaId)}">Inspect this compound’s cellular evidence and missing links</a>`:'';
+    void pharmacologyDrawer(api,projectId,target.dataset.pharmaProtein,target.dataset.pharmaKind,target.dataset.pharmaId).then(html => { if (current===drawerGeneration && drawer.open) { drawer.innerHTML=html+cellularLink; focusDrawer(); } }).catch(error => { if (current===drawerGeneration && drawer.open) { drawer.innerHTML='<button data-close class="drawer-close">×</button><h2 id="drawer-title">Pharmacology unavailable</h2>'+ErrorState(error instanceof Error?error.message:'Read failed'); focusDrawer(); } });
     return;
   }
-  if (target.matches('a[data-nav]')) { event.preventDefault(); navigate(target.getAttribute('href') || '/'); }
+  if (target.matches('a[data-nav]')) { event.preventDefault(); if(drawerElement().open) drawerElement().close(); navigate(target.getAttribute('href') || '/'); }
   else if (target.dataset.claim) void EvidenceDrawer(target.dataset.claim);
   else if (target.dataset.structures) navigate(`${path('structures')}?protein=${encodeURIComponent(target.dataset.structures)}`);
   else if (target.dataset.proteinSource) void proteinDrawer(target.dataset.proteinSource);

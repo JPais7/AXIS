@@ -52,7 +52,7 @@ with (
             assert data["compounds"]["total"] == 3
             assert data["measurements"]["total"] == 15
             assert data["assays"]["total"] == 7
-            assert store.statistics().schema_version == 7
+            assert store.statistics().schema_version == 8
             data["details"] = [
                 service.detail(project, protein, "compounds", i) for i in ids
             ]
@@ -62,7 +62,7 @@ print(
     json.dumps(
         {
             "loaded_axis": axis.__file__,
-            "schema": 7,
+            "schema": 8,
             "manifest_sha256": checksum,
             "compounds": 3,
             "assays": 7,
