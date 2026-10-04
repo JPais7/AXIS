@@ -1,0 +1,126 @@
+{
+  "artifacts": [
+    {
+      "description": "Synthetic plate-reader export",
+      "id": "synthetic:art:raw",
+      "media_type": "text/tab-separated-values",
+      "path": "raw/engagement-plate-reader.tsv",
+      "role": "raw",
+      "sha256": "81ccaac01e1086595233dadc00a8e4e6d9b7e9018cdf668adb2836e2818bde85"
+    },
+    {
+      "description": "Synthetic normalized signal",
+      "id": "synthetic:art:processed",
+      "media_type": "text/tab-separated-values",
+      "path": "raw/engagement-normalized.tsv",
+      "role": "processed",
+      "sha256": "7785ba67b134fe272a4f7e46213de3c38d26a1aaa90f4a7755ce737100f61260"
+    }
+  ],
+  "experiments": [
+    {
+      "assay": "synthetic cellular engagement readout",
+      "compound_id": "compound:maben-3",
+      "construct": "not reported",
+      "context": {
+        "cell_line": "SYNTHETIC line",
+        "disease_status": "none (synthetic)",
+        "hla_allele": "unspecified (synthetic)"
+      },
+      "controls": [
+        "vehicle",
+        "target-depleted cells"
+      ],
+      "endpoints": [
+        "cellular_engagement_signal"
+      ],
+      "executed_at": "2026-10-05T08:00:00+00:00",
+      "exposure": "phenotype-active exposure (synthetic)",
+      "id": "synthetic:exp:engagement-maben3",
+      "measures_edges": [
+        "engagement"
+      ],
+      "performed_by": "Synthetic fixture",
+      "proposal_id": "decision:exp:engagement-assay",
+      "protocol_reference": "synthetic-protocol-1",
+      "qc": {
+        "assessment": "interpretable",
+        "control_status": "passed",
+        "rationale": "Synthetic: vehicle and target-depleted controls behaved as expected.",
+        "replicate_quality": "adequate",
+        "technical_validity": "valid"
+      },
+      "scope": {
+        "scope_id": "compound:maben-3",
+        "scope_type": "compound"
+      },
+      "target_label": "ERAP1"
+    }
+  ],
+  "importer_version": "axis-results-1",
+  "interpretations": [
+    {
+      "caveats": [
+        "single synthetic system"
+      ],
+      "edge": "engagement",
+      "id": "synthetic:int:engagement-maben3",
+      "knowledge_kind": "ai_suggestion",
+      "proposed_state": "supported",
+      "rationale": "Signal depends on the target and is absent in target-depleted cells (synthetic).",
+      "result_id": "synthetic:res:engagement-maben3",
+      "scope_id": "compound:maben-3",
+      "scope_type": "compound",
+      "statement": "Consistent with direct cellular engagement of the target by compound:maben-3 at the tested exposure in the synthetic system."
+    }
+  ],
+  "label": "SYNTHETIC / TEST-ONLY - not real experimental evidence",
+  "not_real_experimental_evidence": true,
+  "package_id": "synthetic-erap1-decision-loop",
+  "package_version": "1.0.0",
+  "project_id": "AXIS-DD-ERAP1-CURATED-001",
+  "recorded_at": "2026-10-05T09:00:00+00:00",
+  "recorded_by": "Synthetic fixture loader",
+  "results": [
+    {
+      "analysis": {
+        "method": "vehicle normalization",
+        "version": "synthetic-1"
+      },
+      "endpoint": "cellular_engagement_signal",
+      "experiment_id": "synthetic:exp:engagement-maben3",
+      "facets": {
+        "engagement_signal": "detected",
+        "signal_in_target_depleted": "absent"
+      },
+      "id": "synthetic:res:engagement-maben3",
+      "observed_at": "2026-10-05T08:30:00+00:00",
+      "processed_artifact_ids": [
+        "synthetic:art:processed"
+      ],
+      "qualitative_result": "Signal reduced to 0.58 of vehicle at the active exposure in wild-type cells; no reduction in target-depleted cells.",
+      "raw_artifact_ids": [
+        "synthetic:art:raw"
+      ],
+      "replicates": {
+        "n": 3,
+        "type": "biological"
+      },
+      "result_type": "binary_detection",
+      "statistics": {
+        "mean_target_depleted": 1.0,
+        "mean_wild_type": 0.58
+      },
+      "transformations": [
+        {
+          "input": "synthetic:art:raw",
+          "method": "vehicle normalization",
+          "output": "synthetic:art:processed",
+          "version": "synthetic-1"
+        }
+      ],
+      "version": 1
+    }
+  ],
+  "scientific_status": "synthetic_test_fixture"
+}

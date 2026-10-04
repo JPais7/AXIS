@@ -8,7 +8,7 @@ homepage = "https://github.com/JPais7/AXIS"
 repository = "https://github.com/JPais7/AXIS"
 readme = "README.md"
 packages = [{ include = "axis" }]
-include = ["axis/resources/demo/*.tsv", "axis/resources/demo/*.json"]
+include = ["axis/resources/demo/*.tsv", "axis/resources/demo/*.json", "axis/resources/discovery/**/*", "axis/resources/workspace/**/*", "axis/resources/targets/**/*", "axis/resources/structures/**/*", "axis/resources/pharmacology/**/*", "axis/resources/cellular/**/*"]
 keywords = [
     "bioinformatics",
     "transcriptomics",
@@ -40,6 +40,8 @@ rich = ">=14,<15"
 numpy = ">=2.3,<3.0"
 scipy = ">=1.16,<2.0"
 matplotlib = ">=3.10,<4.0"
+gemmi = "0.7.5"
+rdkit = "2025.9.3"
 
 [tool.poetry.group.dev.dependencies]
 mypy = "^1.17"
@@ -60,7 +62,18 @@ line-length = 88
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP", "B", "SIM"]
 
+# Prose-heavy decision/result modules carry long explanatory string literals.
+[tool.ruff.lint.per-file-ignores]
+"axis/decision/service.py" = ["E501"]
+"axis/experiments/results.py" = ["E501"]
+"axis/storage/results.py" = ["E501"]
+"tests/test_results_loop.py" = ["E501"]
+
 [tool.mypy]
 python_version = "3.12"
 strict = true
 packages = ["axis"]
+
+[[tool.mypy.overrides]]
+module = ["rdkit.*"]
+ignore_missing_imports = true

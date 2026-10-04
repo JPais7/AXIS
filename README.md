@@ -18,6 +18,15 @@ stable.
 
 ## Current scope
 
+Phase 3.1 adds a reproducible protein-identity layer, separate from disease
+evidence: gene → source-backed mapping → protein → isoform → source snapshot.
+The pinned human ERAP1 UniProt package supports offline import, sequence SHA-256
+verification, project-scoped read API and a Target / Protein workspace page.
+See [protein identity](docs/phase3-protein-identity.md) and the
+[implementation report](docs/phase3-protein-identity-implementation-report.md).
+Structures and chemical matter are not implemented in this slice; Phase 2 expert
+review and release acceptance remain pending.
+
 - typed references to scientific entities;
 - contextual scientific claims;
 - explicit separation of source assertions, AXIS calculations, AI
@@ -492,6 +501,10 @@ AXIS streams the 10x archive without expanding it, aggregates raw counts and
 library sizes by subject and cell type, and tests predeclared CD2, IL2RB and
 IKZF3 effects in CD4 TCM and CD8 TEM. It uses log-CPM subject values with a
 Welch comparison and adjusts the three target p-values within each cell type.
+Comparisons with fewer than two eligible subjects in either group are marked
+as insufficient rather than assigned an inferential p-value. The donor table
+also reports the number and fraction of cells with detected target expression,
+while retaining the subject as the statistical unit.
 
 Expand the same subject-aware analysis to the detected transcriptome:
 
@@ -727,3 +740,55 @@ científicas contra pseudorreplicação, duplicação de coortes e inclusão de
 estudos sem participantes separáveis. Os resultados ficam em
 `data/reproducibility/ddx24-study`. O manifesto e as instruções de atualização
 estão em `reproducibility/ddx24-study`.
+
+## Discovery domain foundation
+
+AXIS now supports persistent target-disease projects, contextual perturbations,
+competing intervention strategies, open questions, typed evidence/mechanism
+assessments and conceptual proposed experiments with possible outcome scenarios.
+These extend the existing Claim/EvidenceStore architecture. The historical
+analysis pipeline and CLI commands remain available.
+
+Create a deliberately incomplete development fixture in a separate database:
+
+```shell
+axis --database .tmp/erap1-development.duckdb discovery demo
+axis --database .tmp/erap1-development.duckdb discovery project show AXIS-DD-ERAP1-001 --json
+```
+
+The ERAP1 fixture contains labelled AI proposals, not imported scientific facts
+or experimental results. No strategy is selected. See
+[the discovery domain documentation](docs/discovery-domain.md) for objects,
+provenance, additive migrations, inspection commands and remaining limits.
+
+## Source-grounded ERAP1 workspace
+
+Import the frozen, small primary-source reference corpus into a separate store
+and start the read-only local workspace:
+
+```powershell
+axis --database .tmp/erap1-reference.duckdb discovery import-erap1
+axis --database .tmp/erap1-reference.duckdb serve
+```
+
+Open `http://127.0.0.1:8765`. The curated project exposes atomic evidence,
+contexts, source provenance, independently classified mechanism edges,
+performed perturbations, four unranked strategy proposals and a conditional
+proposed experiment. Scientific expert review remains pending. Ankylosing
+spondylitis evidence is not silently generalized to all axSpA.
+
+The server exclusively owns its store; stop it before CLI access to that file.
+See [workspace instructions](web/README.md) and
+[the Phase 2 implementation report](docs/phase2-erap1-workspace-report.md).
+
+### Protein and experimental structure identity (Phases 3.1–3.2)
+
+The identity workspace supports the pinned ERAP1 UniProt sequence and a frozen
+experimental 3QNF reference: explicit deposited construct, three protein chains,
+chain-specific residue mapping/coordinate coverage, source snapshots and a
+lazy-loaded local NGL 3D viewer. Schema 6 is additive. Imported structural
+components are observations, not compounds, inhibitors or drugs.
+
+See [structure identity and reproduction instructions](docs/phase3-structure-identity.md)
+and [validation report](docs/phase3-structure-identity-implementation-report.md).
+The structure alone does not establish druggability, efficacy or disease relevance.

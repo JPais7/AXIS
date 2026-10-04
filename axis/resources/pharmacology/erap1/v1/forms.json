@@ -1,0 +1,23 @@
+[
+  {
+    "id": "form:maben-1",
+    "compound_id": "compound:maben-1",
+    "form_type": "unspecified",
+    "source_snapshot_id": "primary:maben-2020",
+    "description": "Reported synthesized preparation; counterion/solvation of tested material not established. Depiction is molecular identity, not proof of tested substance form."
+  },
+  {
+    "id": "form:maben-2",
+    "compound_id": "compound:maben-2",
+    "form_type": "unspecified",
+    "source_snapshot_id": "primary:maben-2020",
+    "description": "Reported synthesized preparation; counterion/solvation of tested material not established. Depiction is molecular identity, not proof of tested substance form."
+  },
+  {
+    "id": "form:maben-3",
+    "compound_id": "compound:maben-3",
+    "form_type": "unspecified",
+    "source_snapshot_id": "primary:maben-2020",
+    "description": "Reported synthesized preparation; counterion/solvation of tested material not established. Depiction is molecular identity, not proof of tested substance form."
+  }
+]

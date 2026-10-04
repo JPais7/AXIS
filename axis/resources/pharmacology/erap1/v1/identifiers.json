@@ -1,0 +1,56 @@
+[
+  {
+    "id": "identifier:maben-1:doi",
+    "compound_id": "compound:maben-1",
+    "namespace": "DOI-local",
+    "external_id": "10.1021/acs.jmedchem.9b00293:1",
+    "source_snapshot_id": "primary:maben-2020",
+    "mapping_status": "resolved",
+    "notes": "Schemes 1 and synthesis; chemical form of tested preparation unspecified"
+  },
+  {
+    "id": "identifier:maben-1:chembl",
+    "compound_id": "compound:maben-1",
+    "namespace": "ChEMBL",
+    "external_id": "CHEMBL1700161",
+    "source_snapshot_id": "chembl:maben-37",
+    "mapping_status": "resolved",
+    "notes": "Structure checked against primary synthesis scheme; no salt/tautomer merging."
+  },
+  {
+    "id": "identifier:maben-2:doi",
+    "compound_id": "compound:maben-2",
+    "namespace": "DOI-local",
+    "external_id": "10.1021/acs.jmedchem.9b00293:2",
+    "source_snapshot_id": "primary:maben-2020",
+    "mapping_status": "resolved",
+    "notes": "Schemes 2 and synthesis; chemical form of tested preparation unspecified"
+  },
+  {
+    "id": "identifier:maben-2:chembl",
+    "compound_id": "compound:maben-2",
+    "namespace": "ChEMBL",
+    "external_id": "CHEMBL4456470",
+    "source_snapshot_id": "chembl:maben-37",
+    "mapping_status": "rejected",
+    "notes": "Provider structure contains guanidine; primary Scheme 2 and HRMS establish urea. Do not transfer provider measurements/identity."
+  },
+  {
+    "id": "identifier:maben-3:doi",
+    "compound_id": "compound:maben-3",
+    "namespace": "DOI-local",
+    "external_id": "10.1021/acs.jmedchem.9b00293:3",
+    "source_snapshot_id": "primary:maben-2020",
+    "mapping_status": "resolved",
+    "notes": "Schemes 3 and synthesis; chemical form of tested preparation unspecified"
+  },
+  {
+    "id": "identifier:maben-3:chembl",
+    "compound_id": "compound:maben-3",
+    "namespace": "ChEMBL",
+    "external_id": "CHEMBL2140832",
+    "source_snapshot_id": "chembl:maben-37",
+    "mapping_status": "resolved",
+    "notes": "Structure checked against primary synthesis scheme; no salt/tautomer merging."
+  }
+]

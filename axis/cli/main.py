@@ -72,6 +72,14 @@ from axis.analysis import (
     WorkflowComparisonSummarizer,
     write_sample_sheet_template,
 )
+from axis.cli.cellular import app as cellular_app
+from axis.cli.decision import app as decision_app
+from axis.cli.discovery import app as discovery_app
+from axis.cli.experiment import app as experiment_app
+from axis.cli.pharmacology import app as pharmacology_app
+from axis.cli.structure_identity import app as structure_app
+from axis.cli.target_identity import app as target_app
+from axis.cli.workspace import serve
 from axis.domain import Study
 from axis.ingestion import (
     BioStudiesCandidateAuditor,
@@ -122,6 +130,15 @@ app = typer.Typer(
     help="Local scientific discovery tools for axial spondyloarthritis.",
     no_args_is_help=True,
 )
+app.add_typer(discovery_app, name="discovery")
+app.add_typer(target_app, name="target")
+app.add_typer(structure_app, name="structure")
+app.add_typer(pharmacology_app, name="pharmacology")
+app.add_typer(cellular_app, name="cellular")
+app.add_typer(decision_app, name="decision")
+app.add_typer(experiment_app, name="experiment")
+
+app.command("serve")(serve)
 console = Console()
 error_console = Console(stderr=True)
 

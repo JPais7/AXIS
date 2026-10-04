@@ -1,0 +1,79 @@
+{
+  "boundary": "Categorical observation facets that would correspond to each anticipated outcome scenario. AI-suggested, not reviewed; a real result is never forced into a scenario.",
+  "importer_version": "axis-scenario-signatures-1",
+  "knowledge_kind": "ai_suggestion",
+  "package_version": "1.0.0",
+  "review_status": "pending_expert_review",
+  "signatures": {
+    "decision:exp:allotype-matched-panel:s1": {
+      "effect_by_background": "varies"
+    },
+    "decision:exp:allotype-matched-panel:s2": {
+      "effect_by_background": "consistent"
+    },
+    "decision:exp:allotype-matched-panel:s3": {
+      "panel_validity": "invalid"
+    },
+    "decision:exp:chemical-genetic-engagement:s1": {
+      "engagement_signal": "detected",
+      "phenotype_in_target_null": "attenuated",
+      "rescue": "restored"
+    },
+    "decision:exp:chemical-genetic-engagement:s2": {
+      "engagement_signal": "detected",
+      "phenotype_in_target_null": "unchanged"
+    },
+    "decision:exp:chemical-genetic-engagement:s3": {
+      "engagement_signal": "not_detected",
+      "phenotype_in_target_null": "attenuated"
+    },
+    "decision:exp:chemical-genetic-engagement:s4": {
+      "background_dependence": "varies"
+    },
+    "decision:exp:chemical-genetic-engagement:s5": {
+      "model_validity": "invalid"
+    },
+    "decision:exp:engagement-assay:s1": {
+      "engagement_signal": "detected",
+      "signal_in_target_depleted": "absent"
+    },
+    "decision:exp:engagement-assay:s2": {
+      "engagement_signal": "not_detected"
+    },
+    "decision:exp:engagement-assay:s3": {
+      "engagement_signal": "detected_only_above_active_exposure"
+    },
+    "decision:exp:engagement-assay:s4": {
+      "assay_validity": "failed"
+    },
+    "decision:exp:engagement-phenotype-alignment:s1": {
+      "engagement_phenotype_alignment": "aligned"
+    },
+    "decision:exp:engagement-phenotype-alignment:s2": {
+      "phenotype_without_engagement": "true"
+    },
+    "decision:exp:engagement-phenotype-alignment:s3": {
+      "assay_sensitivity": "inadequate"
+    },
+    "decision:exp:orthogonal-chemical-probe:s1": {
+      "probe_engagement": "detected",
+      "probe_phenotype": "reproduced"
+    },
+    "decision:exp:orthogonal-chemical-probe:s2": {
+      "probe_engagement": "detected",
+      "probe_phenotype": "not_reproduced"
+    },
+    "decision:exp:orthogonal-chemical-probe:s3": {
+      "probe_qualified": "false"
+    },
+    "decision:exp:phenotype-replication:s1": {
+      "phenotype_reproduced": "true"
+    },
+    "decision:exp:phenotype-replication:s2": {
+      "phenotype_reproduced": "false"
+    },
+    "decision:exp:phenotype-replication:s3": {
+      "assay_validity": "failed"
+    }
+  }
+}

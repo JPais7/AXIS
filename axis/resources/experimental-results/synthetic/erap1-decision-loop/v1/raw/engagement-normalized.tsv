@@ -1,0 +1,5 @@
+# SYNTHETIC TEST DATA - NOT REAL EXPERIMENTAL EVIDENCE
+arm	condition	normalized_signal
+wild_type	vehicle	1.00
+wild_type	compound_active_exposure	0.58
+target_depleted	compound_active_exposure	1.00

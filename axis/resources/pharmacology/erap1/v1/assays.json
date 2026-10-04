@@ -1,0 +1,366 @@
+[
+  {
+    "id": "assay:maben:ERAP1-AMC",
+    "name": "ERAP1-AMC",
+    "assay_type": "biochemical_activity",
+    "target_gene": "ERAP1",
+    "source_snapshot_id": "primary:maben-2020",
+    "source_assay_identifier": "10.1021/acs.jmedchem.9b00293:ERAP1-AMC",
+    "locator": "Experimental section, pp. 116–118",
+    "taxon_id": 9606,
+    "reported_accession": "Q9NZ08",
+    "target_type": "source-reported recombinant protein",
+    "reported_construct": "Reported allelic variants; endogenous signal sequence and C-terminal 6xHis; assay-specific exact sequence unresolved",
+    "construct_mapping_status": "unknown",
+    "assay_format": "recombinant enzyme",
+    "biological_system": "Baculovirus/High Five insect-cell expressed enzyme",
+    "cell_line": null,
+    "substrate": "L-AMC",
+    "detection_method": "fluorescence 380/460 nm",
+    "conditions": [
+      {
+        "name": "buffer",
+        "value": "20 mM Tris-HCl; 100 mM NaCl; 0.01% w/v BSA",
+        "unit": null
+      },
+      {
+        "name": "pH",
+        "value": "7.5",
+        "unit": null
+      },
+      {
+        "name": "temperature",
+        "value": null,
+        "unit": "°C"
+      },
+      {
+        "name": "substrate concentration",
+        "value": "100",
+        "unit": "µM"
+      },
+      {
+        "name": "enzyme",
+        "value": "400 ng/well",
+        "unit": null
+      },
+      {
+        "name": "volume",
+        "value": "100",
+        "unit": "µL"
+      },
+      {
+        "name": "time sampling",
+        "value": "10 min intervals",
+        "unit": null
+      }
+    ],
+    "description": "Primary experimental context; not mapped to 3QNF or canonical sequence merely by gene name."
+  },
+  {
+    "id": "assay:maben:ERAP2-AMC",
+    "name": "ERAP2-AMC",
+    "assay_type": "biochemical_activity",
+    "target_gene": "ERAP2",
+    "source_snapshot_id": "primary:maben-2020",
+    "source_assay_identifier": "10.1021/acs.jmedchem.9b00293:ERAP2-AMC",
+    "locator": "Experimental section, pp. 116–118",
+    "taxon_id": 9606,
+    "reported_accession": "Q6P179",
+    "target_type": "source-reported recombinant protein",
+    "reported_construct": "Asn392 variant; endogenous signal sequence and C-terminal 6xHis; exact sequence unknown",
+    "construct_mapping_status": "unknown",
+    "assay_format": "recombinant enzyme",
+    "biological_system": "Baculovirus/High Five insect-cell expressed enzyme",
+    "cell_line": null,
+    "substrate": "R-AMC",
+    "detection_method": "fluorescence 380/460 nm",
+    "conditions": [
+      {
+        "name": "buffer",
+        "value": "20 mM Tris-HCl; 100 mM NaCl; 0.01% w/v BSA",
+        "unit": null
+      },
+      {
+        "name": "pH",
+        "value": "7.5",
+        "unit": null
+      },
+      {
+        "name": "temperature",
+        "value": null,
+        "unit": "°C"
+      },
+      {
+        "name": "substrate concentration",
+        "value": "10",
+        "unit": "µM"
+      },
+      {
+        "name": "enzyme",
+        "value": "12.5 ng/well",
+        "unit": null
+      },
+      {
+        "name": "volume",
+        "value": "100",
+        "unit": "µL"
+      },
+      {
+        "name": "time sampling",
+        "value": "10 min intervals",
+        "unit": null
+      }
+    ],
+    "description": "Primary experimental context; not mapped to 3QNF or canonical sequence merely by gene name."
+  },
+  {
+    "id": "assay:maben:LNPEP-AMC",
+    "name": "LNPEP-AMC",
+    "assay_type": "biochemical_activity",
+    "target_gene": "LNPEP",
+    "source_snapshot_id": "primary:maben-2020",
+    "source_assay_identifier": "10.1021/acs.jmedchem.9b00293:LNPEP-AMC",
+    "locator": "Experimental section, pp. 116–118",
+    "taxon_id": 10090,
+    "reported_accession": "Q8C129",
+    "target_type": "source-reported recombinant protein",
+    "reported_construct": "Luminal domain; endogenous signal sequence and C-terminal 6xHis; exact sequence unknown",
+    "construct_mapping_status": "unknown",
+    "assay_format": "recombinant enzyme",
+    "biological_system": "Baculovirus/High Five insect-cell expressed enzyme",
+    "cell_line": null,
+    "substrate": "L-AMC",
+    "detection_method": "fluorescence 380/460 nm",
+    "conditions": [
+      {
+        "name": "buffer",
+        "value": "20 mM Tris-HCl; 100 mM NaCl; 0.01% w/v BSA",
+        "unit": null
+      },
+      {
+        "name": "pH",
+        "value": "7.5",
+        "unit": null
+      },
+      {
+        "name": "temperature",
+        "value": null,
+        "unit": "°C"
+      },
+      {
+        "name": "substrate concentration",
+        "value": "100",
+        "unit": "µM"
+      },
+      {
+        "name": "enzyme",
+        "value": "40 ng/well",
+        "unit": null
+      },
+      {
+        "name": "volume",
+        "value": "100",
+        "unit": "µL"
+      },
+      {
+        "name": "time sampling",
+        "value": "10 min intervals",
+        "unit": null
+      }
+    ],
+    "description": "Primary experimental context; not mapped to 3QNF or canonical sequence merely by gene name."
+  },
+  {
+    "id": "assay:maben:ERAP1-WK10",
+    "name": "ERAP1-WK10",
+    "assay_type": "biochemical_activity",
+    "target_gene": "ERAP1",
+    "source_snapshot_id": "primary:maben-2020",
+    "source_assay_identifier": "10.1021/acs.jmedchem.9b00293:ERAP1-WK10",
+    "locator": "Experimental section, pp. 116–118",
+    "taxon_id": 9606,
+    "reported_accession": "Q9NZ08",
+    "target_type": "source-reported recombinant protein",
+    "reported_construct": "Reported allelic variants; endogenous signal sequence and C-terminal 6xHis; assay-specific exact sequence unresolved",
+    "construct_mapping_status": "unknown",
+    "assay_format": "recombinant enzyme",
+    "biological_system": "Baculovirus/High Five insect-cell expressed enzyme",
+    "cell_line": null,
+    "substrate": "WRCYEKMALK",
+    "detection_method": "RapidFire LC-MS",
+    "conditions": [
+      {
+        "name": "buffer",
+        "value": "20 mM Tris-HCl; 100 mM NaCl; 0.01% w/v BSA",
+        "unit": null
+      },
+      {
+        "name": "pH",
+        "value": "7.5",
+        "unit": null
+      },
+      {
+        "name": "temperature",
+        "value": null,
+        "unit": "°C"
+      },
+      {
+        "name": "substrate concentration",
+        "value": "10",
+        "unit": "µM"
+      },
+      {
+        "name": "enzyme",
+        "value": "20 ng/well",
+        "unit": null
+      },
+      {
+        "name": "volume",
+        "value": "50",
+        "unit": "µL"
+      },
+      {
+        "name": "incubation time",
+        "value": "10",
+        "unit": "min"
+      }
+    ],
+    "description": "Primary experimental context; not mapped to 3QNF or canonical sequence merely by gene name."
+  },
+  {
+    "id": "assay:maben:ERAP1-pNA",
+    "name": "ERAP1-pNA",
+    "assay_type": "biochemical_activity",
+    "target_gene": "ERAP1",
+    "source_snapshot_id": "primary:maben-2020",
+    "source_assay_identifier": "10.1021/acs.jmedchem.9b00293:ERAP1-pNA",
+    "locator": "Experimental section, pp. 116–118",
+    "taxon_id": 9606,
+    "reported_accession": "Q9NZ08",
+    "target_type": "source-reported recombinant protein",
+    "reported_construct": "Reported allelic variants; endogenous signal sequence and C-terminal 6xHis; assay-specific exact sequence unresolved",
+    "construct_mapping_status": "unknown",
+    "assay_format": "recombinant enzyme",
+    "biological_system": "Baculovirus/High Five insect-cell expressed enzyme",
+    "cell_line": null,
+    "substrate": "L-pNA concentration series",
+    "detection_method": "chromogenic initial-rate assay",
+    "conditions": [
+      {
+        "name": "buffer",
+        "value": "20 mM Tris-HCl; 100 mM NaCl; 0.01% w/v BSA",
+        "unit": null
+      },
+      {
+        "name": "pH",
+        "value": "7.5",
+        "unit": null
+      },
+      {
+        "name": "temperature",
+        "value": null,
+        "unit": "°C"
+      },
+      {
+        "name": "initial rate window",
+        "value": "5–10 min",
+        "unit": null
+      },
+      {
+        "name": "kinetic fit",
+        "value": "competitive allosteric inhibition",
+        "unit": null
+      }
+    ],
+    "description": "Primary experimental context; not mapped to 3QNF or canonical sequence merely by gene name."
+  },
+  {
+    "id": "assay:maben:ERAP1-LF9",
+    "name": "ERAP1-LF9",
+    "assay_type": "biochemical_activity",
+    "target_gene": "ERAP1",
+    "source_snapshot_id": "primary:maben-2020",
+    "source_assay_identifier": "10.1021/acs.jmedchem.9b00293:ERAP1-LF9",
+    "locator": "Experimental section, pp. 116–118",
+    "taxon_id": 9606,
+    "reported_accession": "Q9NZ08",
+    "target_type": "source-reported recombinant protein",
+    "reported_construct": "Reported allelic variants; endogenous signal sequence and C-terminal 6xHis; assay-specific exact sequence unresolved",
+    "construct_mapping_status": "unknown",
+    "assay_format": "recombinant enzyme",
+    "biological_system": "Baculovirus/High Five insect-cell expressed enzyme",
+    "cell_line": null,
+    "substrate": "LVAFKARKF concentration series",
+    "detection_method": "ABTS/HRP/L-amino acid oxidase coupled absorbance 405 nm",
+    "conditions": [
+      {
+        "name": "buffer",
+        "value": "20 mM Tris-HCl; 100 mM NaCl; 0.01% w/v BSA",
+        "unit": null
+      },
+      {
+        "name": "pH",
+        "value": "7.5",
+        "unit": null
+      },
+      {
+        "name": "temperature",
+        "value": null,
+        "unit": "°C"
+      },
+      {
+        "name": "time course",
+        "value": "20",
+        "unit": "min"
+      },
+      {
+        "name": "sampling",
+        "value": "2.5",
+        "unit": "min"
+      },
+      {
+        "name": "kinetic fit",
+        "value": "competitive Michaelis–Menten inhibition",
+        "unit": null
+      }
+    ],
+    "description": "Primary experimental context; not mapped to 3QNF or canonical sequence merely by gene name."
+  },
+  {
+    "id": "assay:maben:HeLa-presentation",
+    "name": "HeLa-presentation",
+    "assay_type": "cellular_phenotype",
+    "target_gene": "ERAP1",
+    "source_snapshot_id": "primary:maben-2020",
+    "source_assay_identifier": "10.1021/acs.jmedchem.9b00293:HeLa-presentation",
+    "locator": "Experimental section, pp. 116–118",
+    "taxon_id": 9606,
+    "reported_accession": "Q9NZ08",
+    "target_type": "cellular endogenous target",
+    "reported_construct": "Endogenous ERAP1; sequence/alleles not resolved",
+    "construct_mapping_status": "unknown",
+    "assay_format": "cellular flow cytometry",
+    "biological_system": "HeLa expressing mouse H-2 Kb; modified vaccinia antigen constructs",
+    "cell_line": "HeLa",
+    "substrate": "ss-LEQLE-SIINFEKL; Ub-SIINFEKL control",
+    "detection_method": "25D1 flow cytometry",
+    "conditions": [
+      {
+        "name": "exposure",
+        "value": "16–24",
+        "unit": "h"
+      },
+      {
+        "name": "temperature",
+        "value": null,
+        "unit": "°C"
+      },
+      {
+        "name": "buffer",
+        "value": null,
+        "unit": null
+      }
+    ],
+    "description": "Primary experimental context; not mapped to 3QNF or canonical sequence merely by gene name."
+  }
+]

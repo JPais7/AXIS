@@ -1,0 +1,13 @@
+{
+  "package_id": "axis-erap1-3qnf-structure",
+  "package_version": "1.0.0",
+  "importer_version": "1",
+  "pdb_id": "3QNF",
+  "retrieved_at": "2026-10-04T12:25:57+00:00",
+  "retrieval_timestamp_source": "download file completion modification time, seconds",
+  "raw_sha256": "04b29d420769a6ce405c85d90e6888289de20381e17e64c1a31c3e4f835b8f75",
+  "canonical_sequence_sha256": "e7a676d4403be4bad98f60d855ac133133ae972ea93b1c2cba8d12ba8f84fb28",
+  "mapping_algorithm": "provider-segment-projection",
+  "mapping_version": "1",
+  "request_url": "https://files.rcsb.org/download/3QNF.cif"
+}

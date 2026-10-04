@@ -1,0 +1,34 @@
+{
+  "name": "ERAP1 × axSpA Evidence Vertical v1",
+  "release_status": "candidate_awaiting_visual_acceptance",
+  "frozen_release": false,
+  "acceptance_date": null,
+  "package_id": "axis-erap1-axspa-curated",
+  "package_version": "1.0.0",
+  "package_sha256": "eb2993f83a92d19f751e5637944dbb8321c4245192538811764f452568c4cc60",
+  "sources": [
+    "PMID:21743469",
+    "PMID:25994336",
+    "PMID:16286653",
+    "PMID:24504800",
+    "PMID:26130142",
+    "PMID:27107845"
+  ],
+  "source_assertion_count": 13,
+  "project_claim_count_including_proposal": 14,
+  "evidence_assessment_count": 24,
+  "mechanism_assessment_count": 8,
+  "performed_perturbation_count": 3,
+  "strategy_count": 4,
+  "review_status": "pending_expert_review",
+  "reviewer_decisions_recorded": 0,
+  "application_version": "0.2.1.dev0",
+  "blocked_gates": [
+    "browser acceptance",
+    "manual graphical traversal",
+    "source-provenance UI traversal",
+    "live keyboard/focus and responsive review",
+    "screenshot inspection"
+  ],
+  "immutability": "Existing package bytes remain pinned; future scientific changes require a new package version."
+}

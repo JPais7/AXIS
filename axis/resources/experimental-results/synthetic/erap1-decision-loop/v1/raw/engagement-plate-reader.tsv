@@ -1,0 +1,11 @@
+# SYNTHETIC TEST DATA - NOT REAL EXPERIMENTAL EVIDENCE
+well	condition	arm	signal_au
+A1	vehicle	wild_type	1000
+A2	vehicle	wild_type	1010
+A3	vehicle	wild_type	990
+B1	compound_active_exposure	wild_type	580
+B2	compound_active_exposure	wild_type	600
+B3	compound_active_exposure	wild_type	560
+C1	compound_active_exposure	target_depleted	1005
+C2	compound_active_exposure	target_depleted	995
+C3	compound_active_exposure	target_depleted	1010

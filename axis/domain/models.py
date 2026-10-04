@@ -30,6 +30,7 @@ class KnowledgeKind(StrEnum):
     AXIS_INFERENCE = "axis_inference"
     AI_SUGGESTION = "ai_suggestion"
     RESEARCHER_HYPOTHESIS = "researcher_hypothesis"
+    EXPERIMENTAL_RESULT = "experimental_result"
 
 
 class SourceKind(StrEnum):
@@ -111,6 +112,12 @@ class ClaimContext:
     comparison: str | None = None
     treatment: str | None = None
     species: str | None = None
+    cell_type: str | None = None
+    genotype: str | None = None
+    hla_status: str | None = None
+    allotype: str | None = None
+    experimental_system: str | None = None
+    endpoint: str | None = None
 
 
 @dataclass(frozen=True)
@@ -127,6 +134,11 @@ class Claim:
     def __post_init__(self) -> None:
         _require_text(self.identifier, "claim identifier")
         _require_text(self.predicate, "predicate")
+        if (
+            self.knowledge_kind == KnowledgeKind.EXPERIMENTAL_RESULT
+            and self.provenance.source_kind == SourceKind.AI_MODEL
+        ):
+            raise ValueError("an AI source cannot supply an experimental result")
         if self.confidence is not None and not 0.0 <= self.confidence <= 1.0:
             raise ValueError("confidence must be between 0 and 1")
 
