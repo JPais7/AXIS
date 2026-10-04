@@ -20,6 +20,7 @@ from axis.pharmacology.service import PharmacologyService
 from axis.storage import EvidenceStore, RecordNotFoundError
 from axis.structures.service import StructureIdentityService
 from axis.targets.identity import TargetIdentityService
+from axis.validation.service import BenchmarkError, BenchmarkService
 
 
 def json_default(value: object) -> str:
@@ -94,6 +95,38 @@ class ReadAPI:
             "sensitivity": state["sensitivity"],
             "review": state["review"],
         }
+
+    def _benchmarks(self, tail: list[str]) -> dict[str, Any]:
+        """Read-only retrospective-validation views; nothing is run or revealed."""
+        service = BenchmarkService(self.store)
+        if not tail:
+            return {"items": service.list_cases()}
+        if tail == ["report"]:
+            return {"markdown": service.report()}
+        try:
+            view = service.view(tail[0])
+        except BenchmarkError as error:
+            raise RecordNotFoundError(str(error)) from error
+        if len(tail) == 1:
+            return view
+        sections = {
+            "snapshot": "snapshots",
+            "run": "cutoff_run",
+            "audit": "audits",
+            "baselines": "baselines",
+            "reveal": "reveal",
+            "assessment": "assessment",
+            "reviews": "reviews",
+        }
+        if len(tail) == 2 and tail[1] in sections:
+            return {
+                "case_id": tail[0],
+                "status": view["status"],
+                "label": view["label"],
+                "section": tail[1],
+                "value": view[sections[tail[1]]],
+            }
+        raise RecordNotFoundError("benchmark route not found")
 
     def _decision_diff(
         self, project: str, protein: str, versions: dict[str, str] | None
@@ -276,6 +309,8 @@ class ReadAPI:
         if not 1 <= limit <= 100 or not 0 <= offset <= 100000:
             raise ValueError("limit must be 1–100; offset must be 0–100000")
         parts = [unquote(part) for part in path.strip("/").split("/")]
+        if parts[:2] == ["api", "benchmarks"]:
+            return self._benchmarks(parts[2:])
         chemical_filters: dict[str, str] = {
             key: query[key][0]
             for key in ("compound", "target", "endpoint", "assay_type", "source")

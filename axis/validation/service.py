@@ -111,23 +111,27 @@ class BenchmarkService:
         return sealed
 
     def list_cases(self) -> list[dict[str, Any]]:
-        self.register()
+        """Registered cases overlaid on the packaged protocols; writes nothing."""
+        stored = {c["case_id"]: c for c in self.repo.cases()}
         out = []
-        for case in self.repo.cases():
-            protocol = case["protocol"]
-            out.append(
-                {
-                    "case_id": case["case_id"],
-                    "set_id": case["set_id"],
-                    "status": case["status"],
-                    "benchmark_kind": protocol["benchmark_kind"],
-                    "synthetic": protocol["synthetic"],
-                    "label": SYNTHETIC_LABEL if protocol["synthetic"] else "",
-                    "cutoff": protocol["cutoff"],
-                    "case_type": protocol["case_type"],
-                    "question": protocol["question"],
-                }
-            )
+        for path in self.package_paths():
+            package = load_set(path)
+            for case_id in package.manifest["cases"]:
+                protocol = package.protocol(case_id)
+                row = stored.get(case_id)
+                out.append(
+                    {
+                        "case_id": case_id,
+                        "set_id": package.set_id,
+                        "status": row["status"] if row else "unregistered",
+                        "benchmark_kind": protocol["benchmark_kind"],
+                        "synthetic": protocol["synthetic"],
+                        "label": SYNTHETIC_LABEL if protocol["synthetic"] else "",
+                        "cutoff": protocol["cutoff"],
+                        "case_type": protocol["case_type"],
+                        "question": protocol["question"],
+                    }
+                )
         return out
 
     # -- snapshot ----------------------------------------------------------
@@ -324,6 +328,10 @@ class BenchmarkService:
         assert case is not None
         if case["status"] == "invalid":
             raise BenchmarkError(f"{INVALID_LABEL}: case {case_id} is invalid")
+        if case["status"] in {"revealed", "reviewed"}:
+            raise BenchmarkError(
+                "the future was already revealed; a re-run would no longer be blind"
+            )
         protocol = package.protocol(case_id)
         mode = mode or protocol["review_mode"]
         window_file = package.window(case_id)
@@ -398,7 +406,11 @@ class BenchmarkService:
                 },
             )
             self._freeze_baseline(
-                case_id, "internal-least-evidence", "run-1", baseline, stamp
+                case_id,
+                "internal-least-evidence",
+                f"run-{run_no}",
+                baseline,
+                stamp,
             )
             self.repo.set_status(case_id, "executed", stamp)
         audit = self._audit(
@@ -818,9 +830,20 @@ class BenchmarkService:
 
     def show(self, case_id: str) -> dict[str, Any]:
         self.register()
-        case = self.repo.case(case_id)
+        return self.view(case_id)
+
+    def view(self, case_id: str) -> dict[str, Any]:
+        """Read-only view of one case (safe for the read-only API)."""
+        case = self.repo.case(case_id, required=False)
         if case is None:
-            raise BenchmarkError(f"unknown benchmark case {case_id!r}")
+            package = self.set_of(case_id)
+            protocol = package.protocol(case_id)
+            case = {
+                "case_id": case_id,
+                "set_id": package.set_id,
+                "status": "unregistered",
+                "protocol": protocol,
+            }
         runs = self.repo.rows("benchmark_runs", case_id)
         assessments = self.repo.rows("retrospective_assessments", case_id)
         revealed = case["status"] in {"revealed", "reviewed"}
@@ -883,7 +906,6 @@ class BenchmarkService:
         }
 
     def report(self, set_id: str | None = None) -> str:
-        self.register()
         cases = [c for c in self.repo.cases() if not set_id or c["set_id"] == set_id]
         lines = ["# AXIS retrospective validation report", ""]
         kinds = sorted({c["protocol"]["benchmark_kind"] for c in cases})
@@ -896,7 +918,7 @@ class BenchmarkService:
             "",
         ]
         for case in cases:
-            view = self.show(case["case_id"])
+            view = self.view(case["case_id"])
             protocol = view["protocol"]
             lines += [
                 f"## {case['case_id']} — {view['status']}",
@@ -941,7 +963,7 @@ class BenchmarkService:
         lines += ["## Failure analysis", ""]
         flagged = False
         for case in cases:
-            view = self.show(case["case_id"])
+            view = self.view(case["case_id"])
             a = view["assessment"]
             if view["status"] == "invalid":
                 flagged = True

@@ -459,12 +459,13 @@ def overstated_claims(analysis: dict[str, Any]) -> dict[str, Any]:
 def naive_baseline(window: dict[str, Any]) -> dict[str, Any]:
     """Transparent baseline: the edge with the least evidence is the next question.
 
-    Counts cellular assessments per edge; ties break by the fixed edge order. It
+    Counts informative cellular assessments per edge; ties break by the fixed edge order. It
     uses no rule, uncertainty model or explanation.
     """
     counts = {e: 0 for e in EDGES}
+    informative = {"supported", "contradicted", "insufficient", "mixed"}
     for a in window.get("assessments", []):
-        if a["edge"] in counts:
+        if a["edge"] in counts and a["state"] in informative:
             counts[a["edge"]] += 1
     counts["biochemical"] += len(window.get("biochemical_measurements", []))
     asked = sorted(EDGES, key=lambda e: (counts[e], EDGES.index(e)))[0]
