@@ -270,10 +270,10 @@ def test_upgrade_reopen_and_read_only(tmp_path):
     with EvidenceStore(path) as store:
         import_curated_erap1(store)
         identifier = TargetIdentityService(store).import_package(PROJECT)
-        assert store.statistics().schema_version == 10
+        assert store.statistics().schema_version == 11
     with EvidenceStore(path, read_only=True) as reopened:
         assert reopened.targets.protein(identifier).sequence_length == 941
-        assert reopened.statistics().schema_version == 10
+        assert reopened.statistics().schema_version == 11
 
 
 def test_nonhuman_record_cannot_map_to_human_gene_project():

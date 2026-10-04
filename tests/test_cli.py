@@ -45,7 +45,7 @@ def test_info_creates_database_and_reports_empty_store(tmp_path: Path) -> None:
     assert "Schema version" in result.stdout
     assert re.search(r"Schema version\s*[│|]\s*10\b", result.stdout)
     with EvidenceStore(database, read_only=True) as store:
-        assert store.statistics().schema_version == 10
+        assert store.statistics().schema_version == 11
     assert "Studies" in result.stdout
 
 
