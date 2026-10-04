@@ -52,7 +52,9 @@ def analyze_sample(sample: str, prefix: str, group: str, keep: set[str]) -> dict
 
     with gzip.open(barcode_path, "rt", encoding="utf-8") as handle:
         barcodes = [line.strip() for line in handle]
-    selected_columns = np.array([i for i, value in enumerate(barcodes) if value in keep])
+    selected_columns = np.array(
+        [i for i, value in enumerate(barcodes) if value in keep]
+    )
     if not selected_columns.size:
         raise ValueError(f"No CD8 cells matched for {sample}")
 
@@ -94,7 +96,9 @@ def main() -> None:
         for sample, (prefix, group) in SAMPLES.items()
     ]
 
-    with (OUT / "donor-pseudobulk.tsv").open("w", encoding="utf-8", newline="") as handle:
+    with (OUT / "donor-pseudobulk.tsv").open(
+        "w", encoding="utf-8", newline=""
+    ) as handle:
         writer = csv.DictWriter(handle, fieldnames=list(rows[0]), delimiter="\t")
         writer.writeheader()
         writer.writerows(rows)
@@ -104,7 +108,9 @@ def main() -> None:
         [row["ddx24_log2_cpm"] for row in rows if row["group"] == "healthy_control"]
     )
     effect = float(case.mean() - control.mean())
-    se = float(math.sqrt(case.var(ddof=1) / len(case) + control.var(ddof=1) / len(control)))
+    se = float(
+        math.sqrt(case.var(ddof=1) / len(case) + control.var(ddof=1) / len(control))
+    )
     test = ttest_ind(case, control, equal_var=False)
     summary = {
         "accession": "GSE163314",

@@ -1,0 +1,40 @@
+{
+  "availability_sha256": "20d3d3362c7356c01d0cc1020c3d76bcc709d32a6b7339bebcfe88ffc58681b2",
+  "benchmark_kind": "synthetic_test",
+  "case_id": "syn-generic-negative",
+  "case_type": "synthetic_generic_negative_future",
+  "cutoff": "2019-01-01",
+  "cutoff_id": "T-2019-01-01",
+  "cutoff_rationale": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE: invented cutoff",
+  "dimensions_declared_before_run": [
+    "temporal_integrity",
+    "decision_validity_at_cutoff",
+    "uncertainty_calibration",
+    "recommendation_relevance",
+    "future_evidence_relevance",
+    "evidence_update_behavior",
+    "overstated_claims",
+    "baseline_comparison"
+  ],
+  "excluded_beyond_horizon_records": 3,
+  "excluded_sources_by_design": [
+    "SYN:S2",
+    "SYN:S3"
+  ],
+  "excluded_undated_records": 2,
+  "future_sha256": "a1b5f3f804a7a5bfdd93f09740653a208a32f2d876aae447b256b76536649163",
+  "horizon": "2019-04-30",
+  "label": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE",
+  "pre_declared_expectation": "No outcome predicted; each dimension is assessed separately.",
+  "protocol_fingerprint": "ea2c935c2aeea0dc7d787290000f9caa50d900751dfa2fce29d0dc873cfdba52",
+  "question": "Does a later negative engagement result weaken the decision?",
+  "review_mode": "exploratory",
+  "rules_fingerprint": "184a1e2949a61e362545e897de43890014bcdcac7191f621c84fb2b739cecd33",
+  "rules_version": "axis-decision-3",
+  "schema": "axis-retrospective-benchmark-1",
+  "selection_rationale": "Synthetic: same window; the only later source is a negative result.",
+  "set_id": "synthetic-generic",
+  "synthetic": true,
+  "template_sha256": "fdec62a52510ea7e0dfe1afae93988d25b97a9fce77cd69b027dfef2652790a8",
+  "window_sha256": "a4cfe649cb699f7ed6ae40b4f709e74da18914df51a1a8b7d6d4f91f087c9f4f"
+}

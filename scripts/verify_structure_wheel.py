@@ -19,8 +19,9 @@ project = "AXIS-DD-ERAP1-CURATED-001"
 root = resources.files("axis")
 package = root.joinpath("resources/structures/erap1/3qnf/v1")
 manifest = json.loads(package.joinpath("manifest.json").read_bytes())
-assert hashlib.sha256(package.joinpath("structure.cif").read_bytes()).hexdigest() == (
-    manifest["raw_sha256"]
+assert (
+    hashlib.sha256(package.joinpath("structure.cif").read_bytes()).hexdigest()
+    == (manifest["raw_sha256"])
 )
 assert package.joinpath("README.md").is_file()
 assert root.joinpath("storage/migrations/006_structure_identity.sql").is_file()

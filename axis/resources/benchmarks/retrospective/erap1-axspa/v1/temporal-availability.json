@@ -1,0 +1,133 @@
+{
+  "note": "Publication date, online date and first public accessibility are distinct; eligibility uses first_publicly_accessible_date, never the nominal year.",
+  "resource": "temporal-availability",
+  "retrieval": [
+    {
+      "sha256": "acd6168263be1523578dc5b3370eb70f52a9f443180405f7d1c6b995b8c2eb7f",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&id=16286653,21743469,24504800,25994336,26130142,27107845,31841350&retmode=json"
+    },
+    {
+      "sha256": "00ffb926138191fd9ba3c5c41e45c5adae6cebb9421de7fdb1d8d67081403baf",
+      "url": "https://data.rcsb.org/rest/v1/core/entry/3QNF"
+    }
+  ],
+  "retrieved_at": "2026-10-04T20:01:11.450411+00:00",
+  "sources": {
+    "PDB:3QNF": {
+      "availability_basis": "RCSB initial release date",
+      "availability_kind": "established",
+      "deposit_date": "2011-02-08",
+      "first_publicly_accessible_date": "2011-02-23",
+      "nominal_publication_date": "2011-02-23",
+      "title": "Crystal structure of the open state of human endoplasmic reticulum aminopeptidase 1 ERAP1"
+    },
+    "PMID:16286653": {
+      "availability_basis": "earliest PubMed listing date (pubmed/entrez history); the epub date may precede it by days; no earlier public access is claimed or excluded",
+      "availability_kind": "bounded",
+      "epub_date": "2005 Nov 14",
+      "first_publicly_accessible_date": "2005-11-16",
+      "history": {
+        "entrez": "2005-11-16",
+        "medline": "2006-01-13",
+        "pmc-release": "2006-05-22",
+        "pubmed": "2005-11-16"
+      },
+      "nominal_publication_date": "2005 Nov 22",
+      "title": "The ER aminopeptidase, ERAP1, trims precursors to lengths of MHC class I peptides by a \"molecular ruler\" mechanism."
+    },
+    "PMID:21743469": {
+      "availability_basis": "earliest PubMed listing date (pubmed/entrez history); the epub date may precede it by days; no earlier public access is claimed or excluded",
+      "availability_kind": "bounded",
+      "epub_date": "2011 Jul 10",
+      "first_publicly_accessible_date": "2011-07-12",
+      "history": {
+        "accepted": "2011-06-03",
+        "entrez": "2011-07-12",
+        "medline": "2011-10-04",
+        "pmc-release": "2013-05-01",
+        "pubmed": "2011-07-12",
+        "received": "2011-12-21"
+      },
+      "nominal_publication_date": "2011 Jul 10",
+      "title": "Interaction between ERAP1 and HLA-B27 in ankylosing spondylitis implicates peptide handling in the mechanism for HLA-B27 in disease susceptibility."
+    },
+    "PMID:24504800": {
+      "availability_basis": "earliest PubMed listing date (pubmed/entrez history); the epub date may precede it by days; no earlier public access is claimed or excluded",
+      "availability_kind": "bounded",
+      "epub_date": null,
+      "first_publicly_accessible_date": "2014-02-08",
+      "history": {
+        "accepted": "2013-10-22",
+        "entrez": "2014-02-08",
+        "medline": "2014-05-28",
+        "pubmed": "2014-02-08",
+        "received": "2013-04-03"
+      },
+      "nominal_publication_date": "2014 Feb",
+      "title": "Critical role of endoplasmic reticulum aminopeptidase 1 in determining the length and sequence of peptides bound and presented by HLA-B27."
+    },
+    "PMID:25994336": {
+      "availability_basis": "earliest PubMed listing date (pubmed/entrez history); the epub date may precede it by days; no earlier public access is claimed or excluded",
+      "availability_kind": "bounded",
+      "epub_date": "2015 May 21",
+      "first_publicly_accessible_date": "2015-05-22",
+      "history": {
+        "accepted": "2015-04-07",
+        "entrez": "2015-05-22",
+        "medline": "2016-04-12",
+        "pmc-release": "2015-06-04",
+        "pubmed": "2015-05-23",
+        "received": "2015-02-08"
+      },
+      "nominal_publication_date": "2015 May 21",
+      "title": "Major histocompatibility complex associations of ankylosing spondylitis are complex and involve further epistasis with ERAP1."
+    },
+    "PMID:26130142": {
+      "availability_basis": "earliest PubMed listing date (pubmed/entrez history); the epub date may precede it by days; no earlier public access is claimed or excluded",
+      "availability_kind": "bounded",
+      "epub_date": "2015 Jun 30",
+      "first_publicly_accessible_date": "2015-07-02",
+      "history": {
+        "accepted": "2015-04-12",
+        "entrez": "2015-07-02",
+        "medline": "2016-08-30",
+        "pmc-release": "2016-05-03",
+        "pubmed": "2015-07-02",
+        "received": "2014-11-14"
+      },
+      "nominal_publication_date": "2016 May",
+      "title": "Silencing or inhibition of endoplasmic reticulum aminopeptidase 1 (ERAP1) suppresses free heavy chain expression and Th17 responses in ankylosing spondylitis."
+    },
+    "PMID:27107845": {
+      "availability_basis": "earliest PubMed listing date (pubmed/entrez history); the epub date may precede it by days; no earlier public access is claimed or excluded",
+      "availability_kind": "bounded",
+      "epub_date": "2016 Apr 22",
+      "first_publicly_accessible_date": "2016-04-25",
+      "history": {
+        "accepted": "2016-04-04",
+        "entrez": "2016-04-25",
+        "medline": "2017-08-22",
+        "pmc-release": "2017-06-01",
+        "pubmed": "2016-04-25",
+        "received": "2015-12-16",
+        "revised": "2016-04-03"
+      },
+      "nominal_publication_date": "2016 Jun",
+      "title": "ERAP1 reduces accumulation of aberrant and disulfide-linked forms of HLA-B27 on the cell surface."
+    },
+    "PMID:31841350": {
+      "availability_basis": "earliest PubMed listing date (pubmed/entrez history); the epub date may precede it by days; no earlier public access is claimed or excluded",
+      "availability_kind": "bounded",
+      "epub_date": "2019 Dec 30",
+      "first_publicly_accessible_date": "2019-12-17",
+      "history": {
+        "entrez": "2019-12-17",
+        "medline": "2020-07-01",
+        "pmc-release": "2021-06-22",
+        "pubmed": "2019-12-17"
+      },
+      "nominal_publication_date": "2020 Jan 9",
+      "title": "Discovery of Selective Inhibitors of Endoplasmic Reticulum Aminopeptidase 1."
+    }
+  }
+}

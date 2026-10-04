@@ -6,8 +6,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 REVIEW = (
-    ROOT
-    / "data/analysis/single-cell-validation/CD8-evidence-review/"
+    ROOT / "data/analysis/single-cell-validation/CD8-evidence-review/"
     "europe-pmc-2026-07-30"
 )
 SOURCE = REVIEW / "records-screening.tsv"
@@ -103,14 +102,14 @@ def main() -> None:
         writer.writerows(rows)
 
     with OUTPUT.open("w", encoding="utf-8", newline="") as handle:
-        writer = csv.DictWriter(
-            handle, fieldnames=list(decisions[0]), delimiter="\t"
-        )
+        writer = csv.DictWriter(handle, fieldnames=list(decisions[0]), delimiter="\t")
         writer.writeheader()
         writer.writerows(decisions)
 
     retrieve = sum(d["reviewer_1_decision"] == "retrieve_full_text" for d in decisions)
-    print(f"Screened {len(decisions)} records: {retrieve} retrieve, {len(decisions)-retrieve} exclude.")
+    print(
+        f"Screened {len(decisions)} records: {retrieve} retrieve, {len(decisions) - retrieve} exclude."
+    )
 
 
 if __name__ == "__main__":

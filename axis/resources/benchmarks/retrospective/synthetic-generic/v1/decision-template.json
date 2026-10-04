@@ -1,0 +1,1123 @@
+{
+  "forbidden_tokens": {
+    "SYN:S2": [
+      "syn:e3"
+    ],
+    "SYN:S3": [
+      "syn:e4",
+      "syn:cmpd-2"
+    ],
+    "SYN:S4": [
+      "syn:e5"
+    ],
+    "SYN:S5": [
+      "syn:e6"
+    ],
+    "SYN:S6": [
+      "syn:e7"
+    ],
+    "SYN:S7": [
+      "syn:e8"
+    ]
+  },
+  "redactions": [],
+  "template": {
+    "candidates": [
+      {
+        "endpoint_description": "SYN-CONTEXT-B surface phenotype and peptide-length distribution per context.",
+        "experiment_id": "decision:exp:allotype-matched-panel",
+        "experimental_system": "Isogenic cells expressing defined SYN-TARGET-A allotypes and SYN-CONTEXT-B subtypes",
+        "intervention_description": "The same SYN-TARGET-A perturbation across the allotype and subtype matrix.",
+        "knowledge_kind": "ai_suggestion",
+        "profile": {
+          "addressed_gap_ids": [],
+          "complexity": "high",
+          "confounders_addressed": [
+            "background genetic differences (isogenic design)"
+          ],
+          "considered_for": [
+            "genetic_context",
+            "reproducibility"
+          ],
+          "context_requirements": {
+            "erap1_allotype": "multiple defined allotypes",
+            "hla": "multiple SYN-CONTEXT-B subtypes"
+          },
+          "controls_negative": [
+            "vehicle",
+            "SYN-TARGET-A-null arm in each subtype"
+          ],
+          "controls_positive": [],
+          "cost": null,
+          "disease_relevance": "molecular SYN-CONTEXT-B context only; not disease rescue",
+          "experiment_id": "decision:exp:allotype-matched-panel",
+          "limitations": [
+            "Does not test compound engagement",
+            "Isogenic systems are not patient cells"
+          ],
+          "prerequisites": [
+            [
+              "isogenic SYN-TARGET-A allotype and SYN-CONTEXT-B subtype models",
+              "not_established"
+            ]
+          ],
+          "primary_endpoint": "Direction and size of the phenotype across allotype and subtype",
+          "purpose": "test_context_dependence",
+          "required": {
+            "assays": [
+              "SYN-CONTEXT-B surface phenotype assay",
+              "immunopeptidomics"
+            ],
+            "models": [
+              "isogenic allotype and subtype panel"
+            ],
+            "reagents": []
+          },
+          "role": "mechanism_discrimination",
+          "secondary_endpoints": [
+            "peptide-length distribution"
+          ],
+          "target_proximity": "pathway_proximal",
+          "time_estimate": "unknown"
+        },
+        "rationale": "Test whether the effect of SYN-TARGET-A perturbation depends on SYN-TARGET-A allotype and SYN-CONTEXT-B subtype in matched isogenic backgrounds.",
+        "result_claim_id": null,
+        "scenarios": [
+          {
+            "consequence": {
+              "category": "investigate_context_dependence",
+              "new_uncertainty": null,
+              "statement": "If the effect varies with background, the strategy would need to be defined per allotype and subtype before any further decision."
+            },
+            "effects": {
+              "explanation:context": {
+                "effect": "strengthens",
+                "rationale": "Behaviour tracks background."
+              },
+              "explanation:indirect": {
+                "effect": "does_not_discriminate",
+                "rationale": "Not separated by this outcome."
+              },
+              "explanation:off_target": {
+                "effect": "does_not_discriminate",
+                "rationale": "Not separated by this outcome."
+              },
+              "explanation:on_target": {
+                "effect": "does_not_discriminate",
+                "rationale": "Not separated by this outcome."
+              }
+            },
+            "interpretation": "The effect is context dependent.",
+            "kind": "alternative",
+            "outcome": "Direction or magnitude of the effect varies by allotype or subtype.",
+            "scenario_id": "decision:exp:allotype-matched-panel:s1"
+          },
+          {
+            "consequence": {
+              "category": "advance_to_next_evidence_layer",
+              "new_uncertainty": null,
+              "statement": "If the effect is consistent across contexts, the context uncertainty would be resolved for the current decision and compound-level engagement and dependence would become the limiting evidence."
+            },
+            "effects": {
+              "explanation:context": {
+                "effect": "weakens",
+                "rationale": "No dependence on background observed."
+              },
+              "explanation:indirect": {
+                "effect": "does_not_discriminate",
+                "rationale": "Not separated."
+              },
+              "explanation:off_target": {
+                "effect": "does_not_discriminate",
+                "rationale": "Genetic perturbation does not involve the compound."
+              },
+              "explanation:on_target": {
+                "effect": "strengthens",
+                "rationale": "A general effect is compatible with a direct consequence of SYN-TARGET-A perturbation."
+              }
+            },
+            "interpretation": "The effect is general to SYN-TARGET-A perturbation in these contexts.",
+            "kind": "supportive",
+            "outcome": "The effect is consistent across the matched allotypes and subtypes.",
+            "scenario_id": "decision:exp:allotype-matched-panel:s2"
+          },
+          {
+            "consequence": {
+              "category": "require_replication",
+              "new_uncertainty": "panel comparability",
+              "statement": "If the panel is not matched, the context uncertainty would remain open and the panel would need to be rebuilt."
+            },
+            "effects": {
+              "explanation:context": {
+                "effect": "does_not_discriminate",
+                "rationale": "Technical limitation."
+              },
+              "explanation:indirect": {
+                "effect": "does_not_discriminate",
+                "rationale": "Technical limitation."
+              },
+              "explanation:off_target": {
+                "effect": "does_not_discriminate",
+                "rationale": "Technical limitation."
+              },
+              "explanation:on_target": {
+                "effect": "does_not_discriminate",
+                "rationale": "Technical limitation."
+              }
+            },
+            "interpretation": "No inference is permitted.",
+            "kind": "non_interpretable",
+            "outcome": "The panel is not isogenic or its expression levels differ.",
+            "scenario_id": "decision:exp:allotype-matched-panel:s3"
+          }
+        ],
+        "status": "proposed",
+        "title": "Matched SYN-TARGET-A allotype and SYN-CONTEXT-B subtype panel"
+      },
+      {
+        "endpoint_description": "Cellular SYN-TARGET-A engagement and the source-linked SYN-CONTEXT-B phenotype, measured separately with a viability readout.",
+        "experiment_id": "decision:exp:chemical-genetic-engagement",
+        "experimental_system": "SYN-CONTEXT-B-positive cell system with wild-type, SYN-TARGET-A-depleted or null, and SYN-TARGET-A-rescued arms in a matched genetic background",
+        "intervention_description": "Compound at phenotype-active exposures versus vehicle and an inactive analogue in each arm; SYN-TARGET-A genetic depletion and re-expression as the genetic comparison.",
+        "knowledge_kind": "ai_suggestion",
+        "profile": {
+          "addressed_gap_ids": [
+            "cellular:chen-dg013a-HeLa.B27:gap",
+            "cellular:chen-dg013a-C1R.B27:gap",
+            "cellular:maben-2:gap",
+            "cellular:maben-3:gap"
+          ],
+          "complexity": "high",
+          "confounders_addressed": [
+            "off-target activity (genetic comparison)",
+            "exposure-dependent toxicity (viability measured separately)"
+          ],
+          "considered_for": [
+            "target_engagement",
+            "target_dependency"
+          ],
+          "context_requirements": {
+            "erap1_allotype": "report and match across arms",
+            "hla": "SYN-CONTEXT-B subtype to be chosen and reported"
+          },
+          "controls_negative": [
+            "vehicle",
+            "SYN-TARGET-A-null or SYN-TARGET-A-depleted arm of the same background",
+            "structurally related inactive analogue, if one is established (none identified in the curated corpus)"
+          ],
+          "controls_positive": [
+            "none established in the curated corpus; a reference SYN-TARGET-A ligand with demonstrated cellular engagement would be required"
+          ],
+          "cost": null,
+          "disease_relevance": "molecular SYN-CONTEXT-B context only; not disease rescue",
+          "experiment_id": "decision:exp:chemical-genetic-engagement",
+          "limitations": [
+            "Does not resolve selectivity against other proteins",
+            "Single cellular system; disease relevance and patient-derived cells are not addressed",
+            "A null or rescue model does not reproduce partial pharmacological inhibition"
+          ],
+          "prerequisites": [
+            [
+              "validated compound identity (the perturbagen label is not resolved to one substance)",
+              "not_established"
+            ],
+            [
+              "cellular target-engagement readout",
+              "not_established"
+            ],
+            [
+              "SYN-TARGET-A-null and rescue SYN-CONTEXT-B model",
+              "not_established"
+            ],
+            [
+              "SYN-CONTEXT-B-positive cell line",
+              "available_in_corpus"
+            ]
+          ],
+          "primary_endpoint": "Compound-dependent SYN-TARGET-A engagement at the exposures that produce the phenotype, together with phenotype attenuation in SYN-TARGET-A-null cells",
+          "purpose": "discriminate_mechanism",
+          "required": {
+            "assays": [
+              "cellular engagement assay",
+              "SYN-CONTEXT-B surface phenotype assay"
+            ],
+            "models": [
+              "SYN-CONTEXT-B-positive SYN-TARGET-A-null and rescue cells"
+            ],
+            "reagents": [
+              "engagement readout reagent",
+              "inactive analogue"
+            ]
+          },
+          "role": "mechanism_discrimination",
+          "secondary_endpoints": [
+            "SYN-CONTEXT-B free-heavy-chain surface phenotype",
+            "cell viability at the tested exposures",
+            "restoration of phenotype after SYN-TARGET-A re-expression"
+          ],
+          "target_proximity": "target_proximal",
+          "time_estimate": "unknown"
+        },
+        "rationale": "Compare the compound in SYN-CONTEXT-B cells with and without SYN-TARGET-A, with SYN-TARGET-A re-expression, while measuring cellular engagement and the source-linked phenotype in the same system, so that attribution to SYN-TARGET-A can be tested directly.",
+        "result_claim_id": null,
+        "scenarios": [
+          {
+            "consequence": {
+              "category": "strengthen_current_strategy",
+              "new_uncertainty": null,
+              "statement": "If engagement and SYN-TARGET-A-dependence are both observed, the current evidence would support continuing the SYN-TARGET-A strategy for this compound in this context, with selectivity and context still to be addressed."
+            },
+            "effects": {
+              "explanation:context": {
+                "effect": "does_not_discriminate",
+                "rationale": "A single matched background does not test context."
+              },
+              "explanation:indirect": {
+                "effect": "does_not_discriminate",
+                "rationale": "An indirect pathway downstream of SYN-TARGET-A is also SYN-TARGET-A-dependent."
+              },
+              "explanation:off_target": {
+                "effect": "weakens",
+                "rationale": "Phenotype requires SYN-TARGET-A and is restored by re-expression."
+              },
+              "explanation:on_target": {
+                "effect": "strengthens",
+                "rationale": "Engagement and genetic dependence both align with the phenotype."
+              }
+            },
+            "interpretation": "Compatible with SYN-TARGET-A-dependent action at these exposures in this system.",
+            "kind": "supportive",
+            "outcome": "Engagement is detected at phenotype-active exposures in wild-type cells; the phenotype is attenuated in SYN-TARGET-A-null cells and restored by SYN-TARGET-A re-expression.",
+            "scenario_id": "decision:exp:chemical-genetic-engagement:s1"
+          },
+          {
+            "consequence": {
+              "category": "weaken_current_strategy",
+              "new_uncertainty": null,
+              "statement": "If the phenotype persists without SYN-TARGET-A, the compound would no longer support an SYN-TARGET-A-dependent strategy and alternative chemotypes would need their own engagement and dependency evidence."
+            },
+            "effects": {
+              "explanation:context": {
+                "effect": "does_not_discriminate",
+                "rationale": "One background."
+              },
+              "explanation:indirect": {
+                "effect": "weakens",
+                "rationale": "An SYN-TARGET-A-dependent indirect pathway would also be lost in null cells."
+              },
+              "explanation:off_target": {
+                "effect": "strengthens",
+                "rationale": "A target-independent phenotype is the expected pattern of off-target action."
+              },
+              "explanation:on_target": {
+                "effect": "weakens",
+                "rationale": "The phenotype is independent of SYN-TARGET-A."
+              }
+            },
+            "interpretation": "The phenotype does not require SYN-TARGET-A in this system.",
+            "kind": "negative",
+            "outcome": "Engagement is detected in wild-type cells, but the phenotype persists unchanged in SYN-TARGET-A-null cells.",
+            "scenario_id": "decision:exp:chemical-genetic-engagement:s2"
+          },
+          {
+            "consequence": {
+              "category": "change_mechanistic_model",
+              "new_uncertainty": null,
+              "statement": "If the phenotype is SYN-TARGET-A-dependent without detectable engagement, the mechanistic model would change toward an indirect route and the strategy would need re-justification."
+            },
+            "effects": {
+              "explanation:context": {
+                "effect": "does_not_discriminate",
+                "rationale": "One background."
+              },
+              "explanation:indirect": {
+                "effect": "strengthens",
+                "rationale": "SYN-TARGET-A-dependent phenotype without direct engagement fits an indirect route."
+              },
+              "explanation:off_target": {
+                "effect": "weakens",
+                "rationale": "The phenotype is SYN-TARGET-A-dependent."
+              },
+              "explanation:on_target": {
+                "effect": "weakens",
+                "rationale": "Direct modulation is not supported by the engagement assay."
+              }
+            },
+            "interpretation": "SYN-TARGET-A contributes, but not through detectable binding of this compound.",
+            "kind": "alternative",
+            "outcome": "No engagement signal is detected in a validated assay, yet the phenotype is attenuated in SYN-TARGET-A-null cells.",
+            "scenario_id": "decision:exp:chemical-genetic-engagement:s3"
+          },
+          {
+            "consequence": {
+              "category": "investigate_context_dependence",
+              "new_uncertainty": null,
+              "statement": "If engagement or dependence varies with background, the next evidence needed would be a matched allotype and SYN-CONTEXT-B subtype comparison before any strategy decision."
+            },
+            "effects": {
+              "explanation:context": {
+                "effect": "strengthens",
+                "rationale": "Behaviour tracks background."
+              },
+              "explanation:indirect": {
+                "effect": "does_not_discriminate",
+                "rationale": "Not separated by this outcome."
+              },
+              "explanation:off_target": {
+                "effect": "does_not_discriminate",
+                "rationale": "Not separated by this outcome."
+              },
+              "explanation:on_target": {
+                "effect": "does_not_discriminate",
+                "rationale": "Holds in some contexts only."
+              }
+            },
+            "interpretation": "The result is context dependent.",
+            "kind": "alternative",
+            "outcome": "Engagement and SYN-TARGET-A-dependence differ between SYN-CONTEXT-B backgrounds or SYN-TARGET-A allotypes.",
+            "scenario_id": "decision:exp:chemical-genetic-engagement:s4"
+          },
+          {
+            "consequence": {
+              "category": "require_replication",
+              "new_uncertainty": "validity of the null or rescue model",
+              "statement": "If the experiment is non-interpretable, the uncertainty would remain open and the model and controls would need to be validated before repeating it."
+            },
+            "effects": {
+              "explanation:context": {
+                "effect": "does_not_discriminate",
+                "rationale": "Technical failure is not a biological negative."
+              },
+              "explanation:indirect": {
+                "effect": "does_not_discriminate",
+                "rationale": "Technical failure is not a biological negative."
+              },
+              "explanation:off_target": {
+                "effect": "does_not_discriminate",
+                "rationale": "Technical failure is not a biological negative."
+              },
+              "explanation:on_target": {
+                "effect": "does_not_discriminate",
+                "rationale": "Technical failure is not a biological negative."
+              }
+            },
+            "interpretation": "No inference about engagement or dependence is permitted.",
+            "kind": "non_interpretable",
+            "outcome": "The null or rescue model is not validated, or toxicity confounds the phenotype.",
+            "scenario_id": "decision:exp:chemical-genetic-engagement:s5"
+          }
+        ],
+        "status": "proposed",
+        "title": "Matched-genotype chemical-genetic experiment with an engagement readout"
+      },
+      {
+        "endpoint_description": "Compound-dependent cellular SYN-TARGET-A engagement signal.",
+        "experiment_id": "decision:exp:engagement-assay",
+        "experimental_system": "SYN-CONTEXT-B-positive cell line with a matched SYN-TARGET-A-depleted control",
+        "intervention_description": "Compound concentration series spanning the phenotype-active exposures versus vehicle.",
+        "knowledge_kind": "ai_suggestion",
+        "profile": {
+          "addressed_gap_ids": [
+            "cellular:chen-dg013a-HeLa.B27:gap",
+            "cellular:chen-dg013a-C1R.B27:gap",
+            "cellular:maben-2:gap",
+            "cellular:maben-3:gap"
+          ],
+          "complexity": "moderate",
+          "confounders_addressed": [
+            "exposure-dependent toxicity (viability measured separately)"
+          ],
+          "considered_for": [
+            "target_engagement"
+          ],
+          "context_requirements": {
+            "hla": "SYN-CONTEXT-B subtype to be chosen and reported"
+          },
+          "controls_negative": [
+            "vehicle",
+            "SYN-TARGET-A-depleted cells of the same background"
+          ],
+          "controls_positive": [
+            "none established in the curated corpus; a reference SYN-TARGET-A ligand with demonstrated cellular engagement would be required"
+          ],
+          "cost": null,
+          "disease_relevance": "molecular SYN-CONTEXT-B context only; not disease rescue",
+          "experiment_id": "decision:exp:engagement-assay",
+          "limitations": [
+            "Engagement does not show dependence of the phenotype on SYN-TARGET-A",
+            "Does not resolve selectivity",
+            "Single system"
+          ],
+          "prerequisites": [
+            [
+              "validated compound identity (the perturbagen label is not resolved to one substance)",
+              "not_established"
+            ],
+            [
+              "cellular target-engagement readout",
+              "not_established"
+            ],
+            [
+              "SYN-CONTEXT-B-positive cell line",
+              "available_in_corpus"
+            ]
+          ],
+          "primary_endpoint": "Compound-dependent SYN-TARGET-A engagement at phenotype-active exposures",
+          "purpose": "establish_target_engagement",
+          "required": {
+            "assays": [
+              "cellular engagement assay"
+            ],
+            "models": [
+              "SYN-CONTEXT-B-positive cell line",
+              "SYN-TARGET-A-depleted control"
+            ],
+            "reagents": [
+              "engagement readout reagent"
+            ]
+          },
+          "role": "mechanism_discrimination",
+          "secondary_endpoints": [
+            "engagement across the concentration series",
+            "viability at tested exposures"
+          ],
+          "target_proximity": "target_proximal",
+          "time_estimate": "unknown"
+        },
+        "rationale": "Measure whether the compound engages SYN-TARGET-A in cells at the exposures that produce the reported SYN-CONTEXT-B phenotype, using SYN-TARGET-A-depleted cells as a specificity control.",
+        "result_claim_id": null,
+        "scenarios": [
+          {
+            "consequence": {
+              "category": "require_orthogonal_validation",
+              "new_uncertainty": null,
+              "statement": "If engagement is detected, the current evidence would support on-target action at these exposures, but dependency and selectivity remain open and orthogonal validation would be required."
+            },
+            "effects": {
+              "explanation:context": {
+                "effect": "does_not_discriminate",
+                "rationale": "One system."
+              },
+              "explanation:indirect": {
+                "effect": "does_not_discriminate",
+                "rationale": "Engagement does not show proximal catalytic modulation."
+              },
+              "explanation:off_target": {
+                "effect": "does_not_discriminate",
+                "rationale": "Engagement does not exclude additional off-target contribution."
+              },
+              "explanation:on_target": {
+                "effect": "strengthens",
+                "rationale": "Engagement closes the biochemical-to-cellular link."
+              }
+            },
+            "interpretation": "The compound reaches and binds SYN-TARGET-A in cells at these exposures.",
+            "kind": "supportive",
+            "outcome": "Engagement is detected at phenotype-active exposures and is absent in SYN-TARGET-A-depleted cells.",
+            "scenario_id": "decision:exp:engagement-assay:s1"
+          },
+          {
+            "consequence": {
+              "category": "weaken_current_strategy",
+              "new_uncertainty": null,
+              "statement": "If no engagement is detected in a validated assay, an on-target explanation for this compound's phenotype would be weakened and the compound would be a poor basis for the SYN-TARGET-A strategy."
+            },
+            "effects": {
+              "explanation:context": {
+                "effect": "does_not_discriminate",
+                "rationale": "One system."
+              },
+              "explanation:indirect": {
+                "effect": "weakens",
+                "rationale": "An indirect route through SYN-TARGET-A still requires SYN-TARGET-A modulation."
+              },
+              "explanation:off_target": {
+                "effect": "strengthens",
+                "rationale": "Phenotype without engagement is the expected off-target pattern."
+              },
+              "explanation:on_target": {
+                "effect": "weakens",
+                "rationale": "No engagement at active exposures."
+              }
+            },
+            "interpretation": "The phenotype is unlikely to arise from direct engagement at these exposures.",
+            "kind": "negative",
+            "outcome": "No engagement at phenotype-active exposures in a validated assay.",
+            "scenario_id": "decision:exp:engagement-assay:s2"
+          },
+          {
+            "consequence": {
+              "category": "change_mechanistic_model",
+              "new_uncertainty": null,
+              "statement": "If engagement requires far higher exposures than the phenotype, the mechanistic model would change and the phenotype would need another explanation."
+            },
+            "effects": {
+              "explanation:context": {
+                "effect": "does_not_discriminate",
+                "rationale": "One system."
+              },
+              "explanation:indirect": {
+                "effect": "does_not_discriminate",
+                "rationale": "Not separated by this outcome."
+              },
+              "explanation:off_target": {
+                "effect": "strengthens",
+                "rationale": "A more potent target is implied."
+              },
+              "explanation:on_target": {
+                "effect": "weakens",
+                "rationale": "Exposures do not align."
+              }
+            },
+            "interpretation": "Phenotype and engagement are not aligned in exposure.",
+            "kind": "alternative",
+            "outcome": "Engagement occurs only at exposures well above those producing the phenotype.",
+            "scenario_id": "decision:exp:engagement-assay:s3"
+          },
+          {
+            "consequence": {
+              "category": "require_replication",
+              "new_uncertainty": "assay validity",
+              "statement": "If the assay is non-interpretable, the uncertainty would remain open and the assay would need to be re-established before the question can be addressed."
+            },
+            "effects": {
+              "explanation:context": {
+                "effect": "does_not_discriminate",
+                "rationale": "Technical failure is not a biological negative."
+              },
+              "explanation:indirect": {
+                "effect": "does_not_discriminate",
+                "rationale": "Technical failure is not a biological negative."
+              },
+              "explanation:off_target": {
+                "effect": "does_not_discriminate",
+                "rationale": "Technical failure is not a biological negative."
+              },
+              "explanation:on_target": {
+                "effect": "does_not_discriminate",
+                "rationale": "Technical failure is not a biological negative."
+              }
+            },
+            "interpretation": "No inference about engagement is permitted.",
+            "kind": "non_interpretable",
+            "outcome": "The assay fails its vehicle or positive-control criteria.",
+            "scenario_id": "decision:exp:engagement-assay:s4"
+          }
+        ],
+        "status": "proposed",
+        "title": "Cellular SYN-TARGET-A target-engagement measurement at phenotype-active exposures"
+      },
+      {
+        "endpoint_description": "Engagement and phenotype concentration-response curves in the same system.",
+        "experiment_id": "decision:exp:engagement-phenotype-alignment",
+        "experimental_system": "SYN-CONTEXT-B-positive cell line",
+        "intervention_description": "Compound concentration series versus vehicle.",
+        "knowledge_kind": "ai_suggestion",
+        "profile": {
+          "addressed_gap_ids": [
+            "cellular:chen-dg013a-HeLa.B27:gap",
+            "cellular:chen-dg013a-C1R.B27:gap",
+            "cellular:maben-2:gap",
+            "cellular:maben-3:gap"
+          ],
+          "complexity": "moderate",
+          "confounders_addressed": [],
+          "considered_for": [
+            "target_engagement"
+          ],
+          "context_requirements": {},
+          "controls_negative": [
+            "vehicle"
+          ],
+          "controls_positive": [],
+          "cost": null,
+          "disease_relevance": "molecular SYN-CONTEXT-B context only; not disease rescue",
+          "experiment_id": "decision:exp:engagement-phenotype-alignment",
+          "limitations": [
+            "Alignment is correlational",
+            "Does not test dependence on SYN-TARGET-A",
+            "Requires the same engagement readout as a direct engagement measurement"
+          ],
+          "prerequisites": [
+            [
+              "cellular target-engagement readout",
+              "not_established"
+            ],
+            [
+              "validated compound identity (the perturbagen label is not resolved to one substance)",
+              "not_established"
+            ]
+          ],
+          "primary_endpoint": "Alignment of engagement and phenotype concentration-response",
+          "purpose": "characterize_pharmacology",
+          "required": {
+            "assays": [
+              "cellular engagement assay"
+            ],
+            "models": [
+              "SYN-CONTEXT-B-positive cell line"
+            ],
+            "reagents": [
+              "engagement readout reagent"
+            ]
+          },
+          "role": "characterization",
+          "secondary_endpoints": [
+            "viability across the series"
+          ],
+          "target_proximity": "target_proximal",
+          "time_estimate": "unknown"
+        },
+        "rationale": "Measure engagement and the SYN-CONTEXT-B phenotype across the same concentration series to test whether they align.",
+        "result_claim_id": null,
+        "scenarios": [
+          {
+            "consequence": {
+              "category": "require_orthogonal_validation",
+              "new_uncertainty": null,
+              "statement": "If the curves align, the current evidence would support continued investigation, but alignment alone would not establish dependence and orthogonal validation would be required."
+            },
+            "effects": {
+              "explanation:context": {
+                "effect": "does_not_discriminate",
+                "rationale": "One system."
+              },
+              "explanation:indirect": {
+                "effect": "does_not_discriminate",
+                "rationale": "Not separated."
+              },
+              "explanation:off_target": {
+                "effect": "does_not_discriminate",
+                "rationale": "Alignment does not exclude a co-potent off-target."
+              },
+              "explanation:on_target": {
+                "effect": "strengthens",
+                "rationale": "Exposure alignment."
+              }
+            },
+            "interpretation": "Consistent with, but not proof of, engagement-driven phenotype.",
+            "kind": "supportive",
+            "outcome": "Engagement and phenotype concentration-response curves align.",
+            "scenario_id": "decision:exp:engagement-phenotype-alignment:s1"
+          },
+          {
+            "consequence": {
+              "category": "weaken_current_strategy",
+              "new_uncertainty": null,
+              "statement": "If the phenotype occurs without engagement, an on-target explanation for the compound would be weakened."
+            },
+            "effects": {
+              "explanation:context": {
+                "effect": "does_not_discriminate",
+                "rationale": "One system."
+              },
+              "explanation:indirect": {
+                "effect": "does_not_discriminate",
+                "rationale": "Not separated."
+              },
+              "explanation:off_target": {
+                "effect": "strengthens",
+                "rationale": "Expected off-target pattern."
+              },
+              "explanation:on_target": {
+                "effect": "weakens",
+                "rationale": "Phenotype without engagement."
+              }
+            },
+            "interpretation": "Phenotype is not accounted for by engagement.",
+            "kind": "negative",
+            "outcome": "The phenotype occurs at concentrations without detectable engagement.",
+            "scenario_id": "decision:exp:engagement-phenotype-alignment:s2"
+          },
+          {
+            "consequence": {
+              "category": "require_replication",
+              "new_uncertainty": "assay sensitivity",
+              "statement": "If assay sensitivity is inadequate, the uncertainty would remain open and the assay would need to be improved before repeating."
+            },
+            "effects": {
+              "explanation:context": {
+                "effect": "does_not_discriminate",
+                "rationale": "Technical limitation."
+              },
+              "explanation:indirect": {
+                "effect": "does_not_discriminate",
+                "rationale": "Technical limitation."
+              },
+              "explanation:off_target": {
+                "effect": "does_not_discriminate",
+                "rationale": "Technical limitation."
+              },
+              "explanation:on_target": {
+                "effect": "does_not_discriminate",
+                "rationale": "Technical limitation."
+              }
+            },
+            "interpretation": "No inference is permitted.",
+            "kind": "non_interpretable",
+            "outcome": "Assay sensitivity is inadequate to place engagement across the series.",
+            "scenario_id": "decision:exp:engagement-phenotype-alignment:s3"
+          }
+        ],
+        "status": "proposed",
+        "title": "Concentration-response alignment of engagement and phenotype"
+      },
+      {
+        "endpoint_description": "The same SYN-CONTEXT-B surface phenotype with engagement measured.",
+        "experiment_id": "decision:exp:orthogonal-chemical-probe",
+        "experimental_system": "SYN-CONTEXT-B-positive cell line",
+        "intervention_description": "A second, structurally unrelated SYN-TARGET-A modulator versus the original compound.",
+        "knowledge_kind": "ai_suggestion",
+        "profile": {
+          "addressed_gap_ids": [],
+          "complexity": "high",
+          "confounders_addressed": [
+            "chemotype-specific off-target activity"
+          ],
+          "considered_for": [
+            "selectivity",
+            "target_dependency"
+          ],
+          "context_requirements": {},
+          "controls_negative": [
+            "vehicle",
+            "inactive analogue of the second probe, if established"
+          ],
+          "controls_positive": [],
+          "cost": null,
+          "disease_relevance": "molecular SYN-CONTEXT-B context only; not disease rescue",
+          "experiment_id": "decision:exp:orthogonal-chemical-probe",
+          "limitations": [
+            "Requires a probe that does not yet exist in the curated corpus",
+            "Does not by itself show dependence on SYN-TARGET-A"
+          ],
+          "prerequisites": [
+            [
+              "selective, chemically distinct SYN-TARGET-A probe with cellular engagement",
+              "not_established"
+            ],
+            [
+              "cellular target-engagement readout",
+              "not_established"
+            ]
+          ],
+          "primary_endpoint": "Phenotype reproduced by a chemically distinct modulator with engagement",
+          "purpose": "resolve_selectivity",
+          "required": {
+            "assays": [
+              "cellular engagement assay"
+            ],
+            "models": [
+              "SYN-CONTEXT-B-positive cell line"
+            ],
+            "reagents": [
+              "chemically distinct SYN-TARGET-A probe"
+            ]
+          },
+          "role": "mechanism_discrimination",
+          "secondary_endpoints": [
+            "engagement of each probe"
+          ],
+          "target_proximity": "target_proximal",
+          "time_estimate": "unknown"
+        },
+        "rationale": "Test whether a chemically distinct SYN-TARGET-A modulator with demonstrated engagement reproduces the phenotype, separating chemotype-specific off-target effects from target biology.",
+        "result_claim_id": null,
+        "scenarios": [
+          {
+            "consequence": {
+              "category": "strengthen_current_strategy",
+              "new_uncertainty": null,
+              "statement": "If a distinct probe with engagement reproduces the phenotype, the current evidence would support continuing the SYN-TARGET-A strategy across chemotypes."
+            },
+            "effects": {
+              "explanation:context": {
+                "effect": "does_not_discriminate",
+                "rationale": "One system."
+              },
+              "explanation:indirect": {
+                "effect": "does_not_discriminate",
+                "rationale": "Not separated."
+              },
+              "explanation:off_target": {
+                "effect": "weakens",
+                "rationale": "A shared off-target is less likely."
+              },
+              "explanation:on_target": {
+                "effect": "strengthens",
+                "rationale": "Two chemotypes converge."
+              }
+            },
+            "interpretation": "The phenotype tracks SYN-TARGET-A modulation across chemotypes.",
+            "kind": "supportive",
+            "outcome": "The distinct probe engages SYN-TARGET-A and reproduces the phenotype.",
+            "scenario_id": "decision:exp:orthogonal-chemical-probe:s1"
+          },
+          {
+            "consequence": {
+              "category": "weaken_current_strategy",
+              "new_uncertainty": null,
+              "statement": "If a distinct engaged probe does not reproduce the phenotype, the original phenotype would be attributed to the chemotype and the SYN-TARGET-A strategy would be weakened."
+            },
+            "effects": {
+              "explanation:context": {
+                "effect": "does_not_discriminate",
+                "rationale": "One system."
+              },
+              "explanation:indirect": {
+                "effect": "does_not_discriminate",
+                "rationale": "Not separated."
+              },
+              "explanation:off_target": {
+                "effect": "strengthens",
+                "rationale": "Chemotype-specific effect."
+              },
+              "explanation:on_target": {
+                "effect": "weakens",
+                "rationale": "Engagement without phenotype."
+              }
+            },
+            "interpretation": "The phenotype is specific to the original chemotype.",
+            "kind": "negative",
+            "outcome": "The distinct probe engages SYN-TARGET-A but does not reproduce the phenotype.",
+            "scenario_id": "decision:exp:orthogonal-chemical-probe:s2"
+          },
+          {
+            "consequence": {
+              "category": "require_replication",
+              "new_uncertainty": "availability of a selective probe",
+              "statement": "If no probe qualifies, the selectivity uncertainty would remain open and a suitable probe would need to be established first."
+            },
+            "effects": {
+              "explanation:context": {
+                "effect": "does_not_discriminate",
+                "rationale": "No valid probe."
+              },
+              "explanation:indirect": {
+                "effect": "does_not_discriminate",
+                "rationale": "No valid probe."
+              },
+              "explanation:off_target": {
+                "effect": "does_not_discriminate",
+                "rationale": "No valid probe."
+              },
+              "explanation:on_target": {
+                "effect": "does_not_discriminate",
+                "rationale": "No valid probe."
+              }
+            },
+            "interpretation": "No inference is permitted.",
+            "kind": "non_interpretable",
+            "outcome": "No probe meets the engagement criteria.",
+            "scenario_id": "decision:exp:orthogonal-chemical-probe:s3"
+          }
+        ],
+        "status": "proposed",
+        "title": "Chemically distinct SYN-TARGET-A probe at the same endpoint"
+      },
+      {
+        "endpoint_description": "The same SYN-CONTEXT-B surface phenotype.",
+        "experiment_id": "decision:exp:phenotype-replication",
+        "experimental_system": "The system of the source study",
+        "intervention_description": "Same compound and exposure as the source study.",
+        "knowledge_kind": "ai_suggestion",
+        "profile": {
+          "addressed_gap_ids": [],
+          "complexity": "low",
+          "confounders_addressed": [],
+          "considered_for": [
+            "target_engagement",
+            "reproducibility"
+          ],
+          "context_requirements": {},
+          "controls_negative": [
+            "vehicle"
+          ],
+          "controls_positive": [],
+          "cost": null,
+          "disease_relevance": "molecular SYN-CONTEXT-B context only; not disease rescue",
+          "experiment_id": "decision:exp:phenotype-replication",
+          "limitations": [
+            "Does not measure engagement, dependence or selectivity",
+            "Every outcome weakens or leaves unchanged all compound-based explanations together"
+          ],
+          "prerequisites": [
+            [
+              "validated compound identity (the perturbagen label is not resolved to one substance)",
+              "not_established"
+            ]
+          ],
+          "primary_endpoint": "Reproducibility of the reported surface phenotype",
+          "purpose": "replicate_finding",
+          "required": {
+            "assays": [
+              "SYN-CONTEXT-B surface phenotype assay"
+            ],
+            "models": [
+              "the source study system"
+            ],
+            "reagents": []
+          },
+          "role": "replication",
+          "secondary_endpoints": [],
+          "target_proximity": "downstream",
+          "time_estimate": "unknown"
+        },
+        "rationale": "Repeat the source phenotype assay with more replicates to improve precision. It is listed because it is a common first impulse, not because it addresses engagement.",
+        "result_claim_id": null,
+        "scenarios": [
+          {
+            "consequence": {
+              "category": "continue_current_strategy",
+              "new_uncertainty": null,
+              "statement": "If the phenotype reproduces, the current evidence would be unchanged with respect to SYN-TARGET-A attribution and the uncertainty about engagement would remain."
+            },
+            "effects": {
+              "explanation:context": {
+                "effect": "does_not_discriminate",
+                "rationale": "Same system."
+              },
+              "explanation:indirect": {
+                "effect": "does_not_discriminate",
+                "rationale": "Replication does not test attribution."
+              },
+              "explanation:off_target": {
+                "effect": "does_not_discriminate",
+                "rationale": "Replication does not test attribution."
+              },
+              "explanation:on_target": {
+                "effect": "does_not_discriminate",
+                "rationale": "Replication does not test attribution."
+              }
+            },
+            "interpretation": "Improves confidence that the phenotype is reproducible; says nothing about its cause.",
+            "kind": "supportive",
+            "outcome": "The phenotype reproduces with the same direction and similar magnitude.",
+            "scenario_id": "decision:exp:phenotype-replication:s1"
+          },
+          {
+            "consequence": {
+              "category": "require_replication",
+              "new_uncertainty": null,
+              "statement": "If the phenotype does not reproduce, all compound-based explanations would weaken together and the original finding would need independent replication before any strategy decision."
+            },
+            "effects": {
+              "explanation:context": {
+                "effect": "does_not_discriminate",
+                "rationale": "Same system."
+              },
+              "explanation:indirect": {
+                "effect": "weakens",
+                "rationale": "No phenotype to attribute."
+              },
+              "explanation:off_target": {
+                "effect": "weakens",
+                "rationale": "No phenotype to attribute."
+              },
+              "explanation:on_target": {
+                "effect": "weakens",
+                "rationale": "No phenotype to attribute."
+              }
+            },
+            "interpretation": "The original phenotype is not robust in this setting.",
+            "kind": "negative",
+            "outcome": "The phenotype does not reproduce.",
+            "scenario_id": "decision:exp:phenotype-replication:s2"
+          },
+          {
+            "consequence": {
+              "category": "require_replication",
+              "new_uncertainty": "assay validity",
+              "statement": "If the assay is non-interpretable, nothing would change and the assay would need to be repeated."
+            },
+            "effects": {
+              "explanation:context": {
+                "effect": "does_not_discriminate",
+                "rationale": "Technical failure."
+              },
+              "explanation:indirect": {
+                "effect": "does_not_discriminate",
+                "rationale": "Technical failure."
+              },
+              "explanation:off_target": {
+                "effect": "does_not_discriminate",
+                "rationale": "Technical failure."
+              },
+              "explanation:on_target": {
+                "effect": "does_not_discriminate",
+                "rationale": "Technical failure."
+              }
+            },
+            "interpretation": "No inference is permitted.",
+            "kind": "non_interpretable",
+            "outcome": "The assay fails its quality criteria.",
+            "scenario_id": "decision:exp:phenotype-replication:s3"
+          }
+        ],
+        "status": "proposed",
+        "title": "Repeat the reported SYN-CONTEXT-B phenotype with additional replicates"
+      }
+    ],
+    "explanations": [
+      {
+        "created_by": "AXIS AI-assisted suggestion",
+        "epistemic_kind": "alternative_mechanistic_explanation",
+        "ground": "context_dependent",
+        "hypothesis_id": "AXIS-SYN-TARGET-A-CURATED-HYP-001",
+        "hypothesis_revision": 1,
+        "id": "explanation:context",
+        "knowledge_kind": "ai_suggestion",
+        "label": "Context-dependent effect",
+        "project_id": "AXIS-DD-SYN-TARGET-A-CURATED-001",
+        "statement": "The effect depends on SYN-CONTEXT-B subtype or SYN-TARGET-A allotype context rather than being a general consequence of SYN-TARGET-A modulation.",
+        "supersedes_id": null
+      },
+      {
+        "created_by": "AXIS AI-assisted suggestion",
+        "epistemic_kind": "alternative_mechanistic_explanation",
+        "ground": "indirect_pathway",
+        "hypothesis_id": "AXIS-SYN-TARGET-A-CURATED-HYP-001",
+        "hypothesis_revision": 1,
+        "id": "explanation:indirect",
+        "knowledge_kind": "ai_suggestion",
+        "label": "Indirect pathway",
+        "project_id": "AXIS-DD-SYN-TARGET-A-CURATED-001",
+        "statement": "SYN-TARGET-A is perturbed, but the SYN-CONTEXT-B-related phenotype arises through an indirect pathway rather than proximal catalytic modulation.",
+        "supersedes_id": null
+      },
+      {
+        "created_by": "AXIS AI-assisted suggestion",
+        "epistemic_kind": "alternative_mechanistic_explanation",
+        "ground": "off_target",
+        "hypothesis_id": "AXIS-SYN-TARGET-A-CURATED-HYP-001",
+        "hypothesis_revision": 1,
+        "id": "explanation:off_target",
+        "knowledge_kind": "ai_suggestion",
+        "label": "Off-target activity",
+        "project_id": "AXIS-DD-SYN-TARGET-A-CURATED-001",
+        "statement": "The phenotype arises primarily from compound activity at targets other than SYN-TARGET-A (for example ERAP2 or unrelated proteins).",
+        "supersedes_id": null
+      },
+      {
+        "created_by": "AXIS AI-assisted suggestion",
+        "epistemic_kind": "alternative_mechanistic_explanation",
+        "ground": "on_target",
+        "hypothesis_id": "AXIS-SYN-TARGET-A-CURATED-HYP-001",
+        "hypothesis_revision": 1,
+        "id": "explanation:on_target",
+        "knowledge_kind": "ai_suggestion",
+        "label": "On-target SYN-TARGET-A modulation",
+        "project_id": "AXIS-DD-SYN-TARGET-A-CURATED-001",
+        "statement": "The SYN-CONTEXT-B-related cellular phenotype produced by the compounds arises from direct modulation of SYN-TARGET-A in those cells.",
+        "supersedes_id": null
+      }
+    ],
+    "hypothesis": {
+      "description": "Pharmacological modulation of SYN-TARGET-A can alter SYN-CONTEXT-B-related antigen-processing biology in a direction relevant to synthetic disease C in appropriate genetic and cellular contexts.",
+      "id": "AXIS-SYN-TARGET-A-CURATED-HYP-001",
+      "revision": 1,
+      "state": "draft",
+      "title": "Pharmacological SYN-TARGET-A modulation as an SYN-DISEASE-C intervention strategy (working formulation)"
+    }
+  }
+}

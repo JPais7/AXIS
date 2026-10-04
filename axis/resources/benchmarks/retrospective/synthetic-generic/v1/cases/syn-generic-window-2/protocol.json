@@ -1,0 +1,33 @@
+{
+  "availability_sha256": "6c41d7d5499cc3993b2ec54ed6aafdb562535db3a3a88ebccf7f90b3222ee2f6",
+  "benchmark_kind": "synthetic_test",
+  "case_id": "syn-generic-window-2",
+  "case_type": "synthetic_generic_negative_future",
+  "cutoff": "2019-12-31",
+  "cutoff_id": "T-2019-12-31",
+  "cutoff_rationale": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE: invented cutoff",
+  "dimensions_declared_before_run": [
+    "temporal_integrity",
+    "decision_validity_at_cutoff",
+    "uncertainty_calibration",
+    "recommendation_relevance",
+    "future_evidence_relevance",
+    "evidence_update_behavior",
+    "overstated_claims",
+    "baseline_comparison"
+  ],
+  "future_sha256": "57cd975043d9952607386d78dfc0bd99be94285c9331f2a9663a3670a7c20876",
+  "label": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE",
+  "pre_declared_expectation": "No outcome predicted; each dimension is assessed separately.",
+  "protocol_fingerprint": "bfd8add1039b8e0e8a37881fb9036306b41bf399cddf3877258017b9408ffcf7",
+  "question": "Does a later negative engagement result weaken the decision?",
+  "review_mode": "exploratory",
+  "rules_fingerprint": "184a1e2949a61e362545e897de43890014bcdcac7191f621c84fb2b739cecd33",
+  "rules_version": "axis-decision-3",
+  "schema": "axis-retrospective-benchmark-1",
+  "selection_rationale": "Synthetic: compound 1 engaged; compound 2 later negative.",
+  "set_id": "synthetic-generic",
+  "synthetic": true,
+  "template_sha256": "8830832a93673a25485754e18477073ae2f25b4917caed212d6dee56cdea8c3e",
+  "window_sha256": "a18085f2ff7e0eb0f2ec8be6e30bd7fb70ef68c87abe01c5791a09327aa556a6"
+}

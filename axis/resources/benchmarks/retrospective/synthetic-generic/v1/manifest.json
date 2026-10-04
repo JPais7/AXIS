@@ -1,0 +1,34 @@
+{
+  "benchmark_kind": "synthetic_test",
+  "cases": [
+    "syn-generic-positive",
+    "syn-generic-negative",
+    "syn-generic-ambiguous",
+    "syn-generic-irrelevant",
+    "syn-generic-undated"
+  ],
+  "files": {
+    "cases/syn-generic-ambiguous/future.json": "bef0e33cda25139aa069532f4c87447ac1af2f0a3e5efd2ec0b34049cfac271c",
+    "cases/syn-generic-ambiguous/protocol.json": "32c2ec43b31df79b66ce1f0bc10bca8525ae8f598c05d421d0248fa1cfbec151",
+    "cases/syn-generic-ambiguous/window.json": "a4cfe649cb699f7ed6ae40b4f709e74da18914df51a1a8b7d6d4f91f087c9f4f",
+    "cases/syn-generic-irrelevant/future.json": "60eac65d37640e83cf6a13b61ad27922b3c7c305f2e7fa77191ae23111dc2e0e",
+    "cases/syn-generic-irrelevant/protocol.json": "7ed4d8c510ed287d8b7e1ac7daec740f90a77c881b4f2d84dc5bc8ee445abb0c",
+    "cases/syn-generic-irrelevant/window.json": "693df24d21a8f5a9ffc9b7ea1518ddd9eed883f4291bd7124dd0ce2ebbc7ffc9",
+    "cases/syn-generic-negative/future.json": "a1b5f3f804a7a5bfdd93f09740653a208a32f2d876aae447b256b76536649163",
+    "cases/syn-generic-negative/protocol.json": "f6a3c1b5e239bfe6afbbdc6602134652901770cbf178e213a0300013624090b0",
+    "cases/syn-generic-negative/window.json": "a4cfe649cb699f7ed6ae40b4f709e74da18914df51a1a8b7d6d4f91f087c9f4f",
+    "cases/syn-generic-positive/future.json": "5e5fadb52e4315d5a88c6ab8a8d996d422fa90a756c85f607409d0500bbbb8aa",
+    "cases/syn-generic-positive/protocol.json": "0c12808aa86132b52e56cd85cedce5930c4b935d0ccc39a7139c87a62a4fbc19",
+    "cases/syn-generic-positive/window.json": "a4cfe649cb699f7ed6ae40b4f709e74da18914df51a1a8b7d6d4f91f087c9f4f",
+    "cases/syn-generic-undated/future.json": "46328756d3748f4b49935f38e4123a9c319908e8c8d7586b77d3770fbe283e76",
+    "cases/syn-generic-undated/protocol.json": "865c6d43fcf9317c6dd2b06a09ec805101e2cf470684a6d1a51d6d2e5f6e8feb",
+    "cases/syn-generic-undated/window.json": "4fde4b0992a589d2b7d8c7f0a24aff1bdbc0b2695e4cc270ef2d77c89ec96a82",
+    "decision-template.json": "fdec62a52510ea7e0dfe1afae93988d25b97a9fce77cd69b027dfef2652790a8",
+    "temporal-availability.json": "20d3d3362c7356c01d0cc1020c3d76bcc709d32a6b7339bebcfe88ffc58681b2"
+  },
+  "schema": "axis-retrospective-benchmark-1",
+  "selection_bias_note": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE. Fixtures were constructed to exercise the machinery; they are not a sample of anything.",
+  "set_id": "synthetic-generic",
+  "synthetic": true,
+  "title": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE \u2014 generic non-ERAP1 acceptance fixtures"
+}

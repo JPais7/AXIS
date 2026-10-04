@@ -1,0 +1,40 @@
+{
+  "availability_sha256": "20d3d3362c7356c01d0cc1020c3d76bcc709d32a6b7339bebcfe88ffc58681b2",
+  "benchmark_kind": "synthetic_test",
+  "case_id": "syn-generic-positive",
+  "case_type": "synthetic_generic_positive_path",
+  "cutoff": "2019-01-01",
+  "cutoff_id": "T-2019-01-01",
+  "cutoff_rationale": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE: invented cutoff",
+  "dimensions_declared_before_run": [
+    "temporal_integrity",
+    "decision_validity_at_cutoff",
+    "uncertainty_calibration",
+    "recommendation_relevance",
+    "future_evidence_relevance",
+    "evidence_update_behavior",
+    "overstated_claims",
+    "baseline_comparison"
+  ],
+  "excluded_beyond_horizon_records": 3,
+  "excluded_sources_by_design": [
+    "SYN:S3",
+    "SYN:S7"
+  ],
+  "excluded_undated_records": 2,
+  "future_sha256": "5e5fadb52e4315d5a88c6ab8a8d996d422fa90a756c85f607409d0500bbbb8aa",
+  "horizon": "2019-12-31",
+  "label": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE",
+  "pre_declared_expectation": "No outcome predicted; each dimension is assessed separately.",
+  "protocol_fingerprint": "8a8be547b5a58faf98e3d2dec694ff64b3fa56603015635bcc34d8bdb4f89488",
+  "question": "Does later engagement evidence for the compound test the stated question?",
+  "review_mode": "exploratory",
+  "rules_fingerprint": "184a1e2949a61e362545e897de43890014bcdcac7191f621c84fb2b739cecd33",
+  "rules_version": "axis-decision-3",
+  "schema": "axis-retrospective-benchmark-1",
+  "selection_rationale": "Synthetic: compound active biochemically and in cells, engagement open.",
+  "set_id": "synthetic-generic",
+  "synthetic": true,
+  "template_sha256": "fdec62a52510ea7e0dfe1afae93988d25b97a9fce77cd69b027dfef2652790a8",
+  "window_sha256": "a4cfe649cb699f7ed6ae40b4f709e74da18914df51a1a8b7d6d4f91f087c9f4f"
+}

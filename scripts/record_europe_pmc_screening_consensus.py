@@ -6,8 +6,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 REVIEW = (
-    ROOT
-    / "data/analysis/single-cell-validation/CD8-evidence-review/"
+    ROOT / "data/analysis/single-cell-validation/CD8-evidence-review/"
     "europe-pmc-2026-07-30"
 )
 SOURCE = REVIEW / "records-screening.tsv"

@@ -17,7 +17,9 @@ ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "data/publication/ddx24-study/manuscript-draft.md"
 FIGURES = ROOT / "data/publication/ddx24-study/figures"
 STUDIES = ROOT / "data/publication/ddx24-study/study-characteristics.tsv"
-OUTPUT = ROOT / "data/publication/ddx24-study/DDX24_article_Joao_Pais_Diana_Koshman.docx"
+OUTPUT = (
+    ROOT / "data/publication/ddx24-study/DDX24_article_Joao_Pais_Diana_Koshman.docx"
+)
 
 NAVY = RGBColor(31, 77, 120)
 BLUE = RGBColor(46, 116, 181)
@@ -25,8 +27,14 @@ GRAY = RGBColor(90, 98, 108)
 LIGHT = "E8EEF5"
 
 
-def set_font(run, *, size: float, bold: bool = False, italic: bool = False,
-             color: RGBColor | None = None) -> None:
+def set_font(
+    run,
+    *,
+    size: float,
+    bold: bool = False,
+    italic: bool = False,
+    color: RGBColor | None = None,
+) -> None:
     run.font.name = "Calibri"
     run._element.get_or_add_rPr().rFonts.set(qn("w:ascii"), "Calibri")
     run._element.get_or_add_rPr().rFonts.set(qn("w:hAnsi"), "Calibri")
@@ -106,8 +114,9 @@ def add_cover(doc: Document) -> None:
         doc.add_paragraph()
     kicker = doc.add_paragraph()
     kicker.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    set_font(kicker.add_run("ORIGINAL RESEARCH ARTICLE"), size=10, bold=True,
-             color=BLUE)
+    set_font(
+        kicker.add_run("ORIGINAL RESEARCH ARTICLE"), size=10, bold=True, color=BLUE
+    )
     kicker.paragraph_format.space_after = Pt(18)
 
     title = doc.add_paragraph()
@@ -115,8 +124,7 @@ def add_cover(doc: Document) -> None:
     title.paragraph_format.space_after = Pt(14)
     set_font(
         title.add_run(
-            "Recurrent context-dependent reduction of DDX24 in "
-            "ankylosing spondylitis"
+            "Recurrent context-dependent reduction of DDX24 in ankylosing spondylitis"
         ),
         size=25,
         bold=True,

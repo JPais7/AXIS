@@ -13,8 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "publication" / "axis-methods"
 DOCX = OUT / "AXIS_methods_manuscript_Joao_Pais_Diana_Koshman.docx"
 VALIDATION_FIGURE = (
-    ROOT
-    / "benchmarks/comparison/multi-cohort-validation/axis-limma-validation.png"
+    ROOT / "benchmarks/comparison/multi-cohort-validation/axis-limma-validation.png"
 )
 
 NAVY = "17365D"
@@ -160,7 +159,11 @@ def configure(doc):
     normal.font.name = "Aptos"
     normal.font.size = Pt(10.5)
     normal.paragraph_format.space_after = Pt(6)
-    for name, size, color in (("Heading 1", 16, NAVY), ("Heading 2", 12.5, BLUE), ("Heading 3", 11, NAVY)):
+    for name, size, color in (
+        ("Heading 1", 16, NAVY),
+        ("Heading 2", 12.5, BLUE),
+        ("Heading 3", 11, NAVY),
+    ):
         style = styles[name]
         style.font.name = "Aptos Display"
         style.font.size = Pt(size)
@@ -170,7 +173,11 @@ def configure(doc):
         style.paragraph_format.space_after = Pt(4)
     header = section.header.paragraphs[0]
     header.alignment = WD_ALIGN_PARAGRAPH.RIGHT
-    font(header.add_run("AXIS | Software and methods manuscript | Draft 2.0"), size=8.5, color=GRAY)
+    font(
+        header.add_run("AXIS | Software and methods manuscript | Draft 2.0"),
+        size=8.5,
+        color=GRAY,
+    )
     footer = section.footer.paragraphs[0]
     footer.alignment = WD_ALIGN_PARAGRAPH.CENTER
     field = OxmlElement("w:fldSimple")
@@ -191,66 +198,167 @@ def build():
     p = doc.add_paragraph()
     p.alignment = WD_ALIGN_PARAGRAPH.CENTER
     p.paragraph_format.space_after = Pt(18)
-    font(p.add_run("An auditable, participant-aware workflow for cross-study molecular evidence synthesis and therapeutic hypothesis generation"), size=15, color=BLUE)
+    font(
+        p.add_run(
+            "An auditable, participant-aware workflow for cross-study molecular evidence synthesis and therapeutic hypothesis generation"
+        ),
+        size=15,
+        color=BLUE,
+    )
     p = doc.add_paragraph()
     p.alignment = WD_ALIGN_PARAGRAPH.CENTER
     font(p.add_run("João Pais and Diana Koshman"), size=12, bold=True)
     p = doc.add_paragraph()
     p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    font(p.add_run("Independent researchers; no institutional affiliation"), size=10, italic=True, color=GRAY)
+    font(
+        p.add_run("Independent researchers; no institutional affiliation"),
+        size=10,
+        italic=True,
+        color=GRAY,
+    )
     p = doc.add_paragraph()
     p.alignment = WD_ALIGN_PARAGRAPH.CENTER
     p.paragraph_format.space_before = Pt(30)
-    font(p.add_run("Software and methods manuscript - pre-submission draft"), size=10.5, bold=True, color=NAVY)
+    font(
+        p.add_run("Software and methods manuscript - pre-submission draft"),
+        size=10.5,
+        bold=True,
+        color=NAVY,
+    )
     p = doc.add_paragraph()
     p.alignment = WD_ALIGN_PARAGRAPH.CENTER
     font(p.add_run("Draft 2.0 | 2 August 2026"), size=9.5, color=GRAY)
 
     doc.add_page_break()
     add_heading(doc, "Abstract")
-    add_body(doc, "Public molecular datasets can support therapeutic hypothesis generation, but reuse is hindered by inconsistent sample metadata, incompatible tissues and assays, pseudoreplication, and weak provenance. AXIS is an open-source Python platform that organizes study discovery, eligibility review, expression analysis, cross-cohort synthesis, single-cell pseudobulk validation, target evidence integration, and frozen reproduction as one guarded workflow. It distinguishes discovery, independent validation, sensitivity analysis, mechanistic evidence, and treatment response; preserves participant-level independence; and records checksums and method decisions for audit. In an axial-spondyloarthritis case study, AXIS synthesized DDX24 expression in two compatible CD8 cohorts (14 cases and 33 controls) and retained a broader third CD8 cohort as sensitivity evidence. Technical validation against native limma covered four GEO cohorts, 163 samples, three microarray platforms and an additional covariate-adjusted analysis. Effect rankings, adjusted-p-value rankings and leading probe lists were concordant. The current suite contains 146 automated tests and passes on Linux, macOS and Windows. AXIS is intended as research software for generating falsifiable priorities, not as an autonomous drug-discovery or clinical decision system.")
-    add_body(doc, "Keywords: axial spondyloarthritis; transcriptomics; single-cell RNA sequencing; pseudobulk; meta-analysis; target prioritization; reproducible research")
+    add_body(
+        doc,
+        "Public molecular datasets can support therapeutic hypothesis generation, but reuse is hindered by inconsistent sample metadata, incompatible tissues and assays, pseudoreplication, and weak provenance. AXIS is an open-source Python platform that organizes study discovery, eligibility review, expression analysis, cross-cohort synthesis, single-cell pseudobulk validation, target evidence integration, and frozen reproduction as one guarded workflow. It distinguishes discovery, independent validation, sensitivity analysis, mechanistic evidence, and treatment response; preserves participant-level independence; and records checksums and method decisions for audit. In an axial-spondyloarthritis case study, AXIS synthesized DDX24 expression in two compatible CD8 cohorts (14 cases and 33 controls) and retained a broader third CD8 cohort as sensitivity evidence. Technical validation against native limma covered four GEO cohorts, 163 samples, three microarray platforms and an additional covariate-adjusted analysis. Effect rankings, adjusted-p-value rankings and leading probe lists were concordant. The current suite contains 146 automated tests and passes on Linux, macOS and Windows. AXIS is intended as research software for generating falsifiable priorities, not as an autonomous drug-discovery or clinical decision system.",
+    )
+    add_body(
+        doc,
+        "Keywords: axial spondyloarthritis; transcriptomics; single-cell RNA sequencing; pseudobulk; meta-analysis; target prioritization; reproducible research",
+    )
 
     add_heading(doc, "1. Summary")
-    add_body(doc, "AXIS converts heterogeneous public molecular evidence into traceable research hypotheses. Its central design principle is that more records do not automatically mean more evidence: studies enter a synthesis only when their disease definition, biological material, assay, comparison, and participant structure support the declared question. In single-cell analyses, cells are aggregated within participants so that the biological participant, rather than each cell, remains the statistical unit. The platform then keeps compatible primary evidence separate from broader sensitivity evidence.")
+    add_body(
+        doc,
+        "AXIS converts heterogeneous public molecular evidence into traceable research hypotheses. Its central design principle is that more records do not automatically mean more evidence: studies enter a synthesis only when their disease definition, biological material, assay, comparison, and participant structure support the declared question. In single-cell analyses, cells are aggregated within participants so that the biological participant, rather than each cell, remains the statistical unit. The platform then keeps compatible primary evidence separate from broader sensitivity evidence.",
+    )
 
     add_heading(doc, "2. Statement of need")
-    add_body(doc, "Repositories such as the NCBI Gene Expression Omnibus provide access to high-throughput functional genomics studies [1]. However, the metadata needed for secondary disease research are frequently encoded in free text, and apparently similar studies may differ in tissue, cell state, treatment exposure, platform, or unit of replication. A naive pipeline can therefore inflate sample size, combine incompatible effects, or rediscover the same participants under multiple accessions.")
-    add_body(doc, "AXIS addresses this gap by making eligibility, provenance, and allowed scientific use first-class objects. It is designed for investigators who need to move from a broad repository search to a small set of defensible, testable claims without concealing uncertainty behind a single opaque score.")
+    add_body(
+        doc,
+        "Repositories such as the NCBI Gene Expression Omnibus provide access to high-throughput functional genomics studies [1]. However, the metadata needed for secondary disease research are frequently encoded in free text, and apparently similar studies may differ in tissue, cell state, treatment exposure, platform, or unit of replication. A naive pipeline can therefore inflate sample size, combine incompatible effects, or rediscover the same participants under multiple accessions.",
+    )
+    add_body(
+        doc,
+        "AXIS addresses this gap by making eligibility, provenance, and allowed scientific use first-class objects. It is designed for investigators who need to move from a broad repository search to a small set of defensible, testable claims without concealing uncertainty behind a single opaque score.",
+    )
 
     add_heading(doc, "3. Software design")
-    add_table(doc, ["Stage", "Purpose", "Guardrail"], [
-        ("Discovery", "Search and deduplicate GEO, BioStudies/ArrayExpress and SRA records.", "A repository record is not counted as an eligible cohort."),
-        ("Eligibility", "Review disease, tissue, assay, design, treatment and participant independence.", "Approvals are role-specific and invalidated when analyzed inputs change."),
-        ("Analysis", "Run QC, bulk differential analysis, or participant-level single-cell pseudobulk.", "Outliers are flagged, not silently removed; cells are not independent replicates."),
-        ("Synthesis", "Assess recurrence, directional concordance, validation and random-effects summaries.", "Incompatible scales and cell definitions remain stratified."),
-        ("Translation", "Join genetic, mechanistic, tractability, safety, structure and drug evidence.", "Expression direction is not substituted for causal therapeutic direction."),
-        ("Reproduction", "Verify frozen inputs, lockfile, numerical outputs and claim constraints offline.", "Checksum or scientific-guardrail failures stop the run."),
-    ], [1450, 3880, 4030])
+    add_table(
+        doc,
+        ["Stage", "Purpose", "Guardrail"],
+        [
+            (
+                "Discovery",
+                "Search and deduplicate GEO, BioStudies/ArrayExpress and SRA records.",
+                "A repository record is not counted as an eligible cohort.",
+            ),
+            (
+                "Eligibility",
+                "Review disease, tissue, assay, design, treatment and participant independence.",
+                "Approvals are role-specific and invalidated when analyzed inputs change.",
+            ),
+            (
+                "Analysis",
+                "Run QC, bulk differential analysis, or participant-level single-cell pseudobulk.",
+                "Outliers are flagged, not silently removed; cells are not independent replicates.",
+            ),
+            (
+                "Synthesis",
+                "Assess recurrence, directional concordance, validation and random-effects summaries.",
+                "Incompatible scales and cell definitions remain stratified.",
+            ),
+            (
+                "Translation",
+                "Join genetic, mechanistic, tractability, safety, structure and drug evidence.",
+                "Expression direction is not substituted for causal therapeutic direction.",
+            ),
+            (
+                "Reproduction",
+                "Verify frozen inputs, lockfile, numerical outputs and claim constraints offline.",
+                "Checksum or scientific-guardrail failures stop the run.",
+            ),
+        ],
+        [1450, 3880, 4030],
+    )
 
     add_heading(doc, "3.1 Evidence and provenance model", 2)
-    add_body(doc, "AXIS stores scientific entities, contextual claims, source assertions, calculated evidence, researcher hypotheses, and immutable provenance separately. A local DuckDB evidence store supports versioned migrations and append-only hypothesis revision. Download manifests record source locations, retrieval times, sizes, and SHA-256 checksums. Eligibility decisions are bound to checksums of the analyzed results, preventing an approval from silently surviving reanalysis.")
+    add_body(
+        doc,
+        "AXIS stores scientific entities, contextual claims, source assertions, calculated evidence, researcher hypotheses, and immutable provenance separately. A local DuckDB evidence store supports versioned migrations and append-only hypothesis revision. Download manifests record source locations, retrieval times, sizes, and SHA-256 checksums. Eligibility decisions are bound to checksums of the analyzed results, preventing an approval from silently surviving reanalysis.",
+    )
 
     add_heading(doc, "3.2 Statistical safeguards", 2)
-    add_body(doc, "For microarrays, AXIS supports probe-to-gene mapping, multiple-testing correction, a two-group moderated model, and declared covariate designs. Cross-study recurrence requires same-direction support and does not pool incompatible raw effect scales. For single-cell RNA sequencing, counts are aggregated by participant and cell type before comparison. This follows evidence that methods accounting for the dependence of cells within individuals, including pseudobulk approaches, provide more reliable differential-expression inference [2]. Random-effects summaries are reserved for contrasts with sufficiently compatible definitions.")
+    add_body(
+        doc,
+        "For microarrays, AXIS supports probe-to-gene mapping, multiple-testing correction, a two-group moderated model, and declared covariate designs. Cross-study recurrence requires same-direction support and does not pool incompatible raw effect scales. For single-cell RNA sequencing, counts are aggregated by participant and cell type before comparison. This follows evidence that methods accounting for the dependence of cells within individuals, including pseudobulk approaches, provide more reliable differential-expression inference [2]. Random-effects summaries are reserved for contrasts with sufficiently compatible definitions.",
+    )
 
     add_heading(doc, "3.3 Therapeutic evidence", 2)
-    add_body(doc, "Candidate genes can be linked to Open Targets evidence covering disease association, human genetics, tractability, clinical precedent, safety and target-prioritization properties [3,4]. These dimensions remain visible rather than being collapsed into a proprietary score. Protein structure and pharmacology are downstream filters: neither an AlphaFold model nor an existing ligand can rescue a target that lacks replicated biological evidence or a defensible causal direction.")
+    add_body(
+        doc,
+        "Candidate genes can be linked to Open Targets evidence covering disease association, human genetics, tractability, clinical precedent, safety and target-prioritization properties [3,4]. These dimensions remain visible rather than being collapsed into a proprietary score. Protein structure and pharmacology are downstream filters: neither an AlphaFold model nor an existing ligand can rescue a target that lacks replicated biological evidence or a defensible causal direction.",
+    )
 
     add_heading(doc, "4. Case study: DDX24 in CD8 T cells")
-    add_body(doc, "The current demonstration asks whether DDX24 expression differs in CD8 T cells from people with axial or ankylosing spondylitis and healthy controls. Two compatible participant-level cohorts form the primary synthesis: 14 cases and 33 controls. The random-effects estimate is -0.148 (95% confidence interval -0.272 to -0.024; p=0.019). A third, broader CD8 cohort is sensitivity-only because its cellular definition is less specific. With that cohort, the synthesis contains 51 participants and retains the same direction (estimate -0.145; 95% confidence interval -0.249 to -0.041; p=0.006). These results support an association, not causality, target validity, or treatment benefit.")
-    add_table(doc, ["Evidence role", "Cohorts", "Participants", "Interpretation"], [
-        ("Primary CD8 synthesis", "2", "47", "Compatible CD8 definitions; associative evidence."),
-        ("Broad-CD8 sensitivity", "3", "51", "Directional robustness under a broader cellular definition."),
-        ("Excluded pooled dataset", "0 added", "Not estimable", "One pooled library per group cannot establish participant-level replication."),
-    ], [2050, 1100, 1400, 4810])
+    add_body(
+        doc,
+        "The current demonstration asks whether DDX24 expression differs in CD8 T cells from people with axial or ankylosing spondylitis and healthy controls. Two compatible participant-level cohorts form the primary synthesis: 14 cases and 33 controls. The random-effects estimate is -0.148 (95% confidence interval -0.272 to -0.024; p=0.019). A third, broader CD8 cohort is sensitivity-only because its cellular definition is less specific. With that cohort, the synthesis contains 51 participants and retains the same direction (estimate -0.145; 95% confidence interval -0.249 to -0.041; p=0.006). These results support an association, not causality, target validity, or treatment benefit.",
+    )
+    add_table(
+        doc,
+        ["Evidence role", "Cohorts", "Participants", "Interpretation"],
+        [
+            (
+                "Primary CD8 synthesis",
+                "2",
+                "47",
+                "Compatible CD8 definitions; associative evidence.",
+            ),
+            (
+                "Broad-CD8 sensitivity",
+                "3",
+                "51",
+                "Directional robustness under a broader cellular definition.",
+            ),
+            (
+                "Excluded pooled dataset",
+                "0 added",
+                "Not estimable",
+                "One pooled library per group cannot establish participant-level replication.",
+            ),
+        ],
+        [2050, 1100, 1400, 4810],
+    )
 
     add_heading(doc, "5. Verification and reproducibility")
-    add_body(doc, "On 2 August 2026, the complete suite passed 146 of 146 tests. Ruff and strict mypy checks also passed. GitHub Actions reproduced the checks with Python 3.12 on Linux, macOS and Windows. A packaged synthetic demonstration runs without distributing participant-level source data. The DDX24 offline reproduction verifies three frozen participant-level inputs and the Poetry lockfile by SHA-256, recomputes the primary and sensitivity summaries, compares numerical values within tight tolerances, and enforces 25 scientific and computational checks.")
+    add_body(
+        doc,
+        "On 2 August 2026, the complete suite passed 146 of 146 tests. Ruff and strict mypy checks also passed. GitHub Actions reproduced the checks with Python 3.12 on Linux, macOS and Windows. A packaged synthetic demonstration runs without distributing participant-level source data. The DDX24 offline reproduction verifies three frozen participant-level inputs and the Poetry lockfile by SHA-256, recomputes the primary and sensitivity summaries, compares numerical values within tight tolerances, and enforces 25 scientific and computational checks.",
+    )
 
     add_heading(doc, "5.1 Native-limma technical validation", 2)
-    add_body(doc, "AXIS differential-expression results were compared with native limma 3.68.4 under R 4.6.1 in four public GEO cohorts: GSE18781/GPL570, GSE25101/GPL6947, GSE73754/GPL10558 and GSE11886/GPL570. Together, the comparisons covered 163 samples and three platform contexts. Across all four unadjusted contrasts, every probe-level effect direction agreed, effect Spearman correlations were approximately 1.0, adjusted-p-value Spearman correlations were 1.0, and the top-100 and top-500 probe sets overlapped completely. Maximum absolute effect differences were below 5.2 x 10^-12.")
-    add_body(doc, "A separate GSE73754 comparison used the declared covariate-adjusted design containing group, sex, age and numeric batch. Across 47,323 shared probes, effect and adjusted-p-value rankings were concordant, all directions agreed, the top-100 and top-500 sets overlapped completely, and the maximum absolute effect difference was 4.52 x 10^-12. An offline synthetic regression test freezes a native-limma reference so that routine continuous integration can detect future changes in coefficients, directions and rankings without requiring R.")
+    add_body(
+        doc,
+        "AXIS differential-expression results were compared with native limma 3.68.4 under R 4.6.1 in four public GEO cohorts: GSE18781/GPL570, GSE25101/GPL6947, GSE73754/GPL10558 and GSE11886/GPL570. Together, the comparisons covered 163 samples and three platform contexts. Across all four unadjusted contrasts, every probe-level effect direction agreed, effect Spearman correlations were approximately 1.0, adjusted-p-value Spearman correlations were 1.0, and the top-100 and top-500 probe sets overlapped completely. Maximum absolute effect differences were below 5.2 x 10^-12.",
+    )
+    add_body(
+        doc,
+        "A separate GSE73754 comparison used the declared covariate-adjusted design containing group, sex, age and numeric batch. Across 47,323 shared probes, effect and adjusted-p-value rankings were concordant, all directions agreed, the top-100 and top-500 sets overlapped completely, and the maximum absolute effect difference was 4.52 x 10^-12. An offline synthetic regression test freezes a native-limma reference so that routine continuous integration can detect future changes in coefficients, directions and rankings without requiring R.",
+    )
 
     p = doc.add_paragraph()
     p.alignment = WD_ALIGN_PARAGRAPH.CENTER
@@ -267,36 +375,62 @@ def build():
     caption.paragraph_format.space_after = Pt(8)
     caption.paragraph_format.keep_together = True
     font(caption.add_run("Figure 1. "), size=9, bold=True)
-    font(caption.add_run("Technical agreement between AXIS and native limma. Four unadjusted GEO contrasts and one covariate-adjusted contrast show near-perfect effect correlation, complete leading-list overlap and numerical differences on the order of 10^-12. This validates implementation for the tested designs; it does not establish biological truth or clinical validity."), size=9)
+    font(
+        caption.add_run(
+            "Technical agreement between AXIS and native limma. Four unadjusted GEO contrasts and one covariate-adjusted contrast show near-perfect effect correlation, complete leading-list overlap and numerical differences on the order of 10^-12. This validates implementation for the tested designs; it does not establish biological truth or clinical validity."
+        ),
+        size=9,
+    )
 
-    add_body(doc, "These results demonstrate cross-platform re-executability, claim binding and numerical agreement for the tested microarray designs. They do not demonstrate that AXIS is biologically correct in every setting, superior to limma, or equivalent for paired designs, RNA sequencing, single-cell models or untested covariate structures.")
+    add_body(
+        doc,
+        "These results demonstrate cross-platform re-executability, claim binding and numerical agreement for the tested microarray designs. They do not demonstrate that AXIS is biologically correct in every setting, superior to limma, or equivalent for paired designs, RNA sequencing, single-cell models or untested covariate structures.",
+    )
 
     add_heading(doc, "6. Research impact and intended use")
-    add_body(doc, "AXIS has already supported a structured axial-spondyloarthritis case study and the preparation of a prospective DDX24 laboratory validation protocol. Its intended impact is methodological: to make the path from public data to experiment selection more conservative, inspectable, and reproducible. The platform can be adapted through a research manifest defining disease, population, tissue, cell type, comparison, treatments, and exclusion criteria. It should be used to prioritize experiments and evidence gaps, not to recommend treatment or claim clinical efficacy.")
+    add_body(
+        doc,
+        "AXIS has already supported a structured axial-spondyloarthritis case study and the preparation of a prospective DDX24 laboratory validation protocol. Its intended impact is methodological: to make the path from public data to experiment selection more conservative, inspectable, and reproducible. The platform can be adapted through a research manifest defining disease, population, tissue, cell type, comparison, treatments, and exclusion criteria. It should be used to prioritize experiments and evidence gaps, not to recommend treatment or claim clinical efficacy.",
+    )
 
     add_heading(doc, "7. Limitations")
-    add_bullets(doc, [
-        "The current demonstration is disease-specific and based on few compatible cohorts.",
-        "The native-limma comparison covers four public microarray cohorts; broader platform, disease and design coverage remains necessary.",
-        "The offline regression fixture is intentionally small and protects rankings and coefficients more strongly than exact empirical-Bayes statistics.",
-        "Benchmarking against additional end-to-end tools and formal runtime/memory profiling remain incomplete.",
-        "Human review is still required for sample interpretation, eligibility, confounders and biological meaning.",
-        "RCT evidence, pharmacovigilance and clinical outcomes are not yet implemented as a dedicated evidence layer.",
-        "The public development history is recent and therefore does not yet demonstrate long-term community adoption or maintenance.",
-    ])
+    add_bullets(
+        doc,
+        [
+            "The current demonstration is disease-specific and based on few compatible cohorts.",
+            "The native-limma comparison covers four public microarray cohorts; broader platform, disease and design coverage remains necessary.",
+            "The offline regression fixture is intentionally small and protects rankings and coefficients more strongly than exact empirical-Bayes statistics.",
+            "Benchmarking against additional end-to-end tools and formal runtime/memory profiling remain incomplete.",
+            "Human review is still required for sample interpretation, eligibility, confounders and biological meaning.",
+            "RCT evidence, pharmacovigilance and clinical outcomes are not yet implemented as a dedicated evidence layer.",
+            "The public development history is recent and therefore does not yet demonstrate long-term community adoption or maintenance.",
+        ],
+    )
 
     add_heading(doc, "8. Availability")
-    availability = add_body(doc, "AXIS is implemented in Python 3.12 and exposes a command-line interface. Source code is publicly available at https://github.com/JPais7/AXIS under the Apache License 2.0. Version 0.2.0 is archived at https://doi.org/10.5281/zenodo.21762169 and distributed from https://pypi.org/project/axis-bio/. The repository includes locked dependencies, automated cross-platform tests, a packaged synthetic demonstration, frozen reproduction manifests, validation scripts, checksums and auditable tabular/JSON outputs. Raw public data that can be retrieved reproducibly and frozen participant-level data that should not be redistributed are excluded from the software archive.")
+    availability = add_body(
+        doc,
+        "AXIS is implemented in Python 3.12 and exposes a command-line interface. Source code is publicly available at https://github.com/JPais7/AXIS under the Apache License 2.0. Version 0.2.0 is archived at https://doi.org/10.5281/zenodo.21762169 and distributed from https://pypi.org/project/axis-bio/. The repository includes locked dependencies, automated cross-platform tests, a packaged synthetic demonstration, frozen reproduction manifests, validation scripts, checksums and auditable tabular/JSON outputs. Raw public data that can be retrieved reproducibly and frozen participant-level data that should not be redistributed are excluded from the software archive.",
+    )
     availability.paragraph_format.keep_together = True
 
     add_heading(doc, "9. AI usage disclosure")
-    add_body(doc, "Generative AI was used interactively to assist software implementation, documentation, test design and manuscript drafting. Scientific claims were constrained by explicit programmatic checks, source artifacts and author review. AI output was not treated as evidence, and the authors remain responsible for verification, interpretation and the final submitted text.")
+    add_body(
+        doc,
+        "Generative AI was used interactively to assist software implementation, documentation, test design and manuscript drafting. Scientific claims were constrained by explicit programmatic checks, source artifacts and author review. AI output was not treated as evidence, and the authors remain responsible for verification, interpretation and the final submitted text.",
+    )
 
     add_heading(doc, "10. Author contributions")
-    add_body(doc, "João Pais: conceptualization, investigation, software, validation, project administration, visualization, and writing - original draft and review. Diana Koshman: investigation, validation planning, and writing - review and editing. Software engineering and manuscript drafting included AI-assisted work under author supervision. Both authors must approve the submitted version.")
+    add_body(
+        doc,
+        "João Pais: conceptualization, investigation, software, validation, project administration, visualization, and writing - original draft and review. Diana Koshman: investigation, validation planning, and writing - review and editing. Software engineering and manuscript drafting included AI-assisted work under author supervision. Both authors must approve the submitted version.",
+    )
 
     add_heading(doc, "11. Funding, competing interests and data ethics")
-    add_body(doc, "Funding: none declared. Competing interests: none declared. AXIS reuses de-identified public datasets and does not itself recruit participants. The ethical and consent conditions of each source study remain applicable. These statements must be reconfirmed before submission.")
+    add_body(
+        doc,
+        "Funding: none declared. Competing interests: none declared. AXIS reuses de-identified public datasets and does not itself recruit participants. The ethical and consent conditions of each source study remain applicable. These statements must be reconfirmed before submission.",
+    )
 
     add_heading(doc, "References")
     refs = [
@@ -320,7 +454,9 @@ def build():
     props.title = "AXIS methods manuscript"
     props.author = "João Pais; Diana Koshman"
     props.subject = "Research software and methods"
-    props.keywords = "AXIS, transcriptomics, reproducibility, pseudobulk, target prioritization"
+    props.keywords = (
+        "AXIS, transcriptomics, reproducibility, pseudobulk, target prioritization"
+    )
     doc.save(DOCX)
     print(DOCX)
 

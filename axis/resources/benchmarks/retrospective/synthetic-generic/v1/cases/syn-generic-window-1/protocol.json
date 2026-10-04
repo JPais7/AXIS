@@ -1,0 +1,33 @@
+{
+  "availability_sha256": "6c41d7d5499cc3993b2ec54ed6aafdb562535db3a3a88ebccf7f90b3222ee2f6",
+  "benchmark_kind": "synthetic_test",
+  "case_id": "syn-generic-window-1",
+  "case_type": "synthetic_generic_positive_path",
+  "cutoff": "2019-01-01",
+  "cutoff_id": "T-2019-01-01",
+  "cutoff_rationale": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE: invented cutoff",
+  "dimensions_declared_before_run": [
+    "temporal_integrity",
+    "decision_validity_at_cutoff",
+    "uncertainty_calibration",
+    "recommendation_relevance",
+    "future_evidence_relevance",
+    "evidence_update_behavior",
+    "overstated_claims",
+    "baseline_comparison"
+  ],
+  "future_sha256": "bac3cfdeab22aadce55605040c2511968ba10a86c14c9c54a49e081f18b9c317",
+  "label": "SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE",
+  "pre_declared_expectation": "No outcome predicted; each dimension is assessed separately.",
+  "protocol_fingerprint": "505676cc14ae1c877517d747285ea97a3ad6687381ba2cb9f2a9c6887550625b",
+  "question": "Does later engagement evidence for the compound test the stated question?",
+  "review_mode": "exploratory",
+  "rules_fingerprint": "184a1e2949a61e362545e897de43890014bcdcac7191f621c84fb2b739cecd33",
+  "rules_version": "axis-decision-3",
+  "schema": "axis-retrospective-benchmark-1",
+  "selection_rationale": "Synthetic: genetic and compound phenotype, engagement open.",
+  "set_id": "synthetic-generic",
+  "synthetic": true,
+  "template_sha256": "8830832a93673a25485754e18477073ae2f25b4917caed212d6dee56cdea8c3e",
+  "window_sha256": "bf3e325f0085ded6acb7809fa55251d37848e080b9102861a646e73e4e02bc46"
+}

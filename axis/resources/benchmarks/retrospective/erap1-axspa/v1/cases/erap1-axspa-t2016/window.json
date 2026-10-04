@@ -1,0 +1,1373 @@
+{
+  "decisions": [
+    {
+      "decision": "window",
+      "reason": "available_on_or_before_cutoff",
+      "record": "experiments:cellular:chen-coculture",
+      "source": "PMID:26130142"
+    },
+    {
+      "decision": "window",
+      "reason": "available_on_or_before_cutoff",
+      "record": "experiments:cellular:chen-dg013a-C1R.B27",
+      "source": "PMID:26130142"
+    },
+    {
+      "decision": "window",
+      "reason": "available_on_or_before_cutoff",
+      "record": "experiments:cellular:chen-dg013a-HeLa.B27",
+      "source": "PMID:26130142"
+    },
+    {
+      "decision": "window",
+      "reason": "available_on_or_before_cutoff",
+      "record": "experiments:cellular:chen-knockdown-C1R.B27",
+      "source": "PMID:26130142"
+    },
+    {
+      "decision": "window",
+      "reason": "available_on_or_before_cutoff",
+      "record": "experiments:cellular:chen-knockdown-HeLa.B27",
+      "source": "PMID:26130142"
+    },
+    {
+      "decision": "window",
+      "reason": "available_on_or_before_cutoff",
+      "record": "experiments:cellular:chen2014-peptidome",
+      "source": "PMID:24504800"
+    },
+    {
+      "decision": "window",
+      "reason": "available_on_or_before_cutoff",
+      "record": "experiments:cellular:chen2014-variant",
+      "source": "PMID:24504800"
+    },
+    {
+      "decision": "window",
+      "reason": "available_on_or_before_cutoff",
+      "record": "experiments:cellular:tran-dimer",
+      "source": "PMID:27107845"
+    },
+    {
+      "decision": "window",
+      "reason": "available_on_or_before_cutoff",
+      "record": "experiments:cellular:tran-fhc",
+      "source": "PMID:27107845"
+    },
+    {
+      "decision": "window",
+      "reason": "available_on_or_before_cutoff",
+      "record": "assessments:cellular:chen-coculture:engagement",
+      "source": "PMID:26130142"
+    },
+    {
+      "decision": "window",
+      "reason": "available_on_or_before_cutoff",
+      "record": "assessments:cellular:chen-coculture:functional",
+      "source": "PMID:26130142"
+    },
+    {
+      "decision": "window",
+      "reason": "available_on_or_before_cutoff",
+      "record": "assessments:cellular:chen-coculture:immune",
+      "source": "PMID:26130142"
+    },
+    {
+      "decision": "window",
+      "reason": "available_on_or_before_cutoff",
+      "record": "assessments:cellular:chen-dg013a-C1R.B27:engagement",
+      "source": "PMID:26130142"
+    },
+    {
+      "decision": "window",
+      "reason": "available_on_or_before_cutoff",
+      "record": "assessments:cellular:chen-dg013a-C1R.B27:exposure",
+      "source": "PMID:26130142"
+    },
+    {
+      "decision": "window",
+      "reason": "available_on_or_before_cutoff",
+      "record": "assessments:cellular:chen-dg013a-C1R.B27:functional",
+      "source": "PMID:26130142"
+    },
+    {
+      "decision": "window",
+      "reason": "available_on_or_before_cutoff",
+      "record": "assessments:cellular:chen-dg013a-C1R.B27:hla",
+      "source": "PMID:26130142"
+    },
+    {
+      "decision": "window",
+      "reason": "available_on_or_before_cutoff",
+      "record": "assessments:cellular:chen-dg013a-HeLa.B27:engagement",
+      "source": "PMID:26130142"
+    },
+    {
+      "decision": "window",
+      "reason": "available_on_or_before_cutoff",
+      "record": "assessments:cellular:chen-dg013a-HeLa.B27:exposure",
+      "source": "PMID:26130142"
+    },
+    {
+      "decision": "window",
+      "reason": "available_on_or_before_cutoff",
+      "record": "assessments:cellular:chen-dg013a-HeLa.B27:functional",
+      "source": "PMID:26130142"
+    },
+    {
+      "decision": "window",
+      "reason": "available_on_or_before_cutoff",
+      "record": "assessments:cellular:chen-dg013a-HeLa.B27:hla",
+      "source": "PMID:26130142"
+    },
+    {
+      "decision": "window",
+      "reason": "available_on_or_before_cutoff",
+      "record": "assessments:cellular:chen-knockdown-C1R.B27:engagement",
+      "source": "PMID:26130142"
+    },
+    {
+      "decision": "window",
+      "reason": "available_on_or_before_cutoff",
+      "record": "assessments:cellular:chen-knockdown-C1R.B27:functional",
+      "source": "PMID:26130142"
+    },
+    {
+      "decision": "window",
+      "reason": "available_on_or_before_cutoff",
+      "record": "assessments:cellular:chen-knockdown-C1R.B27:hla",
+      "source": "PMID:26130142"
+    },
+    {
+      "decision": "window",
+      "reason": "available_on_or_before_cutoff",
+      "record": "assessments:cellular:chen-knockdown-HeLa.B27:engagement",
+      "source": "PMID:26130142"
+    },
+    {
+      "decision": "window",
+      "reason": "available_on_or_before_cutoff",
+      "record": "assessments:cellular:chen-knockdown-HeLa.B27:functional",
+      "source": "PMID:26130142"
+    },
+    {
+      "decision": "window",
+      "reason": "available_on_or_before_cutoff",
+      "record": "assessments:cellular:chen-knockdown-HeLa.B27:hla",
+      "source": "PMID:26130142"
+    },
+    {
+      "decision": "window",
+      "reason": "available_on_or_before_cutoff",
+      "record": "assessments:cellular:chen2014-peptidome:engagement",
+      "source": "PMID:24504800"
+    },
+    {
+      "decision": "window",
+      "reason": "available_on_or_before_cutoff",
+      "record": "assessments:cellular:chen2014-peptidome:functional",
+      "source": "PMID:24504800"
+    },
+    {
+      "decision": "window",
+      "reason": "available_on_or_before_cutoff",
+      "record": "assessments:cellular:chen2014-peptidome:hla",
+      "source": "PMID:24504800"
+    },
+    {
+      "decision": "window",
+      "reason": "available_on_or_before_cutoff",
+      "record": "assessments:cellular:chen2014-variant:engagement",
+      "source": "PMID:24504800"
+    },
+    {
+      "decision": "window",
+      "reason": "available_on_or_before_cutoff",
+      "record": "assessments:cellular:chen2014-variant:functional",
+      "source": "PMID:24504800"
+    },
+    {
+      "decision": "window",
+      "reason": "available_on_or_before_cutoff",
+      "record": "assessments:cellular:chen2014-variant:immune",
+      "source": "PMID:24504800"
+    },
+    {
+      "decision": "window",
+      "reason": "available_on_or_before_cutoff",
+      "record": "assessments:cellular:tran-dimer:engagement",
+      "source": "PMID:27107845"
+    },
+    {
+      "decision": "window",
+      "reason": "available_on_or_before_cutoff",
+      "record": "assessments:cellular:tran-dimer:functional",
+      "source": "PMID:27107845"
+    },
+    {
+      "decision": "window",
+      "reason": "available_on_or_before_cutoff",
+      "record": "assessments:cellular:tran-dimer:hla",
+      "source": "PMID:27107845"
+    },
+    {
+      "decision": "window",
+      "reason": "available_on_or_before_cutoff",
+      "record": "assessments:cellular:tran-fhc:engagement",
+      "source": "PMID:27107845"
+    },
+    {
+      "decision": "window",
+      "reason": "available_on_or_before_cutoff",
+      "record": "assessments:cellular:tran-fhc:functional",
+      "source": "PMID:27107845"
+    },
+    {
+      "decision": "window",
+      "reason": "available_on_or_before_cutoff",
+      "record": "assessments:cellular:tran-fhc:hla",
+      "source": "PMID:27107845"
+    },
+    {
+      "decision": "window",
+      "reason": "available_on_or_before_cutoff",
+      "record": "readouts:cellular:chen-coculture:readout",
+      "source": "PMID:26130142"
+    },
+    {
+      "decision": "window",
+      "reason": "available_on_or_before_cutoff",
+      "record": "readouts:cellular:chen-dg013a-C1R.B27:readout",
+      "source": "PMID:26130142"
+    },
+    {
+      "decision": "window",
+      "reason": "available_on_or_before_cutoff",
+      "record": "readouts:cellular:chen-dg013a-HeLa.B27:readout",
+      "source": "PMID:26130142"
+    },
+    {
+      "decision": "window",
+      "reason": "available_on_or_before_cutoff",
+      "record": "readouts:cellular:chen-knockdown-C1R.B27:readout",
+      "source": "PMID:26130142"
+    },
+    {
+      "decision": "window",
+      "reason": "available_on_or_before_cutoff",
+      "record": "readouts:cellular:chen-knockdown-HeLa.B27:readout",
+      "source": "PMID:26130142"
+    },
+    {
+      "decision": "window",
+      "reason": "available_on_or_before_cutoff",
+      "record": "readouts:cellular:chen2014-peptidome:readout",
+      "source": "PMID:24504800"
+    },
+    {
+      "decision": "window",
+      "reason": "available_on_or_before_cutoff",
+      "record": "readouts:cellular:chen2014-variant:readout",
+      "source": "PMID:24504800"
+    },
+    {
+      "decision": "window",
+      "reason": "available_on_or_before_cutoff",
+      "record": "readouts:cellular:tran-dimer:readout",
+      "source": "PMID:27107845"
+    },
+    {
+      "decision": "window",
+      "reason": "available_on_or_before_cutoff",
+      "record": "readouts:cellular:tran-fhc:readout",
+      "source": "PMID:27107845"
+    },
+    {
+      "decision": "window",
+      "reason": "available_on_or_before_cutoff",
+      "record": "gaps:cellular:chen-dg013a-C1R.B27:gap",
+      "source": "PMID:26130142"
+    },
+    {
+      "decision": "window",
+      "reason": "available_on_or_before_cutoff",
+      "record": "gaps:cellular:chen-dg013a-HeLa.B27:gap",
+      "source": "PMID:26130142"
+    },
+    {
+      "decision": "window",
+      "reason": "available_on_or_before_cutoff",
+      "record": "structure_ids:structure:pdb:3QNF:04b29d420769a6ce405c85d90e6888289de20381e17e64c1a31c3e4f835b8f75:2026-10-04T12:25:57+00:00:3654c195689a5327",
+      "source": "PDB:3QNF"
+    }
+  ],
+  "record_sources": {
+    "assessments:cellular:chen-coculture:engagement": "PMID:26130142",
+    "assessments:cellular:chen-coculture:functional": "PMID:26130142",
+    "assessments:cellular:chen-coculture:immune": "PMID:26130142",
+    "assessments:cellular:chen-dg013a-C1R.B27:engagement": "PMID:26130142",
+    "assessments:cellular:chen-dg013a-C1R.B27:exposure": "PMID:26130142",
+    "assessments:cellular:chen-dg013a-C1R.B27:functional": "PMID:26130142",
+    "assessments:cellular:chen-dg013a-C1R.B27:hla": "PMID:26130142",
+    "assessments:cellular:chen-dg013a-HeLa.B27:engagement": "PMID:26130142",
+    "assessments:cellular:chen-dg013a-HeLa.B27:exposure": "PMID:26130142",
+    "assessments:cellular:chen-dg013a-HeLa.B27:functional": "PMID:26130142",
+    "assessments:cellular:chen-dg013a-HeLa.B27:hla": "PMID:26130142",
+    "assessments:cellular:chen-knockdown-C1R.B27:engagement": "PMID:26130142",
+    "assessments:cellular:chen-knockdown-C1R.B27:functional": "PMID:26130142",
+    "assessments:cellular:chen-knockdown-C1R.B27:hla": "PMID:26130142",
+    "assessments:cellular:chen-knockdown-HeLa.B27:engagement": "PMID:26130142",
+    "assessments:cellular:chen-knockdown-HeLa.B27:functional": "PMID:26130142",
+    "assessments:cellular:chen-knockdown-HeLa.B27:hla": "PMID:26130142",
+    "assessments:cellular:chen2014-peptidome:engagement": "PMID:24504800",
+    "assessments:cellular:chen2014-peptidome:functional": "PMID:24504800",
+    "assessments:cellular:chen2014-peptidome:hla": "PMID:24504800",
+    "assessments:cellular:chen2014-variant:engagement": "PMID:24504800",
+    "assessments:cellular:chen2014-variant:functional": "PMID:24504800",
+    "assessments:cellular:chen2014-variant:immune": "PMID:24504800",
+    "assessments:cellular:tran-dimer:engagement": "PMID:27107845",
+    "assessments:cellular:tran-dimer:functional": "PMID:27107845",
+    "assessments:cellular:tran-dimer:hla": "PMID:27107845",
+    "assessments:cellular:tran-fhc:engagement": "PMID:27107845",
+    "assessments:cellular:tran-fhc:functional": "PMID:27107845",
+    "assessments:cellular:tran-fhc:hla": "PMID:27107845",
+    "experiments:cellular:chen-coculture": "PMID:26130142",
+    "experiments:cellular:chen-dg013a-C1R.B27": "PMID:26130142",
+    "experiments:cellular:chen-dg013a-HeLa.B27": "PMID:26130142",
+    "experiments:cellular:chen-knockdown-C1R.B27": "PMID:26130142",
+    "experiments:cellular:chen-knockdown-HeLa.B27": "PMID:26130142",
+    "experiments:cellular:chen2014-peptidome": "PMID:24504800",
+    "experiments:cellular:chen2014-variant": "PMID:24504800",
+    "experiments:cellular:tran-dimer": "PMID:27107845",
+    "experiments:cellular:tran-fhc": "PMID:27107845",
+    "gaps:cellular:chen-dg013a-C1R.B27:gap": "PMID:26130142",
+    "gaps:cellular:chen-dg013a-HeLa.B27:gap": "PMID:26130142",
+    "readouts:cellular:chen-coculture:readout": "PMID:26130142",
+    "readouts:cellular:chen-dg013a-C1R.B27:readout": "PMID:26130142",
+    "readouts:cellular:chen-dg013a-HeLa.B27:readout": "PMID:26130142",
+    "readouts:cellular:chen-knockdown-C1R.B27:readout": "PMID:26130142",
+    "readouts:cellular:chen-knockdown-HeLa.B27:readout": "PMID:26130142",
+    "readouts:cellular:chen2014-peptidome:readout": "PMID:24504800",
+    "readouts:cellular:chen2014-variant:readout": "PMID:24504800",
+    "readouts:cellular:tran-dimer:readout": "PMID:27107845",
+    "readouts:cellular:tran-fhc:readout": "PMID:27107845",
+    "structure_ids:structure:pdb:3QNF:04b29d420769a6ce405c85d90e6888289de20381e17e64c1a31c3e4f835b8f75:2026-10-04T12:25:57+00:00:3654c195689a5327": "PDB:3QNF"
+  },
+  "records": {
+    "assessments": [
+      {
+        "contradicting_readout_ids": [],
+        "created_by": "AXIS AI-assisted curation",
+        "dependency": "not_assessed",
+        "directness": "not_assessed",
+        "disease_relevance": "unknown",
+        "edge": "engagement",
+        "experiment_id": "cellular:chen-coculture",
+        "id": "cellular:chen-coculture:engagement",
+        "rationale": "No direct cellular compound\u2013ERAP1 interaction assay in this experiment. Genetic perturbation is not compound binding.",
+        "review_status": "pending_expert_review",
+        "rule_version": "axis-cellular-1",
+        "state": "not_applicable",
+        "supporting_readout_ids": []
+      },
+      {
+        "contradicting_readout_ids": [],
+        "created_by": "AXIS AI-assisted curation",
+        "dependency": "supported",
+        "directness": "indirect",
+        "disease_relevance": "unknown",
+        "edge": "functional",
+        "experiment_id": "cellular:chen-coculture",
+        "id": "cellular:chen-coculture:functional",
+        "rationale": "Downstream phenotype alone does not demonstrate proximal ERAP1 catalytic modulation or drug-specific target dependency.",
+        "review_status": "pending_expert_review",
+        "rule_version": "axis-cellular-1",
+        "state": "insufficient",
+        "supporting_readout_ids": []
+      },
+      {
+        "contradicting_readout_ids": [],
+        "created_by": "AXIS AI-assisted curation",
+        "dependency": "supported",
+        "directness": "downstream_phenotype",
+        "disease_relevance": "direct_disease_context",
+        "edge": "immune",
+        "experiment_id": "cellular:chen-coculture",
+        "id": "cellular:chen-coculture:immune",
+        "rationale": "Source reports this readout in the specified system; not therapeutic efficacy.",
+        "review_status": "pending_expert_review",
+        "rule_version": "axis-cellular-1",
+        "state": "supported",
+        "supporting_readout_ids": [
+          "cellular:chen-coculture:readout"
+        ]
+      },
+      {
+        "contradicting_readout_ids": [],
+        "created_by": "AXIS AI-assisted curation",
+        "dependency": "not_assessed",
+        "directness": "not_assessed",
+        "disease_relevance": "unknown",
+        "edge": "engagement",
+        "experiment_id": "cellular:chen-dg013a-C1R.B27",
+        "id": "cellular:chen-dg013a-C1R.B27:engagement",
+        "rationale": "No direct cellular compound\u2013ERAP1 interaction assay in this experiment. Genetic perturbation is not compound binding.",
+        "review_status": "pending_expert_review",
+        "rule_version": "axis-cellular-1",
+        "state": "not_assessed",
+        "supporting_readout_ids": []
+      },
+      {
+        "contradicting_readout_ids": [],
+        "created_by": "AXIS AI-assisted curation",
+        "dependency": "not_assessed",
+        "directness": "chemical_exposure",
+        "disease_relevance": "unknown",
+        "edge": "exposure",
+        "experiment_id": "cellular:chen-dg013a-C1R.B27",
+        "id": "cellular:chen-dg013a-C1R.B27:exposure",
+        "rationale": "Compound applied; nominal exposure does not establish intracellular concentration or occupancy.",
+        "review_status": "pending_expert_review",
+        "rule_version": "axis-cellular-1",
+        "state": "supported",
+        "supporting_readout_ids": [
+          "cellular:chen-dg013a-C1R.B27:readout"
+        ]
+      },
+      {
+        "contradicting_readout_ids": [],
+        "created_by": "AXIS AI-assisted curation",
+        "dependency": "uncertain",
+        "directness": "indirect",
+        "disease_relevance": "unknown",
+        "edge": "functional",
+        "experiment_id": "cellular:chen-dg013a-C1R.B27",
+        "id": "cellular:chen-dg013a-C1R.B27:functional",
+        "rationale": "Downstream phenotype alone does not demonstrate proximal ERAP1 catalytic modulation or drug-specific target dependency.",
+        "review_status": "pending_expert_review",
+        "rule_version": "axis-cellular-1",
+        "state": "insufficient",
+        "supporting_readout_ids": []
+      },
+      {
+        "contradicting_readout_ids": [],
+        "created_by": "AXIS AI-assisted curation",
+        "dependency": "uncertain",
+        "directness": "downstream_phenotype",
+        "disease_relevance": "disease_relevant_molecular_context",
+        "edge": "hla",
+        "experiment_id": "cellular:chen-dg013a-C1R.B27",
+        "id": "cellular:chen-dg013a-C1R.B27:hla",
+        "rationale": "Source reports this readout in the specified system; not therapeutic efficacy.",
+        "review_status": "pending_expert_review",
+        "rule_version": "axis-cellular-1",
+        "state": "supported",
+        "supporting_readout_ids": [
+          "cellular:chen-dg013a-C1R.B27:readout"
+        ]
+      },
+      {
+        "contradicting_readout_ids": [],
+        "created_by": "AXIS AI-assisted curation",
+        "dependency": "not_assessed",
+        "directness": "not_assessed",
+        "disease_relevance": "unknown",
+        "edge": "engagement",
+        "experiment_id": "cellular:chen-dg013a-HeLa.B27",
+        "id": "cellular:chen-dg013a-HeLa.B27:engagement",
+        "rationale": "No direct cellular compound\u2013ERAP1 interaction assay in this experiment. Genetic perturbation is not compound binding.",
+        "review_status": "pending_expert_review",
+        "rule_version": "axis-cellular-1",
+        "state": "not_assessed",
+        "supporting_readout_ids": []
+      },
+      {
+        "contradicting_readout_ids": [],
+        "created_by": "AXIS AI-assisted curation",
+        "dependency": "not_assessed",
+        "directness": "chemical_exposure",
+        "disease_relevance": "unknown",
+        "edge": "exposure",
+        "experiment_id": "cellular:chen-dg013a-HeLa.B27",
+        "id": "cellular:chen-dg013a-HeLa.B27:exposure",
+        "rationale": "Compound applied; nominal exposure does not establish intracellular concentration or occupancy.",
+        "review_status": "pending_expert_review",
+        "rule_version": "axis-cellular-1",
+        "state": "supported",
+        "supporting_readout_ids": [
+          "cellular:chen-dg013a-HeLa.B27:readout"
+        ]
+      },
+      {
+        "contradicting_readout_ids": [],
+        "created_by": "AXIS AI-assisted curation",
+        "dependency": "uncertain",
+        "directness": "indirect",
+        "disease_relevance": "unknown",
+        "edge": "functional",
+        "experiment_id": "cellular:chen-dg013a-HeLa.B27",
+        "id": "cellular:chen-dg013a-HeLa.B27:functional",
+        "rationale": "Downstream phenotype alone does not demonstrate proximal ERAP1 catalytic modulation or drug-specific target dependency.",
+        "review_status": "pending_expert_review",
+        "rule_version": "axis-cellular-1",
+        "state": "insufficient",
+        "supporting_readout_ids": []
+      },
+      {
+        "contradicting_readout_ids": [],
+        "created_by": "AXIS AI-assisted curation",
+        "dependency": "uncertain",
+        "directness": "downstream_phenotype",
+        "disease_relevance": "disease_relevant_molecular_context",
+        "edge": "hla",
+        "experiment_id": "cellular:chen-dg013a-HeLa.B27",
+        "id": "cellular:chen-dg013a-HeLa.B27:hla",
+        "rationale": "Source reports this readout in the specified system; not therapeutic efficacy.",
+        "review_status": "pending_expert_review",
+        "rule_version": "axis-cellular-1",
+        "state": "supported",
+        "supporting_readout_ids": [
+          "cellular:chen-dg013a-HeLa.B27:readout"
+        ]
+      },
+      {
+        "contradicting_readout_ids": [],
+        "created_by": "AXIS AI-assisted curation",
+        "dependency": "not_assessed",
+        "directness": "not_assessed",
+        "disease_relevance": "unknown",
+        "edge": "engagement",
+        "experiment_id": "cellular:chen-knockdown-C1R.B27",
+        "id": "cellular:chen-knockdown-C1R.B27:engagement",
+        "rationale": "No direct cellular compound\u2013ERAP1 interaction assay in this experiment. Genetic perturbation is not compound binding.",
+        "review_status": "pending_expert_review",
+        "rule_version": "axis-cellular-1",
+        "state": "not_applicable",
+        "supporting_readout_ids": []
+      },
+      {
+        "contradicting_readout_ids": [],
+        "created_by": "AXIS AI-assisted curation",
+        "dependency": "supported",
+        "directness": "indirect",
+        "disease_relevance": "unknown",
+        "edge": "functional",
+        "experiment_id": "cellular:chen-knockdown-C1R.B27",
+        "id": "cellular:chen-knockdown-C1R.B27:functional",
+        "rationale": "Downstream phenotype alone does not demonstrate proximal ERAP1 catalytic modulation or drug-specific target dependency.",
+        "review_status": "pending_expert_review",
+        "rule_version": "axis-cellular-1",
+        "state": "insufficient",
+        "supporting_readout_ids": []
+      },
+      {
+        "contradicting_readout_ids": [],
+        "created_by": "AXIS AI-assisted curation",
+        "dependency": "supported",
+        "directness": "downstream_phenotype",
+        "disease_relevance": "disease_relevant_molecular_context",
+        "edge": "hla",
+        "experiment_id": "cellular:chen-knockdown-C1R.B27",
+        "id": "cellular:chen-knockdown-C1R.B27:hla",
+        "rationale": "Source reports this readout in the specified system; not therapeutic efficacy.",
+        "review_status": "pending_expert_review",
+        "rule_version": "axis-cellular-1",
+        "state": "supported",
+        "supporting_readout_ids": [
+          "cellular:chen-knockdown-C1R.B27:readout"
+        ]
+      },
+      {
+        "contradicting_readout_ids": [],
+        "created_by": "AXIS AI-assisted curation",
+        "dependency": "not_assessed",
+        "directness": "not_assessed",
+        "disease_relevance": "unknown",
+        "edge": "engagement",
+        "experiment_id": "cellular:chen-knockdown-HeLa.B27",
+        "id": "cellular:chen-knockdown-HeLa.B27:engagement",
+        "rationale": "No direct cellular compound\u2013ERAP1 interaction assay in this experiment. Genetic perturbation is not compound binding.",
+        "review_status": "pending_expert_review",
+        "rule_version": "axis-cellular-1",
+        "state": "not_applicable",
+        "supporting_readout_ids": []
+      },
+      {
+        "contradicting_readout_ids": [],
+        "created_by": "AXIS AI-assisted curation",
+        "dependency": "supported",
+        "directness": "indirect",
+        "disease_relevance": "unknown",
+        "edge": "functional",
+        "experiment_id": "cellular:chen-knockdown-HeLa.B27",
+        "id": "cellular:chen-knockdown-HeLa.B27:functional",
+        "rationale": "Downstream phenotype alone does not demonstrate proximal ERAP1 catalytic modulation or drug-specific target dependency.",
+        "review_status": "pending_expert_review",
+        "rule_version": "axis-cellular-1",
+        "state": "insufficient",
+        "supporting_readout_ids": []
+      },
+      {
+        "contradicting_readout_ids": [],
+        "created_by": "AXIS AI-assisted curation",
+        "dependency": "supported",
+        "directness": "downstream_phenotype",
+        "disease_relevance": "disease_relevant_molecular_context",
+        "edge": "hla",
+        "experiment_id": "cellular:chen-knockdown-HeLa.B27",
+        "id": "cellular:chen-knockdown-HeLa.B27:hla",
+        "rationale": "Source reports this readout in the specified system; not therapeutic efficacy.",
+        "review_status": "pending_expert_review",
+        "rule_version": "axis-cellular-1",
+        "state": "supported",
+        "supporting_readout_ids": [
+          "cellular:chen-knockdown-HeLa.B27:readout"
+        ]
+      },
+      {
+        "contradicting_readout_ids": [],
+        "created_by": "AXIS AI-assisted curation",
+        "dependency": "not_assessed",
+        "directness": "not_assessed",
+        "disease_relevance": "unknown",
+        "edge": "engagement",
+        "experiment_id": "cellular:chen2014-peptidome",
+        "id": "cellular:chen2014-peptidome:engagement",
+        "rationale": "No direct cellular compound\u2013ERAP1 interaction assay in this experiment. Genetic perturbation is not compound binding.",
+        "review_status": "pending_expert_review",
+        "rule_version": "axis-cellular-1",
+        "state": "not_applicable",
+        "supporting_readout_ids": []
+      },
+      {
+        "contradicting_readout_ids": [],
+        "created_by": "AXIS AI-assisted curation",
+        "dependency": "supported",
+        "directness": "indirect",
+        "disease_relevance": "unknown",
+        "edge": "functional",
+        "experiment_id": "cellular:chen2014-peptidome",
+        "id": "cellular:chen2014-peptidome:functional",
+        "rationale": "Downstream phenotype alone does not demonstrate proximal ERAP1 catalytic modulation or drug-specific target dependency.",
+        "review_status": "pending_expert_review",
+        "rule_version": "axis-cellular-1",
+        "state": "insufficient",
+        "supporting_readout_ids": []
+      },
+      {
+        "contradicting_readout_ids": [],
+        "created_by": "AXIS AI-assisted curation",
+        "dependency": "supported",
+        "directness": "downstream_phenotype",
+        "disease_relevance": "mechanistic_model",
+        "edge": "hla",
+        "experiment_id": "cellular:chen2014-peptidome",
+        "id": "cellular:chen2014-peptidome:hla",
+        "rationale": "Source reports this readout in the specified system; not therapeutic efficacy.",
+        "review_status": "pending_expert_review",
+        "rule_version": "axis-cellular-1",
+        "state": "supported",
+        "supporting_readout_ids": [
+          "cellular:chen2014-peptidome:readout"
+        ]
+      },
+      {
+        "contradicting_readout_ids": [],
+        "created_by": "AXIS AI-assisted curation",
+        "dependency": "not_assessed",
+        "directness": "not_assessed",
+        "disease_relevance": "unknown",
+        "edge": "engagement",
+        "experiment_id": "cellular:chen2014-variant",
+        "id": "cellular:chen2014-variant:engagement",
+        "rationale": "No direct cellular compound\u2013ERAP1 interaction assay in this experiment. Genetic perturbation is not compound binding.",
+        "review_status": "pending_expert_review",
+        "rule_version": "axis-cellular-1",
+        "state": "not_applicable",
+        "supporting_readout_ids": []
+      },
+      {
+        "contradicting_readout_ids": [],
+        "created_by": "AXIS AI-assisted curation",
+        "dependency": "supported",
+        "directness": "indirect",
+        "disease_relevance": "unknown",
+        "edge": "functional",
+        "experiment_id": "cellular:chen2014-variant",
+        "id": "cellular:chen2014-variant:functional",
+        "rationale": "Downstream phenotype alone does not demonstrate proximal ERAP1 catalytic modulation or drug-specific target dependency.",
+        "review_status": "pending_expert_review",
+        "rule_version": "axis-cellular-1",
+        "state": "insufficient",
+        "supporting_readout_ids": []
+      },
+      {
+        "contradicting_readout_ids": [],
+        "created_by": "AXIS AI-assisted curation",
+        "dependency": "supported",
+        "directness": "downstream_phenotype",
+        "disease_relevance": "mechanistic_model",
+        "edge": "immune",
+        "experiment_id": "cellular:chen2014-variant",
+        "id": "cellular:chen2014-variant:immune",
+        "rationale": "Source reports this readout in the specified system; not therapeutic efficacy.",
+        "review_status": "pending_expert_review",
+        "rule_version": "axis-cellular-1",
+        "state": "supported",
+        "supporting_readout_ids": [
+          "cellular:chen2014-variant:readout"
+        ]
+      },
+      {
+        "contradicting_readout_ids": [],
+        "created_by": "AXIS AI-assisted curation",
+        "dependency": "not_assessed",
+        "directness": "not_assessed",
+        "disease_relevance": "unknown",
+        "edge": "engagement",
+        "experiment_id": "cellular:tran-dimer",
+        "id": "cellular:tran-dimer:engagement",
+        "rationale": "No direct cellular compound\u2013ERAP1 interaction assay in this experiment. Genetic perturbation is not compound binding.",
+        "review_status": "pending_expert_review",
+        "rule_version": "axis-cellular-1",
+        "state": "not_applicable",
+        "supporting_readout_ids": []
+      },
+      {
+        "contradicting_readout_ids": [],
+        "created_by": "AXIS AI-assisted curation",
+        "dependency": "supported",
+        "directness": "indirect",
+        "disease_relevance": "unknown",
+        "edge": "functional",
+        "experiment_id": "cellular:tran-dimer",
+        "id": "cellular:tran-dimer:functional",
+        "rationale": "Downstream phenotype alone does not demonstrate proximal ERAP1 catalytic modulation or drug-specific target dependency.",
+        "review_status": "pending_expert_review",
+        "rule_version": "axis-cellular-1",
+        "state": "insufficient",
+        "supporting_readout_ids": []
+      },
+      {
+        "contradicting_readout_ids": [],
+        "created_by": "AXIS AI-assisted curation",
+        "dependency": "supported",
+        "directness": "downstream_phenotype",
+        "disease_relevance": "disease_relevant_molecular_context",
+        "edge": "hla",
+        "experiment_id": "cellular:tran-dimer",
+        "id": "cellular:tran-dimer:hla",
+        "rationale": "Source reports this readout in the specified system; not therapeutic efficacy.",
+        "review_status": "pending_expert_review",
+        "rule_version": "axis-cellular-1",
+        "state": "supported",
+        "supporting_readout_ids": [
+          "cellular:tran-dimer:readout"
+        ]
+      },
+      {
+        "contradicting_readout_ids": [],
+        "created_by": "AXIS AI-assisted curation",
+        "dependency": "not_assessed",
+        "directness": "not_assessed",
+        "disease_relevance": "unknown",
+        "edge": "engagement",
+        "experiment_id": "cellular:tran-fhc",
+        "id": "cellular:tran-fhc:engagement",
+        "rationale": "No direct cellular compound\u2013ERAP1 interaction assay in this experiment. Genetic perturbation is not compound binding.",
+        "review_status": "pending_expert_review",
+        "rule_version": "axis-cellular-1",
+        "state": "not_applicable",
+        "supporting_readout_ids": []
+      },
+      {
+        "contradicting_readout_ids": [],
+        "created_by": "AXIS AI-assisted curation",
+        "dependency": "supported",
+        "directness": "indirect",
+        "disease_relevance": "unknown",
+        "edge": "functional",
+        "experiment_id": "cellular:tran-fhc",
+        "id": "cellular:tran-fhc:functional",
+        "rationale": "Downstream phenotype alone does not demonstrate proximal ERAP1 catalytic modulation or drug-specific target dependency.",
+        "review_status": "pending_expert_review",
+        "rule_version": "axis-cellular-1",
+        "state": "insufficient",
+        "supporting_readout_ids": []
+      },
+      {
+        "contradicting_readout_ids": [],
+        "created_by": "AXIS AI-assisted curation",
+        "dependency": "supported",
+        "directness": "downstream_phenotype",
+        "disease_relevance": "disease_relevant_molecular_context",
+        "edge": "hla",
+        "experiment_id": "cellular:tran-fhc",
+        "id": "cellular:tran-fhc:hla",
+        "rationale": "Source reports this readout in the specified system; not therapeutic efficacy.",
+        "review_status": "pending_expert_review",
+        "rule_version": "axis-cellular-1",
+        "state": "supported",
+        "supporting_readout_ids": [
+          "cellular:tran-fhc:readout"
+        ]
+      }
+    ],
+    "biochemical_measurements": [],
+    "compounds": [],
+    "experiments": [
+      {
+        "compound_id": null,
+        "concentration": null,
+        "context": {
+          "cell_line": "HeLa.B27/C1R.B27 + AS CD4+ T cells",
+          "disease_status": "Ankylosing spondylitis donor CD4+ cells; engineered APCs",
+          "donor_context": "AS CD4+ T cells n=5; not five independent cell lines",
+          "erap1_allotype": null,
+          "hla_allele": "HLA-B*27:05",
+          "hla_expression": "engineered",
+          "mhc_allele": null,
+          "scientific_context": {
+            "allotype": null,
+            "assay": "IL-17A ELISA and intracellular cytokine staining",
+            "cell_type": "HeLa.B27/C1R.B27 + AS CD4+ T cells",
+            "comparison": null,
+            "endpoint": "Th17 expansion and IL-17A secretion",
+            "experimental_system": "HeLa.B27/C1R.B27 + AS CD4+ T cells",
+            "genotype": null,
+            "hla_status": "HLA-B27 expressed",
+            "population": null,
+            "species": "Homo sapiens",
+            "tissue": null,
+            "treatment": null
+          }
+        },
+        "controls": [
+          "control shRNA or untreated APCs",
+          "SEB and IL-2 stimulation"
+        ],
+        "dosing_schedule": null,
+        "duration": "Day 3 IL-17A ELISA; day 6 intracellular Th17 staining",
+        "id": "cellular:chen-coculture",
+        "label": "Chen APC/CD4+ coculture, silencing or inhibition",
+        "limitation": "Composite historical claim: chemical and genetic arms retained in label, not treated as a single modality or compound-specific evidence; ex vivo response is not disease improvement.",
+        "locator": "Figure 4C\u2013D; Methods CD4+ coculture",
+        "modality": "other",
+        "perturbation_id": "cellular:perturbation:chen-coculture",
+        "reported_perturbagen": null,
+        "source_id": "PMID:26130142",
+        "vehicle": null
+      },
+      {
+        "compound_id": null,
+        "concentration": "10, 100, 1000 nM titration; 1000 nM subsequent inhibition",
+        "context": {
+          "cell_line": "C1R.B27",
+          "disease_status": "cell line; no patient disease",
+          "donor_context": null,
+          "erap1_allotype": null,
+          "hla_allele": "HLA-B*27:05",
+          "hla_expression": "engineered",
+          "mhc_allele": null,
+          "scientific_context": {
+            "allotype": null,
+            "assay": "Antibody-based flow cytometry",
+            "cell_type": "C1R.B27",
+            "comparison": null,
+            "endpoint": "surface free heavy chain",
+            "experimental_system": "C1R.B27",
+            "genotype": null,
+            "hla_status": "HLA-B27 expressed",
+            "population": null,
+            "species": "Homo sapiens",
+            "tissue": null,
+            "treatment": null
+          }
+        },
+        "controls": [
+          "untreated cells",
+          "isotype",
+          "ME-1 classical HLA staining"
+        ],
+        "dosing_schedule": null,
+        "duration": null,
+        "id": "cellular:chen-dg013a-C1R.B27",
+        "label": "Chen DG013A \u2014 C1R.B27",
+        "limitation": "Exact ERAP1 allotype not reported; AI-assisted extraction pending expert review. Off-target contribution cannot be excluded for chemical intervention.",
+        "locator": "Figure 2E\u2013H; Methods ERAP1 inhibition",
+        "modality": "small_molecule",
+        "perturbation_id": "AXIS-ERAP1-CURATED-P09",
+        "reported_perturbagen": "DG013A",
+        "source_id": "PMID:26130142",
+        "vehicle": null
+      },
+      {
+        "compound_id": null,
+        "concentration": "10, 100, 1000 nM titration; 1000 nM subsequent inhibition",
+        "context": {
+          "cell_line": "HeLa.B27",
+          "disease_status": "cell line; no patient disease",
+          "donor_context": null,
+          "erap1_allotype": null,
+          "hla_allele": "HLA-B*27:05",
+          "hla_expression": "engineered",
+          "mhc_allele": null,
+          "scientific_context": {
+            "allotype": null,
+            "assay": "Antibody-based flow cytometry",
+            "cell_type": "HeLa.B27",
+            "comparison": null,
+            "endpoint": "surface free heavy chain",
+            "experimental_system": "HeLa.B27",
+            "genotype": null,
+            "hla_status": "HLA-B27 expressed",
+            "population": null,
+            "species": "Homo sapiens",
+            "tissue": null,
+            "treatment": null
+          }
+        },
+        "controls": [
+          "untreated cells",
+          "isotype",
+          "ME-1 classical HLA staining"
+        ],
+        "dosing_schedule": null,
+        "duration": null,
+        "id": "cellular:chen-dg013a-HeLa.B27",
+        "label": "Chen DG013A \u2014 HeLa.B27",
+        "limitation": "Exact ERAP1 allotype not reported; AI-assisted extraction pending expert review. Off-target contribution cannot be excluded for chemical intervention.",
+        "locator": "Figure 2E\u2013H; Methods ERAP1 inhibition",
+        "modality": "small_molecule",
+        "perturbation_id": "AXIS-ERAP1-CURATED-P09",
+        "reported_perturbagen": "DG013A",
+        "source_id": "PMID:26130142",
+        "vehicle": null
+      },
+      {
+        "compound_id": null,
+        "concentration": null,
+        "context": {
+          "cell_line": "C1R.B27",
+          "disease_status": "cell line; no patient disease",
+          "donor_context": null,
+          "erap1_allotype": null,
+          "hla_allele": "HLA-B*27:05",
+          "hla_expression": "engineered",
+          "mhc_allele": null,
+          "scientific_context": {
+            "allotype": null,
+            "assay": "Antibody-based flow cytometry",
+            "cell_type": "C1R.B27",
+            "comparison": null,
+            "endpoint": "surface free heavy chain",
+            "experimental_system": "C1R.B27",
+            "genotype": null,
+            "hla_status": "HLA-B27 expressed",
+            "population": null,
+            "species": "Homo sapiens",
+            "tissue": null,
+            "treatment": null
+          }
+        },
+        "controls": [
+          "control shRNA",
+          "isotype",
+          "ME-1 classical HLA staining"
+        ],
+        "dosing_schedule": null,
+        "duration": null,
+        "id": "cellular:chen-knockdown-C1R.B27",
+        "label": "Chen ERAP1 silencing \u2014 C1R.B27",
+        "limitation": "Exact ERAP1 allotype not reported; AI-assisted extraction pending expert review. Off-target contribution cannot be excluded for chemical intervention.",
+        "locator": "Figure 2A\u2013D; Methods ERAP1 silencing",
+        "modality": "knockdown",
+        "perturbation_id": "cellular:perturbation:chen2016-shrna",
+        "reported_perturbagen": null,
+        "source_id": "PMID:26130142",
+        "vehicle": null
+      },
+      {
+        "compound_id": null,
+        "concentration": null,
+        "context": {
+          "cell_line": "HeLa.B27",
+          "disease_status": "cell line; no patient disease",
+          "donor_context": null,
+          "erap1_allotype": null,
+          "hla_allele": "HLA-B*27:05",
+          "hla_expression": "engineered",
+          "mhc_allele": null,
+          "scientific_context": {
+            "allotype": null,
+            "assay": "Antibody-based flow cytometry",
+            "cell_type": "HeLa.B27",
+            "comparison": null,
+            "endpoint": "surface free heavy chain",
+            "experimental_system": "HeLa.B27",
+            "genotype": null,
+            "hla_status": "HLA-B27 expressed",
+            "population": null,
+            "species": "Homo sapiens",
+            "tissue": null,
+            "treatment": null
+          }
+        },
+        "controls": [
+          "control shRNA",
+          "isotype",
+          "ME-1 classical HLA staining"
+        ],
+        "dosing_schedule": null,
+        "duration": null,
+        "id": "cellular:chen-knockdown-HeLa.B27",
+        "label": "Chen ERAP1 silencing \u2014 HeLa.B27",
+        "limitation": "Exact ERAP1 allotype not reported; AI-assisted extraction pending expert review. Off-target contribution cannot be excluded for chemical intervention.",
+        "locator": "Figure 2A\u2013D; Methods ERAP1 silencing",
+        "modality": "knockdown",
+        "perturbation_id": "cellular:perturbation:chen2016-shrna",
+        "reported_perturbagen": null,
+        "source_id": "PMID:26130142",
+        "vehicle": null
+      },
+      {
+        "compound_id": null,
+        "concentration": null,
+        "context": {
+          "cell_line": "HeLa.B27/C1R.B27",
+          "disease_status": "cell line; no patient disease",
+          "donor_context": null,
+          "erap1_allotype": null,
+          "hla_allele": null,
+          "hla_expression": "engineered",
+          "mhc_allele": null,
+          "scientific_context": {
+            "allotype": null,
+            "assay": "HLA-bound peptide tandem mass spectrometry",
+            "cell_type": "HeLa.B27/C1R.B27",
+            "comparison": null,
+            "endpoint": "HLA-B27 peptide-length distribution",
+            "experimental_system": "HeLa.B27/C1R.B27",
+            "genotype": null,
+            "hla_status": "HLA-B27 expressed; subtype unverified in abstract",
+            "population": null,
+            "species": "Homo sapiens",
+            "tissue": null,
+            "treatment": null
+          }
+        },
+        "controls": [
+          "source-reported untreated/control intervention"
+        ],
+        "dosing_schedule": null,
+        "duration": null,
+        "id": "cellular:chen2014-peptidome",
+        "label": "Chen 2014 silencing immunopeptidome",
+        "limitation": "Exact ERAP1 allotype not reported; AI-assisted extraction pending expert review. Off-target contribution cannot be excluded for chemical intervention.",
+        "locator": "Abstract Results; frozen C06",
+        "modality": "knockdown",
+        "perturbation_id": "AXIS-ERAP1-CURATED-P05",
+        "reported_perturbagen": null,
+        "source_id": "PMID:24504800",
+        "vehicle": null
+      },
+      {
+        "compound_id": null,
+        "concentration": null,
+        "context": {
+          "cell_line": "HLA-B27 cells; line not verified in abstract",
+          "disease_status": "cell line; no patient disease",
+          "donor_context": null,
+          "erap1_allotype": null,
+          "hla_allele": null,
+          "hla_expression": null,
+          "mhc_allele": null,
+          "scientific_context": {
+            "allotype": null,
+            "assay": "Extended KK10 antigen presentation to CTLs",
+            "cell_type": "HLA-B27 cells; line not verified in abstract",
+            "comparison": null,
+            "endpoint": "KK10-specific CTL recognition",
+            "experimental_system": "HLA-B27 cells; line not verified in abstract",
+            "genotype": "K528R versus wild type; full allotype unknown",
+            "hla_status": "HLA-B27 expressed; subtype unverified in abstract",
+            "population": null,
+            "species": "Homo sapiens",
+            "tissue": null,
+            "treatment": null
+          }
+        },
+        "controls": [
+          "source-reported untreated/control intervention"
+        ],
+        "dosing_schedule": null,
+        "duration": null,
+        "id": "cellular:chen2014-variant",
+        "label": "Chen 2014 K528R antigen recognition",
+        "limitation": "Exact ERAP1 allotype not reported; AI-assisted extraction pending expert review. Off-target contribution cannot be excluded for chemical intervention.",
+        "locator": "Abstract Results; frozen C07",
+        "modality": "variant_expression",
+        "perturbation_id": "cellular:perturbation:k528r",
+        "reported_perturbagen": null,
+        "source_id": "PMID:24504800",
+        "vehicle": null
+      },
+      {
+        "compound_id": null,
+        "concentration": null,
+        "context": {
+          "cell_line": "U937.B27",
+          "disease_status": "cell line; no patient disease",
+          "donor_context": null,
+          "erap1_allotype": null,
+          "hla_allele": "HLA-B*27:05",
+          "hla_expression": "engineered",
+          "mhc_allele": null,
+          "scientific_context": {
+            "allotype": null,
+            "assay": "Immunoprecipitation, immunoblot and flow cytometry",
+            "cell_type": "U937.B27",
+            "comparison": null,
+            "endpoint": "disulfide-linked HLA-B27 dimers",
+            "experimental_system": "U937.B27",
+            "genotype": "Heterozygous rs30187 and rs27044; allotype not inferred",
+            "hla_status": "HLA-B27 expressed",
+            "population": null,
+            "species": "Homo sapiens",
+            "tissue": null,
+            "treatment": null
+          }
+        },
+        "controls": [
+          "scrambled shRNA"
+        ],
+        "dosing_schedule": null,
+        "duration": null,
+        "id": "cellular:tran-dimer",
+        "label": "Tran U937.B27 disulfide-linked HLA-B27 dimers",
+        "limitation": "Endogenous HLA-B*18:01 and HLA-B*51:01; different cell/assay background from Chen. Full-text XML retrieval failed; retains previous frozen curation.",
+        "locator": "Figure 3; frozen Methods context",
+        "modality": "knockdown",
+        "perturbation_id": "AXIS-ERAP1-CURATED-P13",
+        "reported_perturbagen": null,
+        "source_id": "PMID:27107845",
+        "vehicle": null
+      },
+      {
+        "compound_id": null,
+        "concentration": null,
+        "context": {
+          "cell_line": "U937.B27",
+          "disease_status": "cell line; no patient disease",
+          "donor_context": null,
+          "erap1_allotype": null,
+          "hla_allele": "HLA-B*27:05",
+          "hla_expression": "engineered",
+          "mhc_allele": null,
+          "scientific_context": {
+            "allotype": null,
+            "assay": "Immunoprecipitation, immunoblot and flow cytometry",
+            "cell_type": "U937.B27",
+            "comparison": null,
+            "endpoint": "surface free heavy chain",
+            "experimental_system": "U937.B27",
+            "genotype": "Heterozygous rs30187 and rs27044; allotype not inferred",
+            "hla_status": "HLA-B27 expressed",
+            "population": null,
+            "species": "Homo sapiens",
+            "tissue": null,
+            "treatment": null
+          }
+        },
+        "controls": [
+          "scrambled shRNA"
+        ],
+        "dosing_schedule": null,
+        "duration": null,
+        "id": "cellular:tran-fhc",
+        "label": "Tran U937.B27 surface free heavy chain",
+        "limitation": "Endogenous HLA-B*18:01 and HLA-B*51:01; different cell/assay background from Chen. Full-text XML retrieval failed; retains previous frozen curation.",
+        "locator": "Figure 2; frozen Methods context",
+        "modality": "knockdown",
+        "perturbation_id": "AXIS-ERAP1-CURATED-P13",
+        "reported_perturbagen": null,
+        "source_id": "PMID:27107845",
+        "vehicle": null
+      }
+    ],
+    "gaps": [
+      {
+        "claim_ids": [
+          "AXIS-ERAP1-CURATED-C09",
+          "AXIS-ERAP1-CURATED-C11"
+        ],
+        "compound_id": null,
+        "edge": "engagement",
+        "id": "cellular:chen-dg013a-C1R.B27:gap",
+        "perturbation_id": "AXIS-ERAP1-CURATED-P09",
+        "proposal_title": "Resolve cellular ERAP1 engagement and dependency \u2014 Chen DG013A \u2014 C1R.B27",
+        "question": "Does Chen DG013A \u2014 C1R.B27 directly engage ERAP1 at exposures producing the reported phenotype, and is that phenotype ERAP1-dependent?"
+      },
+      {
+        "claim_ids": [
+          "AXIS-ERAP1-CURATED-C09",
+          "AXIS-ERAP1-CURATED-C11"
+        ],
+        "compound_id": null,
+        "edge": "engagement",
+        "id": "cellular:chen-dg013a-HeLa.B27:gap",
+        "perturbation_id": "AXIS-ERAP1-CURATED-P09",
+        "proposal_title": "Resolve cellular ERAP1 engagement and dependency \u2014 Chen DG013A \u2014 HeLa.B27",
+        "question": "Does Chen DG013A \u2014 HeLa.B27 directly engage ERAP1 at exposures producing the reported phenotype, and is that phenotype ERAP1-dependent?"
+      }
+    ],
+    "readouts": [
+      {
+        "claim_id": "AXIS-ERAP1-CURATED-C10",
+        "direction": "decrease",
+        "endpoint": "Th17 expansion and IL-17A secretion",
+        "experiment_id": "cellular:chen-coculture",
+        "id": "cellular:chen-coculture:readout",
+        "locator": "Figure 4C\u2013D; Methods CD4+ coculture",
+        "measurement_id": null,
+        "original_unit": null,
+        "original_value": null,
+        "proximity": "immune_cell",
+        "qualitative_result": "Th17 expansion and IL-17A secretion decreased with APC silencing or inhibition; arms not pooled into numeric potency",
+        "replicate_information": "Five AS donors; genetic and chemical arms source-separated; no new raw values",
+        "statistical_result": "Paired two-tailed t test; mean and SE"
+      },
+      {
+        "claim_id": "AXIS-ERAP1-CURATED-C09",
+        "direction": "decrease",
+        "endpoint": "surface free heavy chain",
+        "experiment_id": "cellular:chen-dg013a-C1R.B27",
+        "id": "cellular:chen-dg013a-C1R.B27:readout",
+        "locator": "Figure 2E\u2013H; Methods ERAP1 inhibition",
+        "measurement_id": null,
+        "original_unit": null,
+        "original_value": null,
+        "proximity": "HLA_molecular",
+        "qualitative_result": "HC-10-reactive surface signal decreased after DG013A titration",
+        "replicate_information": "Experiments repeated three times; biological/technical distinction not specified",
+        "statistical_result": "Unpaired two-tailed t test; mean and SD"
+      },
+      {
+        "claim_id": "AXIS-ERAP1-CURATED-C09",
+        "direction": "decrease",
+        "endpoint": "surface free heavy chain",
+        "experiment_id": "cellular:chen-dg013a-HeLa.B27",
+        "id": "cellular:chen-dg013a-HeLa.B27:readout",
+        "locator": "Figure 2E\u2013H; Methods ERAP1 inhibition",
+        "measurement_id": null,
+        "original_unit": null,
+        "original_value": null,
+        "proximity": "HLA_molecular",
+        "qualitative_result": "HC-10-reactive surface signal decreased after DG013A titration",
+        "replicate_information": "Experiments repeated three times; biological/technical distinction not specified",
+        "statistical_result": "Unpaired two-tailed t test; mean and SD"
+      },
+      {
+        "claim_id": "AXIS-ERAP1-CURATED-C08",
+        "direction": "decrease",
+        "endpoint": "surface free heavy chain",
+        "experiment_id": "cellular:chen-knockdown-C1R.B27",
+        "id": "cellular:chen-knockdown-C1R.B27:readout",
+        "locator": "Figure 2A\u2013D; Methods ERAP1 silencing",
+        "measurement_id": null,
+        "original_unit": null,
+        "original_value": null,
+        "proximity": "HLA_molecular",
+        "qualitative_result": "HC-10-reactive surface signal decreased",
+        "replicate_information": "Experiments repeated three times; biological/technical distinction not specified",
+        "statistical_result": "Unpaired two-tailed t test; mean and SD"
+      },
+      {
+        "claim_id": "AXIS-ERAP1-CURATED-C08",
+        "direction": "decrease",
+        "endpoint": "surface free heavy chain",
+        "experiment_id": "cellular:chen-knockdown-HeLa.B27",
+        "id": "cellular:chen-knockdown-HeLa.B27:readout",
+        "locator": "Figure 2A\u2013D; Methods ERAP1 silencing",
+        "measurement_id": null,
+        "original_unit": null,
+        "original_value": null,
+        "proximity": "HLA_molecular",
+        "qualitative_result": "HC-10-reactive surface signal decreased",
+        "replicate_information": "Experiments repeated three times; biological/technical distinction not specified",
+        "statistical_result": "Unpaired two-tailed t test; mean and SD"
+      },
+      {
+        "claim_id": "AXIS-ERAP1-CURATED-C06",
+        "direction": "increase",
+        "endpoint": "HLA-B27 peptide-length distribution",
+        "experiment_id": "cellular:chen2014-peptidome",
+        "id": "cellular:chen2014-peptidome:readout",
+        "locator": "Abstract Results; frozen C06",
+        "measurement_id": null,
+        "original_unit": null,
+        "original_value": null,
+        "proximity": "HLA_molecular",
+        "qualitative_result": "Proportion of 11\u201313-residue HLA-B27 peptides increased",
+        "replicate_information": null,
+        "statistical_result": null
+      },
+      {
+        "claim_id": "AXIS-ERAP1-CURATED-C07",
+        "direction": "decrease",
+        "endpoint": "KK10-specific CTL recognition",
+        "experiment_id": "cellular:chen2014-variant",
+        "id": "cellular:chen2014-variant:readout",
+        "locator": "Abstract Results; frozen C07",
+        "measurement_id": null,
+        "original_unit": null,
+        "original_value": null,
+        "proximity": "immune_cell",
+        "qualitative_result": "K528R reduced recognition relative to wild type after extended KK10 minigene expression",
+        "replicate_information": null,
+        "statistical_result": null
+      },
+      {
+        "claim_id": "AXIS-ERAP1-CURATED-C13",
+        "direction": "increase",
+        "endpoint": "disulfide-linked HLA-B27 dimers",
+        "experiment_id": "cellular:tran-dimer",
+        "id": "cellular:tran-dimer:readout",
+        "locator": "Figure 3; frozen Methods context",
+        "measurement_id": null,
+        "original_unit": null,
+        "original_value": null,
+        "proximity": "HLA_molecular",
+        "qualitative_result": "Reported increase in the specific U937.B27 system",
+        "replicate_information": null,
+        "statistical_result": null
+      },
+      {
+        "claim_id": "AXIS-ERAP1-CURATED-C12",
+        "direction": "increase",
+        "endpoint": "surface free heavy chain",
+        "experiment_id": "cellular:tran-fhc",
+        "id": "cellular:tran-fhc:readout",
+        "locator": "Figure 2; frozen Methods context",
+        "measurement_id": null,
+        "original_unit": null,
+        "original_value": null,
+        "proximity": "HLA_molecular",
+        "qualitative_result": "Reported increase in the specific U937.B27 system",
+        "replicate_information": null,
+        "statistical_result": null
+      }
+    ],
+    "selectivity": [],
+    "strategy_ids": [
+      "AXIS-ERAP1-CURATED-STRATEGY-allele_specific_modulation",
+      "AXIS-ERAP1-CURATED-STRATEGY-allosterically_modulate",
+      "AXIS-ERAP1-CURATED-STRATEGY-inhibit",
+      "AXIS-ERAP1-CURATED-STRATEGY-partially_inhibit"
+    ],
+    "structure_ids": [
+      "structure:pdb:3QNF:04b29d420769a6ce405c85d90e6888289de20381e17e64c1a31c3e4f835b8f75:2026-10-04T12:25:57+00:00:3654c195689a5327"
+    ],
+    "target_label": "ERAP1"
+  }
+}
