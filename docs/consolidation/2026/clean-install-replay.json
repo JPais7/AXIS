@@ -1,0 +1,29 @@
+{
+  "reference_sha": "84ecc56e74747bdee12ecdf15b9a80bc760798f4",
+  "scientific_equivalence": "PASS",
+  "classification": "BYTE_IDENTICAL",
+  "changed_dimensions": [],
+  "checked_dimensions": [
+    "allotype_substrate",
+    "assay_comparability",
+    "causal_diff",
+    "claims",
+    "classification",
+    "critical_uncertainty",
+    "evidence",
+    "learning",
+    "maben_engagement",
+    "protected_hashes",
+    "recommended_experiment",
+    "reference_sha",
+    "replay",
+    "sources",
+    "uncertainties"
+  ],
+  "new_configuration_resources": [
+    "axis/resources/cases/erap1-axspa.json"
+  ],
+  "execution_seconds": 8.124,
+  "installation": "fresh venv, installed wheel; clean git archive for replay fixtures/scripts",
+  "axis_module_origin": "installed wheel, not developer checkout"
+}

@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "frozen_resource_files": 152,
+  "frozen_resource_bytes": 8314372,
+  "wheel_bytes": 2162823,
+  "sdist_bytes": 1967207,
+  "wheel_resource_bytes": 8314372,
+  "new_case_configuration_present": false,
+  "wheel_sha256": "c58d974aae4ec5678da55ba8b500a32c0d00230d001403c6cc217efbad936cd3",
+  "sdist_sha256": "ac98a944486b8b504dc0c56b0a2a62cca0c385a21906fd6ece232a36a7f2943b"
+}

@@ -1,0 +1,20 @@
+{
+  "EAST1": {
+    "branch": "validation/prospective-east1-erap1-axspa",
+    "disposition": "separate pre-existing freeze; not merged, rerun or modified",
+    "files_sha256": {
+      "axis/resources/validation/prospective/erap1-east1/v1/README.md": "90963411fd0067f5d995655af1c014d9662d366477494832a576cd1d529b132f",
+      "axis/resources/validation/prospective/erap1-east1/v1/case.json": "b2c21d6c1099e0d0b145da8bd8389459c88007878ea643bc12f3fdd6daf42a05",
+      "axis/resources/validation/prospective/erap1-east1/v1/evidence-snapshot.json": "4b5605dd962efe42e0c0c9f3300a536c7ab12682661c4baf3ea4cfedc17facf6",
+      "axis/resources/validation/prospective/erap1-east1/v1/manifest.json": "7048400a3d71934ba0dd3cf407503b5020c8e1b9d432bf4351a78f7fea0834d7",
+      "axis/resources/validation/prospective/erap1-east1/v1/manifest.sha256": "dc9d941dbba189e9542f55615347e3c2b175fa521e00c38214b644505ea09727",
+      "axis/resources/validation/prospective/erap1-east1/v1/outcome-scenarios.json": "f43e118192b3a3c3267a5cfd16f221a74faa9397909d553fbcd4f20cdd87f03f",
+      "axis/resources/validation/prospective/erap1-east1/v1/prospective-discriminators.json": "077674f468307345f2ecb2fe128c76a7052a906099f10044250890b952f295f7",
+      "axis/resources/validation/prospective/erap1-east1/v1/source-index.json": "07703ee49afec8ab845b5dd96150247daeb62881e10996f9325b4b5d6a41f925",
+      "axis/resources/validation/prospective/erap1-east1/v1/t0-state.json": "091b159fc68582ce5bc69caa1924125c997f62d03862d855deccac3dc2c32f83"
+    },
+    "frozen_sha": "2e985b1bb2922b8bd970a24759755772d3107d09",
+    "integrated_in_reference": false,
+    "verified_tip": "2e985b1bb2922b8bd970a24759755772d3107d09"
+  }
+}

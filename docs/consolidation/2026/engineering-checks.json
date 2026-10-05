@@ -1,0 +1,56 @@
+{
+  "checks": [
+    {
+      "command": "ruff check axis tests scripts/audit_axis_consolidation.py scripts/verify_consolidation_package.py",
+      "output": "All checks passed!\n",
+      "returncode": 0
+    },
+    {
+      "command": "mypy axis",
+      "output": "Success: no issues found in 166 source files\n",
+      "returncode": 0
+    },
+    {
+      "command": "git diff --check",
+      "output": "",
+      "returncode": 0
+    }
+  ],
+  "clean_wheel_demo": {
+    "passed": 9,
+    "total": 9
+  },
+  "cli_smoke": [
+    "axis --help",
+    "axis demo",
+    "axis decision --help",
+    "axis chemistry --help",
+    "axis chemistry model --help",
+    "axis benchmark --help",
+    "axis benchmark --repetitions 2 --warmups 1"
+  ],
+  "dependency_check": "pip check passed in developer and clean wheel environments",
+  "focused_new_tests": {
+    "failed": 0,
+    "passed": 25
+  },
+  "frontend": "unchanged; no frontend rebuild required",
+  "full_suite": {
+    "command": "PYTHONPATH=. pytest -q",
+    "failed": 0,
+    "passed": 785,
+    "scope": "final runtime and tests; executed after all code changes",
+    "seconds": 258.41,
+    "skipped": 2
+  },
+  "global_ruff_inherited_findings": 462,
+  "network_disabled_replay": "PASS",
+  "size": {
+    "after_tracked_bytes": 58249543,
+    "after_tracked_files": 823,
+    "before_tracked_bytes": 55376984,
+    "before_tracked_files": 803,
+    "working_tree_after_approx_mib": 372,
+    "working_tree_before_approx_mib": 369
+  }
+}
