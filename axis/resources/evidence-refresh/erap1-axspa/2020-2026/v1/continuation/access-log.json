@@ -1,0 +1,416 @@
+[
+  {
+    "source": "Europe PMC metadata resolution",
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28DOI%3A%2210.1093%2Frheumatology%2Fkeae522%22+OR+DOI%3A%2210.1038%2Fs41584-023-00910-y%22+OR+DOI%3A%2210.3389%2Ffimmu.2022.1055152%22+OR+DOI%3A%2210.3389%2Ffimmu.2021.698992%22+OR+DOI%3A%2210.1016%2Fj.xops.2021.100056%22+OR+DOI%3A%2210.1186%2Fs12969-026-01260-1%22+OR+DOI%3A%2210.3389%2Ffimmu.2020.608900%22+OR+DOI%3A%2210.3389%2Ffimmu.2021.765377%22+OR+DOI%3A%2210.1007%2Fs40520-025-03119-z%22+OR+DOI%3A%2210.1002%2Fjia2.25659%22+OR+DOI%3A%2210.1093%2Fajh%2Fhpaf034%22+OR+DOI%3A%2210.1038%2Fs41435-023-00244-5%22+OR+DOI%3A%2210.3389%2Ffimmu.2025.1568773%22+OR+DOI%3A%2210.3389%2Ffimmu.2022.1079913%22+OR+DOI%3A%2210.3389%2Ffimmu.2022.863414%22+OR+DOI%3A%2210.3389%2Ffmicb.2023.1110197%22+OR+DOI%3A%2210.1038%2Fs41581-019-0231-7%22+OR+DOI%3A%2210.1002%2F1878-0261.13683%22+OR+DOI%3A%2210.1007%2Fs43032-019-00138-w%22+OR+DOI%3A%2210.1164%2Frccm.202311-2111le%22%29&format=json&resultType=core&pageSize=1000",
+    "method": "GET",
+    "executed_at": "2026-10-05T11:52:46.433966+00:00",
+    "http_status": 200,
+    "sha256": "3f2cc5b307f2bb93a3326c5f0b9b7f20d0c2fc37032fa8c5b1cbf3ac5899aaac",
+    "status": "retrieved"
+  },
+  {
+    "source": "Europe PMC metadata resolution",
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28DOI%3A%2210.3389%2Ffgene.2023.1355794%22+OR+DOI%3A%2210.4103%2Fnrr.nrr-d-24-00972%22+OR+DOI%3A%2210.1016%2Fj.jaci.2020.09.014%22+OR+DOI%3A%2210.1007%2Fs00249-021-01558-w%22+OR+DOI%3A%2210.3389%2Ffimmu.2026.1887933%22+OR+DOI%3A%2210.1038%2Fs41467-023-37300-7%22+OR+DOI%3A%2210.1136%2Fjitc-2023-006784%22+OR+DOI%3A%2210.3389%2Ffgene.2022.822440%22+OR+DOI%3A%2210.1016%2Fj.gene.2020.144416%22+OR+DOI%3A%2210.1016%2Fj.bpj.2019.11.2767%22+OR+DOI%3A%2210.1080%2F10641955.2020.1749848%22+OR+DOI%3A%2210.1136%2Fjitc-2020-sitc2020.0446%22+OR+DOI%3A%2210.1136%2Fannrheumdis-2020-eular.3885%22+OR+DOI%3A%2210.1107%2Fs0108767320098621%22+OR+DOI%3A%2210.2210%2Fpdb7mwb%2Fpdb%22+OR+DOI%3A%2210.2210%2Fpdb7mwc%2Fpdb%22+OR+DOI%3A%2210.1016%2Fj.trecan.2021.09.005%22+OR+DOI%3A%2210.1136%2Fjitc-2021-sitc2021.553%22+OR+DOI%3A%2210.1016%2Fj.mgene.2021.100995%22+OR+DOI%3A%2210.7924%2Fr4g163n0s%22%29&format=json&resultType=core&pageSize=1000",
+    "method": "GET",
+    "executed_at": "2026-10-05T11:52:46.936071+00:00",
+    "http_status": 200,
+    "sha256": "4eb50c8a6912a38208b2bbc6034b64bb63c8cc0e3c8690f6c5af478489d13fb9",
+    "status": "retrieved"
+  },
+  {
+    "source": "Europe PMC metadata resolution",
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28DOI%3A%2210.2210%2Fpdb7z28%2Fpdb%22+OR+DOI%3A%2210.14744%2Fiksstd.2021.29494%22+OR+DOI%3A%2210.21608%2Feajbsc.2022.261073%22+OR+DOI%3A%2210.1016%2Fj.molimm.2022.05.038%22+OR+DOI%3A%2210.1016%2Fj.molimm.2022.05.074%22+OR+DOI%3A%2210.1016%2Fj.molimm.2022.05.091%22+OR+DOI%3A%2210.1016%2Fs0959-8049%2822%2901135-2%22+OR+DOI%3A%2210.1136%2Fjitc-2022-sitc2022.1131%22+OR+DOI%3A%2210.1016%2Fj.jid.2023.01.012%22+OR+DOI%3A%2210.1016%2Fj.jid.2023.03.006%22+OR+DOI%3A%2210.1016%2Fj.jid.2023.03.266%22+OR+DOI%3A%2210.1016%2Fj.jid.2023.03.905%22+OR+DOI%3A%2210.26226%2Fm.641999d3c37f0d0019bb72eb%22+OR+DOI%3A%2210.26226%2Fm.641999dd96661e001462ccee%22+OR+DOI%3A%2210.1016%2Fj.legalmed.2024.102419%22+OR+DOI%3A%2210.25236%2Fajcis.2024.070801%22+OR+DOI%3A%2210.2210%2Fpdb9gjs%2Fpdb%22+OR+DOI%3A%2210.2210%2Fpdb9gjn%2Fpdb%22+OR+DOI%3A%2210.2210%2Fpdb9gke%2Fpdb%22+OR+DOI%3A%2210.2210%2Fpdb9gk6%2Fpdb%22%29&format=json&resultType=core&pageSize=1000",
+    "method": "GET",
+    "executed_at": "2026-10-05T11:52:47.254185+00:00",
+    "http_status": 200,
+    "sha256": "9bc88ae90a1ae62b4f4d2c64e6b9f9badf8c3f4196cd80322d3196d335517712",
+    "status": "retrieved"
+  },
+  {
+    "source": "Europe PMC metadata resolution",
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28DOI%3A%2210.2139%2Fssrn.5093704%22+OR+DOI%3A%2210.1016%2Fj.ard.2025.06.234%22+OR+DOI%3A%2210.1016%2Fj.humimm.2025.111338%22+OR+DOI%3A%2210.1016%2Fj.ymthe.2025.11.025%22+OR+DOI%3A%2210.2210%2Fpdb9tda%2Fpdb%22+OR+DOI%3A%2210.2210%2Fpdb9tf6%2Fpdb%22+OR+DOI%3A%2210.2210%2Fpdb9td5%2Fpdb%22+OR+DOI%3A%2210.2210%2Fpdb9td7%2Fpdb%22+OR+DOI%3A%2210.2210%2Fpdb9tf3%2Fpdb%22+OR+DOI%3A%2210.2210%2Fpdb9tf4%2Fpdb%22+OR+DOI%3A%2210.2210%2Fpdb9tfn%2Fpdb%22+OR+DOI%3A%2210.2210%2Fpdb9td3%2Fpdb%22+OR+DOI%3A%2210.2210%2Fpdb9td4%2Fpdb%22+OR+DOI%3A%2210.1007%2F978-1-0716-5092-9_20%22+OR+DOI%3A%2210.1136%2Fjsrd-2026-sswc.58%22+OR+DOI%3A%2210.1007%2Fs12291-026-01444-2%22%29&format=json&resultType=core&pageSize=1000",
+    "method": "GET",
+    "executed_at": "2026-10-05T11:52:47.475239+00:00",
+    "http_status": 200,
+    "sha256": "544e7987610d8fbf059129ec28241bf19d0a59cca847802997f4f22c8d785e07",
+    "status": "retrieved"
+  },
+  {
+    "source": "Europe PMC metadata resolution",
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=ERAP1+AND+SRC%3APPR+AND+FIRST_PDATE%3A%5B2020-01-01+TO+2026-10-05%5D&format=json&resultType=core&pageSize=1000",
+    "method": "GET",
+    "executed_at": "2026-10-05T11:52:47.715732+00:00",
+    "http_status": 200,
+    "sha256": "d608aeb96f3e2160218e85eb96672a091b84c1f6d18054ad82bcb0c0824a3451",
+    "status": "retrieved"
+  },
+  {
+    "source": "OpenAlex",
+    "url": "https://api.openalex.org/works?search=ERAP1&filter=from_publication_date%3A2020-01-01%2Cto_publication_date%3A2026-10-05&per-page=200&cursor=%2A",
+    "method": "GET",
+    "executed_at": "2026-10-05T11:52:48.478713+00:00",
+    "http_status": 200,
+    "sha256": "46ac9b448278656fa35a7dd2418354e7416038c2dc2a85ca7504198b01e3cdc5",
+    "status": "retrieved"
+  },
+  {
+    "source": "OpenAlex",
+    "url": "https://api.openalex.org/works?search=ERAP1&filter=from_publication_date%3A2020-01-01%2Cto_publication_date%3A2026-10-05&per-page=200&cursor=Ils0My4zODU5ODMsIDE2NjA1MjE2MDAwMDAsICdodHRwczovL29wZW5hbGV4Lm9yZy9XNDI5MTc5ODc1MSddIg%3D%3D",
+    "method": "GET",
+    "executed_at": "2026-10-05T11:52:50.658326+00:00",
+    "http_status": 200,
+    "sha256": "27c04c5bc70b465348c78180acfbd2b0d7eae935e179cc17d8a1290c05c628c3",
+    "status": "retrieved"
+  },
+  {
+    "source": "OpenAlex",
+    "url": "https://api.openalex.org/works?search=ERAP1&filter=from_publication_date%3A2020-01-01%2Cto_publication_date%3A2026-10-05&per-page=200&cursor=IlsyMi44NjMwODcsIDE3NjgxNzYwMDAwMDAsICdodHRwczovL29wZW5hbGV4Lm9yZy9XNzEyMjc0NDgxMSddIg%3D%3D",
+    "method": "GET",
+    "executed_at": "2026-10-05T11:52:53.718062+00:00",
+    "http_status": 200,
+    "sha256": "a8a2ddb8c2a5b92b332ad3c6a47860f5105bcd59cfacaf494c3f114e0f5ea6ec",
+    "status": "retrieved"
+  },
+  {
+    "source": "OpenAlex",
+    "url": "https://api.openalex.org/works?search=ERAP1&filter=from_publication_date%3A2020-01-01%2Cto_publication_date%3A2026-10-05&per-page=200&cursor=Ils1LjA0MjAwNzQsIDE2MzEwNTkyMDAwMDAsICdodHRwczovL29wZW5hbGV4Lm9yZy9XMzE5NjQwNjU5MSddIg%3D%3D",
+    "method": "GET",
+    "executed_at": "2026-10-05T11:52:56.062070+00:00",
+    "http_status": 200,
+    "sha256": "3430a028fc48812e6a64962b25989d5ef3fee121240af7294d8b609e8c59442c",
+    "status": "retrieved"
+  },
+  {
+    "source": "OpenAlex",
+    "url": "https://api.openalex.org/works?search=ERAP1&filter=from_publication_date%3A2020-01-01%2Cto_publication_date%3A2026-10-05&per-page=200&cursor=Ils0LjQwMzc4MiwgMTYyOTY3NjgwMDAwMCwgJ2h0dHBzOi8vb3BlbmFsZXgub3JnL1czMTk0NTUwMTAyJ10i",
+    "method": "GET",
+    "executed_at": "2026-10-05T11:52:58.068824+00:00",
+    "http_status": 200,
+    "sha256": "bff4e0145bda4112e89325bf862704be6c7f071c5222643662af4ff796e6f54f",
+    "status": "retrieved"
+  },
+  {
+    "source": "OpenAlex",
+    "url": "https://api.openalex.org/works?search=ERAP1&filter=from_publication_date%3A2020-01-01%2Cto_publication_date%3A2026-10-05&per-page=200&cursor=IlszLjk3NDI2OCwgMTYwOTQ1OTIwMDAwMCwgJ2h0dHBzOi8vb3BlbmFsZXgub3JnL1czMTYwOTQxMDYwJ10i",
+    "method": "GET",
+    "executed_at": "2026-10-05T11:53:00.422088+00:00",
+    "http_status": 200,
+    "sha256": "fd74d23485d060448792d7c5ff6192462bd3375163777d624402019712694523",
+    "status": "retrieved"
+  },
+  {
+    "source": "OpenAlex",
+    "url": "https://api.openalex.org/works?search=ERAP1&filter=from_publication_date%3A2020-01-01%2Cto_publication_date%3A2026-10-05&per-page=200&cursor=IlszLjcxMTQxNDMsIDE2OTc1ODcyMDAwMDAsICdodHRwczovL29wZW5hbGV4Lm9yZy9XNDM4Nzc0MTI3MCddIg%3D%3D",
+    "method": "GET",
+    "executed_at": "2026-10-05T11:53:04.241620+00:00",
+    "http_status": 200,
+    "sha256": "9acb3f894dc754fec061d0b15b40ea69004bd6dd08806569e4d04e0349eae254",
+    "status": "retrieved"
+  },
+  {
+    "source": "OpenAlex",
+    "url": "https://api.openalex.org/works?search=ERAP1&filter=from_publication_date%3A2020-01-01%2Cto_publication_date%3A2026-10-05&per-page=200&cursor=IlszLjQ4MDYzOTcsIDE2MzMwNDY0MDAwMDAsICdodHRwczovL29wZW5hbGV4Lm9yZy9XMzIwNjY0MDQ5NiddIg%3D%3D",
+    "method": "GET",
+    "executed_at": "2026-10-05T11:53:07.021388+00:00",
+    "http_status": 200,
+    "sha256": "a17a08035b959601f154765f0f59db8232c48183b264e3d500eeb44e2f1b2cfc",
+    "status": "retrieved"
+  },
+  {
+    "source": "OpenAlex",
+    "url": "https://api.openalex.org/works?search=ERAP1&filter=from_publication_date%3A2020-01-01%2Cto_publication_date%3A2026-10-05&per-page=200&cursor=IlszLjIxOTcyMzIsIDE3NDg0NzY4MDAwMDAsICdodHRwczovL29wZW5hbGV4Lm9yZy9XNDQxMDg2MDQ2NyddIg%3D%3D",
+    "method": "GET",
+    "executed_at": "2026-10-05T11:53:09.638740+00:00",
+    "http_status": 200,
+    "sha256": "86b6fcfb5da84fcb4732d9d443e831bf8eb8ea29c984581b6e6939c09e1df96c",
+    "status": "retrieved"
+  },
+  {
+    "source": "OpenAlex",
+    "url": "https://api.openalex.org/works?search=ERAP1&filter=from_publication_date%3A2020-01-01%2Cto_publication_date%3A2026-10-05&per-page=200&cursor=IlsyLjk0MTg3NSwgMTY3OTM1NjgwMDAwMCwgJ2h0dHBzOi8vb3BlbmFsZXgub3JnL1c0MzI4MDQ5NjM5J10i",
+    "method": "GET",
+    "executed_at": "2026-10-05T11:53:12.451308+00:00",
+    "http_status": 200,
+    "sha256": "cb9b93086114023ebd63d720b686fc4887a422310a5966828f06fdc1b2f65850",
+    "status": "retrieved"
+  },
+  {
+    "source": "OpenAlex",
+    "url": "https://api.openalex.org/works?search=ERAP1&filter=from_publication_date%3A2020-01-01%2Cto_publication_date%3A2026-10-05&per-page=200&cursor=IlsyLjY0MjAwOSwgMTY1NjYzMzYwMDAwMCwgJ2h0dHBzOi8vb3BlbmFsZXgub3JnL1c0MjgzNzcyMjk4J10i",
+    "method": "GET",
+    "executed_at": "2026-10-05T11:53:15.495671+00:00",
+    "http_status": 200,
+    "sha256": "15261cc78e724a4b728088e28b1cc5da96bc0a77bed5655452d6004391bf2f63",
+    "status": "retrieved"
+  },
+  {
+    "source": "OpenAlex",
+    "url": "https://api.openalex.org/works?search=ERAP1&filter=from_publication_date%3A2020-01-01%2Cto_publication_date%3A2026-10-05&per-page=200&cursor=IlsyLjI5MDEzNDQsIDE2NzI1MzEyMDAwMDAsICdodHRwczovL29wZW5hbGV4Lm9yZy9XNDM4MTI3NjEwOCddIg%3D%3D",
+    "method": "GET",
+    "executed_at": "2026-10-05T11:53:18.357996+00:00",
+    "http_status": 200,
+    "sha256": "391dc99806fa613f09e0af9934455fcd9617db0b57c4226462b1726fe5b6d54c",
+    "status": "retrieved"
+  },
+  {
+    "source": "OpenAlex",
+    "url": "https://api.openalex.org/works?search=ERAP1&filter=from_publication_date%3A2020-01-01%2Cto_publication_date%3A2026-10-05&per-page=200&cursor=IlsxLjg4MDY5MzQsIDE3ODcwMTEyMDAwMDAsICdodHRwczovL29wZW5hbGV4Lm9yZy9XNzIwMzcyNTcwNCddIg%3D%3D",
+    "method": "GET",
+    "executed_at": "2026-10-05T11:53:21.913740+00:00",
+    "http_status": 200,
+    "sha256": "3d717e59d7dd3927fd08fdc2e1812d7cabcd217c058ecb237f4f6759c6eef748",
+    "status": "retrieved"
+  },
+  {
+    "source": "OpenAlex",
+    "url": "https://api.openalex.org/works?search=ERAP1&filter=from_publication_date%3A2020-01-01%2Cto_publication_date%3A2026-10-05&per-page=200&cursor=IlsxLjIyNTQ4OTQsIDE3ODU3MTUyMDAwMDAsICdodHRwczovL29wZW5hbGV4Lm9yZy9XNzE3MjM1MTgwMyddIg%3D%3D",
+    "method": "GET",
+    "executed_at": "2026-10-05T11:53:24.579120+00:00",
+    "http_status": 200,
+    "sha256": "5aa0fdf2f537d5bebf0a8cc3426059d7a93b873dc0e88baf9049b3f03d473e4f",
+    "status": "retrieved"
+  },
+  {
+    "source": "ClinicalTrials.gov",
+    "url": "https://clinicaltrials.gov/api/v2/studies?query.term=ERAP1&pageSize=100&countTotal=true",
+    "method": "GET",
+    "executed_at": "2026-10-05T11:53:25.739146+00:00",
+    "http_status": 200,
+    "sha256": "77ff01b70e3f0d32209e068ac1568d4469c8dc25180a12b2b1f91f8cc58873c2",
+    "status": "retrieved"
+  },
+  {
+    "source": "Europe PMC one-layer references",
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/MED/39691536/references?format=json&pageSize=1000",
+    "method": "GET",
+    "executed_at": "2026-10-05T11:53:26.006543+00:00",
+    "http_status": 200,
+    "sha256": "7c937af85dcfbbab66812e892f5ffb96069bee79580a6c67e73e21e7cf9c76a6",
+    "status": "retrieved"
+  },
+  {
+    "source": "Europe PMC one-layer citations",
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/MED/39691536/citations?format=json&pageSize=1000",
+    "method": "GET",
+    "executed_at": "2026-10-05T11:53:26.292729+00:00",
+    "http_status": 200,
+    "sha256": "849ac97592e8a8e43de7da3910df6ece74474bf9bc0d1a033975f9d4a01acbab",
+    "status": "retrieved"
+  },
+  {
+    "source": "Europe PMC one-layer references",
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/MED/33617882/references?format=json&pageSize=1000",
+    "method": "GET",
+    "executed_at": "2026-10-05T11:53:26.499393+00:00",
+    "http_status": 200,
+    "sha256": "0390e2d011e7a72d12becd747bdcd94b97e51c863b849bc0f53c9e1f943bf627",
+    "status": "retrieved"
+  },
+  {
+    "source": "Europe PMC one-layer citations",
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/MED/33617882/citations?format=json&pageSize=1000",
+    "method": "GET",
+    "executed_at": "2026-10-05T11:53:27.013657+00:00",
+    "http_status": 200,
+    "sha256": "15e1f3ffc843e2e89bf96af103766c0319728d644445fba75bb95f6e9cceebe6",
+    "status": "retrieved"
+  },
+  {
+    "source": "Europe PMC one-layer references",
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/MED/36577442/references?format=json&pageSize=1000",
+    "method": "GET",
+    "executed_at": "2026-10-05T11:53:27.578425+00:00",
+    "http_status": 200,
+    "sha256": "03b47d22e1b98e4a1c9ea6f8bc5f69661454935e8d2a7473a59abd8f7e26993e",
+    "status": "retrieved"
+  },
+  {
+    "source": "Europe PMC one-layer citations",
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/MED/36577442/citations?format=json&pageSize=1000",
+    "method": "GET",
+    "executed_at": "2026-10-05T11:53:27.934935+00:00",
+    "http_status": 200,
+    "sha256": "7ac971388154dfd904937421cc9478670c3d3a3770bd05e12355c01a9cdd8d5e",
+    "status": "retrieved"
+  },
+  {
+    "source": "Europe PMC one-layer references",
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/MED/40680611/references?format=json&pageSize=1000",
+    "method": "GET",
+    "executed_at": "2026-10-05T11:53:28.279909+00:00",
+    "http_status": 200,
+    "sha256": "01cdf7c8a16e916e973e19e358b5791d802fa66cff4136683b9830431dd7288d",
+    "status": "retrieved"
+  },
+  {
+    "source": "Europe PMC one-layer citations",
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/MED/40680611/citations?format=json&pageSize=1000",
+    "method": "GET",
+    "executed_at": "2026-10-05T11:53:28.571930+00:00",
+    "http_status": 200,
+    "sha256": "29f0c0ab670d96a57f347dcf34dace29fe63a7bfd0fd44e7c6543907ac78cc96",
+    "status": "retrieved"
+  },
+  {
+    "source": "Europe PMC one-layer references",
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/MED/39024058/references?format=json&pageSize=1000",
+    "method": "GET",
+    "executed_at": "2026-10-05T11:53:28.850371+00:00",
+    "http_status": 200,
+    "sha256": "2c1e0f5e2cf7eb76b2c36f6a6e8f2c3e51e32d3f18f3ac692959268cad8f30b6",
+    "status": "retrieved"
+  },
+  {
+    "source": "Europe PMC one-layer citations",
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/MED/39024058/citations?format=json&pageSize=1000",
+    "method": "GET",
+    "executed_at": "2026-10-05T11:53:29.028392+00:00",
+    "http_status": 200,
+    "sha256": "cee8936268451b09df26f176565c31e2f4dda5d3420fe73e389d602976f79d83",
+    "status": "retrieved"
+  },
+  {
+    "source": "RCSB entry 7MWB",
+    "url": "https://data.rcsb.org/rest/v1/core/entry/7MWB",
+    "method": "GET",
+    "executed_at": "2026-10-05T11:53:29.284860+00:00",
+    "http_status": 200,
+    "sha256": "e6be0cef25d4c3eae25f5a91870cd5fca8243672e638a3c3e870e4a0c87d23b7",
+    "status": "retrieved"
+  },
+  {
+    "source": "RCSB entry 7MWC",
+    "url": "https://data.rcsb.org/rest/v1/core/entry/7MWC",
+    "method": "GET",
+    "executed_at": "2026-10-05T11:53:29.641256+00:00",
+    "http_status": 200,
+    "sha256": "8a698e1b4085fbccadebab9fdfbbb38c6a805d7a2b6e3e807c4d02f72125e6c4",
+    "status": "retrieved"
+  },
+  {
+    "source": "RCSB entry 7Z28",
+    "url": "https://data.rcsb.org/rest/v1/core/entry/7Z28",
+    "method": "GET",
+    "executed_at": "2026-10-05T11:53:30.002925+00:00",
+    "http_status": 200,
+    "sha256": "a0415ce8ed1e72c64dcd77bb76d0b42fa4f2488b0bb4f174f6e486acc3c43d7f",
+    "status": "retrieved"
+  },
+  {
+    "source": "RCSB entry 9GJS",
+    "url": "https://data.rcsb.org/rest/v1/core/entry/9GJS",
+    "method": "GET",
+    "executed_at": "2026-10-05T11:53:30.366281+00:00",
+    "http_status": 200,
+    "sha256": "2f629b4f0a6f28ac10285b7c12fa4cfb2af5acf98ffb9dcdf89420a872003533",
+    "status": "retrieved"
+  },
+  {
+    "source": "RCSB entry 9GJN",
+    "url": "https://data.rcsb.org/rest/v1/core/entry/9GJN",
+    "method": "GET",
+    "executed_at": "2026-10-05T11:53:30.732261+00:00",
+    "http_status": 200,
+    "sha256": "316494dea53cc16079b4a48f32ebe162c54b8480481306bbc7089af31ae68f79",
+    "status": "retrieved"
+  },
+  {
+    "source": "RCSB entry 9GKE",
+    "url": "https://data.rcsb.org/rest/v1/core/entry/9GKE",
+    "method": "GET",
+    "executed_at": "2026-10-05T11:53:31.075963+00:00",
+    "http_status": 200,
+    "sha256": "37857e38cb7f2fe7fced7adf42ace732669e39286daca92f00fa3cc318b8abfc",
+    "status": "retrieved"
+  },
+  {
+    "source": "RCSB entry 9GK6",
+    "url": "https://data.rcsb.org/rest/v1/core/entry/9GK6",
+    "method": "GET",
+    "executed_at": "2026-10-05T11:53:31.432488+00:00",
+    "http_status": 200,
+    "sha256": "e57ad8b0c2ce41d22974450bb277a9496adfa4d5c84fbf7c1c81205683f191e5",
+    "status": "retrieved"
+  },
+  {
+    "source": "RCSB entry 9TDA",
+    "url": "https://data.rcsb.org/rest/v1/core/entry/9TDA",
+    "method": "GET",
+    "executed_at": "2026-10-05T11:53:31.820133+00:00",
+    "http_status": 200,
+    "sha256": "09852156088770ba19edfc37e5b22cf92f8924999ad51418bbab6d7dca0587eb",
+    "status": "retrieved"
+  },
+  {
+    "source": "RCSB entry 9TF6",
+    "url": "https://data.rcsb.org/rest/v1/core/entry/9TF6",
+    "method": "GET",
+    "executed_at": "2026-10-05T11:53:32.176953+00:00",
+    "http_status": 200,
+    "sha256": "7d7ac39a45c4d36903cdfedd996010ae36f13eda62e6ab972d4521f2d8046022",
+    "status": "retrieved"
+  },
+  {
+    "source": "RCSB entry 9TD5",
+    "url": "https://data.rcsb.org/rest/v1/core/entry/9TD5",
+    "method": "GET",
+    "executed_at": "2026-10-05T11:53:32.519946+00:00",
+    "http_status": 200,
+    "sha256": "50e412f4b70dbc6884f42929febf611282d660982cb9adcfb0cfa03a4818ff99",
+    "status": "retrieved"
+  },
+  {
+    "source": "RCSB entry 9TD7",
+    "url": "https://data.rcsb.org/rest/v1/core/entry/9TD7",
+    "method": "GET",
+    "executed_at": "2026-10-05T11:53:32.863709+00:00",
+    "http_status": 200,
+    "sha256": "898d3d78119d8571961631e91398c07602ee7b00935ae609d477bb3b8bb53c74",
+    "status": "retrieved"
+  },
+  {
+    "source": "RCSB entry 9TF3",
+    "url": "https://data.rcsb.org/rest/v1/core/entry/9TF3",
+    "method": "GET",
+    "executed_at": "2026-10-05T11:53:33.340431+00:00",
+    "http_status": 200,
+    "sha256": "c0ebe17e1644b0f465dc2a3db76b041103c1cb6ea99534603d3223577aabc230",
+    "status": "retrieved"
+  },
+  {
+    "source": "RCSB entry 9TF4",
+    "url": "https://data.rcsb.org/rest/v1/core/entry/9TF4",
+    "method": "GET",
+    "executed_at": "2026-10-05T11:53:33.678401+00:00",
+    "http_status": 200,
+    "sha256": "bd8978d320335bd7ab746f083f35371ab565826d27f84b06569f07a4d748c38b",
+    "status": "retrieved"
+  },
+  {
+    "source": "RCSB entry 9TFN",
+    "url": "https://data.rcsb.org/rest/v1/core/entry/9TFN",
+    "method": "GET",
+    "executed_at": "2026-10-05T11:53:34.037656+00:00",
+    "http_status": 200,
+    "sha256": "d7a5c284efd6b03e4560735c0ee7201932d626dee1ce8296a16be5e114090fb6",
+    "status": "retrieved"
+  },
+  {
+    "source": "RCSB entry 9TD3",
+    "url": "https://data.rcsb.org/rest/v1/core/entry/9TD3",
+    "method": "GET",
+    "executed_at": "2026-10-05T11:53:34.417615+00:00",
+    "http_status": 200,
+    "sha256": "b6766fd981b421db067b5b3049aad29a6296cfe5ba84953dd1fc7e0eb1710ccc",
+    "status": "retrieved"
+  },
+  {
+    "source": "RCSB entry 9TD4",
+    "url": "https://data.rcsb.org/rest/v1/core/entry/9TD4",
+    "method": "GET",
+    "executed_at": "2026-10-05T11:53:34.864160+00:00",
+    "http_status": 200,
+    "sha256": "8644cc5ca78af32eae9000e76e62edc2a2a3dc8fd70030043cb85cfdfbda0e60",
+    "status": "retrieved"
+  }
+]

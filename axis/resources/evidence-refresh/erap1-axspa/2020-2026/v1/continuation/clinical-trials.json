@@ -1,0 +1,1972 @@
+{
+  "studies": [
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT06923761",
+          "orgStudyIdInfo": {
+            "id": "GRWD5769-ST-01"
+          },
+          "organization": {
+            "fullName": "Grey Wolf Therapeutics",
+            "class": "OTHER"
+          },
+          "briefTitle": "EMITT-1 (ERAP Mediated Immunopeptidome Targeting Trial - 1)",
+          "officialTitle": "A Modular, Multi-part, Multi-arm, Open-label, Phase I/II Study to Evaluate the Safety and Tolerability of GRWD5769 Alone and in Combination With Anticancer Treatments in Patients With Solid Malignancies",
+          "acronym": "EMITT-1"
+        },
+        "statusModule": {
+          "statusVerifiedDate": "2025-06",
+          "overallStatus": "RECRUITING",
+          "expandedAccessInfo": {
+            "hasExpandedAccess": false
+          },
+          "startDateStruct": {
+            "date": "2023-05-21",
+            "type": "ACTUAL"
+          },
+          "primaryCompletionDateStruct": {
+            "date": "2027-04-30",
+            "type": "ESTIMATED"
+          },
+          "completionDateStruct": {
+            "date": "2028-04-30",
+            "type": "ESTIMATED"
+          },
+          "studyFirstSubmitDate": "2025-03-27",
+          "studyFirstSubmitQcDate": "2025-04-04",
+          "studyFirstPostDateStruct": {
+            "date": "2025-04-11",
+            "type": "ACTUAL"
+          },
+          "lastUpdateSubmitDate": "2026-01-26",
+          "lastUpdatePostDateStruct": {
+            "date": "2026-01-28",
+            "type": "ACTUAL"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "responsibleParty": {
+            "type": "SPONSOR"
+          },
+          "leadSponsor": {
+            "name": "Grey Wolf Therapeutics",
+            "class": "OTHER"
+          }
+        },
+        "oversightModule": {
+          "oversightHasDmc": false,
+          "isFdaRegulatedDrug": false,
+          "isFdaRegulatedDevice": false
+        },
+        "descriptionModule": {
+          "briefSummary": "This is a Phase I/II, open-label, first-in human study of GRWD5769 alone, and in combination with another anti-cancer agent in advanced solid cancers.",
+          "detailedDescription": "GRWD5769 is as a potential new treatment for advanced or metastatic solid malignancies. GRWD5769 works by stopping an enzyme in the body, called endoplasmic reticulum aminopeptidase 1 (ERAP1), from working. ERAP1 is part of how the body recognizes the presence of a cancer tumour and helps trigger the immune system to fight the cancer. However, in patients with cancer, the immune system cells can become exhausted and no longer work effectively. By blocking ERAP1 it makes the tumour look different to the immune system and so the immune system starts fighting the cancer again. GRWD5769 has the potential of producing clinically meaningful improvements in monotherapy and in combination with therapy like cemiplimab (Libtayo\u00ae) by enhancing the antitumour immune response.\n\nWho can participate? Patients with advanced or metastatic solid malignancy aged 18 years or older.\n\nWhat does the study involve? This study consists of Module 1 (Parts A to D), which will look at the effects of GRWD5769 when given alone and Module 2 (Parts A to D) which will look at the effects of GRWD5769 when given in combination with another anticancer drug called Libtayo\u00ae (cemiplimab)."
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Advanced Solid Malignancy"
+          ],
+          "keywords": [
+            "Oncology",
+            "ERAP 1",
+            "Solid tumors",
+            "TMB-H",
+            "NSCLC",
+            "Lung cancer",
+            "Cervical cancer",
+            "HCC - Hepatocellular Carcinoma",
+            "Liver cancer",
+            "Head and Neck Squamous Cell Carcinoma",
+            "SCCHN",
+            "Urothelial cancer",
+            "immuno oncology"
+          ]
+        },
+        "designModule": {
+          "studyType": "INTERVENTIONAL",
+          "phases": [
+            "PHASE1",
+            "PHASE2"
+          ],
+          "designInfo": {
+            "allocation": "NON_RANDOMIZED",
+            "interventionModel": "SEQUENTIAL",
+            "primaryPurpose": "TREATMENT",
+            "maskingInfo": {
+              "masking": "NONE"
+            }
+          },
+          "enrollmentInfo": {
+            "count": 300,
+            "type": "ESTIMATED"
+          }
+        },
+        "armsInterventionsModule": {
+          "armGroups": [
+            {
+              "label": "Module 1 (GRWD5769 on its own as monotherapy)",
+              "type": "EXPERIMENTAL",
+              "interventionNames": [
+                "Drug: Module 1 (GRWD5769 on its own as monotherapy)"
+              ]
+            },
+            {
+              "label": "Module 2 (GRWD5769 in combination with cemiplimab, administered IV)",
+              "type": "EXPERIMENTAL",
+              "interventionNames": [
+                "Drug: Module 2 (GRWD5769 in combination with cemiplimab, administered IV)"
+              ]
+            }
+          ],
+          "interventions": [
+            {
+              "type": "DRUG",
+              "name": "Module 1 (GRWD5769 on its own as monotherapy)",
+              "description": "Module 1 will initially be conducted in 4 study parts:\n\nPart A: Monotherapy dose escalation (where the safety of increasing doses of GRWD5769 will initially be assessed in a small group of patients, overseen by a safety review committee)\n\nPart B: (Optional) Monotherapy dose expansion part (to look at the effect of GRWD5769 on the body, and of the body on GRWD5769, at particular dose levels to include evaluation of biopsies of tumour tissue)\n\nPart C: (Optional) Intra-patient dose escalation (where a patient may receive three different GRWD5769 doses so that blood levels at each dose can be measured in an individual)\n\nPart D: Monotherapy dose expansion group(s) (where a dose of GRWD5769 may be chosen to be evaluated in specific types of cancer)",
+              "armGroupLabels": [
+                "Module 1 (GRWD5769 on its own as monotherapy)"
+              ]
+            },
+            {
+              "type": "DRUG",
+              "name": "Module 2 (GRWD5769 in combination with cemiplimab, administered IV)",
+              "description": "Module 2 will initially be conducted as 3 study parts, similar to those above, but looking at GRWD5769 when given in combination with cemiplimab:\n\nPart A: Combination therapy dose escalation (like Module 1 Part A)\n\nPart B: (Optional) Combination therapy dose expansion part (like Module 1 Part B)\n\nPart C: Combination therapy dose expansion group(s) (where a dose of GRWD5769 given with cemiplimab will be evaluated in specific types of cancer)\n\nPart D: Randomised dose optimisation, combination therapy (where 3 doses of GRWD5769 given with cemiplimab will be evaluated in specific types of cancer)",
+              "armGroupLabels": [
+                "Module 2 (GRWD5769 in combination with cemiplimab, administered IV)"
+              ]
+            }
+          ]
+        },
+        "outcomesModule": {
+          "primaryOutcomes": [
+            {
+              "measure": "Number of treatment emergent and treatment related AEs",
+              "description": "Incidence of treatment emergent and treatment related AEs assessed from start of study drug to 30 days post last dose of GRWD5769 (Module 1) or to 90 days post last dose of cemiplimab (Module 2 Parts A-C).",
+              "timeFrame": "From first dose to 30 days after last dose of GRWD5769 for Module 1 and 90 days after last dose of cemiplimab for Module 2 Parts A-C."
+            },
+            {
+              "measure": "Incidence of Dose limiting toxicities (DLT)",
+              "description": "Incidence of Dose limiting toxicities (DLT) during the DLT period which commences Cycle 0 Day 1 and continues to 21 days after Cycle 1 Day 1",
+              "timeFrame": "End of cycle 1 (each cycle is 21 days)"
+            },
+            {
+              "measure": "Comparative efficacy (for Module 2D only)",
+              "description": "Comparative efficacy will be evaluated or assessed using the change in dimension over time of RECIST Target Lesions from baseline and on-study scans recorded at weeks 8 and 16",
+              "timeFrame": "From baseline to week 16"
+            }
+          ],
+          "secondaryOutcomes": [
+            {
+              "measure": "GRWD5769 Plasma PK Trough concentration",
+              "timeFrame": "Up to approximately 1 year"
+            },
+            {
+              "measure": "Objective response rate (ORR)",
+              "description": "Preliminary efficacy of GRWD5769 will be assessed by:\n\nTumour response (ORR) by RECIST 1.1 or iRECIST as determined by CT/MRI scans performed every 8 weeks until participant disease progression or withdrawal.",
+              "timeFrame": "Up to approximately 1 year"
+            },
+            {
+              "measure": "Disease specific tumour markers",
+              "description": "Changes in any applicable disease-specific tumour markers assessed pre-treatment, Day 1 of each cycle from Cycle 2 onwards, at each 6-weekly safety extension visit, at the end of study visit and at follow up visit 30 days post last dose of GRWD5769.",
+              "timeFrame": "Up to approximately 1 year"
+            },
+            {
+              "measure": "GRWD5769 Plasma PK Cmax",
+              "description": "Cmax = Maximum observed concentration",
+              "timeFrame": "Up to approximately 1 year"
+            },
+            {
+              "measure": "GRWD5769 Plasma PK Tmax",
+              "description": "Tmax = Time to maximum observed concentration",
+              "timeFrame": "Up to approximately 1 year"
+            },
+            {
+              "measure": "GRWD5769 Plasma PK AUC0-t",
+              "description": "AUC0-t = Area under the concentration-time curve",
+              "timeFrame": "Up to approximately 1 year"
+            },
+            {
+              "measure": "GRWD5769 Plasma PK Half-life",
+              "timeFrame": "Up to approximately 1 year"
+            },
+            {
+              "measure": "GRWD5769 Plasma PK Oral Clearance",
+              "timeFrame": "Up to approximately 1 year"
+            },
+            {
+              "measure": "GRWD5769 Plasma PK Vss/F",
+              "description": "Vss/F = Absorption-dependent apparent volume of distribution in steady state",
+              "timeFrame": "Up to approximately 1 year"
+            },
+            {
+              "measure": "Disease Control Rate (DCR)",
+              "description": "Preliminary efficacy of GRWD5769 will be assessed by:\n\nTumour response (DCR) by RECIST 1.1 or iRECIST as determined by CT/MRI scans performed every 8 weeks until participant disease progression or withdrawal.",
+              "timeFrame": "Up to approximately 1 year"
+            },
+            {
+              "measure": "Stable Disease Rate (SDR)",
+              "description": "Preliminary efficacy of GRWD5769 will be assessed by:\n\nTumour response (SDR) by RECIST 1.1 or iRECIST as determined by CT/MRI scans performed every 8 weeks until participant disease progression or withdrawal.",
+              "timeFrame": "Up to approximately 1 year"
+            },
+            {
+              "measure": "Time To Response (TTR)",
+              "description": "Preliminary efficacy of GRWD5769 will be assessed by:\n\nTumour response (TTR) by RECIST 1.1 or iRECIST as determined by CT/MRI scans performed every 8 weeks until participant disease progression or withdrawal.",
+              "timeFrame": "Up to approximately 1 year"
+            },
+            {
+              "measure": "Duration Of Response (DOR)",
+              "description": "Preliminary efficacy of GRWD5769 will be assessed by:\n\nTumour response (DOR) by RECIST 1.1 or iRECIST as determined by CT/MRI scans performed every 8 weeks until participant disease progression or withdrawal.",
+              "timeFrame": "Up to approximately 1 year"
+            },
+            {
+              "measure": "Progression - Free Survival (PFS)",
+              "description": "Preliminary efficacy of GRWD5769 will be assessed by:\n\nTumour response (PFS) by RECIST 1.1 or iRECIST as determined by CT/MRI scans performed every 8 weeks until participant disease progression or withdrawal.",
+              "timeFrame": "Up to approximately 1 year"
+            },
+            {
+              "measure": "Number of treatment emergent and treatment related AEs (for Module 2D only)",
+              "description": "Incidence of treatment emergent and treatment related AEs assessed from start of study drug to 90 days post last dose of cemiplimab (for Module 2D only).",
+              "timeFrame": "90 days after last dose of cemiplimab"
+            },
+            {
+              "measure": "Incidence of Dose limiting toxicities (DLT) (for Module 2D only)",
+              "description": "Incidence of Dose limiting toxicities (DLT) during the DLT period which commences Cycle 0 Day 1 and continues to 21 days after Cycle 1 Day 1",
+              "timeFrame": "End of cycle 1 (each cycle is 21 days)"
+            },
+            {
+              "measure": "Overall Survival",
+              "description": "Preliminary efficacy of GRWD5769 will be assessed by:\n\nOverall survival assessed from start of study drug until participant withdrawal or death (for Module 2C and 2D only).",
+              "timeFrame": "Up to approximately 1 year"
+            }
+          ]
+        },
+        "eligibilityModule": {
+          "eligibilityCriteria": "Inclusion Criteria:\n\n1. Provision of written informed consent.\n2. Male or female, \u2265 18 years of age.\n3. An ECOG performance status of 0 or 1.\n4. Willing to permit access to stored historical tumour tissue and prior tumour radiological assessments and tumour biomarker data (if available).\n5. Able to take oral medications and be willing to record daily adherence to the study drug.\n6. Female participants must be of non-child-bearing potential, or, if of childbearing potential must have a negative pregnancy test (as required by protocol), must use a highly effective method of contraception combined with a condom and not donate ova (for the protocol specified period of time).\n7. Male participants must use a condom and their female participant must also use a highly effective method of contraception (for the protocol specified period of time), if engaging in sexual intercourse with a female partner who could become pregnant and not donate sperm.\n8. Estimated life expectancy of at least 3 months, in the opinion of the PI.\n9. Willing and able to comply with all scheduled visits, treatment plans, laboratory tests, and other study procedures.\n10. Participant has measurable disease per RECIST 1.1/iRECIST\n11. Participant has cytologically or histologically confirmed locally advanced or metastatic solid malignancy for which no further standard of care (SoC) therapy is available (or no SoC therapy exists), or who have been offered and declined SoC therapy, or are intolerant of SoC therapy.\n\n    Module 1 (Part B) and Module 2 (Part B) Only\n12. Participant has at least one tumour lesion amenable to serial biopsies and is willing to provide consent for biopsies and has measurable disease per RECIST 1.1/iRECIST, excluding the lesion(s) identified for biopsy.\n\n    Module 2 (Part C and Part D)\n\n    Cohort 1 (Cervical)\n13. Participants with histologically confirmed persistent, recurrent or metastatic cervical cancer who are not amenable to curative therapy.\n14. Participants should have received at least 3 months first line anti-PD(L)-1 therapy (\u00b1 bevacizumab, chemotherapy, ADC or other immunotherapy e.g. anti-CTLA-4) and this should have included at least a 10-week period without progression.\n15. Participants may enrol in the study immediately following progression on the first line CPI or may have received 1 further line of systemic cancer therapy after progression on CPI.\n\n    Cohort 2 (Hepatocellular Carcinoma)\n16. Participants with histologically confirmed hepatocellular carcinoma who are not amenable to curative therapy and ineligible for loco-regional therapy.\n17. Participants should have received at least 3 months first line anti-PD(L)-1 containing therapy and this should have included at least a 10-week period without progression per Investigator assessment.\n18. Participants may enrol in the study immediately following progression on the first line CPI or may have received 1 further line of systemic cancer therapy after progression on CPI.\n19. Participant has Child-Pugh score class A liver function.\n\n    Cohort 3 (Moderate to High TMB)\n20. Participants with cytologically or histologically confirmed advanced, recurrent or metastatic disease, which is not amenable to curative therapy, in up to 5 types of solid tumour with moderate to high median TMB (NSCLC, urothelial, SCCHN, gastric/gastro-oesophageal adenocarcinoma, oesophageal SCC).\n21. Participants should have received at least \u2265 3 months first line anti-PD(L)-1 (\u00b1 chemotherapy, ADC, pemetrexed or other immunotherapy e.g. anti-CTLA-4) and this should have included at least a 10-week period without progression.\n22. Participants may enrol in the study immediately following progression on the first line CPI or may have received 1 further line of systemic cancer therapy after progression on CPI.\n\n    Module 2 Part D only (pMMR/MSS-CRC)\n23. Participants with histologically confirmed unresectable pMMR/MSS-CRC, without current or prior liver metastases\n24. Participants should have received at least one line of therapy in the advanced/metastatic setting and should have received therapies according to local standard practice, unless ineligible or intolerant to the treatment\n25. Participants may not have received more than 2 lines of cytotoxic chemotherapy\n\nExclusion Criteria:\n\n1. Prior therapy with an ERAP1 inhibitor.\n2. Any other malignancy within the past 3 years, with the exception of cervical intraepithelial neoplasia and nonmelanoma skin cancer.\n3. Any unresolved toxicity (except alopecia) from prior therapy of \u2265 CTCAE Grade 1. Participants with Grade 2 toxicity that is not clinically significant (e.g., alopecia, vitiligo), or that is deemed stable or irreversible (e.g., peripheral neuropathy) can be enrolled.\n4. Active or documented history of autoimmune disease (within 2 years) requiring systemic immunosuppressive therapy, or participant is immunocompromised for any other reason (as determined by the Investigator).\n5. Spinal cord compression or brain metastases, unless asymptomatic, stable, and not requiring steroids for at least 4 weeks (if stable and requiring no intervention, the participant can be enrolled in the study).\n6. Uncontrolled seizures.\n7. Active infection requiring therapy within 14 days prior to the day of first dose of IMP.\n8. Severe or uncontrolled medical condition (e.g., severe chronic obstructive pulmonary disease, severe Parkinson's disease, active inflammatory bowel disease) or psychiatric condition.\n9. Active bleeding diatheses.\n10. Participant has received an organ transplant.\n11. Known active hepatitis B, hepatitis C, or human immunodeficiency virus infection (HIV).\n12. Participant is breastfeeding or pregnant.\n13. Receipt of licenced or unlicenced cytotoxic, noncytotoxic or small molecule treatment for the malignancy within 28 days or 5 half-lives, whichever is shorter prior to the day of first dose of IMP.\n14. Receipt of oral corticosteroids (at a dose \\> 10 mg prednisone/day or equivalent) within 14 days (except for subjects receiving corticosteroids for adrenal insufficiency).\n15. Receipt of St John's Wort or of another concomitant medication, herbal supplement, or food that is a strong inhibitor or inducer of CYP3A4 enzymes within 14 days.\n16. Receipt of a blood transfusion (blood or blood products) within 7 days.\n17. Impaired hepatic or renal function.\n18. Liver function deteriorating in a manner that would likely make the participant ineligible per protocol specified requirements.\n19. Other evidence of impaired hepatic synthesis function.\n20. Inadequate bone marrow reserve or organ function.\n21. Any prior history of persistent (\\> 4 weeks) severe pancytopenia due to previous therapy rather than to disease (ANC \\< 0.5 \u00d7 10\\^9/L or platelets \\< 50 x 10\\^9/L).\n22. Cardiac dysfunction or other clinically significant cardiac pathology likely to impair the participants ability to participate in the study.\n23. Mean QTcF \\> 450 ms for males or \\> 470 ms for females.\n24. Any clinically important abnormalities in rhythm, conduction, or morphology on resting ECG. Controlled atrial fibrillation is permitted.\n25. Any factor that in the Investigator's opinion increases the risk of QTc prolongation or arrythmic events.\n26. In the opinion of the Investigator, unlikely to comply with study procedures, restrictions, or requirements.\n27. A history of haemolytic anaemia or marrow aplasia.\n28. Has received a live-virus vaccination within 28 days. Note: seasonal flu or COVID vaccines that do not contain live virus are permitted.\n29. History of Grade 3 or 4 pneumonitis or interstitial lung disease within the last 5 years, or other clinically significant pulmonary pathology likely to impair ability to participate in the study.\n\n    Module 2 all Parts and Module 1A Crossover Participants Only\n30. Has discontinued a prior checkpoint inhibitor due to toxicity.\n31. Hypersensitivity to cemiplimab or any of its excipients, or contraindicated to cemiplimab per approved local labelling.\n32. Has experienced \u2265 Grade 2 immune-mediated AE on this study (applies to crossover participants only).\n\n    Module 2 Part D only - pMMR/MSS CRC dose optimisation cohort\n33. Participants with unresectable pMMR/MSS CRC may not have purely peritoneal disease\n34. Participants with unresectable pMMR/MSS CRC may not have had prior CPI / immunotherapy",
+          "healthyVolunteers": false,
+          "sex": "ALL",
+          "minimumAge": "18 Years",
+          "stdAges": [
+            "ADULT",
+            "OLDER_ADULT"
+          ]
+        },
+        "contactsLocationsModule": {
+          "centralContacts": [
+            {
+              "name": "Grey Wolf Therapeutics Patient enquiries",
+              "role": "CONTACT",
+              "phone": "+44 1235644970",
+              "email": "enquiries@gwt.bio"
+            }
+          ],
+          "locations": [
+            {
+              "facility": "GenesisCare Research",
+              "status": "WITHDRAWN",
+              "city": "Adelaide",
+              "country": "Australia",
+              "geoPoint": {
+                "lat": -34.92866,
+                "lon": 138.59863
+              }
+            },
+            {
+              "facility": "Southern Oncology Clinical Research Unit (SOCRU)",
+              "status": "RECRUITING",
+              "city": "Bedford Park",
+              "country": "Australia",
+              "geoPoint": {
+                "lat": -35.02204,
+                "lon": 138.56815
+              }
+            },
+            {
+              "facility": "Blacktown Hospital",
+              "status": "RECRUITING",
+              "city": "Blacktown",
+              "country": "Australia",
+              "geoPoint": {
+                "lat": -33.76667,
+                "lon": 150.91667
+              }
+            },
+            {
+              "facility": "Kinghorn Cancer Centre (KCC)",
+              "status": "RECRUITING",
+              "city": "Darlinghurst",
+              "country": "Australia",
+              "geoPoint": {
+                "lat": -33.87939,
+                "lon": 151.21925
+              }
+            },
+            {
+              "facility": "Austin Health",
+              "status": "RECRUITING",
+              "city": "Heidelberg",
+              "country": "Australia",
+              "geoPoint": {
+                "lat": -37.75,
+                "lon": 145.06667
+              }
+            },
+            {
+              "facility": "Alfred Health",
+              "status": "RECRUITING",
+              "city": "Melbourne",
+              "country": "Australia",
+              "geoPoint": {
+                "lat": -37.814,
+                "lon": 144.96332
+              }
+            },
+            {
+              "facility": "Mater Research",
+              "status": "RECRUITING",
+              "city": "South Brisbane",
+              "country": "Australia",
+              "geoPoint": {
+                "lat": -27.48034,
+                "lon": 153.02049
+              }
+            },
+            {
+              "facility": "Cancer Care Wollongong",
+              "status": "RECRUITING",
+              "city": "Wollongong",
+              "country": "Australia",
+              "geoPoint": {
+                "lat": -34.424,
+                "lon": 150.89345
+              }
+            },
+            {
+              "facility": "Centre L\u00e9on B\u00e9rard",
+              "status": "RECRUITING",
+              "city": "Lyon",
+              "country": "France",
+              "geoPoint": {
+                "lat": 45.74906,
+                "lon": 4.84789
+              }
+            },
+            {
+              "facility": "Institut Paoli-Calmettes",
+              "status": "RECRUITING",
+              "city": "Marseille",
+              "country": "France",
+              "geoPoint": {
+                "lat": 43.29695,
+                "lon": 5.38107
+              }
+            },
+            {
+              "facility": "Centre Eug\u00e8ne Marquis",
+              "status": "RECRUITING",
+              "city": "Rennes",
+              "country": "France",
+              "geoPoint": {
+                "lat": 48.11109,
+                "lon": -1.67431
+              }
+            },
+            {
+              "facility": "Institut de Canc\u00e9rologie de l'Ouest (ICO)",
+              "status": "RECRUITING",
+              "city": "Saint-Herblain",
+              "country": "France",
+              "geoPoint": {
+                "lat": 47.21154,
+                "lon": -1.651
+              }
+            },
+            {
+              "facility": "ICANS - Institut de Canc\u00e9rologie Strasbourg",
+              "status": "RECRUITING",
+              "city": "Strasbourg",
+              "country": "France",
+              "geoPoint": {
+                "lat": 48.58392,
+                "lon": 7.74553
+              }
+            },
+            {
+              "facility": "IUCT Oncopole - Institut Claudius Regaud",
+              "status": "RECRUITING",
+              "city": "Toulouse",
+              "country": "France",
+              "geoPoint": {
+                "lat": 43.60426,
+                "lon": 1.44367
+              }
+            },
+            {
+              "facility": "Institut Gustave Roussy",
+              "status": "RECRUITING",
+              "city": "Villejuif",
+              "country": "France",
+              "geoPoint": {
+                "lat": 48.7939,
+                "lon": 2.35992
+              }
+            },
+            {
+              "facility": "Hospital Universitario Vall d'Hebr\u00f3n (VHIO)",
+              "status": "RECRUITING",
+              "city": "Barcelona",
+              "country": "Spain",
+              "geoPoint": {
+                "lat": 41.38879,
+                "lon": 2.15899
+              }
+            },
+            {
+              "facility": "START Barcelona - Hospital HM Nou Delfos",
+              "status": "RECRUITING",
+              "city": "Barcelona",
+              "country": "Spain",
+              "geoPoint": {
+                "lat": 41.38879,
+                "lon": 2.15899
+              }
+            },
+            {
+              "facility": "Clinica Universitaria de Navarra Madrid",
+              "status": "RECRUITING",
+              "city": "Madrid",
+              "country": "Spain",
+              "geoPoint": {
+                "lat": 40.4165,
+                "lon": -3.70256
+              }
+            },
+            {
+              "facility": "START Madrid - Centro Integral Oncol\u00f3gico Clara Campal (HM CIOCC)",
+              "status": "RECRUITING",
+              "city": "Madrid",
+              "country": "Spain",
+              "geoPoint": {
+                "lat": 40.4165,
+                "lon": -3.70256
+              }
+            },
+            {
+              "facility": "START Madrid - Hospital Universitario Fundacion Jimenez Diaz",
+              "status": "RECRUITING",
+              "city": "Madrid",
+              "country": "Spain",
+              "geoPoint": {
+                "lat": 40.4165,
+                "lon": -3.70256
+              }
+            },
+            {
+              "facility": "Hospital Universitario Virgen de la Victoria",
+              "status": "RECRUITING",
+              "city": "M\u00e1laga",
+              "country": "Spain",
+              "geoPoint": {
+                "lat": 36.72016,
+                "lon": -4.42034
+              }
+            },
+            {
+              "facility": "Clinica Universitaria de Navarra Pamplona",
+              "status": "RECRUITING",
+              "city": "Pamplona",
+              "country": "Spain",
+              "geoPoint": {
+                "lat": 42.81687,
+                "lon": -1.64323
+              }
+            },
+            {
+              "facility": "INCLIVA-Hospital Cl\u00ednico Universitario de Valencia",
+              "status": "RECRUITING",
+              "city": "Valencia",
+              "country": "Spain",
+              "geoPoint": {
+                "lat": 39.47391,
+                "lon": -0.37966
+              }
+            },
+            {
+              "facility": "Western General Hospital",
+              "status": "RECRUITING",
+              "city": "Edinburgh",
+              "country": "United Kingdom",
+              "geoPoint": {
+                "lat": 55.95206,
+                "lon": -3.19648
+              }
+            },
+            {
+              "facility": "Clatterbridge Cancer Centre",
+              "status": "RECRUITING",
+              "city": "Liverpool",
+              "country": "United Kingdom",
+              "geoPoint": {
+                "lat": 53.41058,
+                "lon": -2.97794
+              }
+            },
+            {
+              "facility": "Hammersmith Hospitals NHS Trust",
+              "status": "RECRUITING",
+              "city": "London",
+              "country": "United Kingdom",
+              "geoPoint": {
+                "lat": 51.50853,
+                "lon": -0.12574
+              }
+            },
+            {
+              "facility": "Royal Free Hospital",
+              "status": "RECRUITING",
+              "city": "London",
+              "country": "United Kingdom",
+              "geoPoint": {
+                "lat": 51.50853,
+                "lon": -0.12574
+              }
+            },
+            {
+              "facility": "Christie NHS Foundation Trust",
+              "status": "RECRUITING",
+              "city": "Manchester",
+              "country": "United Kingdom",
+              "geoPoint": {
+                "lat": 53.48095,
+                "lon": -2.23743
+              }
+            },
+            {
+              "facility": "Newcastle Upon Tyne Hospital",
+              "status": "RECRUITING",
+              "city": "Newcastle",
+              "country": "United Kingdom",
+              "geoPoint": {
+                "lat": 54.21804,
+                "lon": -5.88979
+              }
+            }
+          ]
+        },
+        "ipdSharingStatementModule": {
+          "ipdSharing": "NO",
+          "description": "IPD may not be shared for this Phase 1 study, or the IPD plan may be updated at a later point."
+        }
+      },
+      "derivedSection": {
+        "miscInfoModule": {
+          "versionHolder": "2026-10-02"
+        },
+        "conditionBrowseModule": {
+          "meshes": [
+            {
+              "id": "D009369",
+              "term": "Neoplasms"
+            },
+            {
+              "id": "D008175",
+              "term": "Lung Neoplasms"
+            },
+            {
+              "id": "D002583",
+              "term": "Uterine Cervical Neoplasms"
+            },
+            {
+              "id": "D006528",
+              "term": "Carcinoma, Hepatocellular"
+            },
+            {
+              "id": "D008113",
+              "term": "Liver Neoplasms"
+            },
+            {
+              "id": "D000077195",
+              "term": "Squamous Cell Carcinoma of Head and Neck"
+            }
+          ],
+          "ancestors": [
+            {
+              "id": "D012142",
+              "term": "Respiratory Tract Neoplasms"
+            },
+            {
+              "id": "D013899",
+              "term": "Thoracic Neoplasms"
+            },
+            {
+              "id": "D009371",
+              "term": "Neoplasms by Site"
+            },
+            {
+              "id": "D008171",
+              "term": "Lung Diseases"
+            },
+            {
+              "id": "D012140",
+              "term": "Respiratory Tract Diseases"
+            },
+            {
+              "id": "D014594",
+              "term": "Uterine Neoplasms"
+            },
+            {
+              "id": "D005833",
+              "term": "Genital Neoplasms, Female"
+            },
+            {
+              "id": "D014565",
+              "term": "Urogenital Neoplasms"
+            },
+            {
+              "id": "D002577",
+              "term": "Uterine Cervical Diseases"
+            },
+            {
+              "id": "D014591",
+              "term": "Uterine Diseases"
+            },
+            {
+              "id": "D005831",
+              "term": "Genital Diseases, Female"
+            },
+            {
+              "id": "D052776",
+              "term": "Female Urogenital Diseases"
+            },
+            {
+              "id": "D005261",
+              "term": "Female Urogenital Diseases and Pregnancy Complications"
+            },
+            {
+              "id": "D000091642",
+              "term": "Urogenital Diseases"
+            },
+            {
+              "id": "D000091662",
+              "term": "Genital Diseases"
+            },
+            {
+              "id": "D000230",
+              "term": "Adenocarcinoma"
+            },
+            {
+              "id": "D002277",
+              "term": "Carcinoma"
+            },
+            {
+              "id": "D009375",
+              "term": "Neoplasms, Glandular and Epithelial"
+            },
+            {
+              "id": "D009370",
+              "term": "Neoplasms by Histologic Type"
+            },
+            {
+              "id": "D004067",
+              "term": "Digestive System Neoplasms"
+            },
+            {
+              "id": "D004066",
+              "term": "Digestive System Diseases"
+            },
+            {
+              "id": "D008107",
+              "term": "Liver Diseases"
+            },
+            {
+              "id": "D002294",
+              "term": "Carcinoma, Squamous Cell"
+            },
+            {
+              "id": "D006258",
+              "term": "Head and Neck Neoplasms"
+            }
+          ]
+        },
+        "interventionBrowseModule": {
+          "meshes": [
+            {
+              "id": "C000627974",
+              "term": "cemiplimab"
+            }
+          ]
+        }
+      },
+      "hasResults": false
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT07047703",
+          "orgStudyIdInfo": {
+            "id": "GRWD0715-AS-01"
+          },
+          "organization": {
+            "fullName": "Grey Wolf Therapeutics",
+            "class": "OTHER"
+          },
+          "briefTitle": "EAST-1 (ERAP-inhibition in Axial Spondyloarthritis Trial - 1)",
+          "officialTitle": "A Multi-part, Phase I/II Study to Evaluate the Safety and Tolerability of GRWD0715 in Healthy Human Volunteers and Participants With Axial Spondyloarthritis",
+          "acronym": "EAST-1"
+        },
+        "statusModule": {
+          "statusVerifiedDate": "2026-09",
+          "overallStatus": "RECRUITING",
+          "expandedAccessInfo": {
+            "hasExpandedAccess": false
+          },
+          "startDateStruct": {
+            "date": "2025-07-28",
+            "type": "ACTUAL"
+          },
+          "primaryCompletionDateStruct": {
+            "date": "2028-04-30",
+            "type": "ESTIMATED"
+          },
+          "completionDateStruct": {
+            "date": "2028-09-30",
+            "type": "ESTIMATED"
+          },
+          "studyFirstSubmitDate": "2025-06-24",
+          "studyFirstSubmitQcDate": "2025-06-24",
+          "studyFirstPostDateStruct": {
+            "date": "2025-07-02",
+            "type": "ACTUAL"
+          },
+          "lastUpdateSubmitDate": "2026-09-14",
+          "lastUpdatePostDateStruct": {
+            "date": "2026-09-18",
+            "type": "ACTUAL"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "responsibleParty": {
+            "type": "SPONSOR"
+          },
+          "leadSponsor": {
+            "name": "Grey Wolf Therapeutics",
+            "class": "OTHER"
+          }
+        },
+        "oversightModule": {
+          "oversightHasDmc": false,
+          "isFdaRegulatedDrug": false,
+          "isFdaRegulatedDevice": false
+        },
+        "descriptionModule": {
+          "briefSummary": "GRWD0715 is an orally administered, selective inhibitor of the Endoplasmic Reticulum Aminopeptidase 1 \\[ERAP1\\] enzyme being explored as a potential new treatment for axial spondyloarthritis (axSpA), a long term condition caused by inflammation predominantly affecting the sacroiliac joints (SIJs) and spine.",
+          "detailedDescription": "GRWD0715 is an orally administered, selective inhibitor of the Endoplasmic Reticulum Aminopeptidase 1 \\[ERAP1\\] enzyme being explored as a potential new treatment for axial spondyloarthritis (axSpA), a long term condition caused by inflammation predominantly affecting the sacroiliac joints (SIJs) and spine.\n\nERAP1 is involved in trimming antigens from foreign bodies (e.g. bacteria, viruses) which are presented on the surface of a cell to trigger an immune response. In axSpA, it is thought an antigen from the person's own body, called a 'self-peptide' is presented by the ERAP1 processing pathway and incorrectly recognised by the immune system. The hypothesis is that stimulation of the immune system by the presentation of this self-peptide causes the inflammatory symptoms experienced by people living with axSpA.\n\nAs an inhibitor of ERAP1, GRWD0715 aims to prevent the generation of the antigenic self-peptide, and thus remove the stimulus of the immune system. If the immune system is not activated, the immune attack on the sacroiliac joint (SIJ) and spine would stop, halting the axSpA disease progress.\n\nThe study will consist of 4 parts: Part A conducted in healthy human volunteers, and Part B, Part C and/or D in participants with axSpA. The primary goal of Parts A, B and C is to assess whether GRWD0715 is safe and well tolerated in healthy human volunteers and participants with axSpA. The primary goal of Part D is to review whether GRWD0715 is efficacious when compared to placebo."
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Axial Spondyloarthritis (AxSpA)"
+          ],
+          "keywords": [
+            "Axial Spondyloarthritis",
+            "AxSpA"
+          ]
+        },
+        "designModule": {
+          "studyType": "INTERVENTIONAL",
+          "phases": [
+            "PHASE1",
+            "PHASE2"
+          ],
+          "designInfo": {
+            "allocation": "NON_RANDOMIZED",
+            "interventionModel": "SEQUENTIAL",
+            "primaryPurpose": "TREATMENT",
+            "maskingInfo": {
+              "masking": "NONE",
+              "maskingDescription": "Parts A, B, and C - None (Open Label). Part D will be double-blind"
+            }
+          },
+          "enrollmentInfo": {
+            "count": 140,
+            "type": "ESTIMATED"
+          }
+        },
+        "armsInterventionsModule": {
+          "armGroups": [
+            {
+              "label": "Part A - Single Ascending Dose (SAD) in Healthy Human Volunteers",
+              "type": "EXPERIMENTAL",
+              "description": "Drug: Part A - Single Ascending Dose (SAD) of GRWD0715 Participants in Part A will receive a single dose of GRWD0715 on Day 1 only.",
+              "interventionNames": [
+                "Drug: Part A - Single Ascending Dose (SAD) in Healthy Human Volunteers"
+              ]
+            },
+            {
+              "label": "Part B - Multiple Ascending Dose (MAD) in participants with axSpA",
+              "type": "EXPERIMENTAL",
+              "description": "Drug: Part B - Multiple Ascending Dose (MAD) of GRWD0715 Participants in Part B will receive GRWD0715 for 28 days",
+              "interventionNames": [
+                "Drug: Part B - Multiple Ascending Dose (MAD) in participants with axSpA"
+              ]
+            },
+            {
+              "label": "Part C - Safety expansion cohort participants with axSpA",
+              "type": "EXPERIMENTAL",
+              "description": "Participants who previously completed Part B and OR randomized to the placebo arm in Part D:\n\nPart C - Open-label safety expansion cohort with GRWD0715 Participants from Part B or Part D of the study will be permitted to participate in Part C will receive GRWD0715 for 8 or 12 weeks, respectively.Immediate rollovers from Part B: If Part C is open while a Part B cohort is enrolling, participants may roll over directly into Part C without a washout period and continue treatment at their current assigned dose level of GRWD0715 from Part B, once daily, for an additional 8 weeks.\n\nReturning rollovers from Part B: If Part C is open, participants from previously completed Part B cohorts may return to enrol in Part C at the Part B dose currently reviewed and approved by the Safety Review Committee at the time of their return, once daily, for up to an additional 8 weeks.\n\nPlacebo Rollovers from Part D: will receive 12 weeks of open-label, daily dosing with GRWD0715 in Part C",
+              "interventionNames": [
+                "Drug: Part C - Safety expansion cohort in participants with axSpA"
+              ]
+            },
+            {
+              "label": "Part D - Randomised, placebo-controlled, expansion cohort in participants with axSpA",
+              "type": "EXPERIMENTAL",
+              "description": "Part D - Randomised expansion cohort of GRWD0715 vs. placebo\n\nDepending on the data from Part B, and the availability of one or more biologically active doses that are safe and well tolerated, participants will be randomised to receive either one or two dose levels of GRWD0715, or placebo to match (PTM). If one dose level is selected, participants will be randomised in a 4:1 ratio (GRWD0715:PTM).\n\nIf two dose levels are selected, participants will be randomised in a 2:2:1 ratio (two GRWD0715 dose arms and PTM). Treatment will be administered once daily for up to 12 weeks.",
+              "interventionNames": [
+                "Drug: Part D - Randomised, placebo-controlled, expansion cohort in participants with axSpA"
+              ]
+            }
+          ],
+          "interventions": [
+            {
+              "type": "DRUG",
+              "name": "Part A - Single Ascending Dose (SAD) in Healthy Human Volunteers",
+              "description": "Participants in Part A will receive a single dose of GRWD0715 on Day 1 only.",
+              "armGroupLabels": [
+                "Part A - Single Ascending Dose (SAD) in Healthy Human Volunteers"
+              ]
+            },
+            {
+              "type": "DRUG",
+              "name": "Part B - Multiple Ascending Dose (MAD) in participants with axSpA",
+              "description": "Participants in Part B will receive GRWD0715 for 28 days",
+              "armGroupLabels": [
+                "Part B - Multiple Ascending Dose (MAD) in participants with axSpA"
+              ]
+            },
+            {
+              "type": "DRUG",
+              "name": "Part C - Safety expansion cohort in participants with axSpA",
+              "description": "Participants in Part C will receive GRWD0715 for 12 weeks",
+              "armGroupLabels": [
+                "Part C - Safety expansion cohort participants with axSpA"
+              ]
+            },
+            {
+              "type": "DRUG",
+              "name": "Part D - Randomised, placebo-controlled, expansion cohort in participants with axSpA",
+              "description": "Participants in Part D will receive GRWD0715 or placebo-to-match for 12 weeks",
+              "armGroupLabels": [
+                "Part D - Randomised, placebo-controlled, expansion cohort in participants with axSpA"
+              ]
+            }
+          ]
+        },
+        "outcomesModule": {
+          "primaryOutcomes": [
+            {
+              "measure": "Parts A, B and C: Incidence of treatment emergent (TEAE) and treatment related adverse events (TRAEs)",
+              "description": "Any adverse event AE reported or observed after the start of dosing with any study treatment until completion of the last study related procedure (includes follow-up for safety assessments) will be recorded as a treatment-emergent AE (TEAE). If the TEAE is considered related to the study drug as per the definitions of relatedness listed in ('possibly', 'probably' or 'definitely' related) it will be considered a treatment-related AE (TRAE).",
+              "timeFrame": "Immediately after the first dose of GRWD0715 through to study completion after 4-12 weeks."
+            },
+            {
+              "measure": "Parts A and B: Incidence and nature of dose limiting events (DLEs).",
+              "description": "DLEs are on Grade 2 (moderate) events that are classified as related to study drug and are not resolved within 7 days. Any Grade 2 events lasting longer than 7 days, events of a higher grade, events that require study drug discontinuation or which meet the criteria for Seriousness and are related to study drug are counted as DLEs.",
+              "timeFrame": "Part A: the DLE period will be 15 Days from the start of dosing Part B: the DLE period will be 35 days from the start of dosing"
+            },
+            {
+              "measure": "Analysis of clinical response per Assessment of SpondyloArthritis International Society (ASAS) core outcome set compared to placebo. Higher scores mean worse outcome: Continuous Calculated Scores",
+              "description": "The ASAS core outcome set (COS) will be conducted in participants and includes the following questionnaires which use Continuous Calculated Scores:\n\nAnkylosing Spondylitis Disease Activity Score (ASDAS)- A specific mathematically weighted index that combines patient-reported outcomes and blood inflammatory markers.\n\nBath Ankylosing Spondylitis Function Index (BASFI) - A mean score derived from 10 individual visual/numeric questions regarding physical function.\n\nAssessment of SpondyloArthritis (ASAS) Health Index - A composite health and functioning score calculated from a specific 17-item questionnaire.",
+              "timeFrame": "This will be conducted at Screening, Week 1, Week 4, Week 8, Week 12 and the 15 Day End of Study visit"
+            },
+            {
+              "measure": "Analysis of clinical response per Assessment of SpondyloArthritis International Society (ASAS) core outcome set compared to placebo. Higher scores mean worse outcome: Numeric Rating Scales",
+              "description": "The ASAS core outcome set (COS) will be conducted in participants and includes the following questionnaires which use numeric rating scales (0-10):\n\nNRS Patient Global Assessment of Disease Activity (PGA-DA): A single 0-10 scale rating overall disease impact.\n\nNRS total back pain (BASDAI Q2): A single 0-10 scale rating spinal pain.\n\nNRS fatigue (BASDAI Q1): A single 0-10 scale rating tiredness levels.\n\nNRS average duration and severity of morning stiffness (BASDAI \\[Q5+Q6\\]/2): An average calculation derived from two separate 0-10 numeric rating scales.",
+              "timeFrame": "This will be conducted at Screening, Week 1, Week 4, Week 8, Week 12 and the 15 Day End of Study visit"
+            },
+            {
+              "measure": "Analysis of clinical response per Assessment of SpondyloArthritis International Society (ASAS) core outcome set compared to placebo. Higher scores mean worse outcome: Direct Anatomical Counts",
+              "description": "The ASAS core outcome set (COS) will be conducted in participants and includes the following assessments which use direct anatomical counts:\n\n44 swollen joint count (Part D): A literal tally of how many joints out of 44 are actively swollen.\n\nMaastricht Ankylosing Spondylitis Enthesitis Score (MASES) (Part D only): A tally of painful areas out of 13 specific enthesitic insertion sites.\n\nDactylitis count: A literal tally of the number of digits (fingers and toes) exhibiting uniform swelling (Part D only)\n\nASAS20 and ASAS 40 scores will be calculated from constituent questions within the ASAS COS clinical outcome measures and patient reported outcome measures.",
+              "timeFrame": "This will be conducted at Screening, Week 1, Week 4, Week 8, Week 12 and the 15 Day End of Study visit"
+            },
+            {
+              "measure": "Analysis of clinical response per SPARCC MRI (magnetic resonance imaging) Activity of the sacroiliac joints and spine in the core outcome set compared to placebo",
+              "description": "The SPARCC Scoring System measures active inflammation and structural joint damage in the sacroiliac joints using MRI, through the following:\n\nInflammation Scoring (Bone Marrow Edema):\n\nSlice selection: Evaluates six consecutive, specialized coronal MRI slices through the joint.\n\nJoint quadrants: Divides each sacroiliac joint into four distinct quadrants (upper and lower iliac, upper and lower sacral).\n\nBasic scoring: Gives 1 point for the presence of bone marrow edema in each quadrant.\n\nIntensity and depth bonuses: Adds extra points for lesions that show very high signal intensity or great depth (\\>1 cm).\n\nMaximum score: Reaches a total high score of 72 points for inflammation\n\nStructural Damage Scoring:\n\nErosions: Measures loss of bone at the joint surface. Fat lesions: Tracks areas where bone marrow is replaced by fat. Backfill and ankylosis: Detects tissue repair and joint fusion",
+              "timeFrame": "This will be conducted at Screening, Week 1, Week 4, Week 8, Week 12 and the 15 Day End of Study visit"
+            }
+          ],
+          "secondaryOutcomes": [
+            {
+              "measure": "Parts A, B and C: PK - trough concentrations (Cmin)",
+              "description": "PK samples will be collected during the study to measure the to measure how the study drug moves into, through, and out of the body over time, and how its concentration in the body changes over time. Whole blood will be collected for the determination of GRWD0715 levels in plasma. The trough is the lowest concentration of a drug reached in the body, it is collected from a blood sample drawn immediately before administering the next scheduled dose.",
+              "timeFrame": "Part A: From first dose to Day 4 Part B: From first dose to Day 28 Part C: Immediate Rollover: Week 4, 8 and 10 Returning Rollover: Week 1, 4 and 8"
+            },
+            {
+              "measure": "Parts A, B and C: PK - maximum observed concentration (Cmax)",
+              "description": "The Cmax is the highest measured drug concentration in the blood or plasma after a dose and is measured or identified directly as the highest peak data point on the experimental concentration-time graph.",
+              "timeFrame": "Part A: From first dose to Day 4 Part B: From first dose to Day 28 Part C: Immediate Rollover: Week 4, 8 and 10 Returning Rollover: Week 1, 4 and 8"
+            },
+            {
+              "measure": "Parts A, B and C: PK - time to Cmax (Tmax)",
+              "description": "This is the exact time elapsed from drug administration until the peak concentration (Cmax) is reached and is found by looking at the time value on the x-axis that corresponds directly to the peak concentration of the drug in the blood.",
+              "timeFrame": "Part A: From first dose to Day 4 Part B: From first dose to Day 28 Part C: Immediate Rollover: Week 4, 8 and 10 Returning Rollover: Week 1, 4 and 8"
+            },
+            {
+              "measure": "Parts A, B and C: PK - area under the concentration-time curve (AUC0-t)",
+              "description": "A measure of the total drug exposure in the body from time zero up to the timepoints specified below for each study Part.",
+              "timeFrame": "Part A: From first dose to Day 4 Part B: From first dose to Day 28 Part C: Immediate Rollover: Week 4, 8 and 10 Returning Rollover: Week 1, 4 and 8"
+            },
+            {
+              "measure": "Parts A, B and C: PK - half-life (t1/2)",
+              "description": "The time required for the GRWD0715's plasma concentration to decrease by exactly 50% during the final elimination phase.",
+              "timeFrame": "Part A: From first dose to Day 4 Part B: From first dose to Day 28 Part C: Immediate Rollover: Week 4, 8 and 10 Returning Rollover: Week 1, 4 and 8"
+            },
+            {
+              "measure": "Part B: A Biologically Active Dose (BAD) will be identified",
+              "description": "A BAD is defined as a dose level with evidence supporting a biological effect of\n\nGRWD0715. A BAD will be identified based on meeting at least one of the following pre-specified criteria:\n\nSteady state pharmacokinetics: Dose levels achieving mean steady-state Cavg concentration at or above a predefined threshold of 1166 ng/ml will be considered to provide sufficient target engagement to meet the definition of a BAD. This threshold corresponds to the predicted IC50 as a relative Cavg concentration and is supported by human PK-PD modelling of a related oral ERAP1 inhibitor (GRWD5769) in oncology, which demonstrated that significant immunopeptidome shifts occur at levels that achieve PK exposures \u2265 predicted IC50 as a relative Cavg concentration.\n\nPreliminary signals of clinical activity, including clinically important improvements in validated disease activity measures (e.g., ASDAS).\n\nOther supporting evidence may be considered including evidence of pharmacodynamic activity.",
+              "timeFrame": "The Biologically Active Dose will be assessed every 3 months in Part B on the completion of each of the 6 dose cohorts for up to a total of 14 months."
+            },
+            {
+              "measure": "Parts A, B and C: Maximum tolerated dose (MTD): the MTD will be determined by the incidence of DLEs according to the MTD evaluation process.",
+              "description": "Multiple ascending doses will be evaluated in this study. The MTD will be decided using a BOIN design escalation/de-escalation/elimination criteria model. If the true DLE rate is greater than 0.22 for a dose level, no future participants can be dosed at that level or higher.",
+              "timeFrame": "MTD will be assessed on the completion of each dose level cohort."
+            }
+          ]
+        },
+        "eligibilityModule": {
+          "eligibilityCriteria": "Key Inclusion Criteria:\n\nHealthy Volunteers\n\n* Healthy male and female subjects aged 18-55 years inclusive, at the Screening visit\n* Participant must provide written informed consent to participate in the study\n* Participant must be able and willing to comply with the requirements of the protocol (including dietary restrictions and exclusion of grapefruit juice)\n* Male participants (and their female partners) / female participants must be willing to adhere to contraception requirements as detailed in the protocol\n* Non-smokers or ex-smokers who have not smoked within the previous 6 months, as determined at the Screening visit\n* Participant with a Body Mass Index (BMI) of 19-30. Body Mass Index = Body weight (kg) / \\[Height (m)\\]2 AxSpA Participants\n* Male or female, 18-65 years of age\n* Participants diagnosed with Axial Spondyloarthritis, also fulfilling ASAS classification criteria including:\n* HLA-B27 +ve (local testing)\n* Objective evidence of inflammation at screening, defined as active sacroiliac joint inflammation on MRI fulfilling the ASAS MRI criteria (MRI+), assessed by the Principal Investigator or appropriately trained delegate, and/or elevated C-reactive protein (CRP+) \u22655.0mg/L.\n\n  o Objective evidence of inflammation may not be required for Part B. Participants who do not require objective evidence of inflammation require Sponsor approval prior to screening for and/or enrolling to the study.\n* A score of:\n* \u2265 2.1 (High Disease Activity) on the Ankylosing Spondylitis Disease Activity Score (ASDAS) on current treatment\\* OR\n* In Part B only, A: a score of \\>1.3 (Low to Moderate Disease Activity) on the ASDAS on current treatment. Participants with a score of \u22651.3 and \\< 2.1 require Sponsor approval prior to screening for the study.\n* At least one of the following:\n* Current treatment with a NSAID, at a n adequate dose and duration per local clinical guidelines, with inadequate clinical response OR\n* Intolerance to \u22651 NSAID or contraindication(s) to NSAIDs\n\nParticipants may have received 1 or 2 (Australia only) prior b/tsDMARD and discontinued due to intolerance or inadequate efficacy provided that:\n\nPart B: Participants who have received two prior b/ts DMARDs require Sponsor approval prior to screening.\n\nPart D: Participants with prior b/tsDMARD treatment may be capped.\n\n\u2022 Participants who have received 1/(Australia only) 2 prior treatments are required to undergo a washout at minimum: Biologic DMARDs 4 weeks or 5 half-lives prior to Day 1, whichever is longer. Any JAK inhibitor DMARDs 2 weeks prior to Day 1\n\nPart C only: Participants enrolling into Part C must:\n\n* Have completed Part B or Part D treatment per protocol.\n* Have not permanently discontinued GRWD0715 due to safety concerns.\n* Have no ongoing safety issues that, in the opinion of the Investigator, would preclude further treatment.\n* Provide written informed consent to participate in Part C.\n\nPart D only: Participants must be GRWD0715 na\u00efve.\n\nContacts/Locations Central Contact Person: Grey Wolf Therapeutics Patient enquiries Telephone: +44 1235644970\n\nKey Exclusion Criteria:\n\nHealthy Volunteers\n\n* History or presence of any clinically significant findings in medical history, physical examination, vital signs and/or laboratory tests that, in the opinion of the Investigator, would preclude inclusion in the study\n* Participation in a New Chemical Entity clinical study within the previous 124 days or a marketed drug clinical study within the previous 93 days\n* Known infection or lifestyle risk factors for human immunodeficiency virus (HIV) and/or hepatitis B or C infection, as determined at the Screening visit AxSpA Participants\n* Parts B and D only: Participants previously treated with three or more b/tsDMARDs\n* Participants not meeting inclusion criteria for prior b/tsDMARD exposure or required washout period for their respective study part.\n* Participants currently receiving prohibited conventional DMARDS cDMARDS), thalidomide (including previous use) or other prohibited concomitant medications.\n* Inadequate Haematologic function, defined as:\n\n  1. Haemoglobin \\<10 g/dL.\n  2. Absolute white blood cell count \\<3.0 x 10\\^9 /L (\\<3000 mm\\^3)\n  3. Absolute neutrophil count \\<1.2 x 10\\^9 /L (\\<1200 mm\\^3)\n  4. Absolute lymphocyte count \\<1.0 x 10\\^9 /L (\\<1000 mm\\^3)\n  5. Platelet count \\<100 x 10\\^9 /L (\\<100.000 mm\\^3)\n* Inadequate liver function, defined as; total bilirubin, aspartate aminotransferase (AST) and alanine aminotransferase (ALT) more than 1.5 times the upper limit of normal at screening visit. For subjects with Gilberts syndrome, upper limit of normal for total bilirubin will be 2.9mg/dl\n* History of any other autoimmune rheumatic disease (e.g., psoriatic arthropathy, systemic lupus erythematosus, mixed connective tissue disease, scleroderma, polymositis) or known diagnosis of fibromyalgia\n* Participants with a previous history of or currently stable psoriasis are eligible\n* Active or symptomatic inflammatory bowel disease (IBD). Participants with a history of IBD are allowed to participate\n* Presence of active anterior uveitis",
+          "healthyVolunteers": false,
+          "sex": "ALL",
+          "minimumAge": "18 Years",
+          "maximumAge": "65 Years",
+          "stdAges": [
+            "ADULT",
+            "OLDER_ADULT"
+          ]
+        },
+        "contactsLocationsModule": {
+          "centralContacts": [
+            {
+              "name": "Grey Wolf Therapeutics Patient enquiries",
+              "role": "CONTACT",
+              "phone": "+44 1235644970",
+              "email": "enquiries@gwt.bio"
+            }
+          ],
+          "locations": [
+            {
+              "facility": "University of the Sunshine Coast (UniSC)",
+              "status": "RECRUITING",
+              "city": "Birtinya",
+              "country": "Australia",
+              "geoPoint": {
+                "lat": -26.74322,
+                "lon": 153.11913
+              }
+            },
+            {
+              "facility": "University of the Sunshine Coast (UniSC)",
+              "status": "COMPLETED",
+              "city": "Morayfield",
+              "country": "Australia",
+              "geoPoint": {
+                "lat": -27.10876,
+                "lon": 152.94907
+              }
+            },
+            {
+              "facility": "The Colin Bayliss Research and Teaching Unit",
+              "status": "RECRUITING",
+              "city": "Perth",
+              "country": "Australia",
+              "geoPoint": {
+                "lat": -31.95224,
+                "lon": 115.8614
+              }
+            },
+            {
+              "facility": "Pioneer Clinical Research",
+              "status": "RECRUITING",
+              "city": "Sydney",
+              "country": "Australia",
+              "geoPoint": {
+                "lat": -33.86785,
+                "lon": 151.20732
+              }
+            },
+            {
+              "facility": "University Ghent",
+              "status": "RECRUITING",
+              "city": "Ghent",
+              "country": "Belgium",
+              "geoPoint": {
+                "lat": 51.05,
+                "lon": 3.71667
+              }
+            },
+            {
+              "facility": "UZ Leuven",
+              "status": "RECRUITING",
+              "city": "Leuven",
+              "country": "Belgium",
+              "geoPoint": {
+                "lat": 50.87959,
+                "lon": 4.70093
+              }
+            },
+            {
+              "facility": "Rheumazentrum Ruhrgebiet, Ruhr-University Bochum",
+              "status": "RECRUITING",
+              "city": "Bochum",
+              "country": "Germany",
+              "geoPoint": {
+                "lat": 51.48165,
+                "lon": 7.21648
+              }
+            },
+            {
+              "facility": "Universit\u00e4tsklinikum Erlangen - Medizinische Klinik 3",
+              "status": "NOT_YET_RECRUITING",
+              "city": "Erlangen",
+              "country": "Germany",
+              "geoPoint": {
+                "lat": 49.59099,
+                "lon": 11.00783
+              }
+            },
+            {
+              "facility": "Amsterdam University Medical Center",
+              "status": "RECRUITING",
+              "city": "Amsterdam",
+              "country": "Netherlands",
+              "geoPoint": {
+                "lat": 52.37403,
+                "lon": 4.88969
+              }
+            },
+            {
+              "facility": "Leids Universitair Medisch Centrum (LUMC) (Leiden University Medical Center)",
+              "status": "NOT_YET_RECRUITING",
+              "city": "Leiden",
+              "country": "Netherlands",
+              "geoPoint": {
+                "lat": 52.15833,
+                "lon": 4.49306
+              }
+            },
+            {
+              "facility": "Malopolskie Badania Kliniczne (MBK Clinic)",
+              "status": "NOT_YET_RECRUITING",
+              "city": "Krakow",
+              "state": "Ma\u0142opolska",
+              "zip": "30-002",
+              "country": "Poland",
+              "geoPoint": {
+                "lat": 50.06143,
+                "lon": 19.93658
+              }
+            },
+            {
+              "facility": "ETG Lublin",
+              "status": "RECRUITING",
+              "city": "Lublin",
+              "country": "Poland",
+              "geoPoint": {
+                "lat": 51.25058,
+                "lon": 22.57009
+              }
+            },
+            {
+              "facility": "Reumedika",
+              "status": "RECRUITING",
+              "city": "Poznan",
+              "country": "Poland",
+              "geoPoint": {
+                "lat": 52.40692,
+                "lon": 16.92993
+              }
+            },
+            {
+              "facility": "La Paz University Hospital",
+              "status": "NOT_YET_RECRUITING",
+              "city": "Madrid",
+              "state": "Fuencarral-El Pardo",
+              "zip": "28046",
+              "country": "Spain",
+              "geoPoint": {
+                "lat": 40.4165,
+                "lon": -3.70256
+              }
+            },
+            {
+              "facility": "Reina Sofia University Hospital",
+              "status": "NOT_YET_RECRUITING",
+              "city": "C\u00f3rdoba",
+              "state": "Poniente Sur",
+              "zip": "14004",
+              "country": "Spain",
+              "geoPoint": {
+                "lat": 37.89155,
+                "lon": -4.77275
+              }
+            },
+            {
+              "facility": "University hospital Parc Tauli de Sabadell",
+              "status": "NOT_YET_RECRUITING",
+              "city": "Sabadell",
+              "country": "Spain",
+              "geoPoint": {
+                "lat": 41.54329,
+                "lon": 2.10942
+              }
+            }
+          ]
+        },
+        "ipdSharingStatementModule": {
+          "ipdSharing": "NO",
+          "description": "IPD may not be shared for this Phase 1 study, or the IPD plan may be updated at a later point"
+        }
+      },
+      "derivedSection": {
+        "miscInfoModule": {
+          "versionHolder": "2026-10-02"
+        },
+        "conditionBrowseModule": {
+          "meshes": [
+            {
+              "id": "D000089183",
+              "term": "Axial Spondyloarthritis"
+            }
+          ],
+          "ancestors": [
+            {
+              "id": "D025242",
+              "term": "Spondylarthropathies"
+            },
+            {
+              "id": "D025241",
+              "term": "Spondylarthritis"
+            },
+            {
+              "id": "D013166",
+              "term": "Spondylitis"
+            },
+            {
+              "id": "D013122",
+              "term": "Spinal Diseases"
+            },
+            {
+              "id": "D001847",
+              "term": "Bone Diseases"
+            },
+            {
+              "id": "D009140",
+              "term": "Musculoskeletal Diseases"
+            },
+            {
+              "id": "D000844",
+              "term": "Ankylosis"
+            },
+            {
+              "id": "D007592",
+              "term": "Joint Diseases"
+            },
+            {
+              "id": "D001168",
+              "term": "Arthritis"
+            }
+          ]
+        },
+        "interventionBrowseModule": {
+          "meshes": [
+            {
+              "id": "D064346",
+              "term": "Sagittal Abdominal Diameter"
+            },
+            {
+              "id": "C110804",
+              "term": "mycophenolic adenine dinucleotide"
+            }
+          ],
+          "ancestors": [
+            {
+              "id": "D049628",
+              "term": "Body Size"
+            },
+            {
+              "id": "D001837",
+              "term": "Body Weights and Measures"
+            },
+            {
+              "id": "D001824",
+              "term": "Body Constitution"
+            },
+            {
+              "id": "D010808",
+              "term": "Physical Examination"
+            },
+            {
+              "id": "D019937",
+              "term": "Diagnostic Techniques and Procedures"
+            },
+            {
+              "id": "D003933",
+              "term": "Diagnosis"
+            },
+            {
+              "id": "D000886",
+              "term": "Anthropometry"
+            },
+            {
+              "id": "D008919",
+              "term": "Investigative Techniques"
+            },
+            {
+              "id": "D010829",
+              "term": "Physiological Phenomena"
+            }
+          ]
+        }
+      },
+      "hasResults": false
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT03767114",
+          "orgStudyIdInfo": {
+            "id": "EgyERAP"
+          },
+          "organization": {
+            "fullName": "Kasr El Aini Hospital",
+            "class": "OTHER"
+          },
+          "briefTitle": "Estimation of Level of ERAP1 Expression in Lesional and Non Lesional Skin of Psoraitic Patients and Healthy Controls.",
+          "officialTitle": "Estimation of Level of ERAP1 Expression in Lesional and Non Lesional Skin of Psoraitic Patients and Healthy Controls."
+        },
+        "statusModule": {
+          "statusVerifiedDate": "2018-12",
+          "overallStatus": "COMPLETED",
+          "expandedAccessInfo": {
+            "hasExpandedAccess": false
+          },
+          "startDateStruct": {
+            "date": "2017-01",
+            "type": "ACTUAL"
+          },
+          "primaryCompletionDateStruct": {
+            "date": "2017-06",
+            "type": "ACTUAL"
+          },
+          "completionDateStruct": {
+            "date": "2018-12",
+            "type": "ACTUAL"
+          },
+          "studyFirstSubmitDate": "2018-12-05",
+          "studyFirstSubmitQcDate": "2018-12-05",
+          "studyFirstPostDateStruct": {
+            "date": "2018-12-06",
+            "type": "ACTUAL"
+          },
+          "lastUpdateSubmitDate": "2018-12-05",
+          "lastUpdatePostDateStruct": {
+            "date": "2018-12-06",
+            "type": "ACTUAL"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "responsibleParty": {
+            "type": "PRINCIPAL_INVESTIGATOR",
+            "investigatorFullName": "Rana F Hilal, MD",
+            "investigatorTitle": "Lecturer of dermatology",
+            "investigatorAffiliation": "Kasr El Aini Hospital"
+          },
+          "leadSponsor": {
+            "name": "Kasr El Aini Hospital",
+            "class": "OTHER"
+          }
+        },
+        "oversightModule": {
+          "isFdaRegulatedDrug": false,
+          "isFdaRegulatedDevice": false
+        },
+        "descriptionModule": {
+          "briefSummary": "A 4mm Punch biopsy is obtained from lesional and non lesional skin of 25 psoraitic patients as well as of 30 controls.\n\nSkin biopsy from patients (psoriasis lesional and non lesional) \\& control will be kept in lysis solution (which contains RNAase inhibitor) for the stability of the parameter to be assessed. ERAP-1 gene expression will Research Template 5 Final Version: 8/3/2 016 be detected by quantitative real time -PCR, which include RNA extraction, cDNA synthesis \\& PCR."
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Psoriasis"
+          ]
+        },
+        "designModule": {
+          "studyType": "INTERVENTIONAL",
+          "phases": [
+            "NA"
+          ],
+          "designInfo": {
+            "allocation": "RANDOMIZED",
+            "interventionModel": "SINGLE_GROUP",
+            "primaryPurpose": "DIAGNOSTIC",
+            "maskingInfo": {
+              "masking": "DOUBLE",
+              "whoMasked": [
+                "PARTICIPANT",
+                "INVESTIGATOR"
+              ]
+            }
+          },
+          "enrollmentInfo": {
+            "count": 55,
+            "type": "ACTUAL"
+          }
+        },
+        "armsInterventionsModule": {
+          "armGroups": [
+            {
+              "label": "cases of psoriasis",
+              "type": "EXPERIMENTAL",
+              "description": "group of 25 cases of psoriasis subjected to skin biopsy for detection of lesional and non lesional expression of ERAP1 by RT-PCR",
+              "interventionNames": [
+                "Diagnostic Test: RT-PCR for ERAP1 detection"
+              ]
+            },
+            {
+              "label": "normal controls",
+              "type": "EXPERIMENTAL",
+              "description": "group of 30 age and sex matched healthy controls o subjected to skin biopsy from normal skin for detection of expression of ERAP1 by RT-PCR",
+              "interventionNames": [
+                "Diagnostic Test: RT-PCR for ERAP1 detection"
+              ]
+            }
+          ],
+          "interventions": [
+            {
+              "type": "DIAGNOSTIC_TEST",
+              "name": "RT-PCR for ERAP1 detection",
+              "description": "Reverse transcriptase -Polymerase Chain Reaction for ERAP1 detection",
+              "armGroupLabels": [
+                "cases of psoriasis",
+                "normal controls"
+              ]
+            }
+          ]
+        },
+        "outcomesModule": {
+          "primaryOutcomes": [
+            {
+              "measure": "Estimation of lesional ERAP1 in psoriatic skin",
+              "description": "DPCRetection of level of expression of ERAP 1 in lesional skin of psoriasis patients by RT-",
+              "timeFrame": "Maximum 2 years"
+            }
+          ],
+          "secondaryOutcomes": [
+            {
+              "measure": "Estimation of non lesional ERAP1 in psoriatic skin",
+              "description": "Detection of level of expression of ERAP 1 in non lesional skin of psoriasis patients by RT-PCR.",
+              "timeFrame": "Maximum 2 years"
+            }
+          ]
+        },
+        "eligibilityModule": {
+          "eligibilityCriteria": "Inclusion Criteria:\n\n* patients with psoriasis vulgaris\n* patients over 18 years of age\n* both sexes\n\nExclusion Criteria:\n\n* patients on treatment for psoriasis within the last two months\n* assoiciated autoimmune diseases eg SLE\n* pregnancy",
+          "healthyVolunteers": true,
+          "sex": "ALL",
+          "minimumAge": "18 Years",
+          "maximumAge": "75 Years",
+          "stdAges": [
+            "ADULT",
+            "OLDER_ADULT"
+          ]
+        }
+      },
+      "derivedSection": {
+        "miscInfoModule": {
+          "versionHolder": "2026-10-02"
+        },
+        "conditionBrowseModule": {
+          "meshes": [
+            {
+              "id": "D011565",
+              "term": "Psoriasis"
+            }
+          ],
+          "ancestors": [
+            {
+              "id": "D017444",
+              "term": "Skin Diseases, Papulosquamous"
+            },
+            {
+              "id": "D012871",
+              "term": "Skin Diseases"
+            },
+            {
+              "id": "D017437",
+              "term": "Skin and Connective Tissue Diseases"
+            }
+          ]
+        }
+      },
+      "hasResults": false
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT06302556",
+          "orgStudyIdInfo": {
+            "id": "2022XJ9W4F"
+          },
+          "secondaryIdInfos": [
+            {
+              "id": "G53D2300526 0006",
+              "type": "OTHER_GRANT",
+              "domain": "Ministry of University and Research. NextGenetationUE"
+            }
+          ],
+          "organization": {
+            "fullName": "Fondazione IRCCS Ca' Granda, Ospedale Maggiore Policlinico",
+            "class": "OTHER"
+          },
+          "briefTitle": "The Role of Immune Checkpoints in Lung Transplant (ILTRA)",
+          "officialTitle": "The Role of Immune Checkpoints in Lung Transplant: the Pathways of Rejection and the Immunomodulatory Therapeutic Perspectives",
+          "acronym": "ILTRA"
+        },
+        "statusModule": {
+          "statusVerifiedDate": "2024-02",
+          "overallStatus": "UNKNOWN",
+          "lastKnownStatus": "NOT_YET_RECRUITING",
+          "expandedAccessInfo": {
+            "hasExpandedAccess": false
+          },
+          "startDateStruct": {
+            "date": "2024-04",
+            "type": "ESTIMATED"
+          },
+          "primaryCompletionDateStruct": {
+            "date": "2026-01",
+            "type": "ESTIMATED"
+          },
+          "completionDateStruct": {
+            "date": "2026-02",
+            "type": "ESTIMATED"
+          },
+          "studyFirstSubmitDate": "2024-02-28",
+          "studyFirstSubmitQcDate": "2024-03-06",
+          "studyFirstPostDateStruct": {
+            "date": "2024-03-08",
+            "type": "ACTUAL"
+          },
+          "lastUpdateSubmitDate": "2024-03-06",
+          "lastUpdatePostDateStruct": {
+            "date": "2024-03-08",
+            "type": "ACTUAL"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "responsibleParty": {
+            "type": "SPONSOR"
+          },
+          "leadSponsor": {
+            "name": "Fondazione IRCCS Ca' Granda, Ospedale Maggiore Policlinico",
+            "class": "OTHER"
+          },
+          "collaborators": [
+            {
+              "name": "University of Milan",
+              "class": "OTHER"
+            },
+            {
+              "name": "University of Padova",
+              "class": "OTHER"
+            },
+            {
+              "name": "University of Turin, Italy",
+              "class": "OTHER"
+            }
+          ]
+        },
+        "oversightModule": {
+          "oversightHasDmc": false,
+          "isFdaRegulatedDrug": false,
+          "isFdaRegulatedDevice": false
+        },
+        "descriptionModule": {
+          "briefSummary": "The goal of this observational study is to learn about rejection in lung transplantation.\n\nThe main question it aims to answer is:\n\n\u2022 what is the role of immune checkpoints in lung transplantation? Participants will describe pathways of rejection in lung transplantation analyzing the immune checkpoints on explanted lungs as well as trans-bronchial biopsies.",
+          "detailedDescription": "Lung transplantation is the less common solid organ transplant performed; it is the treatment of choice for end stage lung disease. Lung transplantation is \"problematic\" for a number of reasons: low graft availability, high waitlist mortality and unsatisfactory survival. Acute rejection, occurring days to months after surgery, has been identified as one of the main risk factors for the development of chronic rejection: in the first five years after lung transplantation, chronic rejection is the major cause of graft failure, morbidity and mortality. A deep knowledge of the immunological scenarios associated with lung graft tolerance could allow selectively switch-off T-cells involved in the rejection process. The researches, preliminary demonstrated the central role of immunological checkpoints in the development of acute rejection and its evolution towards chronic rejection. The aim of this study is the identification of markers that could be associated with the establishment of lung graft tolerance.\n\nThe project is articulated into two parts: a retrospective and a prospective section. The retrospective section is constituted by a cross-sectional study of immune checkpoints on lungs explanted during lung re-transplantation for chronic rejection (cohort 1). In addition, the retrospective section includes a retrospective cohort study of immune checkpoints on specimens from transbronchial lung biopsies of participants who received lung transplantation and have 3 years of follow-up (cohort 2). The prospective section is a cohort study of immune checkpoints on specimens from transbronchial lung biopsies and gene expression analysis on immune cells purified from bronchoalveolar lavage; participants will be subjects receiving the lung transplantation during the first year of recruitment and followed for one year (cohort 3)."
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Lung Transplant Rejection"
+          ],
+          "keywords": [
+            "Lung transplantation",
+            "Immune checkpoint",
+            "Acute rejection",
+            "Chronic rejection",
+            "Chronic lung allograft dysfunction"
+          ]
+        },
+        "designModule": {
+          "studyType": "OBSERVATIONAL",
+          "patientRegistry": false,
+          "designInfo": {
+            "observationalModel": "COHORT",
+            "timePerspective": "OTHER"
+          },
+          "bioSpec": {
+            "retention": "SAMPLES_WITH_DNA",
+            "description": "Lung tissue, bronchoalveolar lavage"
+          },
+          "enrollmentInfo": {
+            "count": 280,
+            "type": "ESTIMATED"
+          }
+        },
+        "armsInterventionsModule": {
+          "armGroups": [
+            {
+              "label": "Lung re-transplant cohort",
+              "description": "This cohort includes consecutive participants who underwent lung re-transplantation for chronic lung allograft dysfunction from 2010 to 2020; the immune checkpoints analyses will be conducted on stored specimens from lungs explanted during re-transplantation.",
+              "interventionNames": [
+                "Diagnostic Test: Immune checkpoints analysis"
+              ]
+            },
+            {
+              "label": "Previous lung transplant cohort",
+              "description": "This cohort includes participants who received first bilateral lung transplantation from 2017 to 2020. The immune checkpoints analyses will be conducted on stored specimens from postoperative transbronchial biopsy performed for clinical suspicious of rejection.",
+              "interventionNames": [
+                "Diagnostic Test: Immune checkpoints analysis"
+              ]
+            },
+            {
+              "label": "Prospective lung transplant cohort",
+              "description": "This cohort includes participants who will have their first bilateral lung transplant from April 2024 to April 2025. Immunopathological characterization of bronchoalveolar leukocytes and analysis of immuno checkpoints will be performed on leftover material of bronchoalveolar lavage and transbronchial lung biopsy samples performed for clinical suspicious of rejection.",
+              "interventionNames": [
+                "Diagnostic Test: Immune checkpoints analysis",
+                "Diagnostic Test: Gene expression analysis"
+              ]
+            }
+          ],
+          "interventions": [
+            {
+              "type": "DIAGNOSTIC_TEST",
+              "name": "Immune checkpoints analysis",
+              "description": "The researcher will analyze immune checkpoint molecules, which will include the lymphocyte activation gene-3 (LAG-3), T cell immunoglobulin and mucin-domain containing-3 (TIM-3), V-domain Ig suppressor of T cell activation (VISTA), besides the canonical PD1 and ligands L1 and L2, T cell immunoglobulin and ITIM domain (TIGIT) and CTLA-4. In addition, Foxp3, GATA3 and TOX will be analyzed as specific lineage markers.",
+              "armGroupLabels": [
+                "Lung re-transplant cohort",
+                "Previous lung transplant cohort",
+                "Prospective lung transplant cohort"
+              ]
+            },
+            {
+              "type": "DIAGNOSTIC_TEST",
+              "name": "Gene expression analysis",
+              "description": "Immune cells will be purified from bronchoalveolar lavage; total RNA will be purified and subjected to gene expression analysis by Quantigene multiplex 80-plex Assay, which allows to evaluate simultaneously the follow mRNA targets: CCL2, CCL3, CCL5, CXCL10, CSF2, CSF3, IL1A, IL1B, IL1RN, IL6, IL6R, IL8, IL10, IL12B, IL17A, IL18, IL22, IL28A, TNF, TNFRSF4, IFNA2, IFNB1, IFNG, IFI16, IFITM1, IFITM3, MX1, TLR3, TLR4, TLR7, TLR8, NOD1, NOD2, CASP1, NLRP3, PYCARD, CD44, CLEC4M, CD209, ITGA4, ITGB7, CH25H, ABCA1, HMGCS1, NR1H3, ACAT1, PDCD1, PTGS2, CD274, CD69, MPO, HAVCR2, TAP1, ERAP1, ERAP2, AGTR2, AGTR1, PPARG, CRP, IL7, IL12A, ACE2, ELOVL6, CD38, NOS2",
+              "armGroupLabels": [
+                "Prospective lung transplant cohort"
+              ]
+            }
+          ]
+        },
+        "outcomesModule": {
+          "primaryOutcomes": [
+            {
+              "measure": "Lung-tissue immune-checkpoint profile and bronchoalveolar immune-cells mRNA signature in acute rejection after lung transplantation.",
+              "description": "Prevalence of immune checkpoint markers and gene-expression on leukocytes from transbronchial biopsies and bronchoalveolar lavage. Participants: cohort number 3.",
+              "timeFrame": "Twelve months after lung transplantation (prospective data)"
+            },
+            {
+              "measure": "Lung-tissue immune-checkpoint profile in chronic rejection after lung transplantation.",
+              "description": "Prevalence of immune checkpoint markers on leukocytes from explanted lung grafts and transbronchial biopsies. Participants: cohort number 1 and 2.",
+              "timeFrame": "Cohort 1: at re-transplantation for chronic lung allograft dysfunction (cross-sectional data). Cohort 2: from one to 36 months after lung transplantation (retrospective data)"
+            }
+          ]
+        },
+        "eligibilityModule": {
+          "eligibilityCriteria": "Inclusion Criteria:\n\n* Lung transplant patients\n\nExclusion Criteria:\n\n* Hyperimmunized patients\n* History of auto-immune disorders",
+          "healthyVolunteers": false,
+          "sex": "ALL",
+          "minimumAge": "18 Years",
+          "maximumAge": "70 Years",
+          "stdAges": [
+            "ADULT",
+            "OLDER_ADULT"
+          ],
+          "studyPopulation": "Cohort 1: Participants who received lung re-transplantation for chronic lung allograft dysfunction.\n\nCohort 2 and 3: Participants who received first lung transplantation for end stage respiratory insufficiency.",
+          "samplingMethod": "NON_PROBABILITY_SAMPLE"
+        },
+        "contactsLocationsModule": {
+          "centralContacts": [
+            {
+              "name": "Mario Nosotti, Medicine",
+              "role": "CONTACT",
+              "phone": "3393924679",
+              "email": "mario.nosotti@unimi.it"
+            },
+            {
+              "name": "Ilaria Righi, Medcine",
+              "role": "CONTACT",
+              "phone": "+39 3470556707",
+              "email": "ilaria.righi78@gmail.com"
+            }
+          ],
+          "overallOfficials": [
+            {
+              "name": "Mario Nosotti, Medicine",
+              "affiliation": "University of Milan, Italy",
+              "role": "PRINCIPAL_INVESTIGATOR"
+            }
+          ],
+          "locations": [
+            {
+              "facility": "Fondazione IRCCS C\u00e0 Granda, Ospedale Maggiore Policlinico",
+              "city": "Milan",
+              "zip": "20122",
+              "country": "Italy",
+              "contacts": [
+                {
+                  "name": "Mario Nosotti, Medicine",
+                  "role": "CONTACT",
+                  "phone": "3393924679",
+                  "email": "mario.nosotti@unimi.it"
+                },
+                {
+                  "name": "Ilaria Righi, Medicine",
+                  "role": "CONTACT",
+                  "phone": "+393470556707",
+                  "email": "ilaria.righi78@gmail.com"
+                },
+                {
+                  "name": "Mario Nosotti, Medicine",
+                  "role": "PRINCIPAL_INVESTIGATOR"
+                },
+                {
+                  "name": "Ilaria Righi, Medicine",
+                  "role": "SUB_INVESTIGATOR"
+                },
+                {
+                  "name": "Lorenzo Rosso, Medicine",
+                  "role": "SUB_INVESTIGATOR"
+                },
+                {
+                  "name": "Valentina Vaira, Biology",
+                  "role": "SUB_INVESTIGATOR"
+                },
+                {
+                  "name": "Mario Clerici, Medicine",
+                  "role": "SUB_INVESTIGATOR"
+                },
+                {
+                  "name": "Daria Trabattoni, Biology",
+                  "role": "SUB_INVESTIGATOR"
+                }
+              ],
+              "geoPoint": {
+                "lat": 45.46427,
+                "lon": 9.18951
+              }
+            },
+            {
+              "facility": "University of Modena and Reggio Emilia",
+              "city": "Modena",
+              "zip": "41121",
+              "country": "Italy",
+              "contacts": [
+                {
+                  "name": "Marcello Pinti, Biology",
+                  "role": "CONTACT",
+                  "phone": "+390592055386",
+                  "email": "marcello.pinti@unimore.it"
+                }
+              ],
+              "geoPoint": {
+                "lat": 44.64783,
+                "lon": 10.92539
+              }
+            },
+            {
+              "facility": "University of Padua",
+              "city": "Padova",
+              "zip": "35131",
+              "country": "Italy",
+              "contacts": [
+                {
+                  "name": "Marco Schiavon, Medicine",
+                  "role": "CONTACT",
+                  "phone": "+39 3475642901",
+                  "email": "marco.schiavon@unipd.it"
+                }
+              ],
+              "geoPoint": {
+                "lat": 44.38225,
+                "lon": 11.14261
+              }
+            },
+            {
+              "facility": "University of Turin",
+              "city": "Torino",
+              "zip": "10124",
+              "country": "Italy",
+              "contacts": [
+                {
+                  "name": "Massimo Boffini, Medicine",
+                  "role": "CONTACT",
+                  "phone": "+39 3474267034",
+                  "email": "massimo.boffini@unito.it"
+                }
+              ],
+              "geoPoint": {
+                "lat": 44.88856,
+                "lon": 11.99138
+              }
+            }
+          ]
+        },
+        "referencesModule": {
+          "references": [
+            {
+              "pmid": "36703976",
+              "type": "BACKGROUND",
+              "citation": "Righi I, Vaira V, Morlacchi LC, Croci GA, Rossetti V, Blasi F, Ferrero S, Nosotti M, Rosso L, Clerici M. PD-1 expression in transbronchial biopsies of lung transplant recipients is a possible early predictor of rejection. Front Immunol. 2023 Jan 10;13:1024021. doi: 10.3389/fimmu.2022.1024021. eCollection 2022."
+            },
+            {
+              "pmid": "34489963",
+              "type": "BACKGROUND",
+              "citation": "Righi I, Vaira V, Morlacchi LC, Croci GA, Rossetti V, Blasi F, Ferrero S, Nosotti M, Rosso L, Clerici M. Immune Checkpoints Expression in Chronic Lung Allograft Rejection. Front Immunol. 2021 Aug 13;12:714132. doi: 10.3389/fimmu.2021.714132. eCollection 2021."
+            },
+            {
+              "pmid": "32548241",
+              "type": "BACKGROUND",
+              "citation": "Palleschi A, Gaudioso G, Edefonti V, Musso V, Terrasi A, Ambrogi F, Franzi S, Rosso L, Tarsia P, Morlacchi LC, Ferrero S, Nosotti M, Vaira V. Bronchoalveolar Lavage-microRNAs Are Potential Novel Biomarkers of Outcome After Lung Transplantation. Transplant Direct. 2020 Apr 9;6(5):e547. doi: 10.1097/TXD.0000000000000994. eCollection 2020 May."
+            }
+          ]
+        },
+        "ipdSharingStatementModule": {
+          "ipdSharing": "YES",
+          "description": "The anonymized data collected will be recorded on a database available online by other researchers upon request",
+          "infoTypes": [
+            "STUDY_PROTOCOL"
+          ],
+          "timeFrame": "Data requests can be submitted starting 9 months after closing of recruitment and the data will be made accessible for up to 36 months. Extensions will be considered on a case-by-case basis.",
+          "accessCriteria": "Access to IPD can be requested by qualified researchers engaging in independent scientific research, and will be provided following review and approval of a research proposal and Statistical Analysis Plan (SAP) and execution of a Data Sharing Agreement (DSA)."
+        }
+      },
+      "derivedSection": {
+        "miscInfoModule": {
+          "versionHolder": "2026-10-02"
+        }
+      },
+      "hasResults": false
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT06833164",
+          "orgStudyIdInfo": {
+            "id": "Serum ERAP1 and 2 in warts"
+          },
+          "organization": {
+            "fullName": "Benha University",
+            "class": "OTHER"
+          },
+          "briefTitle": "ERAP1,2 in Recalcitrant Warts",
+          "officialTitle": "Serum ERAP1 and ERAP2 Levels in Patients With Recalcitrant Warts"
+        },
+        "statusModule": {
+          "statusVerifiedDate": "2025-02",
+          "overallStatus": "COMPLETED",
+          "expandedAccessInfo": {
+            "hasExpandedAccess": false
+          },
+          "startDateStruct": {
+            "date": "2022-10-01",
+            "type": "ACTUAL"
+          },
+          "primaryCompletionDateStruct": {
+            "date": "2024-03-20",
+            "type": "ACTUAL"
+          },
+          "completionDateStruct": {
+            "date": "2024-03-20",
+            "type": "ACTUAL"
+          },
+          "studyFirstSubmitDate": "2025-02-13",
+          "studyFirstSubmitQcDate": "2025-02-17",
+          "studyFirstPostDateStruct": {
+            "date": "2025-02-18",
+            "type": "ACTUAL"
+          },
+          "lastUpdateSubmitDate": "2025-02-17",
+          "lastUpdatePostDateStruct": {
+            "date": "2025-02-18",
+            "type": "ACTUAL"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "responsibleParty": {
+            "type": "PRINCIPAL_INVESTIGATOR",
+            "investigatorFullName": "karem Taha ibrahim khalil",
+            "investigatorTitle": "assistant professor of dermatology, venereology and andrology",
+            "investigatorAffiliation": "Benha University"
+          },
+          "leadSponsor": {
+            "name": "Benha University",
+            "class": "OTHER"
+          }
+        },
+        "oversightModule": {
+          "oversightHasDmc": false,
+          "isFdaRegulatedDrug": false,
+          "isFdaRegulatedDevice": false,
+          "isUsExport": false
+        },
+        "descriptionModule": {
+          "briefSummary": "The exact mechanisms underlying the contribution of cellular immunity in the eradication of human papillomavirus (HPV) infections remain obscure. Individuals who have treatment-resistant warts frequently have immune deficiencies. Amino-peptidases (ERAP1, ERAP2) of endoplasmic reticulum are essential for production of antigenic epitopes that attach to the Major Histocompatibility Complex (MHC) class I and activate T-lymphocytes or natural killer (NK) cells. Aim: To assess ERAP1 and ERAP2 serum concentrations in patients with resistant warts."
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Warts"
+          ]
+        },
+        "designModule": {
+          "studyType": "OBSERVATIONAL",
+          "patientRegistry": true,
+          "targetDuration": "1 Day",
+          "designInfo": {
+            "observationalModel": "CASE_CONTROL",
+            "timePerspective": "CROSS_SECTIONAL"
+          },
+          "enrollmentInfo": {
+            "count": 200,
+            "type": "ACTUAL"
+          }
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "DIAGNOSTIC_TEST",
+              "name": "endoplasmic reticulum Aminopeptidase 1 and 2",
+              "description": "endoplasmic reticulum aminopeptidase1 and 2 serum levels determination via ELISA"
+            },
+            {
+              "type": "DIAGNOSTIC_TEST",
+              "name": "endoplasmic reticulum aminopeptidase 1 and 2 serum levels determination via ELISA",
+              "description": "endoplasmic reticulum aminopeptidase 1 and 2 serum levels determination via ELISA",
+              "otherNames": [
+                "SEUM ERAP1 MEASUREMENT USING ELISA",
+                "SERUM ERAP2MEASUREMENT USING ELISA"
+              ]
+            }
+          ]
+        },
+        "outcomesModule": {
+          "primaryOutcomes": [
+            {
+              "measure": "SERUM LEVELS OF endoplasmic reticulum aminopeptidase 1 and 2",
+              "description": "using specific Commercial human ELISA kits",
+              "timeFrame": "ONE YEAR"
+            }
+          ]
+        },
+        "eligibilityModule": {
+          "eligibilityCriteria": "Inclusion Criteria:\n\n\u2022 Patients who had a history of incomplete clearance or recurrence following two or more electrocautery sessions and four or more cryocautery treatments and intralesional bleomycin.\n\nExclusion Criteria:\n\n* Patients with genital warts\n* Patients on systemic steroids or other immunosuppressive treatments\n* Immunocompromised individuals\n* Patients suffering from chronic systemic diseases\n* Pregnant women",
+          "healthyVolunteers": true,
+          "sex": "ALL",
+          "stdAges": [
+            "CHILD",
+            "ADULT",
+            "OLDER_ADULT"
+          ],
+          "studyPopulation": "Two hundred individuals were separated into two groups. Group (I) patients with resistant warts (n=100), and group (II) age- and sex-matched subjects with history of treated warts with no recurrence (n=100). They were recruited from the Dermatology Outpatient Clinic at Benha University Hospitals",
+          "samplingMethod": "NON_PROBABILITY_SAMPLE"
+        },
+        "contactsLocationsModule": {
+          "overallOfficials": [
+            {
+              "name": "Ihab Y. Abdallah, MD",
+              "affiliation": "Professor of Dermatology, Venereology and Andrology, Faculty of Medicine, Benha University",
+              "role": "STUDY_CHAIR"
+            },
+            {
+              "name": "Nehad A.Fouad, MD",
+              "affiliation": "Professor of Microbiology and Immunology, Faculty of Medicine, Benha University",
+              "role": "STUDY_DIRECTOR"
+            },
+            {
+              "name": "Ola S Ebrahim, MBBCh",
+              "affiliation": "Benha University",
+              "role": "PRINCIPAL_INVESTIGATOR"
+            }
+          ],
+          "locations": [
+            {
+              "facility": "faculty of medicine Benha University",
+              "city": "Banh\u0101",
+              "state": "Qalyubia Governorate",
+              "zip": "13511",
+              "country": "Egypt",
+              "geoPoint": {
+                "lat": 30.45977,
+                "lon": 31.1842
+              }
+            }
+          ]
+        },
+        "ipdSharingStatementModule": {
+          "ipdSharing": "UNDECIDED"
+        }
+      },
+      "derivedSection": {
+        "miscInfoModule": {
+          "versionHolder": "2026-10-02"
+        },
+        "conditionBrowseModule": {
+          "meshes": [
+            {
+              "id": "D014860",
+              "term": "Warts"
+            }
+          ],
+          "ancestors": [
+            {
+              "id": "D030361",
+              "term": "Papillomavirus Infections"
+            },
+            {
+              "id": "D004266",
+              "term": "DNA Virus Infections"
+            },
+            {
+              "id": "D014777",
+              "term": "Virus Diseases"
+            },
+            {
+              "id": "D007239",
+              "term": "Infections"
+            },
+            {
+              "id": "D017193",
+              "term": "Skin Diseases, Viral"
+            },
+            {
+              "id": "D014412",
+              "term": "Tumor Virus Infections"
+            },
+            {
+              "id": "D012874",
+              "term": "Skin Diseases, Infectious"
+            },
+            {
+              "id": "D012871",
+              "term": "Skin Diseases"
+            },
+            {
+              "id": "D017437",
+              "term": "Skin and Connective Tissue Diseases"
+            }
+          ]
+        }
+      },
+      "hasResults": false
+    }
+  ],
+  "pagination": "complete"
+}

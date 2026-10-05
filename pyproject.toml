@@ -9,6 +9,7 @@ repository = "https://github.com/JPais7/AXIS"
 readme = "README.md"
 packages = [{ include = "axis" }]
 include = ["axis/resources/demo/*.tsv", "axis/resources/demo/*.json", "axis/resources/discovery/**/*", "axis/resources/workspace/**/*", "axis/resources/targets/**/*", "axis/resources/structures/**/*", "axis/resources/pharmacology/**/*", "axis/resources/cellular/**/*", "axis/resources/benchmarks/**/*", "axis/resources/computational-discovery/**/*", "axis/resources/chemical-learning/**/*"]
+exclude = ["axis/resources/evidence-refresh/**/records.json", "axis/resources/evidence-refresh/**/openalex.json", "axis/resources/evidence-refresh/**/openalex-partial.json"]
 keywords = [
     "bioinformatics",
     "transcriptomics",

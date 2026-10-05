@@ -1,0 +1,35 @@
+[
+  {
+    "id": "PMC9892207",
+    "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=9892207",
+    "method": "GET",
+    "executed_at": "2026-10-05T11:54:07.197796+00:00",
+    "cache_semantics": "historical_local_reading_only_not_replay_input",
+    "http_status": 200,
+    "status": "retrieved_for_reading_not_redistributed",
+    "sha256": "1516eb0834af3d9dd28799ace3677df129eb2dddbaee076b0a27975192199b0d",
+    "bytes": 115879
+  },
+  {
+    "id": "PMC11647717",
+    "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=11647717",
+    "method": "GET",
+    "executed_at": "2026-10-05T11:54:07.735186+00:00",
+    "cache_semantics": "historical_local_reading_only_not_replay_input",
+    "http_status": 200,
+    "status": "retrieved_for_reading_not_redistributed",
+    "sha256": "e4d39e5d2a8bf8c97fd34849354545377f32bbf94835a0422ada44dd575b9feb",
+    "bytes": 85942
+  },
+  {
+    "id": "PMC8024916",
+    "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=8024916",
+    "method": "GET",
+    "executed_at": "2026-10-05T11:54:08.128824+00:00",
+    "cache_semantics": "historical_local_reading_only_not_replay_input",
+    "http_status": 200,
+    "status": "retrieved_for_reading_not_redistributed",
+    "sha256": "4ab17b00d659d8d21e159d8b24a9a17be6cc36c8c8d3e08a67aa9aebf271e087",
+    "bytes": 145973
+  }
+]

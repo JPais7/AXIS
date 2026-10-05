@@ -1,0 +1,111 @@
+{
+  "status": "partial_refresh_not_scientific_closure",
+  "path_semantics": "relative_to_packaged_refresh_root",
+  "files": [
+    {
+      "path": "baseline/manifest.json",
+      "bytes": 2992,
+      "sha256": "7df99019530a57312d26c93604fb0d49b262d1cc9c413fee80484a60276f3d73"
+    },
+    {
+      "path": "baseline/state-snapshot.json",
+      "bytes": 577043,
+      "sha256": "83b2bcff0b58daccfeda58126d918d593e002e1499382f1ddfa450fe2737ee68"
+    },
+    {
+      "path": "baseline/traceability.json",
+      "bytes": 54355,
+      "sha256": "0929ebe5c8598a7d23e0e71fabdd63b132de74d8d2bfcf8690c9071b0d1986a7"
+    },
+    {
+      "path": "continuation/access-log.json",
+      "bytes": 21139,
+      "sha256": "cd629d9f54e8640a972ea15159cae1763be32aa6e89db568526358cf448150a2"
+    },
+    {
+      "path": "continuation/additional-fulltext-access.json",
+      "bytes": 1369,
+      "sha256": "82eaac1302c271efc9adb6afd1833c78ac8ee7a31453e23f41ec5552d38839a8"
+    },
+    {
+      "path": "continuation/citation-expansion.json",
+      "bytes": 166570,
+      "sha256": "508e48051777039e5a91bdef2eb42af1591b53b9ddf66c60573ecf0b8493f4ee"
+    },
+    {
+      "path": "continuation/clinical-trials.json",
+      "bytes": 101301,
+      "sha256": "0dfe1b97c28fcdd6b8513522beff610b8b42f12eab878c02027cf42bd86e1eb9"
+    },
+    {
+      "path": "continuation/metadata-resolution.json",
+      "bytes": 244740,
+      "sha256": "91c031ca1ed435164db402bb9c936ebe72fb9a6cc2911150ab816ae880c5218f"
+    },
+    {
+      "path": "continuation/openalex.json.gz",
+      "bytes": 4702063,
+      "sha256": "e1c0d4c5a11182127490e0280817708e4a173edacd209fc84f76b67c1949ccc6"
+    },
+    {
+      "path": "continuation/preprints.json",
+      "bytes": 514011,
+      "sha256": "b1fb7392eb40d53ffae9fdced18908d4b7241c5acd4f26ca537a858ed21a09d8"
+    },
+    {
+      "path": "continuation/structure-metadata.json",
+      "bytes": 314238,
+      "sha256": "1d80b3ff059304e80799aa03672149cbaf343b9131d760345af5f3e9e6456668"
+    },
+    {
+      "path": "continuation/study-reviews.json",
+      "bytes": 9498,
+      "sha256": "1b4a4d1af88f2d0cb899420aa9cb3fdb6efd59f47cbdc78683f7c3d420f19429"
+    },
+    {
+      "path": "fulltext-access.json",
+      "bytes": 1982,
+      "sha256": "9c50fcb9ea03f498294e02d194f7346d15bcac7a2147e3f6167f69222c28c7e7"
+    },
+    {
+      "path": "protocol.json",
+      "bytes": 6222,
+      "sha256": "174ea4f7bde09ab435f56655f7bbed3b97edb7813fe6f080ecff88e28fef66bc"
+    },
+    {
+      "path": "record-occurrences.json",
+      "bytes": 1087147,
+      "sha256": "6e54d45823381e4768c4fe7d86f7045da90cf4c9475e4a7f6c4a8071519134ab"
+    },
+    {
+      "path": "records.json.gz",
+      "bytes": 10813616,
+      "sha256": "0ff3e0df81dcce51fc4ced820422015d8e0a4560f4c558e9c96dda605a83f784"
+    },
+    {
+      "path": "review-checkpoint.json",
+      "bytes": 4082,
+      "sha256": "6f7e6f74d2487d892a8d3865b4c98cc9ee759a3e810106b5a22382c7000b0bb4"
+    },
+    {
+      "path": "screening.json",
+      "bytes": 446602,
+      "sha256": "bf851edffd7bc3993bb7b041b3113f68b29217d83d3c808d209e9bd44346d4d1"
+    },
+    {
+      "path": "search-log.json",
+      "bytes": 158334,
+      "sha256": "ffc045d78dac64f3fe93dc984f857274e26f11a45eaf91f61ceb80e84388fce8"
+    },
+    {
+      "path": "supplemental-source-responses.json",
+      "bytes": 9487268,
+      "sha256": "dc0948b913d20a9c628bc1057b5ba980bbd3f62603d6e71764c2f6879c5d82e0"
+    },
+    {
+      "path": "unique-records.json",
+      "bytes": 3862194,
+      "sha256": "7f2e41689836421c65952b63c2de4d35373093ffb7fb34cd6c9d344f27b5e786"
+    }
+  ]
+}

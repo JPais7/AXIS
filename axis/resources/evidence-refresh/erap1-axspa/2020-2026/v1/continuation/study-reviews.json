@@ -1,0 +1,68 @@
+{
+  "status": "partial_curation_not_frozen_evidence_set",
+  "review_status": "pending_review",
+  "imported_into_evidence_graph": false,
+  "studies": [
+    {
+      "study_id": "refresh:Tran:2023",
+      "doi": "10.1002/art.42327",
+      "pmid": "36577442",
+      "pmcid": "PMC9892207",
+      "eligibility": "included",
+      "eligibility_reason": "Primary ERAP1 genetic perturbation in an experimental HLA-B27 spondyloarthritis model; transferable mechanism and bounded disease relevance.",
+      "assessment_scope": "Main-text methods and results; supplements not fully assessed",
+      "context": {
+        "species": "rat",
+        "diagnosis": "experimental_spondyloarthritis_not_human_AS",
+        "HLA": ["B*27:05", "B*07:02 comparator"],
+        "model": "33-3 transgenic HLA-B27/human beta2m, mixed Lewis/Sprague-Dawley background",
+        "perturbation": "TALEN-generated germline ERAP1 deficiency",
+        "cell_background": "bone-marrow-derived macrophages and dendritic cells",
+        "blinding": "Clinical caretakers blinded to genotype; colon histology scored by two blinded observers",
+        "randomization": "Allocation randomization not reported in main text; discordant histology re-randomized for rescoring",
+        "statistics": "Student t-test reported; p<0.05; multiple-testing correction not reported in main methods",
+        "replication": "Not independent human therapeutic replication",
+        "limitations": ["Transgene overexpression", "Rodents lack ERAP2", "Lifelong gene loss is not equivalent to adult pharmacological treatment", "Peripheral arthritis, not direct evidence of axial clinical remission"]
+      },
+      "claims": [
+        {"id": "refresh:Tran:arthritis-frequency", "text": "ERAP1-null HLA-B27 transgenic rats had lower arthritis frequency than ERAP1 wild-type rats in the reported cohort.", "locator": "Results, Effects of ERAP1 deficiency on disease; Figure 4A; Supplemental Table 1 cited by main text", "result": {"wild_type": "12/37", "null": "4/34", "p": 0.03}, "direction": "supportive", "epistemic_kind": "source_assertion", "review_status": "pending_review"},
+        {"id": "refresh:Tran:severity", "text": "Among rats developing arthritis, clinical severity and onset were reported as comparable between ERAP1-null and wild-type groups.", "locator": "Results, Effects of ERAP1 deficiency on disease", "direction": "null", "epistemic_kind": "source_assertion", "review_status": "pending_review"},
+        {"id": "refresh:Tran:colitis", "text": "ERAP1 deficiency did not reduce stool-score abnormalities and colon histology scores were higher in the HLA-B27 transgenic model.", "locator": "Results, Effects of ERAP1 deficiency on disease; Figure 4C", "direction": "contradictory", "epistemic_kind": "source_assertion", "review_status": "pending_review"},
+        {"id": "refresh:Tran:surface-dimers", "text": "ERAP1 deficiency increased cell-surface HLA-B27 disulfide-linked dimers while reducing misfolded HLA-B27 accumulation in whole-cell lysates.", "locator": "Results; Figures 1C-D and 2B-C", "direction": "context-dependent", "epistemic_kind": "source_assertion", "review_status": "pending_review"},
+        {"id": "refresh:Tran:dc-rescue", "text": "ERAP1 deficiency did not restore impaired allogeneic T-cell stimulation or the depleted CD103-positive dendritic-cell population in the reported model.", "locator": "Results, myeloid abnormalities; Figures 5A-B", "direction": "negative", "epistemic_kind": "source_assertion", "review_status": "pending_review"},
+        {"id": "refresh:Tran:il23a", "text": "ERAP1 deficiency reduced Il23a upregulation in IFNg-primed, LPS-stimulated HLA-B27-expressing macrophages.", "locator": "Results, myeloid abnormalities; Figure 5C", "direction": "supportive", "epistemic_kind": "source_assertion", "review_status": "pending_review"}
+      ],
+      "impact": {"direction": "contextualizes", "materiality": "DECISION_RELEVANT", "affected_layers": ["mechanism", "HLA", "genetic_perturbation", "disease_rescue", "translation"], "affected_explanations": ["On-target ERAP1 mechanism", "Context-dependent effect"], "rationale": "Supports bounded disease-model biology but contradicts a simple universal chain from reduced surface dimers to protection. Does not test compound engagement or chemical-genetic dependency.", "epistemic_kind": "axis_inference", "review_status": "pending_review"}
+    },
+    {
+      "study_id": "refresh:cyclohexyl-acids:2024",
+      "doi": "10.1021/acsmedchemlett.4c00401",
+      "pmid": "39691536",
+      "pmcid": "PMC11647717",
+      "eligibility": "included",
+      "eligibility_reason": "Primary transferable ERAP1 chemistry, structure and cellular pharmacology.",
+      "assessment_scope": "Main text; supplementary identity and assay details still required before measurement import",
+      "context": {"construct": "ERAP1 Hap2 in biochemical assay", "substrate": "YTAFTIPSI to TAFTIPSI", "biochemical_method": "MALDI-TOF mass spectrometry", "cell_background": "HeLa antigen-presentation assay", "cell_readout": "SIINFEKL presentation from precursor; functional readout, not direct occupancy", "clinical_disease": "not_assessed", "conflicts": "Most authors current/former GSK employees as disclosed", "limitations": ["ERAP2/IRAP comparisons use different substrates", "Comparator pIC50 for compound 7 reported n=1", "No axSpA clinical efficacy result"]},
+      "claims": [
+        {"id": "refresh:cyclohexyl:compound1-cell", "text": "Compound 1 inhibited recombinant ERAP1 but had no measurable cellular inhibitory activity in the reported antigen-presentation assay.", "locator": "Results and Discussion; Table 1", "direction": "negative", "epistemic_kind": "source_assertion", "review_status": "pending_review"},
+        {"id": "refresh:cyclohexyl:compound13", "text": "Compound 13 had reported enzyme pIC50 8.6 and cellular antigen-presentation pIC50 7.7.", "locator": "Results and Discussion; Table 2", "direction": "supportive", "epistemic_kind": "source_assertion", "review_status": "pending_review"},
+        {"id": "refresh:cyclohexyl:structures", "text": "Ligand-bound ERAP1 structures were reported for compounds 1, 2, 7 and 13 at the regulatory binding site.", "locator": "Results and Discussion; Figures 1-3; PDB 9GJN, 9GK6, 9GJS, 9GKE", "direction": "supportive", "epistemic_kind": "source_assertion", "review_status": "pending_review"}
+      ],
+      "impact": {"direction": "fills_gap", "materiality": "DECISION_RELEVANT", "affected_layers": ["chemical_matter", "structure", "biochemical_pharmacology", "cellular_pharmacology"], "affected_uncertainty": "assay_translation", "rationale": "Updates chemical/structural landscape and documents biochemical-to-cellular discordance. Functional presentation does not independently establish occupancy or axSpA efficacy.", "epistemic_kind": "axis_inference", "review_status": "pending_review"}
+    },
+    {
+      "study_id": "NCT07047703",
+      "url": "https://clinicaltrials.gov/study/NCT07047703",
+      "eligibility": "included",
+      "eligibility_reason": "Registered ERAP1-directed interventional axSpA study within search window; registration is not an efficacy result.",
+      "source_locator": "clinical-trials.json; protocolSection and hasResults",
+      "context": {"compound_name": "GRWD0715", "chemical_structure_identity": "not_verified", "phase": "I/II", "enrollment": "140 estimated, not observed results sample", "diagnosis": "axSpA fulfilling ASAS criteria", "HLA": "B27 positive for axSpA parts", "radiographic_status": "Not restricted to radiographic AS in retrieved eligibility text", "status": "RECRUITING", "first_posted": "2025-07-02", "last_posted": "2026-09-18", "results_posted": false, "design_caveat": "Top-level nonrandomized/open-label fields versus planned randomized double-blind Part D; preserve part-specific distinction"},
+      "claims": [
+        {"id": "refresh:EAST1:registration", "text": "EAST-1 is a registered phase I/II study of GRWD0715, described by the sponsor as an oral selective ERAP1 inhibitor, in healthy volunteers and axSpA participants.", "locator": "protocolSection.identificationModule, descriptionModule, designModule", "direction": "informative", "epistemic_kind": "source_assertion", "review_status": "pending_review"},
+        {"id": "refresh:EAST1:no-results", "text": "The retrieved EAST-1 registry record has no posted results.", "locator": "hasResults=false; retrieval timestamp in access-log.json", "direction": "uncertain", "epistemic_kind": "source_assertion", "review_status": "pending_review"},
+        {"id": "refresh:EAST1:BAD-proxy", "text": "The registered biologically active dose definition permits a mean steady-state exposure threshold of 1166 ng/ml as one criterion based on predicted IC50 and related oncology PK-PD modelling.", "locator": "protocolSection.outcomesModule.secondaryOutcomes, biologically active dose", "direction": "context-dependent", "epistemic_kind": "source_assertion", "review_status": "pending_review"}
+      ],
+      "impact": {"direction": "fills_gap", "materiality": "DECISION_RELEVANT", "affected_layers": ["clinical", "translation"], "rationale": "Establishes existence of axSpA clinical development, not demonstrated efficacy. Planned exposure/proxy criterion is not an observed direct engagement measurement. Baseline no-indexed-clinical-intervention language must not be reused as a completed-refresh finding.", "epistemic_kind": "axis_inference", "review_status": "pending_review"}
+    }
+  ]
+}
