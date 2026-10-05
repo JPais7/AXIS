@@ -6,26 +6,29 @@
 [![PyPI version](https://img.shields.io/pypi/v/axis-bio.svg)](https://pypi.org/project/axis-bio/)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21760201.svg)](https://doi.org/10.5281/zenodo.21760201)
 
-AXIS is a local scientific discovery system for public axial
-spondyloarthritis (axSpA) data. Its first goal is deliberately narrow:
+AXIS is local research software for traceable biomedical evidence and
+experimental decisions. It supports expression analysis and source-linked
+target, structure, pharmacology, cellular, decision and learning workflows.
+An ERAP1 × axial spondyloarthritis case demonstrates these workflows; it is
+not a validated treatment recommendation or proof of clinical benefit.
 
-> Identify genes that recur across independent GEO studies and show the
-> contextual, traceable evidence supporting every association.
-
-The project starts with the scientific domain model. Connectors, storage and
-scoring will be added only after the evidence and provenance contracts are
-stable.
+Start with the [documentation map](docs/README.md), the
+[current scientific state](docs/erap1-current-scientific-state.md), or the
+[independent installation test](docs/independent-installation-validation.md).
 
 ## Current scope
 
-Phase 3.1 adds a reproducible protein-identity layer, separate from disease
-evidence: gene → source-backed mapping → protein → isoform → source snapshot.
-The pinned human ERAP1 UniProt package supports offline import, sequence SHA-256
-verification, project-scoped read API and a Target / Protein workspace page.
-See [protein identity](docs/phase3-protein-identity.md) and the
-[implementation report](docs/phase3-protein-identity-implementation-report.md).
-Structures and chemical matter are not implemented in this slice; Phase 2 expert
-review and release acceptance remain pending.
+Implemented layers include protein identity, experimental structures,
+chemical matter, cellular pharmacology, deterministic decisions, experimental
+results, retrospective validation, computational discovery and chemical learning.
+Frozen case packages and their histories remain distinct from generic rules.
+Source-reported facts, calculations, AI suggestions and human approval are
+separate epistemic classes. Independent scientific review remains pending.
+
+The 2026-10-05 ERAP1 reassessment reproduces **DECISION STABLE**. Direct cellular
+engagement of the historical Maben compounds remains unresolved; the next
+recommended experiment is still chemical–genetic engagement. This is not a
+claim that all programmes or assay contexts are interchangeable.
 
 - typed references to scientific entities;
 - contextual scientific claims;

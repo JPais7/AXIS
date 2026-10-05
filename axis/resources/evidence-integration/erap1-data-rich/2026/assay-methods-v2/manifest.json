@@ -1,0 +1,57 @@
+{
+  "algorithm": "erap1-targeted-assay-methods-2",
+  "boundary": "Method delta, NOT DecisionState v2; originals outside Git",
+  "code_sha256": "38051bd02bddcda06134e4a7e0c5712c9ef2bacbc69aa6b97f45538baedd11c8",
+  "cutoff": "2026-10-05",
+  "files": {
+    "acceptance-matrix.json": "29a0b99ec440c6d9dd0774435ba888e8d9b96320a4646a0bc93f4f60970380c5",
+    "assay-comparability.json": "e2b9a727b618dd2b29efedf3ad6ed07f00cc4d0bfc59f873572f37e7f8cd15d5",
+    "assay-method-matrix.json": "3933d7e35c42fb25b334d9ab04ae2870cc3d5e6384c1efe07950b0eb9020085c",
+    "bounded-source-search.json": "bbf1cd453e9da6ebbb22cf4afddcd5cacc4f19ff4d2b0fddb4156b9b5e6e23a7",
+    "claim-provenance-delta.json": "eb17d42ab9faabee7c2d4738adef7e07bd2dd35cb0716fc08b9d5bf02fb72304",
+    "decision-refusal.json": "19a4e074fbf399dc2d70c2ebe54be966b0fe5db845d6ef6221522248d70248f4",
+    "selectivity.json": "79f89873c42117435dfab5e988ae1010d1b523ab99e2d3ccd996202154c3d99d",
+    "source-artifacts.json": "9862a41fc07b030ca328d9197964e061f15db4e39b82094130141c66f17a5f90",
+    "stage-a.json": "d4ac54a4dc9bd5c85fb1c6b16b93b090705b20759948f5e655ef52c05632ac5e",
+    "validation.json": "9f69b41b8ddb0728d8b7740c9c6f4ce8a385ffec3a0b39ac68205e4c164697de",
+    "version-provenance.json": "234a01c1128ef1a9a61e0d3ba9e3013a795bb269ad341a4442287c89d4ca52ee"
+  },
+  "parents": {
+    "closure-v1": {
+      "acceptance-matrix.json": "e685f47a4ccd40a1813915ff920976d3939b35fd3c6397758b5bbc2e19e47002",
+      "adjudication.json": "f0582fa17d97e1bd9a23e07373641bae532e28e8b72376049d01a3032e2b924b",
+      "assay-comparability.json": "644abccd778479a77a88cd1ed6e6db35ca6835ff53797bcb31a4b306dc3b7af7",
+      "bounded-gap-search.json": "1674b0b27f56461b1bc0612d98c45b1d5fb190280817e72a32cdc33a2cbc8f4f",
+      "causal-decision-diff.json": "c46a69a1829df61b3f7f7150715c634c26d9426599f72920d077ea1830ee3917",
+      "claim-curation.json": "79f892e0c11ce37cd29277c6003e248038355e4eb2275b465286e8cfe0f78497",
+      "decision-refusal.json": "e7bee38d7da75c09e61603adcbb80ccacb38b4c9e72d74a0c8a8b40de1b5e23a",
+      "integrated-claims.json": "e4ad709eb129118029a5203314384f1c1e78dc2aeacb81e6f72e0161f322729c",
+      "learning-eligibility.json": "682f84c08f4346fccdbb59def9986da80348833592be3d201c79569a9f87ebc4",
+      "manifest.json": "dc939098c4ce179bd9162fe13f6cf1f9e2cc32f4feca63f1858c487c7362501e",
+      "manifest.sha256": "1ecff6fa4eaf1755b2e90d4f5f78be292db620b8ba5d4964aeaa302c82f2a62e",
+      "repository-state.json": "4e9b95d47d17c9e766c982975ec8135e360933684da59ad183ee63d8f90b378f",
+      "source-adjudication.json": "8d4db74eb6715f50d9ac996d99350c3edee940e3f8b3a7a4bef1d74df82c1ec4",
+      "unresolved-blockers.json": "ee122589562101ac5318ddc99323f72907f6a767deca387484422c6dc8b64c2d",
+      "validation.json": "95a4cb5410f1a299a1baeb41c53e6f9207b492f6785dc9a6ca4041e75bdf48e5"
+    },
+    "v1": {
+      "before.json": "0dffb58a5b0a75320945ab1b5d31a07c4dfb036b545f74de550f347c32f2d991",
+      "chemical-datasets.json": "e0f78a2a02b107b4b89d768bb75ceb014d5a04b4c64a83d66cee74529ed1fda7",
+      "computational-replications.json": "6efe1f74b4356dd25f9f58b66c7663bcabf8c44b65f81968afc1e6233fa7337b",
+      "data-access.json": "13d42fac69d5bee66ae91de98c47eb7fffa7ad8d86df17c8ce49105e9a59b61f",
+      "decision-impact.json": "fb80ea06db3851370927c92c3091a5ece77e80ee084687a9a29a7efd7f71284b",
+      "decision-inputs.json": "d960b71f43ff7c5b150d4496a27e62e3393c4e01035bfe8ce49a5aa18a7d8232",
+      "immunopeptidome-datasets.json": "51e3d09f4c6094c64a9c1f52346acb7b0e01fa6fbc3e4e1645efc12330a578a1",
+      "inputs/2025-supplement-peptides.json": "5c13dd6d645d329bcc755c1a3b8195f2968ce28e6417eafe885d0268ca5a6c06",
+      "inputs/Peptide_List_PartI.txt": "ff6e38bbef4ede13238d043072eecc8d290c57da729e03b611a857bf6a4b7abe",
+      "inputs/Peptide_List_PartII.txt": "03ff88b7add6a5aa4ded75faa0ab7f59de954d09a41aad9952c1cb11237b0b38",
+      "inputs/report.pr_matrix.tsv": "7ab2e2a935c32da0d28db9e4791961df32ec630c966efd5d04b3f3875a72d2e2",
+      "manifest.json": "d343947367d17ec97da5fd6d3eb39597b186845d225812a9bad1ddac738c97f8",
+      "manifest.sha256": "f7094fdacf6fc87496b2b423e37452772892fb25ca613998c61b680e1fa1fd06",
+      "source-artifacts.json": "f9ed32f51917f4217720194c5a5bea1c66e571cc9a1c96f313621f0bf591b238",
+      "structure-index.json": "18c7b45403965b3681a7610d61a557332be206c85844591e345b538af6e809de",
+      "study-index.json": "403468418bf94ca881bae8d5bbfecb72dc439bcaddf3ec9ea1df8773467b2ae3"
+    }
+  },
+  "review_state": "pending_review"
+}

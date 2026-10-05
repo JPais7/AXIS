@@ -1,0 +1,137 @@
+{
+  "additional_routes": "Exact-title/DOI searches found metadata, publisher purchase record and author publication listings, no legitimately accessible BRADSHAW manuscript; OpenAlex locations only publisher/PubMed",
+  "attempts": [
+    {
+      "bytes": 2624,
+      "retrieved_at": "2026-10-05T19:33:45.889624+00:00",
+      "sha256": "b99a64a963da1ed6895a0cc8b75b3be18f5626752af8c49a951b638c5cbcd209",
+      "status": 200,
+      "url": "https://api.biorxiv.org/details/biorxiv/10.1101/2025.11.17.686761"
+    },
+    {
+      "bytes": 1588198,
+      "retrieved_at": "2026-10-05T19:33:45.889883+00:00",
+      "sha256": "2ff84c0d1bc55610a0bbba09e1639f6520fadb0b2e0ffbc6b0a09f724576e1e2",
+      "status": 200,
+      "url": "https://www.biorxiv.org/content/10.1101/2025.11.17.686761v1.full.pdf"
+    },
+    {
+      "bytes": 410821,
+      "retrieved_at": "2026-10-05T19:33:45.890017+00:00",
+      "sha256": "d0ea30897a4abddb07c3c262993cd98f45435161ad77ce6bbe192ca93fef82a8",
+      "status": 200,
+      "url": "https://www.biorxiv.org/content/10.1101/2025.11.17.686761v1.full"
+    },
+    {
+      "bytes": 162621,
+      "retrieved_at": "2026-10-05T19:34:22.039789+00:00",
+      "sha256": "9476d0cf485cc62898b76cff6cb86299d14e99695976609581f82b114ebbfde1",
+      "status": 200,
+      "url": "https://www.biorxiv.org/content/early/2025/11/17/2025.11.17.686761.source.xml"
+    },
+    {
+      "bytes": 2720779,
+      "retrieved_at": "2026-10-05T19:35:20.904453+00:00",
+      "sha256": "0b9a9d9d18cf22b8f5f2e389e9dfee544925a6cb8343d8b98355d36d6812c7b8",
+      "status": 200,
+      "url": "https://www.biorxiv.org/content/biorxiv/early/2025/11/17/2025.11.17.686761/DC1/embed/media-1.pdf?download=true"
+    },
+    {
+      "bytes": 4454632,
+      "retrieved_at": "2026-10-05T19:34:37.267113+00:00",
+      "sha256": "10d06934127d7ad073e8d4d241a4087dbcce9a660460e1ac848d5b2e837e76b1",
+      "status": 200,
+      "url": "https://biochemistry.chem.uoa.gr/fileadmin/depts/chem.uoa.gr/biochemistry/uploads/Papers/2020_Liddle_JMC.pdf"
+    },
+    {
+      "bytes": 66578,
+      "retrieved_at": "2026-10-05T19:36:01.730393+00:00",
+      "sha256": "be1f1b0c48da7aa4958549363c16e8426bf0e3273f9b5bc6ee29eeae0f3e92af",
+      "status": 200,
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6511960/fullTextXML"
+    },
+    {
+      "bytes": 463178,
+      "retrieved_at": "2026-10-05T19:37:47.987252+00:00",
+      "sha256": "ed13a47db171497874d190f671522a49ed1d6959ae0d0c55e4482457a02f3d6a",
+      "status": 200,
+      "url": "https://ndownloader.figshare.com/files/14453504"
+    },
+    {
+      "error": "HTTP Error 403: Forbidden",
+      "retrieved_at": "2026-10-05T19:33:45.889978+00:00",
+      "status": "FAILED",
+      "url": "https://pubs.acs.org/doi/full/10.1021/acs.jmedchem.5c03071"
+    },
+    {
+      "error": "HTTP Error 403: Forbidden",
+      "retrieved_at": "2026-10-05T19:35:22.067949+00:00",
+      "status": "FAILED",
+      "url": "https://pubs.acs.org/doi/10.1021/acs.jmedchem.5c03071?goto=supporting-info"
+    },
+    {
+      "bytes": 34459,
+      "retrieved_at": "2026-10-05T19:34:37.267459+00:00",
+      "sha256": "c0cc1969b695a92cc613cf0a5d23c856274da0ebdefbbf788e515ade819c5b3e",
+      "status": 200,
+      "url": "https://api.openalex.org/works/https://doi.org/10.1021/acs.jmedchem.5c03071"
+    },
+    {
+      "error": "HTTP Error 403: Forbidden",
+      "retrieved_at": "2026-10-05T19:34:37.267513+00:00",
+      "status": "FAILED",
+      "url": "https://pubs.acs.org/doi/10.1021/acs.jmedchem.6c00029"
+    },
+    {
+      "error": "The read operation timed out",
+      "retrieved_at": "2026-10-05T19:36:27.077943+00:00",
+      "status": "FAILED",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6511960/supplementaryFiles"
+    }
+  ],
+  "bradshaw_inspection": {
+    "all_pages_text_scanned": true,
+    "artifact": "si/jm5c03071_si_001.pdf",
+    "keyword_page_hits": {
+      "ERAP1 assay": [],
+      "ERAP2": [],
+      "IC50": [
+        60
+      ],
+      "IRAP": [],
+      "LNPEP": [],
+      "biochemical assay": [],
+      "biological methods": [],
+      "compound testing": [],
+      "counterscreen": [],
+      "enzyme assay": [],
+      "fluorogenic": [],
+      "inhibition": [],
+      "peptide": [],
+      "potency": [
+        2,
+        60
+      ],
+      "previously described": [],
+      "replicates": [
+        2,
+        60
+      ],
+      "standard deviation": [
+        2,
+        60
+      ],
+      "substrate": []
+    },
+    "manual_chain_adjudication": {
+      "S3/ref1": "Hryczanek compound synthesis, not potency method",
+      "S56/ref9": "Giastas crystallographic construct, not assay protein",
+      "S75": "Reference list alone is not assay inheritance"
+    },
+    "pages_inspected": 75,
+    "sha256": "c4c3b8a379ea6db1c44dcd925bb5dabc6ed25a86028c98a52a4068eca28673bb",
+    "visual_table_checked": "S60 TableS2"
+  },
+  "scope": "Two 2026 targets plus explicit Tinworth method chain; no broad corpus expansion",
+  "stop": "Bounded attempts exhausted; require BRADSHAW main methods or author-supplied assay SOP explicitly linked to these records; no inference from analogous programme"
+}

@@ -1,0 +1,137 @@
+{
+  "PXD054491": {
+    "biological_replicates_per_condition": 2,
+    "condition_column_mapping": {
+      "15467_1": "WT",
+      "15467_2": "WT",
+      "15467_3": "WT",
+      "15468_1": "WT",
+      "15468_2": "WT",
+      "15468_3": "WT",
+      "15470_1": "Inhibitor",
+      "15470_2": "Inhibitor",
+      "15470_3": "Inhibitor",
+      "15471_1": "Inhibitor",
+      "15471_2": "Inhibitor",
+      "15471_3": "Inhibitor",
+      "15473_1": "ERAP1_KO",
+      "15473_2": "ERAP1_KO",
+      "15473_3": "ERAP1_KO",
+      "15475_1": "ERAP1_KO",
+      "15475_2": "ERAP1_KO",
+      "15475_3": "ERAP1_KO"
+    },
+    "condition_mapping_source": "mmc2.xlsx:Report 1 blanks removed",
+    "intervention": "WT versus chemical inhibitor versus KO",
+    "technical_replicates": 3
+  },
+  "PXD054494": {
+    "biological_replicates_per_condition": 2,
+    "condition_column_mapping": {
+      "15521_1": "WT",
+      "15521_2": "WT",
+      "15521_3": "WT",
+      "15522_1": "WT",
+      "15522_2": "WT",
+      "15522_3": "WT",
+      "15523_1": "Inhibitor",
+      "15523_2": "Inhibitor",
+      "15523_3": "Inhibitor",
+      "15524_1": "Inhibitor",
+      "15524_2": "Inhibitor",
+      "15524_3": "Inhibitor",
+      "15526_1": "ERAP1_KO",
+      "15526_2": "ERAP1_KO",
+      "15526_3": "ERAP1_KO",
+      "15527_1": "ERAP1_KO",
+      "15527_2": "ERAP1_KO",
+      "15527_3": "ERAP1_KO"
+    },
+    "condition_mapping_source": "mmc2.xlsx:Report 2 blanks removed",
+    "intervention": "WT versus chemical inhibitor versus KO",
+    "technical_replicates": 3
+  },
+  "PXD066752": {
+    "cell_type": "A375 melanoma, not primary axSpA tissue",
+    "exposure": "IFN-gamma 20 ng/mL for 24h",
+    "hla_b27": false,
+    "intervention": "ERAP1 allotypes 2 versus 10; not KO versus drug",
+    "review_state": "pending_review",
+    "sample_key_locator": "Sample IDs!A2:D13",
+    "sample_key_sha256": "6382b6f9218e39c7c2f53bdeea384a8215978c911d9bcbe2896a0387e7a08a87",
+    "samples": [
+      {
+        "biological_replicate": 1,
+        "condition": "Allotype 2",
+        "sample": "20991_1.raw",
+        "technical_replicate": 1
+      },
+      {
+        "biological_replicate": 1,
+        "condition": "Allotype 2",
+        "sample": "20991_2.raw",
+        "technical_replicate": 2
+      },
+      {
+        "biological_replicate": 1,
+        "condition": "Allotype 10",
+        "sample": "20992_1.raw",
+        "technical_replicate": 1
+      },
+      {
+        "biological_replicate": 1,
+        "condition": "Allotype 10",
+        "sample": "20992_2.raw",
+        "technical_replicate": 2
+      },
+      {
+        "biological_replicate": 2,
+        "condition": "Allotype 2",
+        "sample": "20993_1.raw",
+        "technical_replicate": 1
+      },
+      {
+        "biological_replicate": 2,
+        "condition": "Allotype 2",
+        "sample": "20993_2.raw",
+        "technical_replicate": 2
+      },
+      {
+        "biological_replicate": 2,
+        "condition": "Allotype 10",
+        "sample": "20994_2.raw",
+        "technical_replicate": 1
+      },
+      {
+        "biological_replicate": 2,
+        "condition": "Allotype 10",
+        "sample": "20994_3.raw",
+        "technical_replicate": 2
+      },
+      {
+        "biological_replicate": 3,
+        "condition": "Allotype 2",
+        "sample": "20995_1.raw",
+        "technical_replicate": 1
+      },
+      {
+        "biological_replicate": 3,
+        "condition": "Allotype 2",
+        "sample": "20995_2.raw",
+        "technical_replicate": 2
+      },
+      {
+        "biological_replicate": 3,
+        "condition": "Allotype 10",
+        "sample": "20996_1.raw",
+        "technical_replicate": 1
+      },
+      {
+        "biological_replicate": 3,
+        "condition": "Allotype 10",
+        "sample": "20996_2.raw",
+        "technical_replicate": 2
+      }
+    ]
+  }
+}

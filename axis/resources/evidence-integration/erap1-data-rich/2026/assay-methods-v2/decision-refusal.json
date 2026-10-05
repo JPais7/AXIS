@@ -1,0 +1,21 @@
+{
+  "after": null,
+  "before": {
+    "critical_uncertainty_id": "uncertainty:target_engagement",
+    "evidence_digest": "cebbae3880aeec9084784f9f8df4a89abfe71a6058e3c924ce78651beaa44541",
+    "id": "decision-state:1:cebbae3880aeec90",
+    "recommended_experiment_id": "decision:exp:chemical-genetic-engagement",
+    "review_mode": "exploratory",
+    "rules_version": "axis-decision-3"
+  },
+  "candidate_created": false,
+  "corrector_hypothesis": "historical PLAUSIBLE BUT INSUFFICIENT",
+  "critical_uncertainty_changed": null,
+  "historical_Maben_engagement": "UNRESOLVED; no new occupancy evidence",
+  "learning": "MODEL NOT BUILT; new eligibility not run before normalization",
+  "next_experiment_changed": null,
+  "question_advancement": "no new integrated assessment",
+  "reason": "BRADSHAW potency-method chain missing",
+  "stage": "A2",
+  "therapeutic_strategy_changed": null
+}

@@ -26,6 +26,58 @@ class ParsedPDB:
     components: tuple[dict[str, Any], ...]
 
 
+def reference_segments(
+    row: dict[str, Any], differences: list[dict[str, Any]]
+) -> list[tuple[int, int, int, int]]:
+    """Expand only explicitly deposited indels; never align or copy another PDB."""
+    sb, se, cb, ce = (
+        int(row[k])
+        for k in ("seq_align_beg", "seq_align_end", "db_align_beg", "db_align_end")
+    )
+    if se - sb == ce - cb:
+        return [(sb, se, cb, ce)]
+    relevant = [d for d in differences if d.get("align_id") == row["align_id"]]
+    deleted = {
+        int(d["pdbx_seq_db_seq_num"])
+        for d in relevant
+        if d.get("seq_num") is None
+        and d.get("pdbx_seq_db_seq_num") is not None
+        and d.get("details") == "deletion"
+        and cb <= int(d["pdbx_seq_db_seq_num"]) <= ce
+    }
+    inserted = {
+        int(d["seq_num"])
+        for d in relevant
+        if d.get("seq_num") is not None
+        and d.get("pdbx_seq_db_seq_num") is None
+        and sb <= int(d["seq_num"]) <= se
+    }
+    construct = [s for s in range(sb, se + 1) if s not in inserted]
+    canonical = [c for c in range(cb, ce + 1) if c not in deleted]
+    if not construct or len(construct) != len(canonical):
+        raise ValueError("source indels do not explain unequal mapping span")
+    mapping = dict(zip(construct, canonical, strict=True))
+    for d in relevant:
+        s, c = d.get("seq_num"), d.get("pdbx_seq_db_seq_num")
+        if (
+            s is not None
+            and c is not None
+            and sb <= int(s) <= se
+            and mapping.get(int(s)) != int(c)
+        ):
+            raise ValueError("deposited difference contradicts mapping anchors")
+    segments = []
+    first_s, first_c = construct[0], canonical[0]
+    last_s, last_c = first_s, first_c
+    for s, c in zip(construct[1:], canonical[1:], strict=True):
+        if s != last_s + 1 or c != last_c + 1:
+            segments.append((first_s, last_s, first_c, last_c))
+            first_s, first_c = s, c
+        last_s, last_c = s, c
+    segments.append((first_s, last_s, first_c, last_c))
+    return segments
+
+
 def parse_mmcif(raw: bytes, identifier: str) -> ParsedPDB:
     validate_pdb_id(identifier)
     try:
@@ -90,7 +142,18 @@ def parse_mmcif(raw: bytes, identifier: str) -> ParsedPDB:
             ref = refs[ref_rows[0]["ref_id"]]
             if ref.get("entity_id") != entity:
                 raise ValueError("cross-reference entity does not match polymer")
-            if any(refs[r["ref_id"]] != ref for r in ref_rows):
+            # Depositors may split one accession into several reference fragments.
+            # Fragment sequences/IDs differ; biological identity must not differ.
+            identity_fields = (
+                "entity_id",
+                "db_name",
+                "pdbx_db_accession",
+                "pdbx_db_isoform",
+            )
+            if any(
+                any(refs[r["ref_id"]].get(k) != ref.get(k) for k in identity_fields)
+                for r in ref_rows
+            ):
                 raise ValueError(
                     "multiple protein references require explicit resolution"
                 )
@@ -129,7 +192,7 @@ def parse_mmcif(raw: bytes, identifier: str) -> ParsedPDB:
             chain_diffs = {
                 int(r["seq_num"]): r["details"]
                 for r in differences
-                if r["pdbx_pdb_strand_id"] == auth
+                if r["pdbx_pdb_strand_id"] == auth and r.get("seq_num") is not None
             }
             chains.append(
                 {
@@ -145,13 +208,9 @@ def parse_mmcif(raw: bytes, identifier: str) -> ParsedPDB:
                     "taxon": int(source["pdbx_gene_src_ncbi_taxonomy_id"]),
                     "expression_system": source.get("pdbx_host_org_scientific_name"),
                     "segments": [
-                        (
-                            int(r["seq_align_beg"]),
-                            int(r["seq_align_end"]),
-                            int(r["db_align_beg"]),
-                            int(r["db_align_end"]),
-                        )
+                        segment
                         for r in ref_rows
+                        for segment in reference_segments(r, differences)
                     ],
                     "numbering": numbering,
                     "coordinates": positions,

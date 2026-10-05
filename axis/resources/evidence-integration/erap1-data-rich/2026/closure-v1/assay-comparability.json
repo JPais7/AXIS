@@ -1,0 +1,546 @@
+{
+  "assays": [
+    {
+      "admission": "SOURCE_REPORTED_SAR_ONLY",
+      "artifact": "PMC11647717.xml",
+      "context": "biochemical",
+      "fields": {
+        "construct_allotype": {
+          "state": "PARTIALLY VERIFIED",
+          "value": "Hap2 explicitly stated; exact assay preparation sequence/concentrations not independently resolved here"
+        },
+        "duration": {
+          "state": "PARTIALLY VERIFIED",
+          "value": null
+        },
+        "endpoint": {
+          "state": "VERIFIED",
+          "value": "ERAP1 pIC50"
+        },
+        "engagement_method": {
+          "state": "NOT APPLICABLE",
+          "value": "Isolated enzyme activity, not cellular occupancy"
+        },
+        "exposure": {
+          "state": "PARTIALLY VERIFIED",
+          "value": "Concentration-response endpoint; exact enzyme/substrate concentrations unresolved"
+        },
+        "protocol": {
+          "state": "PARTIALLY VERIFIED",
+          "value": "Mass-spectrometry detection of YTAFTIPSI cleavage to TAFTIPSI; source cites earlier protocol"
+        },
+        "substrate": {
+          "state": "VERIFIED",
+          "value": "YTAFTIPSI"
+        }
+      },
+      "id": "hry-2024-enzyme",
+      "locator": "Results: enzymatic assay paragraph; Hap2 discussion; SI S35 Table S1",
+      "pooling": "REFUSED with cellular data, counterscreens and 2026 publications",
+      "source": "10.1021/acsmedchemlett.4c00401"
+    },
+    {
+      "admission": "INTEGRATE_CONTEXT_SPECIFIC_PRESENTATION",
+      "artifact": "si/ml4c00401_si_001.pdf",
+      "context": "cellular antigen presentation",
+      "fields": {
+        "construct_allotype": {
+          "state": "PARTIALLY VERIFIED",
+          "value": "Endogenous HeLa ERAP1; allotype not reported in inspected methods"
+        },
+        "duration": {
+          "state": "VERIFIED",
+          "value": "40 h"
+        },
+        "endpoint": {
+          "state": "VERIFIED",
+          "value": "Antigen-presentation pIC50"
+        },
+        "engagement_method": {
+          "state": "NOT APPLICABLE",
+          "value": "Presentation assay does not directly measure occupancy"
+        },
+        "exposure": {
+          "state": "VERIFIED",
+          "value": "Concentration-response; DMSO 0.5%; control ERAP1 inhibitor 50 uM FAC"
+        },
+        "protocol": {
+          "state": "VERIFIED",
+          "value": "HeLa BacMam precursor and mouse H-2Kb/beta2m, 25.D1.16-APC flow cytometry, four-parameter concentration-response fit"
+        },
+        "substrate": {
+          "state": "VERIFIED",
+          "value": "LEQLESIINFEKL precursor; SIINFEKL presentation"
+        }
+      },
+      "id": "hry-2024-cell",
+      "locator": "S34 Cellular Antigen Presentation Assay; S36 Table S2",
+      "pooling": "REFUSED with biochemical endpoints and other publications",
+      "source": "10.1021/acsmedchemlett.4c00401"
+    },
+    {
+      "admission": "REFUSED_ASSAY_NORMALIZATION_AND_LEARNING",
+      "artifact": "si/jm5c03071_si_001.pdf",
+      "context": "biochemical",
+      "fields": {
+        "construct_allotype": {
+          "state": "INACCESSIBLE",
+          "value": null
+        },
+        "duration": {
+          "state": "INACCESSIBLE",
+          "value": null
+        },
+        "endpoint": {
+          "state": "VERIFIED",
+          "value": "ERAP1 pIC50, source aggregate mean and N/SD where listed"
+        },
+        "engagement_method": {
+          "state": "NOT APPLICABLE",
+          "value": "Biochemical endpoint does not establish cellular occupancy"
+        },
+        "exposure": {
+          "state": "INACCESSIBLE",
+          "value": null
+        },
+        "protocol": {
+          "state": "INACCESSIBLE",
+          "value": null
+        },
+        "substrate": {
+          "state": "INACCESSIBLE",
+          "value": null
+        }
+      },
+      "id": "bradshaw-2026-enzyme",
+      "locator": "Entire SI S1-S75 inspected; S60 Table S2; associated CSV source rows",
+      "pooling": "REFUSED; do not borrow Hryczanek protocol from a reference list",
+      "source": "10.1021/acs.jmedchem.5c03071"
+    },
+    {
+      "admission": "REFUSED_ASSAY_NORMALIZATION_AND_LEARNING",
+      "artifact": "si/jm5c03071_si_001.pdf",
+      "context": "cellular",
+      "fields": {
+        "construct_allotype": {
+          "state": "INACCESSIBLE",
+          "value": null
+        },
+        "duration": {
+          "state": "INACCESSIBLE",
+          "value": null
+        },
+        "endpoint": {
+          "state": "VERIFIED",
+          "value": "HeLa antigen presentation pIC50"
+        },
+        "engagement_method": {
+          "state": "INACCESSIBLE",
+          "value": "Presentation endpoint is not occupancy; separate direct-engagement experiment cannot be assessed from accessible SI"
+        },
+        "exposure": {
+          "state": "INACCESSIBLE",
+          "value": null
+        },
+        "protocol": {
+          "state": "INACCESSIBLE",
+          "value": null
+        },
+        "substrate": {
+          "state": "INACCESSIBLE",
+          "value": null
+        }
+      },
+      "id": "bradshaw-2026-cell",
+      "locator": "S60 Table S2; CSV column HeLa antigen presentation pIC50",
+      "pooling": "REFUSED",
+      "source": "10.1021/acs.jmedchem.5c03071"
+    },
+    {
+      "admission": "REFUSED_ASSAY_NORMALIZATION_AND_LEARNING",
+      "artifact": "si/jm6c00029_si_001.pdf",
+      "context": "biochemical",
+      "fields": {
+        "construct_allotype": {
+          "state": "INACCESSIBLE",
+          "value": null
+        },
+        "duration": {
+          "state": "INACCESSIBLE",
+          "value": null
+        },
+        "endpoint": {
+          "state": "VERIFIED",
+          "value": "ERAP1 pIC50"
+        },
+        "engagement_method": {
+          "state": "NOT APPLICABLE",
+          "value": "Biochemical endpoint does not establish cellular occupancy"
+        },
+        "exposure": {
+          "state": "INACCESSIBLE",
+          "value": null
+        },
+        "protocol": {
+          "state": "INACCESSIBLE",
+          "value": null
+        },
+        "substrate": {
+          "state": "INACCESSIBLE",
+          "value": null
+        }
+      },
+      "id": "tinworth-2026-enzyme",
+      "locator": "Entire SI S1-S38 inspected; S5 Supplementary Table 1; associated CSV",
+      "pooling": "REFUSED",
+      "source": "10.1021/acs.jmedchem.6c00029"
+    },
+    {
+      "admission": "REFUSED_ASSAY_NORMALIZATION_AND_LEARNING",
+      "artifact": "si/jm6c00029_si_001.pdf",
+      "context": "cellular",
+      "fields": {
+        "construct_allotype": {
+          "state": "INACCESSIBLE",
+          "value": null
+        },
+        "duration": {
+          "state": "INACCESSIBLE",
+          "value": null
+        },
+        "endpoint": {
+          "state": "VERIFIED",
+          "value": "HeLa antigen presentation pIC50"
+        },
+        "engagement_method": {
+          "state": "INACCESSIBLE",
+          "value": "No direct occupancy conclusion from presentation or X-ray structures"
+        },
+        "exposure": {
+          "state": "INACCESSIBLE",
+          "value": null
+        },
+        "protocol": {
+          "state": "PARTIALLY VERIFIED",
+          "value": "Two source control schemes, not interchangeable; full method inaccessible"
+        },
+        "substrate": {
+          "state": "PARTIALLY VERIFIED",
+          "value": "KK-SIINFEKL is a control label, not proof of the exact tested precursor or full protocol"
+        }
+      },
+      "id": "tinworth-2026-cell",
+      "locator": "S5 Supplementary Table 1; separate KK-SIINFEKL and compound-6 normalization columns",
+      "pooling": "REFUSED across control schemes and programmes",
+      "source": "10.1021/acs.jmedchem.6c00029"
+    },
+    {
+      "admission": "CONTEXTUALIZE_DMPK_ONLY",
+      "artifact": "si/jm6c00029_si_001.pdf",
+      "context": "in vitro DMPK, not human participant PK",
+      "fields": {
+        "construct_allotype": {
+          "state": "NOT APPLICABLE",
+          "value": null
+        },
+        "duration": {
+          "state": "VERIFIED",
+          "value": "Sampling 0-240 min"
+        },
+        "endpoint": {
+          "state": "VERIFIED",
+          "value": "Hepatocyte intrinsic clearance, scaled mL/min/kg; unbound estimate separately reported"
+        },
+        "engagement_method": {
+          "state": "NOT APPLICABLE",
+          "value": null
+        },
+        "exposure": {
+          "state": "VERIFIED",
+          "value": "0.5 uM compound, 0.5 million cells/mL"
+        },
+        "protocol": {
+          "state": "VERIFIED",
+          "value": "LC-MS/MS depletion in human hepatocytes, Williams Medium E, 37 C, 5% CO2, 200 rpm"
+        },
+        "substrate": {
+          "state": "NOT APPLICABLE",
+          "value": null
+        }
+      },
+      "id": "tinworth-2026-hepatocytes",
+      "locator": "S5 Supplementary Table 2",
+      "pooling": "No potency or human clinical inference",
+      "source": "10.1021/acs.jmedchem.6c00029"
+    },
+    {
+      "admission": "CONTEXTUALIZE_FIGURE_DESIGN_ONLY",
+      "artifact": "si/jm6c00029_si_001.pdf",
+      "context": "mouse collagen-induced arthritis; not axSpA",
+      "fields": {
+        "construct_allotype": {
+          "state": "INACCESSIBLE",
+          "value": null
+        },
+        "duration": {
+          "state": "PARTIALLY VERIFIED",
+          "value": "Termination day 36; treatment-start definition requires main methods"
+        },
+        "endpoint": {
+          "state": "VERIFIED",
+          "value": "Source pathology/bodyweight figures; not independently digitized or statistically reanalysed"
+        },
+        "engagement_method": {
+          "state": "INACCESSIBLE",
+          "value": null
+        },
+        "exposure": {
+          "state": "PARTIALLY VERIFIED",
+          "value": "Compound 21 GSK235, 30/90/270 mg/kg BID oral; measured exposure inaccessible"
+        },
+        "protocol": {
+          "state": "PARTIALLY VERIFIED",
+          "value": "Body weight/knee pathology, day 36; paw clinical scores D18-D36; randomization, group sizes and full design inaccessible"
+        },
+        "substrate": {
+          "state": "NOT APPLICABLE",
+          "value": null
+        }
+      },
+      "id": "tinworth-2026-cia",
+      "locator": "S2 Supplementary Figures 1/2; S7 Supplementary Table 4",
+      "pooling": "REFUSED as axSpA efficacy, target dependency or cellular engagement",
+      "source": "10.1021/acs.jmedchem.6c00029"
+    }
+  ],
+  "cross_programme_pooling": "REFUSED",
+  "review_state": "pending_review",
+  "selectivity": {
+    "ERAP2": {
+      "axis_observation": {
+        "comparability_status": "Not directly comparable",
+        "lower_inclusive": null,
+        "ratio": null,
+        "ratio_lower_bound": null,
+        "ratio_upper_bound": null,
+        "rationale": "tested chemical form not explicitly matched; unknown or different assay_format; unknown or different substrate; unknown or different detection_method; constructs not exactly resolved; missing or different conditions",
+        "transformation": {},
+        "upper_inclusive": null
+      },
+      "inputs": {
+        "counter_assay": {
+          "assay_format": null,
+          "assay_type": "biochemical_activity",
+          "biological_system": "isolated enzyme",
+          "cell_line": null,
+          "conditions": [],
+          "construct_mapping_status": "unknown",
+          "created_at": "",
+          "description": "",
+          "detection_method": null,
+          "id": "closure:hry:ERAP2",
+          "locator": "Figure 1 / selectivity paragraph",
+          "name": "Arg-AMC",
+          "protein_construct_id": null,
+          "protein_identity_id": null,
+          "reported_accession": null,
+          "reported_construct": null,
+          "source_assay_identifier": "ERAP2",
+          "source_snapshot_id": "closure:hry-2024",
+          "substrate": "Arg-AMC",
+          "target_gene": "ERAP2",
+          "target_type": "unknown",
+          "taxon_id": 9606
+        },
+        "counter_measurement": {
+          "assay_id": "closure:hry:ERAP2",
+          "chemical_form_id": null,
+          "compound_id": "10.1021/acsmedchemlett.4c00401:compound:7",
+          "created_at": "",
+          "endpoint": "IC50",
+          "epistemic_type": "source_reported_experiment",
+          "id": "closure:hry:7:ERAP2",
+          "limitations": "",
+          "locator": "SI Table S1 row 7 / main selectivity paragraph",
+          "normalization_method": {},
+          "normalized_unit": null,
+          "normalized_value": null,
+          "original_unit": "nM",
+          "original_value": "100000",
+          "provider_pchembl": null,
+          "provider_snapshot_id": null,
+          "relation_operator": ">",
+          "replicate_count": 1,
+          "source_record_id": "7:ERAP2",
+          "source_snapshot_id": "closure:hry-2024",
+          "uncertainty": null,
+          "value": 100000
+        },
+        "primary_assay": {
+          "assay_format": null,
+          "assay_type": "biochemical_activity",
+          "biological_system": "isolated enzyme",
+          "cell_line": null,
+          "conditions": [],
+          "construct_mapping_status": "unknown",
+          "created_at": "",
+          "description": "",
+          "detection_method": null,
+          "id": "closure:hry:ERAP1",
+          "locator": "Figure 1 / selectivity paragraph",
+          "name": "YTAFTIPSI cleavage",
+          "protein_construct_id": null,
+          "protein_identity_id": null,
+          "reported_accession": null,
+          "reported_construct": null,
+          "source_assay_identifier": "ERAP1",
+          "source_snapshot_id": "closure:hry-2024",
+          "substrate": "YTAFTIPSI",
+          "target_gene": "ERAP1",
+          "target_type": "unknown",
+          "taxon_id": 9606
+        },
+        "primary_measurement": {
+          "assay_id": "closure:hry:ERAP1",
+          "chemical_form_id": null,
+          "compound_id": "10.1021/acsmedchemlett.4c00401:compound:7",
+          "created_at": "",
+          "endpoint": "IC50",
+          "epistemic_type": "source_reported_experiment",
+          "id": "closure:hry:7:ERAP1",
+          "limitations": "",
+          "locator": "SI Table S1 row 7 / main selectivity paragraph",
+          "normalization_method": {},
+          "normalized_unit": null,
+          "normalized_value": null,
+          "original_unit": "nM",
+          "original_value": "19.952623149688787",
+          "provider_pchembl": null,
+          "provider_snapshot_id": null,
+          "relation_operator": "=",
+          "replicate_count": null,
+          "source_record_id": "7:ERAP1",
+          "source_snapshot_id": "closure:hry-2024",
+          "uncertainty": null,
+          "value": 19.952623149688787
+        }
+      },
+      "normalization": "IC50[nM]=10**(9-pIC50); reversed inequality",
+      "source_assertion_scope": "Qualitative counterscreen result; authors' ratio not independently adopted",
+      "source_endpoint": "ERAP2/IRAP pIC50 <4, n=1; ERAP1 pIC50 7.7"
+    },
+    "LNPEP": {
+      "axis_observation": {
+        "comparability_status": "Not directly comparable",
+        "lower_inclusive": null,
+        "ratio": null,
+        "ratio_lower_bound": null,
+        "ratio_upper_bound": null,
+        "rationale": "tested chemical form not explicitly matched; unknown or different assay_format; unknown or different substrate; unknown or different detection_method; constructs not exactly resolved; missing or different conditions",
+        "transformation": {},
+        "upper_inclusive": null
+      },
+      "inputs": {
+        "counter_assay": {
+          "assay_format": null,
+          "assay_type": "biochemical_activity",
+          "biological_system": "isolated enzyme",
+          "cell_line": null,
+          "conditions": [],
+          "construct_mapping_status": "unknown",
+          "created_at": "",
+          "description": "",
+          "detection_method": null,
+          "id": "closure:hry:LNPEP",
+          "locator": "Figure 1 / selectivity paragraph",
+          "name": "Leu-AMC",
+          "protein_construct_id": null,
+          "protein_identity_id": null,
+          "reported_accession": null,
+          "reported_construct": null,
+          "source_assay_identifier": "LNPEP",
+          "source_snapshot_id": "closure:hry-2024",
+          "substrate": "Leu-AMC",
+          "target_gene": "LNPEP",
+          "target_type": "unknown",
+          "taxon_id": 9606
+        },
+        "counter_measurement": {
+          "assay_id": "closure:hry:LNPEP",
+          "chemical_form_id": null,
+          "compound_id": "10.1021/acsmedchemlett.4c00401:compound:7",
+          "created_at": "",
+          "endpoint": "IC50",
+          "epistemic_type": "source_reported_experiment",
+          "id": "closure:hry:7:LNPEP",
+          "limitations": "",
+          "locator": "SI Table S1 row 7 / main selectivity paragraph",
+          "normalization_method": {},
+          "normalized_unit": null,
+          "normalized_value": null,
+          "original_unit": "nM",
+          "original_value": "100000",
+          "provider_pchembl": null,
+          "provider_snapshot_id": null,
+          "relation_operator": ">",
+          "replicate_count": 1,
+          "source_record_id": "7:LNPEP",
+          "source_snapshot_id": "closure:hry-2024",
+          "uncertainty": null,
+          "value": 100000
+        },
+        "primary_assay": {
+          "assay_format": null,
+          "assay_type": "biochemical_activity",
+          "biological_system": "isolated enzyme",
+          "cell_line": null,
+          "conditions": [],
+          "construct_mapping_status": "unknown",
+          "created_at": "",
+          "description": "",
+          "detection_method": null,
+          "id": "closure:hry:ERAP1",
+          "locator": "Figure 1 / selectivity paragraph",
+          "name": "YTAFTIPSI cleavage",
+          "protein_construct_id": null,
+          "protein_identity_id": null,
+          "reported_accession": null,
+          "reported_construct": null,
+          "source_assay_identifier": "ERAP1",
+          "source_snapshot_id": "closure:hry-2024",
+          "substrate": "YTAFTIPSI",
+          "target_gene": "ERAP1",
+          "target_type": "unknown",
+          "taxon_id": 9606
+        },
+        "primary_measurement": {
+          "assay_id": "closure:hry:ERAP1",
+          "chemical_form_id": null,
+          "compound_id": "10.1021/acsmedchemlett.4c00401:compound:7",
+          "created_at": "",
+          "endpoint": "IC50",
+          "epistemic_type": "source_reported_experiment",
+          "id": "closure:hry:7:ERAP1",
+          "limitations": "",
+          "locator": "SI Table S1 row 7 / main selectivity paragraph",
+          "normalization_method": {},
+          "normalized_unit": null,
+          "normalized_value": null,
+          "original_unit": "nM",
+          "original_value": "19.952623149688787",
+          "provider_pchembl": null,
+          "provider_snapshot_id": null,
+          "relation_operator": "=",
+          "replicate_count": null,
+          "source_record_id": "7:ERAP1",
+          "source_snapshot_id": "closure:hry-2024",
+          "uncertainty": null,
+          "value": 19.952623149688787
+        }
+      },
+      "normalization": "IC50[nM]=10**(9-pIC50); reversed inequality",
+      "source_assertion_scope": "Qualitative counterscreen result; authors' ratio not independently adopted",
+      "source_endpoint": "ERAP2/IRAP pIC50 <4, n=1; ERAP1 pIC50 7.7"
+    }
+  }
+}

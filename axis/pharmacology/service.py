@@ -8,6 +8,7 @@ from importlib import resources
 from pathlib import Path
 from typing import Any
 
+from axis.case_config import reference_case
 from axis.domain.pharmacology import (
     Assay,
     BioactivityMeasurement,
@@ -46,6 +47,7 @@ class PharmacologyService:
         ):
             raise ValueError("pharmacology manifest checksum mismatch")
         manifest = json.loads(raw_manifest)
+        case = reference_case("erap1-axspa")
         if manifest["importer_version"] != VERSION:
             raise ValueError("unsupported pharmacology importer")
         from rdkit import rdBase
@@ -131,10 +133,10 @@ class PharmacologyService:
                     m
                     for m in measurements
                     if m.compound_id == compound_id
-                    and assays[m.assay_id].target_gene == "ERAP1"
+                    and assays[m.assay_id].target_gene == case["primary_target"]
                     and assays[m.assay_id].assay_type == "biochemical_activity"
                 ]
-                for target in ("ERAP2", "LNPEP"):
+                for target in case["comparison_targets"]:
                     off = [
                         m
                         for m in measurements
@@ -147,7 +149,7 @@ class PharmacologyService:
                             assessment = SelectivityAssessment(
                                 id=f"selectivity:{x.id}:{y.id if y else target}",
                                 compound_id=compound_id,
-                                primary_target_id="ERAP1",
+                                primary_target_id=case["primary_target"],
                                 comparison_target_id=target,
                                 primary_measurement_id=x.id,
                                 comparison_measurement_id=y.id if y else None,

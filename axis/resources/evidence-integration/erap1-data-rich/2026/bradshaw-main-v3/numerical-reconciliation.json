@@ -1,0 +1,4482 @@
+[
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:1",
+    "csv": {
+      "assay": {
+        "assay_type": "biochemical_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "isolated enzyme",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:1",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 7.943282347242821,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:1:ERAP1 pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:2:column:ERAP1 pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 8.1,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "enzyme",
+    "fit_admission": false,
+    "limitations": [
+      "compound-specific N/SD not reported in SI"
+    ],
+    "main_values": [],
+    "measurement_status": "CONDITIONAL",
+    "original_smiles": "OC(=O)C1(CCCCC1)NC(=O)CN1C(=O)C(F)(F)Oc2ccc(Br)cc12",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:1:ERAP1 pIC50",
+    "review_state": "pending_review",
+    "si_statistics": null
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:1",
+    "csv": {
+      "assay": {
+        "assay_type": "cellular_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "HeLa antigen presentation",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:1",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 251.18864315095823,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:1:HeLa cellular antigen presentation pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:2:column:HeLa cellular antigen presentation pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 6.6,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "cell",
+    "fit_admission": false,
+    "limitations": [
+      "compound-specific N/SD not reported in SI"
+    ],
+    "main_values": [],
+    "measurement_status": "CONDITIONAL",
+    "original_smiles": "OC(=O)C1(CCCCC1)NC(=O)CN1C(=O)C(F)(F)Oc2ccc(Br)cc12",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:1:HeLa cellular antigen presentation pIC50",
+    "review_state": "pending_review",
+    "si_statistics": null
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:2",
+    "csv": {
+      "assay": {
+        "assay_type": "biochemical_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "isolated enzyme",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:2",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 25.11886431509582,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:2:ERAP1 pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:3:column:ERAP1 pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 7.6,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "enzyme",
+    "fit_admission": false,
+    "limitations": [
+      "compound-specific N/SD not reported in SI"
+    ],
+    "main_values": [],
+    "measurement_status": "CONDITIONAL",
+    "original_smiles": "OC(=O)C1(CCCCC1)NC(=O)Cn1c2cc(Cl)ccc2sc1=O",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:2:ERAP1 pIC50",
+    "review_state": "pending_review",
+    "si_statistics": null
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:2",
+    "csv": {
+      "assay": {
+        "assay_type": "cellular_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "HeLa antigen presentation",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:2",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 316.22776601683796,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:2:HeLa cellular antigen presentation pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:3:column:HeLa cellular antigen presentation pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 6.5,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "cell",
+    "fit_admission": false,
+    "limitations": [
+      "compound-specific N/SD not reported in SI"
+    ],
+    "main_values": [],
+    "measurement_status": "CONDITIONAL",
+    "original_smiles": "OC(=O)C1(CCCCC1)NC(=O)Cn1c2cc(Cl)ccc2sc1=O",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:2:HeLa cellular antigen presentation pIC50",
+    "review_state": "pending_review",
+    "si_statistics": null
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:3",
+    "csv": {
+      "assay": {
+        "assay_type": "biochemical_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "isolated enzyme",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:3",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 7.943282347242821,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:3:ERAP1 pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:4:column:ERAP1 pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 8.1,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "enzyme",
+    "fit_admission": true,
+    "limitations": [],
+    "main_values": [],
+    "measurement_status": "CONSISTENT",
+    "original_smiles": "OC(=O)C1(CCCCC1)NC(=O)Cn1c2cc(ccc2oc1=O)-c1ccccc1",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:3:ERAP1 pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:3",
+      "mean": 8.1,
+      "n_in_mean": 3,
+      "operator": "=",
+      "sd_pIC50": 0.11
+    }
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:3",
+    "csv": {
+      "assay": {
+        "assay_type": "cellular_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "HeLa antigen presentation",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:3",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 199.52623149688787,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:3:HeLa cellular antigen presentation pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:4:column:HeLa cellular antigen presentation pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 6.7,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "cell",
+    "fit_admission": true,
+    "limitations": [],
+    "main_values": [],
+    "measurement_status": "CONSISTENT",
+    "original_smiles": "OC(=O)C1(CCCCC1)NC(=O)Cn1c2cc(ccc2oc1=O)-c1ccccc1",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:3:HeLa cellular antigen presentation pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:3",
+      "mean": 6.7,
+      "n_in_mean": 2,
+      "operator": "=",
+      "sd_pIC50": 0.23
+    }
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:4",
+    "csv": {
+      "assay": {
+        "assay_type": "biochemical_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "isolated enzyme",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:4",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 12.589254117941662,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:4:ERAP1 pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:5:column:ERAP1 pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 7.9,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "enzyme",
+    "fit_admission": false,
+    "limitations": [
+      "compound-specific N/SD not reported in SI"
+    ],
+    "main_values": [],
+    "measurement_status": "CONDITIONAL",
+    "original_smiles": "OC(=O)C1(CCCCC1)NC(=O)CN1C(=O)COc2ccc(cc12)-c1ccccc1",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:4:ERAP1 pIC50",
+    "review_state": "pending_review",
+    "si_statistics": null
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:5",
+    "csv": {
+      "assay": {
+        "assay_type": "biochemical_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "isolated enzyme",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:5",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 50.11872336272725,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:5:ERAP1 pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:6:column:ERAP1 pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 7.3,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "enzyme",
+    "fit_admission": true,
+    "limitations": [],
+    "main_values": [],
+    "measurement_status": "CONSISTENT",
+    "original_smiles": "OC(=O)C1(CCCCC1)NC(=O)CN1C(=O)COc2ccc(Br)cc12",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:5:ERAP1 pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:5",
+      "mean": 7.3,
+      "n_in_mean": 4,
+      "operator": "=",
+      "sd_pIC50": 0.29
+    }
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:5",
+    "csv": {
+      "assay": {
+        "assay_type": "cellular_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "HeLa antigen presentation",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:5",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 1000.0,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:5:HeLa cellular antigen presentation pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:6:column:HeLa cellular antigen presentation pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 6.0,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "cell",
+    "fit_admission": true,
+    "limitations": [],
+    "main_values": [],
+    "measurement_status": "CONSISTENT",
+    "original_smiles": "OC(=O)C1(CCCCC1)NC(=O)CN1C(=O)COc2ccc(Br)cc12",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:5:HeLa cellular antigen presentation pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:5",
+      "mean": 6.0,
+      "n_in_mean": 2,
+      "operator": "=",
+      "sd_pIC50": 0.12
+    }
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:6",
+    "csv": {
+      "assay": {
+        "assay_type": "biochemical_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "isolated enzyme",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:6",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 19.952623149688787,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:6:ERAP1 pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:7:column:ERAP1 pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 7.7,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "enzyme",
+    "fit_admission": true,
+    "limitations": [],
+    "main_values": [],
+    "measurement_status": "CONSISTENT",
+    "original_smiles": "OC(=O)C1(CCSCC1)NC(=O)CN1C(=O)COc2ccc(cc12)C(F)(F)F",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:6:ERAP1 pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:6",
+      "mean": 7.7,
+      "n_in_mean": 3,
+      "operator": "=",
+      "sd_pIC50": 0.19
+    }
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:6",
+    "csv": {
+      "assay": {
+        "assay_type": "cellular_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "HeLa antigen presentation",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:6",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 501.18723362727246,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:6:HeLa cellular antigen presentation pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:7:column:HeLa cellular antigen presentation pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 6.3,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "cell",
+    "fit_admission": true,
+    "limitations": [],
+    "main_values": [],
+    "measurement_status": "CONSISTENT",
+    "original_smiles": "OC(=O)C1(CCSCC1)NC(=O)CN1C(=O)COc2ccc(cc12)C(F)(F)F",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:6:HeLa cellular antigen presentation pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:6",
+      "mean": 6.3,
+      "n_in_mean": 3,
+      "operator": "=",
+      "sd_pIC50": 0.27
+    }
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:7",
+    "csv": {
+      "assay": {
+        "assay_type": "biochemical_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "isolated enzyme",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:7",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 50.11872336272725,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:7:ERAP1 pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:8:column:ERAP1 pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 7.3,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "enzyme",
+    "fit_admission": true,
+    "limitations": [],
+    "main_values": [],
+    "measurement_status": "CONSISTENT",
+    "original_smiles": "CN(C(=O)CN1C(=O)COc2ccc(cc12)C(F)(F)F)C1(CCCCC1)C(O)=O",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:7:ERAP1 pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:7",
+      "mean": 7.3,
+      "n_in_mean": 5,
+      "operator": "=",
+      "sd_pIC50": 0.16
+    }
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:7",
+    "csv": {
+      "assay": {
+        "assay_type": "cellular_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "HeLa antigen presentation",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:7",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 158.48931924611142,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:7:HeLa cellular antigen presentation pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:8:column:HeLa cellular antigen presentation pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 6.8,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "cell",
+    "fit_admission": true,
+    "limitations": [],
+    "main_values": [],
+    "measurement_status": "CONSISTENT",
+    "original_smiles": "CN(C(=O)CN1C(=O)COc2ccc(cc12)C(F)(F)F)C1(CCCCC1)C(O)=O",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:7:HeLa cellular antigen presentation pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:7",
+      "mean": 6.8,
+      "n_in_mean": 3,
+      "operator": "=",
+      "sd_pIC50": 0.09
+    }
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:8",
+    "csv": {
+      "assay": {
+        "assay_type": "biochemical_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "isolated enzyme",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:8",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 3.1622776601683795,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:8:ERAP1 pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:9:column:ERAP1 pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 8.5,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "enzyme",
+    "fit_admission": true,
+    "limitations": [],
+    "main_values": [],
+    "measurement_status": "CONSISTENT",
+    "original_smiles": "OC(=O)C1(CCSCC1)NC(=O)Cn1c2cc(ccc2sc1=O)C1CCCC1",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:8:ERAP1 pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:8",
+      "mean": 8.5,
+      "n_in_mean": 5,
+      "operator": "=",
+      "sd_pIC50": 0.4
+    }
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:8",
+    "csv": {
+      "assay": {
+        "assay_type": "cellular_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "HeLa antigen presentation",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:8",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 39.81071705534969,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:8:HeLa cellular antigen presentation pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:9:column:HeLa cellular antigen presentation pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 7.4,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "cell",
+    "fit_admission": true,
+    "limitations": [],
+    "main_values": [],
+    "measurement_status": "CONSISTENT",
+    "original_smiles": "OC(=O)C1(CCSCC1)NC(=O)Cn1c2cc(ccc2sc1=O)C1CCCC1",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:8:HeLa cellular antigen presentation pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:8",
+      "mean": 7.4,
+      "n_in_mean": 3,
+      "operator": "=",
+      "sd_pIC50": 0.13
+    }
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:9",
+    "csv": {
+      "assay": {
+        "assay_type": "biochemical_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "isolated enzyme",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:9",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 2.5118864315095824,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:9:ERAP1 pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:10:column:ERAP1 pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 8.6,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "enzyme",
+    "fit_admission": true,
+    "limitations": [],
+    "main_values": [
+      {
+        "page": 6,
+        "value": 8.6
+      }
+    ],
+    "measurement_status": "CONSISTENT",
+    "original_smiles": "OC(=O)C1(CCSCC1)NC(=O)Cn1c2cc(OC3CCCC3)ccc2sc1=O",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:9:ERAP1 pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:9",
+      "mean": 8.6,
+      "n_in_mean": 5,
+      "operator": "=",
+      "sd_pIC50": 0.23
+    }
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:9",
+    "csv": {
+      "assay": {
+        "assay_type": "cellular_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "HeLa antigen presentation",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:9",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 39.81071705534969,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:9:HeLa cellular antigen presentation pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:10:column:HeLa cellular antigen presentation pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 7.4,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "cell",
+    "fit_admission": true,
+    "limitations": [],
+    "main_values": [
+      {
+        "page": 6,
+        "value": 7.4
+      }
+    ],
+    "measurement_status": "CONSISTENT",
+    "original_smiles": "OC(=O)C1(CCSCC1)NC(=O)Cn1c2cc(OC3CCCC3)ccc2sc1=O",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:9:HeLa cellular antigen presentation pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:9",
+      "mean": 7.4,
+      "n_in_mean": 3,
+      "operator": "=",
+      "sd_pIC50": 0.57
+    }
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:10",
+    "csv": {
+      "assay": {
+        "assay_type": "biochemical_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "isolated enzyme",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:10",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 7.943282347242821,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:10:ERAP1 pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:11:column:ERAP1 pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 8.1,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "enzyme",
+    "fit_admission": true,
+    "limitations": [],
+    "main_values": [
+      {
+        "page": 6,
+        "value": 8.1
+      }
+    ],
+    "measurement_status": "CONSISTENT",
+    "original_smiles": "OC(=O)C1(CCC(F)(F)CC1)NC(=O)Cn1c2cc(Br)ccc2sc1=O",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:10:ERAP1 pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:10",
+      "mean": 8.1,
+      "n_in_mean": 4,
+      "operator": "=",
+      "sd_pIC50": 0.17
+    }
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:10",
+    "csv": {
+      "assay": {
+        "assay_type": "cellular_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "HeLa antigen presentation",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:10",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 100.0,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:10:HeLa cellular antigen presentation pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:11:column:HeLa cellular antigen presentation pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 7.0,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "cell",
+    "fit_admission": true,
+    "limitations": [],
+    "main_values": [
+      {
+        "page": 6,
+        "value": 7
+      }
+    ],
+    "measurement_status": "CONSISTENT",
+    "original_smiles": "OC(=O)C1(CCC(F)(F)CC1)NC(=O)Cn1c2cc(Br)ccc2sc1=O",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:10:HeLa cellular antigen presentation pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:10",
+      "mean": 7.0,
+      "n_in_mean": 3,
+      "operator": "=",
+      "sd_pIC50": 0.5
+    }
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:11",
+    "csv": {
+      "assay": {
+        "assay_type": "biochemical_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "isolated enzyme",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:11",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 25.11886431509582,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:11:ERAP1 pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:12:column:ERAP1 pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 7.6,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "enzyme",
+    "fit_admission": true,
+    "limitations": [],
+    "main_values": [
+      {
+        "page": 6,
+        "value": 7.6
+      }
+    ],
+    "measurement_status": "CONSISTENT",
+    "original_smiles": "OC(=O)C1(CCC(F)(F)CC1)NC(=O)Cn1c2cc(Cl)ccc2sc1=O",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:11:ERAP1 pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:11",
+      "mean": 7.6,
+      "n_in_mean": 3,
+      "operator": "=",
+      "sd_pIC50": 0.08
+    }
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:11",
+    "csv": {
+      "assay": {
+        "assay_type": "cellular_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "HeLa antigen presentation",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:11",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 158.48931924611142,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:11:HeLa cellular antigen presentation pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:12:column:HeLa cellular antigen presentation pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 6.8,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "cell",
+    "fit_admission": true,
+    "limitations": [],
+    "main_values": [
+      {
+        "page": 6,
+        "value": 6.8
+      }
+    ],
+    "measurement_status": "CONSISTENT",
+    "original_smiles": "OC(=O)C1(CCC(F)(F)CC1)NC(=O)Cn1c2cc(Cl)ccc2sc1=O",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:11:HeLa cellular antigen presentation pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:11",
+      "mean": 6.8,
+      "n_in_mean": 4,
+      "operator": "=",
+      "sd_pIC50": 0.17
+    }
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:12",
+    "csv": {
+      "assay": {
+        "assay_type": "biochemical_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "isolated enzyme",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:12",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 12.589254117941662,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:12:ERAP1 pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:13:column:ERAP1 pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 7.9,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "enzyme",
+    "fit_admission": true,
+    "limitations": [],
+    "main_values": [
+      {
+        "page": 6,
+        "value": 7.9
+      }
+    ],
+    "measurement_status": "CONSISTENT",
+    "original_smiles": "OC(=O)C1(CCCCC1)NC(=O)Cn1c2cc(Br)ccc2sc1=O",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:12:ERAP1 pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:12",
+      "mean": 7.9,
+      "n_in_mean": 3,
+      "operator": "=",
+      "sd_pIC50": 0.06
+    }
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:12",
+    "csv": {
+      "assay": {
+        "assay_type": "cellular_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "HeLa antigen presentation",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:12",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 501.18723362727246,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:12:HeLa cellular antigen presentation pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:13:column:HeLa cellular antigen presentation pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 6.3,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "cell",
+    "fit_admission": true,
+    "limitations": [],
+    "main_values": [
+      {
+        "page": 6,
+        "value": 6.3
+      }
+    ],
+    "measurement_status": "CONSISTENT",
+    "original_smiles": "OC(=O)C1(CCCCC1)NC(=O)Cn1c2cc(Br)ccc2sc1=O",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:12:HeLa cellular antigen presentation pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:12",
+      "mean": 6.3,
+      "n_in_mean": 2,
+      "operator": "=",
+      "sd_pIC50": 0.03
+    }
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:13",
+    "csv": {
+      "assay": {
+        "assay_type": "biochemical_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "isolated enzyme",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:13",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 1.9952623149688828,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:13:ERAP1 pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:14:column:ERAP1 pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 8.7,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "enzyme",
+    "fit_admission": true,
+    "limitations": [],
+    "main_values": [
+      {
+        "page": 6,
+        "value": 8.7
+      }
+    ],
+    "measurement_status": "CONSISTENT",
+    "original_smiles": "OC(=O)C1(CCSCC1)NC(=O)Cn1c2cc(ccc2sc1=O)N1CCCC1",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:13:ERAP1 pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:13",
+      "mean": 8.7,
+      "n_in_mean": 2,
+      "operator": "=",
+      "sd_pIC50": 0.1
+    }
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:14",
+    "csv": {
+      "assay": {
+        "assay_type": "biochemical_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "isolated enzyme",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:14",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 63.0957344480193,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:14:ERAP1 pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:15:column:ERAP1 pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 7.2,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "enzyme",
+    "fit_admission": true,
+    "limitations": [],
+    "main_values": [
+      {
+        "page": 6,
+        "value": 7.2
+      }
+    ],
+    "measurement_status": "CONSISTENT",
+    "original_smiles": "OC(=O)C1(CCCCC1)NC(=O)Cn1c2cc(ccc2oc1=O)C1CCCOC1",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:14:ERAP1 pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:14",
+      "mean": 7.2,
+      "n_in_mean": 2,
+      "operator": "=",
+      "sd_pIC50": 0.16
+    }
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:14",
+    "csv": {
+      "assay": {
+        "assay_type": "cellular_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "HeLa antigen presentation",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:14",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 7943.282347242822,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:14:HeLa cellular antigen presentation pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:15:column:HeLa cellular antigen presentation pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 5.1,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "cell",
+    "fit_admission": true,
+    "limitations": [],
+    "main_values": [
+      {
+        "page": 6,
+        "value": 5.1
+      }
+    ],
+    "measurement_status": "CONSISTENT",
+    "original_smiles": "OC(=O)C1(CCCCC1)NC(=O)Cn1c2cc(ccc2oc1=O)C1CCCOC1",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:14:HeLa cellular antigen presentation pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:14",
+      "mean": 5.1,
+      "n_in_mean": 3,
+      "operator": "=",
+      "sd_pIC50": 0.2
+    }
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:15",
+    "csv": {
+      "assay": {
+        "assay_type": "biochemical_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "isolated enzyme",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:15",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 50.11872336272725,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:15:ERAP1 pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:16:column:ERAP1 pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 7.3,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "enzyme",
+    "fit_admission": true,
+    "limitations": [],
+    "main_values": [
+      {
+        "page": 6,
+        "value": 7.3
+      }
+    ],
+    "measurement_status": "CONSISTENT",
+    "original_smiles": "Cl.OC(=O)C1(CCSCC1)NCCn1c2cc(ccc2sc1=O)C(F)(F)F",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:15:ERAP1 pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:15",
+      "mean": 7.3,
+      "n_in_mean": 2,
+      "operator": "=",
+      "sd_pIC50": 0.06
+    }
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:15",
+    "csv": {
+      "assay": {
+        "assay_type": "cellular_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "HeLa antigen presentation",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:15",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 158.48931924611142,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:15:HeLa cellular antigen presentation pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:16:column:HeLa cellular antigen presentation pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 6.8,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "cell",
+    "fit_admission": true,
+    "limitations": [],
+    "main_values": [
+      {
+        "page": 6,
+        "value": 6.8
+      }
+    ],
+    "measurement_status": "CONSISTENT",
+    "original_smiles": "Cl.OC(=O)C1(CCSCC1)NCCn1c2cc(ccc2sc1=O)C(F)(F)F",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:15:HeLa cellular antigen presentation pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:15",
+      "mean": 6.8,
+      "n_in_mean": 2,
+      "operator": "=",
+      "sd_pIC50": 0.18
+    }
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:16",
+    "csv": {
+      "assay": {
+        "assay_type": "biochemical_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "isolated enzyme",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:16",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 630.957344480193,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:16:ERAP1 pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:17:column:ERAP1 pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 6.2,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "enzyme",
+    "fit_admission": true,
+    "limitations": [],
+    "main_values": [
+      {
+        "page": 6,
+        "value": 6.2
+      }
+    ],
+    "measurement_status": "CONSISTENT",
+    "original_smiles": "OC(=O)C1(CCSCC1)NC(=O)CN1C(=O)COc2c(F)cc(F)cc12",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:16:ERAP1 pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:16",
+      "mean": 6.2,
+      "n_in_mean": 2,
+      "operator": "=",
+      "sd_pIC50": 0.09
+    }
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:17",
+    "csv": {
+      "assay": {
+        "assay_type": "biochemical_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "isolated enzyme",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:17",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 10.0,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:17:ERAP1 pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:18:column:ERAP1 pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 8.0,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "enzyme",
+    "fit_admission": true,
+    "limitations": [],
+    "main_values": [],
+    "measurement_status": "CONSISTENT",
+    "original_smiles": "CN(C(=O)Cn1c2cc(ccc2sc1=O)C(F)(F)F)C1(CCCCC1)C(O)=O",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:17:ERAP1 pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:17",
+      "mean": 8.0,
+      "n_in_mean": 3,
+      "operator": "=",
+      "sd_pIC50": 0.1
+    }
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:17",
+    "csv": {
+      "assay": {
+        "assay_type": "cellular_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "HeLa antigen presentation",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:17",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 79.43282347242821,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:17:HeLa cellular antigen presentation pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:18:column:HeLa cellular antigen presentation pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 7.1,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "cell",
+    "fit_admission": true,
+    "limitations": [],
+    "main_values": [],
+    "measurement_status": "CONSISTENT",
+    "original_smiles": "CN(C(=O)Cn1c2cc(ccc2sc1=O)C(F)(F)F)C1(CCCCC1)C(O)=O",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:17:HeLa cellular antigen presentation pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:17",
+      "mean": 7.1,
+      "n_in_mean": 3,
+      "operator": "=",
+      "sd_pIC50": 0.41
+    }
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:18",
+    "csv": {
+      "assay": {
+        "assay_type": "biochemical_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "isolated enzyme",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:18",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 398.1071705534969,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:18:ERAP1 pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:19:column:ERAP1 pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 6.4,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "enzyme",
+    "fit_admission": true,
+    "limitations": [],
+    "main_values": [],
+    "measurement_status": "CONSISTENT",
+    "original_smiles": "OC(=O)C1(CCSCC1)NC(=O)Cn1c2cc(Br)ccc2oc1=O",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:18:ERAP1 pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:18",
+      "mean": 6.4,
+      "n_in_mean": 2,
+      "operator": "=",
+      "sd_pIC50": 0.2
+    }
+  },
+  {
+    "additional_test": {
+      "locator": "main PDF p9 Table2 footnote(a)",
+      "n": 1,
+      "operator": ">",
+      "pIC50": 9.29
+    },
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:21",
+    "csv": {
+      "assay": {
+        "assay_type": "biochemical_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "isolated enzyme",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:21",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 1.0,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:21:ERAP1 pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:20:column:ERAP1 pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 9.0,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "enzyme",
+    "fit_admission": false,
+    "limitations": [
+      "additional censored tests; mean is not complete replicate distribution"
+    ],
+    "main_values": [
+      {
+        "page": 9,
+        "value": 9
+      },
+      {
+        "page": 16,
+        "value": 9
+      }
+    ],
+    "measurement_status": "CONDITIONAL",
+    "original_smiles": "CN(C(=O)Cn1c2cc(ccc2sc1=O)-c1cccc(F)c1)C1(CCCCC1)C(O)=O",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:21:ERAP1 pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:21",
+      "mean": 9.0,
+      "n_in_mean": 5,
+      "operator": "=",
+      "sd_pIC50": 0.26
+    }
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:21",
+    "csv": {
+      "assay": {
+        "assay_type": "cellular_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "HeLa antigen presentation",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:21",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 31.622776601683793,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:21:HeLa cellular antigen presentation pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:20:column:HeLa cellular antigen presentation pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 7.5,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "cell",
+    "fit_admission": true,
+    "limitations": [],
+    "main_values": [
+      {
+        "page": 9,
+        "value": 7.5
+      },
+      {
+        "page": 16,
+        "value": 7.5
+      }
+    ],
+    "measurement_status": "CONSISTENT",
+    "original_smiles": "CN(C(=O)Cn1c2cc(ccc2sc1=O)-c1cccc(F)c1)C1(CCCCC1)C(O)=O",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:21:HeLa cellular antigen presentation pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:21",
+      "mean": 7.5,
+      "n_in_mean": 5,
+      "operator": "=",
+      "sd_pIC50": 0.45
+    }
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:22",
+    "csv": {
+      "assay": {
+        "assay_type": "biochemical_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "isolated enzyme",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:22",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 39.81071705534969,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:22:ERAP1 pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:21:column:ERAP1 pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 7.4,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "enzyme",
+    "fit_admission": true,
+    "limitations": [],
+    "main_values": [
+      {
+        "page": 9,
+        "value": 7.4
+      }
+    ],
+    "measurement_status": "CONSISTENT",
+    "original_smiles": "OC(=O)C1(CCC(F)(F)CC1)NC(=O)Cn1c2cc(Oc3ccc(F)cc3)ccc2sc1=O",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:22:ERAP1 pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:22",
+      "mean": 7.4,
+      "n_in_mean": 2,
+      "operator": "=",
+      "sd_pIC50": 0.05
+    }
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:22",
+    "csv": {
+      "assay": {
+        "assay_type": "cellular_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "HeLa antigen presentation",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:22",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 5011.872336272725,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:22:HeLa cellular antigen presentation pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:21:column:HeLa cellular antigen presentation pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 5.3,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "cell",
+    "fit_admission": false,
+    "limitations": [
+      "single exact occasion; not replicated"
+    ],
+    "main_values": [
+      {
+        "page": 9,
+        "value": 5.3
+      }
+    ],
+    "measurement_status": "CONDITIONAL",
+    "original_smiles": "OC(=O)C1(CCC(F)(F)CC1)NC(=O)Cn1c2cc(Oc3ccc(F)cc3)ccc2sc1=O",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:22:HeLa cellular antigen presentation pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:22",
+      "mean": 5.3,
+      "n_in_mean": 1,
+      "operator": "=",
+      "sd_pIC50": null
+    }
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:23",
+    "csv": {
+      "assay": {
+        "assay_type": "biochemical_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "isolated enzyme",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:23",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 1.9952623149688828,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:23:ERAP1 pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:22:column:ERAP1 pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 8.7,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "enzyme",
+    "fit_admission": true,
+    "limitations": [],
+    "main_values": [
+      {
+        "page": 9,
+        "value": 8.7
+      }
+    ],
+    "measurement_status": "CONSISTENT",
+    "original_smiles": "CC(C)COc1ccc2sc(=O)n(CC(=O)N(C)C3(CCCCC3)C(O)=O)c2c1",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:23:ERAP1 pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:23",
+      "mean": 8.7,
+      "n_in_mean": 3,
+      "operator": "=",
+      "sd_pIC50": 0.11
+    }
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:23",
+    "csv": {
+      "assay": {
+        "assay_type": "cellular_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "HeLa antigen presentation",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:23",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 15.848931924611142,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:23:HeLa cellular antigen presentation pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:22:column:HeLa cellular antigen presentation pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 7.8,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "cell",
+    "fit_admission": true,
+    "limitations": [],
+    "main_values": [
+      {
+        "page": 9,
+        "value": 7.8
+      }
+    ],
+    "measurement_status": "CONSISTENT",
+    "original_smiles": "CC(C)COc1ccc2sc(=O)n(CC(=O)N(C)C3(CCCCC3)C(O)=O)c2c1",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:23:HeLa cellular antigen presentation pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:23",
+      "mean": 7.8,
+      "n_in_mean": 3,
+      "operator": "=",
+      "sd_pIC50": 0.13
+    }
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:24",
+    "csv": {
+      "assay": {
+        "assay_type": "biochemical_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "isolated enzyme",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:24",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 2.5118864315095824,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:24:ERAP1 pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:23:column:ERAP1 pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 8.6,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "enzyme",
+    "fit_admission": true,
+    "limitations": [],
+    "main_values": [
+      {
+        "page": 9,
+        "value": 8.6
+      }
+    ],
+    "measurement_status": "CONSISTENT",
+    "original_smiles": "CN(C(=O)Cn1c2cc(ccc2sc1=O)N1CCC(F)(F)CC1)C1(CCCCC1)C(O)=O",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:24:ERAP1 pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:24",
+      "mean": 8.6,
+      "n_in_mean": 3,
+      "operator": "=",
+      "sd_pIC50": 0.13
+    }
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:24",
+    "csv": {
+      "assay": {
+        "assay_type": "cellular_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "HeLa antigen presentation",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:24",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 31.622776601683793,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:24:HeLa cellular antigen presentation pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:23:column:HeLa cellular antigen presentation pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 7.5,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "cell",
+    "fit_admission": true,
+    "limitations": [],
+    "main_values": [
+      {
+        "page": 9,
+        "value": 7.5
+      }
+    ],
+    "measurement_status": "CONSISTENT",
+    "original_smiles": "CN(C(=O)Cn1c2cc(ccc2sc1=O)N1CCC(F)(F)CC1)C1(CCCCC1)C(O)=O",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:24:HeLa cellular antigen presentation pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:24",
+      "mean": 7.5,
+      "n_in_mean": 3,
+      "operator": "=",
+      "sd_pIC50": 0.17
+    }
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:25",
+    "csv": {
+      "assay": {
+        "assay_type": "biochemical_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "isolated enzyme",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:25",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 7.943282347242821,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:25:ERAP1 pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:24:column:ERAP1 pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 8.1,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "enzyme",
+    "fit_admission": true,
+    "limitations": [],
+    "main_values": [
+      {
+        "page": 9,
+        "value": 8.1
+      }
+    ],
+    "measurement_status": "CONSISTENT",
+    "original_smiles": "OC(=O)C1(CCC(F)(F)CC1)NC(=O)Cn1c2cc(ccc2sc1=O)C1CCCC1",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:25:ERAP1 pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:25",
+      "mean": 8.1,
+      "n_in_mean": 4,
+      "operator": "=",
+      "sd_pIC50": 0.27
+    }
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:25",
+    "csv": {
+      "assay": {
+        "assay_type": "cellular_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "HeLa antigen presentation",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:25",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 251.18864315095823,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:25:HeLa cellular antigen presentation pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:24:column:HeLa cellular antigen presentation pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 6.6,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "cell",
+    "fit_admission": true,
+    "limitations": [],
+    "main_values": [
+      {
+        "page": 9,
+        "value": 6.6
+      }
+    ],
+    "measurement_status": "CONSISTENT",
+    "original_smiles": "OC(=O)C1(CCC(F)(F)CC1)NC(=O)Cn1c2cc(ccc2sc1=O)C1CCCC1",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:25:HeLa cellular antigen presentation pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:25",
+      "mean": 6.6,
+      "n_in_mean": 5,
+      "operator": "=",
+      "sd_pIC50": 0.36
+    }
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:26",
+    "csv": {
+      "assay": {
+        "assay_type": "biochemical_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "isolated enzyme",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:26",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 10.0,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:26:ERAP1 pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:25:column:ERAP1 pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 8.0,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "enzyme",
+    "fit_admission": true,
+    "limitations": [],
+    "main_values": [
+      {
+        "page": 9,
+        "value": 8
+      }
+    ],
+    "measurement_status": "CONSISTENT",
+    "original_smiles": "CCN(C(=O)Cn1c2cc(Cl)ccc2sc1=O)C1(CCCCC1)C(O)=O",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:26:ERAP1 pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:26",
+      "mean": 8.0,
+      "n_in_mean": 3,
+      "operator": "=",
+      "sd_pIC50": 0.06
+    }
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:26",
+    "csv": {
+      "assay": {
+        "assay_type": "cellular_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "HeLa antigen presentation",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:26",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 63.0957344480193,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:26:HeLa cellular antigen presentation pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:25:column:HeLa cellular antigen presentation pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 7.2,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "cell",
+    "fit_admission": true,
+    "limitations": [],
+    "main_values": [
+      {
+        "page": 9,
+        "value": 7.2
+      }
+    ],
+    "measurement_status": "CONSISTENT",
+    "original_smiles": "CCN(C(=O)Cn1c2cc(Cl)ccc2sc1=O)C1(CCCCC1)C(O)=O",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:26:HeLa cellular antigen presentation pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:26",
+      "mean": 7.2,
+      "n_in_mean": 4,
+      "operator": "=",
+      "sd_pIC50": 0.3
+    }
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:27",
+    "csv": {
+      "assay": {
+        "assay_type": "biochemical_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "isolated enzyme",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:27",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 3.981071705534969,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:27:ERAP1 pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:26:column:ERAP1 pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 8.4,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "enzyme",
+    "fit_admission": true,
+    "limitations": [],
+    "main_values": [
+      {
+        "page": 9,
+        "value": 8.4
+      }
+    ],
+    "measurement_status": "CONSISTENT",
+    "original_smiles": "OC(=O)C1(CCSCC1)NC(=O)CN1C(=O)C(F)(F)Oc2ccc(Br)cc12",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:27:ERAP1 pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:27",
+      "mean": 8.4,
+      "n_in_mean": 7,
+      "operator": "=",
+      "sd_pIC50": 0.2
+    }
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:27",
+    "csv": {
+      "assay": {
+        "assay_type": "cellular_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "HeLa antigen presentation",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:27",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 63.0957344480193,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:27:HeLa cellular antigen presentation pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:26:column:HeLa cellular antigen presentation pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 7.2,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "cell",
+    "fit_admission": true,
+    "limitations": [],
+    "main_values": [
+      {
+        "page": 9,
+        "value": 7.2
+      }
+    ],
+    "measurement_status": "CONSISTENT",
+    "original_smiles": "OC(=O)C1(CCSCC1)NC(=O)CN1C(=O)C(F)(F)Oc2ccc(Br)cc12",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:27:HeLa cellular antigen presentation pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:27",
+      "mean": 7.2,
+      "n_in_mean": 3,
+      "operator": "=",
+      "sd_pIC50": 0.36
+    }
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:28",
+    "csv": {
+      "assay": {
+        "assay_type": "biochemical_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "isolated enzyme",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:28",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 158.48931924611142,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:28:ERAP1 pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:27:column:ERAP1 pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 6.8,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "enzyme",
+    "fit_admission": true,
+    "limitations": [],
+    "main_values": [
+      {
+        "page": 9,
+        "value": 6.8
+      }
+    ],
+    "measurement_status": "CONSISTENT",
+    "original_smiles": "OC(=O)C1(CCSCC1)NC(=O)Cn1c2cc(ccc2ccc1=O)N1CCC(F)(F)CC1",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:28:ERAP1 pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:28",
+      "mean": 6.8,
+      "n_in_mean": 3,
+      "operator": "=",
+      "sd_pIC50": 0.07
+    }
+  },
+  {
+    "additional_test": {
+      "locator": "main PDF p9 Table2 footnote(c)",
+      "n": 4,
+      "operator": "<",
+      "pIC50": 4.3
+    },
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:28",
+    "csv": {
+      "assay": {
+        "assay_type": "cellular_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "HeLa antigen presentation",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:28",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 3981.071705534969,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:28:HeLa cellular antigen presentation pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:27:column:HeLa cellular antigen presentation pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 5.4,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "cell",
+    "fit_admission": false,
+    "limitations": [
+      "main/CSV summary conflict",
+      "additional censored tests; mean is not complete replicate distribution",
+      "single exact occasion; not replicated"
+    ],
+    "main_values": [
+      {
+        "page": 9,
+        "value": 5.3
+      }
+    ],
+    "measurement_status": "CONDITIONAL",
+    "original_smiles": "OC(=O)C1(CCSCC1)NC(=O)Cn1c2cc(ccc2ccc1=O)N1CCC(F)(F)CC1",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:28:HeLa cellular antigen presentation pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:28",
+      "mean": 5.4,
+      "n_in_mean": 1,
+      "operator": "=",
+      "sd_pIC50": null
+    }
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:29",
+    "csv": {
+      "assay": {
+        "assay_type": "biochemical_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "isolated enzyme",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:29",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 398.1071705534969,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:29:ERAP1 pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:28:column:ERAP1 pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 6.4,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "enzyme",
+    "fit_admission": true,
+    "limitations": [],
+    "main_values": [
+      {
+        "page": 9,
+        "value": 6.4
+      }
+    ],
+    "measurement_status": "CONSISTENT",
+    "original_smiles": "OC(=O)C1(CCn2c3cc(ccc3sc2=O)C(F)(F)F)CCSCC1",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:29:ERAP1 pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:29",
+      "mean": 6.4,
+      "n_in_mean": 2,
+      "operator": "=",
+      "sd_pIC50": 0.03
+    }
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:29",
+    "csv": {
+      "assay": {
+        "assay_type": "cellular_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "HeLa antigen presentation",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:29",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 6309.57344480193,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:29:HeLa cellular antigen presentation pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:28:column:HeLa cellular antigen presentation pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 5.2,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "cell",
+    "fit_admission": true,
+    "limitations": [],
+    "main_values": [
+      {
+        "page": 9,
+        "value": 5.2
+      }
+    ],
+    "measurement_status": "CONSISTENT",
+    "original_smiles": "OC(=O)C1(CCn2c3cc(ccc3sc2=O)C(F)(F)F)CCSCC1",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:29:HeLa cellular antigen presentation pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:29",
+      "mean": 5.2,
+      "n_in_mean": 4,
+      "operator": "=",
+      "sd_pIC50": 0.38
+    }
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:30",
+    "csv": {
+      "assay": {
+        "assay_type": "biochemical_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "isolated enzyme",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:30",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 1258.9254117941662,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:30:ERAP1 pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:29:column:ERAP1 pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 5.9,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "enzyme",
+    "fit_admission": true,
+    "limitations": [],
+    "main_values": [
+      {
+        "page": 9,
+        "value": 5.9
+      }
+    ],
+    "measurement_status": "CONSISTENT",
+    "original_smiles": "OC(=O)C1(CCCCC1)NC(=S)Cn1c2cc(ccc2sc1=O)C(F)(F)F",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:30:ERAP1 pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:30",
+      "mean": 5.9,
+      "n_in_mean": 2,
+      "operator": "=",
+      "sd_pIC50": 0.0
+    }
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:30",
+    "csv": {
+      "assay": {
+        "assay_type": "cellular_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "HeLa antigen presentation",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:30",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 19952.62314968879,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:30:HeLa cellular antigen presentation pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:29:column:HeLa cellular antigen presentation pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 4.7,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "cell",
+    "fit_admission": true,
+    "limitations": [],
+    "main_values": [
+      {
+        "page": 9,
+        "value": 4.7
+      }
+    ],
+    "measurement_status": "CONSISTENT",
+    "original_smiles": "OC(=O)C1(CCCCC1)NC(=S)Cn1c2cc(ccc2sc1=O)C(F)(F)F",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:30:HeLa cellular antigen presentation pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:30",
+      "mean": 4.7,
+      "n_in_mean": 3,
+      "operator": "=",
+      "sd_pIC50": 0.09
+    }
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:31",
+    "csv": {
+      "assay": {
+        "assay_type": "biochemical_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "isolated enzyme",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:31",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 5.011872336272715,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:31:ERAP1 pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:30:column:ERAP1 pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 8.3,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "enzyme",
+    "fit_admission": true,
+    "limitations": [],
+    "main_values": [],
+    "measurement_status": "CONSISTENT",
+    "original_smiles": "CN(C(=O)CN1C(=O)Cc2ccc(cc12)-c1ccccc1)C1(CCCCC1)C(O)=O",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:31:ERAP1 pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:31",
+      "mean": 8.3,
+      "n_in_mean": 3,
+      "operator": "=",
+      "sd_pIC50": 0.08
+    }
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:31",
+    "csv": {
+      "assay": {
+        "assay_type": "cellular_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "HeLa antigen presentation",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:31",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 125.89254117941661,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:31:HeLa cellular antigen presentation pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:30:column:HeLa cellular antigen presentation pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 6.9,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "cell",
+    "fit_admission": true,
+    "limitations": [],
+    "main_values": [],
+    "measurement_status": "CONSISTENT",
+    "original_smiles": "CN(C(=O)CN1C(=O)Cc2ccc(cc12)-c1ccccc1)C1(CCCCC1)C(O)=O",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:31:HeLa cellular antigen presentation pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:31",
+      "mean": 6.9,
+      "n_in_mean": 3,
+      "operator": "=",
+      "sd_pIC50": 0.29
+    }
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:32",
+    "csv": {
+      "assay": {
+        "assay_type": "biochemical_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "isolated enzyme",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:32",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 6.309573444801943,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:32:ERAP1 pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:31:column:ERAP1 pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 8.2,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "enzyme",
+    "fit_admission": true,
+    "limitations": [],
+    "main_values": [],
+    "measurement_status": "CONSISTENT",
+    "original_smiles": "OC(=O)C1(CCCCC1)NC(=O)CN1C(=O)C(F)(F)Oc2ccc(cc12)C(F)(F)F",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:32:ERAP1 pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:32",
+      "mean": 8.2,
+      "n_in_mean": 3,
+      "operator": "=",
+      "sd_pIC50": 0.16
+    }
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:32",
+    "csv": {
+      "assay": {
+        "assay_type": "cellular_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "HeLa antigen presentation",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:32",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 63.0957344480193,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:32:HeLa cellular antigen presentation pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:31:column:HeLa cellular antigen presentation pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 7.2,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "cell",
+    "fit_admission": true,
+    "limitations": [],
+    "main_values": [],
+    "measurement_status": "CONSISTENT",
+    "original_smiles": "OC(=O)C1(CCCCC1)NC(=O)CN1C(=O)C(F)(F)Oc2ccc(cc12)C(F)(F)F",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:32:HeLa cellular antigen presentation pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:32",
+      "mean": 7.2,
+      "n_in_mean": 4,
+      "operator": "=",
+      "sd_pIC50": 0.27
+    }
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:33",
+    "csv": {
+      "assay": {
+        "assay_type": "biochemical_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "isolated enzyme",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:33",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 2.5118864315095824,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:33:ERAP1 pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:32:column:ERAP1 pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 8.6,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "enzyme",
+    "fit_admission": true,
+    "limitations": [],
+    "main_values": [
+      {
+        "page": 12,
+        "value": 8.6
+      }
+    ],
+    "measurement_status": "CONSISTENT",
+    "original_smiles": "OC(=O)C1(CCC(F)(F)CC1)NC(=O)Cn1c2cc(cnc2sc1=O)-c1ccccc1",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:33:ERAP1 pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:33",
+      "mean": 8.6,
+      "n_in_mean": 4,
+      "operator": "=",
+      "sd_pIC50": 0.21
+    }
+  },
+  {
+    "additional_test": {
+      "locator": "main PDF p12 Table4 footnote(a)",
+      "n": 5,
+      "operator": "<",
+      "pIC50": 4.3
+    },
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:33",
+    "csv": {
+      "assay": {
+        "assay_type": "cellular_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "HeLa antigen presentation",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:33",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 251.18864315095823,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:33:HeLa cellular antigen presentation pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:32:column:HeLa cellular antigen presentation pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 6.6,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "cell",
+    "fit_admission": false,
+    "limitations": [
+      "additional censored tests; mean is not complete replicate distribution"
+    ],
+    "main_values": [
+      {
+        "page": 12,
+        "value": 6.6
+      }
+    ],
+    "measurement_status": "CONDITIONAL",
+    "original_smiles": "OC(=O)C1(CCC(F)(F)CC1)NC(=O)Cn1c2cc(cnc2sc1=O)-c1ccccc1",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:33:HeLa cellular antigen presentation pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:33",
+      "mean": 6.6,
+      "n_in_mean": 2,
+      "operator": "=",
+      "sd_pIC50": 0.84
+    }
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:34",
+    "csv": {
+      "assay": {
+        "assay_type": "biochemical_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "isolated enzyme",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:34",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 31.622776601683793,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:34:ERAP1 pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:33:column:ERAP1 pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 7.5,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "enzyme",
+    "fit_admission": true,
+    "limitations": [],
+    "main_values": [
+      {
+        "page": 12,
+        "value": 7.5
+      }
+    ],
+    "measurement_status": "CONSISTENT",
+    "original_smiles": "OC(=O)C1(CCSCC1)NC(=O)Cn1c2cc(cnc2sc1=O)C(F)(F)F",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:34:ERAP1 pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:34",
+      "mean": 7.5,
+      "n_in_mean": 3,
+      "operator": "=",
+      "sd_pIC50": 0.15
+    }
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:34",
+    "csv": {
+      "assay": {
+        "assay_type": "cellular_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "HeLa antigen presentation",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:34",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 501.18723362727246,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:34:HeLa cellular antigen presentation pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:33:column:HeLa cellular antigen presentation pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 6.3,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "cell",
+    "fit_admission": true,
+    "limitations": [],
+    "main_values": [
+      {
+        "page": 12,
+        "value": 6.3
+      }
+    ],
+    "measurement_status": "CONSISTENT",
+    "original_smiles": "OC(=O)C1(CCSCC1)NC(=O)Cn1c2cc(cnc2sc1=O)C(F)(F)F",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:34:HeLa cellular antigen presentation pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:34",
+      "mean": 6.3,
+      "n_in_mean": 3,
+      "operator": "=",
+      "sd_pIC50": 0.14
+    }
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:35",
+    "csv": {
+      "assay": {
+        "assay_type": "biochemical_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "isolated enzyme",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:35",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 31.622776601683793,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:35:ERAP1 pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:34:column:ERAP1 pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 7.5,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "enzyme",
+    "fit_admission": true,
+    "limitations": [],
+    "main_values": [
+      {
+        "page": 12,
+        "value": 7.5
+      }
+    ],
+    "measurement_status": "CONSISTENT",
+    "original_smiles": "CN(C(=O)Cn1c2cc(cnc2sc1=O)C(F)(F)F)C1(CCCCC1)C(O)=O",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:35:ERAP1 pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:35",
+      "mean": 7.5,
+      "n_in_mean": 3,
+      "operator": "=",
+      "sd_pIC50": 0.12
+    }
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:35",
+    "csv": {
+      "assay": {
+        "assay_type": "cellular_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "HeLa antigen presentation",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:35",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 316.22776601683796,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:35:HeLa cellular antigen presentation pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:34:column:HeLa cellular antigen presentation pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 6.5,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "cell",
+    "fit_admission": true,
+    "limitations": [],
+    "main_values": [
+      {
+        "page": 12,
+        "value": 6.5
+      }
+    ],
+    "measurement_status": "CONSISTENT",
+    "original_smiles": "CN(C(=O)Cn1c2cc(cnc2sc1=O)C(F)(F)F)C1(CCCCC1)C(O)=O",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:35:HeLa cellular antigen presentation pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:35",
+      "mean": 6.5,
+      "n_in_mean": 4,
+      "operator": "=",
+      "sd_pIC50": 0.04
+    }
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:36",
+    "csv": {
+      "assay": {
+        "assay_type": "biochemical_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "isolated enzyme",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:36",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 12.589254117941662,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:36:ERAP1 pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:35:column:ERAP1 pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 7.9,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "enzyme",
+    "fit_admission": true,
+    "limitations": [],
+    "main_values": [
+      {
+        "page": 12,
+        "value": 7.9
+      }
+    ],
+    "measurement_status": "CONSISTENT",
+    "original_smiles": "OC(=O)C1(CCSCC1)NC(=O)Cn1c2cc(Cl)cc(F)c2sc1=O",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:36:ERAP1 pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:36",
+      "mean": 7.9,
+      "n_in_mean": 3,
+      "operator": "=",
+      "sd_pIC50": 0.13
+    }
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:36",
+    "csv": {
+      "assay": {
+        "assay_type": "cellular_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "HeLa antigen presentation",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:36",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 31.622776601683793,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:36:HeLa cellular antigen presentation pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:35:column:HeLa cellular antigen presentation pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 7.5,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "cell",
+    "fit_admission": true,
+    "limitations": [],
+    "main_values": [
+      {
+        "page": 12,
+        "value": 7.5
+      }
+    ],
+    "measurement_status": "CONSISTENT",
+    "original_smiles": "OC(=O)C1(CCSCC1)NC(=O)Cn1c2cc(Cl)cc(F)c2sc1=O",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:36:HeLa cellular antigen presentation pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:36",
+      "mean": 7.5,
+      "n_in_mean": 4,
+      "operator": "=",
+      "sd_pIC50": 0.24
+    }
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:37",
+    "csv": {
+      "assay": {
+        "assay_type": "biochemical_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "isolated enzyme",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:37",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 501.18723362727246,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:37:ERAP1 pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:36:column:ERAP1 pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 6.3,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "enzyme",
+    "fit_admission": true,
+    "limitations": [],
+    "main_values": [
+      {
+        "page": 12,
+        "value": 6.3
+      }
+    ],
+    "measurement_status": "CONSISTENT",
+    "original_smiles": "OC(=O)C1(CCC(F)(F)CC1)NC(=O)Cn1c2c(Cl)cccc2sc1=O",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:37:ERAP1 pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:37",
+      "mean": 6.3,
+      "n_in_mean": 2,
+      "operator": "=",
+      "sd_pIC50": 0.0
+    }
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:38",
+    "csv": {
+      "assay": {
+        "assay_type": "biochemical_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "isolated enzyme",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:38",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 12.589254117941662,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:38:ERAP1 pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:37:column:ERAP1 pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 7.9,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "enzyme",
+    "fit_admission": true,
+    "limitations": [],
+    "main_values": [],
+    "measurement_status": "CONSISTENT",
+    "original_smiles": "OC(=O)C1(CCCn2c3cc(ccc3sc2=O)C(=O)NC2CCC2)CCSCC1",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:38:ERAP1 pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:38",
+      "mean": 7.9,
+      "n_in_mean": 4,
+      "operator": "=",
+      "sd_pIC50": 0.09
+    }
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:38",
+    "csv": {
+      "assay": {
+        "assay_type": "cellular_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "HeLa antigen presentation",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:38",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 100.0,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:38:HeLa cellular antigen presentation pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:37:column:HeLa cellular antigen presentation pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 7.0,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "cell",
+    "fit_admission": true,
+    "limitations": [],
+    "main_values": [],
+    "measurement_status": "CONSISTENT",
+    "original_smiles": "OC(=O)C1(CCCn2c3cc(ccc3sc2=O)C(=O)NC2CCC2)CCSCC1",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:38:HeLa cellular antigen presentation pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:38",
+      "mean": 7.0,
+      "n_in_mean": 4,
+      "operator": "=",
+      "sd_pIC50": 0.24
+    }
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:39",
+    "csv": {
+      "assay": {
+        "assay_type": "biochemical_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "isolated enzyme",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:39",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 1.0,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:39:ERAP1 pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:38:column:ERAP1 pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 9.0,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "enzyme",
+    "fit_admission": true,
+    "limitations": [],
+    "main_values": [],
+    "measurement_status": "CONSISTENT",
+    "original_smiles": "OC(=O)C1(CCSCC1)NCCn1c2cc(ccc2sc1=O)N1CCC(F)(F)CC1",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:39:ERAP1 pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:39",
+      "mean": 9.0,
+      "n_in_mean": 3,
+      "operator": "=",
+      "sd_pIC50": 0.33
+    }
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:39",
+    "csv": {
+      "assay": {
+        "assay_type": "cellular_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "HeLa antigen presentation",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:39",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 7.943282347242821,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:39:HeLa cellular antigen presentation pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:38:column:HeLa cellular antigen presentation pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 8.1,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "cell",
+    "fit_admission": true,
+    "limitations": [],
+    "main_values": [],
+    "measurement_status": "CONSISTENT",
+    "original_smiles": "OC(=O)C1(CCSCC1)NCCn1c2cc(ccc2sc1=O)N1CCC(F)(F)CC1",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:39:HeLa cellular antigen presentation pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:39",
+      "mean": 8.1,
+      "n_in_mean": 8,
+      "operator": "=",
+      "sd_pIC50": 0.22
+    }
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:40",
+    "csv": {
+      "assay": {
+        "assay_type": "biochemical_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "isolated enzyme",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:40",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 12.589254117941662,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:40:ERAP1 pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:39:column:ERAP1 pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 7.9,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "enzyme",
+    "fit_admission": true,
+    "limitations": [],
+    "main_values": [
+      {
+        "page": 14,
+        "value": 7.9
+      },
+      {
+        "page": 16,
+        "value": 7.9
+      }
+    ],
+    "measurement_status": "CONSISTENT",
+    "original_smiles": "OC(=O)C1(CCC(F)(F)CC1)NC(=O)Cn1c2cc(Br)cc(F)c2sc1=O",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:40:ERAP1 pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:40",
+      "mean": 7.9,
+      "n_in_mean": 5,
+      "operator": "=",
+      "sd_pIC50": 0.13
+    }
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:40",
+    "csv": {
+      "assay": {
+        "assay_type": "cellular_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "HeLa antigen presentation",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:40",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 50.11872336272725,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:40:HeLa cellular antigen presentation pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:39:column:HeLa cellular antigen presentation pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 7.3,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "cell",
+    "fit_admission": true,
+    "limitations": [],
+    "main_values": [
+      {
+        "page": 14,
+        "value": 7.3
+      },
+      {
+        "page": 16,
+        "value": 7.3
+      }
+    ],
+    "measurement_status": "CONSISTENT",
+    "original_smiles": "OC(=O)C1(CCC(F)(F)CC1)NC(=O)Cn1c2cc(Br)cc(F)c2sc1=O",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:40:HeLa cellular antigen presentation pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:40",
+      "mean": 7.3,
+      "n_in_mean": 5,
+      "operator": "=",
+      "sd_pIC50": 0.21
+    }
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:41",
+    "csv": {
+      "assay": {
+        "assay_type": "biochemical_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "isolated enzyme",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:41",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 15.848931924611142,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:41:ERAP1 pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:40:column:ERAP1 pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 7.8,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "enzyme",
+    "fit_admission": true,
+    "limitations": [],
+    "main_values": [
+      {
+        "page": 14,
+        "value": 7.8
+      }
+    ],
+    "measurement_status": "CONSISTENT",
+    "original_smiles": "CN(C(=O)CN1C(=O)C(F)(F)Oc2ccc(Cl)cc12)C1(CCC(F)(F)CC1)C(O)=O",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:41:ERAP1 pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:41",
+      "mean": 7.8,
+      "n_in_mean": 4,
+      "operator": "=",
+      "sd_pIC50": 0.25
+    }
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:41",
+    "csv": {
+      "assay": {
+        "assay_type": "cellular_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "HeLa antigen presentation",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:41",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 251.18864315095823,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:41:HeLa cellular antigen presentation pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:40:column:HeLa cellular antigen presentation pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 6.6,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "cell",
+    "fit_admission": true,
+    "limitations": [],
+    "main_values": [
+      {
+        "page": 14,
+        "value": 6.6
+      }
+    ],
+    "measurement_status": "CONSISTENT",
+    "original_smiles": "CN(C(=O)CN1C(=O)C(F)(F)Oc2ccc(Cl)cc12)C1(CCC(F)(F)CC1)C(O)=O",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:41:HeLa cellular antigen presentation pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:41",
+      "mean": 6.6,
+      "n_in_mean": 4,
+      "operator": "=",
+      "sd_pIC50": 0.14
+    }
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:42",
+    "csv": {
+      "assay": {
+        "assay_type": "biochemical_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "isolated enzyme",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:42",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 12.589254117941662,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:42:ERAP1 pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:41:column:ERAP1 pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 7.9,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "enzyme",
+    "fit_admission": true,
+    "limitations": [],
+    "main_values": [
+      {
+        "page": 14,
+        "value": 7.9
+      }
+    ],
+    "measurement_status": "CONSISTENT",
+    "original_smiles": "OC(=O)C1(CCSCC1)NC(=O)Cn1c2cc(Cl)ccc2sc1=O",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:42:ERAP1 pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:42",
+      "mean": 7.9,
+      "n_in_mean": 4,
+      "operator": "=",
+      "sd_pIC50": 0.31
+    }
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:42",
+    "csv": {
+      "assay": {
+        "assay_type": "cellular_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "HeLa antigen presentation",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:42",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 63.0957344480193,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:42:HeLa cellular antigen presentation pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:41:column:HeLa cellular antigen presentation pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 7.2,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "cell",
+    "fit_admission": true,
+    "limitations": [],
+    "main_values": [
+      {
+        "page": 14,
+        "value": 7.2
+      }
+    ],
+    "measurement_status": "CONSISTENT",
+    "original_smiles": "OC(=O)C1(CCSCC1)NC(=O)Cn1c2cc(Cl)ccc2sc1=O",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:42:HeLa cellular antigen presentation pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:42",
+      "mean": 7.2,
+      "n_in_mean": 4,
+      "operator": "=",
+      "sd_pIC50": 0.19
+    }
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:43",
+    "csv": {
+      "assay": {
+        "assay_type": "biochemical_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "isolated enzyme",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:43",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 10.0,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:43:ERAP1 pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:42:column:ERAP1 pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 8.0,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "enzyme",
+    "fit_admission": true,
+    "limitations": [],
+    "main_values": [
+      {
+        "page": 14,
+        "value": 8
+      }
+    ],
+    "measurement_status": "CONSISTENT",
+    "original_smiles": "CN(C(=O)Cn1c2cc(cc(F)c2sc1=O)C(F)(F)F)C1(CCSCC1)C(O)=O",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:43:ERAP1 pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:43",
+      "mean": 8.0,
+      "n_in_mean": 3,
+      "operator": "=",
+      "sd_pIC50": 0.2
+    }
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:43",
+    "csv": {
+      "assay": {
+        "assay_type": "cellular_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "HeLa antigen presentation",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:43",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 316.22776601683796,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:43:HeLa cellular antigen presentation pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:42:column:HeLa cellular antigen presentation pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 6.5,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "cell",
+    "fit_admission": true,
+    "limitations": [],
+    "main_values": [
+      {
+        "page": 14,
+        "value": 6.5
+      }
+    ],
+    "measurement_status": "CONSISTENT",
+    "original_smiles": "CN(C(=O)Cn1c2cc(cc(F)c2sc1=O)C(F)(F)F)C1(CCSCC1)C(O)=O",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:43:HeLa cellular antigen presentation pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:43",
+      "mean": 6.5,
+      "n_in_mean": 4,
+      "operator": "=",
+      "sd_pIC50": 0.14
+    }
+  },
+  {
+    "additional_test": null,
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:44",
+    "csv": {
+      "assay": {
+        "assay_type": "biochemical_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "isolated enzyme",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:44",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 10.0,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:44:ERAP1 pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:43:column:ERAP1 pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 8.0,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "enzyme",
+    "fit_admission": true,
+    "limitations": [],
+    "main_values": [
+      {
+        "page": 14,
+        "value": 8
+      }
+    ],
+    "measurement_status": "CONSISTENT",
+    "original_smiles": "OC(=O)C1(CCC(F)(F)CC1)NC(=O)Cn1c2cc(ccc2sc1=O)C1CC1",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:44:ERAP1 pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:44",
+      "mean": 8.0,
+      "n_in_mean": 3,
+      "operator": "=",
+      "sd_pIC50": 0.26
+    }
+  },
+  {
+    "additional_test": {
+      "locator": "main PDF p14 Table6 footnote(c)",
+      "n": 1,
+      "operator": "<",
+      "pIC50": 4.3
+    },
+    "compound_id": "10.1021/acs.jmedchem.5c03071:compound:44",
+    "csv": {
+      "assay": {
+        "assay_type": "cellular_activity",
+        "context_status": "NOT FULLY ADJUDICATED; do not borrow protocol from a different publication",
+        "direct_target_engagement": false,
+        "duration": null,
+        "matrix": "HeLa antigen presentation",
+        "replicate_information": "Source summary mean; consult SI Table S2 (BRADSHAW) / Supplementary Table 1 (Tinworth)",
+        "species": "human",
+        "substrate": null,
+        "target": "ERAP1",
+        "target_construct": null
+      },
+      "compound_id": "10.1021/acs.jmedchem.5c03071:compound:44",
+      "derived_endpoint": "IC50",
+      "derived_operator": "=",
+      "derived_unit": "nM",
+      "derived_value": 251.18864315095823,
+      "epistemic_type": "source_assertion",
+      "id": "10.1021/acs.jmedchem.5c03071:compound:44:HeLa cellular antigen presentation pIC50",
+      "learning_admission": {
+        "admitted": false,
+        "reason": "Unresolved exact source assay fields: protocol_locator, target_construct, substrate, duration"
+      },
+      "locator": "jm5c03071_si_002.csv:row:43:column:HeLa cellular antigen presentation pIC50",
+      "normalization_epistemic_type": "axis_observation",
+      "review_state": "pending_review",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "source_endpoint": "pIC50",
+      "source_operator": "=",
+      "source_unit": "-log10(IC50/M)",
+      "source_value": 6.6,
+      "transformation": "IC50[nM] = 10**(9-pIC50); inequality reverses"
+    },
+    "family": "cell",
+    "fit_admission": false,
+    "limitations": [
+      "additional censored tests; mean is not complete replicate distribution"
+    ],
+    "main_values": [
+      {
+        "page": 14,
+        "value": 6.6
+      }
+    ],
+    "measurement_status": "CONDITIONAL",
+    "original_smiles": "OC(=O)C1(CCC(F)(F)CC1)NC(=O)Cn1c2cc(ccc2sc1=O)C1CC1",
+    "parent_measurement_id": "10.1021/acs.jmedchem.5c03071:compound:44:HeLa cellular antigen presentation pIC50",
+    "review_state": "pending_review",
+    "si_statistics": {
+      "locator": "SI S60 TableS2 row:44",
+      "mean": 6.6,
+      "n_in_mean": 7,
+      "operator": "=",
+      "sd_pIC50": 0.29
+    }
+  }
+]

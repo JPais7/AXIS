@@ -38,6 +38,7 @@ from axis.domain.models import (
 )
 from axis.experiments import policy
 from axis.experiments.results import ResultsService
+from axis.serialization import canonical_json
 from axis.storage import EvidenceStore, RecordNotFoundError
 
 VERSION = "axis-decision-1"
@@ -71,7 +72,7 @@ CRITERIA_NAMES = (
 
 
 def canonical(value: object) -> str:
-    return json.dumps(value, sort_keys=True, separators=(",", ":"), default=str)
+    return canonical_json(value)
 
 
 def digest_of(value: object) -> str:

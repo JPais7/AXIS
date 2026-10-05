@@ -1,0 +1,2189 @@
+{
+  "claims": [
+    {
+      "contradicting_evidence": [],
+      "decision_input_admission": "NO FINAL INTEGRATED INPUTS: source-context stop condition",
+      "domain_claim": {
+        "confidence": null,
+        "context": {
+          "allotype": "Hap2, source nomenclature",
+          "assay": "YTAFTIPSI cleavage by mass spectrometry",
+          "cell_type": null,
+          "comparison": null,
+          "endpoint": "pIC50",
+          "experimental_system": "isolated enzyme",
+          "genotype": null,
+          "hla_status": null,
+          "population": null,
+          "species": "human",
+          "tissue": null,
+          "treatment": null
+        },
+        "identifier": "closure:claim:hry-enzyme",
+        "knowledge_kind": "source_assertion",
+        "object": {
+          "identifier": "10.1021/acsmedchemlett.4c00401",
+          "kind": "study",
+          "label": "10.1021/acsmedchemlett.4c00401",
+          "namespace": "source"
+        },
+        "predicate": "Hryczanek reports inhibition of Hap2 ERAP1 cleavage of YTAFTIPSI; biochemical activity is specific to this substrate/preparation, not a global allotype rank.",
+        "provenance": {
+          "checksum": "57e91b35dc285b3ab8240e6ea51b2e0984eace7f9119fafb352a27636228498d",
+          "retrieved_at": "2026-10-05 18:08:17.058292+00:00",
+          "source_identifier": "10.1021/acsmedchemlett.4c00401",
+          "source_kind": "publication",
+          "source_uri": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11647717/fullTextXML",
+          "transformations": []
+        },
+        "subject": {
+          "identifier": "Q9NZ08",
+          "kind": "protein",
+          "label": "ERAP1",
+          "namespace": "UniProt"
+        }
+      },
+      "limitations": [
+        "Complete enzyme assay concentrations/duration not resolved",
+        "Not pooled with 2026 assays or cellular potency"
+      ],
+      "polarity": "supports",
+      "review_state": "pending_review",
+      "scope": "programme-level biochemical tractability",
+      "source_artifact": "PMC11647717.xml",
+      "source_class": "peer-reviewed publication",
+      "source_locator": "Results: enzymatic assay paragraph and Hap2 discussion",
+      "supporting_evidence": [
+        {
+          "locator": "Results: enzymatic assay paragraph and Hap2 discussion",
+          "sha256": "57e91b35dc285b3ab8240e6ea51b2e0984eace7f9119fafb352a27636228498d"
+        }
+      ]
+    },
+    {
+      "contradicting_evidence": [],
+      "decision_input_admission": "NO FINAL INTEGRATED INPUTS: source-context stop condition",
+      "domain_claim": {
+        "confidence": null,
+        "context": {
+          "allotype": null,
+          "assay": "25.D1.16-APC flow cytometry",
+          "cell_type": "HeLa",
+          "comparison": null,
+          "endpoint": "antigen presentation pIC50",
+          "experimental_system": "BacMam LEQLESIINFEKL + H-2Kb/beta2m",
+          "genotype": null,
+          "hla_status": "mouse H-2Kb reporter; not HLA-B27",
+          "population": null,
+          "species": "human cell line with mouse MHC-I reporter",
+          "tissue": null,
+          "treatment": "40 h concentration response"
+        },
+        "identifier": "closure:claim:hry-presentation",
+        "knowledge_kind": "source_assertion",
+        "object": {
+          "identifier": "10.1021/acsmedchemlett.4c00401",
+          "kind": "study",
+          "label": "10.1021/acsmedchemlett.4c00401",
+          "namespace": "source"
+        },
+        "predicate": "The 2024 HeLa assay measures SIINFEKL presentation by mouse H-2Kb/beta2m after 40 h of compound/precursor exposure, not direct ERAP1 occupancy.",
+        "provenance": {
+          "checksum": "c80357c522330db09b0186f6aa6a3896d581f1ccc9c1d427f606671d8951d267",
+          "retrieved_at": "2026-10-05 18:14:32.148378+00:00",
+          "source_identifier": "10.1021/acsmedchemlett.4c00401",
+          "source_kind": "publication",
+          "source_uri": "https://ndownloader.figshare.com/files/50285819",
+          "transformations": []
+        },
+        "subject": {
+          "identifier": "Q9NZ08",
+          "kind": "protein",
+          "label": "ERAP1",
+          "namespace": "UniProt"
+        }
+      },
+      "limitations": [
+        "Endogenous ERAP1 allotype unresolved",
+        "No patient or historical Maben occupancy inference"
+      ],
+      "polarity": "qualifies",
+      "review_state": "pending_review",
+      "scope": "2024 programme cellular assay",
+      "source_artifact": "si/ml4c00401_si_001.pdf",
+      "source_class": "supplementary information",
+      "source_locator": "S34 Cellular Antigen Presentation Assay",
+      "supporting_evidence": [
+        {
+          "locator": "S34 Cellular Antigen Presentation Assay",
+          "sha256": "c80357c522330db09b0186f6aa6a3896d581f1ccc9c1d427f606671d8951d267"
+        }
+      ]
+    },
+    {
+      "contradicting_evidence": [],
+      "decision_input_admission": "NO FINAL INTEGRATED INPUTS: source-context stop condition",
+      "domain_claim": {
+        "confidence": null,
+        "context": {
+          "allotype": null,
+          "assay": "ERAP1 YTAFTIPSI; ERAP2 Arg-AMC; IRAP Leu-AMC",
+          "cell_type": null,
+          "comparison": null,
+          "endpoint": "pIC50",
+          "experimental_system": "isolated enzymes",
+          "genotype": null,
+          "hla_status": null,
+          "population": null,
+          "species": "human",
+          "tissue": null,
+          "treatment": null
+        },
+        "identifier": "closure:claim:hry-counterscreen",
+        "knowledge_kind": "source_assertion",
+        "object": {
+          "identifier": "10.1021/acsmedchemlett.4c00401",
+          "kind": "study",
+          "label": "10.1021/acsmedchemlett.4c00401",
+          "namespace": "source"
+        },
+        "predicate": "Compound 7 showed source-reported ERAP2/IRAP pIC50 below 4, n=1, using Arg-AMC and Leu-AMC respectively. The authors' selectivity interpretation is not an AXIS comparable-assay numeric ratio.",
+        "provenance": {
+          "checksum": "57e91b35dc285b3ab8240e6ea51b2e0984eace7f9119fafb352a27636228498d",
+          "retrieved_at": "2026-10-05 18:08:17.058292+00:00",
+          "source_identifier": "10.1021/acsmedchemlett.4c00401",
+          "source_kind": "publication",
+          "source_uri": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11647717/fullTextXML",
+          "transformations": []
+        },
+        "subject": {
+          "identifier": "Q9NZ08",
+          "kind": "protein",
+          "label": "ERAP1",
+          "namespace": "UniProt"
+        }
+      },
+      "limitations": [
+        "Different substrates and incompletely matched conditions",
+        "Censored n=1 counterscreens; no manufactured exact ratio"
+      ],
+      "polarity": "qualifies",
+      "review_state": "pending_review",
+      "scope": "compound 7 counterscreens",
+      "source_artifact": "PMC11647717.xml",
+      "source_class": "peer-reviewed publication",
+      "source_locator": "Selectivity paragraph; Figure 1 substrate legend; SI S35 Table S1 compound 7",
+      "supporting_evidence": [
+        {
+          "locator": "Selectivity paragraph; Figure 1 substrate legend; SI S35 Table S1 compound 7",
+          "sha256": "57e91b35dc285b3ab8240e6ea51b2e0984eace7f9119fafb352a27636228498d"
+        }
+      ]
+    },
+    {
+      "contradicting_evidence": [],
+      "decision_input_admission": "NO FINAL INTEGRATED INPUTS: source-context stop condition",
+      "domain_claim": {
+        "confidence": null,
+        "context": {
+          "allotype": null,
+          "assay": null,
+          "cell_type": null,
+          "comparison": null,
+          "endpoint": "experimental complex",
+          "experimental_system": "crystallographic ERAP1 constructs",
+          "genotype": null,
+          "hla_status": null,
+          "population": null,
+          "species": "human",
+          "tissue": null,
+          "treatment": null
+        },
+        "identifier": "closure:claim:hry-structures",
+        "knowledge_kind": "source_assertion",
+        "object": {
+          "identifier": "10.1021/acsmedchemlett.4c00401",
+          "kind": "study",
+          "label": "10.1021/acsmedchemlett.4c00401",
+          "namespace": "source"
+        },
+        "predicate": "The source explicitly associates PDB 9GJN with compound 1, 9GK6 with 2, 9GJS with 7 and 9GKE with 13.",
+        "provenance": {
+          "checksum": "57e91b35dc285b3ab8240e6ea51b2e0984eace7f9119fafb352a27636228498d",
+          "retrieved_at": "2026-10-05 18:08:17.058292+00:00",
+          "source_identifier": "10.1021/acsmedchemlett.4c00401",
+          "source_kind": "publication",
+          "source_uri": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11647717/fullTextXML",
+          "transformations": []
+        },
+        "subject": {
+          "identifier": "Q9NZ08",
+          "kind": "protein",
+          "label": "ERAP1",
+          "namespace": "UniProt"
+        }
+      },
+      "limitations": [
+        "Does not identify a cellular pharmacological state"
+      ],
+      "polarity": "supports",
+      "review_state": "pending_review",
+      "scope": "compound-specific crystallographic identities",
+      "source_artifact": "PMC11647717.xml",
+      "source_class": "peer-reviewed publication",
+      "source_locator": "Accession Codes; Figures 2 and 4",
+      "supporting_evidence": [
+        {
+          "locator": "Accession Codes; Figures 2 and 4",
+          "sha256": "57e91b35dc285b3ab8240e6ea51b2e0984eace7f9119fafb352a27636228498d"
+        }
+      ]
+    },
+    {
+      "contradicting_evidence": [],
+      "decision_input_admission": "NO FINAL INTEGRATED INPUTS: source-context stop condition",
+      "domain_claim": {
+        "confidence": null,
+        "context": {
+          "allotype": "source common allotypes 1-10",
+          "assay": "multiple peptide and small-substrate assays",
+          "cell_type": null,
+          "comparison": null,
+          "endpoint": "trimming rate and catalytic efficiency",
+          "experimental_system": "recombinant enzymes",
+          "genotype": null,
+          "hla_status": null,
+          "population": null,
+          "species": "human",
+          "tissue": null,
+          "treatment": null
+        },
+        "identifier": "closure:claim:substrate-dependence",
+        "knowledge_kind": "source_assertion",
+        "object": {
+          "identifier": "10.1016/j.jbc.2021.100443",
+          "kind": "study",
+          "label": "10.1016/j.jbc.2021.100443",
+          "namespace": "source"
+        },
+        "predicate": "Hutchinson reports substrate-dependent activity ordering among common ERAP1 allotypes, with allotype 10 a low-activity outlier in the tested assays; this is not a universal high/low classification across substrates.",
+        "provenance": {
+          "checksum": "6802e6de8041557bba69913adbb6f92300ba5c417afa769e05c0f8e7b4bb0432",
+          "retrieved_at": "2026-10-05 18:08:16.498945+00:00",
+          "source_identifier": "10.1016/j.jbc.2021.100443",
+          "source_kind": "publication",
+          "source_uri": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8024916/fullTextXML",
+          "transformations": []
+        },
+        "subject": {
+          "identifier": "Q9NZ08",
+          "kind": "protein",
+          "label": "ERAP1",
+          "namespace": "UniProt"
+        }
+      },
+      "limitations": [
+        "No AXIS kinetic re-fitting",
+        "No therapeutic direction from enzyme ranking"
+      ],
+      "polarity": "qualifies",
+      "review_state": "pending_review",
+      "scope": "allotype and substrate dependence",
+      "source_artifact": "PMC8024916.xml",
+      "source_class": "peer-reviewed publication",
+      "source_locator": "Results; Figure 2 panels A-D; Table S8 cited in Results",
+      "supporting_evidence": [
+        {
+          "locator": "Results; Figure 2 panels A-D; Table S8 cited in Results",
+          "sha256": "6802e6de8041557bba69913adbb6f92300ba5c417afa769e05c0f8e7b4bb0432"
+        }
+      ]
+    },
+    {
+      "contradicting_evidence": [],
+      "decision_input_admission": "NO FINAL INTEGRATED INPUTS: source-context stop condition",
+      "domain_claim": {
+        "confidence": null,
+        "context": {
+          "allotype": null,
+          "assay": null,
+          "cell_type": null,
+          "comparison": null,
+          "endpoint": null,
+          "experimental_system": "genetic association and separate allele discovery",
+          "genotype": null,
+          "hla_status": "HLA-B27-stratified source analyses",
+          "population": "Taiwanese",
+          "species": "human",
+          "tissue": null,
+          "treatment": null
+        },
+        "identifier": "closure:claim:wang-population",
+        "knowledge_kind": "source_assertion",
+        "object": {
+          "identifier": "10.3390/cells11152427",
+          "kind": "study",
+          "label": "10.3390/cells11152427",
+          "namespace": "source"
+        },
+        "predicate": "Wang's Taiwanese study reports 863 AS cases and 1438 controls and full-length coding-variant discovery in 45 individuals; association and functional subsets must not be counted as identical populations.",
+        "provenance": {
+          "checksum": "616a010892105bdcd0248a14810cc730115945b859215fd4f292a860e3934d55",
+          "retrieved_at": "2026-10-05 18:08:16.499593+00:00",
+          "source_identifier": "10.3390/cells11152427",
+          "source_kind": "publication",
+          "source_uri": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9368314/fullTextXML",
+          "transformations": []
+        },
+        "subject": {
+          "identifier": "Q9NZ08",
+          "kind": "protein",
+          "label": "ERAP1",
+          "namespace": "UniProt"
+        }
+      },
+      "limitations": [
+        "Not globally generalizable",
+        "Allelic variant nomenclature not silently mapped to another paper's allotype IDs",
+        "Genetic association is not therapeutic direction"
+      ],
+      "polarity": "qualifies",
+      "review_state": "pending_review",
+      "scope": "target-disease and allotype context",
+      "source_artifact": "PMC9368314.xml",
+      "source_class": "peer-reviewed publication",
+      "source_locator": "Abstract; Materials and Methods: study population and ERAP1 allele identification",
+      "supporting_evidence": [
+        {
+          "locator": "Abstract; Materials and Methods: study population and ERAP1 allele identification",
+          "sha256": "616a010892105bdcd0248a14810cc730115945b859215fd4f292a860e3934d55"
+        }
+      ]
+    },
+    {
+      "contradicting_evidence": [],
+      "decision_input_admission": "NO FINAL INTEGRATED INPUTS: source-context stop condition",
+      "domain_claim": {
+        "confidence": null,
+        "context": {
+          "allotype": null,
+          "assay": null,
+          "cell_type": "A375 melanoma",
+          "comparison": "WT vs genetic KO vs allosteric inhibitor",
+          "endpoint": "W6/32-isolated immunopeptidome",
+          "experimental_system": "cell line, not axSpA patient tissue",
+          "genotype": null,
+          "hla_status": null,
+          "population": null,
+          "species": "human",
+          "tissue": null,
+          "treatment": "10 uM clerodane derivative, 6 days"
+        },
+        "identifier": "closure:claim:temponeras-design",
+        "knowledge_kind": "source_assertion",
+        "object": {
+          "identifier": "10.1002/eji.202350449",
+          "kind": "study",
+          "label": "10.1002/eji.202350449",
+          "namespace": "source"
+        },
+        "predicate": "Temponeras compares WT, CRISPR ERAP1 KO and a defined clerodane allosteric inhibitor in A375; inhibitor treatment is 10 uM for six days over three passages, refreshed every two days.",
+        "provenance": {
+          "checksum": "0b7105319ed305d689647a7418564454669930b492050f62361a63e1fbfebe7e",
+          "retrieved_at": "2026-10-05 18:23:52.769378+00:00",
+          "source_identifier": "10.1002/eji.202350449",
+          "source_kind": "publication",
+          "source_uri": "https://dspace.library.uu.nl/bitstreams/b432d0c6-2eef-45ed-b197-bc76898d4191/download",
+          "transformations": []
+        },
+        "subject": {
+          "identifier": "Q9NZ08",
+          "kind": "protein",
+          "label": "ERAP1",
+          "namespace": "UniProt"
+        }
+      },
+      "limitations": [
+        "Low ERAP2 background, not proof of complete absence",
+        "No conversion of estimated >90% inhibition into measured occupancy"
+      ],
+      "polarity": "supports",
+      "review_state": "pending_review",
+      "scope": "perturbation-specific immunopeptidome design",
+      "source_artifact": "temponeras2023-valid.pdf",
+      "source_class": "peer-reviewed publication",
+      "source_locator": "Article pp3,10: Results and Treatment of A375 cells with inhibitors (PDF pp4,11)",
+      "supporting_evidence": [
+        {
+          "locator": "Article pp3,10: Results and Treatment of A375 cells with inhibitors (PDF pp4,11)",
+          "sha256": "0b7105319ed305d689647a7418564454669930b492050f62361a63e1fbfebe7e"
+        }
+      ]
+    },
+    {
+      "contradicting_evidence": [],
+      "decision_input_admission": "NO FINAL INTEGRATED INPUTS: source-context stop condition",
+      "domain_claim": {
+        "confidence": null,
+        "context": {
+          "allotype": null,
+          "assay": null,
+          "cell_type": "A375",
+          "comparison": "analysed WT/KO biological n=2; inhibitor n=3",
+          "endpoint": null,
+          "experimental_system": "LC-MS/MS biological versus technical replication",
+          "genotype": null,
+          "hla_status": null,
+          "population": null,
+          "species": "human",
+          "tissue": null,
+          "treatment": null
+        },
+        "identifier": "closure:claim:temponeras-replicates",
+        "knowledge_kind": "source_assertion",
+        "object": {
+          "identifier": "10.1002/eji.202350449",
+          "kind": "study",
+          "label": "10.1002/eji.202350449",
+          "namespace": "source"
+        },
+        "predicate": "Temponeras initially grew three biological replicates per condition with technical triplicates, but excluded one low-signal biological replicate each for WT and KO; these conditions therefore do not retain three analysed biological replicates.",
+        "provenance": {
+          "checksum": "0b7105319ed305d689647a7418564454669930b492050f62361a63e1fbfebe7e",
+          "retrieved_at": "2026-10-05 18:23:52.769378+00:00",
+          "source_identifier": "10.1002/eji.202350449",
+          "source_kind": "publication",
+          "source_uri": "https://dspace.library.uu.nl/bitstreams/b432d0c6-2eef-45ed-b197-bc76898d4191/download",
+          "transformations": []
+        },
+        "subject": {
+          "identifier": "Q9NZ08",
+          "kind": "protein",
+          "label": "ERAP1",
+          "namespace": "UniProt"
+        }
+      },
+      "limitations": [
+        "Technical runs are not independent biological replicates",
+        "No independent source statistical reconstruction"
+      ],
+      "polarity": "qualifies",
+      "review_state": "pending_review",
+      "scope": "experimental replication",
+      "source_artifact": "temponeras2023-valid.pdf",
+      "source_class": "peer-reviewed publication",
+      "source_locator": "Article p3 Results (PDF p4), low peptide signal exclusion",
+      "supporting_evidence": [
+        {
+          "locator": "Article p3 Results (PDF p4), low peptide signal exclusion",
+          "sha256": "0b7105319ed305d689647a7418564454669930b492050f62361a63e1fbfebe7e"
+        }
+      ]
+    },
+    {
+      "contradicting_evidence": [],
+      "decision_input_admission": "NO FINAL INTEGRATED INPUTS: source-context stop condition",
+      "domain_claim": {
+        "confidence": null,
+        "context": {
+          "allotype": null,
+          "assay": null,
+          "cell_type": "A375",
+          "comparison": "KO vs allosteric inhibition",
+          "endpoint": "peptide length and sequence repertoire",
+          "experimental_system": null,
+          "genotype": null,
+          "hla_status": null,
+          "population": null,
+          "species": "human",
+          "tissue": null,
+          "treatment": null
+        },
+        "identifier": "closure:claim:temponeras-mode",
+        "knowledge_kind": "source_assertion",
+        "object": {
+          "identifier": "10.1002/eji.202350449",
+          "kind": "study",
+          "label": "10.1002/eji.202350449",
+          "namespace": "source"
+        },
+        "predicate": "The source reports distinct peptide sequences and length effects after KO versus clerodane allosteric inhibition; KO increased longer peptides whereas this inhibitor had marginal length effects.",
+        "provenance": {
+          "checksum": "0b7105319ed305d689647a7418564454669930b492050f62361a63e1fbfebe7e",
+          "retrieved_at": "2026-10-05 18:23:52.769378+00:00",
+          "source_identifier": "10.1002/eji.202350449",
+          "source_kind": "publication",
+          "source_uri": "https://dspace.library.uu.nl/bitstreams/b432d0c6-2eef-45ed-b197-bc76898d4191/download",
+          "transformations": []
+        },
+        "subject": {
+          "identifier": "Q9NZ08",
+          "kind": "protein",
+          "label": "ERAP1",
+          "namespace": "UniProt"
+        }
+      },
+      "limitations": [
+        "Off-target, partial modulation and adaptation remain possible contributors",
+        "MTT control uses 48 h, not full six-day matched exposure",
+        "No validated beneficial axSpA peptide state"
+      ],
+      "polarity": "qualifies",
+      "review_state": "pending_review",
+      "scope": "KO is not a universal pharmacological surrogate",
+      "source_artifact": "temponeras2023-valid.pdf",
+      "source_class": "peer-reviewed publication",
+      "source_locator": "Article pp9-10 Discussion (PDF pp10-11)",
+      "supporting_evidence": [
+        {
+          "locator": "Article pp9-10 Discussion (PDF pp10-11)",
+          "sha256": "0b7105319ed305d689647a7418564454669930b492050f62361a63e1fbfebe7e"
+        }
+      ]
+    },
+    {
+      "contradicting_evidence": [],
+      "decision_input_admission": "NO FINAL INTEGRATED INPUTS: source-context stop condition",
+      "domain_claim": {
+        "confidence": null,
+        "context": {
+          "allotype": null,
+          "assay": null,
+          "cell_type": "A375 melanoma",
+          "comparison": "WT vs compound 3 vs KO",
+          "endpoint": "pan-MHC-I immunopeptidome",
+          "experimental_system": null,
+          "genotype": "ERAP2 GG, source assertion",
+          "hla_status": null,
+          "population": null,
+          "species": "human",
+          "tissue": null,
+          "treatment": "10 uM, 6 days"
+        },
+        "identifier": "closure:claim:2025-b3p-design",
+        "knowledge_kind": "source_assertion",
+        "object": {
+          "identifier": "10.1016/j.mcpro.2025.100964",
+          "kind": "study",
+          "label": "10.1016/j.mcpro.2025.100964",
+          "namespace": "source"
+        },
+        "predicate": "The 2025 study compares A375 WT, 10 uM compound 3 B3P-site inhibitor for six days and ERAP1 KO; A375 carries ERAP2 GG associated with very low or absent ERAP2 production.",
+        "provenance": {
+          "checksum": "a58181eaa1dd56a4338492ced947655fdf728563fa10da0241e8b4070ea31b0d",
+          "retrieved_at": "2026-10-05 18:14:32.972905+00:00",
+          "source_identifier": "10.1016/j.mcpro.2025.100964",
+          "source_kind": "publication",
+          "source_uri": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12136889/fullTextXML",
+          "transformations": []
+        },
+        "subject": {
+          "identifier": "Q9NZ08",
+          "kind": "protein",
+          "label": "ERAP1",
+          "namespace": "UniProt"
+        }
+      },
+      "limitations": [
+        "Not HLA-B27 patient tissue",
+        "Not the Temponeras clerodane or a Maben compound"
+      ],
+      "polarity": "supports",
+      "review_state": "pending_review",
+      "scope": "mode-specific peptide processing",
+      "source_artifact": "PMC12136889.xml",
+      "source_class": "peer-reviewed publication",
+      "source_locator": "Inhibitor Treatment; Results: ERAP1 inhibition shapes the immunopeptidome; Supplemental Figures S3-S6 cited",
+      "supporting_evidence": [
+        {
+          "locator": "Inhibitor Treatment; Results: ERAP1 inhibition shapes the immunopeptidome; Supplemental Figures S3-S6 cited",
+          "sha256": "a58181eaa1dd56a4338492ced947655fdf728563fa10da0241e8b4070ea31b0d"
+        }
+      ]
+    },
+    {
+      "contradicting_evidence": [],
+      "decision_input_admission": "NO FINAL INTEGRATED INPUTS: source-context stop condition",
+      "domain_claim": {
+        "confidence": null,
+        "context": {
+          "allotype": null,
+          "assay": null,
+          "cell_type": "A375",
+          "comparison": null,
+          "endpoint": null,
+          "experimental_system": "clone-specific comparison",
+          "genotype": "ERAP1 KO clone 1G5; later 1B12",
+          "hla_status": null,
+          "population": null,
+          "species": "human",
+          "tissue": null,
+          "treatment": null
+        },
+        "identifier": "closure:claim:2025-clone",
+        "knowledge_kind": "source_assertion",
+        "object": {
+          "identifier": "10.1016/j.mcpro.2025.100964",
+          "kind": "study",
+          "label": "10.1016/j.mcpro.2025.100964",
+          "namespace": "source"
+        },
+        "predicate": "The 2025 immunopeptidome/proteome experiments used KO clone 1G5, later found to have a partial 1p35 duplication in about 20% of cells; downstream experiments switched to stable clone 1B12.",
+        "provenance": {
+          "checksum": "a58181eaa1dd56a4338492ced947655fdf728563fa10da0241e8b4070ea31b0d",
+          "retrieved_at": "2026-10-05 18:14:32.972905+00:00",
+          "source_identifier": "10.1016/j.mcpro.2025.100964",
+          "source_kind": "publication",
+          "source_uri": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12136889/fullTextXML",
+          "transformations": []
+        },
+        "subject": {
+          "identifier": "Q9NZ08",
+          "kind": "protein",
+          "label": "ERAP1",
+          "namespace": "UniProt"
+        }
+      },
+      "limitations": [
+        "Do not assume clone effects absent because the authors did not detect a proteome reflection"
+      ],
+      "polarity": "qualifies",
+      "review_state": "pending_review",
+      "scope": "KO comparison limitation",
+      "source_artifact": "PMC12136889.xml",
+      "source_class": "peer-reviewed publication",
+      "source_locator": "Cell Lines; Supplemental Figure S2 cited",
+      "supporting_evidence": [
+        {
+          "locator": "Cell Lines; Supplemental Figure S2 cited",
+          "sha256": "a58181eaa1dd56a4338492ced947655fdf728563fa10da0241e8b4070ea31b0d"
+        }
+      ]
+    },
+    {
+      "contradicting_evidence": [],
+      "decision_input_admission": "NO FINAL INTEGRATED INPUTS: source-context stop condition",
+      "domain_claim": {
+        "confidence": null,
+        "context": {
+          "allotype": null,
+          "assay": null,
+          "cell_type": null,
+          "comparison": null,
+          "endpoint": "cumulative peripheral arthritis prevalence",
+          "experimental_system": "mixed Lewis-SD transgenic model",
+          "genotype": "ERAP1 WT versus germline deficiency",
+          "hla_status": "HLA-B27/human beta2m transgenic",
+          "population": null,
+          "species": "rat",
+          "tissue": null,
+          "treatment": null
+        },
+        "identifier": "closure:claim:tran-arthritis",
+        "knowledge_kind": "source_assertion",
+        "object": {
+          "identifier": "10.1002/art.42327",
+          "kind": "study",
+          "label": "10.1002/art.42327",
+          "namespace": "source"
+        },
+        "predicate": "Tran reports arthritis in 12/37 ERAP1+/+ versus 4/34 ERAP1-/- HLA-B27 transgenic rats, with p=0.03; this is partial model protection from genetic loss, not drug efficacy.",
+        "provenance": {
+          "checksum": "4ada8762fcd0c71e4b6433fe8b46ae6018b7b5392c28ed2520dc4a67341dbda1",
+          "retrieved_at": "2026-10-05 18:23:52.770185+00:00",
+          "source_identifier": "10.1002/art.42327",
+          "source_kind": "publication",
+          "source_uri": "https://www.ncbi.nlm.nih.gov/research/bionlp/RESTful/pmcoa.cgi/BioC_xml/PMC9892207/unicode",
+          "transformations": []
+        },
+        "subject": {
+          "identifier": "Q9NZ08",
+          "kind": "protein",
+          "label": "ERAP1",
+          "namespace": "UniProt"
+        }
+      },
+      "limitations": [
+        "Multiple transgene copies; not exact human axSpA phenocopy",
+        "Rodents lack ERAP2",
+        "No transfer to chemical inhibition"
+      ],
+      "polarity": "supports",
+      "review_state": "pending_review",
+      "scope": "context-dependent animal disease modification",
+      "source_artifact": "PMC9892207.bioc.xml",
+      "source_class": "peer-reviewed publication",
+      "source_locator": "Results: ERAP1 deficiency protects HLA-B27 Tg rats from arthritis; Figure 4A",
+      "supporting_evidence": [
+        {
+          "locator": "Results: ERAP1 deficiency protects HLA-B27 Tg rats from arthritis; Figure 4A",
+          "sha256": "4ada8762fcd0c71e4b6433fe8b46ae6018b7b5392c28ed2520dc4a67341dbda1"
+        }
+      ]
+    },
+    {
+      "contradicting_evidence": [],
+      "decision_input_admission": "NO FINAL INTEGRATED INPUTS: source-context stop condition",
+      "domain_claim": {
+        "confidence": null,
+        "context": {
+          "allotype": null,
+          "assay": null,
+          "cell_type": null,
+          "comparison": null,
+          "endpoint": "gastrointestinal clinical and histological outcomes",
+          "experimental_system": null,
+          "genotype": "ERAP1 deficiency",
+          "hla_status": "HLA-B27 transgenic",
+          "population": null,
+          "species": "rat",
+          "tissue": null,
+          "treatment": null
+        },
+        "identifier": "closure:claim:tran-gut",
+        "knowledge_kind": "source_assertion",
+        "object": {
+          "identifier": "10.1002/art.42327",
+          "kind": "study",
+          "label": "10.1002/art.42327",
+          "namespace": "source"
+        },
+        "predicate": "Tran reports no improvement in gastrointestinal clinical inflammation and higher colon histology scores after ERAP1 deficiency, despite reduced arthritis prevalence.",
+        "provenance": {
+          "checksum": "4ada8762fcd0c71e4b6433fe8b46ae6018b7b5392c28ed2520dc4a67341dbda1",
+          "retrieved_at": "2026-10-05 18:23:52.770185+00:00",
+          "source_identifier": "10.1002/art.42327",
+          "source_kind": "publication",
+          "source_uri": "https://www.ncbi.nlm.nih.gov/research/bionlp/RESTful/pmcoa.cgi/BioC_xml/PMC9892207/unicode",
+          "transformations": []
+        },
+        "subject": {
+          "identifier": "Q9NZ08",
+          "kind": "protein",
+          "label": "ERAP1",
+          "namespace": "UniProt"
+        }
+      },
+      "limitations": [
+        "Not uniformly beneficial across endpoints"
+      ],
+      "polarity": "qualifies",
+      "review_state": "pending_review",
+      "scope": "mixed disease phenotype",
+      "source_artifact": "PMC9892207.bioc.xml",
+      "source_class": "peer-reviewed publication",
+      "source_locator": "Results: stool scores and colon histology; Figure 4C",
+      "supporting_evidence": [
+        {
+          "locator": "Results: stool scores and colon histology; Figure 4C",
+          "sha256": "4ada8762fcd0c71e4b6433fe8b46ae6018b7b5392c28ed2520dc4a67341dbda1"
+        }
+      ]
+    },
+    {
+      "contradicting_evidence": [],
+      "decision_input_admission": "NO FINAL INTEGRATED INPUTS: source-context stop condition",
+      "domain_claim": {
+        "confidence": null,
+        "context": {
+          "allotype": null,
+          "assay": null,
+          "cell_type": null,
+          "comparison": null,
+          "endpoint": "intracellular folding versus surface free heavy chains",
+          "experimental_system": null,
+          "genotype": "ERAP1 deficiency",
+          "hla_status": "HLA-B27 transgenic",
+          "population": null,
+          "species": "rat",
+          "tissue": null,
+          "treatment": null
+        },
+        "identifier": "closure:claim:tran-folding",
+        "knowledge_kind": "source_assertion",
+        "object": {
+          "identifier": "10.1002/art.42327",
+          "kind": "study",
+          "label": "10.1002/art.42327",
+          "namespace": "source"
+        },
+        "predicate": "Tran reports reduced HLA-B27 misfolding/ER stress while cell-surface free heavy-chain dimers and monomers increased under ERAP1 deficiency.",
+        "provenance": {
+          "checksum": "4ada8762fcd0c71e4b6433fe8b46ae6018b7b5392c28ed2520dc4a67341dbda1",
+          "retrieved_at": "2026-10-05 18:23:52.770185+00:00",
+          "source_identifier": "10.1002/art.42327",
+          "source_kind": "publication",
+          "source_uri": "https://www.ncbi.nlm.nih.gov/research/bionlp/RESTful/pmcoa.cgi/BioC_xml/PMC9892207/unicode",
+          "transformations": []
+        },
+        "subject": {
+          "identifier": "Q9NZ08",
+          "kind": "protein",
+          "label": "ERAP1",
+          "namespace": "UniProt"
+        }
+      },
+      "limitations": [
+        "Surface dimers cannot be equated to intracellular misfolding",
+        "Not drug engagement evidence"
+      ],
+      "polarity": "qualifies",
+      "review_state": "pending_review",
+      "scope": "mechanism is compartment dependent",
+      "source_artifact": "PMC9892207.bioc.xml",
+      "source_class": "peer-reviewed publication",
+      "source_locator": "Results; Figures 1-3",
+      "supporting_evidence": [
+        {
+          "locator": "Results; Figures 1-3",
+          "sha256": "4ada8762fcd0c71e4b6433fe8b46ae6018b7b5392c28ed2520dc4a67341dbda1"
+        }
+      ]
+    },
+    {
+      "contradicting_evidence": [],
+      "decision_input_admission": "NO FINAL INTEGRATED INPUTS: source-context stop condition",
+      "domain_claim": {
+        "confidence": null,
+        "context": {
+          "allotype": null,
+          "assay": null,
+          "cell_type": "myeloid cells",
+          "comparison": null,
+          "endpoint": null,
+          "experimental_system": null,
+          "genotype": "ERAP1 deficiency",
+          "hla_status": "HLA-B27 transgenic",
+          "population": null,
+          "species": "rat",
+          "tissue": null,
+          "treatment": null
+        },
+        "identifier": "closure:claim:tran-immune",
+        "knowledge_kind": "source_assertion",
+        "object": {
+          "identifier": "10.1002/art.42327",
+          "kind": "study",
+          "label": "10.1002/art.42327",
+          "namespace": "source"
+        },
+        "predicate": "Tran reports mitigation of excess Il23a induction, but no rescue of defective dendritic-cell allogeneic stimulation or the depleted CD103+/MHC-II+ population.",
+        "provenance": {
+          "checksum": "4ada8762fcd0c71e4b6433fe8b46ae6018b7b5392c28ed2520dc4a67341dbda1",
+          "retrieved_at": "2026-10-05 18:23:52.770185+00:00",
+          "source_identifier": "10.1002/art.42327",
+          "source_kind": "publication",
+          "source_uri": "https://www.ncbi.nlm.nih.gov/research/bionlp/RESTful/pmcoa.cgi/BioC_xml/PMC9892207/unicode",
+          "transformations": []
+        },
+        "subject": {
+          "identifier": "Q9NZ08",
+          "kind": "protein",
+          "label": "ERAP1",
+          "namespace": "UniProt"
+        }
+      },
+      "limitations": [
+        "No universal cytokine normalization or therapeutic conclusion"
+      ],
+      "polarity": "qualifies",
+      "review_state": "pending_review",
+      "scope": "mixed immune effects",
+      "source_artifact": "PMC9892207.bioc.xml",
+      "source_class": "peer-reviewed publication",
+      "source_locator": "Results: ERAP1 deficiency affects myeloid cell phenotypes; Figure 5",
+      "supporting_evidence": [
+        {
+          "locator": "Results: ERAP1 deficiency affects myeloid cell phenotypes; Figure 5",
+          "sha256": "4ada8762fcd0c71e4b6433fe8b46ae6018b7b5392c28ed2520dc4a67341dbda1"
+        }
+      ]
+    },
+    {
+      "contradicting_evidence": [],
+      "decision_input_admission": "NO FINAL INTEGRATED INPUTS: source-context stop condition",
+      "domain_claim": {
+        "confidence": null,
+        "context": {
+          "allotype": "source allotypes 2 versus 10",
+          "assay": null,
+          "cell_type": "A375 melanoma",
+          "comparison": null,
+          "endpoint": null,
+          "experimental_system": "engineered expression clones",
+          "genotype": null,
+          "hla_status": "non-B27 A375 background",
+          "population": null,
+          "species": "human",
+          "tissue": null,
+          "treatment": "IFN-gamma 20 ng/mL, 24 h"
+        },
+        "identifier": "closure:claim:allotype2025-design",
+        "knowledge_kind": "source_assertion",
+        "object": {
+          "identifier": "10.1111/imm.70056",
+          "kind": "study",
+          "label": "10.1111/imm.70056",
+          "namespace": "source"
+        },
+        "predicate": "PXD066752 concerns engineered ERAP1 allotypes 2/10 in A375 melanoma, three biological replicates per condition, with 20 ng/mL IFN-gamma for 24 h; it is neither KO versus drug nor axSpA tissue.",
+        "provenance": {
+          "checksum": "fae0250dd4948a0a8ae66fc304ebb7b280761cab8c205cf9cd194f7aaf57b9a7",
+          "retrieved_at": "2026-10-05 18:14:32.998100+00:00",
+          "source_identifier": "10.1111/imm.70056",
+          "source_kind": "publication",
+          "source_uri": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12779449/fullTextXML",
+          "transformations": []
+        },
+        "subject": {
+          "identifier": "Q9NZ08",
+          "kind": "protein",
+          "label": "ERAP1",
+          "namespace": "UniProt"
+        }
+      },
+      "limitations": [
+        "No therapeutic protective-state assignment",
+        "Clone expression matching does not eliminate all clone effects"
+      ],
+      "polarity": "qualifies",
+      "review_state": "pending_review",
+      "scope": "allotype-dependent presentation",
+      "source_artifact": "PMC12779449.xml",
+      "source_class": "peer-reviewed publication",
+      "source_locator": "Materials and Methods: generation of cell lines and isolation of immunopeptidome; Figure 3A",
+      "supporting_evidence": [
+        {
+          "locator": "Materials and Methods: generation of cell lines and isolation of immunopeptidome; Figure 3A",
+          "sha256": "fae0250dd4948a0a8ae66fc304ebb7b280761cab8c205cf9cd194f7aaf57b9a7"
+        }
+      ]
+    },
+    {
+      "contradicting_evidence": [],
+      "decision_input_admission": "NO FINAL INTEGRATED INPUTS: source-context stop condition",
+      "domain_claim": {
+        "confidence": null,
+        "context": {
+          "allotype": null,
+          "assay": null,
+          "cell_type": "HeLa",
+          "comparison": "KK-SIINFEKL versus compound-6 control",
+          "endpoint": "antigen presentation pIC50",
+          "experimental_system": null,
+          "genotype": null,
+          "hla_status": null,
+          "population": null,
+          "species": "human",
+          "tissue": null,
+          "treatment": null
+        },
+        "identifier": "closure:claim:tinworth-controls",
+        "knowledge_kind": "source_assertion",
+        "object": {
+          "identifier": "10.1021/acs.jmedchem.6c00029",
+          "kind": "study",
+          "label": "10.1021/acs.jmedchem.6c00029",
+          "namespace": "source"
+        },
+        "predicate": "Tinworth Table 1 retains two HeLa control schemes. Compound 21 has pIC50 7.25 with KK-SIINFEKL and 7.05 with compound-6 normalization; these are not identical replicate observations.",
+        "provenance": {
+          "checksum": "80a2836fee6bf9f437fce86a44478a9f230e37629cbd96cd1ddfcdf1aac4a3db",
+          "retrieved_at": "2026-10-05 18:14:32.147786+00:00",
+          "source_identifier": "10.1021/acs.jmedchem.6c00029",
+          "source_kind": "publication",
+          "source_uri": "https://ndownloader.figshare.com/files/65745763",
+          "transformations": []
+        },
+        "subject": {
+          "identifier": "Q9NZ08",
+          "kind": "protein",
+          "label": "ERAP1",
+          "namespace": "UniProt"
+        }
+      },
+      "limitations": [
+        "Endpoint summaries admitted only as source facts; exact full protocol inaccessible",
+        "No averaging or substituted potency"
+      ],
+      "polarity": "qualifies",
+      "review_state": "pending_review",
+      "scope": "assay comparability",
+      "source_artifact": "si/jm6c00029_si_001.pdf",
+      "source_class": "supplementary information",
+      "source_locator": "S5 Supplementary Table 1, compound 21, two cellular endpoint columns",
+      "supporting_evidence": [
+        {
+          "locator": "S5 Supplementary Table 1, compound 21, two cellular endpoint columns",
+          "sha256": "80a2836fee6bf9f437fce86a44478a9f230e37629cbd96cd1ddfcdf1aac4a3db"
+        }
+      ]
+    },
+    {
+      "contradicting_evidence": [],
+      "decision_input_admission": "NO FINAL INTEGRATED INPUTS: source-context stop condition",
+      "domain_claim": {
+        "confidence": null,
+        "context": {
+          "allotype": null,
+          "assay": null,
+          "cell_type": null,
+          "comparison": null,
+          "endpoint": "scaled intrinsic clearance",
+          "experimental_system": null,
+          "genotype": null,
+          "hla_status": null,
+          "population": null,
+          "species": "human hepatocytes in vitro",
+          "tissue": null,
+          "treatment": "0.5 uM, 0-240 min, 37 C"
+        },
+        "identifier": "closure:claim:tinworth-dmpk",
+        "knowledge_kind": "source_assertion",
+        "object": {
+          "identifier": "10.1021/acs.jmedchem.6c00029",
+          "kind": "study",
+          "label": "10.1021/acs.jmedchem.6c00029",
+          "namespace": "source"
+        },
+        "predicate": "Tinworth reports human-hepatocyte intrinsic clearance of 62.0 and 35.1 mL/min/kg for compounds 19 and 21 respectively, with unbound estimates 68 and 39; these are in vitro scaled measurements, not human participant PK.",
+        "provenance": {
+          "checksum": "80a2836fee6bf9f437fce86a44478a9f230e37629cbd96cd1ddfcdf1aac4a3db",
+          "retrieved_at": "2026-10-05 18:14:32.147786+00:00",
+          "source_identifier": "10.1021/acs.jmedchem.6c00029",
+          "source_kind": "publication",
+          "source_uri": "https://ndownloader.figshare.com/files/65745763",
+          "transformations": []
+        },
+        "subject": {
+          "identifier": "Q9NZ08",
+          "kind": "protein",
+          "label": "ERAP1",
+          "namespace": "UniProt"
+        }
+      },
+      "limitations": [
+        "No oral exposure or patient efficacy inference"
+      ],
+      "polarity": "qualifies",
+      "review_state": "pending_review",
+      "scope": "programme DMPK only",
+      "source_artifact": "si/jm6c00029_si_001.pdf",
+      "source_class": "supplementary information",
+      "source_locator": "S5 Supplementary Table 2",
+      "supporting_evidence": [
+        {
+          "locator": "S5 Supplementary Table 2",
+          "sha256": "80a2836fee6bf9f437fce86a44478a9f230e37629cbd96cd1ddfcdf1aac4a3db"
+        }
+      ]
+    },
+    {
+      "contradicting_evidence": [],
+      "decision_input_admission": "NO FINAL INTEGRATED INPUTS: source-context stop condition",
+      "domain_claim": {
+        "confidence": null,
+        "context": {
+          "allotype": null,
+          "assay": null,
+          "cell_type": null,
+          "comparison": null,
+          "endpoint": "body weight/knee pathology/paw scoring",
+          "experimental_system": "collagen-induced arthritis, not axSpA",
+          "genotype": null,
+          "hla_status": null,
+          "population": null,
+          "species": "mouse",
+          "tissue": null,
+          "treatment": "compound 21 GSK235 BID oral"
+        },
+        "identifier": "closure:claim:tinworth-cia",
+        "knowledge_kind": "source_assertion",
+        "object": {
+          "identifier": "10.1021/acs.jmedchem.6c00029",
+          "kind": "study",
+          "label": "10.1021/acs.jmedchem.6c00029",
+          "namespace": "source"
+        },
+        "predicate": "Tinworth SI documents mouse CIA compound-21 BID oral doses of 30/90/270 mg/kg and day-36 knee pathology, with daily paw scoring D18-D36. It does not supply sufficient full design/exposure methods for a complete causal translational adjudication.",
+        "provenance": {
+          "checksum": "80a2836fee6bf9f437fce86a44478a9f230e37629cbd96cd1ddfcdf1aac4a3db",
+          "retrieved_at": "2026-10-05 18:14:32.147786+00:00",
+          "source_identifier": "10.1021/acs.jmedchem.6c00029",
+          "source_kind": "publication",
+          "source_uri": "https://ndownloader.figshare.com/files/65745763",
+          "transformations": []
+        },
+        "subject": {
+          "identifier": "Q9NZ08",
+          "kind": "protein",
+          "label": "ERAP1",
+          "namespace": "UniProt"
+        }
+      },
+      "limitations": [
+        "No graph digitization, effect estimate or independent statistics",
+        "Main study randomization/group size/exposure and engagement methods inaccessible",
+        "No human axSpA efficacy claim"
+      ],
+      "polarity": "qualifies",
+      "review_state": "pending_review",
+      "scope": "source design context only",
+      "source_artifact": "si/jm6c00029_si_001.pdf",
+      "source_class": "supplementary information",
+      "source_locator": "S2 Supplementary Figures 1/2; S7 Table 4",
+      "supporting_evidence": [
+        {
+          "locator": "S2 Supplementary Figures 1/2; S7 Table 4",
+          "sha256": "80a2836fee6bf9f437fce86a44478a9f230e37629cbd96cd1ddfcdf1aac4a3db"
+        }
+      ]
+    },
+    {
+      "contradicting_evidence": [],
+      "decision_input_admission": "NO FINAL INTEGRATED INPUTS: source-context stop condition",
+      "domain_claim": {
+        "confidence": null,
+        "context": {
+          "allotype": null,
+          "assay": null,
+          "cell_type": null,
+          "comparison": null,
+          "endpoint": "peptide/TCR readouts",
+          "experimental_system": "source-described preclinical cell/T-cell assays",
+          "genotype": null,
+          "hla_status": "HLA-B27, subtype not stated in abstract",
+          "population": null,
+          "species": null,
+          "tissue": null,
+          "treatment": "GRWD0715"
+        },
+        "identifier": "closure:claim:focis-0715",
+        "knowledge_kind": "source_assertion",
+        "object": {
+          "identifier": "FOCIS2025:W146",
+          "kind": "study",
+          "label": "FOCIS2025:W146",
+          "namespace": "source"
+        },
+        "predicate": "FOCIS W146 reports GRWD0715 effects on putative GLRB/HelQ/SEC14L2 peptide precursors, HLA-B27 peptide presentation and cognate CD8/TCR activation. This is conference evidence, not independently adjudicated clinical efficacy or direct occupancy.",
+        "provenance": {
+          "checksum": "9db935d477c3d0685425a539fc933f60e94aefb6fac6b3042b40e3fa36fec877",
+          "retrieved_at": "2026-10-05 18:23:08.652705+00:00",
+          "source_identifier": "FOCIS2025:W146",
+          "source_kind": "publication",
+          "source_uri": "https://focisnet.org/wp-content/uploads/2025-FINAL-ABSTRACT-SUPPLEMENT-06.23.25.pdf",
+          "transformations": []
+        },
+        "subject": {
+          "identifier": "Q9NZ08",
+          "kind": "protein",
+          "label": "ERAP1",
+          "namespace": "UniProt"
+        }
+      },
+      "limitations": [
+        "Full protocol, replicate structure and exposure not supplied",
+        "Cannot establish engagement of historical Maben compounds"
+      ],
+      "polarity": "supports",
+      "review_state": "pending_review",
+      "scope": "GRWD0715 programme conference claim only",
+      "source_artifact": "focis2025.pdf",
+      "source_class": "conference abstract",
+      "source_locator": "W146 printed pp56-57, PDF pp57-58",
+      "supporting_evidence": [
+        {
+          "locator": "W146 printed pp56-57, PDF pp57-58",
+          "sha256": "9db935d477c3d0685425a539fc933f60e94aefb6fac6b3042b40e3fa36fec877"
+        }
+      ]
+    },
+    {
+      "contradicting_evidence": [],
+      "decision_input_admission": "NO FINAL INTEGRATED INPUTS: source-context stop condition",
+      "domain_claim": {
+        "confidence": null,
+        "context": {
+          "allotype": null,
+          "assay": null,
+          "cell_type": null,
+          "comparison": null,
+          "endpoint": null,
+          "experimental_system": "trial registration, not outcome analysis",
+          "genotype": null,
+          "hla_status": null,
+          "population": null,
+          "species": "human",
+          "tissue": null,
+          "treatment": "GRWD0715"
+        },
+        "identifier": "closure:claim:east-registry",
+        "knowledge_kind": "axis_observation",
+        "object": {
+          "identifier": "NCT07047703",
+          "kind": "study",
+          "label": "NCT07047703",
+          "namespace": "source"
+        },
+        "predicate": "The frozen EAST-1 registry record NCT07047703 was updated publicly on 2026-09-18, lists recruiting status and contains no posted results section.",
+        "provenance": {
+          "checksum": "a1e93c8d5ad40b09affe79efd546871dbb222b64fa1099e847d167a68a318e0e",
+          "retrieved_at": "2026-10-05 18:23:08.664307+00:00",
+          "source_identifier": "NCT07047703",
+          "source_kind": "axis_pipeline",
+          "source_uri": "https://clinicaltrials.gov/api/v2/studies/NCT07047703",
+          "transformations": []
+        },
+        "subject": {
+          "identifier": "Q9NZ08",
+          "kind": "protein",
+          "label": "ERAP1",
+          "namespace": "UniProt"
+        }
+      },
+      "limitations": [
+        "Absence of posted results does not imply absence of experiments or lack of efficacy"
+      ],
+      "polarity": "qualifies",
+      "review_state": "pending_review",
+      "scope": "human clinical evidence availability at cutoff",
+      "source_artifact": "east1-registry.json",
+      "source_class": "trial registry",
+      "source_locator": "protocolSection.statusModule.lastUpdatePostDateStruct; overallStatus; hasResults=false and absent resultsSection",
+      "supporting_evidence": [
+        {
+          "locator": "protocolSection.statusModule.lastUpdatePostDateStruct; overallStatus; hasResults=false and absent resultsSection",
+          "sha256": "a1e93c8d5ad40b09affe79efd546871dbb222b64fa1099e847d167a68a318e0e"
+        }
+      ]
+    },
+    {
+      "contradicting_evidence": [],
+      "decision_input_admission": "NO FINAL INTEGRATED INPUTS: source-context stop condition",
+      "domain_claim": {
+        "confidence": null,
+        "context": {
+          "allotype": null,
+          "assay": null,
+          "cell_type": null,
+          "comparison": null,
+          "endpoint": "sponsor-reported PK/engagement",
+          "experimental_system": null,
+          "genotype": null,
+          "hla_status": null,
+          "population": "healthy volunteers SAD; axSpA MAD dosing",
+          "species": "human",
+          "tissue": null,
+          "treatment": "GRWD0715"
+        },
+        "identifier": "closure:claim:east-sponsor",
+        "knowledge_kind": "source_assertion",
+        "object": {
+          "identifier": "Greywolf:EAST1:2026-09-08",
+          "kind": "study",
+          "label": "Greywolf:EAST1:2026-09-08",
+          "namespace": "source"
+        },
+        "predicate": "The sponsor's 2026-09-08 announcement reports dose-proportional PK and ERAP1 engagement in healthy-volunteer SAD, and first axSpA participants dosed in MAD; underlying engagement methods/data were not independently adjudicated.",
+        "provenance": {
+          "checksum": "5589c640a1a07ed07b24f59dd7163a7b8f79d7825745d40e6fca39a2f95c5bbf",
+          "retrieved_at": "2026-10-05 18:23:52.770035+00:00",
+          "source_identifier": "Greywolf:EAST1:2026-09-08",
+          "source_kind": "publication",
+          "source_uri": "https://www.greywolftherapeutics.com/news/greywolftherapeutics-doses-first-participants-with-axspa-in-novel-erap1-inhibitor-trial",
+          "transformations": []
+        },
+        "subject": {
+          "identifier": "Q9NZ08",
+          "kind": "protein",
+          "label": "ERAP1",
+          "namespace": "UniProt"
+        }
+      },
+      "limitations": [
+        "Not independently established occupancy",
+        "No axSpA efficacy result",
+        "No transfer to historical Maben compounds"
+      ],
+      "polarity": "supports",
+      "review_state": "pending_review",
+      "scope": "GRWD0715 programme only",
+      "source_artifact": "east1-sponsor.html",
+      "source_class": "sponsor-reported communication",
+      "source_locator": "Publication date and first two release bullet points; SAD/MAD paragraph",
+      "supporting_evidence": [
+        {
+          "locator": "Publication date and first two release bullet points; SAD/MAD paragraph",
+          "sha256": "5589c640a1a07ed07b24f59dd7163a7b8f79d7825745d40e6fca39a2f95c5bbf"
+        }
+      ]
+    },
+    {
+      "contradicting_evidence": [],
+      "decision_input_admission": "NO FINAL INTEGRATED INPUTS: source-context stop condition",
+      "domain_claim": {
+        "confidence": null,
+        "context": {
+          "allotype": null,
+          "assay": "X-ray diffraction",
+          "cell_type": null,
+          "comparison": null,
+          "endpoint": "source-anchored sequence mapping and coordinates",
+          "experimental_system": "crystallographic constructs",
+          "genotype": null,
+          "hla_status": null,
+          "population": null,
+          "species": "human",
+          "tissue": null,
+          "treatment": null
+        },
+        "identifier": "closure:claim:structure:9GJN",
+        "knowledge_kind": "axis_observation",
+        "object": {
+          "identifier": "PDB:9GJN",
+          "kind": "study",
+          "label": "PDB:9GJN",
+          "namespace": "source"
+        },
+        "predicate": "PDB 9GJN contains mapped human ERAP1 crystallographic constructs and deposited organic components, with experimental X-ray resolution 1.717 A; this is not a computational pose or cellular occupancy measurement.",
+        "provenance": {
+          "checksum": "9793d0f77c6d4934a040d7642beb40f09938f934880d2dce5ed9cd0964973ef9",
+          "retrieved_at": "2026-10-05 18:08:18.251105+00:00",
+          "source_identifier": "PDB:9GJN",
+          "source_kind": "axis_pipeline",
+          "source_uri": "https://files.rcsb.org/download/9GJN.cif",
+          "transformations": []
+        },
+        "subject": {
+          "identifier": "Q9NZ08",
+          "kind": "protein",
+          "label": "ERAP1",
+          "namespace": "UniProt"
+        }
+      },
+      "limitations": [
+        "Preserve all construct changes, missing residues and author versus canonical numbering in v1 structure-index",
+        "Do not classify every buffer/additive as a pharmacological ligand or assign regulatory-site activity from contact distance",
+        "9TFN SI 2.00 A differs from current deposited 1.739 A; both contexts retained"
+      ],
+      "polarity": "supports",
+      "review_state": "pending_review",
+      "scope": "experimental construct geometry only",
+      "source_artifact": "9GJN.cif",
+      "source_class": "structural database",
+      "source_locator": "mmCIF _struct_ref/_struct_ref_seq_dif/_atom_site; v1 structure-index.json:9GJN",
+      "supporting_evidence": [
+        {
+          "locator": "mmCIF _struct_ref/_struct_ref_seq_dif/_atom_site; v1 structure-index.json:9GJN",
+          "sha256": "9793d0f77c6d4934a040d7642beb40f09938f934880d2dce5ed9cd0964973ef9"
+        }
+      ]
+    },
+    {
+      "contradicting_evidence": [],
+      "decision_input_admission": "NO FINAL INTEGRATED INPUTS: source-context stop condition",
+      "domain_claim": {
+        "confidence": null,
+        "context": {
+          "allotype": null,
+          "assay": "X-ray diffraction",
+          "cell_type": null,
+          "comparison": null,
+          "endpoint": "source-anchored sequence mapping and coordinates",
+          "experimental_system": "crystallographic constructs",
+          "genotype": null,
+          "hla_status": null,
+          "population": null,
+          "species": "human",
+          "tissue": null,
+          "treatment": null
+        },
+        "identifier": "closure:claim:structure:9GJS",
+        "knowledge_kind": "axis_observation",
+        "object": {
+          "identifier": "PDB:9GJS",
+          "kind": "study",
+          "label": "PDB:9GJS",
+          "namespace": "source"
+        },
+        "predicate": "PDB 9GJS contains mapped human ERAP1 crystallographic constructs and deposited organic components, with experimental X-ray resolution 1.351 A; this is not a computational pose or cellular occupancy measurement.",
+        "provenance": {
+          "checksum": "92d4b68f3f48d8cbc52b771918ef6819bdf7ced8f8708b087d916009c843f8ba",
+          "retrieved_at": "2026-10-05 18:08:18.750476+00:00",
+          "source_identifier": "PDB:9GJS",
+          "source_kind": "axis_pipeline",
+          "source_uri": "https://files.rcsb.org/download/9GJS.cif",
+          "transformations": []
+        },
+        "subject": {
+          "identifier": "Q9NZ08",
+          "kind": "protein",
+          "label": "ERAP1",
+          "namespace": "UniProt"
+        }
+      },
+      "limitations": [
+        "Preserve all construct changes, missing residues and author versus canonical numbering in v1 structure-index",
+        "Do not classify every buffer/additive as a pharmacological ligand or assign regulatory-site activity from contact distance",
+        "9TFN SI 2.00 A differs from current deposited 1.739 A; both contexts retained"
+      ],
+      "polarity": "supports",
+      "review_state": "pending_review",
+      "scope": "experimental construct geometry only",
+      "source_artifact": "9GJS.cif",
+      "source_class": "structural database",
+      "source_locator": "mmCIF _struct_ref/_struct_ref_seq_dif/_atom_site; v1 structure-index.json:9GJS",
+      "supporting_evidence": [
+        {
+          "locator": "mmCIF _struct_ref/_struct_ref_seq_dif/_atom_site; v1 structure-index.json:9GJS",
+          "sha256": "92d4b68f3f48d8cbc52b771918ef6819bdf7ced8f8708b087d916009c843f8ba"
+        }
+      ]
+    },
+    {
+      "contradicting_evidence": [],
+      "decision_input_admission": "NO FINAL INTEGRATED INPUTS: source-context stop condition",
+      "domain_claim": {
+        "confidence": null,
+        "context": {
+          "allotype": null,
+          "assay": "X-ray diffraction",
+          "cell_type": null,
+          "comparison": null,
+          "endpoint": "source-anchored sequence mapping and coordinates",
+          "experimental_system": "crystallographic constructs",
+          "genotype": null,
+          "hla_status": null,
+          "population": null,
+          "species": "human",
+          "tissue": null,
+          "treatment": null
+        },
+        "identifier": "closure:claim:structure:9GK6",
+        "knowledge_kind": "axis_observation",
+        "object": {
+          "identifier": "PDB:9GK6",
+          "kind": "study",
+          "label": "PDB:9GK6",
+          "namespace": "source"
+        },
+        "predicate": "PDB 9GK6 contains mapped human ERAP1 crystallographic constructs and deposited organic components, with experimental X-ray resolution 1.327 A; this is not a computational pose or cellular occupancy measurement.",
+        "provenance": {
+          "checksum": "dfe3bf10a7cd37edc3ced30f085bc1158b26aceb38434e06160892188f07b68c",
+          "retrieved_at": "2026-10-05 18:08:19.272407+00:00",
+          "source_identifier": "PDB:9GK6",
+          "source_kind": "axis_pipeline",
+          "source_uri": "https://files.rcsb.org/download/9GK6.cif",
+          "transformations": []
+        },
+        "subject": {
+          "identifier": "Q9NZ08",
+          "kind": "protein",
+          "label": "ERAP1",
+          "namespace": "UniProt"
+        }
+      },
+      "limitations": [
+        "Preserve all construct changes, missing residues and author versus canonical numbering in v1 structure-index",
+        "Do not classify every buffer/additive as a pharmacological ligand or assign regulatory-site activity from contact distance",
+        "9TFN SI 2.00 A differs from current deposited 1.739 A; both contexts retained"
+      ],
+      "polarity": "supports",
+      "review_state": "pending_review",
+      "scope": "experimental construct geometry only",
+      "source_artifact": "9GK6.cif",
+      "source_class": "structural database",
+      "source_locator": "mmCIF _struct_ref/_struct_ref_seq_dif/_atom_site; v1 structure-index.json:9GK6",
+      "supporting_evidence": [
+        {
+          "locator": "mmCIF _struct_ref/_struct_ref_seq_dif/_atom_site; v1 structure-index.json:9GK6",
+          "sha256": "dfe3bf10a7cd37edc3ced30f085bc1158b26aceb38434e06160892188f07b68c"
+        }
+      ]
+    },
+    {
+      "contradicting_evidence": [],
+      "decision_input_admission": "NO FINAL INTEGRATED INPUTS: source-context stop condition",
+      "domain_claim": {
+        "confidence": null,
+        "context": {
+          "allotype": null,
+          "assay": "X-ray diffraction",
+          "cell_type": null,
+          "comparison": null,
+          "endpoint": "source-anchored sequence mapping and coordinates",
+          "experimental_system": "crystallographic constructs",
+          "genotype": null,
+          "hla_status": null,
+          "population": null,
+          "species": "human",
+          "tissue": null,
+          "treatment": null
+        },
+        "identifier": "closure:claim:structure:9GKE",
+        "knowledge_kind": "axis_observation",
+        "object": {
+          "identifier": "PDB:9GKE",
+          "kind": "study",
+          "label": "PDB:9GKE",
+          "namespace": "source"
+        },
+        "predicate": "PDB 9GKE contains mapped human ERAP1 crystallographic constructs and deposited organic components, with experimental X-ray resolution 1.367 A; this is not a computational pose or cellular occupancy measurement.",
+        "provenance": {
+          "checksum": "f8037bf57fe55ef3cf3ce96762a9f53256ca4f72d23af8e07f31b48ee0eda4f3",
+          "retrieved_at": "2026-10-05 18:08:19.733842+00:00",
+          "source_identifier": "PDB:9GKE",
+          "source_kind": "axis_pipeline",
+          "source_uri": "https://files.rcsb.org/download/9GKE.cif",
+          "transformations": []
+        },
+        "subject": {
+          "identifier": "Q9NZ08",
+          "kind": "protein",
+          "label": "ERAP1",
+          "namespace": "UniProt"
+        }
+      },
+      "limitations": [
+        "Preserve all construct changes, missing residues and author versus canonical numbering in v1 structure-index",
+        "Do not classify every buffer/additive as a pharmacological ligand or assign regulatory-site activity from contact distance",
+        "9TFN SI 2.00 A differs from current deposited 1.739 A; both contexts retained"
+      ],
+      "polarity": "supports",
+      "review_state": "pending_review",
+      "scope": "experimental construct geometry only",
+      "source_artifact": "9GKE.cif",
+      "source_class": "structural database",
+      "source_locator": "mmCIF _struct_ref/_struct_ref_seq_dif/_atom_site; v1 structure-index.json:9GKE",
+      "supporting_evidence": [
+        {
+          "locator": "mmCIF _struct_ref/_struct_ref_seq_dif/_atom_site; v1 structure-index.json:9GKE",
+          "sha256": "f8037bf57fe55ef3cf3ce96762a9f53256ca4f72d23af8e07f31b48ee0eda4f3"
+        }
+      ]
+    },
+    {
+      "contradicting_evidence": [],
+      "decision_input_admission": "NO FINAL INTEGRATED INPUTS: source-context stop condition",
+      "domain_claim": {
+        "confidence": null,
+        "context": {
+          "allotype": null,
+          "assay": "X-ray diffraction",
+          "cell_type": null,
+          "comparison": null,
+          "endpoint": "source-anchored sequence mapping and coordinates",
+          "experimental_system": "crystallographic constructs",
+          "genotype": null,
+          "hla_status": null,
+          "population": null,
+          "species": "human",
+          "tissue": null,
+          "treatment": null
+        },
+        "identifier": "closure:claim:structure:9TD3",
+        "knowledge_kind": "axis_observation",
+        "object": {
+          "identifier": "PDB:9TD3",
+          "kind": "study",
+          "label": "PDB:9TD3",
+          "namespace": "source"
+        },
+        "predicate": "PDB 9TD3 contains mapped human ERAP1 crystallographic constructs and deposited organic components, with experimental X-ray resolution 1.57 A; this is not a computational pose or cellular occupancy measurement.",
+        "provenance": {
+          "checksum": "0c3ac5f1032450d5a6fa871143d4672362e40a3ea70c08def315839aafe8298a",
+          "retrieved_at": "2026-10-05 18:08:20.247671+00:00",
+          "source_identifier": "PDB:9TD3",
+          "source_kind": "axis_pipeline",
+          "source_uri": "https://files.rcsb.org/download/9TD3.cif",
+          "transformations": []
+        },
+        "subject": {
+          "identifier": "Q9NZ08",
+          "kind": "protein",
+          "label": "ERAP1",
+          "namespace": "UniProt"
+        }
+      },
+      "limitations": [
+        "Preserve all construct changes, missing residues and author versus canonical numbering in v1 structure-index",
+        "Do not classify every buffer/additive as a pharmacological ligand or assign regulatory-site activity from contact distance",
+        "9TFN SI 2.00 A differs from current deposited 1.739 A; both contexts retained"
+      ],
+      "polarity": "supports",
+      "review_state": "pending_review",
+      "scope": "experimental construct geometry only",
+      "source_artifact": "9TD3.cif",
+      "source_class": "structural database",
+      "source_locator": "mmCIF _struct_ref/_struct_ref_seq_dif/_atom_site; v1 structure-index.json:9TD3",
+      "supporting_evidence": [
+        {
+          "locator": "mmCIF _struct_ref/_struct_ref_seq_dif/_atom_site; v1 structure-index.json:9TD3",
+          "sha256": "0c3ac5f1032450d5a6fa871143d4672362e40a3ea70c08def315839aafe8298a"
+        }
+      ]
+    },
+    {
+      "contradicting_evidence": [],
+      "decision_input_admission": "NO FINAL INTEGRATED INPUTS: source-context stop condition",
+      "domain_claim": {
+        "confidence": null,
+        "context": {
+          "allotype": null,
+          "assay": "X-ray diffraction",
+          "cell_type": null,
+          "comparison": null,
+          "endpoint": "source-anchored sequence mapping and coordinates",
+          "experimental_system": "crystallographic constructs",
+          "genotype": null,
+          "hla_status": null,
+          "population": null,
+          "species": "human",
+          "tissue": null,
+          "treatment": null
+        },
+        "identifier": "closure:claim:structure:9TD5",
+        "knowledge_kind": "axis_observation",
+        "object": {
+          "identifier": "PDB:9TD5",
+          "kind": "study",
+          "label": "PDB:9TD5",
+          "namespace": "source"
+        },
+        "predicate": "PDB 9TD5 contains mapped human ERAP1 crystallographic constructs and deposited organic components, with experimental X-ray resolution 1.45 A; this is not a computational pose or cellular occupancy measurement.",
+        "provenance": {
+          "checksum": "3c04ff7331ada5f216e97e0ddcc14a111749f4df6948505fd4467d3e93cf3489",
+          "retrieved_at": "2026-10-05 18:08:20.250480+00:00",
+          "source_identifier": "PDB:9TD5",
+          "source_kind": "axis_pipeline",
+          "source_uri": "https://files.rcsb.org/download/9TD5.cif",
+          "transformations": []
+        },
+        "subject": {
+          "identifier": "Q9NZ08",
+          "kind": "protein",
+          "label": "ERAP1",
+          "namespace": "UniProt"
+        }
+      },
+      "limitations": [
+        "Preserve all construct changes, missing residues and author versus canonical numbering in v1 structure-index",
+        "Do not classify every buffer/additive as a pharmacological ligand or assign regulatory-site activity from contact distance",
+        "9TFN SI 2.00 A differs from current deposited 1.739 A; both contexts retained"
+      ],
+      "polarity": "supports",
+      "review_state": "pending_review",
+      "scope": "experimental construct geometry only",
+      "source_artifact": "9TD5.cif",
+      "source_class": "structural database",
+      "source_locator": "mmCIF _struct_ref/_struct_ref_seq_dif/_atom_site; v1 structure-index.json:9TD5",
+      "supporting_evidence": [
+        {
+          "locator": "mmCIF _struct_ref/_struct_ref_seq_dif/_atom_site; v1 structure-index.json:9TD5",
+          "sha256": "3c04ff7331ada5f216e97e0ddcc14a111749f4df6948505fd4467d3e93cf3489"
+        }
+      ]
+    },
+    {
+      "contradicting_evidence": [],
+      "decision_input_admission": "NO FINAL INTEGRATED INPUTS: source-context stop condition",
+      "domain_claim": {
+        "confidence": null,
+        "context": {
+          "allotype": null,
+          "assay": "X-ray diffraction",
+          "cell_type": null,
+          "comparison": null,
+          "endpoint": "source-anchored sequence mapping and coordinates",
+          "experimental_system": "crystallographic constructs",
+          "genotype": null,
+          "hla_status": null,
+          "population": null,
+          "species": "human",
+          "tissue": null,
+          "treatment": null
+        },
+        "identifier": "closure:claim:structure:9TD4",
+        "knowledge_kind": "axis_observation",
+        "object": {
+          "identifier": "PDB:9TD4",
+          "kind": "study",
+          "label": "PDB:9TD4",
+          "namespace": "source"
+        },
+        "predicate": "PDB 9TD4 contains mapped human ERAP1 crystallographic constructs and deposited organic components, with experimental X-ray resolution 1.73 A; this is not a computational pose or cellular occupancy measurement.",
+        "provenance": {
+          "checksum": "c2ecebe677c3cb7dda0a302d5c24208f60d243455999d7f2ac70ee56d95451de",
+          "retrieved_at": "2026-10-05 18:08:20.670976+00:00",
+          "source_identifier": "PDB:9TD4",
+          "source_kind": "axis_pipeline",
+          "source_uri": "https://files.rcsb.org/download/9TD4.cif",
+          "transformations": []
+        },
+        "subject": {
+          "identifier": "Q9NZ08",
+          "kind": "protein",
+          "label": "ERAP1",
+          "namespace": "UniProt"
+        }
+      },
+      "limitations": [
+        "Preserve all construct changes, missing residues and author versus canonical numbering in v1 structure-index",
+        "Do not classify every buffer/additive as a pharmacological ligand or assign regulatory-site activity from contact distance",
+        "9TFN SI 2.00 A differs from current deposited 1.739 A; both contexts retained"
+      ],
+      "polarity": "supports",
+      "review_state": "pending_review",
+      "scope": "experimental construct geometry only",
+      "source_artifact": "9TD4.cif",
+      "source_class": "structural database",
+      "source_locator": "mmCIF _struct_ref/_struct_ref_seq_dif/_atom_site; v1 structure-index.json:9TD4",
+      "supporting_evidence": [
+        {
+          "locator": "mmCIF _struct_ref/_struct_ref_seq_dif/_atom_site; v1 structure-index.json:9TD4",
+          "sha256": "c2ecebe677c3cb7dda0a302d5c24208f60d243455999d7f2ac70ee56d95451de"
+        }
+      ]
+    },
+    {
+      "contradicting_evidence": [],
+      "decision_input_admission": "NO FINAL INTEGRATED INPUTS: source-context stop condition",
+      "domain_claim": {
+        "confidence": null,
+        "context": {
+          "allotype": null,
+          "assay": "X-ray diffraction",
+          "cell_type": null,
+          "comparison": null,
+          "endpoint": "source-anchored sequence mapping and coordinates",
+          "experimental_system": "crystallographic constructs",
+          "genotype": null,
+          "hla_status": null,
+          "population": null,
+          "species": "human",
+          "tissue": null,
+          "treatment": null
+        },
+        "identifier": "closure:claim:structure:9TD7",
+        "knowledge_kind": "axis_observation",
+        "object": {
+          "identifier": "PDB:9TD7",
+          "kind": "study",
+          "label": "PDB:9TD7",
+          "namespace": "source"
+        },
+        "predicate": "PDB 9TD7 contains mapped human ERAP1 crystallographic constructs and deposited organic components, with experimental X-ray resolution 1.37 A; this is not a computational pose or cellular occupancy measurement.",
+        "provenance": {
+          "checksum": "b9cc9d5f5f71a334f6f9b1b17fa1965fd2f0fcca5d3e2be80d45808dd83ae3b7",
+          "retrieved_at": "2026-10-05 18:08:20.756989+00:00",
+          "source_identifier": "PDB:9TD7",
+          "source_kind": "axis_pipeline",
+          "source_uri": "https://files.rcsb.org/download/9TD7.cif",
+          "transformations": []
+        },
+        "subject": {
+          "identifier": "Q9NZ08",
+          "kind": "protein",
+          "label": "ERAP1",
+          "namespace": "UniProt"
+        }
+      },
+      "limitations": [
+        "Preserve all construct changes, missing residues and author versus canonical numbering in v1 structure-index",
+        "Do not classify every buffer/additive as a pharmacological ligand or assign regulatory-site activity from contact distance",
+        "9TFN SI 2.00 A differs from current deposited 1.739 A; both contexts retained"
+      ],
+      "polarity": "supports",
+      "review_state": "pending_review",
+      "scope": "experimental construct geometry only",
+      "source_artifact": "9TD7.cif",
+      "source_class": "structural database",
+      "source_locator": "mmCIF _struct_ref/_struct_ref_seq_dif/_atom_site; v1 structure-index.json:9TD7",
+      "supporting_evidence": [
+        {
+          "locator": "mmCIF _struct_ref/_struct_ref_seq_dif/_atom_site; v1 structure-index.json:9TD7",
+          "sha256": "b9cc9d5f5f71a334f6f9b1b17fa1965fd2f0fcca5d3e2be80d45808dd83ae3b7"
+        }
+      ]
+    },
+    {
+      "contradicting_evidence": [],
+      "decision_input_admission": "NO FINAL INTEGRATED INPUTS: source-context stop condition",
+      "domain_claim": {
+        "confidence": null,
+        "context": {
+          "allotype": null,
+          "assay": "X-ray diffraction",
+          "cell_type": null,
+          "comparison": null,
+          "endpoint": "source-anchored sequence mapping and coordinates",
+          "experimental_system": "crystallographic constructs",
+          "genotype": null,
+          "hla_status": null,
+          "population": null,
+          "species": "human",
+          "tissue": null,
+          "treatment": null
+        },
+        "identifier": "closure:claim:structure:9TF3",
+        "knowledge_kind": "axis_observation",
+        "object": {
+          "identifier": "PDB:9TF3",
+          "kind": "study",
+          "label": "PDB:9TF3",
+          "namespace": "source"
+        },
+        "predicate": "PDB 9TF3 contains mapped human ERAP1 crystallographic constructs and deposited organic components, with experimental X-ray resolution 1.87 A; this is not a computational pose or cellular occupancy measurement.",
+        "provenance": {
+          "checksum": "3d82784437279393c8bc2a966f3135bd0a97085173bcba49bf6b8eee708b15ff",
+          "retrieved_at": "2026-10-05 18:08:21.090958+00:00",
+          "source_identifier": "PDB:9TF3",
+          "source_kind": "axis_pipeline",
+          "source_uri": "https://files.rcsb.org/download/9TF3.cif",
+          "transformations": []
+        },
+        "subject": {
+          "identifier": "Q9NZ08",
+          "kind": "protein",
+          "label": "ERAP1",
+          "namespace": "UniProt"
+        }
+      },
+      "limitations": [
+        "Preserve all construct changes, missing residues and author versus canonical numbering in v1 structure-index",
+        "Do not classify every buffer/additive as a pharmacological ligand or assign regulatory-site activity from contact distance",
+        "9TFN SI 2.00 A differs from current deposited 1.739 A; both contexts retained"
+      ],
+      "polarity": "supports",
+      "review_state": "pending_review",
+      "scope": "experimental construct geometry only",
+      "source_artifact": "9TF3.cif",
+      "source_class": "structural database",
+      "source_locator": "mmCIF _struct_ref/_struct_ref_seq_dif/_atom_site; v1 structure-index.json:9TF3",
+      "supporting_evidence": [
+        {
+          "locator": "mmCIF _struct_ref/_struct_ref_seq_dif/_atom_site; v1 structure-index.json:9TF3",
+          "sha256": "3d82784437279393c8bc2a966f3135bd0a97085173bcba49bf6b8eee708b15ff"
+        }
+      ]
+    },
+    {
+      "contradicting_evidence": [],
+      "decision_input_admission": "NO FINAL INTEGRATED INPUTS: source-context stop condition",
+      "domain_claim": {
+        "confidence": null,
+        "context": {
+          "allotype": null,
+          "assay": "X-ray diffraction",
+          "cell_type": null,
+          "comparison": null,
+          "endpoint": "source-anchored sequence mapping and coordinates",
+          "experimental_system": "crystallographic constructs",
+          "genotype": null,
+          "hla_status": null,
+          "population": null,
+          "species": "human",
+          "tissue": null,
+          "treatment": null
+        },
+        "identifier": "closure:claim:structure:9TF4",
+        "knowledge_kind": "axis_observation",
+        "object": {
+          "identifier": "PDB:9TF4",
+          "kind": "study",
+          "label": "PDB:9TF4",
+          "namespace": "source"
+        },
+        "predicate": "PDB 9TF4 contains mapped human ERAP1 crystallographic constructs and deposited organic components, with experimental X-ray resolution 1.63 A; this is not a computational pose or cellular occupancy measurement.",
+        "provenance": {
+          "checksum": "a1dc071b438c2dfaf5f24650ec5348cab2a6fd0949e5fc27e02c77ac1c57ab93",
+          "retrieved_at": "2026-10-05 18:08:21.259114+00:00",
+          "source_identifier": "PDB:9TF4",
+          "source_kind": "axis_pipeline",
+          "source_uri": "https://files.rcsb.org/download/9TF4.cif",
+          "transformations": []
+        },
+        "subject": {
+          "identifier": "Q9NZ08",
+          "kind": "protein",
+          "label": "ERAP1",
+          "namespace": "UniProt"
+        }
+      },
+      "limitations": [
+        "Preserve all construct changes, missing residues and author versus canonical numbering in v1 structure-index",
+        "Do not classify every buffer/additive as a pharmacological ligand or assign regulatory-site activity from contact distance",
+        "9TFN SI 2.00 A differs from current deposited 1.739 A; both contexts retained"
+      ],
+      "polarity": "supports",
+      "review_state": "pending_review",
+      "scope": "experimental construct geometry only",
+      "source_artifact": "9TF4.cif",
+      "source_class": "structural database",
+      "source_locator": "mmCIF _struct_ref/_struct_ref_seq_dif/_atom_site; v1 structure-index.json:9TF4",
+      "supporting_evidence": [
+        {
+          "locator": "mmCIF _struct_ref/_struct_ref_seq_dif/_atom_site; v1 structure-index.json:9TF4",
+          "sha256": "a1dc071b438c2dfaf5f24650ec5348cab2a6fd0949e5fc27e02c77ac1c57ab93"
+        }
+      ]
+    },
+    {
+      "contradicting_evidence": [],
+      "decision_input_admission": "NO FINAL INTEGRATED INPUTS: source-context stop condition",
+      "domain_claim": {
+        "confidence": null,
+        "context": {
+          "allotype": null,
+          "assay": "X-ray diffraction",
+          "cell_type": null,
+          "comparison": null,
+          "endpoint": "source-anchored sequence mapping and coordinates",
+          "experimental_system": "crystallographic constructs",
+          "genotype": null,
+          "hla_status": null,
+          "population": null,
+          "species": "human",
+          "tissue": null,
+          "treatment": null
+        },
+        "identifier": "closure:claim:structure:9TF6",
+        "knowledge_kind": "axis_observation",
+        "object": {
+          "identifier": "PDB:9TF6",
+          "kind": "study",
+          "label": "PDB:9TF6",
+          "namespace": "source"
+        },
+        "predicate": "PDB 9TF6 contains mapped human ERAP1 crystallographic constructs and deposited organic components, with experimental X-ray resolution 1.73 A; this is not a computational pose or cellular occupancy measurement.",
+        "provenance": {
+          "checksum": "2f41bafb77660fffc439b063667e86703948b4aa2ec030350ce9d933f052db17",
+          "retrieved_at": "2026-10-05 18:08:21.692179+00:00",
+          "source_identifier": "PDB:9TF6",
+          "source_kind": "axis_pipeline",
+          "source_uri": "https://files.rcsb.org/download/9TF6.cif",
+          "transformations": []
+        },
+        "subject": {
+          "identifier": "Q9NZ08",
+          "kind": "protein",
+          "label": "ERAP1",
+          "namespace": "UniProt"
+        }
+      },
+      "limitations": [
+        "Preserve all construct changes, missing residues and author versus canonical numbering in v1 structure-index",
+        "Do not classify every buffer/additive as a pharmacological ligand or assign regulatory-site activity from contact distance",
+        "9TFN SI 2.00 A differs from current deposited 1.739 A; both contexts retained"
+      ],
+      "polarity": "supports",
+      "review_state": "pending_review",
+      "scope": "experimental construct geometry only",
+      "source_artifact": "9TF6.cif",
+      "source_class": "structural database",
+      "source_locator": "mmCIF _struct_ref/_struct_ref_seq_dif/_atom_site; v1 structure-index.json:9TF6",
+      "supporting_evidence": [
+        {
+          "locator": "mmCIF _struct_ref/_struct_ref_seq_dif/_atom_site; v1 structure-index.json:9TF6",
+          "sha256": "2f41bafb77660fffc439b063667e86703948b4aa2ec030350ce9d933f052db17"
+        }
+      ]
+    },
+    {
+      "contradicting_evidence": [],
+      "decision_input_admission": "NO FINAL INTEGRATED INPUTS: source-context stop condition",
+      "domain_claim": {
+        "confidence": null,
+        "context": {
+          "allotype": null,
+          "assay": "X-ray diffraction",
+          "cell_type": null,
+          "comparison": null,
+          "endpoint": "source-anchored sequence mapping and coordinates",
+          "experimental_system": "crystallographic constructs",
+          "genotype": null,
+          "hla_status": null,
+          "population": null,
+          "species": "human",
+          "tissue": null,
+          "treatment": null
+        },
+        "identifier": "closure:claim:structure:9TFN",
+        "knowledge_kind": "axis_observation",
+        "object": {
+          "identifier": "PDB:9TFN",
+          "kind": "study",
+          "label": "PDB:9TFN",
+          "namespace": "source"
+        },
+        "predicate": "PDB 9TFN contains mapped human ERAP1 crystallographic constructs and deposited organic components, with experimental X-ray resolution 1.739 A; this is not a computational pose or cellular occupancy measurement.",
+        "provenance": {
+          "checksum": "57076f87c1fd05b1dcaed101da8a11d38fdad36a41eca00ad7f93d8c28ceba7b",
+          "retrieved_at": "2026-10-05 18:08:21.702871+00:00",
+          "source_identifier": "PDB:9TFN",
+          "source_kind": "axis_pipeline",
+          "source_uri": "https://files.rcsb.org/download/9TFN.cif",
+          "transformations": []
+        },
+        "subject": {
+          "identifier": "Q9NZ08",
+          "kind": "protein",
+          "label": "ERAP1",
+          "namespace": "UniProt"
+        }
+      },
+      "limitations": [
+        "Preserve all construct changes, missing residues and author versus canonical numbering in v1 structure-index",
+        "Do not classify every buffer/additive as a pharmacological ligand or assign regulatory-site activity from contact distance",
+        "9TFN SI 2.00 A differs from current deposited 1.739 A; both contexts retained"
+      ],
+      "polarity": "supports",
+      "review_state": "pending_review",
+      "scope": "experimental construct geometry only",
+      "source_artifact": "9TFN.cif",
+      "source_class": "structural database",
+      "source_locator": "mmCIF _struct_ref/_struct_ref_seq_dif/_atom_site; v1 structure-index.json:9TFN",
+      "supporting_evidence": [
+        {
+          "locator": "mmCIF _struct_ref/_struct_ref_seq_dif/_atom_site; v1 structure-index.json:9TFN",
+          "sha256": "57076f87c1fd05b1dcaed101da8a11d38fdad36a41eca00ad7f93d8c28ceba7b"
+        }
+      ]
+    }
+  ],
+  "computational_evidence": {
+    "PXD054491_PXD054494": {
+      "axis_observation": {
+        "classification_counts": {
+          "inhibitor diff expressed+unique": {
+            "common": 265,
+            "downregulated_or_wt_unique": 146,
+            "upregulated_or_unique": 321
+          },
+          "ko diff expressed+unique": {
+            "common": 233,
+            "downregulated_or_wt_unique": 238,
+            "upregulated_or_unique": 263
+          }
+        },
+        "classification_union": {
+          "inhibitor diff expressed+unique": 732,
+          "ko diff expressed+unique": 732
+        },
+        "epistemic_type": "axis_observation",
+        "raw_ms_reprocessing": "NOT PERFORMED",
+        "review_state": "pending_review",
+        "scope": "Counts of source-classified processed sequences; source q-values not independently recomputed",
+        "source": "10.1016/j.mcpro.2025.100964",
+        "unique_sequences_8_16": 734,
+        "upregulated_or_unique_overlap": {
+          "conditions": [
+            "inhibitor diff expressed+unique",
+            "ko diff expressed+unique"
+          ],
+          "intersection": 198,
+          "jaccard": 0.5129533678756477,
+          "union": 386
+        }
+      },
+      "locator": "10.1016/j.mcpro.2025.100964 Results / Supplement Table A source rows frozen in inputs/2025-supplement-peptides.json",
+      "source_assertion": {
+        "KO_down": 238,
+        "KO_up": 263,
+        "inhibitor_down": 146,
+        "inhibitor_up": 321
+      }
+    },
+    "PXD066752": {
+      "axis_observation": {
+        "algorithm": "erap1-data-rich-audit-1",
+        "biological_replicates": {
+          "Allotype 10": 3,
+          "Allotype 2": 3
+        },
+        "conditions": [
+          "Allotype 10",
+          "Allotype 2"
+        ],
+        "descriptive_abundance_direction": {
+          "first_higher": 1034,
+          "second_higher": 1128
+        },
+        "epistemic_type": "axis_observation",
+        "hla_assignment_and_motifs": "NOT PERFORMED; raw matrix contains no source HLA assignment",
+        "input_sha256": "7ab2e2a935c32da0d28db9e4791961df32ec630c966efd5d04b3f3875a72d2e2",
+        "intersection": 2162,
+        "jaccard": 0.9298924731182796,
+        "length_distribution": {
+          "Allotype 10": {
+            "10": 335,
+            "11": 124,
+            "12": 25,
+            "13": 8,
+            "14": 9,
+            "8": 148,
+            "9": 1546
+          },
+          "Allotype 2": {
+            "10": 336,
+            "11": 131,
+            "12": 36,
+            "13": 12,
+            "14": 13,
+            "8": 172,
+            "9": 1592
+          }
+        },
+        "parameters": {
+          "biological_replicates": "mean observed biological values",
+          "length": [
+            8,
+            14
+          ],
+          "missing": "not imputed; conditional on observed values",
+          "precursors": "sum per sequence/run",
+          "technical_replicates": "mean observed runs per biological replicate"
+        },
+        "raw_ms_reprocessing": "NOT PERFORMED",
+        "review_state": "pending_review",
+        "statistical_differential_expression": "NOT PERFORMED; no technical-run pseudoreplication",
+        "union": 2325,
+        "unique": {
+          "Allotype 10": 33,
+          "Allotype 2": 130
+        }
+      },
+      "locator": "10.1111/imm.70056 Figure 3A / inputs/report.pr_matrix.tsv",
+      "source_assertion": {
+        "allotype_10_unique": 33,
+        "allotype_2_unique": 130,
+        "intersection": 2162,
+        "union": 2325
+      }
+    }
+  },
+  "engine_input_boundary": "Stored admitted claims are not themselves cellular assessments; no fabricated assembler inputs or final AFTER state",
+  "existing_domain": "axis.domain.models.Claim",
+  "existing_store_roundtrip_count": 34,
+  "researcher_hypothesis": {
+    "contradicting_claims": [],
+    "id": "closure:hypothesis:context-specific-modulation",
+    "kind": "researcher_hypothesis",
+    "limitations": [
+      "No validated desired/protective peptide state in a defined axSpA context",
+      "No demonstrated risk-context-to-protective-state therapeutic correction",
+      "Not an established source fact or engine-selected strategy"
+    ],
+    "review_state": "pending_review",
+    "status": "PLAUSIBLE BUT INSUFFICIENT",
+    "supporting_claims": [
+      "closure:claim:substrate-dependence",
+      "closure:claim:temponeras-mode",
+      "closure:claim:2025-b3p-design",
+      "closure:claim:tran-gut",
+      "closure:claim:allotype2025-design"
+    ],
+    "text": "Therapeutically useful ERAP1 intervention may require context-specific peptide-processing modulation rather than maximal non-contextual inhibition."
+  }
+}

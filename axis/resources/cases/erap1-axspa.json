@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "purpose": "Configuration extracted from the 84ecc56 reference implementation, not new scientific evidence",
+  "primary_target": "ERAP1",
+  "comparison_targets": ["ERAP2", "LNPEP"],
+  "proposal_context": "Matched HLA and ERAP1 genetic context; controls required",
+  "proposal_design": "Chemical perturbation, ERAP1 genetic depletion/rescue and orthogonal controls; measure toxicity separately"
+}

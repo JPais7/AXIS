@@ -1,0 +1,235 @@
+{
+  "review_state": "pending_review",
+  "claims": [
+    {
+      "id": "closure:claim:hry-enzyme",
+      "text": "Hryczanek reports inhibition of Hap2 ERAP1 cleavage of YTAFTIPSI; biochemical activity is specific to this substrate/preparation, not a global allotype rank.",
+      "kind": "source_assertion", "source_class": "peer-reviewed publication",
+      "source": "10.1021/acsmedchemlett.4c00401", "artifact": "PMC11647717.xml",
+      "locator": "Results: enzymatic assay paragraph and Hap2 discussion",
+      "context": {"species": "human", "allotype": "Hap2, source nomenclature", "assay": "YTAFTIPSI cleavage by mass spectrometry", "endpoint": "pIC50", "experimental_system": "isolated enzyme"},
+      "polarity": "supports", "scope": "programme-level biochemical tractability",
+      "limitations": ["Complete enzyme assay concentrations/duration not resolved", "Not pooled with 2026 assays or cellular potency"]
+    },
+    {
+      "id": "closure:claim:hry-presentation",
+      "text": "The 2024 HeLa assay measures SIINFEKL presentation by mouse H-2Kb/beta2m after 40 h of compound/precursor exposure, not direct ERAP1 occupancy.",
+      "kind": "source_assertion", "source_class": "supplementary information",
+      "source": "10.1021/acsmedchemlett.4c00401", "artifact": "si/ml4c00401_si_001.pdf",
+      "locator": "S34 Cellular Antigen Presentation Assay",
+      "context": {"species": "human cell line with mouse MHC-I reporter", "cell_type": "HeLa", "hla_status": "mouse H-2Kb reporter; not HLA-B27", "allotype": null, "assay": "25.D1.16-APC flow cytometry", "endpoint": "antigen presentation pIC50", "treatment": "40 h concentration response", "experimental_system": "BacMam LEQLESIINFEKL + H-2Kb/beta2m"},
+      "polarity": "qualifies", "scope": "2024 programme cellular assay",
+      "limitations": ["Endogenous ERAP1 allotype unresolved", "No patient or historical Maben occupancy inference"]
+    },
+    {
+      "id": "closure:claim:hry-counterscreen",
+      "text": "Compound 7 showed source-reported ERAP2/IRAP pIC50 below 4, n=1, using Arg-AMC and Leu-AMC respectively. The authors' selectivity interpretation is not an AXIS comparable-assay numeric ratio.",
+      "kind": "source_assertion", "source_class": "peer-reviewed publication",
+      "source": "10.1021/acsmedchemlett.4c00401", "artifact": "PMC11647717.xml",
+      "locator": "Selectivity paragraph; Figure 1 substrate legend; SI S35 Table S1 compound 7",
+      "context": {"species": "human", "assay": "ERAP1 YTAFTIPSI; ERAP2 Arg-AMC; IRAP Leu-AMC", "endpoint": "pIC50", "experimental_system": "isolated enzymes"},
+      "polarity": "qualifies", "scope": "compound 7 counterscreens",
+      "limitations": ["Different substrates and incompletely matched conditions", "Censored n=1 counterscreens; no manufactured exact ratio"]
+    },
+    {
+      "id": "closure:claim:hry-structures",
+      "text": "The source explicitly associates PDB 9GJN with compound 1, 9GK6 with 2, 9GJS with 7 and 9GKE with 13.",
+      "kind": "source_assertion", "source_class": "peer-reviewed publication",
+      "source": "10.1021/acsmedchemlett.4c00401", "artifact": "PMC11647717.xml",
+      "locator": "Accession Codes; Figures 2 and 4",
+      "context": {"species": "human", "experimental_system": "crystallographic ERAP1 constructs", "endpoint": "experimental complex"},
+      "polarity": "supports", "scope": "compound-specific crystallographic identities",
+      "limitations": ["Does not identify a cellular pharmacological state"]
+    },
+    {
+      "id": "closure:claim:substrate-dependence",
+      "text": "Hutchinson reports substrate-dependent activity ordering among common ERAP1 allotypes, with allotype 10 a low-activity outlier in the tested assays; this is not a universal high/low classification across substrates.",
+      "kind": "source_assertion", "source_class": "peer-reviewed publication",
+      "source": "10.1016/j.jbc.2021.100443", "artifact": "PMC8024916.xml",
+      "locator": "Results; Figure 2 panels A-D; Table S8 cited in Results",
+      "context": {"species": "human", "allotype": "source common allotypes 1-10", "assay": "multiple peptide and small-substrate assays", "experimental_system": "recombinant enzymes", "endpoint": "trimming rate and catalytic efficiency"},
+      "polarity": "qualifies", "scope": "allotype and substrate dependence",
+      "limitations": ["No AXIS kinetic re-fitting", "No therapeutic direction from enzyme ranking"]
+    },
+    {
+      "id": "closure:claim:wang-population",
+      "text": "Wang's Taiwanese study reports 863 AS cases and 1438 controls and full-length coding-variant discovery in 45 individuals; association and functional subsets must not be counted as identical populations.",
+      "kind": "source_assertion", "source_class": "peer-reviewed publication",
+      "source": "10.3390/cells11152427", "artifact": "PMC9368314.xml",
+      "locator": "Abstract; Materials and Methods: study population and ERAP1 allele identification",
+      "context": {"species": "human", "population": "Taiwanese", "experimental_system": "genetic association and separate allele discovery", "hla_status": "HLA-B27-stratified source analyses"},
+      "polarity": "qualifies", "scope": "target-disease and allotype context",
+      "limitations": ["Not globally generalizable", "Allelic variant nomenclature not silently mapped to another paper's allotype IDs", "Genetic association is not therapeutic direction"]
+    },
+    {
+      "id": "closure:claim:temponeras-design",
+      "text": "Temponeras compares WT, CRISPR ERAP1 KO and a defined clerodane allosteric inhibitor in A375; inhibitor treatment is 10 uM for six days over three passages, refreshed every two days.",
+      "kind": "source_assertion", "source_class": "peer-reviewed publication",
+      "source": "10.1002/eji.202350449", "artifact": "temponeras2023-valid.pdf",
+      "locator": "Article pp3,10: Results and Treatment of A375 cells with inhibitors (PDF pp4,11)",
+      "context": {"species": "human", "cell_type": "A375 melanoma", "comparison": "WT vs genetic KO vs allosteric inhibitor", "treatment": "10 uM clerodane derivative, 6 days", "experimental_system": "cell line, not axSpA patient tissue", "endpoint": "W6/32-isolated immunopeptidome"},
+      "polarity": "supports", "scope": "perturbation-specific immunopeptidome design",
+      "limitations": ["Low ERAP2 background, not proof of complete absence", "No conversion of estimated >90% inhibition into measured occupancy"]
+    },
+    {
+      "id": "closure:claim:temponeras-replicates",
+      "text": "Temponeras initially grew three biological replicates per condition with technical triplicates, but excluded one low-signal biological replicate each for WT and KO; these conditions therefore do not retain three analysed biological replicates.",
+      "kind": "source_assertion", "source_class": "peer-reviewed publication",
+      "source": "10.1002/eji.202350449", "artifact": "temponeras2023-valid.pdf",
+      "locator": "Article p3 Results (PDF p4), low peptide signal exclusion",
+      "context": {"species": "human", "cell_type": "A375", "comparison": "analysed WT/KO biological n=2; inhibitor n=3", "experimental_system": "LC-MS/MS biological versus technical replication"},
+      "polarity": "qualifies", "scope": "experimental replication",
+      "limitations": ["Technical runs are not independent biological replicates", "No independent source statistical reconstruction"]
+    },
+    {
+      "id": "closure:claim:temponeras-mode",
+      "text": "The source reports distinct peptide sequences and length effects after KO versus clerodane allosteric inhibition; KO increased longer peptides whereas this inhibitor had marginal length effects.",
+      "kind": "source_assertion", "source_class": "peer-reviewed publication",
+      "source": "10.1002/eji.202350449", "artifact": "temponeras2023-valid.pdf",
+      "locator": "Article pp9-10 Discussion (PDF pp10-11)",
+      "context": {"species": "human", "cell_type": "A375", "comparison": "KO vs allosteric inhibition", "endpoint": "peptide length and sequence repertoire"},
+      "polarity": "qualifies", "scope": "KO is not a universal pharmacological surrogate",
+      "limitations": ["Off-target, partial modulation and adaptation remain possible contributors", "MTT control uses 48 h, not full six-day matched exposure", "No validated beneficial axSpA peptide state"]
+    },
+    {
+      "id": "closure:claim:2025-b3p-design",
+      "text": "The 2025 study compares A375 WT, 10 uM compound 3 B3P-site inhibitor for six days and ERAP1 KO; A375 carries ERAP2 GG associated with very low or absent ERAP2 production.",
+      "kind": "source_assertion", "source_class": "peer-reviewed publication",
+      "source": "10.1016/j.mcpro.2025.100964", "artifact": "PMC12136889.xml",
+      "locator": "Inhibitor Treatment; Results: ERAP1 inhibition shapes the immunopeptidome; Supplemental Figures S3-S6 cited",
+      "context": {"species": "human", "cell_type": "A375 melanoma", "genotype": "ERAP2 GG, source assertion", "comparison": "WT vs compound 3 vs KO", "treatment": "10 uM, 6 days", "endpoint": "pan-MHC-I immunopeptidome"},
+      "polarity": "supports", "scope": "mode-specific peptide processing",
+      "limitations": ["Not HLA-B27 patient tissue", "Not the Temponeras clerodane or a Maben compound"]
+    },
+    {
+      "id": "closure:claim:2025-clone",
+      "text": "The 2025 immunopeptidome/proteome experiments used KO clone 1G5, later found to have a partial 1p35 duplication in about 20% of cells; downstream experiments switched to stable clone 1B12.",
+      "kind": "source_assertion", "source_class": "peer-reviewed publication",
+      "source": "10.1016/j.mcpro.2025.100964", "artifact": "PMC12136889.xml",
+      "locator": "Cell Lines; Supplemental Figure S2 cited",
+      "context": {"species": "human", "cell_type": "A375", "genotype": "ERAP1 KO clone 1G5; later 1B12", "experimental_system": "clone-specific comparison"},
+      "polarity": "qualifies", "scope": "KO comparison limitation",
+      "limitations": ["Do not assume clone effects absent because the authors did not detect a proteome reflection"]
+    },
+    {
+      "id": "closure:claim:tran-arthritis",
+      "text": "Tran reports arthritis in 12/37 ERAP1+/+ versus 4/34 ERAP1-/- HLA-B27 transgenic rats, with p=0.03; this is partial model protection from genetic loss, not drug efficacy.",
+      "kind": "source_assertion", "source_class": "peer-reviewed publication",
+      "source": "10.1002/art.42327", "artifact": "PMC9892207.bioc.xml",
+      "locator": "Results: ERAP1 deficiency protects HLA-B27 Tg rats from arthritis; Figure 4A",
+      "context": {"species": "rat", "hla_status": "HLA-B27/human beta2m transgenic", "genotype": "ERAP1 WT versus germline deficiency", "endpoint": "cumulative peripheral arthritis prevalence", "experimental_system": "mixed Lewis-SD transgenic model"},
+      "polarity": "supports", "scope": "context-dependent animal disease modification",
+      "limitations": ["Multiple transgene copies; not exact human axSpA phenocopy", "Rodents lack ERAP2", "No transfer to chemical inhibition"]
+    },
+    {
+      "id": "closure:claim:tran-gut",
+      "text": "Tran reports no improvement in gastrointestinal clinical inflammation and higher colon histology scores after ERAP1 deficiency, despite reduced arthritis prevalence.",
+      "kind": "source_assertion", "source_class": "peer-reviewed publication",
+      "source": "10.1002/art.42327", "artifact": "PMC9892207.bioc.xml",
+      "locator": "Results: stool scores and colon histology; Figure 4C",
+      "context": {"species": "rat", "hla_status": "HLA-B27 transgenic", "genotype": "ERAP1 deficiency", "endpoint": "gastrointestinal clinical and histological outcomes"},
+      "polarity": "qualifies", "scope": "mixed disease phenotype",
+      "limitations": ["Not uniformly beneficial across endpoints"]
+    },
+    {
+      "id": "closure:claim:tran-folding",
+      "text": "Tran reports reduced HLA-B27 misfolding/ER stress while cell-surface free heavy-chain dimers and monomers increased under ERAP1 deficiency.",
+      "kind": "source_assertion", "source_class": "peer-reviewed publication",
+      "source": "10.1002/art.42327", "artifact": "PMC9892207.bioc.xml",
+      "locator": "Results; Figures 1-3",
+      "context": {"species": "rat", "hla_status": "HLA-B27 transgenic", "genotype": "ERAP1 deficiency", "endpoint": "intracellular folding versus surface free heavy chains"},
+      "polarity": "qualifies", "scope": "mechanism is compartment dependent",
+      "limitations": ["Surface dimers cannot be equated to intracellular misfolding", "Not drug engagement evidence"]
+    },
+    {
+      "id": "closure:claim:tran-immune",
+      "text": "Tran reports mitigation of excess Il23a induction, but no rescue of defective dendritic-cell allogeneic stimulation or the depleted CD103+/MHC-II+ population.",
+      "kind": "source_assertion", "source_class": "peer-reviewed publication",
+      "source": "10.1002/art.42327", "artifact": "PMC9892207.bioc.xml",
+      "locator": "Results: ERAP1 deficiency affects myeloid cell phenotypes; Figure 5",
+      "context": {"species": "rat", "hla_status": "HLA-B27 transgenic", "genotype": "ERAP1 deficiency", "cell_type": "myeloid cells"},
+      "polarity": "qualifies", "scope": "mixed immune effects",
+      "limitations": ["No universal cytokine normalization or therapeutic conclusion"]
+    },
+    {
+      "id": "closure:claim:allotype2025-design",
+      "text": "PXD066752 concerns engineered ERAP1 allotypes 2/10 in A375 melanoma, three biological replicates per condition, with 20 ng/mL IFN-gamma for 24 h; it is neither KO versus drug nor axSpA tissue.",
+      "kind": "source_assertion", "source_class": "peer-reviewed publication",
+      "source": "10.1111/imm.70056", "artifact": "PMC12779449.xml",
+      "locator": "Materials and Methods: generation of cell lines and isolation of immunopeptidome; Figure 3A",
+      "context": {"species": "human", "cell_type": "A375 melanoma", "allotype": "source allotypes 2 versus 10", "hla_status": "non-B27 A375 background", "treatment": "IFN-gamma 20 ng/mL, 24 h", "experimental_system": "engineered expression clones"},
+      "polarity": "qualifies", "scope": "allotype-dependent presentation",
+      "limitations": ["No therapeutic protective-state assignment", "Clone expression matching does not eliminate all clone effects"]
+    },
+    {
+      "id": "closure:claim:tinworth-controls",
+      "text": "Tinworth Table 1 retains two HeLa control schemes. Compound 21 has pIC50 7.25 with KK-SIINFEKL and 7.05 with compound-6 normalization; these are not identical replicate observations.",
+      "kind": "source_assertion", "source_class": "supplementary information",
+      "source": "10.1021/acs.jmedchem.6c00029", "artifact": "si/jm6c00029_si_001.pdf",
+      "locator": "S5 Supplementary Table 1, compound 21, two cellular endpoint columns",
+      "context": {"species": "human", "cell_type": "HeLa", "endpoint": "antigen presentation pIC50", "comparison": "KK-SIINFEKL versus compound-6 control"},
+      "polarity": "qualifies", "scope": "assay comparability",
+      "limitations": ["Endpoint summaries admitted only as source facts; exact full protocol inaccessible", "No averaging or substituted potency"]
+    },
+    {
+      "id": "closure:claim:tinworth-dmpk",
+      "text": "Tinworth reports human-hepatocyte intrinsic clearance of 62.0 and 35.1 mL/min/kg for compounds 19 and 21 respectively, with unbound estimates 68 and 39; these are in vitro scaled measurements, not human participant PK.",
+      "kind": "source_assertion", "source_class": "supplementary information",
+      "source": "10.1021/acs.jmedchem.6c00029", "artifact": "si/jm6c00029_si_001.pdf",
+      "locator": "S5 Supplementary Table 2",
+      "context": {"species": "human hepatocytes in vitro", "treatment": "0.5 uM, 0-240 min, 37 C", "endpoint": "scaled intrinsic clearance"},
+      "polarity": "qualifies", "scope": "programme DMPK only",
+      "limitations": ["No oral exposure or patient efficacy inference"]
+    },
+    {
+      "id": "closure:claim:tinworth-cia",
+      "text": "Tinworth SI documents mouse CIA compound-21 BID oral doses of 30/90/270 mg/kg and day-36 knee pathology, with daily paw scoring D18-D36. It does not supply sufficient full design/exposure methods for a complete causal translational adjudication.",
+      "kind": "source_assertion", "source_class": "supplementary information",
+      "source": "10.1021/acs.jmedchem.6c00029", "artifact": "si/jm6c00029_si_001.pdf",
+      "locator": "S2 Supplementary Figures 1/2; S7 Table 4",
+      "context": {"species": "mouse", "treatment": "compound 21 GSK235 BID oral", "experimental_system": "collagen-induced arthritis, not axSpA", "endpoint": "body weight/knee pathology/paw scoring"},
+      "polarity": "qualifies", "scope": "source design context only",
+      "limitations": ["No graph digitization, effect estimate or independent statistics", "Main study randomization/group size/exposure and engagement methods inaccessible", "No human axSpA efficacy claim"]
+    },
+    {
+      "id": "closure:claim:focis-0715",
+      "text": "FOCIS W146 reports GRWD0715 effects on putative GLRB/HelQ/SEC14L2 peptide precursors, HLA-B27 peptide presentation and cognate CD8/TCR activation. This is conference evidence, not independently adjudicated clinical efficacy or direct occupancy.",
+      "kind": "source_assertion", "source_class": "conference abstract",
+      "source": "FOCIS2025:W146", "artifact": "focis2025.pdf",
+      "locator": "W146 printed pp56-57, PDF pp57-58",
+      "context": {"hla_status": "HLA-B27, subtype not stated in abstract", "allotype": null, "experimental_system": "source-described preclinical cell/T-cell assays", "treatment": "GRWD0715", "endpoint": "peptide/TCR readouts"},
+      "polarity": "supports", "scope": "GRWD0715 programme conference claim only",
+      "limitations": ["Full protocol, replicate structure and exposure not supplied", "Cannot establish engagement of historical Maben compounds"]
+    },
+    {
+      "id": "closure:claim:east-registry",
+      "text": "The frozen EAST-1 registry record NCT07047703 was updated publicly on 2026-09-18, lists recruiting status and contains no posted results section.",
+      "kind": "axis_observation", "source_class": "trial registry",
+      "source": "NCT07047703", "artifact": "east1-registry.json",
+      "locator": "protocolSection.statusModule.lastUpdatePostDateStruct; overallStatus; hasResults=false and absent resultsSection",
+      "context": {"species": "human", "experimental_system": "trial registration, not outcome analysis", "treatment": "GRWD0715"},
+      "polarity": "qualifies", "scope": "human clinical evidence availability at cutoff",
+      "limitations": ["Absence of posted results does not imply absence of experiments or lack of efficacy"]
+    },
+    {
+      "id": "closure:claim:east-sponsor",
+      "text": "The sponsor's 2026-09-08 announcement reports dose-proportional PK and ERAP1 engagement in healthy-volunteer SAD, and first axSpA participants dosed in MAD; underlying engagement methods/data were not independently adjudicated.",
+      "kind": "source_assertion", "source_class": "sponsor-reported communication",
+      "source": "Greywolf:EAST1:2026-09-08", "artifact": "east1-sponsor.html",
+      "locator": "Publication date and first two release bullet points; SAD/MAD paragraph",
+      "context": {"species": "human", "population": "healthy volunteers SAD; axSpA MAD dosing", "treatment": "GRWD0715", "endpoint": "sponsor-reported PK/engagement"},
+      "polarity": "supports", "scope": "GRWD0715 programme only",
+      "limitations": ["Not independently established occupancy", "No axSpA efficacy result", "No transfer to historical Maben compounds"]
+    }
+  ],
+  "researcher_hypothesis": {
+    "id": "closure:hypothesis:context-specific-modulation",
+    "kind": "researcher_hypothesis",
+    "status": "PLAUSIBLE BUT INSUFFICIENT",
+    "text": "Therapeutically useful ERAP1 intervention may require context-specific peptide-processing modulation rather than maximal non-contextual inhibition.",
+    "supporting_claims": ["closure:claim:substrate-dependence", "closure:claim:temponeras-mode", "closure:claim:2025-b3p-design", "closure:claim:tran-gut", "closure:claim:allotype2025-design"],
+    "contradicting_claims": [],
+    "limitations": ["No validated desired/protective peptide state in a defined axSpA context", "No demonstrated risk-context-to-protective-state therapeutic correction", "Not an established source fact or engine-selected strategy"],
+    "review_state": "pending_review"
+  }
+}

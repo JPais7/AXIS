@@ -7,6 +7,7 @@ from importlib import resources
 from pathlib import Path
 from typing import Any
 
+from axis.case_config import reference_case
 from axis.cellular.rules import aggregate, concordance
 from axis.domain.cellular import (
     EDGES,
@@ -113,6 +114,7 @@ class CellularPharmacologyService:
         digest = hashlib.sha256(raw).hexdigest()
         if digest != root.joinpath("manifest.sha256").read_text().strip():
             raise ValueError("cellular package checksum mismatch")
+        case = reference_case("erap1-axspa")
         package = json.loads(raw)
         if package["importer_version"] != VERSION:
             raise ValueError("unsupported cellular importer")
@@ -238,9 +240,8 @@ class CellularPharmacologyService:
                     item["id"],
                     item["proposal_title"],
                     item["question"],
-                    "Matched HLA and ERAP1 genetic context; controls required",
-                    "Chemical perturbation, ERAP1 genetic depletion/rescue and "
-                    "orthogonal controls; measure toxicity separately",
+                    case["proposal_context"],
+                    case["proposal_design"],
                     "Validated cellular engagement and proximal function, "
                     "plus the source-linked phenotype",
                     proposal_provenance,
@@ -313,7 +314,9 @@ class CellularPharmacologyService:
                     0,
                     {
                         **({"compound": compound} if compound else {}),
-                        "target": "ERAP1",
+                        "target": self.store.target_disease_pairs.get(
+                            self.store.projects.get(project).target_disease_pair
+                        ).target.identifier,
                         "assay_type": "biochemical_activity",
                     },
                 )

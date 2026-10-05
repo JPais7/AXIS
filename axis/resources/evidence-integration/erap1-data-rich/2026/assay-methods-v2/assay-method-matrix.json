@@ -1,0 +1,3135 @@
+[
+  {
+    "completeness": "INSUFFICIENT_METHOD_INFORMATION",
+    "decision_material_potency": true,
+    "direct_cellular_engagement": false,
+    "excluded_inheritance": {
+      "S3/ref1": "Hryczanek synthesis only; NOT an assay citation",
+      "S56/ref9": "Giastas crystallography only; NOT a potency construct"
+    },
+    "fields": {
+      "allotype": {
+        "accessibility": "SI inspected; main methods inaccessible",
+        "chain": [
+          "10.1021/acs.jmedchem.5c03071"
+        ],
+        "source_locator": "SI S1-S75; no explicit potency-method chain",
+        "source_version": "10.1021/acs.jmedchem.5c03071",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "buffer": {
+        "accessibility": "SI inspected; main methods inaccessible",
+        "chain": [
+          "10.1021/acs.jmedchem.5c03071"
+        ],
+        "source_locator": "SI S1-S75; no explicit potency-method chain",
+        "source_version": "10.1021/acs.jmedchem.5c03071",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "cofactors": {
+        "accessibility": "SI inspected; main methods inaccessible",
+        "chain": [
+          "10.1021/acs.jmedchem.5c03071"
+        ],
+        "source_locator": "SI S1-S75; no explicit potency-method chain",
+        "source_version": "10.1021/acs.jmedchem.5c03071",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "concentration range": {
+        "accessibility": "SI inspected; main methods inaccessible",
+        "chain": [
+          "10.1021/acs.jmedchem.5c03071"
+        ],
+        "source_locator": "SI S1-S75; no explicit potency-method chain",
+        "source_version": "10.1021/acs.jmedchem.5c03071",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "construct": {
+        "accessibility": "SI inspected; main methods inaccessible",
+        "chain": [
+          "10.1021/acs.jmedchem.5c03071"
+        ],
+        "source_locator": "SI S1-S75; no explicit potency-method chain",
+        "source_version": "10.1021/acs.jmedchem.5c03071",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "endpoint": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1021/acs.jmedchem.5c03071"
+        ],
+        "source_locator": "SI S60 Table S2",
+        "source_version": "10.1021/acs.jmedchem.5c03071",
+        "state": "VERIFIED",
+        "value": "ERAP1 pIC50"
+      },
+      "enzyme concentration": {
+        "accessibility": "SI inspected; main methods inaccessible",
+        "chain": [
+          "10.1021/acs.jmedchem.5c03071"
+        ],
+        "source_locator": "SI S1-S75; no explicit potency-method chain",
+        "source_version": "10.1021/acs.jmedchem.5c03071",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "error metric": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1021/acs.jmedchem.5c03071"
+        ],
+        "source_locator": "SI S60 Table S2",
+        "source_version": "10.1021/acs.jmedchem.5c03071",
+        "state": "VERIFIED",
+        "value": "per-compound SD where reported, S60 Table S2"
+      },
+      "fitting": {
+        "accessibility": "SI inspected; main methods inaccessible",
+        "chain": [
+          "10.1021/acs.jmedchem.5c03071"
+        ],
+        "source_locator": "SI S1-S75; no explicit potency-method chain",
+        "source_version": "10.1021/acs.jmedchem.5c03071",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "incubation duration": {
+        "accessibility": "SI inspected; main methods inaccessible",
+        "chain": [
+          "10.1021/acs.jmedchem.5c03071"
+        ],
+        "source_locator": "SI S1-S75; no explicit potency-method chain",
+        "source_version": "10.1021/acs.jmedchem.5c03071",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "pH": {
+        "accessibility": "SI inspected; main methods inaccessible",
+        "chain": [
+          "10.1021/acs.jmedchem.5c03071"
+        ],
+        "source_locator": "SI S1-S75; no explicit potency-method chain",
+        "source_version": "10.1021/acs.jmedchem.5c03071",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "preincubation": {
+        "accessibility": "SI inspected; main methods inaccessible",
+        "chain": [
+          "10.1021/acs.jmedchem.5c03071"
+        ],
+        "source_locator": "SI S1-S75; no explicit potency-method chain",
+        "source_version": "10.1021/acs.jmedchem.5c03071",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "readout": {
+        "accessibility": "SI inspected; main methods inaccessible",
+        "chain": [
+          "10.1021/acs.jmedchem.5c03071"
+        ],
+        "source_locator": "SI S1-S75; no explicit potency-method chain",
+        "source_version": "10.1021/acs.jmedchem.5c03071",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "replicates": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1021/acs.jmedchem.5c03071"
+        ],
+        "source_locator": "SI S60 Table S2",
+        "source_version": "10.1021/acs.jmedchem.5c03071",
+        "state": "VERIFIED",
+        "value": "per-compound N in mean, S60 Table S2; not all CSV rows"
+      },
+      "species": {
+        "accessibility": "SI inspected; main methods inaccessible",
+        "chain": [
+          "10.1021/acs.jmedchem.5c03071"
+        ],
+        "source_locator": "SI S1-S75; no explicit potency-method chain",
+        "source_version": "10.1021/acs.jmedchem.5c03071",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "substrate": {
+        "accessibility": "SI inspected; main methods inaccessible",
+        "chain": [
+          "10.1021/acs.jmedchem.5c03071"
+        ],
+        "source_locator": "SI S1-S75; no explicit potency-method chain",
+        "source_version": "10.1021/acs.jmedchem.5c03071",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "substrate concentration": {
+        "accessibility": "SI inspected; main methods inaccessible",
+        "chain": [
+          "10.1021/acs.jmedchem.5c03071"
+        ],
+        "source_locator": "SI S1-S75; no explicit potency-method chain",
+        "source_version": "10.1021/acs.jmedchem.5c03071",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "target": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1021/acs.jmedchem.5c03071"
+        ],
+        "source_locator": "SI S60 Table S2",
+        "source_version": "10.1021/acs.jmedchem.5c03071",
+        "state": "VERIFIED",
+        "value": "ERAP1"
+      },
+      "temperature": {
+        "accessibility": "SI inspected; main methods inaccessible",
+        "chain": [
+          "10.1021/acs.jmedchem.5c03071"
+        ],
+        "source_locator": "SI S1-S75; no explicit potency-method chain",
+        "source_version": "10.1021/acs.jmedchem.5c03071",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      }
+    },
+    "final_context_adjudicated": false,
+    "id": "bradshaw-2026-enzyme",
+    "review_state": "pending_review",
+    "source_version": "10.1021/acs.jmedchem.5c03071",
+    "version_scope": "final SI; main methods inaccessible"
+  },
+  {
+    "completeness": "INSUFFICIENT_METHOD_INFORMATION",
+    "decision_material_potency": true,
+    "direct_cellular_engagement": false,
+    "excluded_inheritance": {
+      "S3/ref1": "Hryczanek synthesis only; NOT an assay citation",
+      "S56/ref9": "Giastas crystallography only; NOT a potency construct"
+    },
+    "fields": {
+      "allotype": {
+        "accessibility": "SI inspected; main methods inaccessible",
+        "chain": [
+          "10.1021/acs.jmedchem.5c03071"
+        ],
+        "source_locator": "SI S1-S75; no explicit potency-method chain",
+        "source_version": "10.1021/acs.jmedchem.5c03071",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "buffer": {
+        "accessibility": "SI inspected; main methods inaccessible",
+        "chain": [
+          "10.1021/acs.jmedchem.5c03071"
+        ],
+        "source_locator": "SI S1-S75; no explicit potency-method chain",
+        "source_version": "10.1021/acs.jmedchem.5c03071",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "cofactors": {
+        "accessibility": "SI inspected; main methods inaccessible",
+        "chain": [
+          "10.1021/acs.jmedchem.5c03071"
+        ],
+        "source_locator": "SI S1-S75; no explicit potency-method chain",
+        "source_version": "10.1021/acs.jmedchem.5c03071",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "concentration range": {
+        "accessibility": "SI inspected; main methods inaccessible",
+        "chain": [
+          "10.1021/acs.jmedchem.5c03071"
+        ],
+        "source_locator": "SI S1-S75; no explicit potency-method chain",
+        "source_version": "10.1021/acs.jmedchem.5c03071",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "construct": {
+        "accessibility": "SI inspected; main methods inaccessible",
+        "chain": [
+          "10.1021/acs.jmedchem.5c03071"
+        ],
+        "source_locator": "SI S1-S75; no explicit potency-method chain",
+        "source_version": "10.1021/acs.jmedchem.5c03071",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "endpoint": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1021/acs.jmedchem.5c03071"
+        ],
+        "source_locator": "SI S60 Table S2",
+        "source_version": "10.1021/acs.jmedchem.5c03071",
+        "state": "VERIFIED",
+        "value": "HeLa antigen presentation pIC50"
+      },
+      "enzyme concentration": {
+        "accessibility": "SI inspected; main methods inaccessible",
+        "chain": [
+          "10.1021/acs.jmedchem.5c03071"
+        ],
+        "source_locator": "SI S1-S75; no explicit potency-method chain",
+        "source_version": "10.1021/acs.jmedchem.5c03071",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "error metric": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1021/acs.jmedchem.5c03071"
+        ],
+        "source_locator": "SI S60 Table S2",
+        "source_version": "10.1021/acs.jmedchem.5c03071",
+        "state": "VERIFIED",
+        "value": "per-compound SD where reported, S60 Table S2"
+      },
+      "fitting": {
+        "accessibility": "SI inspected; main methods inaccessible",
+        "chain": [
+          "10.1021/acs.jmedchem.5c03071"
+        ],
+        "source_locator": "SI S1-S75; no explicit potency-method chain",
+        "source_version": "10.1021/acs.jmedchem.5c03071",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "incubation duration": {
+        "accessibility": "SI inspected; main methods inaccessible",
+        "chain": [
+          "10.1021/acs.jmedchem.5c03071"
+        ],
+        "source_locator": "SI S1-S75; no explicit potency-method chain",
+        "source_version": "10.1021/acs.jmedchem.5c03071",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "pH": {
+        "accessibility": "SI inspected; main methods inaccessible",
+        "chain": [
+          "10.1021/acs.jmedchem.5c03071"
+        ],
+        "source_locator": "SI S1-S75; no explicit potency-method chain",
+        "source_version": "10.1021/acs.jmedchem.5c03071",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "preincubation": {
+        "accessibility": "SI inspected; main methods inaccessible",
+        "chain": [
+          "10.1021/acs.jmedchem.5c03071"
+        ],
+        "source_locator": "SI S1-S75; no explicit potency-method chain",
+        "source_version": "10.1021/acs.jmedchem.5c03071",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "readout": {
+        "accessibility": "SI inspected; main methods inaccessible",
+        "chain": [
+          "10.1021/acs.jmedchem.5c03071"
+        ],
+        "source_locator": "SI S1-S75; no explicit potency-method chain",
+        "source_version": "10.1021/acs.jmedchem.5c03071",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "replicates": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1021/acs.jmedchem.5c03071"
+        ],
+        "source_locator": "SI S60 Table S2",
+        "source_version": "10.1021/acs.jmedchem.5c03071",
+        "state": "VERIFIED",
+        "value": "per-compound N in mean, S60 Table S2; not all CSV rows"
+      },
+      "species": {
+        "accessibility": "SI inspected; main methods inaccessible",
+        "chain": [
+          "10.1021/acs.jmedchem.5c03071"
+        ],
+        "source_locator": "SI S1-S75; no explicit potency-method chain",
+        "source_version": "10.1021/acs.jmedchem.5c03071",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "substrate": {
+        "accessibility": "SI inspected; main methods inaccessible",
+        "chain": [
+          "10.1021/acs.jmedchem.5c03071"
+        ],
+        "source_locator": "SI S1-S75; no explicit potency-method chain",
+        "source_version": "10.1021/acs.jmedchem.5c03071",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "substrate concentration": {
+        "accessibility": "SI inspected; main methods inaccessible",
+        "chain": [
+          "10.1021/acs.jmedchem.5c03071"
+        ],
+        "source_locator": "SI S1-S75; no explicit potency-method chain",
+        "source_version": "10.1021/acs.jmedchem.5c03071",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "target": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1021/acs.jmedchem.5c03071"
+        ],
+        "source_locator": "SI S60 Table S2",
+        "source_version": "10.1021/acs.jmedchem.5c03071",
+        "state": "VERIFIED",
+        "value": "ERAP1"
+      },
+      "temperature": {
+        "accessibility": "SI inspected; main methods inaccessible",
+        "chain": [
+          "10.1021/acs.jmedchem.5c03071"
+        ],
+        "source_locator": "SI S1-S75; no explicit potency-method chain",
+        "source_version": "10.1021/acs.jmedchem.5c03071",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      }
+    },
+    "final_context_adjudicated": false,
+    "id": "bradshaw-2026-cell",
+    "review_state": "pending_review",
+    "source_version": "10.1021/acs.jmedchem.5c03071",
+    "version_scope": "final SI; main methods inaccessible"
+  },
+  {
+    "completeness": "PARTIALLY_ADJUDICATED",
+    "decision_material_potency": true,
+    "direct_cellular_engagement": false,
+    "fields": {
+      "allotype": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1:p15:ref31",
+          "10.1021/acs.jmedchem.9b02123"
+        ],
+        "source_locator": "Liddle PDF p8 (H)",
+        "source_version": "10.1021/acs.jmedchem.9b02123",
+        "state": "INHERITED_VERIFIED",
+        "value": "common haplotype 2"
+      },
+      "buffer": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1:p15:ref31",
+          "10.1021/acs.jmedchem.9b02123"
+        ],
+        "source_locator": "Liddle PDF p8 (H)",
+        "source_version": "10.1021/acs.jmedchem.9b02123",
+        "state": "INHERITED_VERIFIED",
+        "value": "50 mM HEPES; 100 mM NaCl; 0.002% Tween20; 0.005% BSA"
+      },
+      "cofactors": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "concentration range": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "construct": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1:p15:ref31",
+          "10.1021/acs.jmedchem.9b02123"
+        ],
+        "source_locator": "Liddle PDF p8 (H)",
+        "source_version": "10.1021/acs.jmedchem.9b02123",
+        "state": "INHERITED_VERIFIED",
+        "value": "full-length ERAP1; C-terminal 6His retained"
+      },
+      "endpoint": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "VERIFIED",
+        "value": "pIC50; 4-parameter inhibition concentration response"
+      },
+      "enzyme concentration": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1:p15:ref31",
+          "10.1021/acs.jmedchem.9b02123"
+        ],
+        "source_locator": "Liddle PDF p8 (H)",
+        "source_version": "10.1021/acs.jmedchem.9b02123",
+        "state": "INHERITED_VERIFIED",
+        "value": "1 nM"
+      },
+      "error metric": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1021/acs.jmedchem.6c00029"
+        ],
+        "source_locator": "S5 Supplementary Table1",
+        "source_version": "10.1021/acs.jmedchem.6c00029",
+        "state": "VERIFIED",
+        "value": "final SI S5 Table1 SD where given"
+      },
+      "fitting": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1:p15:ref31",
+          "10.1021/acs.jmedchem.9b02123"
+        ],
+        "source_locator": "Liddle PDF p8 (H)",
+        "source_version": "10.1021/acs.jmedchem.9b02123",
+        "state": "INHERITED_VERIFIED",
+        "value": "four-parameter dose response; slope and asymptotes"
+      },
+      "incubation duration": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1:p15:ref31",
+          "10.1021/acs.jmedchem.9b02123"
+        ],
+        "source_locator": "Liddle PDF p8 (H)",
+        "source_version": "10.1021/acs.jmedchem.9b02123",
+        "state": "INHERITED_VERIFIED",
+        "value": "60 min"
+      },
+      "pH": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1:p15:ref31",
+          "10.1021/acs.jmedchem.9b02123"
+        ],
+        "source_locator": "Liddle PDF p8 (H)",
+        "source_version": "10.1021/acs.jmedchem.9b02123",
+        "state": "INHERITED_VERIFIED",
+        "value": "7.0"
+      },
+      "preincubation": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "readout": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1:p15:ref31",
+          "10.1021/acs.jmedchem.9b02123"
+        ],
+        "source_locator": "Liddle PDF p8 (H)",
+        "source_version": "10.1021/acs.jmedchem.9b02123",
+        "state": "INHERITED_VERIFIED",
+        "value": "RapidFire C18; Sciex4000 Q-trap; product/internal standard"
+      },
+      "replicates": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "VERIFIED",
+        "value": "n>=3 unless specified; final SI per-row N takes precedence"
+      },
+      "species": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p8 Table6",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "VERIFIED",
+        "value": "human"
+      },
+      "substrate": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1:p15:ref31",
+          "10.1021/acs.jmedchem.9b02123"
+        ],
+        "source_locator": "Liddle PDF p8 (H)",
+        "source_version": "10.1021/acs.jmedchem.9b02123",
+        "state": "INHERITED_VERIFIED",
+        "value": "YTAFTIPSI -> TAFTIPSI"
+      },
+      "substrate concentration": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1:p15:ref31",
+          "10.1021/acs.jmedchem.9b02123"
+        ],
+        "source_locator": "Liddle PDF p8 (H)",
+        "source_version": "10.1021/acs.jmedchem.9b02123",
+        "state": "INHERITED_VERIFIED",
+        "value": "5 uM"
+      },
+      "target": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p8 Table6; p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "VERIFIED",
+        "value": "human ERAP1"
+      },
+      "temperature": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      }
+    },
+    "final_context_adjudicated": true,
+    "id": "tinworth-human-enzyme",
+    "preparation": {
+      "chain": [
+        "10.1101/2025.11.17.686761:v1:p15:ref31",
+        "10.1021/acs.jmedchem.9b02123:pp8-9:ref34",
+        "10.1021/acsmedchemlett.9b00002:SI:pp1-2"
+      ],
+      "expression": "Hi5/baculovirus inherited via Liddle p9 -> Giastas SI pp1-2",
+      "mutations": "Hap2; mechanism mutants not default potency construct",
+      "purification": "Ni-NTA/SEC; Liddle retains 6His, unlike Giastas TEV removal",
+      "residue_range": "full-length; not the deleted crystal construct",
+      "state": "INHERITED_VERIFIED"
+    },
+    "review_state": "pending_review",
+    "source_version": "10.1101/2025.11.17.686761:v1",
+    "version_scope": "preprint only"
+  },
+  {
+    "cell_context": {
+      "ERAP1_allotype": "NOT_CONFIRMED",
+      "ERAP2": "NOT_CONFIRMED",
+      "compound21_pIC50": 7.25,
+      "control": "KKSIINFEKL BacMam",
+      "control_chain": [
+        "10.1101/2025.11.17.686761:v1:p15:ref31"
+      ],
+      "control_state": "INHERITED_VERIFIED",
+      "endogenous_HLA": "NOT_CONFIRMED",
+      "flow_instrument": "Cyan for Liddle; iQue for Hry modified method",
+      "genotype": "NOT_CONFIRMED",
+      "limit": "not proof of viability at every compound/exposure",
+      "unbound_pIC50": null,
+      "viability": "Zombie Violet; 95% threshold establishes 0.5% DMSO tolerance"
+    },
+    "completeness": "PARTIALLY_ADJUDICATED",
+    "decision_material_potency": true,
+    "direct_cellular_engagement": false,
+    "fields": {
+      "allotype": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "buffer": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "cofactors": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "concentration range": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "construct": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1:p15:ref31",
+          "10.1021/acs.jmedchem.9b02123"
+        ],
+        "source_locator": "Liddle PDF p8 (H)",
+        "source_version": "10.1021/acs.jmedchem.9b02123",
+        "state": "INHERITED_VERIFIED",
+        "value": "endogenous HeLa ERAP1; BacMam reporter, not purified enzyme"
+      },
+      "endpoint": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "VERIFIED",
+        "value": "antigen-presentation pIC50; NOT occupancy"
+      },
+      "enzyme concentration": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "error metric": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1021/acs.jmedchem.6c00029"
+        ],
+        "source_locator": "S5 Supplementary Table1",
+        "source_version": "10.1021/acs.jmedchem.6c00029",
+        "state": "VERIFIED",
+        "value": "final SI per-row SD where reported"
+      },
+      "fitting": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1:p15:ref31",
+          "10.1021/acs.jmedchem.9b02123"
+        ],
+        "source_locator": "Liddle PDF p8 (H)",
+        "source_version": "10.1021/acs.jmedchem.9b02123",
+        "state": "INHERITED_VERIFIED",
+        "value": "four-parameter variable-slope concentration response"
+      },
+      "incubation duration": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1:p15:ref31",
+          "10.1021/acs.jmedchem.9b02123"
+        ],
+        "source_locator": "Liddle PDF p8 (H)",
+        "source_version": "10.1021/acs.jmedchem.9b02123",
+        "state": "INHERITED_VERIFIED",
+        "value": "40 h"
+      },
+      "pH": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "preincubation": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "readout": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1:p15:ref31",
+          "10.1021/acs.jmedchem.9b02123"
+        ],
+        "source_locator": "Liddle PDF p8 (H)",
+        "source_version": "10.1021/acs.jmedchem.9b02123",
+        "state": "INHERITED_VERIFIED",
+        "value": "25.D1.16 APC flow cytometry; GFP transduction; Zombie Violet"
+      },
+      "replicates": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "VERIFIED",
+        "value": "n>=3 unless specified; final SI N in mean/total separate"
+      },
+      "species": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "VERIFIED",
+        "value": "human HeLa; mouse H-2Kb/beta2m reporter"
+      },
+      "substrate": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1:p15:ref31",
+          "10.1021/acs.jmedchem.9b02123"
+        ],
+        "source_locator": "Liddle PDF p8 (H)",
+        "source_version": "10.1021/acs.jmedchem.9b02123",
+        "state": "INHERITED_VERIFIED",
+        "value": "ER-targeted LEQLESIINFEKL precursor; SIINFEKL presentation"
+      },
+      "substrate concentration": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "target": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "VERIFIED",
+        "value": "endogenous HeLa ERAP1"
+      },
+      "temperature": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      }
+    },
+    "final_context_adjudicated": true,
+    "id": "tinworth-cell-KK",
+    "review_state": "pending_review",
+    "source_version": "10.1101/2025.11.17.686761:v1",
+    "version_scope": "preprint only"
+  },
+  {
+    "cell_context": {
+      "ERAP1_allotype": "NOT_CONFIRMED",
+      "ERAP2": "NOT_CONFIRMED",
+      "compound21_pIC50": 7.05,
+      "control": "50 uM FAC pharmacological inhibitor; final SI identifies compound6",
+      "control_chain": [
+        "10.1101/2025.11.17.686761:v1:p15:ref38",
+        "10.1021/acsmedchemlett.4c00401:SI:S34",
+        "10.1021/acs.jmedchem.6c00029:SI:S5"
+      ],
+      "control_state": "MODIFIED_VERIFIED",
+      "endogenous_HLA": "NOT_CONFIRMED",
+      "flow_instrument": "Cyan for Liddle; iQue for Hry modified method",
+      "genotype": "NOT_CONFIRMED",
+      "limit": "not proof of viability at every compound/exposure",
+      "unbound_pIC50": 7.26,
+      "viability": "Zombie Violet; 95% threshold establishes 0.5% DMSO tolerance"
+    },
+    "completeness": "PARTIALLY_ADJUDICATED",
+    "decision_material_potency": true,
+    "direct_cellular_engagement": false,
+    "fields": {
+      "allotype": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "buffer": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "cofactors": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "concentration range": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "construct": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1:p15:ref31",
+          "10.1021/acs.jmedchem.9b02123"
+        ],
+        "source_locator": "Liddle PDF p8 (H)",
+        "source_version": "10.1021/acs.jmedchem.9b02123",
+        "state": "INHERITED_VERIFIED",
+        "value": "endogenous HeLa ERAP1; BacMam reporter, not purified enzyme"
+      },
+      "endpoint": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "VERIFIED",
+        "value": "antigen-presentation pIC50; NOT occupancy"
+      },
+      "enzyme concentration": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "error metric": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1021/acs.jmedchem.6c00029"
+        ],
+        "source_locator": "S5 Supplementary Table1",
+        "source_version": "10.1021/acs.jmedchem.6c00029",
+        "state": "VERIFIED",
+        "value": "final SI per-row SD where reported"
+      },
+      "fitting": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1:p15:ref31",
+          "10.1021/acs.jmedchem.9b02123"
+        ],
+        "source_locator": "Liddle PDF p8 (H)",
+        "source_version": "10.1021/acs.jmedchem.9b02123",
+        "state": "INHERITED_VERIFIED",
+        "value": "four-parameter variable-slope concentration response"
+      },
+      "incubation duration": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1:p15:ref31",
+          "10.1021/acs.jmedchem.9b02123"
+        ],
+        "source_locator": "Liddle PDF p8 (H)",
+        "source_version": "10.1021/acs.jmedchem.9b02123",
+        "state": "INHERITED_VERIFIED",
+        "value": "40 h"
+      },
+      "pH": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "preincubation": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "readout": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1:p15:ref31",
+          "10.1021/acs.jmedchem.9b02123"
+        ],
+        "source_locator": "Liddle PDF p8 (H)",
+        "source_version": "10.1021/acs.jmedchem.9b02123",
+        "state": "INHERITED_VERIFIED",
+        "value": "25.D1.16 APC flow cytometry; GFP transduction; Zombie Violet"
+      },
+      "replicates": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "VERIFIED",
+        "value": "n>=3 unless specified; final SI N in mean/total separate"
+      },
+      "species": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "VERIFIED",
+        "value": "human HeLa; mouse H-2Kb/beta2m reporter"
+      },
+      "substrate": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1:p15:ref31",
+          "10.1021/acs.jmedchem.9b02123"
+        ],
+        "source_locator": "Liddle PDF p8 (H)",
+        "source_version": "10.1021/acs.jmedchem.9b02123",
+        "state": "INHERITED_VERIFIED",
+        "value": "ER-targeted LEQLESIINFEKL precursor; SIINFEKL presentation"
+      },
+      "substrate concentration": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "target": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "VERIFIED",
+        "value": "endogenous HeLa ERAP1"
+      },
+      "temperature": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      }
+    },
+    "final_context_adjudicated": true,
+    "id": "tinworth-cell-compound6",
+    "review_state": "pending_review",
+    "source_version": "10.1101/2025.11.17.686761:v1",
+    "version_scope": "preprint only"
+  },
+  {
+    "completeness": "PARTIALLY_ADJUDICATED",
+    "decision_material_potency": false,
+    "direct_cellular_engagement": false,
+    "fields": {
+      "allotype": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "buffer": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "cofactors": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "concentration range": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "construct": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "endpoint": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p10 Table7",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "VERIFIED",
+        "value": "pIC50 and maximum asymptote"
+      },
+      "enzyme concentration": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "error metric": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "fitting": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "incubation duration": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1:p15:ref31",
+          "10.1021/acs.jmedchem.9b02123"
+        ],
+        "source_locator": "Liddle PDF p8 (H)",
+        "source_version": "10.1021/acs.jmedchem.9b02123",
+        "state": "INHERITED_VERIFIED",
+        "value": "60 min; source states identical method"
+      },
+      "pH": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "preincubation": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "readout": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1:p15:ref31",
+          "10.1021/acs.jmedchem.9b02123"
+        ],
+        "source_locator": "Liddle PDF p8 (H)",
+        "source_version": "10.1021/acs.jmedchem.9b02123",
+        "state": "INHERITED_VERIFIED",
+        "value": "RapidFire peptide-cleavage MS"
+      },
+      "replicates": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "species": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p10 Table7",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "VERIFIED",
+        "value": "mouse"
+      },
+      "substrate": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p10 Table7",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "CONFLICTING",
+        "value": "YTAFTIPSI"
+      },
+      "substrate concentration": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "target": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p10 Table7",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "VERIFIED",
+        "value": "mouse ERAAP"
+      },
+      "temperature": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      }
+    },
+    "final_context_adjudicated": true,
+    "id": "tinworth-mouse-YTAFTIPSI",
+    "limits": [
+      "p15 says YFATIPSI (8 letters), Table7 says YTAFTIPSI; retain conflict",
+      "mouse construct/concentrations not copied from human assay"
+    ],
+    "review_state": "pending_review",
+    "source_version": "10.1101/2025.11.17.686761:v1",
+    "version_scope": "preprint only"
+  },
+  {
+    "completeness": "PARTIALLY_ADJUDICATED",
+    "decision_material_potency": false,
+    "direct_cellular_engagement": false,
+    "fields": {
+      "allotype": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "buffer": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "cofactors": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "concentration range": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "construct": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "endpoint": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p10 Table7",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "VERIFIED",
+        "value": "pIC50 and maximum asymptote"
+      },
+      "enzyme concentration": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "error metric": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "fitting": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "incubation duration": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1:p15:ref31",
+          "10.1021/acs.jmedchem.9b02123"
+        ],
+        "source_locator": "Liddle PDF p8 (H)",
+        "source_version": "10.1021/acs.jmedchem.9b02123",
+        "state": "INHERITED_VERIFIED",
+        "value": "60 min; source states identical method"
+      },
+      "pH": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "preincubation": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "readout": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1:p15:ref31",
+          "10.1021/acs.jmedchem.9b02123"
+        ],
+        "source_locator": "Liddle PDF p8 (H)",
+        "source_version": "10.1021/acs.jmedchem.9b02123",
+        "state": "INHERITED_VERIFIED",
+        "value": "RapidFire peptide-cleavage MS"
+      },
+      "replicates": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "species": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p10 Table7",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "VERIFIED",
+        "value": "mouse"
+      },
+      "substrate": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p10 Table7",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "VERIFIED",
+        "value": "EAAGIGILTV"
+      },
+      "substrate concentration": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "target": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p10 Table7",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "VERIFIED",
+        "value": "mouse ERAAP"
+      },
+      "temperature": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      }
+    },
+    "final_context_adjudicated": true,
+    "id": "tinworth-mouse-EAAGIGILTV",
+    "limits": [
+      "p15 says YFATIPSI (8 letters), Table7 says YTAFTIPSI; retain conflict",
+      "mouse construct/concentrations not copied from human assay"
+    ],
+    "review_state": "pending_review",
+    "source_version": "10.1101/2025.11.17.686761:v1",
+    "version_scope": "preprint only"
+  },
+  {
+    "completeness": "PARTIALLY_ADJUDICATED",
+    "decision_material_potency": false,
+    "direct_cellular_engagement": false,
+    "fields": {
+      "allotype": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "buffer": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "cofactors": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "concentration range": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "construct": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "endpoint": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p8 Table6",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "VERIFIED",
+        "value": "biochemical pIC50"
+      },
+      "enzyme concentration": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "error metric": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "fitting": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "incubation duration": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "pH": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "preincubation": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "readout": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1:p15:ref31",
+          "10.1021/acs.jmedchem.9b02123"
+        ],
+        "source_locator": "Liddle p3 Figure1",
+        "source_version": "10.1021/acs.jmedchem.9b02123",
+        "state": "INHERITED_VERIFIED",
+        "value": "fluorogenic hydrolysis"
+      },
+      "replicates": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "species": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "substrate": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1:p15:ref31",
+          "10.1021/acs.jmedchem.9b02123"
+        ],
+        "source_locator": "Liddle p3 Figure1 legend",
+        "source_version": "10.1021/acs.jmedchem.9b02123",
+        "state": "INHERITED_VERIFIED",
+        "value": "Arg-AMC"
+      },
+      "substrate concentration": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "target": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p8 Table6; p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "VERIFIED",
+        "value": "ERAP2"
+      },
+      "temperature": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      }
+    },
+    "final_context_adjudicated": true,
+    "id": "tinworth-counter-ERAP2",
+    "review_state": "pending_review",
+    "source_version": "10.1101/2025.11.17.686761:v1",
+    "version_scope": "preprint only"
+  },
+  {
+    "completeness": "PARTIALLY_ADJUDICATED",
+    "decision_material_potency": false,
+    "direct_cellular_engagement": false,
+    "fields": {
+      "allotype": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "buffer": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "cofactors": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "concentration range": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "construct": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "endpoint": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p8 Table6",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "VERIFIED",
+        "value": "biochemical pIC50"
+      },
+      "enzyme concentration": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "error metric": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "fitting": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "incubation duration": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "pH": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "preincubation": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "readout": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1:p15:ref31",
+          "10.1021/acs.jmedchem.9b02123"
+        ],
+        "source_locator": "Liddle p3 Figure1",
+        "source_version": "10.1021/acs.jmedchem.9b02123",
+        "state": "INHERITED_VERIFIED",
+        "value": "fluorogenic hydrolysis"
+      },
+      "replicates": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "species": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "substrate": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1:p15:ref31",
+          "10.1021/acs.jmedchem.9b02123"
+        ],
+        "source_locator": "Liddle p3 Figure1 legend",
+        "source_version": "10.1021/acs.jmedchem.9b02123",
+        "state": "INHERITED_VERIFIED",
+        "value": "Leu-AMC"
+      },
+      "substrate concentration": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "target": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p8 Table6; p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "VERIFIED",
+        "value": "LNPEP"
+      },
+      "temperature": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      }
+    },
+    "final_context_adjudicated": true,
+    "id": "tinworth-counter-LNPEP",
+    "review_state": "pending_review",
+    "source_version": "10.1101/2025.11.17.686761:v1",
+    "version_scope": "preprint only"
+  },
+  {
+    "completeness": "PARTIALLY_ADJUDICATED",
+    "decision_material_potency": false,
+    "direct_cellular_engagement": false,
+    "fields": {
+      "allotype": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "buffer": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "cofactors": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "concentration range": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "construct": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "endpoint": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "preprint SI p7",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "VERIFIED",
+        "value": "pIC50/pEC50/pXC50, target-specific"
+      },
+      "enzyme concentration": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "error metric": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "fitting": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "incubation duration": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "pH": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "preincubation": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "readout": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "preprint SI p7",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "VERIFIED",
+        "value": "various formats; no unified protocol"
+      },
+      "replicates": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "species": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "substrate": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "substrate concentration": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "target": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "preprint SI p7",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "VERIFIED",
+        "value": "heterogeneous liability panel"
+      },
+      "temperature": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      }
+    },
+    "final_context_adjudicated": true,
+    "id": "tinworth-other-counterscreens",
+    "review_state": "pending_review",
+    "source_version": "10.1101/2025.11.17.686761:v1",
+    "version_scope": "preprint only"
+  },
+  {
+    "MS_details": {
+      "FDR": "ion-level 1%; no invented PSM/peptide FDR from default workflow",
+      "IP": "2mg antibody/400uL beads;4C;150/400mM NaCl,Tris pH8;0.1M acetic acid",
+      "KO_dependency": "KO phenocopy not compound-in-KO rescue or direct occupancy",
+      "LC": "50cm x100um C18,55C; 120min 2-40% ACN; 0.1% FA,3.5% DMSO",
+      "filter": "only peptides quantified across all conditions",
+      "search": "SwissProt mouse 2018-01-11; nonspecific 7-25aa; +/-20ppm"
+    },
+    "completeness": "PARTIALLY_ADJUDICATED",
+    "decision_material_potency": false,
+    "direct_cellular_engagement": false,
+    "fields": {
+      "allotype": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "buffer": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "cofactors": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "concentration range": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p10",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "VERIFIED",
+        "value": "compound21 1 uM total; estimated 0.61 uM unbound"
+      },
+      "construct": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "pp10,16",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "VERIFIED",
+        "value": "WT / ERAAP KO; exact KO preparation not confirmed"
+      },
+      "endpoint": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p16",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "VERIFIED",
+        "value": "relative peptide abundance; NOT occupancy"
+      },
+      "enzyme concentration": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "error metric": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "fitting": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p16",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "VERIFIED",
+        "value": "VSN; LIMMA; BH-adjusted p<0.05 and fold change>=1.5"
+      },
+      "incubation duration": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p10",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "VERIFIED",
+        "value": "30 days"
+      },
+      "pH": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "preincubation": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "readout": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p16",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "VERIFIED",
+        "value": "H2-Kd/Dd IP; Exploris480; FragPipe22; IonQuant LFQ"
+      },
+      "replicates": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p16",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "VERIFIED",
+        "value": "3 biological replicates per WT/KO/inhibitor condition"
+      },
+      "species": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "pp10,16",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "VERIFIED",
+        "value": "Mus musculus CT26"
+      },
+      "substrate": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "substrate concentration": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "target": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "pp10,16",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "VERIFIED",
+        "value": "mouse ERAAP / MHC-I peptidome"
+      },
+      "temperature": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      }
+    },
+    "final_context_adjudicated": true,
+    "id": "tinworth-CT26-immunopeptidome",
+    "review_state": "pending_review",
+    "source_version": "10.1101/2025.11.17.686761:v1",
+    "version_scope": "preprint only"
+  },
+  {
+    "completeness": "PARTIALLY_ADJUDICATED",
+    "decision_material_potency": false,
+    "direct_cellular_engagement": false,
+    "fields": {
+      "allotype": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "buffer": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "cofactors": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "concentration range": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p17",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "VERIFIED",
+        "value": "GSK235 30/90/270mg/kg oral BID; Enbrel10mg/kg IP alternate days"
+      },
+      "construct": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "endpoint": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "pp12-14,17",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "VERIFIED",
+        "value": "CIA pathology/immune PD; not axSpA efficacy"
+      },
+      "enzyme concentration": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "error metric": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "fitting": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "preprint SI p6",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "VERIFIED",
+        "value": "one-way ANOVA treatment fixed effect; contrasts; BH correction"
+      },
+      "incubation duration": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p17",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "VERIFIED",
+        "value": "D18-D36; collagen0.2mg D0 and D21 in100uL FCA"
+      },
+      "pH": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "preincubation": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "readout": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p17",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "VERIFIED",
+        "value": "blinded daily paw scores; histology; IgG; IL12p40/IL6; MHC flow"
+      },
+      "replicates": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "species": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p17",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "VERIFIED",
+        "value": "70 male DBA/1OlaHsd mice,6-7 weeks"
+      },
+      "substrate": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "substrate concentration": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "target": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p17",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "VERIFIED",
+        "value": "inflammatory autoimmune mouse model; not axSpA"
+      },
+      "temperature": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      }
+    },
+    "final_context_adjudicated": true,
+    "id": "tinworth-CIA",
+    "limits": [
+      "group sizes/allocation/randomization not resolved from methods",
+      "PK Results p9 D18/26/35 conflicts with Methods p17 D18/19/27/35/36",
+      "TE estimated from unbound PK and enzyme inhibition, not occupancy"
+    ],
+    "review_state": "pending_review",
+    "source_version": "10.1101/2025.11.17.686761:v1",
+    "version_scope": "preprint only"
+  },
+  {
+    "completeness": "PARTIALLY_ADJUDICATED",
+    "decision_material_potency": false,
+    "direct_cellular_engagement": false,
+    "fields": {
+      "allotype": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "buffer": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "cofactors": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "concentration range": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "pp12,17",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "VERIFIED",
+        "value": "GSK235 30/90/270mg/kg oral BID"
+      },
+      "construct": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "endpoint": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "enzyme concentration": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "error metric": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "fitting": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "incubation duration": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "pp12,17",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "VERIFIED",
+        "value": "day1 inoculation/treatment to day17"
+      },
+      "pH": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "preincubation": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "readout": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p12",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "VERIFIED",
+        "value": "tumour volume/body weight; prophylactic design"
+      },
+      "replicates": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p17; no resolved per-group n",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "species": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p17",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "VERIFIED",
+        "value": "female BALB/c 6-8 weeks"
+      },
+      "substrate": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "substrate concentration": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "target": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "temperature": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      }
+    },
+    "final_context_adjudicated": true,
+    "id": "tinworth-CT26-tumour",
+    "review_state": "pending_review",
+    "source_version": "10.1101/2025.11.17.686761:v1",
+    "version_scope": "preprint only"
+  },
+  {
+    "completeness": "PARTIALLY_ADJUDICATED",
+    "decision_material_potency": false,
+    "direct_cellular_engagement": false,
+    "fields": {
+      "allotype": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "buffer": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "cofactors": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "concentration range": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "pp8,16-17",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "VERIFIED",
+        "value": "compounds19/21 10mg/kg oral in1% methylcellulose"
+      },
+      "construct": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "endpoint": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "enzyme concentration": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "error metric": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "fitting": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "incubation duration": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "pp16-17",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "VERIFIED",
+        "value": "sampling up to24h"
+      },
+      "pH": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "preincubation": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "readout": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p17",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "VERIFIED",
+        "value": "whole-blood LCMSMS; WinNonlin noncompartmental"
+      },
+      "replicates": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p8 Table5",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "VERIFIED",
+        "value": "n=3"
+      },
+      "species": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "pp8,16-17",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "VERIFIED",
+        "value": "female BALB/c"
+      },
+      "substrate": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "substrate concentration": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "target": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "temperature": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      }
+    },
+    "final_context_adjudicated": true,
+    "id": "tinworth-oral-PK",
+    "review_state": "pending_review",
+    "source_version": "10.1101/2025.11.17.686761:v1",
+    "version_scope": "preprint only"
+  },
+  {
+    "completeness": "PARTIALLY_ADJUDICATED",
+    "decision_material_potency": false,
+    "direct_cellular_engagement": false,
+    "fields": {
+      "allotype": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "buffer": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "preprint SI p6",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "VERIFIED",
+        "value": "Williams Medium E"
+      },
+      "cofactors": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "concentration range": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "preprint SI p6",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "VERIFIED",
+        "value": "0.5uM;0.5million cells/mL"
+      },
+      "construct": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "endpoint": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "preprint SI pp4,6",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "VERIFIED",
+        "value": "CLint scaled; unbound separately; NOT clinical PK"
+      },
+      "enzyme concentration": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "error metric": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "fitting": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "preprint SI p6",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "VERIFIED",
+        "value": "log analyte/internal-standard slope"
+      },
+      "incubation duration": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "preprint SI p6",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "VERIFIED",
+        "value": "0-240min sampling"
+      },
+      "pH": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "preincubation": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "readout": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "preprint SI p6",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "VERIFIED",
+        "value": "compound depletion by LCMSMS"
+      },
+      "replicates": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "species": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "preprint SI pp4,6; final SI S5",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "VERIFIED",
+        "value": "human; compounds19/21"
+      },
+      "substrate": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "substrate concentration": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "target": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "p15 Methods",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "NOT_CONFIRMED",
+        "value": null
+      },
+      "temperature": {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "chain": [
+          "10.1101/2025.11.17.686761:v1"
+        ],
+        "source_locator": "preprint SI p6",
+        "source_version": "10.1101/2025.11.17.686761:v1",
+        "state": "VERIFIED",
+        "value": "37C,5% CO2,200rpm"
+      }
+    },
+    "final_context_adjudicated": true,
+    "id": "tinworth-hepatocytes",
+    "review_state": "pending_review",
+    "source_version": "10.1101/2025.11.17.686761:v1",
+    "version_scope": "preprint only"
+  }
+]

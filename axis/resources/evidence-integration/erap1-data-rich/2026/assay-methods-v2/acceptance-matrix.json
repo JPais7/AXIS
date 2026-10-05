@@ -1,0 +1,15 @@
+{
+  "Source recovery":{"status":"PASS WITH CONDITIONS","reason":"Tinworth preprint/full SI and cited Liddle/Giastas recovered; BRADSHAW main inaccessible"},
+  "Version provenance":{"status":"PASS WITH CONDITIONS","reason":"Same-work relationship supported; no independent replication; final main methods not wholly comparable"},
+  "Tinworth method completeness":{"status":"PASS WITH CONDITIONS","reason":"Explicit enzyme/cell method chain recovered; unspecified fields and internal conflicts retained"},
+  "BRADSHAW method completeness":{"status":"FAIL","reason":"No accessible explicit potency-method citation chain"},
+  "Assay normalization":{"status":"FAIL","reason":"Decision-material BRADSHAW fields unresolved; no cross-programme pool"},
+  "Selectivity integrity":{"status":"PASS","reason":"Existing rules executed and refuse numeric ratios across incompatible substrates"},
+  "Chemical identity":{"status":"PASS WITH CONDITIONS","reason":"63 historical identities unchanged; source stereo alternatives/form ambiguity not silently resolved"},
+  "Chemical Learning eligibility":{"status":"PASS WITH CONDITIONS","reason":"Scientific admission refused; no numeric-only admission or model; eligibility rerun conditional on normalization"},
+  "Claim-level traceability":{"status":"PASS","reason":"34 parent IDs/bytes preserved; three explicit pending-review provenance deltas only"},
+  "Epistemic integrity":{"status":"PASS","reason":"Preprint/source assertion/inference separated; no self-approval, occupancy or axSpA efficacy upgrade"},
+  "Decision causality":{"status":"PASS WITH CONDITIONS","reason":"A2 stops Stage B; no AFTER; change fields null, not invented YES/NO"},
+  "Offline reproducibility":{"status":"PASS","reason":"Hashes, parents, matrix, selectivity and 34 claim roundtrips verified offline"},
+  "External-review readiness":{"status":"FAIL","reason":"Reassessment still blocked; method audit may be reviewed, not a completed DecisionState"}
+}

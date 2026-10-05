@@ -1,0 +1,23 @@
+{
+  "scope": "Two exact-DOI method/access gap queries only; not a broad literature review or proof that no lawful copy exists anywhere",
+  "queries": [
+    "\"10.1021/acs.jmedchem.5c03071\" full text repository",
+    "\"10.1021/acs.jmedchem.6c00029\" full text methods repository"
+  ],
+  "observed_primary_results": [
+    {"url": "https://pubs.acs.org/doi/10.1021/acs.jmedchem.5c03071", "access": "Publisher identifies purchase-restricted article with public abstract/SI; direct open returned HTTP 403", "exact_assay_method_recovered": false},
+    {"url": "https://pubs.acs.org/doi/10.1021/acs.jmedchem.6c00029", "access": "Publisher identifies purchase-restricted article with public abstract/SI; direct open returned HTTP 403", "exact_assay_method_recovered": false},
+    {"url": "https://pubmed.ncbi.nlm.nih.gov/41973545/", "access": "Bibliographic record/abstract, not a recovered exact protocol"},
+    {"url": "https://pubmed.ncbi.nlm.nih.gov/42324823/", "access": "Bibliographic record/abstract, not a recovered exact protocol"}
+  ],
+  "date_discrepancy_preserved": {
+    "source": "10.1021/acs.jmedchem.6c00029",
+    "publisher_online_date": "2026-06-22",
+    "PubMed_epub_date": "2026-06-21",
+    "cutoff_effect": "Both precede 2026-10-05; no retrospective date replacement in frozen v1"
+  },
+  "scientific_admission": "No new protocol/efficacy/occupancy assertion admitted from these abstract-only results",
+  "paywall_bypass": false,
+  "author_contact": false,
+  "review_state": "pending_review"
+}

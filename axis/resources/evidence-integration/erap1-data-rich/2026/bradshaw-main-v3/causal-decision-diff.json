@@ -1,0 +1,215 @@
+{
+  "classification": "DECISION STABLE",
+  "engine_diff": {
+    "cause": [
+      "evidence",
+      "review"
+    ],
+    "cause_summary": "This decision differs because the stored evidence changed; and scientific review states changed.",
+    "causes": [
+      {
+        "category": "review_status_change",
+        "items": [
+          {
+            "object": "scenario mappings, designs or assessments"
+          }
+        ]
+      },
+      {
+        "category": "evidence_changed",
+        "items": []
+      }
+    ],
+    "changes": [
+      "Disease: not assessed \u2192 supported",
+      "Uncertainty disease relevance: open/informative \u2192 resolved for current decision/informative",
+      "Edge disease: not assessed \u2192 supported"
+    ],
+    "decision_changed": {
+      "answer": "partially",
+      "why": "Evidence, explanation or uncertainty states changed, but the critical uncertainty and the recommendation did not."
+    },
+    "from": "decision-state:1:cebbae3880aeec90",
+    "new_evidence": [
+      "biochemical_ids: measurement:10.1021/acs.jmedchem.5c03071:compound:10:ERAP1 pIC50",
+      "biochemical_ids: measurement:10.1021/acs.jmedchem.5c03071:compound:11:ERAP1 pIC50",
+      "biochemical_ids: measurement:10.1021/acs.jmedchem.5c03071:compound:12:ERAP1 pIC50",
+      "biochemical_ids: measurement:10.1021/acs.jmedchem.5c03071:compound:13:ERAP1 pIC50",
+      "biochemical_ids: measurement:10.1021/acs.jmedchem.5c03071:compound:14:ERAP1 pIC50",
+      "biochemical_ids: measurement:10.1021/acs.jmedchem.5c03071:compound:15:ERAP1 pIC50",
+      "biochemical_ids: measurement:10.1021/acs.jmedchem.5c03071:compound:16:ERAP1 pIC50",
+      "biochemical_ids: measurement:10.1021/acs.jmedchem.5c03071:compound:17:ERAP1 pIC50",
+      "biochemical_ids: measurement:10.1021/acs.jmedchem.5c03071:compound:18:ERAP1 pIC50",
+      "biochemical_ids: measurement:10.1021/acs.jmedchem.5c03071:compound:1:ERAP1 pIC50",
+      "biochemical_ids: measurement:10.1021/acs.jmedchem.5c03071:compound:21:ERAP1 pIC50",
+      "biochemical_ids: measurement:10.1021/acs.jmedchem.5c03071:compound:22:ERAP1 pIC50",
+      "biochemical_ids: measurement:10.1021/acs.jmedchem.5c03071:compound:23:ERAP1 pIC50",
+      "biochemical_ids: measurement:10.1021/acs.jmedchem.5c03071:compound:24:ERAP1 pIC50",
+      "biochemical_ids: measurement:10.1021/acs.jmedchem.5c03071:compound:25:ERAP1 pIC50",
+      "biochemical_ids: measurement:10.1021/acs.jmedchem.5c03071:compound:26:ERAP1 pIC50",
+      "biochemical_ids: measurement:10.1021/acs.jmedchem.5c03071:compound:27:ERAP1 pIC50",
+      "biochemical_ids: measurement:10.1021/acs.jmedchem.5c03071:compound:28:ERAP1 pIC50",
+      "biochemical_ids: measurement:10.1021/acs.jmedchem.5c03071:compound:29:ERAP1 pIC50",
+      "biochemical_ids: measurement:10.1021/acs.jmedchem.5c03071:compound:2:ERAP1 pIC50",
+      "biochemical_ids: measurement:10.1021/acs.jmedchem.5c03071:compound:30:ERAP1 pIC50",
+      "biochemical_ids: measurement:10.1021/acs.jmedchem.5c03071:compound:31:ERAP1 pIC50",
+      "biochemical_ids: measurement:10.1021/acs.jmedchem.5c03071:compound:32:ERAP1 pIC50",
+      "biochemical_ids: measurement:10.1021/acs.jmedchem.5c03071:compound:33:ERAP1 pIC50",
+      "biochemical_ids: measurement:10.1021/acs.jmedchem.5c03071:compound:34:ERAP1 pIC50",
+      "biochemical_ids: measurement:10.1021/acs.jmedchem.5c03071:compound:35:ERAP1 pIC50",
+      "biochemical_ids: measurement:10.1021/acs.jmedchem.5c03071:compound:36:ERAP1 pIC50",
+      "biochemical_ids: measurement:10.1021/acs.jmedchem.5c03071:compound:37:ERAP1 pIC50",
+      "biochemical_ids: measurement:10.1021/acs.jmedchem.5c03071:compound:38:ERAP1 pIC50",
+      "biochemical_ids: measurement:10.1021/acs.jmedchem.5c03071:compound:39:ERAP1 pIC50",
+      "biochemical_ids: measurement:10.1021/acs.jmedchem.5c03071:compound:3:ERAP1 pIC50",
+      "biochemical_ids: measurement:10.1021/acs.jmedchem.5c03071:compound:40:ERAP1 pIC50",
+      "biochemical_ids: measurement:10.1021/acs.jmedchem.5c03071:compound:41:ERAP1 pIC50",
+      "biochemical_ids: measurement:10.1021/acs.jmedchem.5c03071:compound:42:ERAP1 pIC50",
+      "biochemical_ids: measurement:10.1021/acs.jmedchem.5c03071:compound:43:ERAP1 pIC50",
+      "biochemical_ids: measurement:10.1021/acs.jmedchem.5c03071:compound:44:ERAP1 pIC50",
+      "biochemical_ids: measurement:10.1021/acs.jmedchem.5c03071:compound:4:ERAP1 pIC50",
+      "biochemical_ids: measurement:10.1021/acs.jmedchem.5c03071:compound:5:ERAP1 pIC50",
+      "biochemical_ids: measurement:10.1021/acs.jmedchem.5c03071:compound:6:ERAP1 pIC50",
+      "biochemical_ids: measurement:10.1021/acs.jmedchem.5c03071:compound:7:ERAP1 pIC50",
+      "biochemical_ids: measurement:10.1021/acs.jmedchem.5c03071:compound:8:ERAP1 pIC50",
+      "biochemical_ids: measurement:10.1021/acs.jmedchem.5c03071:compound:9:ERAP1 pIC50",
+      "biochemical_ids: measurement:10.1021/acs.jmedchem.6c00029:compound:10:ERAP1 pIC50",
+      "biochemical_ids: measurement:10.1021/acs.jmedchem.6c00029:compound:11:ERAP1 pIC50",
+      "biochemical_ids: measurement:10.1021/acs.jmedchem.6c00029:compound:12:ERAP1 pIC50",
+      "biochemical_ids: measurement:10.1021/acs.jmedchem.6c00029:compound:13:ERAP1 pIC50",
+      "biochemical_ids: measurement:10.1021/acs.jmedchem.6c00029:compound:14:ERAP1 pIC50",
+      "biochemical_ids: measurement:10.1021/acs.jmedchem.6c00029:compound:15:ERAP1 pIC50",
+      "biochemical_ids: measurement:10.1021/acs.jmedchem.6c00029:compound:16:ERAP1 pIC50",
+      "biochemical_ids: measurement:10.1021/acs.jmedchem.6c00029:compound:17:ERAP1 pIC50",
+      "biochemical_ids: measurement:10.1021/acs.jmedchem.6c00029:compound:18:ERAP1 pIC50",
+      "biochemical_ids: measurement:10.1021/acs.jmedchem.6c00029:compound:19:ERAP1 pIC50",
+      "biochemical_ids: measurement:10.1021/acs.jmedchem.6c00029:compound:1:ERAP1 pIC50",
+      "biochemical_ids: measurement:10.1021/acs.jmedchem.6c00029:compound:20:ERAP1 pIC50",
+      "biochemical_ids: measurement:10.1021/acs.jmedchem.6c00029:compound:21:ERAP1 pIC50",
+      "biochemical_ids: measurement:10.1021/acs.jmedchem.6c00029:compound:2:ERAP1 pIC50",
+      "biochemical_ids: measurement:10.1021/acs.jmedchem.6c00029:compound:3:ERAP1 pIC50",
+      "biochemical_ids: measurement:10.1021/acs.jmedchem.6c00029:compound:4:ERAP1 pIC50",
+      "biochemical_ids: measurement:10.1021/acs.jmedchem.6c00029:compound:5:ERAP1 pIC50",
+      "biochemical_ids: measurement:10.1021/acs.jmedchem.6c00029:compound:6:ERAP1 pIC50",
+      "biochemical_ids: measurement:10.1021/acs.jmedchem.6c00029:compound:7:ERAP1 pIC50",
+      "biochemical_ids: measurement:10.1021/acs.jmedchem.6c00029:compound:8:ERAP1 pIC50",
+      "biochemical_ids: measurement:10.1021/acs.jmedchem.6c00029:compound:9:ERAP1 pIC50",
+      "compound_phenotype_ids: brad-v3:2025-b3p-design:hla",
+      "compound_phenotype_ids: brad-v3:bradshaw-21:hla",
+      "compound_phenotype_ids: brad-v3:bradshaw-40:hla",
+      "compound_phenotype_ids: brad-v3:hry-presentation:hla",
+      "compound_phenotype_ids: brad-v3:temponeras-mode:hla",
+      "compound_phenotype_ids: brad-v3:tinworth-21-KK:hla",
+      "compound_phenotype_ids: brad-v3:tinworth-21-compound6:hla",
+      "compound_phenotype_ids: brad-v3:tinworth-CT26:hla",
+      "genetic_phenotype_ids: brad-v3:allotype2025-design:hla",
+      "compound_dependency_uncertain_ids: brad-v3:2025-b3p-design:hla",
+      "compound_dependency_uncertain_ids: brad-v3:bradshaw-21:hla",
+      "compound_dependency_uncertain_ids: brad-v3:bradshaw-40:hla",
+      "compound_dependency_uncertain_ids: brad-v3:hry-presentation:hla",
+      "compound_dependency_uncertain_ids: brad-v3:temponeras-mode:hla",
+      "compound_dependency_uncertain_ids: brad-v3:tinworth-21-KK:hla",
+      "compound_dependency_uncertain_ids: brad-v3:tinworth-21-compound6:hla",
+      "compound_dependency_uncertain_ids: brad-v3:tinworth-CT26:hla",
+      "structure_ids: structure:pdb:9GJN:9793d0f77c6d4934a040d7642beb40f09938f934880d2dce5ed9cd0964973ef9:2026-10-05T18:08:18.251105+00:00:3654c195689a5327",
+      "structure_ids: structure:pdb:9GJS:92d4b68f3f48d8cbc52b771918ef6819bdf7ced8f8708b087d916009c843f8ba:2026-10-05T18:08:18.750476+00:00:3654c195689a5327",
+      "structure_ids: structure:pdb:9GK6:dfe3bf10a7cd37edc3ced30f085bc1158b26aceb38434e06160892188f07b68c:2026-10-05T18:08:19.272407+00:00:3654c195689a5327",
+      "structure_ids: structure:pdb:9GKE:f8037bf57fe55ef3cf3ce96762a9f53256ca4f72d23af8e07f31b48ee0eda4f3:2026-10-05T18:08:19.733842+00:00:3654c195689a5327",
+      "structure_ids: structure:pdb:9TD3:0c3ac5f1032450d5a6fa871143d4672362e40a3ea70c08def315839aafe8298a:2026-10-05T18:08:20.247671+00:00:3654c195689a5327",
+      "structure_ids: structure:pdb:9TD4:c2ecebe677c3cb7dda0a302d5c24208f60d243455999d7f2ac70ee56d95451de:2026-10-05T18:08:20.670976+00:00:3654c195689a5327",
+      "structure_ids: structure:pdb:9TD5:3c04ff7331ada5f216e97e0ddcc14a111749f4df6948505fd4467d3e93cf3489:2026-10-05T18:08:20.250480+00:00:3654c195689a5327",
+      "structure_ids: structure:pdb:9TD7:b9cc9d5f5f71a334f6f9b1b17fa1965fd2f0fcca5d3e2be80d45808dd83ae3b7:2026-10-05T18:08:20.756989+00:00:3654c195689a5327",
+      "structure_ids: structure:pdb:9TF3:3d82784437279393c8bc2a966f3135bd0a97085173bcba49bf6b8eee708b15ff:2026-10-05T18:08:21.090958+00:00:3654c195689a5327",
+      "structure_ids: structure:pdb:9TF4:a1dc071b438c2dfaf5f24650ec5348cab2a6fd0949e5fc27e02c77ac1c57ab93:2026-10-05T18:08:21.259114+00:00:3654c195689a5327",
+      "structure_ids: structure:pdb:9TF6:2f41bafb77660fffc439b063667e86703948b4aa2ec030350ce9d933f052db17:2026-10-05T18:08:21.692179+00:00:3654c195689a5327",
+      "structure_ids: structure:pdb:9TFN:57076f87c1fd05b1dcaed101da8a11d38fdad36a41eca00ad7f93d8c28ceba7b:2026-10-05T18:08:21.702871+00:00:3654c195689a5327"
+    ],
+    "scientific_diff": {
+      "critical": null,
+      "evidence_status_changes": [
+        {
+          "after": "supported",
+          "because": [],
+          "before": "not_assessed",
+          "kind": "edge",
+          "name": "disease",
+          "rule": "DECISION-RESULT-001"
+        }
+      ],
+      "explanation_changes": [],
+      "new_experimental_evidence": [],
+      "recommendation": null,
+      "removed_evidence": [],
+      "review_changes": [],
+      "uncertainty_changes": [
+        {
+          "after": [
+            "resolved_for_current_decision",
+            "informative"
+          ],
+          "before": [
+            "open",
+            "informative"
+          ],
+          "id": "uncertainty:disease_relevance",
+          "rules": [
+            "DECISION-DIS-001"
+          ],
+          "scope_breakdown": []
+        }
+      ]
+    },
+    "to": "decision-state:2:212f995ecc55c989",
+    "triggering_results": []
+  },
+  "from": "decision-state:1:cebbae3880aeec90",
+  "items": {
+    "Cellular pharmacology": {
+      "cause": "HeLa/CT26 source readouts -> hla edge/phenotype references -> DECISION-GAP-001/DEP-001; does not become direct engagement",
+      "classification_scope": "evidence coverage/admission change, not a new decision rule or clinical recommendation",
+      "status": "CHANGED"
+    },
+    "Chemical Learning status": {
+      "cause": "main ref22 -> admissible single-context conservative subsets -> existing learning_admission/eligibility policy -> MODEL_ELIGIBLE_WITH_CONDITIONS; no model trained",
+      "classification_scope": "evidence coverage/admission change, not a new decision rule or clinical recommendation",
+      "status": "CHANGED"
+    },
+    "Chemical tractability": {
+      "cause": "BRADSHAW/Tinworth source-normalized Hap2 measurements -> biochemical edge supported -> DECISION-GAP-001; expands chemical coverage, not disease efficacy",
+      "classification_scope": "evidence coverage/admission change, not a new decision rule or clinical recommendation",
+      "status": "CHANGED"
+    },
+    "Critical uncertainty": {
+      "after": "uncertainty:target_engagement",
+      "before": "uncertainty:target_engagement",
+      "cause": "new Hap2 biochemical and reporter/peptide evidence -> pharmacology/phenotype claims, not direct occupancy -> DECISION-GAP-001/002, DECISION-CRIT-001 -> actual engine output",
+      "stable_reason": "programme tractability cannot resolve historical Maben compound-specific engagement",
+      "status": "STABLE"
+    },
+    "Historical Maben engagement": {
+      "cause": "No Maben compound occupancy measurement; later compounds cannot supply it",
+      "classification_scope": "evidence coverage/admission change, not a new decision rule or clinical recommendation",
+      "status": "STABLE"
+    },
+    "Next experiment": {
+      "after": "decision:exp:chemical-genetic-engagement",
+      "before": "decision:exp:chemical-genetic-engagement",
+      "cause": "new Hap2 biochemical and reporter/peptide evidence -> pharmacology/phenotype claims, not direct occupancy -> DECISION-GAP-001/002, DECISION-CRIT-001 -> actual engine output",
+      "stable_reason": "programme tractability cannot resolve historical Maben compound-specific engagement",
+      "status": "STABLE"
+    },
+    "Structural tractability": {
+      "cause": "12 source-mapped structures added since canonical BEFORE -> regulatory-site structure claims -> DECISION-STRUCT-001 -> design context only, not engagement",
+      "classification_scope": "evidence coverage/admission change, not a new decision rule or clinical recommendation",
+      "status": "CHANGED"
+    },
+    "Therapeutic strategy": {
+      "cause": "Strategy identifiers unchanged; tractability is not evidence of axSpA clinical benefit",
+      "classification_scope": "evidence coverage/admission change, not a new decision rule or clinical recommendation",
+      "status": "STABLE"
+    }
+  },
+  "no_opaque_score": true,
+  "review_state": "pending_review",
+  "to": "decision-state:2:212f995ecc55c989"
+}

@@ -1,0 +1,15 @@
+{
+  "full_pytest":{"passed":733,"skipped":2},
+  "targeted_methods_tests":{"passed":20},
+  "combined_methods_closure_evidence_tests":{"passed":42},
+  "strict_mypy":{"status":"PASS","axis_source_files":163},
+  "changed_Ruff":"PASS",
+  "global_Ruff":{"inherited_findings":462,"new_methods_findings":0},
+  "offline_HTTP_disabled_replay":"PASS",
+  "historical_claim_roundtrips":34,
+  "source_and_wheel_build":"PASS",
+  "frontend_and_migrations":"NOT RUN; no changes",
+  "decision_causality_stageB":"NOT RUN; Stage A=A2",
+  "new_Chemical_Learning_eligibility":"NOT RUN; normalized admission refused",
+  "no_commit_push_merge":true
+}
