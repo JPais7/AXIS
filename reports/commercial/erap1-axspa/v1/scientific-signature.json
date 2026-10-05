@@ -1,0 +1,267 @@
+{
+  "sha256": "892151e9f41244368d857b9421b2a9c7f463cc33840cd18f0f6bc99d0e0bff65",
+  "content": {
+    "decision": "cebbae3880aeec9084784f9f8df4a89abfe71a6058e3c924ce78651beaa44541",
+    "rules": {
+      "digest": "ed72eccfecc5863ca1088e628aa2b101867ac5a355a14f8139ac1bd57fbbdbfe",
+      "review_policy": "decision-review-policy-v1",
+      "review_policy_fingerprint": "c2ed2e59d0bc2e7cfd9252ec9ded56e830e7676df76a91236bad104560a59088",
+      "rules_fingerprint": "184a1e2949a61e362545e897de43890014bcdcac7191f621c84fb2b739cecd33",
+      "rules_version": "axis-decision-3"
+    },
+    "critical": "uncertainty:target_engagement",
+    "recommended": "decision:exp:chemical-genetic-engagement",
+    "learning": "a098ff64c89db792bb5a77d0b355fce0c095e1dd126efe7fb620917656756b1c",
+    "panel": [
+      {
+        "name": "Captopril",
+        "role": "exploration",
+        "dimensions": {
+          "cellular_evidence": "none indexed",
+          "chemical_novelty": {
+            "meaning": "distinct from the indexed reference chemistry under this metric; not patent novelty",
+            "value": 0.875
+          },
+          "descriptor_flags": [],
+          "descriptors": {
+            "crippen_logp": 0.628,
+            "formal_charge": 0,
+            "fraction_csp3": 0.778,
+            "hba": 3,
+            "hbd": 2,
+            "heavy_atoms": 14,
+            "molecular_weight": 217.29,
+            "ring_count": 1,
+            "rotatable_bonds": 3,
+            "tpsa": 57.61
+          },
+          "docking": {
+            "note": "no docking evidence",
+            "status": "not_executed"
+          },
+          "identity": {
+            "chemical_space_origin": "researcher_supplied",
+            "compound_ref": "compound:supplied:captopril",
+            "external_identity": {
+              "provider": "PubChem PUG REST",
+              "provider_inchikey": "FAKRSMQSSFJEIM-RQJHMYQMSA-N",
+              "provider_record": "CID 44093",
+              "scope": "chemical identity only; says nothing about ERAP1 pharmacology",
+              "status": "externally_verified_identity"
+            },
+            "identity_provenance": "researcher_supplied",
+            "inchi_key": "FAKRSMQSSFJEIM-RQJHMYQMSA-N",
+            "inclusion_rationale": "Known drug carrying a metal-binding group (hydroxamate, thiol or alpha-hydroxy-beta-amino amide), supplied as a researcher hypothesis to explore the catalytic-metal region. Structure verified against PubChem by InChIKey (identity only); AXIS indexes no ERAP1 evidence for it.",
+            "isomeric_smiles": "C[C@H](CS)C(=O)N1CCC[C@H]1C(=O)O",
+            "molecular_formula": "C9H15NO3S",
+            "stereochemistry": {
+              "input_claim": null,
+              "status": "specified_in_input",
+              "stereocentres": 2,
+              "unassigned": 0
+            }
+          },
+          "known_experimental_evidence": {
+            "has_experimental_evidence": false,
+            "summary": "no direct evidence was identified in the indexed AXIS sources"
+          },
+          "scaffold": "C1CCNC1",
+          "selectivity_evidence": "none indexed",
+          "similarity_to_reference": {
+            "meaning": "chemical similarity only; biological relevance is a hypothesis",
+            "metric": "Tanimoto, Morgan r=2, 2048 bits",
+            "reference": "compound:maben-2",
+            "value": 0.125
+          }
+        }
+      },
+      {
+        "name": "Bestatin",
+        "role": "exploration",
+        "dimensions": {
+          "cellular_evidence": "none indexed",
+          "chemical_novelty": {
+            "meaning": "distinct from the indexed reference chemistry under this metric; not patent novelty",
+            "value": 0.8551
+          },
+          "descriptor_flags": [],
+          "descriptors": {
+            "crippen_logp": 0.533,
+            "formal_charge": 0,
+            "fraction_csp3": 0.5,
+            "hba": 4,
+            "hbd": 4,
+            "heavy_atoms": 22,
+            "molecular_weight": 308.378,
+            "ring_count": 1,
+            "rotatable_bonds": 8,
+            "tpsa": 112.65
+          },
+          "docking": {
+            "note": "no docking evidence",
+            "status": "not_executed"
+          },
+          "identity": {
+            "chemical_space_origin": "researcher_supplied",
+            "compound_ref": "compound:supplied:bestatin",
+            "external_identity": {
+              "provider": "PubChem PUG REST",
+              "provider_inchikey": "VGGGPCQERPFHOB-RDBSUJKOSA-N",
+              "provider_record": "CID 72172",
+              "scope": "chemical identity only; says nothing about ERAP1 pharmacology",
+              "status": "externally_verified_identity"
+            },
+            "identity_provenance": "researcher_supplied",
+            "inchi_key": "VGGGPCQERPFHOB-RDBSUJKOSA-N",
+            "inclusion_rationale": "Known drug carrying a metal-binding group (hydroxamate, thiol or alpha-hydroxy-beta-amino amide), supplied as a researcher hypothesis to explore the catalytic-metal region. Structure verified against PubChem by InChIKey (identity only); AXIS indexes no ERAP1 evidence for it.",
+            "isomeric_smiles": "CC(C)C[C@H](NC(=O)[C@@H](O)[C@H](N)Cc1ccccc1)C(=O)O",
+            "molecular_formula": "C16H24N2O4",
+            "stereochemistry": {
+              "input_claim": null,
+              "status": "specified_in_input",
+              "stereocentres": 3,
+              "unassigned": 0
+            }
+          },
+          "known_experimental_evidence": {
+            "has_experimental_evidence": false,
+            "summary": "no direct evidence was identified in the indexed AXIS sources"
+          },
+          "scaffold": "c1ccccc1",
+          "selectivity_evidence": "none indexed",
+          "similarity_to_reference": {
+            "meaning": "chemical similarity only; biological relevance is a hypothesis",
+            "metric": "Tanimoto, Morgan r=2, 2048 bits",
+            "reference": "compound:maben-2",
+            "value": 0.1449
+          }
+        }
+      },
+      {
+        "name": "Vorinostat",
+        "role": "exploration",
+        "dimensions": {
+          "cellular_evidence": "none indexed",
+          "chemical_novelty": {
+            "meaning": "distinct from the indexed reference chemistry under this metric; not patent novelty",
+            "value": 0.8276
+          },
+          "descriptor_flags": [],
+          "descriptors": {
+            "crippen_logp": 2.471,
+            "formal_charge": 0,
+            "fraction_csp3": 0.429,
+            "hba": 3,
+            "hbd": 3,
+            "heavy_atoms": 19,
+            "molecular_weight": 264.325,
+            "ring_count": 1,
+            "rotatable_bonds": 8,
+            "tpsa": 78.43
+          },
+          "docking": {
+            "note": "no docking evidence",
+            "status": "not_executed"
+          },
+          "identity": {
+            "chemical_space_origin": "researcher_supplied",
+            "compound_ref": "compound:supplied:vorinostat",
+            "external_identity": {
+              "provider": "PubChem PUG REST",
+              "provider_inchikey": "WAEXFXRVDQXREF-UHFFFAOYSA-N",
+              "provider_record": "CID 5311",
+              "scope": "chemical identity only; says nothing about ERAP1 pharmacology",
+              "status": "externally_verified_identity"
+            },
+            "identity_provenance": "researcher_supplied",
+            "inchi_key": "WAEXFXRVDQXREF-UHFFFAOYSA-N",
+            "inclusion_rationale": "Known drug carrying a metal-binding group (hydroxamate, thiol or alpha-hydroxy-beta-amino amide), supplied as a researcher hypothesis to explore the catalytic-metal region. Structure verified against PubChem by InChIKey (identity only); AXIS indexes no ERAP1 evidence for it.",
+            "isomeric_smiles": "O=C(CCCCCCC(=O)Nc1ccccc1)NO",
+            "molecular_formula": "C14H20N2O3",
+            "stereochemistry": {
+              "input_claim": null,
+              "status": "not_applicable",
+              "stereocentres": 0,
+              "unassigned": 0
+            }
+          },
+          "known_experimental_evidence": {
+            "has_experimental_evidence": false,
+            "summary": "no direct evidence was identified in the indexed AXIS sources"
+          },
+          "scaffold": "c1ccccc1",
+          "selectivity_evidence": "none indexed",
+          "similarity_to_reference": {
+            "meaning": "chemical similarity only; biological relevance is a hypothesis",
+            "metric": "Tanimoto, Morgan r=2, 2048 bits",
+            "reference": "compound:maben-2",
+            "value": 0.1724
+          }
+        }
+      }
+    ],
+    "structure": [
+      {
+        "canonical_length": 941,
+        "canonical_mapped": 941,
+        "canonical_with_coordinates": 696,
+        "coordinate_coverage_percent": 73.96386822529225,
+        "inserted_positions": 13,
+        "mapped_coverage_percent": 100.0,
+        "not_in_construct": 0,
+        "substitutions_or_mismatches": 0,
+        "unresolved_mapped": 245
+      },
+      {
+        "canonical_length": 941,
+        "canonical_mapped": 941,
+        "canonical_with_coordinates": 802,
+        "coordinate_coverage_percent": 85.22848034006377,
+        "inserted_positions": 13,
+        "mapped_coverage_percent": 100.0,
+        "not_in_construct": 0,
+        "substitutions_or_mismatches": 0,
+        "unresolved_mapped": 139
+      },
+      {
+        "canonical_length": 941,
+        "canonical_mapped": 941,
+        "canonical_with_coordinates": 800,
+        "coordinate_coverage_percent": 85.01594048884166,
+        "inserted_positions": 13,
+        "mapped_coverage_percent": 100.0,
+        "not_in_construct": 0,
+        "substitutions_or_mismatches": 0,
+        "unresolved_mapped": 141
+      }
+    ],
+    "retrospective": {
+      "erap1-axspa-t2011": {
+        "basis": [
+          "the critical uncertainty stated at the cutoff did not change status",
+          "PMID:24504800: changes_other_uncertainty",
+          "PMID:26130142: changes_other_uncertainty",
+          "PMID:27107845: changes_other_uncertainty",
+          "PMID:31841350: changes_other_uncertainty"
+        ],
+        "conclusion": "future_evidence_did_not_test_the_decision"
+      },
+      "erap1-axspa-t2014": {
+        "basis": [
+          "the critical uncertainty stated at the cutoff did not change status",
+          "PMID:26130142: changes_other_uncertainty",
+          "PMID:27107845: adds_evidence_to_open_uncertainty",
+          "PMID:31841350: changes_other_uncertainty"
+        ],
+        "conclusion": "future_evidence_did_not_test_the_decision"
+      },
+      "erap1-axspa-t2016": {
+        "basis": [
+          "the critical uncertainty stated at the cutoff did not change status",
+          "PMID:31841350: changes_other_uncertainty"
+        ],
+        "conclusion": "future_evidence_did_not_test_the_decision"
+      }
+    }
+  }
+}
