@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "status": "INSUFFICIENT REFRESH COMPLETENESS TO ASSESS",
+  "terminal_for_this_refresh_attempt": true,
+  "review_status": "pending_independent_review",
+  "scope": "Terminal audit disposition, not a completed scientific evidence set or DecisionState",
+  "access_attempts_closed": true,
+  "access_evidence": [
+    "closure-attempt-1/access-log.json",
+    "closure-attempt-1/public-access-metadata.json",
+    "closure-attempt-1/supporting-access.json",
+    "closure-attempt-1/carnosic-supporting-access.json"
+  ],
+  "cases": [
+    {
+      "doi": "10.1016/j.intimp.2025.115180",
+      "access_disposition": "unavailable_after_documented_legitimate_attempts",
+      "materiality": "decision_blocking",
+      "affected_questions": ["cellular_target_engagement", "critical_uncertainty", "next_experiment"],
+      "reason": "The accessible report claims ERAP1 interaction at cellular and protein levels. Unavailable methods are needed to distinguish intact-cell engagement from lysate binding or indirect functional effects, and to evaluate exposure matching and controls. Credible intact-cell engagement could change the baseline critical uncertainty; a lysate-only or unmatched assay would not establish it. These alternatives cannot defensibly be adjudicated from the accessible material.",
+      "not_a_claim": "This is not proof that the inaccessible results would overturn the baseline, nor a negative finding about engagement."
+    },
+    {
+      "doi": "10.1021/acs.jafc.4c00957",
+      "access_disposition": "main_text_unavailable_after_documented_legitimate_attempts_supporting_information_available",
+      "materiality": "relevant_but_not_independently_established_as_decision_blocking",
+      "reason": "The public supplement supports bounded biochemical observations, not verified cellular engagement. Main-text absence limits chemical-identity mapping, assay interpretation and broader mechanistic assessment. It is not independently shown to change the baseline decision.",
+      "constraints": ["Preserve censored ERAP2 values", "Do not compute selectivity ratios across different substrates", "Do not treat calculated interaction energies as measured binding", "Do not infer absence of cellular experiments from their absence in the supplement"]
+    }
+  ],
+  "screening": {
+    "completed": false,
+    "unresolved_original_checkpoint_records": 1530,
+    "supplemental_screening_integrated": false,
+    "reason": "Stopped under the material-blocker terminal condition. Proposed exclusions have not been promoted to scientific exclusions. Supplemental retrieval counts are not independent-study counts."
+  },
+  "freeze": {
+    "kind": "terminal_audit_snapshot_only",
+    "final_scientific_evidence_set_frozen": false,
+    "protocol_changed": false,
+    "baseline_changed": false
+  },
+  "outputs": {
+    "DecisionState_v2": "not_created",
+    "causal_diff": "not_created",
+    "commercial_brief_v1_1": "not_created",
+    "baseline_reaffirmed": false,
+    "ready_for_merge": false
+  }
+}
