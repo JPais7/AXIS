@@ -1,0 +1,212 @@
+[
+  {
+    "study_id": "wang-2022",
+    "accessibility": "FULL_TEXT_ACCESSIBLE",
+    "methods_sufficient": true,
+    "source_access": {
+      "pmcid": "PMC9368314",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9368314/fullTextXML",
+      "bytes": 159301,
+      "sha256": "616a010892105bdcd0248a14810cc730115945b859215fd4f292a860e3934d55",
+      "body_present": true
+    },
+    "access_date": "2026-10-05",
+    "review_status": "pending_review"
+  },
+  {
+    "study_id": "tran-2023",
+    "accessibility": "FULL_TEXT_ACCESSIBLE",
+    "methods_sufficient": true,
+    "source_access": {
+      "pmcid": "PMC9892207",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=9892207",
+      "bytes": 115879,
+      "sha256": "1516eb0834af3d9dd28799ace3677df129eb2dddbaee076b0a27975192199b0d",
+      "body_present": true
+    },
+    "access_date": "2026-10-05",
+    "review_status": "pending_review"
+  },
+  {
+    "study_id": "tedeschi-2023",
+    "accessibility": "FULL_TEXT_ACCESSIBLE",
+    "methods_sufficient": true,
+    "source_access": {
+      "pmcid": "PMC10488187",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10488187/fullTextXML",
+      "bytes": 176861,
+      "sha256": "b23bd8c70fb7b993bda81f760341cfd29023a4b7413e783398aacd236052340e",
+      "body_present": true
+    },
+    "access_date": "2026-10-05",
+    "review_status": "pending_review"
+  },
+  {
+    "study_id": "hutchinson-2021",
+    "accessibility": "FULL_TEXT_ACCESSIBLE",
+    "methods_sufficient": true,
+    "source_access": {
+      "pmcid": "PMC8024916",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8024916/fullTextXML",
+      "bytes": 138479,
+      "sha256": "6802e6de8041557bba69913adbb6f92300ba5c417afa769e05c0f8e7b4bb0432",
+      "body_present": true
+    },
+    "access_date": "2026-10-05",
+    "review_status": "pending_review"
+  },
+  {
+    "study_id": "temponeras-2024",
+    "accessibility": "FULL_TEXT_ACCESSIBLE",
+    "methods_sufficient": true,
+    "source_access": {
+      "pmcid": "PMC11527673",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11527673/fullTextXML",
+      "bytes": 134544,
+      "sha256": "a3c7245b0e112725034fac80d46507f57a785383c1b46ba8350425add49e2f21",
+      "body_present": true
+    },
+    "access_date": "2026-10-05",
+    "review_status": "pending_review"
+  },
+  {
+    "study_id": "cyclohexyl-2024",
+    "accessibility": "METHODS_AND_RESULTS_SUFFICIENT",
+    "methods_sufficient": true,
+    "source_access": {
+      "pmcid": "PMC11647717",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11647717/fullTextXML",
+      "bytes": 85760,
+      "sha256": "57e91b35dc285b3ab8240e6ea51b2e0984eace7f9119fafb352a27636228498d",
+      "body_present": true
+    },
+    "access_date": "2026-10-05",
+    "review_status": "pending_review"
+  },
+  {
+    "study_id": "maben-2021",
+    "accessibility": "FULL_TEXT_ACCESSIBLE",
+    "methods_sufficient": true,
+    "source_access": {
+      "pmcid": "PMC8421391",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8421391/fullTextXML",
+      "bytes": 184845,
+      "sha256": "3776aa5739d7ba0609539e1af601a313b0b831ebeba59c6e6955f2ca8ea5d65b",
+      "body_present": true
+    },
+    "access_date": "2026-10-05",
+    "review_status": "pending_review"
+  },
+  {
+    "study_id": "proteome-2025",
+    "accessibility": "FULL_TEXT_ACCESSIBLE",
+    "methods_sufficient": true,
+    "source_access": {
+      "pmcid": "PMC12136889",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12136889/fullTextXML",
+      "bytes": 178568,
+      "sha256": "a58181eaa1dd56a4338492ced947655fdf728563fa10da0241e8b4070ea31b0d",
+      "body_present": true
+    },
+    "access_date": "2026-10-05",
+    "review_status": "pending_review"
+  },
+  {
+    "study_id": "melanocyte-2025",
+    "accessibility": "FULL_TEXT_ACCESSIBLE",
+    "methods_sufficient": true,
+    "source_access": {
+      "pmcid": "PMC12779449",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12779449/fullTextXML",
+      "bytes": 148749,
+      "sha256": "fae0250dd4948a0a8ae66fc304ebb7b280761cab8c205cf9cd194f7aaf57b9a7",
+      "body_present": true
+    },
+    "access_date": "2026-10-05",
+    "review_status": "pending_review"
+  },
+  {
+    "study_id": "genomics-2026",
+    "accessibility": "FULL_TEXT_ACCESSIBLE",
+    "methods_sufficient": true,
+    "source_access": {
+      "pmcid": "PMC13265330",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13265330/fullTextXML",
+      "bytes": 124062,
+      "sha256": "42697e0c8e24a1d97673e71c5e841454ae896f73b68ce8f56df5689761196ee0",
+      "body_present": true
+    },
+    "access_date": "2026-10-05",
+    "review_status": "pending_review"
+  },
+  {
+    "study_id": "babaie-2023",
+    "accessibility": "ABSTRACT_ONLY",
+    "methods_sufficient": false,
+    "source_access": null,
+    "access_date": "2026-10-05",
+    "review_status": "pending_review"
+  },
+  {
+    "study_id": "wu-mr-2025",
+    "accessibility": "ABSTRACT_ONLY",
+    "methods_sufficient": false,
+    "source_access": null,
+    "access_date": "2026-10-05",
+    "review_status": "pending_review"
+  },
+  {
+    "study_id": "corilagin-2025",
+    "accessibility": "ABSTRACT_ONLY",
+    "methods_sufficient": false,
+    "source_access": null,
+    "access_date": "2026-10-05",
+    "review_status": "pending_review"
+  },
+  {
+    "study_id": "carnosic-2024",
+    "accessibility": "SUPPLEMENT_ONLY",
+    "methods_sufficient": false,
+    "source_access": null,
+    "access_date": "2026-10-05",
+    "review_status": "pending_review"
+  },
+  {
+    "study_id": "maben-indexed-2020",
+    "accessibility": "METHODS_AND_RESULTS_SUFFICIENT",
+    "methods_sufficient": true,
+    "source_access": null,
+    "access_date": "2026-10-05",
+    "review_status": "pending_review"
+  },
+  {
+    "study_id": "benzofuran-2021",
+    "accessibility": "ABSTRACT_ONLY",
+    "methods_sufficient": false,
+    "source_access": {
+      "pmcid": "PMC8274102",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=8274102",
+      "bytes": 10447,
+      "sha256": "9835807f3814f99836f366b05a4b5c7d701aa68944cb6fd78c5f7a8c12796b31",
+      "body_present": false
+    },
+    "access_date": "2026-10-05",
+    "review_status": "pending_review"
+  },
+  {
+    "study_id": "immunopeptidome-2023",
+    "accessibility": "FULL_TEXT_ACCESSIBLE",
+    "methods_sufficient": false,
+    "source_access": null,
+    "access_date": "2026-10-05",
+    "review_status": "pending_review"
+  },
+  {
+    "study_id": "east1-registry",
+    "accessibility": "METHODS_AND_RESULTS_SUFFICIENT",
+    "methods_sufficient": true,
+    "source_access": null,
+    "access_date": "2026-10-05",
+    "review_status": "pending_review"
+  }
+]

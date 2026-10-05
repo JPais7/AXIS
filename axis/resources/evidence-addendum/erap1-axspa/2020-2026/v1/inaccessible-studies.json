@@ -1,0 +1,93 @@
+[
+  {
+    "id": "babaie-2023",
+    "pmid": "36804470",
+    "doi": "10.1016/j.clim.2023.109268",
+    "year": 2023,
+    "action": "INSUFFICIENT_ACCESS",
+    "accessibility": "ABSTRACT_ONLY",
+    "methods_sufficient": false,
+    "layers": [
+      "Patient-derived cellular",
+      "Chemical perturbation"
+    ],
+    "design": [
+      "human",
+      "patient-derived",
+      "chemical perturbation"
+    ],
+    "disease_relevance": "Reported AS patient macrophage/NK context",
+    "rationale": "Public canonical TDM response contains metadata only. Cannot verify compound identity, dose, exposure, differentiation protocol, readout controls or engagement/dependency.",
+    "reported_not_adjudicated": "Abstract reports an AS macrophage FHC/NK-cell effect after ERAP1 inhibition; no new source assertions extracted.",
+    "findings": [],
+    "title": "Inhibition of ERAP1 represses HLA-B27 free heavy chains expression on polarized macrophages and interrupts NK cells activation and function from ankylosing spondylitis.",
+    "first_publication_date": "2023-02-16"
+  },
+  {
+    "id": "wu-mr-2025",
+    "pmid": "40349828",
+    "doi": "10.1016/j.lfs.2025.123682",
+    "year": 2025,
+    "action": "INSUFFICIENT_ACCESS",
+    "accessibility": "ABSTRACT_ONLY",
+    "methods_sufficient": false,
+    "layers": [
+      "Genetics"
+    ],
+    "design": [
+      "MR"
+    ],
+    "disease_relevance": "AS, circulating proteomic proxy",
+    "rationale": "OpenAlex now labels the paper hybrid OA, but the public TDM response still has no scientific body and DOI/publisher reading failed. OA metadata is not sufficient methods access.",
+    "reported_not_adjudicated": "Abstract: five proteomic GWAS, FinnGen R10 3162 cases/294770 controls, UKB replication 1344/324074, European ancestry; genetically proxied circulating ERAP1 positively associated with AS. Instrument identity/strength, exact MR estimator and pleiotropy details not inspected. Abstract lists coloc support for IL23R/IL1RL2, not ERAP1. MR is not drug inhibition validation.",
+    "findings": [],
+    "title": "Mendelian randomization analysis identifies ERAP1 and IL23R as potential drug targets for ankylosing spondylitis.",
+    "first_publication_date": "2025-05-09"
+  },
+  {
+    "id": "corilagin-2025",
+    "pmid": "40680611",
+    "doi": "10.1016/j.intimp.2025.115180",
+    "year": 2025,
+    "action": "INSUFFICIENT_ACCESS",
+    "accessibility": "ABSTRACT_ONLY",
+    "methods_sufficient": false,
+    "layers": [
+      "Chemical matter",
+      "Chemical perturbation",
+      "Cellular target engagement"
+    ],
+    "design": [
+      "reported biochemical/cellular"
+    ],
+    "disease_relevance": "Potential HLA-B27 relevance, not adjudicated",
+    "materiality": "POTENTIALLY_MATERIAL",
+    "adjudication": "INSUFFICIENT_FULL_TEXT_ACCESS_FOR_AXIS_ADJUDICATION",
+    "rationale": "Publisher 403; public TDM response metadata only; no repository full text identified. Abstract-level claims cannot establish intact-cell versus lysate/protein interaction, exposure matching, selectivity, dependency or controls.",
+    "reported_not_adjudicated": "Accessible report describes compound screening, ERAP1 interaction at protein/cellular levels, enzyme inhibition/active-site rationale and HLA-B27-related cellular effects. These are reported findings only, not accepted AXIS assertions or a resolved engagement gap.",
+    "findings": [],
+    "title": "Corilagin regulates antigen processing and presentation by directly binding to inhibit ERAP1.",
+    "first_publication_date": "2025-07-18"
+  },
+  {
+    "id": "carnosic-2024",
+    "pmid": "39024058",
+    "doi": "10.1021/acs.jafc.4c00957",
+    "year": 2024,
+    "action": "INSUFFICIENT_ACCESS",
+    "accessibility": "SUPPLEMENT_ONLY",
+    "methods_sufficient": false,
+    "layers": [
+      "Chemical matter",
+      "Biochemical pharmacology"
+    ],
+    "design": [
+      "reported biochemical"
+    ],
+    "disease_relevance": "Contextual pharmacology not adjudicated",
+    "rationale": "Main text re-check failed; public SI previously inspected in historical refresh, provenance commit 97c546e. Supplement does not establish complete methods, chemical-label bridge or cellular engagement. No addendum source assertions or measurements.",
+    "findings": [],
+    "title": "Carnosic Acid: A Novel Selective Inhibitor of ERAP1 by Direct Binding and Its Modulation of Antigen Processing and Presentation.",
+    "first_publication_date": "2024-07-18"
+  }
+]

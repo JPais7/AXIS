@@ -1,0 +1,158 @@
+[
+  {
+    "pdb_id": "9GJN",
+    "study_id": "cyclohexyl-2024",
+    "release_date": "2025-01-22T00:00:00.000+00:00",
+    "method": "X-RAY DIFFRACTION",
+    "resolution_angstrom": 1.717,
+    "construct_length": 922,
+    "chains": "A,B",
+    "sequence_mapping": [
+      {
+        "provenance_source": "SIFTS",
+        "reference_database_accession": "Q9NZ08",
+        "reference_database_name": "UniProt",
+        "aligned_regions": [
+          {
+            "entity_beg_seq_id": 1,
+            "length": 485,
+            "ref_beg_seq_id": 1
+          },
+          {
+            "entity_beg_seq_id": 489,
+            "length": 428,
+            "ref_beg_seq_id": 514
+          }
+        ]
+      }
+    ],
+    "sequence_conflicts": 4,
+    "mutations": "Depositor mutation count zero; five reference conflicts and engineered linker/tag. Full allotype reconciliation not performed.",
+    "conformation": "not independently classified from coordinates",
+    "ligand": "ERAP1 in complex with 1-[2-(3-oxo-3,4-dihydro-2H-1,4-benzothiazin-4-yl)acetamido]cyclohexane-1-carboxylic acid",
+    "metal": "ZN deposited; binding site attribution from paper, not occupancy in cells",
+    "binding_site": "paper-reported allosteric regulatory site",
+    "missing_residues": {
+      "unmodeled_polymer_count": 134,
+      "per_chain_ranges": "not evaluated"
+    },
+    "limitations": "Metadata/source-level structural curation, not a validated coordinate/docking or druggability assessment."
+  },
+  {
+    "pdb_id": "9GK6",
+    "study_id": "cyclohexyl-2024",
+    "release_date": "2025-01-22T00:00:00.000+00:00",
+    "method": "X-RAY DIFFRACTION",
+    "resolution_angstrom": 1.327,
+    "construct_length": 922,
+    "chains": "A",
+    "sequence_mapping": [
+      {
+        "provenance_source": "SIFTS",
+        "reference_database_accession": "Q9NZ08",
+        "reference_database_name": "UniProt",
+        "aligned_regions": [
+          {
+            "entity_beg_seq_id": 1,
+            "length": 485,
+            "ref_beg_seq_id": 1
+          },
+          {
+            "entity_beg_seq_id": 489,
+            "length": 428,
+            "ref_beg_seq_id": 514
+          }
+        ]
+      }
+    ],
+    "sequence_conflicts": 5,
+    "mutations": "Depositor mutation count zero; five reference conflicts and engineered linker/tag. Full allotype reconciliation not performed.",
+    "conformation": "not independently classified from coordinates",
+    "ligand": "ERAP1 in complex with 1-[2-(6-chloro-3-oxo-3,4-dihydro-2H-1,4-benzothiazin-4-yl)acetamido]cyclohexane-1-carboxylic acid",
+    "metal": "ZN deposited; binding site attribution from paper, not occupancy in cells",
+    "binding_site": "paper-reported allosteric regulatory site",
+    "missing_residues": {
+      "unmodeled_polymer_count": 68,
+      "per_chain_ranges": "not evaluated"
+    },
+    "limitations": "Metadata/source-level structural curation, not a validated coordinate/docking or druggability assessment."
+  },
+  {
+    "pdb_id": "9GJS",
+    "study_id": "cyclohexyl-2024",
+    "release_date": "2025-01-22T00:00:00.000+00:00",
+    "method": "X-RAY DIFFRACTION",
+    "resolution_angstrom": 1.351,
+    "construct_length": 922,
+    "chains": "A",
+    "sequence_mapping": [
+      {
+        "provenance_source": "SIFTS",
+        "reference_database_accession": "Q9NZ08",
+        "reference_database_name": "UniProt",
+        "aligned_regions": [
+          {
+            "entity_beg_seq_id": 1,
+            "length": 485,
+            "ref_beg_seq_id": 1
+          },
+          {
+            "entity_beg_seq_id": 489,
+            "length": 428,
+            "ref_beg_seq_id": 514
+          }
+        ]
+      }
+    ],
+    "sequence_conflicts": 5,
+    "mutations": "Depositor mutation count zero; five reference conflicts and engineered linker/tag. Full allotype reconciliation not performed.",
+    "conformation": "not independently classified from coordinates",
+    "ligand": "ERAP1 in complex with 1-[2-(6-bromo-3-oxo-3,4-dihydro-2H-1,4-benzoxazin-4-yl)acetamido]-4,4-difluorocyclohexane-1-carboxylic acid",
+    "metal": "ZN deposited; binding site attribution from paper, not occupancy in cells",
+    "binding_site": "paper-reported allosteric regulatory site",
+    "missing_residues": {
+      "unmodeled_polymer_count": 65,
+      "per_chain_ranges": "not evaluated"
+    },
+    "limitations": "Metadata/source-level structural curation, not a validated coordinate/docking or druggability assessment."
+  },
+  {
+    "pdb_id": "9GKE",
+    "study_id": "cyclohexyl-2024",
+    "release_date": "2025-01-22T00:00:00.000+00:00",
+    "method": "X-RAY DIFFRACTION",
+    "resolution_angstrom": 1.367,
+    "construct_length": 922,
+    "chains": "A",
+    "sequence_mapping": [
+      {
+        "provenance_source": "SIFTS",
+        "reference_database_accession": "Q9NZ08",
+        "reference_database_name": "UniProt",
+        "aligned_regions": [
+          {
+            "entity_beg_seq_id": 1,
+            "length": 485,
+            "ref_beg_seq_id": 1
+          },
+          {
+            "entity_beg_seq_id": 489,
+            "length": 428,
+            "ref_beg_seq_id": 514
+          }
+        ]
+      }
+    ],
+    "sequence_conflicts": 5,
+    "mutations": "Depositor mutation count zero; five reference conflicts and engineered linker/tag. Full allotype reconciliation not performed.",
+    "conformation": "not independently classified from coordinates",
+    "ligand": "ERAP1 in complex with 1-[2-(2-oxo-5-phenyl-2,3-dihydro-1,3-benzothiazol-3-yl)acetamido]cyclohexane-1-carboxylic acid",
+    "metal": "ZN deposited; binding site attribution from paper, not occupancy in cells",
+    "binding_site": "paper-reported allosteric regulatory site",
+    "missing_residues": {
+      "unmodeled_polymer_count": 65,
+      "per_chain_ranges": "not evaluated"
+    },
+    "limitations": "Metadata/source-level structural curation, not a validated coordinate/docking or druggability assessment."
+  }
+]

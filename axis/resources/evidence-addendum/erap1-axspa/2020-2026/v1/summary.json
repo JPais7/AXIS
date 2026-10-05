@@ -1,0 +1,31 @@
+{
+  "discovery_records": 176,
+  "selected_candidates": 18,
+  "selection_actions": {
+    "INTEGRATE": 10,
+    "INSUFFICIENT_ACCESS": 4,
+    "ALREADY_INDEXED": 1,
+    "DO_NOT_INTEGRATE": 2,
+    "CONTEXTUALIZE": 1
+  },
+  "source_assertions": 21,
+  "impact_assessments": 10,
+  "structures": 4,
+  "new_learning_measurements": 0,
+  "coverage": "Not comprehensive; discovery records not all scientifically screened",
+  "layers": {
+    "Genetics": 2,
+    "Allotype/HLA": 7,
+    "Mechanism": 8,
+    "Patient-derived cellular": 2,
+    "Genetic perturbation": 3,
+    "Translational models": 1,
+    "Biochemical pharmacology": 4,
+    "Chemical perturbation": 4,
+    "Chemical matter": 1,
+    "Structures": 2,
+    "Cellular phenotype": 2,
+    "Selectivity": 1,
+    "Immunopeptidomics": 2
+  }
+}

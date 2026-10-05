@@ -1,0 +1,125 @@
+{
+  "access_date": "2026-10-05",
+  "comprehensive": false,
+  "queries": [
+    {
+      "query": "ERAP1 AND (ankylosing OR spondyloarthritis) AND (genetic OR allotype) AND FIRST_PDATE:[2020-01-01 TO 2026-10-05]",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=ERAP1+AND+%28ankylosing+OR+spondyloarthritis%29+AND+%28genetic+OR+allotype%29+AND+FIRST_PDATE%3A%5B2020-01-01+TO+2026-10-05%5D&format=json&resultType=core&pageSize=40",
+      "hit_count": 352,
+      "returned": 40,
+      "response_sha256": "bcfa1352d70282c3d0a6169bdec27b4d510c4ffac057f8e1c7256f48d8387adf"
+    },
+    {
+      "query": "ERAP1 AND (HLA-B27 OR \"HLA-B*27\") AND (peptide OR CD8) AND FIRST_PDATE:[2020-01-01 TO 2026-10-05]",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=ERAP1+AND+%28HLA-B27+OR+%22HLA-B%2A27%22%29+AND+%28peptide+OR+CD8%29+AND+FIRST_PDATE%3A%5B2020-01-01+TO+2026-10-05%5D&format=json&resultType=core&pageSize=40",
+      "hit_count": 263,
+      "returned": 40,
+      "response_sha256": "cc12cb4f88481c22f1b06fcd6489cb3817d7cb411cd99fdeb74c36c01fb1c0fd"
+    },
+    {
+      "query": "ERAP1 AND (deficiency OR knockout OR macrophage) AND FIRST_PDATE:[2020-01-01 TO 2026-10-05]",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=ERAP1+AND+%28deficiency+OR+knockout+OR+macrophage%29+AND+FIRST_PDATE%3A%5B2020-01-01+TO+2026-10-05%5D&format=json&resultType=core&pageSize=40",
+      "hit_count": 720,
+      "returned": 40,
+      "response_sha256": "fff789b6d5cc1289abc36fd8b83b363fa99134372ff9c02893a71b9ab654ad33"
+    },
+    {
+      "query": "ERAP1 AND (immunopeptidome OR immunopeptidomics) AND FIRST_PDATE:[2020-01-01 TO 2026-10-05]",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=ERAP1+AND+%28immunopeptidome+OR+immunopeptidomics%29+AND+FIRST_PDATE%3A%5B2020-01-01+TO+2026-10-05%5D&format=json&resultType=core&pageSize=40",
+      "hit_count": 161,
+      "returned": 40,
+      "response_sha256": "9be8330fb0418e8e841f77f58ee5cd7b61e64d1291e20689b07d155701b5bdda"
+    },
+    {
+      "query": "ERAP1 AND (inhibitor OR selectivity) AND (cellular OR allosteric) AND FIRST_PDATE:[2020-01-01 TO 2026-10-05]",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=ERAP1+AND+%28inhibitor+OR+selectivity%29+AND+%28cellular+OR+allosteric%29+AND+FIRST_PDATE%3A%5B2020-01-01+TO+2026-10-05%5D&format=json&resultType=core&pageSize=40",
+      "hit_count": 635,
+      "returned": 40,
+      "response_sha256": "6b9f817a530a24bef144207fbcaea3283cd76dba315d26391f88b70869ffa9c4"
+    },
+    {
+      "query": "ERAP1 AND (structure OR crystallography OR ligand) AND FIRST_PDATE:[2020-01-01 TO 2026-10-05]",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=ERAP1+AND+%28structure+OR+crystallography+OR+ligand%29+AND+FIRST_PDATE%3A%5B2020-01-01+TO+2026-10-05%5D&format=json&resultType=core&pageSize=40",
+      "hit_count": 882,
+      "returned": 40,
+      "response_sha256": "15e0d9c2357165253505ddd495f0724e6bcf80e50668c64f59b177dbde4d5c13"
+    },
+    {
+      "query": "ERAP1 AND (engagement OR dependency OR clinical) AND FIRST_PDATE:[2020-01-01 TO 2026-10-05]",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=ERAP1+AND+%28engagement+OR+dependency+OR+clinical%29+AND+FIRST_PDATE%3A%5B2020-01-01+TO+2026-10-05%5D&format=json&resultType=core&pageSize=40",
+      "hit_count": 1201,
+      "returned": 40,
+      "response_sha256": "881f9ca21f6935e3af6c7bb7c8c19e71a42715b24e904931dd9cbaab184b9149"
+    },
+    {
+      "query": "ERAP1 AND (Mendelian OR corilagin OR carnosic) AND FIRST_PDATE:[2020-01-01 TO 2026-10-05]",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=ERAP1+AND+%28Mendelian+OR+corilagin+OR+carnosic%29+AND+FIRST_PDATE%3A%5B2020-01-01+TO+2026-10-05%5D&format=json&resultType=core&pageSize=40",
+      "hit_count": 152,
+      "returned": 40,
+      "response_sha256": "810651960a42a246e2143444477ce55776c17974e7d844c2e1756a75058aecaa"
+    },
+    {
+      "query": "EXT_ID:35954271 AND SRC:MED",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A35954271+AND+SRC%3AMED&format=json&resultType=core&pageSize=40",
+      "hit_count": 1,
+      "returned": 1,
+      "response_sha256": "2dea6380e8f38cb68068b1852c2bb93ff3f30c4e539b704e7e9ec6387c152197"
+    },
+    {
+      "query": "EXT_ID:36577442 AND SRC:MED",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A36577442+AND+SRC%3AMED&format=json&resultType=core&pageSize=40",
+      "hit_count": 1,
+      "returned": 1,
+      "response_sha256": "9fe03a3a7b72db2d9e57edd8d0448f5175d2e59fd87248b8f7651f10f25d59aa"
+    },
+    {
+      "query": "EXT_ID:36804470 AND SRC:MED",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A36804470+AND+SRC%3AMED&format=json&resultType=core&pageSize=40",
+      "hit_count": 1,
+      "returned": 1,
+      "response_sha256": "3edbb407fcf0d3edcf9f69c17a2d6780a7bccfacc29dfda595e7bdf6134b3057"
+    },
+    {
+      "query": "EXT_ID:37686141 AND SRC:MED",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A37686141+AND+SRC%3AMED&format=json&resultType=core&pageSize=40",
+      "hit_count": 1,
+      "returned": 1,
+      "response_sha256": "9f2250671f02d7ff059a9f482c3e82cfc6f20cd670dd7f01f882ff2f35e95dc0"
+    },
+    {
+      "query": "EXT_ID:40349828 AND SRC:MED",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A40349828+AND+SRC%3AMED&format=json&resultType=core&pageSize=40",
+      "hit_count": 1,
+      "returned": 1,
+      "response_sha256": "6f1fc4623b9ba65704528bb24fbe0fd28c61b2ad287894e89771a6ece06f8b8b"
+    },
+    {
+      "query": "EXT_ID:40680611 AND SRC:MED",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A40680611+AND+SRC%3AMED&format=json&resultType=core&pageSize=40",
+      "hit_count": 1,
+      "returned": 1,
+      "response_sha256": "533d630898a3004e0b6739223aae4c6a44899f09f14f31fca88206478eaeddf5"
+    },
+    {
+      "query": "EXT_ID:33617882 AND SRC:MED",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A33617882+AND+SRC%3AMED&format=json&resultType=core&pageSize=40",
+      "hit_count": 1,
+      "returned": 1,
+      "response_sha256": "31552b754906136c55271477d67a2c361321d86a6d52cba229a6e37db96abcd9"
+    },
+    {
+      "query": "EXT_ID:39691536 AND SRC:MED",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A39691536+AND+SRC%3AMED&format=json&resultType=core&pageSize=40",
+      "hit_count": 1,
+      "returned": 1,
+      "response_sha256": "c2bd0712a45393bfdb8debf1ca5aa02cf688a44cf6602fb0314e71d1601533fe"
+    },
+    {
+      "query": "EXT_ID:39024058 AND SRC:MED",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A39024058+AND+SRC%3AMED&format=json&resultType=core&pageSize=40",
+      "hit_count": 1,
+      "returned": 1,
+      "response_sha256": "0049ad0feb28bbb6fcf96945332390f91e3f827c9031cc4d9a370d551bcb4973"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "version": "v1.1",
+  "review_status": "pending_review",
+  "baseline": {
+    "commit": "d491ebe47ee0c40dfaa3823a44a9decd1afae29d",
+    "snapshot_sha256": "83b2bcff0b58daccfeda58126d918d593e002e1499382f1ddfa450fe2737ee68",
+    "decision_digest": "cebbae3880aeec9084784f9f8df4a89abfe71a6058e3c924ce78651beaa44541",
+    "critical": "uncertainty:target_engagement",
+    "recommended": "decision:exp:chemical-genetic-engagement",
+    "learning": "MODEL NOT BUILT",
+    "historical_refresh_commit": "a3cbb37a5681a057dfe1c86c7e8686553d95c4b2"
+  },
+  "addendum_manifest_sha256": "d0006dd9836d84408c45fc8165efe8a6120ad1b167d771fb18ab892d96535235",
+  "canonical_decision_created": false,
+  "outputs": [
+    {
+      "path": "executive/AXIS-ERAP1-axSpA-Executive-Brief.pdf",
+      "pages": 3,
+      "sha256": "d5699c1373415223eb35803afd53e4b2053ce956cde98bf257efc7d1813597e0"
+    },
+    {
+      "path": "full/AXIS-ERAP1-axSpA-Target-Decision-Brief.pdf",
+      "pages": 20,
+      "sha256": "e20c6e7ba7dcfdc3a207adb5f2775adcef53dc359669544698dfdeebf43570d6"
+    }
+  ],
+  "traceability_sha256": "72ffc1ab182a6ceabcaa11c2ac042b1cc8c34b8545020e77a78340cb1040fc24"
+}

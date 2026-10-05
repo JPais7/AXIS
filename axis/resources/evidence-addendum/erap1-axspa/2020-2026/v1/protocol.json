@@ -1,0 +1,18 @@
+{
+  "id": "erap1-axspa-accessible-addendum-2020-2026-v1",
+  "scope": "Bounded recent accessible primary evidence; not systematic or comprehensive",
+  "window": {"start": "2020-01-01", "end": "2026-10-05"},
+  "baseline_commit": "d491ebe47ee0c40dfaa3823a44a9decd1afae29d",
+  "historical_refresh_commit": "a3cbb37a5681a057dfe1c86c7e8686553d95c4b2",
+  "historical_refresh_status": "INSUFFICIENT REFRESH COMPLETENESS TO ASSESS",
+  "selection": "Targeted searches across fifteen evidence layers, independently verifying known seeds; prioritize decision relevance and sufficient methods/results over count. Aim 10–20 studies if eligible, with no minimum quota.",
+  "search_bound": "Eight Europe PMC targeted queries, up to 40 records per query in API default ordering; primary publisher/PMC/registry/structure follow-up of selected candidates. Truncation, default-order recency bias and inaccessible sources are explicit limitations. Exact-identifier seed verification is logged separately, not a comprehensive search.",
+  "eligible_access": ["FULL_TEXT_ACCESSIBLE", "METHODS_AND_RESULTS_SUFFICIENT"],
+  "other_access": ["ABSTRACT_ONLY", "SUPPLEMENT_ONLY", "METADATA_ONLY", "INACCESSIBLE"],
+  "review_policy": "All AI-assisted source assertions and impact inferences remain pending_review; no self-approval",
+  "boundaries": ["AS is not all axSpA", "SNP is not complete allotype", "MR is not therapeutic validation", "Phenotype is not engagement", "Binding is not intact-cell engagement", "Genetic loss is not pharmacological inhibition", "Contextual cancer biology is not AS therapeutic evidence", "Registration is not clinical efficacy"],
+  "inaccessible_policy": "Potentially material inaccessible studies are isolated; they do not block curation of accessible studies and are never treated as adjudicated or negative evidence.",
+  "decision_policy": "Canonical baseline untouched unless evidence-triggered sufficient reassessment is justified; otherwise bounded AddendumDecisionImpact, no forced v2 or QSAR.",
+  "copyright_policy": "Do not commit full articles; retain identifiers, access logs, hashes and original curated paraphrases with locators.",
+  "stop": "Freeze bounded curated package, validate, update brief only if justified, publish branch; no Phase 3.10 or exhaustive refresh."
+}

@@ -1,0 +1,332 @@
+[
+  {
+    "id": "addendum:impact:wang-2022",
+    "study_id": "wang-2022",
+    "claim_ids": [
+      "addendum:claim:wang-2022:1",
+      "addendum:claim:wang-2022:2",
+      "addendum:claim:wang-2022:3"
+    ],
+    "affected_evidence_layer": [
+      "Genetics",
+      "Allotype/HLA",
+      "Mechanism",
+      "Patient-derived cellular"
+    ],
+    "affected_hypothesis": "ERAP1 modulation in HLA-B27/AS biology",
+    "affected_explanation": [
+      "explanation:on_target",
+      "explanation:context",
+      "explanation:indirect",
+      "explanation:off_target"
+    ],
+    "affected_uncertainty": [
+      "uncertainty:target_engagement",
+      "uncertainty:genetic_context",
+      "uncertainty:mechanistic_bridge"
+    ],
+    "affected_intervention_strategy": "genotype/context-dependent ERAP1 modulation; direction unresolved",
+    "affected_experiment": "decision:exp:chemical-genetic-engagement",
+    "impact_direction": "strengthens",
+    "materiality": "DECISION_RELEVANT",
+    "rationale": "Strengthens target biology and genotype-context rationale, not inhibition efficacy.",
+    "epistemic_kind": "axis_inference",
+    "review_status": "pending_review"
+  },
+  {
+    "id": "addendum:impact:tran-2023",
+    "study_id": "tran-2023",
+    "claim_ids": [
+      "addendum:claim:tran-2023:1",
+      "addendum:claim:tran-2023:2",
+      "addendum:claim:tran-2023:3",
+      "addendum:claim:tran-2023:4"
+    ],
+    "affected_evidence_layer": [
+      "Allotype/HLA",
+      "Mechanism",
+      "Genetic perturbation",
+      "Translational models"
+    ],
+    "affected_hypothesis": "ERAP1 modulation in HLA-B27/AS biology",
+    "affected_explanation": [
+      "explanation:on_target",
+      "explanation:context",
+      "explanation:indirect",
+      "explanation:off_target"
+    ],
+    "affected_uncertainty": [
+      "uncertainty:target_engagement",
+      "uncertainty:genetic_context",
+      "uncertainty:mechanistic_bridge"
+    ],
+    "affected_intervention_strategy": "genotype/context-dependent ERAP1 modulation; direction unresolved",
+    "affected_experiment": "decision:exp:chemical-genetic-engagement",
+    "impact_direction": "opens_new_uncertainty",
+    "materiality": "DECISION_RELEVANT",
+    "rationale": "Improves perturbational support while weakening a uniformly beneficial inhibition narrative.",
+    "epistemic_kind": "axis_inference",
+    "review_status": "pending_review"
+  },
+  {
+    "id": "addendum:impact:tedeschi-2023",
+    "study_id": "tedeschi-2023",
+    "claim_ids": [
+      "addendum:claim:tedeschi-2023:1",
+      "addendum:claim:tedeschi-2023:2"
+    ],
+    "affected_evidence_layer": [
+      "Allotype/HLA",
+      "Mechanism",
+      "Patient-derived cellular"
+    ],
+    "affected_hypothesis": "ERAP1 modulation in HLA-B27/AS biology",
+    "affected_explanation": [
+      "explanation:on_target",
+      "explanation:context",
+      "explanation:indirect",
+      "explanation:off_target"
+    ],
+    "affected_uncertainty": [
+      "uncertainty:target_engagement",
+      "uncertainty:genetic_context",
+      "uncertainty:mechanistic_bridge"
+    ],
+    "affected_intervention_strategy": "genotype/context-dependent ERAP1 modulation; direction unresolved",
+    "affected_experiment": "decision:exp:chemical-genetic-engagement",
+    "impact_direction": "strengthens",
+    "materiality": "DECISION_RELEVANT",
+    "rationale": "Adds adaptive-immune context without establishing pathogenic causality or intervention direction.",
+    "epistemic_kind": "axis_inference",
+    "review_status": "pending_review"
+  },
+  {
+    "id": "addendum:impact:hutchinson-2021",
+    "study_id": "hutchinson-2021",
+    "claim_ids": [
+      "addendum:claim:hutchinson-2021:1",
+      "addendum:claim:hutchinson-2021:2"
+    ],
+    "affected_evidence_layer": [
+      "Allotype/HLA",
+      "Mechanism",
+      "Biochemical pharmacology",
+      "Chemical perturbation"
+    ],
+    "affected_hypothesis": "ERAP1 modulation in HLA-B27/AS biology",
+    "affected_explanation": [
+      "explanation:on_target",
+      "explanation:context",
+      "explanation:indirect",
+      "explanation:off_target"
+    ],
+    "affected_uncertainty": [
+      "uncertainty:target_engagement",
+      "uncertainty:genetic_context",
+      "uncertainty:mechanistic_bridge"
+    ],
+    "affected_intervention_strategy": "genotype/context-dependent ERAP1 modulation; direction unresolved",
+    "affected_experiment": "decision:exp:chemical-genetic-engagement",
+    "impact_direction": "contextualizes",
+    "materiality": "DECISION_RELEVANT",
+    "rationale": "Strengthens the requirement to specify allotype and peptide substrate rather than assign universal activity labels.",
+    "epistemic_kind": "axis_inference",
+    "review_status": "pending_review"
+  },
+  {
+    "id": "addendum:impact:temponeras-2024",
+    "study_id": "temponeras-2024",
+    "claim_ids": [
+      "addendum:claim:temponeras-2024:1",
+      "addendum:claim:temponeras-2024:2"
+    ],
+    "affected_evidence_layer": [
+      "Allotype/HLA",
+      "Mechanism",
+      "Biochemical pharmacology",
+      "Chemical perturbation"
+    ],
+    "affected_hypothesis": "ERAP1 modulation in HLA-B27/AS biology",
+    "affected_explanation": [
+      "explanation:on_target",
+      "explanation:context",
+      "explanation:indirect",
+      "explanation:off_target"
+    ],
+    "affected_uncertainty": [
+      "uncertainty:target_engagement",
+      "uncertainty:genetic_context",
+      "uncertainty:mechanistic_bridge"
+    ],
+    "affected_intervention_strategy": "genotype/context-dependent ERAP1 modulation; direction unresolved",
+    "affected_experiment": "decision:exp:chemical-genetic-engagement",
+    "impact_direction": "contradicts",
+    "materiality": "DECISION_RELEVANT",
+    "rationale": "Contradicts a universal low-activity interpretation of allotype 10, not the established association itself.",
+    "epistemic_kind": "axis_inference",
+    "review_status": "pending_review"
+  },
+  {
+    "id": "addendum:impact:cyclohexyl-2024",
+    "study_id": "cyclohexyl-2024",
+    "claim_ids": [
+      "addendum:claim:cyclohexyl-2024:1",
+      "addendum:claim:cyclohexyl-2024:2",
+      "addendum:claim:cyclohexyl-2024:3"
+    ],
+    "affected_evidence_layer": [
+      "Chemical matter",
+      "Structures",
+      "Biochemical pharmacology",
+      "Chemical perturbation",
+      "Cellular phenotype",
+      "Selectivity"
+    ],
+    "affected_hypothesis": "ERAP1 modulation in HLA-B27/AS biology",
+    "affected_explanation": [
+      "explanation:on_target",
+      "explanation:context",
+      "explanation:indirect",
+      "explanation:off_target"
+    ],
+    "affected_uncertainty": [
+      "uncertainty:target_engagement",
+      "uncertainty:genetic_context",
+      "uncertainty:mechanistic_bridge"
+    ],
+    "affected_intervention_strategy": "genotype/context-dependent ERAP1 modulation; direction unresolved",
+    "affected_experiment": "decision:exp:chemical-genetic-engagement",
+    "impact_direction": "fills_gap",
+    "materiality": "DECISION_RELEVANT",
+    "rationale": "Improves chemistry/structure options but does not resolve baseline compounds' cellular engagement.",
+    "epistemic_kind": "axis_inference",
+    "review_status": "pending_review"
+  },
+  {
+    "id": "addendum:impact:maben-2021",
+    "study_id": "maben-2021",
+    "claim_ids": [
+      "addendum:claim:maben-2021:1"
+    ],
+    "affected_evidence_layer": [
+      "Mechanism",
+      "Structures",
+      "Biochemical pharmacology",
+      "Allotype/HLA"
+    ],
+    "affected_hypothesis": "ERAP1 modulation in HLA-B27/AS biology",
+    "affected_explanation": [
+      "explanation:on_target",
+      "explanation:context",
+      "explanation:indirect",
+      "explanation:off_target"
+    ],
+    "affected_uncertainty": [
+      "uncertainty:target_engagement",
+      "uncertainty:genetic_context",
+      "uncertainty:mechanistic_bridge"
+    ],
+    "affected_intervention_strategy": "genotype/context-dependent ERAP1 modulation; direction unresolved",
+    "affected_experiment": "decision:exp:chemical-genetic-engagement",
+    "impact_direction": "contextualizes",
+    "materiality": "DECISION_RELEVANT",
+    "rationale": "Supports construct-specific mechanism without promoting structural behavior to occupancy in AS cells.",
+    "epistemic_kind": "axis_inference",
+    "review_status": "pending_review"
+  },
+  {
+    "id": "addendum:impact:proteome-2025",
+    "study_id": "proteome-2025",
+    "claim_ids": [
+      "addendum:claim:proteome-2025:1",
+      "addendum:claim:proteome-2025:2"
+    ],
+    "affected_evidence_layer": [
+      "Mechanism",
+      "Immunopeptidomics",
+      "Genetic perturbation",
+      "Chemical perturbation",
+      "Cellular phenotype"
+    ],
+    "affected_hypothesis": "ERAP1 modulation in HLA-B27/AS biology",
+    "affected_explanation": [
+      "explanation:on_target",
+      "explanation:context",
+      "explanation:indirect",
+      "explanation:off_target"
+    ],
+    "affected_uncertainty": [
+      "uncertainty:target_engagement",
+      "uncertainty:genetic_context",
+      "uncertainty:mechanistic_bridge"
+    ],
+    "affected_intervention_strategy": "genotype/context-dependent ERAP1 modulation; direction unresolved",
+    "affected_experiment": "decision:exp:chemical-genetic-engagement",
+    "impact_direction": "opens_new_uncertainty",
+    "materiality": "DECISION_RELEVANT",
+    "rationale": "Keeps indirect/context explanations viable and cautions against equating inhibition with loss of protein.",
+    "epistemic_kind": "axis_inference",
+    "review_status": "pending_review"
+  },
+  {
+    "id": "addendum:impact:melanocyte-2025",
+    "study_id": "melanocyte-2025",
+    "claim_ids": [
+      "addendum:claim:melanocyte-2025:1"
+    ],
+    "affected_evidence_layer": [
+      "Allotype/HLA",
+      "Immunopeptidomics",
+      "Genetic perturbation",
+      "Mechanism"
+    ],
+    "affected_hypothesis": "ERAP1 modulation in HLA-B27/AS biology",
+    "affected_explanation": [
+      "explanation:on_target",
+      "explanation:context",
+      "explanation:indirect",
+      "explanation:off_target"
+    ],
+    "affected_uncertainty": [
+      "uncertainty:target_engagement",
+      "uncertainty:genetic_context",
+      "uncertainty:mechanistic_bridge"
+    ],
+    "affected_intervention_strategy": "genotype/context-dependent ERAP1 modulation; direction unresolved",
+    "affected_experiment": "decision:exp:chemical-genetic-engagement",
+    "impact_direction": "contextualizes",
+    "materiality": "DECISION_RELEVANT",
+    "rationale": "Supports allotype/HLA-specific measurements, not a universal functional knockout interpretation.",
+    "epistemic_kind": "axis_inference",
+    "review_status": "pending_review"
+  },
+  {
+    "id": "addendum:impact:genomics-2026",
+    "study_id": "genomics-2026",
+    "claim_ids": [
+      "addendum:claim:genomics-2026:1"
+    ],
+    "affected_evidence_layer": [
+      "Genetics"
+    ],
+    "affected_hypothesis": "ERAP1 modulation in HLA-B27/AS biology",
+    "affected_explanation": [
+      "explanation:on_target",
+      "explanation:context",
+      "explanation:indirect",
+      "explanation:off_target"
+    ],
+    "affected_uncertainty": [
+      "uncertainty:target_engagement",
+      "uncertainty:genetic_context",
+      "uncertainty:mechanistic_bridge"
+    ],
+    "affected_intervention_strategy": "genotype/context-dependent ERAP1 modulation; direction unresolved",
+    "affected_experiment": "decision:exp:chemical-genetic-engagement",
+    "impact_direction": "strengthens",
+    "materiality": "INFORMATIVE",
+    "rationale": "Reinforces biology but neither validates inhibition nor demonstrates ERAP1-specific experimental causality.",
+    "epistemic_kind": "axis_inference",
+    "review_status": "pending_review"
+  }
+]

@@ -1,0 +1,40 @@
+{
+  "scope": "Reported abstract-level context only; not source assertions or EvidenceImpactAssessment",
+  "review_status": "pending_review",
+  "MR": {
+    "study_id": "wu-mr-2025",
+    "design": "Mendelian randomization, not pharmacological intervention",
+    "source": "https://pubmed.ncbi.nlm.nih.gov/40349828/",
+    "exposure": "Reported genetically proxied circulating ERAP1 protein; not intracellular enzymatic activity",
+    "instrument": "NOT INSPECTED",
+    "proteomic_GWAS": "Five proteomic GWAS reported in abstract; full source definitions not methodologically adjudicated",
+    "outcome": "AS susceptibility; reported FinnGen R10 3162 cases/294770 controls",
+    "ancestry": "European reported",
+    "instrument_strength": "NOT INSPECTED",
+    "MR_method": "Exact estimator/selection/harmonization not inspected",
+    "sensitivity_analyses": "NOT INSPECTED",
+    "pleiotropy_analysis": "NOT INSPECTED",
+    "replication": "UKB 1344 cases/324074 controls reported; methods not adjudicated",
+    "direction": "Positive ERAP1-proxy association reported, not accepted causal-direction assertion",
+    "colocalization": "Abstract mentions IL23R/IL1RL2 support, not ERAP1 support",
+    "limitations": "Full methods unavailable through inspected legitimate routes despite hybrid-OA metadata. MR cannot establish ERAP1 inhibition benefit."
+  },
+  "corilagin": {
+    "study_id": "corilagin-2025",
+    "source": "https://pubmed.ncbi.nlm.nih.gov/40680611/",
+    "materiality": "POTENTIALLY_MATERIAL",
+    "adjudication": "INSUFFICIENT_FULL_TEXT_ACCESS_FOR_AXIS_ADJUDICATION",
+    "reported_abstract_only": {
+      "screening": "Compound screening reported",
+      "ERAP1_interaction": "Protein/cellular interaction reported; underlying matrix not adjudicated",
+      "binding": "Interaction/binding interpretation reported; cannot assign intact-cell engagement",
+      "enzyme_inhibition": "Enzymatic inhibition reported; assay not fully inspected",
+      "active_site": "Active-site rationale reported; experimental versus predicted support not resolved",
+      "cellular_effects": "Cellular effects reported, not target-dependency proof",
+      "HLA_B27_phenotype": "HLA-B27-related phenotype reported, not clinical efficacy"
+    },
+    "cannot_establish": ["intact-cell target engagement versus lysate/protein binding", "exposure matching", "selectivity", "chemical-genetic dependency", "assay specificity", "appropriate controls"],
+    "new_source_assertions": 0,
+    "blocks_accessible_addendum": false
+  }
+}

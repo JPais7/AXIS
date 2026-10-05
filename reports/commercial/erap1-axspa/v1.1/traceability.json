@@ -1,0 +1,1350 @@
+[
+  {
+    "commercial_statement_id": "CM01",
+    "conclusion": "Recent accessible studies strengthen ERAP1-AS biological rationale, not validated therapeutic benefit.",
+    "epistemic_kind": "axis_inference",
+    "review_status": "pending_review",
+    "impact_ids": [
+      "addendum:impact:wang-2022",
+      "addendum:impact:tran-2023",
+      "addendum:impact:genomics-2026"
+    ],
+    "source_chain": [
+      {
+        "id": "addendum:claim:wang-2022:1",
+        "study_id": "wang-2022",
+        "experiment_id": "addendum:experiment:wang-2022",
+        "experimental_context": {
+          "population": "Taiwanese, same geographic region",
+          "cases": 863,
+          "controls": 1438,
+          "hla_b27_positive_cases": 801,
+          "discovery_cDNA_subjects": 45,
+          "functional_PBMC_donors": "7 ERAP1-001 homozygotes versus 4 ERAP1-002 homozygotes, all AS/HLA-B*27:04",
+          "allotype": "study-local ERAP1-001 and ERAP1-002 labels; not automatically Hap1/Hap2",
+          "001_residues": "56E/127R/276I/349M/528K/575D/725R/730Q",
+          "002_residues": "56E/127P/276M/349M/528R/575D/725R/730E",
+          "assays": "Sanger full-length cDNA; TaqMan SNVs; PBMC PMA 10 ng/mL 48h then LPS 1 microgram/mL 16h; CHO/U937 expression; immunoprecipitated enzyme fluorigenic assay",
+          "treatment_context": "not sufficiently described for confounding adjustment"
+        },
+        "source_locator": {
+          "url": "https://doi.org/10.3390/cells11152427",
+          "pmcid": "PMC9368314",
+          "section": "Results 3.3/Table 1"
+        }
+      },
+      {
+        "id": "addendum:claim:wang-2022:2",
+        "study_id": "wang-2022",
+        "experiment_id": "addendum:experiment:wang-2022",
+        "experimental_context": {
+          "population": "Taiwanese, same geographic region",
+          "cases": 863,
+          "controls": 1438,
+          "hla_b27_positive_cases": 801,
+          "discovery_cDNA_subjects": 45,
+          "functional_PBMC_donors": "7 ERAP1-001 homozygotes versus 4 ERAP1-002 homozygotes, all AS/HLA-B*27:04",
+          "allotype": "study-local ERAP1-001 and ERAP1-002 labels; not automatically Hap1/Hap2",
+          "001_residues": "56E/127R/276I/349M/528K/575D/725R/730Q",
+          "002_residues": "56E/127P/276M/349M/528R/575D/725R/730E",
+          "assays": "Sanger full-length cDNA; TaqMan SNVs; PBMC PMA 10 ng/mL 48h then LPS 1 microgram/mL 16h; CHO/U937 expression; immunoprecipitated enzyme fluorigenic assay",
+          "treatment_context": "not sufficiently described for confounding adjustment"
+        },
+        "source_locator": {
+          "url": "https://doi.org/10.3390/cells11152427",
+          "pmcid": "PMC9368314",
+          "section": "Results 3.4/Table 3"
+        }
+      },
+      {
+        "id": "addendum:claim:wang-2022:3",
+        "study_id": "wang-2022",
+        "experiment_id": "addendum:experiment:wang-2022",
+        "experimental_context": {
+          "population": "Taiwanese, same geographic region",
+          "cases": 863,
+          "controls": 1438,
+          "hla_b27_positive_cases": 801,
+          "discovery_cDNA_subjects": 45,
+          "functional_PBMC_donors": "7 ERAP1-001 homozygotes versus 4 ERAP1-002 homozygotes, all AS/HLA-B*27:04",
+          "allotype": "study-local ERAP1-001 and ERAP1-002 labels; not automatically Hap1/Hap2",
+          "001_residues": "56E/127R/276I/349M/528K/575D/725R/730Q",
+          "002_residues": "56E/127P/276M/349M/528R/575D/725R/730E",
+          "assays": "Sanger full-length cDNA; TaqMan SNVs; PBMC PMA 10 ng/mL 48h then LPS 1 microgram/mL 16h; CHO/U937 expression; immunoprecipitated enzyme fluorigenic assay",
+          "treatment_context": "not sufficiently described for confounding adjustment"
+        },
+        "source_locator": {
+          "url": "https://doi.org/10.3390/cells11152427",
+          "pmcid": "PMC9368314",
+          "section": "Results 3.5/Figures 1\u20132; Methods 2.9/2.13\u20132.15"
+        }
+      },
+      {
+        "id": "addendum:claim:tran-2023:1",
+        "study_id": "tran-2023",
+        "experiment_id": "addendum:experiment:tran-2023",
+        "experimental_context": {
+          "model": "33-3 HLA-B*27:05/human beta2-microglobulin transgenic rats, mixed Lewis/Sprague-Dawley",
+          "controls": "HLA-B7 transgenic and non-transgenic, ERAP1 +/+, +/-, -/-",
+          "intervention": "TALEN germline ERAP1 exon-1 deletion",
+          "cells": "bone-marrow-derived macrophages and dendritic cells",
+          "phenotype": "peripheral arthritis, epididymoorchitis, stool and colon histology",
+          "blinding": "clinical caretakers and histology readers blinded",
+          "randomization": "not stated in main methods"
+        },
+        "source_locator": {
+          "url": "https://doi.org/10.1002/art.42327",
+          "pmcid": "PMC9892207",
+          "section": "Results/Figure 4A"
+        }
+      },
+      {
+        "id": "addendum:claim:tran-2023:2",
+        "study_id": "tran-2023",
+        "experiment_id": "addendum:experiment:tran-2023",
+        "experimental_context": {
+          "model": "33-3 HLA-B*27:05/human beta2-microglobulin transgenic rats, mixed Lewis/Sprague-Dawley",
+          "controls": "HLA-B7 transgenic and non-transgenic, ERAP1 +/+, +/-, -/-",
+          "intervention": "TALEN germline ERAP1 exon-1 deletion",
+          "cells": "bone-marrow-derived macrophages and dendritic cells",
+          "phenotype": "peripheral arthritis, epididymoorchitis, stool and colon histology",
+          "blinding": "clinical caretakers and histology readers blinded",
+          "randomization": "not stated in main methods"
+        },
+        "source_locator": {
+          "url": "https://doi.org/10.1002/art.42327",
+          "pmcid": "PMC9892207",
+          "section": "Results/Figure 4C"
+        }
+      },
+      {
+        "id": "addendum:claim:tran-2023:3",
+        "study_id": "tran-2023",
+        "experiment_id": "addendum:experiment:tran-2023",
+        "experimental_context": {
+          "model": "33-3 HLA-B*27:05/human beta2-microglobulin transgenic rats, mixed Lewis/Sprague-Dawley",
+          "controls": "HLA-B7 transgenic and non-transgenic, ERAP1 +/+, +/-, -/-",
+          "intervention": "TALEN germline ERAP1 exon-1 deletion",
+          "cells": "bone-marrow-derived macrophages and dendritic cells",
+          "phenotype": "peripheral arthritis, epididymoorchitis, stool and colon histology",
+          "blinding": "clinical caretakers and histology readers blinded",
+          "randomization": "not stated in main methods"
+        },
+        "source_locator": {
+          "url": "https://doi.org/10.1002/art.42327",
+          "pmcid": "PMC9892207",
+          "section": "Results/Figures 1\u20133"
+        }
+      },
+      {
+        "id": "addendum:claim:tran-2023:4",
+        "study_id": "tran-2023",
+        "experiment_id": "addendum:experiment:tran-2023",
+        "experimental_context": {
+          "model": "33-3 HLA-B*27:05/human beta2-microglobulin transgenic rats, mixed Lewis/Sprague-Dawley",
+          "controls": "HLA-B7 transgenic and non-transgenic, ERAP1 +/+, +/-, -/-",
+          "intervention": "TALEN germline ERAP1 exon-1 deletion",
+          "cells": "bone-marrow-derived macrophages and dendritic cells",
+          "phenotype": "peripheral arthritis, epididymoorchitis, stool and colon histology",
+          "blinding": "clinical caretakers and histology readers blinded",
+          "randomization": "not stated in main methods"
+        },
+        "source_locator": {
+          "url": "https://doi.org/10.1002/art.42327",
+          "pmcid": "PMC9892207",
+          "section": "Results/Figure 5"
+        }
+      },
+      {
+        "id": "addendum:claim:genomics-2026:1",
+        "study_id": "genomics-2026",
+        "experiment_id": "addendum:experiment:genomics-2026",
+        "experimental_context": {
+          "population": "European ancestry MVP, FinnGen R12, UKB-WGS",
+          "cases": 7551,
+          "controls": 1258581,
+          "methods": "allele-harmonized inverse-variance fixed/random effects, cohort sensitivity, fine-mapping/cTWAS",
+          "hla": "B*27 dosage unavailable, no conditional B*27 analysis",
+          "endpoint": "AS susceptibility, not disease response to intervention"
+        },
+        "source_locator": {
+          "url": "https://doi.org/10.3389/fimmu.2026.1859310",
+          "pmcid": "PMC13265330",
+          "section": "Results GWAS/Fine-mapping; Methods study populations/QC"
+        }
+      }
+    ],
+    "limitations": [
+      [
+        "Sex imbalance: 717/863 male cases versus 706/1438 controls; sex-adjusted association",
+        "Small functional donor subset and technical replicates",
+        "HLA-B27-positive case/control haplotype comparison not significant",
+        "Methods describe fluorigenic conditions but do not unambiguously identify the substrate sequence; do not manufacture it",
+        "Discussion-like inference that 002 is risk in B27-negative is supported by stratified controls, not just case-case comparison",
+        "No pharmacological direction or engagement test"
+      ],
+      [
+        "Germline prevention is not reversal by a drug",
+        "Multiple transgene copies and rodents without ERAP2",
+        "No human clinical efficacy",
+        "Compartment-specific FHC effects",
+        "No single disease-wide beneficial direction"
+      ],
+      [
+        "Reuses public cohorts; not an independent replication of studies using the same biobanks",
+        "Substantial heterogeneity and cohort sensitivity",
+        "ERAP1 not among seven listed cTWAS-colocalization convergent genes",
+        "No experimental ERAP1 knockdown; Jurkat follow-up concerns other genes",
+        "AS phenotype ascertainment relies on public GWAS datasets, not harmonized clinical recruitment"
+      ]
+    ]
+  },
+  {
+    "commercial_statement_id": "CM02",
+    "conclusion": "Full allotype, HLA/ERAP2 context and peptide substrate must be specified; a protective allotype is not universally inactive.",
+    "epistemic_kind": "axis_inference",
+    "review_status": "pending_review",
+    "impact_ids": [
+      "addendum:impact:tedeschi-2023",
+      "addendum:impact:hutchinson-2021",
+      "addendum:impact:temponeras-2024",
+      "addendum:impact:melanocyte-2025"
+    ],
+    "source_chain": [
+      {
+        "id": "addendum:claim:tedeschi-2023:1",
+        "study_id": "tedeschi-2023",
+        "experiment_id": "addendum:experiment:tedeschi-2023",
+        "experimental_context": {
+          "population": "Italian recruitment, ancestry not explicitly established",
+          "hla": "102 B*27:05 subjects (93 AS/9 healthy); 11 B*27:09 controls; 13 B*07 carriers",
+          "genotype": "four-marker ERAP1/ERAP2 haplotype, not full ERAP1 protein allotype",
+          "markers": [
+            "rs27044",
+            "rs30187",
+            "rs75862629",
+            "rs2248374"
+          ],
+          "readout": "IFN-gamma-positive CD8 after 14-day peptide/IL-2 expansion",
+          "peptides": "pEBNA3A RPPIFIRRL, pDYNEIN RPPIFGDFL, RPXXXXXXL cocktail",
+          "dose": "pEBNA3A 20 microgram/mL; pDYNEIN 40 microgram/mL initial culture",
+          "controls": "APC medium subtraction, EBV serology, alternative HLA subtypes, T2 stabilization",
+          "treatment_context": "not controlled in reported analysis"
+        },
+        "source_locator": {
+          "url": "https://doi.org/10.3390/ijms241713335",
+          "pmcid": "PMC10488187",
+          "section": "Results 2.1/Tables 1\u20132; Methods 4.1/4.2/4.9"
+        }
+      },
+      {
+        "id": "addendum:claim:tedeschi-2023:2",
+        "study_id": "tedeschi-2023",
+        "experiment_id": "addendum:experiment:tedeschi-2023",
+        "experimental_context": {
+          "population": "Italian recruitment, ancestry not explicitly established",
+          "hla": "102 B*27:05 subjects (93 AS/9 healthy); 11 B*27:09 controls; 13 B*07 carriers",
+          "genotype": "four-marker ERAP1/ERAP2 haplotype, not full ERAP1 protein allotype",
+          "markers": [
+            "rs27044",
+            "rs30187",
+            "rs75862629",
+            "rs2248374"
+          ],
+          "readout": "IFN-gamma-positive CD8 after 14-day peptide/IL-2 expansion",
+          "peptides": "pEBNA3A RPPIFIRRL, pDYNEIN RPPIFGDFL, RPXXXXXXL cocktail",
+          "dose": "pEBNA3A 20 microgram/mL; pDYNEIN 40 microgram/mL initial culture",
+          "controls": "APC medium subtraction, EBV serology, alternative HLA subtypes, T2 stabilization",
+          "treatment_context": "not controlled in reported analysis"
+        },
+        "source_locator": {
+          "url": "https://doi.org/10.3390/ijms241713335",
+          "pmcid": "PMC10488187",
+          "section": "Results 2.3/Figure 4; Methods 4.6\u20134.8"
+        }
+      },
+      {
+        "id": "addendum:claim:hutchinson-2021:1",
+        "study_id": "hutchinson-2021",
+        "experiment_id": "addendum:experiment:hutchinson-2021",
+        "experimental_context": {
+          "population": "2504 phased 1000 Genomes samples, five major ancestry groups",
+          "allotype": "ten recombinant full-length common allotypes, noncleavable C-terminal 6-His tag",
+          "substrates": [
+            "Leu-AMC",
+            "Leu-pNA",
+            "LLRIQRGPGRAFVTI",
+            "LLKHHAFSFK",
+            "YTAFTIPSI",
+            "GLEQLESIINFEKL"
+          ],
+          "compounds": "DG013A active-site inhibitor; GSK849 regulatory-site modulator",
+          "assays": "fluorescence/absorbance, HPLC and mass-spectrometry kinetics",
+          "replication": "peptide trimming triplicates; allotype-10 enzyme concentration increased where specified"
+        },
+        "source_locator": {
+          "url": "https://doi.org/10.1016/j.jbc.2021.100443",
+          "pmcid": "PMC8024916",
+          "section": "Results/Figures 2\u20133; Experimental procedures"
+        }
+      },
+      {
+        "id": "addendum:claim:hutchinson-2021:2",
+        "study_id": "hutchinson-2021",
+        "experiment_id": "addendum:experiment:hutchinson-2021",
+        "experimental_context": {
+          "population": "2504 phased 1000 Genomes samples, five major ancestry groups",
+          "allotype": "ten recombinant full-length common allotypes, noncleavable C-terminal 6-His tag",
+          "substrates": [
+            "Leu-AMC",
+            "Leu-pNA",
+            "LLRIQRGPGRAFVTI",
+            "LLKHHAFSFK",
+            "YTAFTIPSI",
+            "GLEQLESIINFEKL"
+          ],
+          "compounds": "DG013A active-site inhibitor; GSK849 regulatory-site modulator",
+          "assays": "fluorescence/absorbance, HPLC and mass-spectrometry kinetics",
+          "replication": "peptide trimming triplicates; allotype-10 enzyme concentration increased where specified"
+        },
+        "source_locator": {
+          "url": "https://doi.org/10.1016/j.jbc.2021.100443",
+          "pmcid": "PMC8024916",
+          "section": "Results/Figure 4; Experimental procedures enzymatic assays"
+        }
+      },
+      {
+        "id": "addendum:claim:temponeras-2024:1",
+        "study_id": "temponeras-2024",
+        "experiment_id": "addendum:experiment:temponeras-2024",
+        "experimental_context": {
+          "allotype": "allotypes 1/10 and allotype-10 V349M, Q725R, double mutant; insect expression with C-terminal TEV/10-His construct",
+          "substrates": [
+            "YTAFTIPSI",
+            "LRVYEKMALY",
+            "VSVRSRRCLRL",
+            "Leu-AMC",
+            "Leu-pNA"
+          ],
+          "compounds": "DG013A and GSK849; source contains inconsistent GSK labels in some captions",
+          "conditions": "peptide 10 micromolar, enzyme concentration adjusted by construct; 1h 37C triplicates; GSK849 10 micromolar peptide experiment",
+          "controls": "wild-type allotypes, verified mutations, solvent controls"
+        },
+        "source_locator": {
+          "url": "https://doi.org/10.3389/fimmu.2024.1415964",
+          "pmcid": "PMC11527673",
+          "section": "Results/Figure 2; peptide-trimming methods"
+        }
+      },
+      {
+        "id": "addendum:claim:temponeras-2024:2",
+        "study_id": "temponeras-2024",
+        "experiment_id": "addendum:experiment:temponeras-2024",
+        "experimental_context": {
+          "allotype": "allotypes 1/10 and allotype-10 V349M, Q725R, double mutant; insect expression with C-terminal TEV/10-His construct",
+          "substrates": [
+            "YTAFTIPSI",
+            "LRVYEKMALY",
+            "VSVRSRRCLRL",
+            "Leu-AMC",
+            "Leu-pNA"
+          ],
+          "compounds": "DG013A and GSK849; source contains inconsistent GSK labels in some captions",
+          "conditions": "peptide 10 micromolar, enzyme concentration adjusted by construct; 1h 37C triplicates; GSK849 10 micromolar peptide experiment",
+          "controls": "wild-type allotypes, verified mutations, solvent controls"
+        },
+        "source_locator": {
+          "url": "https://doi.org/10.3389/fimmu.2024.1415964",
+          "pmcid": "PMC11527673",
+          "section": "Results/Figures 3\u20135; Michaelis\u2013Menten and inhibitor methods"
+        }
+      },
+      {
+        "id": "addendum:claim:melanocyte-2025:1",
+        "study_id": "melanocyte-2025",
+        "experiment_id": "addendum:experiment:melanocyte-2025",
+        "experimental_context": {
+          "model": "A375 KO clone 1B12 reconstituted with single ERAP1 allotype 2 or 10",
+          "controls": "selected clones with comparable ERAP1 expression",
+          "dose": "IFN-gamma 20 ng/mL 24h",
+          "replication": "3 separate biological cultures, 2 DIA technical runs plus 1 DDA per sample; one selected clone per allotype",
+          "hla": "A375 HLA-A/B/C, not HLA-B27",
+          "analysis": "W6/32 purification, LC-MS/MS, 1% FDR, differential log2>=1/q<=0.05",
+          "sequence": "full construct sequences source Figure S1, not imported as verified protein registry identities"
+        },
+        "source_locator": {
+          "url": "https://doi.org/10.1111/imm.70056",
+          "pmcid": "PMC12779449",
+          "section": "Results 3.2\u20133.4/Figures 2\u20135; Methods 2.2\u20132.6"
+        }
+      }
+    ],
+    "limitations": [
+      [
+        "Long ex-vivo expansion and arbitrary responder threshold",
+        "Healthy-donor cross-reactivity limits disease specificity",
+        "Dynein residue numbering differs between Results and Methods; retain peptide sequence without asserting a resolved coordinate",
+        "Not direct immunopeptidome mass spectrometry",
+        "No engagement or chemical-genetic test"
+      ],
+      [
+        "Activity sums assume independent alleles and do not model expression differences",
+        "Substrate-specific rank cannot be generalized to every peptide",
+        "No AS cellular engagement or clinical evidence"
+      ],
+      [
+        "Not an AS cohort",
+        "Substrate concentration and kinetic model affect interpretation",
+        "Compound label discrepancies retained; no new exact chemical identity asserted"
+      ],
+      [
+        "Clone effects not excluded by multiple independent clones per allotype",
+        "Predicted HLA affinities are not measured binding",
+        "No normalization to a healthy immunopeptidome and no therapeutic benefit endpoint"
+      ]
+    ]
+  },
+  {
+    "commercial_statement_id": "CM03",
+    "conclusion": "Experimental benefit is endpoint-dependent: germline loss reduced rat arthritis incidence but worsened colon histology.",
+    "epistemic_kind": "axis_inference",
+    "review_status": "pending_review",
+    "impact_ids": [
+      "addendum:impact:tran-2023"
+    ],
+    "source_chain": [
+      {
+        "id": "addendum:claim:tran-2023:1",
+        "study_id": "tran-2023",
+        "experiment_id": "addendum:experiment:tran-2023",
+        "experimental_context": {
+          "model": "33-3 HLA-B*27:05/human beta2-microglobulin transgenic rats, mixed Lewis/Sprague-Dawley",
+          "controls": "HLA-B7 transgenic and non-transgenic, ERAP1 +/+, +/-, -/-",
+          "intervention": "TALEN germline ERAP1 exon-1 deletion",
+          "cells": "bone-marrow-derived macrophages and dendritic cells",
+          "phenotype": "peripheral arthritis, epididymoorchitis, stool and colon histology",
+          "blinding": "clinical caretakers and histology readers blinded",
+          "randomization": "not stated in main methods"
+        },
+        "source_locator": {
+          "url": "https://doi.org/10.1002/art.42327",
+          "pmcid": "PMC9892207",
+          "section": "Results/Figure 4A"
+        }
+      },
+      {
+        "id": "addendum:claim:tran-2023:2",
+        "study_id": "tran-2023",
+        "experiment_id": "addendum:experiment:tran-2023",
+        "experimental_context": {
+          "model": "33-3 HLA-B*27:05/human beta2-microglobulin transgenic rats, mixed Lewis/Sprague-Dawley",
+          "controls": "HLA-B7 transgenic and non-transgenic, ERAP1 +/+, +/-, -/-",
+          "intervention": "TALEN germline ERAP1 exon-1 deletion",
+          "cells": "bone-marrow-derived macrophages and dendritic cells",
+          "phenotype": "peripheral arthritis, epididymoorchitis, stool and colon histology",
+          "blinding": "clinical caretakers and histology readers blinded",
+          "randomization": "not stated in main methods"
+        },
+        "source_locator": {
+          "url": "https://doi.org/10.1002/art.42327",
+          "pmcid": "PMC9892207",
+          "section": "Results/Figure 4C"
+        }
+      },
+      {
+        "id": "addendum:claim:tran-2023:3",
+        "study_id": "tran-2023",
+        "experiment_id": "addendum:experiment:tran-2023",
+        "experimental_context": {
+          "model": "33-3 HLA-B*27:05/human beta2-microglobulin transgenic rats, mixed Lewis/Sprague-Dawley",
+          "controls": "HLA-B7 transgenic and non-transgenic, ERAP1 +/+, +/-, -/-",
+          "intervention": "TALEN germline ERAP1 exon-1 deletion",
+          "cells": "bone-marrow-derived macrophages and dendritic cells",
+          "phenotype": "peripheral arthritis, epididymoorchitis, stool and colon histology",
+          "blinding": "clinical caretakers and histology readers blinded",
+          "randomization": "not stated in main methods"
+        },
+        "source_locator": {
+          "url": "https://doi.org/10.1002/art.42327",
+          "pmcid": "PMC9892207",
+          "section": "Results/Figures 1\u20133"
+        }
+      },
+      {
+        "id": "addendum:claim:tran-2023:4",
+        "study_id": "tran-2023",
+        "experiment_id": "addendum:experiment:tran-2023",
+        "experimental_context": {
+          "model": "33-3 HLA-B*27:05/human beta2-microglobulin transgenic rats, mixed Lewis/Sprague-Dawley",
+          "controls": "HLA-B7 transgenic and non-transgenic, ERAP1 +/+, +/-, -/-",
+          "intervention": "TALEN germline ERAP1 exon-1 deletion",
+          "cells": "bone-marrow-derived macrophages and dendritic cells",
+          "phenotype": "peripheral arthritis, epididymoorchitis, stool and colon histology",
+          "blinding": "clinical caretakers and histology readers blinded",
+          "randomization": "not stated in main methods"
+        },
+        "source_locator": {
+          "url": "https://doi.org/10.1002/art.42327",
+          "pmcid": "PMC9892207",
+          "section": "Results/Figure 5"
+        }
+      }
+    ],
+    "limitations": [
+      [
+        "Germline prevention is not reversal by a drug",
+        "Multiple transgene copies and rodents without ERAP2",
+        "No human clinical efficacy",
+        "Compartment-specific FHC effects",
+        "No single disease-wide beneficial direction"
+      ]
+    ]
+  },
+  {
+    "commercial_statement_id": "CM04",
+    "conclusion": "New cyclohexyl-acid tools and four ligand-bound structures expand options, not validated cellular occupancy or clinical readiness.",
+    "epistemic_kind": "axis_inference",
+    "review_status": "pending_review",
+    "impact_ids": [
+      "addendum:impact:cyclohexyl-2024",
+      "addendum:impact:maben-2021"
+    ],
+    "source_chain": [
+      {
+        "id": "addendum:claim:cyclohexyl-2024:1",
+        "study_id": "cyclohexyl-2024",
+        "experiment_id": "addendum:experiment:cyclohexyl-2024",
+        "experimental_context": {
+          "construct": "paper reports Hap2 for biochemical assay; PDB construct mapping requires separate reconciliation",
+          "substrate": "YTAFTIPSI to TAFTIPSI, high-throughput MS",
+          "cell": "HeLa flow-cytometry SIINFEKL presentation, not ERAP1 occupancy",
+          "compounds": "paper-local cyclohexyl acids 1, 2, 7, 13; structures depicted in source and bound in linked PDB",
+          "replication": "main tables n>=3 unless stated; ERAP2/IRAP counter-screen of 7 n=1",
+          "selectivity_substrates": "ERAP2 Arg-AMC, IRAP Leu-AMC",
+          "chemical_identity": "paper/PDB ligand bridge only, tested-form/stereochemistry not promoted to verified registry substance",
+          "supporting_methods": "main methods sufficient for listed qualitative assertions; SI not inspected in this addendum"
+        },
+        "source_locator": {
+          "url": "https://doi.org/10.1021/acsmedchemlett.4c00401",
+          "pmcid": "PMC11647717",
+          "section": "Main text assay description and Tables 1\u20132"
+        }
+      },
+      {
+        "id": "addendum:claim:cyclohexyl-2024:2",
+        "study_id": "cyclohexyl-2024",
+        "experiment_id": "addendum:experiment:cyclohexyl-2024",
+        "experimental_context": {
+          "construct": "paper reports Hap2 for biochemical assay; PDB construct mapping requires separate reconciliation",
+          "substrate": "YTAFTIPSI to TAFTIPSI, high-throughput MS",
+          "cell": "HeLa flow-cytometry SIINFEKL presentation, not ERAP1 occupancy",
+          "compounds": "paper-local cyclohexyl acids 1, 2, 7, 13; structures depicted in source and bound in linked PDB",
+          "replication": "main tables n>=3 unless stated; ERAP2/IRAP counter-screen of 7 n=1",
+          "selectivity_substrates": "ERAP2 Arg-AMC, IRAP Leu-AMC",
+          "chemical_identity": "paper/PDB ligand bridge only, tested-form/stereochemistry not promoted to verified registry substance",
+          "supporting_methods": "main methods sufficient for listed qualitative assertions; SI not inspected in this addendum"
+        },
+        "source_locator": {
+          "url": "https://doi.org/10.1021/acsmedchemlett.4c00401",
+          "pmcid": "PMC11647717",
+          "section": "Main selectivity paragraph"
+        }
+      },
+      {
+        "id": "addendum:claim:cyclohexyl-2024:3",
+        "study_id": "cyclohexyl-2024",
+        "experiment_id": "addendum:experiment:cyclohexyl-2024",
+        "experimental_context": {
+          "construct": "paper reports Hap2 for biochemical assay; PDB construct mapping requires separate reconciliation",
+          "substrate": "YTAFTIPSI to TAFTIPSI, high-throughput MS",
+          "cell": "HeLa flow-cytometry SIINFEKL presentation, not ERAP1 occupancy",
+          "compounds": "paper-local cyclohexyl acids 1, 2, 7, 13; structures depicted in source and bound in linked PDB",
+          "replication": "main tables n>=3 unless stated; ERAP2/IRAP counter-screen of 7 n=1",
+          "selectivity_substrates": "ERAP2 Arg-AMC, IRAP Leu-AMC",
+          "chemical_identity": "paper/PDB ligand bridge only, tested-form/stereochemistry not promoted to verified registry substance",
+          "supporting_methods": "main methods sufficient for listed qualitative assertions; SI not inspected in this addendum"
+        },
+        "source_locator": {
+          "url": "https://doi.org/10.1021/acsmedchemlett.4c00401",
+          "pmcid": "PMC11647717",
+          "section": "Figures 2/4/5; Data availability; RCSB entry records"
+        }
+      },
+      {
+        "id": "addendum:claim:maben-2021:1",
+        "study_id": "maben-2021",
+        "experiment_id": "addendum:experiment:maben-2021",
+        "experimental_context": {
+          "variant": "matched ERAP1 Lys528/Arg528 constructs",
+          "assays": "SAXS/WAXS, crystal structures, Leu-AMC/Leu-pNA and peptide assays",
+          "compound": "study compounds 2/3 linked to historical Maben chemistry; not cyclohexyl compound 3",
+          "replication": "two independent activity experiments with triplicates; SAXS independent-experiment limits reported",
+          "controls": "apo protein, open/closed structural models and distinct ligand classes"
+        },
+        "source_locator": {
+          "url": "https://doi.org/10.1038/s41467-021-25564-w",
+          "pmcid": "PMC8421391",
+          "section": "Results Figures 4\u20135; SAXS/Activity methods"
+        }
+      }
+    ],
+    "limitations": [
+      [
+        "Detailed SI and form/structure standardization required before quantitative learning import",
+        "Different substrates/constructs and biochemical versus cellular endpoints",
+        "No intact-cell engagement or genetic-dependency readout",
+        "GSK author employment conflicts disclosed"
+      ],
+      [
+        "Preferred compound docking pose is not a measured binding pose",
+        "Conformation under saturating purified-protein conditions is not cellular engagement",
+        "2023 correction adds facility acknowledgement, not changed scientific results"
+      ]
+    ]
+  },
+  {
+    "commercial_statement_id": "CM05",
+    "conclusion": "Patient PBMC and expanded CD8 experiments add context, not clinical efficacy or patient-drug engagement.",
+    "epistemic_kind": "axis_inference",
+    "review_status": "pending_review",
+    "impact_ids": [
+      "addendum:impact:wang-2022",
+      "addendum:impact:tedeschi-2023"
+    ],
+    "source_chain": [
+      {
+        "id": "addendum:claim:wang-2022:1",
+        "study_id": "wang-2022",
+        "experiment_id": "addendum:experiment:wang-2022",
+        "experimental_context": {
+          "population": "Taiwanese, same geographic region",
+          "cases": 863,
+          "controls": 1438,
+          "hla_b27_positive_cases": 801,
+          "discovery_cDNA_subjects": 45,
+          "functional_PBMC_donors": "7 ERAP1-001 homozygotes versus 4 ERAP1-002 homozygotes, all AS/HLA-B*27:04",
+          "allotype": "study-local ERAP1-001 and ERAP1-002 labels; not automatically Hap1/Hap2",
+          "001_residues": "56E/127R/276I/349M/528K/575D/725R/730Q",
+          "002_residues": "56E/127P/276M/349M/528R/575D/725R/730E",
+          "assays": "Sanger full-length cDNA; TaqMan SNVs; PBMC PMA 10 ng/mL 48h then LPS 1 microgram/mL 16h; CHO/U937 expression; immunoprecipitated enzyme fluorigenic assay",
+          "treatment_context": "not sufficiently described for confounding adjustment"
+        },
+        "source_locator": {
+          "url": "https://doi.org/10.3390/cells11152427",
+          "pmcid": "PMC9368314",
+          "section": "Results 3.3/Table 1"
+        }
+      },
+      {
+        "id": "addendum:claim:wang-2022:2",
+        "study_id": "wang-2022",
+        "experiment_id": "addendum:experiment:wang-2022",
+        "experimental_context": {
+          "population": "Taiwanese, same geographic region",
+          "cases": 863,
+          "controls": 1438,
+          "hla_b27_positive_cases": 801,
+          "discovery_cDNA_subjects": 45,
+          "functional_PBMC_donors": "7 ERAP1-001 homozygotes versus 4 ERAP1-002 homozygotes, all AS/HLA-B*27:04",
+          "allotype": "study-local ERAP1-001 and ERAP1-002 labels; not automatically Hap1/Hap2",
+          "001_residues": "56E/127R/276I/349M/528K/575D/725R/730Q",
+          "002_residues": "56E/127P/276M/349M/528R/575D/725R/730E",
+          "assays": "Sanger full-length cDNA; TaqMan SNVs; PBMC PMA 10 ng/mL 48h then LPS 1 microgram/mL 16h; CHO/U937 expression; immunoprecipitated enzyme fluorigenic assay",
+          "treatment_context": "not sufficiently described for confounding adjustment"
+        },
+        "source_locator": {
+          "url": "https://doi.org/10.3390/cells11152427",
+          "pmcid": "PMC9368314",
+          "section": "Results 3.4/Table 3"
+        }
+      },
+      {
+        "id": "addendum:claim:wang-2022:3",
+        "study_id": "wang-2022",
+        "experiment_id": "addendum:experiment:wang-2022",
+        "experimental_context": {
+          "population": "Taiwanese, same geographic region",
+          "cases": 863,
+          "controls": 1438,
+          "hla_b27_positive_cases": 801,
+          "discovery_cDNA_subjects": 45,
+          "functional_PBMC_donors": "7 ERAP1-001 homozygotes versus 4 ERAP1-002 homozygotes, all AS/HLA-B*27:04",
+          "allotype": "study-local ERAP1-001 and ERAP1-002 labels; not automatically Hap1/Hap2",
+          "001_residues": "56E/127R/276I/349M/528K/575D/725R/730Q",
+          "002_residues": "56E/127P/276M/349M/528R/575D/725R/730E",
+          "assays": "Sanger full-length cDNA; TaqMan SNVs; PBMC PMA 10 ng/mL 48h then LPS 1 microgram/mL 16h; CHO/U937 expression; immunoprecipitated enzyme fluorigenic assay",
+          "treatment_context": "not sufficiently described for confounding adjustment"
+        },
+        "source_locator": {
+          "url": "https://doi.org/10.3390/cells11152427",
+          "pmcid": "PMC9368314",
+          "section": "Results 3.5/Figures 1\u20132; Methods 2.9/2.13\u20132.15"
+        }
+      },
+      {
+        "id": "addendum:claim:tedeschi-2023:1",
+        "study_id": "tedeschi-2023",
+        "experiment_id": "addendum:experiment:tedeschi-2023",
+        "experimental_context": {
+          "population": "Italian recruitment, ancestry not explicitly established",
+          "hla": "102 B*27:05 subjects (93 AS/9 healthy); 11 B*27:09 controls; 13 B*07 carriers",
+          "genotype": "four-marker ERAP1/ERAP2 haplotype, not full ERAP1 protein allotype",
+          "markers": [
+            "rs27044",
+            "rs30187",
+            "rs75862629",
+            "rs2248374"
+          ],
+          "readout": "IFN-gamma-positive CD8 after 14-day peptide/IL-2 expansion",
+          "peptides": "pEBNA3A RPPIFIRRL, pDYNEIN RPPIFGDFL, RPXXXXXXL cocktail",
+          "dose": "pEBNA3A 20 microgram/mL; pDYNEIN 40 microgram/mL initial culture",
+          "controls": "APC medium subtraction, EBV serology, alternative HLA subtypes, T2 stabilization",
+          "treatment_context": "not controlled in reported analysis"
+        },
+        "source_locator": {
+          "url": "https://doi.org/10.3390/ijms241713335",
+          "pmcid": "PMC10488187",
+          "section": "Results 2.1/Tables 1\u20132; Methods 4.1/4.2/4.9"
+        }
+      },
+      {
+        "id": "addendum:claim:tedeschi-2023:2",
+        "study_id": "tedeschi-2023",
+        "experiment_id": "addendum:experiment:tedeschi-2023",
+        "experimental_context": {
+          "population": "Italian recruitment, ancestry not explicitly established",
+          "hla": "102 B*27:05 subjects (93 AS/9 healthy); 11 B*27:09 controls; 13 B*07 carriers",
+          "genotype": "four-marker ERAP1/ERAP2 haplotype, not full ERAP1 protein allotype",
+          "markers": [
+            "rs27044",
+            "rs30187",
+            "rs75862629",
+            "rs2248374"
+          ],
+          "readout": "IFN-gamma-positive CD8 after 14-day peptide/IL-2 expansion",
+          "peptides": "pEBNA3A RPPIFIRRL, pDYNEIN RPPIFGDFL, RPXXXXXXL cocktail",
+          "dose": "pEBNA3A 20 microgram/mL; pDYNEIN 40 microgram/mL initial culture",
+          "controls": "APC medium subtraction, EBV serology, alternative HLA subtypes, T2 stabilization",
+          "treatment_context": "not controlled in reported analysis"
+        },
+        "source_locator": {
+          "url": "https://doi.org/10.3390/ijms241713335",
+          "pmcid": "PMC10488187",
+          "section": "Results 2.3/Figure 4; Methods 4.6\u20134.8"
+        }
+      }
+    ],
+    "limitations": [
+      [
+        "Sex imbalance: 717/863 male cases versus 706/1438 controls; sex-adjusted association",
+        "Small functional donor subset and technical replicates",
+        "HLA-B27-positive case/control haplotype comparison not significant",
+        "Methods describe fluorigenic conditions but do not unambiguously identify the substrate sequence; do not manufacture it",
+        "Discussion-like inference that 002 is risk in B27-negative is supported by stratified controls, not just case-case comparison",
+        "No pharmacological direction or engagement test"
+      ],
+      [
+        "Long ex-vivo expansion and arbitrary responder threshold",
+        "Healthy-donor cross-reactivity limits disease specificity",
+        "Dynein residue numbering differs between Results and Methods; retain peptide sequence without asserting a resolved coordinate",
+        "Not direct immunopeptidome mass spectrometry",
+        "No engagement or chemical-genetic test"
+      ]
+    ]
+  },
+  {
+    "commercial_statement_id": "CM06",
+    "conclusion": "Relevant-exposure engagement and chemical-genetic dependency remain the discriminating gap for baseline phenotype-producing compounds.",
+    "epistemic_kind": "axis_inference",
+    "review_status": "pending_review",
+    "impact_ids": [
+      "addendum:impact:hutchinson-2021",
+      "addendum:impact:cyclohexyl-2024",
+      "addendum:impact:proteome-2025"
+    ],
+    "source_chain": [
+      {
+        "id": "addendum:claim:hutchinson-2021:1",
+        "study_id": "hutchinson-2021",
+        "experiment_id": "addendum:experiment:hutchinson-2021",
+        "experimental_context": {
+          "population": "2504 phased 1000 Genomes samples, five major ancestry groups",
+          "allotype": "ten recombinant full-length common allotypes, noncleavable C-terminal 6-His tag",
+          "substrates": [
+            "Leu-AMC",
+            "Leu-pNA",
+            "LLRIQRGPGRAFVTI",
+            "LLKHHAFSFK",
+            "YTAFTIPSI",
+            "GLEQLESIINFEKL"
+          ],
+          "compounds": "DG013A active-site inhibitor; GSK849 regulatory-site modulator",
+          "assays": "fluorescence/absorbance, HPLC and mass-spectrometry kinetics",
+          "replication": "peptide trimming triplicates; allotype-10 enzyme concentration increased where specified"
+        },
+        "source_locator": {
+          "url": "https://doi.org/10.1016/j.jbc.2021.100443",
+          "pmcid": "PMC8024916",
+          "section": "Results/Figures 2\u20133; Experimental procedures"
+        }
+      },
+      {
+        "id": "addendum:claim:hutchinson-2021:2",
+        "study_id": "hutchinson-2021",
+        "experiment_id": "addendum:experiment:hutchinson-2021",
+        "experimental_context": {
+          "population": "2504 phased 1000 Genomes samples, five major ancestry groups",
+          "allotype": "ten recombinant full-length common allotypes, noncleavable C-terminal 6-His tag",
+          "substrates": [
+            "Leu-AMC",
+            "Leu-pNA",
+            "LLRIQRGPGRAFVTI",
+            "LLKHHAFSFK",
+            "YTAFTIPSI",
+            "GLEQLESIINFEKL"
+          ],
+          "compounds": "DG013A active-site inhibitor; GSK849 regulatory-site modulator",
+          "assays": "fluorescence/absorbance, HPLC and mass-spectrometry kinetics",
+          "replication": "peptide trimming triplicates; allotype-10 enzyme concentration increased where specified"
+        },
+        "source_locator": {
+          "url": "https://doi.org/10.1016/j.jbc.2021.100443",
+          "pmcid": "PMC8024916",
+          "section": "Results/Figure 4; Experimental procedures enzymatic assays"
+        }
+      },
+      {
+        "id": "addendum:claim:cyclohexyl-2024:1",
+        "study_id": "cyclohexyl-2024",
+        "experiment_id": "addendum:experiment:cyclohexyl-2024",
+        "experimental_context": {
+          "construct": "paper reports Hap2 for biochemical assay; PDB construct mapping requires separate reconciliation",
+          "substrate": "YTAFTIPSI to TAFTIPSI, high-throughput MS",
+          "cell": "HeLa flow-cytometry SIINFEKL presentation, not ERAP1 occupancy",
+          "compounds": "paper-local cyclohexyl acids 1, 2, 7, 13; structures depicted in source and bound in linked PDB",
+          "replication": "main tables n>=3 unless stated; ERAP2/IRAP counter-screen of 7 n=1",
+          "selectivity_substrates": "ERAP2 Arg-AMC, IRAP Leu-AMC",
+          "chemical_identity": "paper/PDB ligand bridge only, tested-form/stereochemistry not promoted to verified registry substance",
+          "supporting_methods": "main methods sufficient for listed qualitative assertions; SI not inspected in this addendum"
+        },
+        "source_locator": {
+          "url": "https://doi.org/10.1021/acsmedchemlett.4c00401",
+          "pmcid": "PMC11647717",
+          "section": "Main text assay description and Tables 1\u20132"
+        }
+      },
+      {
+        "id": "addendum:claim:cyclohexyl-2024:2",
+        "study_id": "cyclohexyl-2024",
+        "experiment_id": "addendum:experiment:cyclohexyl-2024",
+        "experimental_context": {
+          "construct": "paper reports Hap2 for biochemical assay; PDB construct mapping requires separate reconciliation",
+          "substrate": "YTAFTIPSI to TAFTIPSI, high-throughput MS",
+          "cell": "HeLa flow-cytometry SIINFEKL presentation, not ERAP1 occupancy",
+          "compounds": "paper-local cyclohexyl acids 1, 2, 7, 13; structures depicted in source and bound in linked PDB",
+          "replication": "main tables n>=3 unless stated; ERAP2/IRAP counter-screen of 7 n=1",
+          "selectivity_substrates": "ERAP2 Arg-AMC, IRAP Leu-AMC",
+          "chemical_identity": "paper/PDB ligand bridge only, tested-form/stereochemistry not promoted to verified registry substance",
+          "supporting_methods": "main methods sufficient for listed qualitative assertions; SI not inspected in this addendum"
+        },
+        "source_locator": {
+          "url": "https://doi.org/10.1021/acsmedchemlett.4c00401",
+          "pmcid": "PMC11647717",
+          "section": "Main selectivity paragraph"
+        }
+      },
+      {
+        "id": "addendum:claim:cyclohexyl-2024:3",
+        "study_id": "cyclohexyl-2024",
+        "experiment_id": "addendum:experiment:cyclohexyl-2024",
+        "experimental_context": {
+          "construct": "paper reports Hap2 for biochemical assay; PDB construct mapping requires separate reconciliation",
+          "substrate": "YTAFTIPSI to TAFTIPSI, high-throughput MS",
+          "cell": "HeLa flow-cytometry SIINFEKL presentation, not ERAP1 occupancy",
+          "compounds": "paper-local cyclohexyl acids 1, 2, 7, 13; structures depicted in source and bound in linked PDB",
+          "replication": "main tables n>=3 unless stated; ERAP2/IRAP counter-screen of 7 n=1",
+          "selectivity_substrates": "ERAP2 Arg-AMC, IRAP Leu-AMC",
+          "chemical_identity": "paper/PDB ligand bridge only, tested-form/stereochemistry not promoted to verified registry substance",
+          "supporting_methods": "main methods sufficient for listed qualitative assertions; SI not inspected in this addendum"
+        },
+        "source_locator": {
+          "url": "https://doi.org/10.1021/acsmedchemlett.4c00401",
+          "pmcid": "PMC11647717",
+          "section": "Figures 2/4/5; Data availability; RCSB entry records"
+        }
+      },
+      {
+        "id": "addendum:claim:proteome-2025:1",
+        "study_id": "proteome-2025",
+        "experiment_id": "addendum:experiment:proteome-2025",
+        "experimental_context": {
+          "compound": "source compound 3: 4-methoxy-3-(N-(2-(piperidin-1-yl)-5-(trifluoromethyl)phenyl)sulfamoyl)benzoic acid; not Maben compound 3",
+          "dose": "10 micromolar, 0.1% DMSO, 6 days for omics; 48h downstream assays",
+          "hla": "A375 A*01:01/A*02:01/B*44:03/B*57:01/C*06:02/C*16:01, not B27",
+          "ERAP2": "A375 low/absent expression genotype",
+          "replication": "2 biological immunopeptidome replicates/3 technical; 4 A375 and 3 THP-1 proteome biological replicates",
+          "control": "KO, WT, vehicle; no dose-matched inhibitor-in-KO epistasis/rescue experiment"
+        },
+        "source_locator": {
+          "url": "https://doi.org/10.1016/j.mcpro.2025.100964",
+          "pmcid": "PMC12136889",
+          "section": "Results Figures 1\u20132; Experimental procedures"
+        }
+      },
+      {
+        "id": "addendum:claim:proteome-2025:2",
+        "study_id": "proteome-2025",
+        "experiment_id": "addendum:experiment:proteome-2025",
+        "experimental_context": {
+          "compound": "source compound 3: 4-methoxy-3-(N-(2-(piperidin-1-yl)-5-(trifluoromethyl)phenyl)sulfamoyl)benzoic acid; not Maben compound 3",
+          "dose": "10 micromolar, 0.1% DMSO, 6 days for omics; 48h downstream assays",
+          "hla": "A375 A*01:01/A*02:01/B*44:03/B*57:01/C*06:02/C*16:01, not B27",
+          "ERAP2": "A375 low/absent expression genotype",
+          "replication": "2 biological immunopeptidome replicates/3 technical; 4 A375 and 3 THP-1 proteome biological replicates",
+          "control": "KO, WT, vehicle; no dose-matched inhibitor-in-KO epistasis/rescue experiment"
+        },
+        "source_locator": {
+          "url": "https://doi.org/10.1016/j.mcpro.2025.100964",
+          "pmcid": "PMC12136889",
+          "section": "Results Figures 4\u20135; Experimental procedures"
+        }
+      }
+    ],
+    "limitations": [
+      [
+        "Activity sums assume independent alleles and do not model expression differences",
+        "Substrate-specific rank cannot be generalized to every peptide",
+        "No AS cellular engagement or clinical evidence"
+      ],
+      [
+        "Detailed SI and form/structure standardization required before quantitative learning import",
+        "Different substrates/constructs and biochemical versus cellular endpoints",
+        "No intact-cell engagement or genetic-dependency readout",
+        "GSK author employment conflicts disclosed"
+      ],
+      [
+        "A375 KO 1G5 omics clone had partial genomic duplication; downstream experiments switched to 1B12",
+        "Healthy-donor cytotoxicity assay not patient-derived disease efficacy",
+        "KO/inhibitor concordance is not demonstrated compound dependency",
+        "Technical images/replicates are not additional donors"
+      ]
+    ]
+  },
+  {
+    "commercial_statement_id": "CM07",
+    "conclusion": "Keep the matched-genotype engagement experiment; sharpen allotype, substrate, exposure and intracellular-versus-surface controls.",
+    "epistemic_kind": "axis_inference",
+    "review_status": "pending_review",
+    "impact_ids": [
+      "addendum:impact:wang-2022",
+      "addendum:impact:tran-2023",
+      "addendum:impact:hutchinson-2021",
+      "addendum:impact:temponeras-2024",
+      "addendum:impact:proteome-2025"
+    ],
+    "source_chain": [
+      {
+        "id": "addendum:claim:wang-2022:1",
+        "study_id": "wang-2022",
+        "experiment_id": "addendum:experiment:wang-2022",
+        "experimental_context": {
+          "population": "Taiwanese, same geographic region",
+          "cases": 863,
+          "controls": 1438,
+          "hla_b27_positive_cases": 801,
+          "discovery_cDNA_subjects": 45,
+          "functional_PBMC_donors": "7 ERAP1-001 homozygotes versus 4 ERAP1-002 homozygotes, all AS/HLA-B*27:04",
+          "allotype": "study-local ERAP1-001 and ERAP1-002 labels; not automatically Hap1/Hap2",
+          "001_residues": "56E/127R/276I/349M/528K/575D/725R/730Q",
+          "002_residues": "56E/127P/276M/349M/528R/575D/725R/730E",
+          "assays": "Sanger full-length cDNA; TaqMan SNVs; PBMC PMA 10 ng/mL 48h then LPS 1 microgram/mL 16h; CHO/U937 expression; immunoprecipitated enzyme fluorigenic assay",
+          "treatment_context": "not sufficiently described for confounding adjustment"
+        },
+        "source_locator": {
+          "url": "https://doi.org/10.3390/cells11152427",
+          "pmcid": "PMC9368314",
+          "section": "Results 3.3/Table 1"
+        }
+      },
+      {
+        "id": "addendum:claim:wang-2022:2",
+        "study_id": "wang-2022",
+        "experiment_id": "addendum:experiment:wang-2022",
+        "experimental_context": {
+          "population": "Taiwanese, same geographic region",
+          "cases": 863,
+          "controls": 1438,
+          "hla_b27_positive_cases": 801,
+          "discovery_cDNA_subjects": 45,
+          "functional_PBMC_donors": "7 ERAP1-001 homozygotes versus 4 ERAP1-002 homozygotes, all AS/HLA-B*27:04",
+          "allotype": "study-local ERAP1-001 and ERAP1-002 labels; not automatically Hap1/Hap2",
+          "001_residues": "56E/127R/276I/349M/528K/575D/725R/730Q",
+          "002_residues": "56E/127P/276M/349M/528R/575D/725R/730E",
+          "assays": "Sanger full-length cDNA; TaqMan SNVs; PBMC PMA 10 ng/mL 48h then LPS 1 microgram/mL 16h; CHO/U937 expression; immunoprecipitated enzyme fluorigenic assay",
+          "treatment_context": "not sufficiently described for confounding adjustment"
+        },
+        "source_locator": {
+          "url": "https://doi.org/10.3390/cells11152427",
+          "pmcid": "PMC9368314",
+          "section": "Results 3.4/Table 3"
+        }
+      },
+      {
+        "id": "addendum:claim:wang-2022:3",
+        "study_id": "wang-2022",
+        "experiment_id": "addendum:experiment:wang-2022",
+        "experimental_context": {
+          "population": "Taiwanese, same geographic region",
+          "cases": 863,
+          "controls": 1438,
+          "hla_b27_positive_cases": 801,
+          "discovery_cDNA_subjects": 45,
+          "functional_PBMC_donors": "7 ERAP1-001 homozygotes versus 4 ERAP1-002 homozygotes, all AS/HLA-B*27:04",
+          "allotype": "study-local ERAP1-001 and ERAP1-002 labels; not automatically Hap1/Hap2",
+          "001_residues": "56E/127R/276I/349M/528K/575D/725R/730Q",
+          "002_residues": "56E/127P/276M/349M/528R/575D/725R/730E",
+          "assays": "Sanger full-length cDNA; TaqMan SNVs; PBMC PMA 10 ng/mL 48h then LPS 1 microgram/mL 16h; CHO/U937 expression; immunoprecipitated enzyme fluorigenic assay",
+          "treatment_context": "not sufficiently described for confounding adjustment"
+        },
+        "source_locator": {
+          "url": "https://doi.org/10.3390/cells11152427",
+          "pmcid": "PMC9368314",
+          "section": "Results 3.5/Figures 1\u20132; Methods 2.9/2.13\u20132.15"
+        }
+      },
+      {
+        "id": "addendum:claim:tran-2023:1",
+        "study_id": "tran-2023",
+        "experiment_id": "addendum:experiment:tran-2023",
+        "experimental_context": {
+          "model": "33-3 HLA-B*27:05/human beta2-microglobulin transgenic rats, mixed Lewis/Sprague-Dawley",
+          "controls": "HLA-B7 transgenic and non-transgenic, ERAP1 +/+, +/-, -/-",
+          "intervention": "TALEN germline ERAP1 exon-1 deletion",
+          "cells": "bone-marrow-derived macrophages and dendritic cells",
+          "phenotype": "peripheral arthritis, epididymoorchitis, stool and colon histology",
+          "blinding": "clinical caretakers and histology readers blinded",
+          "randomization": "not stated in main methods"
+        },
+        "source_locator": {
+          "url": "https://doi.org/10.1002/art.42327",
+          "pmcid": "PMC9892207",
+          "section": "Results/Figure 4A"
+        }
+      },
+      {
+        "id": "addendum:claim:tran-2023:2",
+        "study_id": "tran-2023",
+        "experiment_id": "addendum:experiment:tran-2023",
+        "experimental_context": {
+          "model": "33-3 HLA-B*27:05/human beta2-microglobulin transgenic rats, mixed Lewis/Sprague-Dawley",
+          "controls": "HLA-B7 transgenic and non-transgenic, ERAP1 +/+, +/-, -/-",
+          "intervention": "TALEN germline ERAP1 exon-1 deletion",
+          "cells": "bone-marrow-derived macrophages and dendritic cells",
+          "phenotype": "peripheral arthritis, epididymoorchitis, stool and colon histology",
+          "blinding": "clinical caretakers and histology readers blinded",
+          "randomization": "not stated in main methods"
+        },
+        "source_locator": {
+          "url": "https://doi.org/10.1002/art.42327",
+          "pmcid": "PMC9892207",
+          "section": "Results/Figure 4C"
+        }
+      },
+      {
+        "id": "addendum:claim:tran-2023:3",
+        "study_id": "tran-2023",
+        "experiment_id": "addendum:experiment:tran-2023",
+        "experimental_context": {
+          "model": "33-3 HLA-B*27:05/human beta2-microglobulin transgenic rats, mixed Lewis/Sprague-Dawley",
+          "controls": "HLA-B7 transgenic and non-transgenic, ERAP1 +/+, +/-, -/-",
+          "intervention": "TALEN germline ERAP1 exon-1 deletion",
+          "cells": "bone-marrow-derived macrophages and dendritic cells",
+          "phenotype": "peripheral arthritis, epididymoorchitis, stool and colon histology",
+          "blinding": "clinical caretakers and histology readers blinded",
+          "randomization": "not stated in main methods"
+        },
+        "source_locator": {
+          "url": "https://doi.org/10.1002/art.42327",
+          "pmcid": "PMC9892207",
+          "section": "Results/Figures 1\u20133"
+        }
+      },
+      {
+        "id": "addendum:claim:tran-2023:4",
+        "study_id": "tran-2023",
+        "experiment_id": "addendum:experiment:tran-2023",
+        "experimental_context": {
+          "model": "33-3 HLA-B*27:05/human beta2-microglobulin transgenic rats, mixed Lewis/Sprague-Dawley",
+          "controls": "HLA-B7 transgenic and non-transgenic, ERAP1 +/+, +/-, -/-",
+          "intervention": "TALEN germline ERAP1 exon-1 deletion",
+          "cells": "bone-marrow-derived macrophages and dendritic cells",
+          "phenotype": "peripheral arthritis, epididymoorchitis, stool and colon histology",
+          "blinding": "clinical caretakers and histology readers blinded",
+          "randomization": "not stated in main methods"
+        },
+        "source_locator": {
+          "url": "https://doi.org/10.1002/art.42327",
+          "pmcid": "PMC9892207",
+          "section": "Results/Figure 5"
+        }
+      },
+      {
+        "id": "addendum:claim:hutchinson-2021:1",
+        "study_id": "hutchinson-2021",
+        "experiment_id": "addendum:experiment:hutchinson-2021",
+        "experimental_context": {
+          "population": "2504 phased 1000 Genomes samples, five major ancestry groups",
+          "allotype": "ten recombinant full-length common allotypes, noncleavable C-terminal 6-His tag",
+          "substrates": [
+            "Leu-AMC",
+            "Leu-pNA",
+            "LLRIQRGPGRAFVTI",
+            "LLKHHAFSFK",
+            "YTAFTIPSI",
+            "GLEQLESIINFEKL"
+          ],
+          "compounds": "DG013A active-site inhibitor; GSK849 regulatory-site modulator",
+          "assays": "fluorescence/absorbance, HPLC and mass-spectrometry kinetics",
+          "replication": "peptide trimming triplicates; allotype-10 enzyme concentration increased where specified"
+        },
+        "source_locator": {
+          "url": "https://doi.org/10.1016/j.jbc.2021.100443",
+          "pmcid": "PMC8024916",
+          "section": "Results/Figures 2\u20133; Experimental procedures"
+        }
+      },
+      {
+        "id": "addendum:claim:hutchinson-2021:2",
+        "study_id": "hutchinson-2021",
+        "experiment_id": "addendum:experiment:hutchinson-2021",
+        "experimental_context": {
+          "population": "2504 phased 1000 Genomes samples, five major ancestry groups",
+          "allotype": "ten recombinant full-length common allotypes, noncleavable C-terminal 6-His tag",
+          "substrates": [
+            "Leu-AMC",
+            "Leu-pNA",
+            "LLRIQRGPGRAFVTI",
+            "LLKHHAFSFK",
+            "YTAFTIPSI",
+            "GLEQLESIINFEKL"
+          ],
+          "compounds": "DG013A active-site inhibitor; GSK849 regulatory-site modulator",
+          "assays": "fluorescence/absorbance, HPLC and mass-spectrometry kinetics",
+          "replication": "peptide trimming triplicates; allotype-10 enzyme concentration increased where specified"
+        },
+        "source_locator": {
+          "url": "https://doi.org/10.1016/j.jbc.2021.100443",
+          "pmcid": "PMC8024916",
+          "section": "Results/Figure 4; Experimental procedures enzymatic assays"
+        }
+      },
+      {
+        "id": "addendum:claim:temponeras-2024:1",
+        "study_id": "temponeras-2024",
+        "experiment_id": "addendum:experiment:temponeras-2024",
+        "experimental_context": {
+          "allotype": "allotypes 1/10 and allotype-10 V349M, Q725R, double mutant; insect expression with C-terminal TEV/10-His construct",
+          "substrates": [
+            "YTAFTIPSI",
+            "LRVYEKMALY",
+            "VSVRSRRCLRL",
+            "Leu-AMC",
+            "Leu-pNA"
+          ],
+          "compounds": "DG013A and GSK849; source contains inconsistent GSK labels in some captions",
+          "conditions": "peptide 10 micromolar, enzyme concentration adjusted by construct; 1h 37C triplicates; GSK849 10 micromolar peptide experiment",
+          "controls": "wild-type allotypes, verified mutations, solvent controls"
+        },
+        "source_locator": {
+          "url": "https://doi.org/10.3389/fimmu.2024.1415964",
+          "pmcid": "PMC11527673",
+          "section": "Results/Figure 2; peptide-trimming methods"
+        }
+      },
+      {
+        "id": "addendum:claim:temponeras-2024:2",
+        "study_id": "temponeras-2024",
+        "experiment_id": "addendum:experiment:temponeras-2024",
+        "experimental_context": {
+          "allotype": "allotypes 1/10 and allotype-10 V349M, Q725R, double mutant; insect expression with C-terminal TEV/10-His construct",
+          "substrates": [
+            "YTAFTIPSI",
+            "LRVYEKMALY",
+            "VSVRSRRCLRL",
+            "Leu-AMC",
+            "Leu-pNA"
+          ],
+          "compounds": "DG013A and GSK849; source contains inconsistent GSK labels in some captions",
+          "conditions": "peptide 10 micromolar, enzyme concentration adjusted by construct; 1h 37C triplicates; GSK849 10 micromolar peptide experiment",
+          "controls": "wild-type allotypes, verified mutations, solvent controls"
+        },
+        "source_locator": {
+          "url": "https://doi.org/10.3389/fimmu.2024.1415964",
+          "pmcid": "PMC11527673",
+          "section": "Results/Figures 3\u20135; Michaelis\u2013Menten and inhibitor methods"
+        }
+      },
+      {
+        "id": "addendum:claim:proteome-2025:1",
+        "study_id": "proteome-2025",
+        "experiment_id": "addendum:experiment:proteome-2025",
+        "experimental_context": {
+          "compound": "source compound 3: 4-methoxy-3-(N-(2-(piperidin-1-yl)-5-(trifluoromethyl)phenyl)sulfamoyl)benzoic acid; not Maben compound 3",
+          "dose": "10 micromolar, 0.1% DMSO, 6 days for omics; 48h downstream assays",
+          "hla": "A375 A*01:01/A*02:01/B*44:03/B*57:01/C*06:02/C*16:01, not B27",
+          "ERAP2": "A375 low/absent expression genotype",
+          "replication": "2 biological immunopeptidome replicates/3 technical; 4 A375 and 3 THP-1 proteome biological replicates",
+          "control": "KO, WT, vehicle; no dose-matched inhibitor-in-KO epistasis/rescue experiment"
+        },
+        "source_locator": {
+          "url": "https://doi.org/10.1016/j.mcpro.2025.100964",
+          "pmcid": "PMC12136889",
+          "section": "Results Figures 1\u20132; Experimental procedures"
+        }
+      },
+      {
+        "id": "addendum:claim:proteome-2025:2",
+        "study_id": "proteome-2025",
+        "experiment_id": "addendum:experiment:proteome-2025",
+        "experimental_context": {
+          "compound": "source compound 3: 4-methoxy-3-(N-(2-(piperidin-1-yl)-5-(trifluoromethyl)phenyl)sulfamoyl)benzoic acid; not Maben compound 3",
+          "dose": "10 micromolar, 0.1% DMSO, 6 days for omics; 48h downstream assays",
+          "hla": "A375 A*01:01/A*02:01/B*44:03/B*57:01/C*06:02/C*16:01, not B27",
+          "ERAP2": "A375 low/absent expression genotype",
+          "replication": "2 biological immunopeptidome replicates/3 technical; 4 A375 and 3 THP-1 proteome biological replicates",
+          "control": "KO, WT, vehicle; no dose-matched inhibitor-in-KO epistasis/rescue experiment"
+        },
+        "source_locator": {
+          "url": "https://doi.org/10.1016/j.mcpro.2025.100964",
+          "pmcid": "PMC12136889",
+          "section": "Results Figures 4\u20135; Experimental procedures"
+        }
+      }
+    ],
+    "limitations": [
+      [
+        "Sex imbalance: 717/863 male cases versus 706/1438 controls; sex-adjusted association",
+        "Small functional donor subset and technical replicates",
+        "HLA-B27-positive case/control haplotype comparison not significant",
+        "Methods describe fluorigenic conditions but do not unambiguously identify the substrate sequence; do not manufacture it",
+        "Discussion-like inference that 002 is risk in B27-negative is supported by stratified controls, not just case-case comparison",
+        "No pharmacological direction or engagement test"
+      ],
+      [
+        "Germline prevention is not reversal by a drug",
+        "Multiple transgene copies and rodents without ERAP2",
+        "No human clinical efficacy",
+        "Compartment-specific FHC effects",
+        "No single disease-wide beneficial direction"
+      ],
+      [
+        "Activity sums assume independent alleles and do not model expression differences",
+        "Substrate-specific rank cannot be generalized to every peptide",
+        "No AS cellular engagement or clinical evidence"
+      ],
+      [
+        "Not an AS cohort",
+        "Substrate concentration and kinetic model affect interpretation",
+        "Compound label discrepancies retained; no new exact chemical identity asserted"
+      ],
+      [
+        "A375 KO 1G5 omics clone had partial genomic duplication; downstream experiments switched to 1B12",
+        "Healthy-donor cytotoxicity assay not patient-derived disease efficacy",
+        "KO/inhibitor concordance is not demonstrated compound dependency",
+        "Technical images/replicates are not additional donors"
+      ]
+    ]
+  },
+  {
+    "commercial_statement_id": "CM08",
+    "conclusion": "Limited new-series ERAP2/IRAP counter-screen results do not establish a cross-substrate selectivity ratio or resolve baseline selectivity.",
+    "epistemic_kind": "axis_inference",
+    "review_status": "pending_review",
+    "impact_ids": [
+      "addendum:impact:cyclohexyl-2024"
+    ],
+    "source_chain": [
+      {
+        "id": "addendum:claim:cyclohexyl-2024:1",
+        "study_id": "cyclohexyl-2024",
+        "experiment_id": "addendum:experiment:cyclohexyl-2024",
+        "experimental_context": {
+          "construct": "paper reports Hap2 for biochemical assay; PDB construct mapping requires separate reconciliation",
+          "substrate": "YTAFTIPSI to TAFTIPSI, high-throughput MS",
+          "cell": "HeLa flow-cytometry SIINFEKL presentation, not ERAP1 occupancy",
+          "compounds": "paper-local cyclohexyl acids 1, 2, 7, 13; structures depicted in source and bound in linked PDB",
+          "replication": "main tables n>=3 unless stated; ERAP2/IRAP counter-screen of 7 n=1",
+          "selectivity_substrates": "ERAP2 Arg-AMC, IRAP Leu-AMC",
+          "chemical_identity": "paper/PDB ligand bridge only, tested-form/stereochemistry not promoted to verified registry substance",
+          "supporting_methods": "main methods sufficient for listed qualitative assertions; SI not inspected in this addendum"
+        },
+        "source_locator": {
+          "url": "https://doi.org/10.1021/acsmedchemlett.4c00401",
+          "pmcid": "PMC11647717",
+          "section": "Main text assay description and Tables 1\u20132"
+        }
+      },
+      {
+        "id": "addendum:claim:cyclohexyl-2024:2",
+        "study_id": "cyclohexyl-2024",
+        "experiment_id": "addendum:experiment:cyclohexyl-2024",
+        "experimental_context": {
+          "construct": "paper reports Hap2 for biochemical assay; PDB construct mapping requires separate reconciliation",
+          "substrate": "YTAFTIPSI to TAFTIPSI, high-throughput MS",
+          "cell": "HeLa flow-cytometry SIINFEKL presentation, not ERAP1 occupancy",
+          "compounds": "paper-local cyclohexyl acids 1, 2, 7, 13; structures depicted in source and bound in linked PDB",
+          "replication": "main tables n>=3 unless stated; ERAP2/IRAP counter-screen of 7 n=1",
+          "selectivity_substrates": "ERAP2 Arg-AMC, IRAP Leu-AMC",
+          "chemical_identity": "paper/PDB ligand bridge only, tested-form/stereochemistry not promoted to verified registry substance",
+          "supporting_methods": "main methods sufficient for listed qualitative assertions; SI not inspected in this addendum"
+        },
+        "source_locator": {
+          "url": "https://doi.org/10.1021/acsmedchemlett.4c00401",
+          "pmcid": "PMC11647717",
+          "section": "Main selectivity paragraph"
+        }
+      },
+      {
+        "id": "addendum:claim:cyclohexyl-2024:3",
+        "study_id": "cyclohexyl-2024",
+        "experiment_id": "addendum:experiment:cyclohexyl-2024",
+        "experimental_context": {
+          "construct": "paper reports Hap2 for biochemical assay; PDB construct mapping requires separate reconciliation",
+          "substrate": "YTAFTIPSI to TAFTIPSI, high-throughput MS",
+          "cell": "HeLa flow-cytometry SIINFEKL presentation, not ERAP1 occupancy",
+          "compounds": "paper-local cyclohexyl acids 1, 2, 7, 13; structures depicted in source and bound in linked PDB",
+          "replication": "main tables n>=3 unless stated; ERAP2/IRAP counter-screen of 7 n=1",
+          "selectivity_substrates": "ERAP2 Arg-AMC, IRAP Leu-AMC",
+          "chemical_identity": "paper/PDB ligand bridge only, tested-form/stereochemistry not promoted to verified registry substance",
+          "supporting_methods": "main methods sufficient for listed qualitative assertions; SI not inspected in this addendum"
+        },
+        "source_locator": {
+          "url": "https://doi.org/10.1021/acsmedchemlett.4c00401",
+          "pmcid": "PMC11647717",
+          "section": "Figures 2/4/5; Data availability; RCSB entry records"
+        }
+      }
+    ],
+    "limitations": [
+      [
+        "Detailed SI and form/structure standardization required before quantitative learning import",
+        "Different substrates/constructs and biochemical versus cellular endpoints",
+        "No intact-cell engagement or genetic-dependency readout",
+        "GSK author employment conflicts disclosed"
+      ]
+    ]
+  },
+  {
+    "commercial_statement_id": "REG01",
+    "epistemic_kind": "registry_fact",
+    "url": "https://clinicaltrials.gov/study/NCT07047703",
+    "source": "context-access.json",
+    "clinical_efficacy": false
+  },
+  {
+    "commercial_statement_id": "BASE01",
+    "epistemic_kind": "baseline_status",
+    "source": "baseline.json",
+    "learning": "MODEL NOT BUILT"
+  }
+]

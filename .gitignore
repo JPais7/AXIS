@@ -33,3 +33,5 @@ benchmarks/results/**/runs/
 workflow-comparison/
 workflow-comparison-summary/
 .benchmark-run/
+# Historical refresh caches belong to a separate terminal branch, not this package.
+axis/resources/evidence-refresh/

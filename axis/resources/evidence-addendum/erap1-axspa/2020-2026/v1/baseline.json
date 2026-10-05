@@ -1,0 +1,9 @@
+{
+  "commit": "d491ebe47ee0c40dfaa3823a44a9decd1afae29d",
+  "snapshot_sha256": "83b2bcff0b58daccfeda58126d918d593e002e1499382f1ddfa450fe2737ee68",
+  "decision_digest": "cebbae3880aeec9084784f9f8df4a89abfe71a6058e3c924ce78651beaa44541",
+  "critical": "uncertainty:target_engagement",
+  "recommended": "decision:exp:chemical-genetic-engagement",
+  "learning": "MODEL NOT BUILT",
+  "historical_refresh_commit": "a3cbb37a5681a057dfe1c86c7e8686553d95c4b2"
+}

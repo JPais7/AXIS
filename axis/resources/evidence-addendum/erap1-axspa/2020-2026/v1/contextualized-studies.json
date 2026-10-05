@@ -1,0 +1,22 @@
+[
+  {
+    "id": "east1-registry",
+    "nct": "NCT07047703",
+    "year": 2025,
+    "action": "CONTEXTUALIZE",
+    "accessibility": "METHODS_AND_RESULTS_SUFFICIENT",
+    "methods_sufficient": true,
+    "primary": false,
+    "layers": [
+      "Clinical"
+    ],
+    "design": [
+      "trial registration"
+    ],
+    "disease_relevance": "HLA-B27-positive ASAS axSpA, not restricted to AS",
+    "rationale": "Accessible primary registry supports development context, not efficacy. Recruiting; hasResults false at retrieval. Sponsor-reported GRWD0715 identity not standardized chemical structure. Registration is not an intervention result.",
+    "findings": [],
+    "title": "east1-registry",
+    "first_publication_date": null
+  }
+]

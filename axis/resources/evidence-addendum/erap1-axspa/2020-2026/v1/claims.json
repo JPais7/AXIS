@@ -1,0 +1,826 @@
+[
+  {
+    "id": "addendum:claim:wang-2022:1",
+    "study_id": "wang-2022",
+    "claim_text": "Study-local ERAP1-001 was enriched among AS cases versus controls (adjusted OR 1.53, 95% CI 1.35–1.73).",
+    "source_locator": {
+      "url": "https://doi.org/10.3390/cells11152427",
+      "pmcid": "PMC9368314",
+      "section": "Results 3.3/Table 1"
+    },
+    "experiment_id": "addendum:experiment:wang-2022",
+    "experimental_context": {
+      "population": "Taiwanese, same geographic region",
+      "cases": 863,
+      "controls": 1438,
+      "hla_b27_positive_cases": 801,
+      "discovery_cDNA_subjects": 45,
+      "functional_PBMC_donors": "7 ERAP1-001 homozygotes versus 4 ERAP1-002 homozygotes, all AS/HLA-B*27:04",
+      "allotype": "study-local ERAP1-001 and ERAP1-002 labels; not automatically Hap1/Hap2",
+      "001_residues": "56E/127R/276I/349M/528K/575D/725R/730Q",
+      "002_residues": "56E/127P/276M/349M/528R/575D/725R/730E",
+      "assays": "Sanger full-length cDNA; TaqMan SNVs; PBMC PMA 10 ng/mL 48h then LPS 1 microgram/mL 16h; CHO/U937 expression; immunoprecipitated enzyme fluorigenic assay",
+      "treatment_context": "not sufficiently described for confounding adjustment"
+    },
+    "entities": [
+      "ERAP1",
+      "wang-2022"
+    ],
+    "layers": [
+      "Genetics",
+      "Allotype/HLA",
+      "Mechanism",
+      "Patient-derived cellular"
+    ],
+    "direction": "positive_association",
+    "epistemic_kind": "source_assertion",
+    "review_status": "pending_review",
+    "clinical_efficacy": false,
+    "direct_cellular_engagement": false,
+    "chemical_genetic_dependency": false,
+    "therapeutic_direction_established": false
+  },
+  {
+    "id": "addendum:claim:wang-2022:2",
+    "study_id": "wang-2022",
+    "claim_text": "In HLA-B27-negative participants, ERAP1-002 was associated with AS versus HLA-B27-negative controls (adjusted OR 1.69, 95% CI 1.15–2.49).",
+    "source_locator": {
+      "url": "https://doi.org/10.3390/cells11152427",
+      "pmcid": "PMC9368314",
+      "section": "Results 3.4/Table 3"
+    },
+    "experiment_id": "addendum:experiment:wang-2022",
+    "experimental_context": {
+      "population": "Taiwanese, same geographic region",
+      "cases": 863,
+      "controls": 1438,
+      "hla_b27_positive_cases": 801,
+      "discovery_cDNA_subjects": 45,
+      "functional_PBMC_donors": "7 ERAP1-001 homozygotes versus 4 ERAP1-002 homozygotes, all AS/HLA-B*27:04",
+      "allotype": "study-local ERAP1-001 and ERAP1-002 labels; not automatically Hap1/Hap2",
+      "001_residues": "56E/127R/276I/349M/528K/575D/725R/730Q",
+      "002_residues": "56E/127P/276M/349M/528R/575D/725R/730E",
+      "assays": "Sanger full-length cDNA; TaqMan SNVs; PBMC PMA 10 ng/mL 48h then LPS 1 microgram/mL 16h; CHO/U937 expression; immunoprecipitated enzyme fluorigenic assay",
+      "treatment_context": "not sufficiently described for confounding adjustment"
+    },
+    "entities": [
+      "ERAP1",
+      "wang-2022"
+    ],
+    "layers": [
+      "Genetics",
+      "Allotype/HLA",
+      "Mechanism",
+      "Patient-derived cellular"
+    ],
+    "direction": "positive_association",
+    "epistemic_kind": "source_assertion",
+    "review_status": "pending_review",
+    "clinical_efficacy": false,
+    "direct_cellular_engagement": false,
+    "chemical_genetic_dependency": false,
+    "therapeutic_direction_established": false
+  },
+  {
+    "id": "addendum:claim:wang-2022:3",
+    "study_id": "wang-2022",
+    "claim_text": "The small HLA-B*27:04 AS PBMC comparison linked ERAP1-001 to higher ERAP1, FHC/UPR markers and IL-23 than ERAP1-002; CHO expression also differed.",
+    "source_locator": {
+      "url": "https://doi.org/10.3390/cells11152427",
+      "pmcid": "PMC9368314",
+      "section": "Results 3.5/Figures 1–2; Methods 2.9/2.13–2.15"
+    },
+    "experiment_id": "addendum:experiment:wang-2022",
+    "experimental_context": {
+      "population": "Taiwanese, same geographic region",
+      "cases": 863,
+      "controls": 1438,
+      "hla_b27_positive_cases": 801,
+      "discovery_cDNA_subjects": 45,
+      "functional_PBMC_donors": "7 ERAP1-001 homozygotes versus 4 ERAP1-002 homozygotes, all AS/HLA-B*27:04",
+      "allotype": "study-local ERAP1-001 and ERAP1-002 labels; not automatically Hap1/Hap2",
+      "001_residues": "56E/127R/276I/349M/528K/575D/725R/730Q",
+      "002_residues": "56E/127P/276M/349M/528R/575D/725R/730E",
+      "assays": "Sanger full-length cDNA; TaqMan SNVs; PBMC PMA 10 ng/mL 48h then LPS 1 microgram/mL 16h; CHO/U937 expression; immunoprecipitated enzyme fluorigenic assay",
+      "treatment_context": "not sufficiently described for confounding adjustment"
+    },
+    "entities": [
+      "ERAP1",
+      "wang-2022"
+    ],
+    "layers": [
+      "Genetics",
+      "Allotype/HLA",
+      "Mechanism",
+      "Patient-derived cellular"
+    ],
+    "direction": "context_dependent_increase",
+    "epistemic_kind": "source_assertion",
+    "review_status": "pending_review",
+    "clinical_efficacy": false,
+    "direct_cellular_engagement": false,
+    "chemical_genetic_dependency": false,
+    "therapeutic_direction_established": false
+  },
+  {
+    "id": "addendum:claim:tran-2023:1",
+    "study_id": "tran-2023",
+    "claim_text": "Arthritis frequency was 12/37 with ERAP1 versus 4/34 without ERAP1 (p=0.03); severity and onset among affected animals were comparable.",
+    "source_locator": {
+      "url": "https://doi.org/10.1002/art.42327",
+      "pmcid": "PMC9892207",
+      "section": "Results/Figure 4A"
+    },
+    "experiment_id": "addendum:experiment:tran-2023",
+    "experimental_context": {
+      "model": "33-3 HLA-B*27:05/human beta2-microglobulin transgenic rats, mixed Lewis/Sprague-Dawley",
+      "controls": "HLA-B7 transgenic and non-transgenic, ERAP1 +/+, +/-, -/-",
+      "intervention": "TALEN germline ERAP1 exon-1 deletion",
+      "cells": "bone-marrow-derived macrophages and dendritic cells",
+      "phenotype": "peripheral arthritis, epididymoorchitis, stool and colon histology",
+      "blinding": "clinical caretakers and histology readers blinded",
+      "randomization": "not stated in main methods"
+    },
+    "entities": [
+      "ERAP1",
+      "tran-2023"
+    ],
+    "layers": [
+      "Allotype/HLA",
+      "Mechanism",
+      "Genetic perturbation",
+      "Translational models"
+    ],
+    "direction": "mixed",
+    "epistemic_kind": "source_assertion",
+    "review_status": "pending_review",
+    "clinical_efficacy": false,
+    "direct_cellular_engagement": false,
+    "chemical_genetic_dependency": false,
+    "therapeutic_direction_established": false
+  },
+  {
+    "id": "addendum:claim:tran-2023:2",
+    "study_id": "tran-2023",
+    "claim_text": "ERAP1 loss did not improve stool scores and increased colon histology scores.",
+    "source_locator": {
+      "url": "https://doi.org/10.1002/art.42327",
+      "pmcid": "PMC9892207",
+      "section": "Results/Figure 4C"
+    },
+    "experiment_id": "addendum:experiment:tran-2023",
+    "experimental_context": {
+      "model": "33-3 HLA-B*27:05/human beta2-microglobulin transgenic rats, mixed Lewis/Sprague-Dawley",
+      "controls": "HLA-B7 transgenic and non-transgenic, ERAP1 +/+, +/-, -/-",
+      "intervention": "TALEN germline ERAP1 exon-1 deletion",
+      "cells": "bone-marrow-derived macrophages and dendritic cells",
+      "phenotype": "peripheral arthritis, epididymoorchitis, stool and colon histology",
+      "blinding": "clinical caretakers and histology readers blinded",
+      "randomization": "not stated in main methods"
+    },
+    "entities": [
+      "ERAP1",
+      "tran-2023"
+    ],
+    "layers": [
+      "Allotype/HLA",
+      "Mechanism",
+      "Genetic perturbation",
+      "Translational models"
+    ],
+    "direction": "contradictory_for_global_benefit",
+    "epistemic_kind": "source_assertion",
+    "review_status": "pending_review",
+    "clinical_efficacy": false,
+    "direct_cellular_engagement": false,
+    "chemical_genetic_dependency": false,
+    "therapeutic_direction_established": false
+  },
+  {
+    "id": "addendum:claim:tran-2023:3",
+    "study_id": "tran-2023",
+    "claim_text": "ERAP1 loss reduced intracellular HLA-B27 misfolding/UPR but increased surface free heavy chains and dimers.",
+    "source_locator": {
+      "url": "https://doi.org/10.1002/art.42327",
+      "pmcid": "PMC9892207",
+      "section": "Results/Figures 1–3"
+    },
+    "experiment_id": "addendum:experiment:tran-2023",
+    "experimental_context": {
+      "model": "33-3 HLA-B*27:05/human beta2-microglobulin transgenic rats, mixed Lewis/Sprague-Dawley",
+      "controls": "HLA-B7 transgenic and non-transgenic, ERAP1 +/+, +/-, -/-",
+      "intervention": "TALEN germline ERAP1 exon-1 deletion",
+      "cells": "bone-marrow-derived macrophages and dendritic cells",
+      "phenotype": "peripheral arthritis, epididymoorchitis, stool and colon histology",
+      "blinding": "clinical caretakers and histology readers blinded",
+      "randomization": "not stated in main methods"
+    },
+    "entities": [
+      "ERAP1",
+      "tran-2023"
+    ],
+    "layers": [
+      "Allotype/HLA",
+      "Mechanism",
+      "Genetic perturbation",
+      "Translational models"
+    ],
+    "direction": "compartment_dependent",
+    "epistemic_kind": "source_assertion",
+    "review_status": "pending_review",
+    "clinical_efficacy": false,
+    "direct_cellular_engagement": false,
+    "chemical_genetic_dependency": false,
+    "therapeutic_direction_established": false
+  },
+  {
+    "id": "addendum:claim:tran-2023:4",
+    "study_id": "tran-2023",
+    "claim_text": "ERAP1 loss reduced excess Il23a induction but did not restore defective dendritic-cell stimulation or the depleted CD103-positive population.",
+    "source_locator": {
+      "url": "https://doi.org/10.1002/art.42327",
+      "pmcid": "PMC9892207",
+      "section": "Results/Figure 5"
+    },
+    "experiment_id": "addendum:experiment:tran-2023",
+    "experimental_context": {
+      "model": "33-3 HLA-B*27:05/human beta2-microglobulin transgenic rats, mixed Lewis/Sprague-Dawley",
+      "controls": "HLA-B7 transgenic and non-transgenic, ERAP1 +/+, +/-, -/-",
+      "intervention": "TALEN germline ERAP1 exon-1 deletion",
+      "cells": "bone-marrow-derived macrophages and dendritic cells",
+      "phenotype": "peripheral arthritis, epididymoorchitis, stool and colon histology",
+      "blinding": "clinical caretakers and histology readers blinded",
+      "randomization": "not stated in main methods"
+    },
+    "entities": [
+      "ERAP1",
+      "tran-2023"
+    ],
+    "layers": [
+      "Allotype/HLA",
+      "Mechanism",
+      "Genetic perturbation",
+      "Translational models"
+    ],
+    "direction": "mixed",
+    "epistemic_kind": "source_assertion",
+    "review_status": "pending_review",
+    "clinical_efficacy": false,
+    "direct_cellular_engagement": false,
+    "chemical_genetic_dependency": false,
+    "therapeutic_direction_established": false
+  },
+  {
+    "id": "addendum:claim:tedeschi-2023:1",
+    "study_id": "tedeschi-2023",
+    "claim_text": "The four-marker CCAG ERAP1/ERAP2 haplotype was enriched in pEBNA3A nonresponders among B*27:05 carriers (73 responders/29 nonresponders; haplotype p=0.0179).",
+    "source_locator": {
+      "url": "https://doi.org/10.3390/ijms241713335",
+      "pmcid": "PMC10488187",
+      "section": "Results 2.1/Tables 1–2; Methods 4.1/4.2/4.9"
+    },
+    "experiment_id": "addendum:experiment:tedeschi-2023",
+    "experimental_context": {
+      "population": "Italian recruitment, ancestry not explicitly established",
+      "hla": "102 B*27:05 subjects (93 AS/9 healthy); 11 B*27:09 controls; 13 B*07 carriers",
+      "genotype": "four-marker ERAP1/ERAP2 haplotype, not full ERAP1 protein allotype",
+      "markers": [
+        "rs27044",
+        "rs30187",
+        "rs75862629",
+        "rs2248374"
+      ],
+      "readout": "IFN-gamma-positive CD8 after 14-day peptide/IL-2 expansion",
+      "peptides": "pEBNA3A RPPIFIRRL, pDYNEIN RPPIFGDFL, RPXXXXXXL cocktail",
+      "dose": "pEBNA3A 20 microgram/mL; pDYNEIN 40 microgram/mL initial culture",
+      "controls": "APC medium subtraction, EBV serology, alternative HLA subtypes, T2 stabilization",
+      "treatment_context": "not controlled in reported analysis"
+    },
+    "entities": [
+      "ERAP1",
+      "tedeschi-2023"
+    ],
+    "layers": [
+      "Allotype/HLA",
+      "Mechanism",
+      "Patient-derived cellular"
+    ],
+    "direction": "negative_association",
+    "epistemic_kind": "source_assertion",
+    "review_status": "pending_review",
+    "clinical_efficacy": false,
+    "direct_cellular_engagement": false,
+    "chemical_genetic_dependency": false,
+    "therapeutic_direction_established": false
+  },
+  {
+    "id": "addendum:claim:tedeschi-2023:2",
+    "study_id": "tedeschi-2023",
+    "claim_text": "Expanded B*27:05-restricted pEBNA3A responses could cross-react with the dynein self peptide; responses also occurred in healthy donors.",
+    "source_locator": {
+      "url": "https://doi.org/10.3390/ijms241713335",
+      "pmcid": "PMC10488187",
+      "section": "Results 2.3/Figure 4; Methods 4.6–4.8"
+    },
+    "experiment_id": "addendum:experiment:tedeschi-2023",
+    "experimental_context": {
+      "population": "Italian recruitment, ancestry not explicitly established",
+      "hla": "102 B*27:05 subjects (93 AS/9 healthy); 11 B*27:09 controls; 13 B*07 carriers",
+      "genotype": "four-marker ERAP1/ERAP2 haplotype, not full ERAP1 protein allotype",
+      "markers": [
+        "rs27044",
+        "rs30187",
+        "rs75862629",
+        "rs2248374"
+      ],
+      "readout": "IFN-gamma-positive CD8 after 14-day peptide/IL-2 expansion",
+      "peptides": "pEBNA3A RPPIFIRRL, pDYNEIN RPPIFGDFL, RPXXXXXXL cocktail",
+      "dose": "pEBNA3A 20 microgram/mL; pDYNEIN 40 microgram/mL initial culture",
+      "controls": "APC medium subtraction, EBV serology, alternative HLA subtypes, T2 stabilization",
+      "treatment_context": "not controlled in reported analysis"
+    },
+    "entities": [
+      "ERAP1",
+      "tedeschi-2023"
+    ],
+    "layers": [
+      "Allotype/HLA",
+      "Mechanism",
+      "Patient-derived cellular"
+    ],
+    "direction": "contextual_mechanism",
+    "epistemic_kind": "source_assertion",
+    "review_status": "pending_review",
+    "clinical_efficacy": false,
+    "direct_cellular_engagement": false,
+    "chemical_genetic_dependency": false,
+    "therapeutic_direction_established": false
+  },
+  {
+    "id": "addendum:claim:hutchinson-2021:1",
+    "study_id": "hutchinson-2021",
+    "claim_text": "Ten common recombinant ERAP1 allotypes differed in substrate-dependent trimming and intermediate accumulation; YTAFTIPSI catalytic efficiency differed up to 60-fold.",
+    "source_locator": {
+      "url": "https://doi.org/10.1016/j.jbc.2021.100443",
+      "pmcid": "PMC8024916",
+      "section": "Results/Figures 2–3; Experimental procedures"
+    },
+    "experiment_id": "addendum:experiment:hutchinson-2021",
+    "experimental_context": {
+      "population": "2504 phased 1000 Genomes samples, five major ancestry groups",
+      "allotype": "ten recombinant full-length common allotypes, noncleavable C-terminal 6-His tag",
+      "substrates": [
+        "Leu-AMC",
+        "Leu-pNA",
+        "LLRIQRGPGRAFVTI",
+        "LLKHHAFSFK",
+        "YTAFTIPSI",
+        "GLEQLESIINFEKL"
+      ],
+      "compounds": "DG013A active-site inhibitor; GSK849 regulatory-site modulator",
+      "assays": "fluorescence/absorbance, HPLC and mass-spectrometry kinetics",
+      "replication": "peptide trimming triplicates; allotype-10 enzyme concentration increased where specified"
+    },
+    "entities": [
+      "ERAP1",
+      "hutchinson-2021"
+    ],
+    "layers": [
+      "Allotype/HLA",
+      "Mechanism",
+      "Biochemical pharmacology",
+      "Chemical perturbation"
+    ],
+    "direction": "substrate_dependent",
+    "epistemic_kind": "source_assertion",
+    "review_status": "pending_review",
+    "clinical_efficacy": false,
+    "direct_cellular_engagement": false,
+    "chemical_genetic_dependency": false,
+    "therapeutic_direction_established": false
+  },
+  {
+    "id": "addendum:claim:hutchinson-2021:2",
+    "study_id": "hutchinson-2021",
+    "claim_text": "GSK849 activated Leu-AMC hydrolysis but inhibited YTAFTIPSI trimming, with allotype-dependent potency; DG013A inhibited all ten allotypes in the Leu-AMC assay.",
+    "source_locator": {
+      "url": "https://doi.org/10.1016/j.jbc.2021.100443",
+      "pmcid": "PMC8024916",
+      "section": "Results/Figure 4; Experimental procedures enzymatic assays"
+    },
+    "experiment_id": "addendum:experiment:hutchinson-2021",
+    "experimental_context": {
+      "population": "2504 phased 1000 Genomes samples, five major ancestry groups",
+      "allotype": "ten recombinant full-length common allotypes, noncleavable C-terminal 6-His tag",
+      "substrates": [
+        "Leu-AMC",
+        "Leu-pNA",
+        "LLRIQRGPGRAFVTI",
+        "LLKHHAFSFK",
+        "YTAFTIPSI",
+        "GLEQLESIINFEKL"
+      ],
+      "compounds": "DG013A active-site inhibitor; GSK849 regulatory-site modulator",
+      "assays": "fluorescence/absorbance, HPLC and mass-spectrometry kinetics",
+      "replication": "peptide trimming triplicates; allotype-10 enzyme concentration increased where specified"
+    },
+    "entities": [
+      "ERAP1",
+      "hutchinson-2021"
+    ],
+    "layers": [
+      "Allotype/HLA",
+      "Mechanism",
+      "Biochemical pharmacology",
+      "Chemical perturbation"
+    ],
+    "direction": "endpoint_dependent",
+    "epistemic_kind": "source_assertion",
+    "review_status": "pending_review",
+    "clinical_efficacy": false,
+    "direct_cellular_engagement": false,
+    "chemical_genetic_dependency": false,
+    "therapeutic_direction_established": false
+  },
+  {
+    "id": "addendum:claim:temponeras-2024:1",
+    "study_id": "temponeras-2024",
+    "claim_text": "Allotype 10 was much less active than allotype 1 for YTAFTIPSI but more active for LRVYEKMALY; V349M/Q725R effects also depended on substrate.",
+    "source_locator": {
+      "url": "https://doi.org/10.3389/fimmu.2024.1415964",
+      "pmcid": "PMC11527673",
+      "section": "Results/Figure 2; peptide-trimming methods"
+    },
+    "experiment_id": "addendum:experiment:temponeras-2024",
+    "experimental_context": {
+      "allotype": "allotypes 1/10 and allotype-10 V349M, Q725R, double mutant; insect expression with C-terminal TEV/10-His construct",
+      "substrates": [
+        "YTAFTIPSI",
+        "LRVYEKMALY",
+        "VSVRSRRCLRL",
+        "Leu-AMC",
+        "Leu-pNA"
+      ],
+      "compounds": "DG013A and GSK849; source contains inconsistent GSK labels in some captions",
+      "conditions": "peptide 10 micromolar, enzyme concentration adjusted by construct; 1h 37C triplicates; GSK849 10 micromolar peptide experiment",
+      "controls": "wild-type allotypes, verified mutations, solvent controls"
+    },
+    "entities": [
+      "ERAP1",
+      "temponeras-2024"
+    ],
+    "layers": [
+      "Allotype/HLA",
+      "Mechanism",
+      "Biochemical pharmacology",
+      "Chemical perturbation"
+    ],
+    "direction": "substrate_dependent",
+    "epistemic_kind": "source_assertion",
+    "review_status": "pending_review",
+    "clinical_efficacy": false,
+    "direct_cellular_engagement": false,
+    "chemical_genetic_dependency": false,
+    "therapeutic_direction_established": false
+  },
+  {
+    "id": "addendum:claim:temponeras-2024:2",
+    "study_id": "temponeras-2024",
+    "claim_text": "Allotypes 1 and 10 showed different substrate-concentration kinetics and DG013A inhibition patterns; GSK849 modulation also depended on polymorphism and substrate.",
+    "source_locator": {
+      "url": "https://doi.org/10.3389/fimmu.2024.1415964",
+      "pmcid": "PMC11527673",
+      "section": "Results/Figures 3–5; Michaelis–Menten and inhibitor methods"
+    },
+    "experiment_id": "addendum:experiment:temponeras-2024",
+    "experimental_context": {
+      "allotype": "allotypes 1/10 and allotype-10 V349M, Q725R, double mutant; insect expression with C-terminal TEV/10-His construct",
+      "substrates": [
+        "YTAFTIPSI",
+        "LRVYEKMALY",
+        "VSVRSRRCLRL",
+        "Leu-AMC",
+        "Leu-pNA"
+      ],
+      "compounds": "DG013A and GSK849; source contains inconsistent GSK labels in some captions",
+      "conditions": "peptide 10 micromolar, enzyme concentration adjusted by construct; 1h 37C triplicates; GSK849 10 micromolar peptide experiment",
+      "controls": "wild-type allotypes, verified mutations, solvent controls"
+    },
+    "entities": [
+      "ERAP1",
+      "temponeras-2024"
+    ],
+    "layers": [
+      "Allotype/HLA",
+      "Mechanism",
+      "Biochemical pharmacology",
+      "Chemical perturbation"
+    ],
+    "direction": "context_dependent",
+    "epistemic_kind": "source_assertion",
+    "review_status": "pending_review",
+    "clinical_efficacy": false,
+    "direct_cellular_engagement": false,
+    "chemical_genetic_dependency": false,
+    "therapeutic_direction_established": false
+  },
+  {
+    "id": "addendum:claim:cyclohexyl-2024:1",
+    "study_id": "cyclohexyl-2024",
+    "claim_text": "Optimization improved peptide-trimming inhibition and HeLa SIINFEKL-presentation activity; hit 1 lacked measurable cellular activity despite biochemical activity.",
+    "source_locator": {
+      "url": "https://doi.org/10.1021/acsmedchemlett.4c00401",
+      "pmcid": "PMC11647717",
+      "section": "Main text assay description and Tables 1–2"
+    },
+    "experiment_id": "addendum:experiment:cyclohexyl-2024",
+    "experimental_context": {
+      "construct": "paper reports Hap2 for biochemical assay; PDB construct mapping requires separate reconciliation",
+      "substrate": "YTAFTIPSI to TAFTIPSI, high-throughput MS",
+      "cell": "HeLa flow-cytometry SIINFEKL presentation, not ERAP1 occupancy",
+      "compounds": "paper-local cyclohexyl acids 1, 2, 7, 13; structures depicted in source and bound in linked PDB",
+      "replication": "main tables n>=3 unless stated; ERAP2/IRAP counter-screen of 7 n=1",
+      "selectivity_substrates": "ERAP2 Arg-AMC, IRAP Leu-AMC",
+      "chemical_identity": "paper/PDB ligand bridge only, tested-form/stereochemistry not promoted to verified registry substance",
+      "supporting_methods": "main methods sufficient for listed qualitative assertions; SI not inspected in this addendum"
+    },
+    "entities": [
+      "ERAP1",
+      "cyclohexyl-2024"
+    ],
+    "layers": [
+      "Chemical matter",
+      "Structures",
+      "Biochemical pharmacology",
+      "Chemical perturbation",
+      "Cellular phenotype",
+      "Selectivity"
+    ],
+    "direction": "improved_tool_pharmacology",
+    "epistemic_kind": "source_assertion",
+    "review_status": "pending_review",
+    "clinical_efficacy": false,
+    "direct_cellular_engagement": false,
+    "chemical_genetic_dependency": false,
+    "therapeutic_direction_established": false
+  },
+  {
+    "id": "addendum:claim:cyclohexyl-2024:2",
+    "study_id": "cyclohexyl-2024",
+    "claim_text": "Compound 7 had reported ERAP2 and IRAP pIC50 <4.0 with n=1, using Arg-AMC and Leu-AMC respectively; these are not directly comparable to ERAP1 peptide-substrate potency.",
+    "source_locator": {
+      "url": "https://doi.org/10.1021/acsmedchemlett.4c00401",
+      "pmcid": "PMC11647717",
+      "section": "Main selectivity paragraph"
+    },
+    "experiment_id": "addendum:experiment:cyclohexyl-2024",
+    "experimental_context": {
+      "construct": "paper reports Hap2 for biochemical assay; PDB construct mapping requires separate reconciliation",
+      "substrate": "YTAFTIPSI to TAFTIPSI, high-throughput MS",
+      "cell": "HeLa flow-cytometry SIINFEKL presentation, not ERAP1 occupancy",
+      "compounds": "paper-local cyclohexyl acids 1, 2, 7, 13; structures depicted in source and bound in linked PDB",
+      "replication": "main tables n>=3 unless stated; ERAP2/IRAP counter-screen of 7 n=1",
+      "selectivity_substrates": "ERAP2 Arg-AMC, IRAP Leu-AMC",
+      "chemical_identity": "paper/PDB ligand bridge only, tested-form/stereochemistry not promoted to verified registry substance",
+      "supporting_methods": "main methods sufficient for listed qualitative assertions; SI not inspected in this addendum"
+    },
+    "entities": [
+      "ERAP1",
+      "cyclohexyl-2024"
+    ],
+    "layers": [
+      "Chemical matter",
+      "Structures",
+      "Biochemical pharmacology",
+      "Chemical perturbation",
+      "Cellular phenotype",
+      "Selectivity"
+    ],
+    "direction": "bounded_selectivity",
+    "epistemic_kind": "source_assertion",
+    "review_status": "pending_review",
+    "clinical_efficacy": false,
+    "direct_cellular_engagement": false,
+    "chemical_genetic_dependency": false,
+    "therapeutic_direction_established": false
+  },
+  {
+    "id": "addendum:claim:cyclohexyl-2024:3",
+    "study_id": "cyclohexyl-2024",
+    "claim_text": "Ligand-bound ERAP1 structures were reported for compounds 1, 2, 7 and 13 (9GJN/9GK6/9GJS/9GKE), deposited in 2024 and released in January 2025.",
+    "source_locator": {
+      "url": "https://doi.org/10.1021/acsmedchemlett.4c00401",
+      "pmcid": "PMC11647717",
+      "section": "Figures 2/4/5; Data availability; RCSB entry records"
+    },
+    "experiment_id": "addendum:experiment:cyclohexyl-2024",
+    "experimental_context": {
+      "construct": "paper reports Hap2 for biochemical assay; PDB construct mapping requires separate reconciliation",
+      "substrate": "YTAFTIPSI to TAFTIPSI, high-throughput MS",
+      "cell": "HeLa flow-cytometry SIINFEKL presentation, not ERAP1 occupancy",
+      "compounds": "paper-local cyclohexyl acids 1, 2, 7, 13; structures depicted in source and bound in linked PDB",
+      "replication": "main tables n>=3 unless stated; ERAP2/IRAP counter-screen of 7 n=1",
+      "selectivity_substrates": "ERAP2 Arg-AMC, IRAP Leu-AMC",
+      "chemical_identity": "paper/PDB ligand bridge only, tested-form/stereochemistry not promoted to verified registry substance",
+      "supporting_methods": "main methods sufficient for listed qualitative assertions; SI not inspected in this addendum"
+    },
+    "entities": [
+      "ERAP1",
+      "cyclohexyl-2024"
+    ],
+    "layers": [
+      "Chemical matter",
+      "Structures",
+      "Biochemical pharmacology",
+      "Chemical perturbation",
+      "Cellular phenotype",
+      "Selectivity"
+    ],
+    "direction": "structural_observation",
+    "epistemic_kind": "source_assertion",
+    "review_status": "pending_review",
+    "clinical_efficacy": false,
+    "direct_cellular_engagement": false,
+    "chemical_genetic_dependency": false,
+    "therapeutic_direction_established": false
+  },
+  {
+    "id": "addendum:claim:maben-2021:1",
+    "study_id": "maben-2021",
+    "claim_text": "The allosteric modulator 3 induced ERAP1 closure in solution; Lys528/Arg528 altered potency for closure-inducing DG013 and modulator 3 but not inhibitor 2.",
+    "source_locator": {
+      "url": "https://doi.org/10.1038/s41467-021-25564-w",
+      "pmcid": "PMC8421391",
+      "section": "Results Figures 4–5; SAXS/Activity methods"
+    },
+    "experiment_id": "addendum:experiment:maben-2021",
+    "experimental_context": {
+      "variant": "matched ERAP1 Lys528/Arg528 constructs",
+      "assays": "SAXS/WAXS, crystal structures, Leu-AMC/Leu-pNA and peptide assays",
+      "compound": "study compounds 2/3 linked to historical Maben chemistry; not cyclohexyl compound 3",
+      "replication": "two independent activity experiments with triplicates; SAXS independent-experiment limits reported",
+      "controls": "apo protein, open/closed structural models and distinct ligand classes"
+    },
+    "entities": [
+      "ERAP1",
+      "maben-2021"
+    ],
+    "layers": [
+      "Mechanism",
+      "Structures",
+      "Biochemical pharmacology",
+      "Allotype/HLA"
+    ],
+    "direction": "conformation_dependent",
+    "epistemic_kind": "source_assertion",
+    "review_status": "pending_review",
+    "clinical_efficacy": false,
+    "direct_cellular_engagement": false,
+    "chemical_genetic_dependency": false,
+    "therapeutic_direction_established": false
+  },
+  {
+    "id": "addendum:claim:proteome-2025:1",
+    "study_id": "proteome-2025",
+    "claim_text": "Chemical inhibition and ERAP1 KO produced distinct A375 immunopeptidomes despite both perturbing peptide presentation.",
+    "source_locator": {
+      "url": "https://doi.org/10.1016/j.mcpro.2025.100964",
+      "pmcid": "PMC12136889",
+      "section": "Results Figures 1–2; Experimental procedures"
+    },
+    "experiment_id": "addendum:experiment:proteome-2025",
+    "experimental_context": {
+      "compound": "source compound 3: 4-methoxy-3-(N-(2-(piperidin-1-yl)-5-(trifluoromethyl)phenyl)sulfamoyl)benzoic acid; not Maben compound 3",
+      "dose": "10 micromolar, 0.1% DMSO, 6 days for omics; 48h downstream assays",
+      "hla": "A375 A*01:01/A*02:01/B*44:03/B*57:01/C*06:02/C*16:01, not B27",
+      "ERAP2": "A375 low/absent expression genotype",
+      "replication": "2 biological immunopeptidome replicates/3 technical; 4 A375 and 3 THP-1 proteome biological replicates",
+      "control": "KO, WT, vehicle; no dose-matched inhibitor-in-KO epistasis/rescue experiment"
+    },
+    "entities": [
+      "ERAP1",
+      "proteome-2025"
+    ],
+    "layers": [
+      "Mechanism",
+      "Immunopeptidomics",
+      "Genetic perturbation",
+      "Chemical perturbation",
+      "Cellular phenotype"
+    ],
+    "direction": "non_equivalence",
+    "epistemic_kind": "source_assertion",
+    "review_status": "pending_review",
+    "clinical_efficacy": false,
+    "direct_cellular_engagement": false,
+    "chemical_genetic_dependency": false,
+    "therapeutic_direction_established": false
+  },
+  {
+    "id": "addendum:claim:proteome-2025:2",
+    "study_id": "proteome-2025",
+    "claim_text": "Proteomic and ROS changes accompanied ERAP1 disruption; shared effects do not isolate direct peptide processing from indirect cellular pathways.",
+    "source_locator": {
+      "url": "https://doi.org/10.1016/j.mcpro.2025.100964",
+      "pmcid": "PMC12136889",
+      "section": "Results Figures 4–5; Experimental procedures"
+    },
+    "experiment_id": "addendum:experiment:proteome-2025",
+    "experimental_context": {
+      "compound": "source compound 3: 4-methoxy-3-(N-(2-(piperidin-1-yl)-5-(trifluoromethyl)phenyl)sulfamoyl)benzoic acid; not Maben compound 3",
+      "dose": "10 micromolar, 0.1% DMSO, 6 days for omics; 48h downstream assays",
+      "hla": "A375 A*01:01/A*02:01/B*44:03/B*57:01/C*06:02/C*16:01, not B27",
+      "ERAP2": "A375 low/absent expression genotype",
+      "replication": "2 biological immunopeptidome replicates/3 technical; 4 A375 and 3 THP-1 proteome biological replicates",
+      "control": "KO, WT, vehicle; no dose-matched inhibitor-in-KO epistasis/rescue experiment"
+    },
+    "entities": [
+      "ERAP1",
+      "proteome-2025"
+    ],
+    "layers": [
+      "Mechanism",
+      "Immunopeptidomics",
+      "Genetic perturbation",
+      "Chemical perturbation",
+      "Cellular phenotype"
+    ],
+    "direction": "broader_cellular_effect",
+    "epistemic_kind": "source_assertion",
+    "review_status": "pending_review",
+    "clinical_efficacy": false,
+    "direct_cellular_engagement": false,
+    "chemical_genetic_dependency": false,
+    "therapeutic_direction_established": false
+  },
+  {
+    "id": "addendum:claim:melanocyte-2025:1",
+    "study_id": "melanocyte-2025",
+    "claim_text": "Expression-matched allotype-2 and allotype-10 A375 clones differed mainly in peptide abundance, also in length and predicted HLA assignment; allotype 10 retained cellular trimming activity.",
+    "source_locator": {
+      "url": "https://doi.org/10.1111/imm.70056",
+      "pmcid": "PMC12779449",
+      "section": "Results 3.2–3.4/Figures 2–5; Methods 2.2–2.6"
+    },
+    "experiment_id": "addendum:experiment:melanocyte-2025",
+    "experimental_context": {
+      "model": "A375 KO clone 1B12 reconstituted with single ERAP1 allotype 2 or 10",
+      "controls": "selected clones with comparable ERAP1 expression",
+      "dose": "IFN-gamma 20 ng/mL 24h",
+      "replication": "3 separate biological cultures, 2 DIA technical runs plus 1 DDA per sample; one selected clone per allotype",
+      "hla": "A375 HLA-A/B/C, not HLA-B27",
+      "analysis": "W6/32 purification, LC-MS/MS, 1% FDR, differential log2>=1/q<=0.05",
+      "sequence": "full construct sequences source Figure S1, not imported as verified protein registry identities"
+    },
+    "entities": [
+      "ERAP1",
+      "melanocyte-2025"
+    ],
+    "layers": [
+      "Allotype/HLA",
+      "Immunopeptidomics",
+      "Genetic perturbation",
+      "Mechanism"
+    ],
+    "direction": "allotype_dependent",
+    "epistemic_kind": "source_assertion",
+    "review_status": "pending_review",
+    "clinical_efficacy": false,
+    "direct_cellular_engagement": false,
+    "chemical_genetic_dependency": false,
+    "therapeutic_direction_established": false
+  },
+  {
+    "id": "addendum:claim:genomics-2026:1",
+    "study_id": "genomics-2026",
+    "claim_text": "The public-cohort meta-analysis recapitulated the ERAP1 susceptibility locus (p=5.20e-21), with rs26509 prioritized by three of four fine-mapping methods.",
+    "source_locator": {
+      "url": "https://doi.org/10.3389/fimmu.2026.1859310",
+      "pmcid": "PMC13265330",
+      "section": "Results GWAS/Fine-mapping; Methods study populations/QC"
+    },
+    "experiment_id": "addendum:experiment:genomics-2026",
+    "experimental_context": {
+      "population": "European ancestry MVP, FinnGen R12, UKB-WGS",
+      "cases": 7551,
+      "controls": 1258581,
+      "methods": "allele-harmonized inverse-variance fixed/random effects, cohort sensitivity, fine-mapping/cTWAS",
+      "hla": "B*27 dosage unavailable, no conditional B*27 analysis",
+      "endpoint": "AS susceptibility, not disease response to intervention"
+    },
+    "entities": [
+      "ERAP1",
+      "genomics-2026"
+    ],
+    "layers": [
+      "Genetics"
+    ],
+    "direction": "positive_association",
+    "epistemic_kind": "source_assertion",
+    "review_status": "pending_review",
+    "clinical_efficacy": false,
+    "direct_cellular_engagement": false,
+    "chemical_genetic_dependency": false,
+    "therapeutic_direction_established": false
+  }
+]

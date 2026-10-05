@@ -1,0 +1,80 @@
+{
+  "kind": "AddendumDecisionImpact",
+  "canonical_decision_created": false,
+  "canonical_decision": "decision-state:1:cebbae3880aeec90",
+  "decision": "decision unchanged based on accessible curated evidence",
+  "scope": "Bounded accessible evidence only; not adjudication of inaccessible literature",
+  "epistemic_kind": "axis_inference",
+  "review_status": "pending_review",
+  "historical_refresh_status": "INSUFFICIENT REFRESH COMPLETENESS TO ASSESS",
+  "rationale": "The new evidence improves biological/contextual interpretation and tool options, but no integrated study establishes exposure-matched cellular ERAP1 engagement or chemical-genetic dependency for the baseline phenotype-producing compounds. It does not warrant changing the canonical compound-scoped decision or claiming that inaccessible evidence confirms it.",
+  "critical_uncertainty": {
+    "before": "uncertainty:target_engagement",
+    "after": "uncertainty:target_engagement",
+    "classification": "REFINED",
+    "interpretation": "Priority unchanged; interpretation refined: demonstrate engagement at phenotype-active exposure in a defined ERAP1 allotype/HLA/ERAP2 context, with substrate and intracellular-versus-surface readouts distinguished.",
+    "claim_ids": ["addendum:claim:hutchinson-2021:2", "addendum:claim:tran-2023:3", "addendum:claim:proteome-2025:1"]
+  },
+  "recommended_experiment": {
+    "before": "decision:exp:chemical-genetic-engagement",
+    "after": "decision:exp:chemical-genetic-engagement",
+    "classification": "REFINED_EXPERIMENT",
+    "rationale": "Retain matched-genotype chemical-genetic engagement design. Strengthen specification of full allotype, HLA-B27 subtype, ERAP2 status, peptide substrate and dose/time. Measure engagement and phenotype at the same exposures; distinguish surface FHC from intracellular folding/UPR; compare WT/null/rescue plus vehicle, viability, assay interference and inactive analogue where genuinely established. Do not assume that lifelong KO predicts partial-drug or allosteric effects. Broader allotype/immune or disease-model work follows mechanism discrimination rather than replacing it.",
+    "prerequisites": ["Identity and tested form resolved", "Validated proximal cellular engagement assay", "Matched genetic null/rescue background", "Relevant-exposure viability and selectivity controls"],
+    "claim_ids": ["addendum:claim:wang-2022:3", "addendum:claim:hutchinson-2021:2", "addendum:claim:temponeras-2024:1", "addendum:claim:tran-2023:3", "addendum:claim:proteome-2025:1"]
+  },
+  "chemical_learning": {
+    "before": "MODEL NOT BUILT",
+    "after": "MODEL NOT BUILT",
+    "new_standardized_measurements_imported": 0,
+    "eligibility_recomputed": false,
+    "rationale": "Literature assertions are not standardized learning measurements. Recent chemistry was not pooled across construct/substrate/endpoint or promoted past identity/SI gaps. The unchanged indexed Phase 3.9 dataset retains its refusal; eligibility for all newly published chemistry is NOT ASSESSED, not declared universally ineligible."
+  },
+  "competing_explanations": [
+    {"id": "explanation:on_target", "before": "partially_supported", "after": "biologically better contextualized; compound mechanism not resolved", "claim_ids": ["addendum:claim:tran-2023:1", "addendum:claim:cyclohexyl-2024:1"], "rationale": "Genetic perturbation and new tool pharmacology support plausibility, not baseline compound occupancy/dependency."},
+    {"id": "explanation:off_target", "before": "viable", "after": "viable", "claim_ids": ["addendum:claim:cyclohexyl-2024:2"], "rationale": "A limited new-series counter-screen does not resolve selectivity of the baseline perturbagens."},
+    {"id": "explanation:indirect", "before": "viable", "after": "viable and more explicitly contextualized", "claim_ids": ["addendum:claim:proteome-2025:2"], "rationale": "Broader proteomic effects supply plausible indirect pathways but do not prove the AS compound mechanism."},
+    {"id": "explanation:context", "before": "viable", "after": "strengthened as a context constraint", "claim_ids": ["addendum:claim:wang-2022:2", "addendum:claim:temponeras-2024:1", "addendum:claim:tran-2023:2"], "rationale": "Population, HLA, allotype, substrate, compartment and disease endpoint can alter interpretation; no alternative is removed."}
+  ],
+  "evidence_matrix": [
+    ["Target–disease", "Indexed target–AS biology, no validated therapy", "Wang/Tran/genomics add human/model evidence", "Biology strengthened; intervention validation separate"],
+    ["Genetics", "Historical association", "Taiwanese haplotypes and public European meta-analysis", "Strengthened with ancestry and reused-cohort limitations"],
+    ["HLA interaction", "B27-related phenotypes", "B27-stratified human and B27/B7 model comparisons", "Strengthened, not all HLA or all axSpA"],
+    ["Allotype context", "Unresolved contextual uncertainty", "Recombinant and expression-matched cellular studies", "More important; labels and substrates cannot be interchanged"],
+    ["Mechanism", "Partial peptide/FHC bridge", "Folding, CD8 responses and broader cellular pathways", "Richer but not one universally causal pathway"],
+    ["Perturbation", "Genetic and chemical phenotypes", "Divergent germline loss and inhibitor/KO effects", "Loss, inhibition and allosteric modulation are not equivalent"],
+    ["Structure", "Open 3QNF context", "Conformational study plus four new regulatory-site complexes", "More binding-site observations; not cellular occupancy or validated druggability"],
+    ["Chemistry", "Three indexed Maben compounds", "Cyclohexyl acid tool series", "Additional options; no automatic baseline identity substitution"],
+    ["Biochemical pharmacology", "Indexed context-fragmented activity", "Allotype/substrate-sensitive assays", "Stronger assay-specific evidence, no pooled universal potency"],
+    ["Cellular phenotype", "Compound-treated engineered phenotypes", "PBMC, CD8 and cancer-cell results", "More context; patient phenotype is not clinical response"],
+    ["Cellular engagement", "Not assessed in baseline", "No integrated exposure-matched occupancy/proximal assay for baseline compounds", "Not demonstrated by this addendum; inaccessible reports remain unresolved"],
+    ["Target dependency", "Drug-specific gap", "Genetic loss/re-expression and parallel chemical perturbation", "Chemical-genetic dependency not demonstrated"],
+    ["Selectivity", "Unresolved/non-comparable", "Limited new-series ERAP2/IRAP counter-screen", "Partially informative, NOT DIRECTLY COMPARABLE"],
+    ["Translation", "No indexed disease rescue", "Reduced rat arthritis incidence with divergent GI effects", "Partial experimental phenotype modification, not human remission"],
+    ["Clinical", "No efficacy indexed", "EAST1 axSpA registration identified; no posted results", "Development exists; no AS/axSpA efficacy established"]
+  ],
+  "questions": [
+    {"id": "Q1", "status": "PARTIALLY SUPPORTED", "answer": "Recent accessible human association and rat perturbation strengthen target–AS biology, not validated therapeutic benefit."},
+    {"id": "Q2", "status": "SUPPORTED", "answer": "Human stratification, CD8 subtype comparisons and B27/B7 model divergence strengthen HLA-context evidence."},
+    {"id": "Q3", "status": "SUPPORTED", "answer": "Full allotype, HLA and substrate context matter; single SNPs and complete allotypes are not interchangeable."},
+    {"id": "Q4", "status": "NOT DEMONSTRATED", "answer": "No universally preferred therapeutic direction established. Protective association, substrate-dependent activity and mixed organ outcomes do not choose inhibition for every patient."},
+    {"id": "Q5", "status": "SUPPORTED", "answer": "New accessible recombinant pharmacology and cyclohexyl acid assays add biochemical evidence within specified contexts."},
+    {"id": "Q6", "status": "PARTIALLY SUPPORTED", "answer": "Patient PBMC and expanded CD8 data add human cellular context; the seeded macrophage drug study remains abstract-only and is not adjudicated."},
+    {"id": "Q7", "status": "NOT DEMONSTRATED", "answer": "Integrated structures and cellular phenotypes do not establish exposure-matched cellular engagement for the baseline phenotype-producing compounds."},
+    {"id": "Q8", "status": "NOT DEMONSTRATED", "answer": "Parallel KO and inhibitor effects are not a matched inhibitor-in-null/rescue chemical-genetic dependency test."},
+    {"id": "Q9", "status": "PARTIALLY SUPPORTED", "answer": "New-series counter-screen evidence is informative but sparse and cross-substrate; no selectivity ratio computed or baseline selectivity resolved."},
+    {"id": "Q10", "status": "PARTIALLY SUPPORTED", "answer": "Germline ERAP1 loss modifies arthritis incidence in one experimental SpA model, with no improved GI clinical score and worse colon histology; not reversal of established disease."},
+    {"id": "Q11", "status": "NOT DEMONSTRATED", "answer": "An ERAP1-directed axSpA trial registration was identified, but no AS/axSpA human interventional efficacy results were identified in the searched sources. This does not claim that no trial exists."},
+    {"id": "Q12", "status": "PARTIALLY SUPPORTED", "answer": "REFINED wording/context; target engagement remains the critical uncertainty, not resolved or replaced."},
+    {"id": "Q13", "status": "PARTIALLY SUPPORTED", "answer": "REFINED_EXPERIMENT: retain the chemical-genetic engagement design with more explicit allotype/substrate/compartment and exposure controls."},
+    {"id": "Q14", "status": "NOT ASSESSED", "answer": "No new standardized learning measurements imported, so the indexed model refusal is unchanged. Eligibility of the entire recent chemical literature was not assessed."}
+  ],
+  "commercial": {
+    "brief_update_justified": true,
+    "version": "v1.1",
+    "disclaimer": "Independent scientific review pending.",
+    "coverage_wording": "The assessment incorporates a bounded addendum of recent primary studies from 2020–2026 for which sufficient methods and results were accessible for AXIS scientific curation.",
+    "inaccessible_wording": "Additional potentially material literature was identified but not adjudicated where full methodological information was unavailable.",
+    "not_claimed": ["systematic review", "comprehensive 2026 coverage", "validated ERAP1 inhibition", "clinical efficacy", "canonical DecisionState v2"]
+  }
+}

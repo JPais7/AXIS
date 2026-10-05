@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "frozen": true,
+  "review_status": "pending_review",
+  "files": [
+    {
+      "path": "accessibility.json",
+      "sha256": "1011e7e4c164e44080adbe4c193fd151046fa7c35cd07f29b2b2579df007080e",
+      "bytes": 6733
+    },
+    {
+      "path": "baseline.json",
+      "sha256": "8f4d02a3935a51e5b4a807372b0f3aab48d9ab267988578e795786d964f1547d",
+      "bytes": 453
+    },
+    {
+      "path": "candidate-studies.json",
+      "sha256": "048cf49765ddab7a906bd48a9debe739c6a6bf6f076bda809815dfd5f4922958",
+      "bytes": 33793
+    },
+    {
+      "path": "chemical-matter.json",
+      "sha256": "3e309bf15b9a930fd84afe37a0f4608ee1b95bc30b35779d6f1fd1fed74f4138",
+      "bytes": 7665
+    },
+    {
+      "path": "claims.json",
+      "sha256": "fd6a964e98ac4f77f5e42a08fb41aabedc286ad9376cbe8bc7d0209073aa058e",
+      "bytes": 34177
+    },
+    {
+      "path": "context-access.json",
+      "sha256": "5ac2f0d557d81e961f68c699868e684e9ed512545f26fe060ab8151a6664ba50",
+      "bytes": 1147445
+    },
+    {
+      "path": "contextualized-studies.json",
+      "sha256": "b4e8f93c09e4975a2ccfadb05a13cf20149c116d049be75a9a07d40148ca9df9",
+      "bytes": 729
+    },
+    {
+      "path": "curation.json",
+      "sha256": "7064656c32247852ce2fddeaa264eceae48b252ed9c224542e17a1764bf57c05",
+      "bytes": 27651
+    },
+    {
+      "path": "decision-impact.json",
+      "sha256": "fff9cbc691c2668cf486c81c029494ac825f966e4c95be1c153b64714e35a9a9",
+      "bytes": 10408
+    },
+    {
+      "path": "discovery-metadata.json",
+      "sha256": "0d047672f7d72a3821042e1d6070aa9910354c844294c461431f6bb8a00744a7",
+      "bytes": 214382
+    },
+    {
+      "path": "impact-assessments.json",
+      "sha256": "b420a7b32e01b05c122d4b92eacd60a0c5f8d3a9fa08e241c52372c9fc3ca7e0",
+      "bytes": 11670
+    },
+    {
+      "path": "inaccessible-studies.json",
+      "sha256": "400cf3dec906a159676bd501aa6424ef23c59caa1a39b12c8ee922950112aae2",
+      "bytes": 4442
+    },
+    {
+      "path": "included-studies.json",
+      "sha256": "7eafeaa2fd5b31fa3d1f00e4fdfd7586a3304c1e47b02e1b42ec1966a01d1e81",
+      "bytes": 26208
+    },
+    {
+      "path": "material-access-check.json",
+      "sha256": "6306a67fba8cb80cd9c92c972dfd54b8283dd9f3aaa4af53c68f58d38146a2a1",
+      "bytes": 2500
+    },
+    {
+      "path": "protocol.json",
+      "sha256": "b3219bef4e3985b828ca0a91da3a98f4b01425f30f5df350c10fe55b00a8a154",
+      "bytes": 2292
+    },
+    {
+      "path": "search-log.json",
+      "sha256": "79dcfdb97a5e22ba8335ae5b9ca539aa522c72d39b2b4a195f7cf1fe409bf1ea",
+      "bytes": 7132
+    },
+    {
+      "path": "structures.json",
+      "sha256": "71d04b846051d2abd5636d5668efece5308c218e4b8982c6d4ddcd0c7e49a464",
+      "bytes": 5912
+    },
+    {
+      "path": "study-selection.md",
+      "sha256": "bbbbb1e49740ddbfb109b35167aab3dc584ae54933a5046ebff94c673bfd71cb",
+      "bytes": 7601
+    },
+    {
+      "path": "summary.json",
+      "sha256": "70a2bc016af10743739f104406c05348e8967b532dc768121a45e6ea78c4e6ee",
+      "bytes": 781
+    },
+    {
+      "path": "unadjudicated-design.json",
+      "sha256": "fd726eb2b6276f1936ac5d02e92f00bb1998398b0c6b55c890e5f7a193549f35",
+      "bytes": 2515
+    }
+  ]
+}
