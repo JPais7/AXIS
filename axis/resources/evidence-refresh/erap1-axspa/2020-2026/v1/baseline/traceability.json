@@ -1,0 +1,1408 @@
+{
+  "sections": [
+    {
+      "page": 1,
+      "section": "ERAP1 \u00d7 axial\nspondyloarthritis",
+      "evidence": [
+        "C01",
+        "C02",
+        "C03",
+        "C05",
+        "C08",
+        "C09",
+        "C10",
+        "C11",
+        "C12",
+        "decision-state:1:cebbae3880aeec90"
+      ],
+      "editorial_state": "AXIS inference unless explicitly source-labelled"
+    },
+    {
+      "page": 2,
+      "section": "Evidence chain & chemical opportunity",
+      "evidence": [
+        "C01-C13",
+        "measurement:maben:1-15",
+        "PDB:3QNF",
+        "9587589ac4b984f5d502baa83e04634c98ac02e4ff43f51ee69fb2d8b35595e0",
+        "a098ff64c89db792bb5a77d0b355fce0c095e1dd126efe7fb620917656756b1c"
+      ],
+      "editorial_state": "AXIS inference unless explicitly source-labelled"
+    },
+    {
+      "page": 3,
+      "section": "The next decision",
+      "evidence": [
+        "decision-state:1:cebbae3880aeec90",
+        "decision:exp:chemical-genetic-engagement",
+        "DECISION-EXP-001",
+        "DECISION-EXP-002",
+        "DECISION-EXP-005"
+      ],
+      "editorial_state": "AXIS inference unless explicitly source-labelled"
+    },
+    {
+      "page": 4,
+      "section": "Genetics & mechanistic scope",
+      "evidence": [
+        "C01-C07",
+        "AXIS-ERAP1-CURATED-HYP-001"
+      ],
+      "editorial_state": "AXIS inference unless explicitly source-labelled"
+    },
+    {
+      "page": 5,
+      "section": "Perturbation & competing observations",
+      "evidence": [
+        "C08-C13",
+        "measurement:maben:8",
+        "measurement:maben:15"
+      ],
+      "editorial_state": "AXIS inference unless explicitly source-labelled"
+    },
+    {
+      "page": 6,
+      "section": "Experimental structural evidence",
+      "evidence": [
+        "PDB:3QNF",
+        "pdb:3QNF:04b29d420769a6ce405c85d90e6888289de20381e17e64c1a31c3e4f835b8f75:2026-10-04T12:25:57+00:00"
+      ],
+      "editorial_state": "AXIS inference unless explicitly source-labelled"
+    },
+    {
+      "page": 7,
+      "section": "Experimental chemistry: measurements",
+      "evidence": [
+        "measurement:maben:1-15",
+        "primary:maben-2020"
+      ],
+      "editorial_state": "AXIS inference unless explicitly source-labelled"
+    },
+    {
+      "page": 8,
+      "section": "Chemical identity & selectivity",
+      "evidence": [
+        "primary:maben-2020",
+        "chembl:maben-37",
+        "C11",
+        "selectivity:measurement:maben:3:measurement:maben:4"
+      ],
+      "editorial_state": "AXIS inference unless explicitly source-labelled"
+    },
+    {
+      "page": 9,
+      "section": "Cellular pharmacology & engagement",
+      "evidence": [
+        "cellular:maben-2:gap",
+        "cellular:maben-3:gap",
+        "cellular:chen-dg013a-HeLa.B27:gap",
+        "uncertainty:target_engagement"
+      ],
+      "editorial_state": "AXIS inference unless explicitly source-labelled"
+    },
+    {
+      "page": 10,
+      "section": "Competing explanations",
+      "evidence": [
+        "explanation:context",
+        "explanation:indirect",
+        "explanation:off_target",
+        "explanation:on_target"
+      ],
+      "editorial_state": "AXIS inference unless explicitly source-labelled"
+    },
+    {
+      "page": 11,
+      "section": "Computational discovery: bounded panel",
+      "evidence": [
+        "campaign:erap1:bounded-chemistry-v1@r1"
+      ],
+      "editorial_state": "AXIS inference unless explicitly source-labelled"
+    },
+    {
+      "page": 12,
+      "section": "Chemical learning: what can be learned?",
+      "evidence": [
+        "learning-state:AXIS-DD-ERAP1-CURATED-001",
+        "a098ff64c89db792bb5a77d0b355fce0c095e1dd126efe7fb620917656756b1c"
+      ],
+      "editorial_state": "AXIS inference unless explicitly source-labelled"
+    },
+    {
+      "page": 13,
+      "section": "Recommended experiment & outcome tree",
+      "evidence": [
+        "decision:exp:chemical-genetic-engagement",
+        "decision:exp:chemical-genetic-engagement:s1",
+        "decision:exp:chemical-genetic-engagement:s2",
+        "decision:exp:chemical-genetic-engagement:s3",
+        "decision:exp:chemical-genetic-engagement:s4",
+        "decision:exp:chemical-genetic-engagement:s5"
+      ],
+      "editorial_state": "AXIS inference unless explicitly source-labelled"
+    },
+    {
+      "page": 14,
+      "section": "Falsification, decision & validation limits",
+      "evidence": [
+        "decision-state:1:cebbae3880aeec90",
+        "erap1-axspa-t2011",
+        "erap1-axspa-t2014",
+        "erap1-axspa-t2016"
+      ],
+      "editorial_state": "AXIS inference unless explicitly source-labelled"
+    },
+    {
+      "page": 15,
+      "section": "Primary references & evidence drill-down",
+      "evidence": [
+        "PMID:21743469",
+        "PMID:25994336",
+        "PMID:16286653",
+        "PMID:24504800",
+        "PMID:26130142",
+        "PMID:27107845",
+        "PMID:31841350"
+      ],
+      "editorial_state": "AXIS inference unless explicitly source-labelled"
+    },
+    {
+      "page": 16,
+      "section": "Technical provenance & reproducibility",
+      "evidence": [
+        "8f4e7797075e2beb25ad80de13d90843ad4e9de2",
+        "decision-state:1:cebbae3880aeec90",
+        "a098ff64c89db792bb5a77d0b355fce0c095e1dd126efe7fb620917656756b1c",
+        "9587589ac4b984f5d502baa83e04634c98ac02e4ff43f51ee69fb2d8b35595e0"
+      ],
+      "editorial_state": "AXIS inference unless explicitly source-labelled"
+    },
+    {
+      "page": 17,
+      "section": "AXIS",
+      "evidence": [
+        "decision-state:1:cebbae3880aeec90"
+      ],
+      "editorial_state": "AXIS inference unless explicitly source-labelled"
+    }
+  ],
+  "source_assertions": [
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C01",
+      "source_id": "PMID:21743469",
+      "domain": "human_genetics",
+      "subject": {
+        "kind": "gene",
+        "identifier": "ERAP1",
+        "label": "ERAP1",
+        "namespace": "HGNC-symbol"
+      },
+      "predicate": "variants_associated_with",
+      "object": {
+        "kind": "disease",
+        "identifier": "ankylosing-spondylitis",
+        "label": "ankylosing spondylitis",
+        "namespace": "AXIS-curated"
+      },
+      "statement": "ERAP1 polymorphisms were associated with ankylosing spondylitis risk in HLA-B27-positive individuals in this study.",
+      "context": {
+        "population": "Ankylosing spondylitis cases and controls; European-descent cohorts",
+        "hla_status": "HLA-B27-positive risk association in this study",
+        "assay": "Genome-wide association and replication",
+        "comparison": "AS cases versus controls",
+        "species": "Homo sapiens"
+      },
+      "locator": "Abstract; HLA-B27 \u00d7 ERAP1 interaction results",
+      "knowledge_kind": "source_assertion",
+      "inclusion_rationale": "Provides an atomic observation relevant to the evidence-to-experiment chain.",
+      "limitation": "Association does not establish therapeutic direction; AS is not all axSpA."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C02",
+      "source_id": "PMID:25994336",
+      "domain": "human_genetics",
+      "subject": {
+        "kind": "gene",
+        "identifier": "ERAP1",
+        "label": "ERAP1",
+        "namespace": "HGNC-symbol"
+      },
+      "predicate": "rs30187_associated_with",
+      "object": {
+        "kind": "disease",
+        "identifier": "ankylosing-spondylitis",
+        "label": "ankylosing spondylitis",
+        "namespace": "AXIS-curated"
+      },
+      "statement": "ERAP1 rs30187 was also associated with ankylosing spondylitis in HLA-B*40:01 carriers without HLA-B*27.",
+      "context": {
+        "population": "AS cases and population controls of European descent",
+        "hla_status": "HLA-B*40:01-positive; HLA-B*27-negative stratum",
+        "genotype": "ERAP1 rs30187",
+        "assay": "Immunochip genotyping and HLA imputation",
+        "comparison": "AS cases versus population controls",
+        "species": "Homo sapiens"
+      },
+      "locator": "Abstract; ERAP1 and HLA-B*40 interaction results",
+      "knowledge_kind": "source_assertion",
+      "inclusion_rationale": "Provides an atomic observation relevant to the evidence-to-experiment chain.",
+      "limitation": "Extends the HLA context of the earlier finding; not a refutation of its HLA-B27-positive association."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C03",
+      "source_id": "PMID:16286653",
+      "domain": "biological_function",
+      "subject": {
+        "kind": "gene",
+        "identifier": "ERAP1",
+        "label": "ERAP1",
+        "namespace": "HGNC-symbol"
+      },
+      "predicate": "trims",
+      "object": {
+        "kind": "pathway",
+        "identifier": "peptide-processing",
+        "label": "N-terminal peptide processing",
+        "namespace": "AXIS-curated"
+      },
+      "statement": "Purified ERAP1 trimmed a model 13-residue precursor to a 9-residue product and then trimming stopped in that assay.",
+      "context": {
+        "experimental_system": "Purified human ERAP1 with model peptide substrates",
+        "assay": "Biochemical peptide-trimming assay",
+        "endpoint": "Peptide length after trimming",
+        "species": "Homo sapiens"
+      },
+      "locator": "Abstract; length-dependent trimming results",
+      "knowledge_kind": "source_assertion",
+      "inclusion_rationale": "Provides an atomic observation relevant to the evidence-to-experiment chain.",
+      "limitation": "General biochemical function, not an AS therapeutic experiment."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C04",
+      "source_id": "PMID:16286653",
+      "domain": "biological_function",
+      "subject": {
+        "kind": "gene",
+        "identifier": "ERAP1",
+        "label": "ERAP1",
+        "namespace": "HGNC-symbol"
+      },
+      "predicate": "substrate_processing_depends_on",
+      "object": {
+        "kind": "biomarker",
+        "identifier": "c-terminal-sequence",
+        "label": "Peptide C-terminal sequence",
+        "namespace": "AXIS-curated"
+      },
+      "statement": "ERAP1 processing activity depended on the substrate C-terminal residue in purified-enzyme assays.",
+      "context": {
+        "experimental_system": "Purified ERAP1 with peptide substrates",
+        "assay": "Biochemical substrate-processing assay",
+        "endpoint": "Sequence-dependent processing",
+        "species": "Homo sapiens"
+      },
+      "locator": "Abstract; substrate C-terminal specificity results",
+      "knowledge_kind": "source_assertion",
+      "inclusion_rationale": "Provides an atomic observation relevant to the evidence-to-experiment chain.",
+      "limitation": "Substrate dependence limits any simple global activity interpretation."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C05",
+      "source_id": "PMID:24504800",
+      "domain": "hla_mechanism",
+      "subject": {
+        "kind": "gene",
+        "identifier": "ERAP1",
+        "label": "ERAP1",
+        "namespace": "HGNC-symbol"
+      },
+      "predicate": "silencing_decreases",
+      "object": {
+        "kind": "biomarker",
+        "identifier": "b27-9mer",
+        "label": "9-residue HLA-B27-bound peptides",
+        "namespace": "AXIS-curated"
+      },
+      "statement": "ERAP1 silencing decreased the proportion of 9-residue HLA-B27-bound peptides in HeLa.B27 and C1R.B27 cells.",
+      "context": {
+        "experimental_system": "ERAP1-silenced HeLa.B27 and C1R.B27 cells",
+        "hla_status": "HLA-B27 expressed",
+        "assay": "HLA-bound peptide tandem mass spectrometry",
+        "comparison": "ERAP1-silenced versus competent cells",
+        "species": "Homo sapiens",
+        "endpoint": "Proportion of 9-residue HLA-B27 ligands"
+      },
+      "locator": "Abstract, Results",
+      "knowledge_kind": "source_assertion",
+      "inclusion_rationale": "Provides an atomic observation relevant to the evidence-to-experiment chain.",
+      "limitation": "Cell-line immunopeptidome result; not clinical benefit."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C06",
+      "source_id": "PMID:24504800",
+      "domain": "hla_mechanism",
+      "subject": {
+        "kind": "gene",
+        "identifier": "ERAP1",
+        "label": "ERAP1",
+        "namespace": "HGNC-symbol"
+      },
+      "predicate": "silencing_increases",
+      "object": {
+        "kind": "biomarker",
+        "identifier": "b27-long-peptides",
+        "label": "11\u201313-residue HLA-B27-bound peptides",
+        "namespace": "AXIS-curated"
+      },
+      "statement": "ERAP1 silencing increased the proportion of longer 11\u201313-residue HLA-B27-bound peptides in the tested cell lines.",
+      "context": {
+        "experimental_system": "ERAP1-silenced HeLa.B27 and C1R.B27 cells",
+        "hla_status": "HLA-B27 expressed",
+        "assay": "HLA-bound peptide tandem mass spectrometry",
+        "comparison": "ERAP1-silenced versus competent cells",
+        "species": "Homo sapiens",
+        "endpoint": "Proportion of 11\u201313-residue HLA-B27 ligands"
+      },
+      "locator": "Abstract, Results",
+      "knowledge_kind": "source_assertion",
+      "inclusion_rationale": "Provides an atomic observation relevant to the evidence-to-experiment chain.",
+      "limitation": "Peptide-length change alone does not specify favorable disease biology."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C07",
+      "source_id": "PMID:24504800",
+      "domain": "hla_mechanism",
+      "subject": {
+        "kind": "gene",
+        "identifier": "ERAP1",
+        "label": "ERAP1",
+        "namespace": "HGNC-symbol"
+      },
+      "predicate": "K528R_reduces",
+      "object": {
+        "kind": "biomarker",
+        "identifier": "kk10-recognition",
+        "label": "Viral KK10-specific CTL recognition",
+        "namespace": "AXIS-curated"
+      },
+      "statement": "The K528R ERAP1 variant reduced KK10-specific CTL recognition relative to wild type after extended KK10 minigene expression.",
+      "context": {
+        "experimental_system": "HLA-B27-expressing cells with extended viral KK10 minigenes",
+        "hla_status": "HLA-B27 expressed",
+        "genotype": "ERAP1 K528R versus wild type",
+        "assay": "Antigen presentation to KK10-specific CTLs",
+        "endpoint": "Viral epitope recognition",
+        "species": "Homo sapiens"
+      },
+      "locator": "Abstract, Results",
+      "knowledge_kind": "source_assertion",
+      "inclusion_rationale": "Provides an atomic observation relevant to the evidence-to-experiment chain.",
+      "limitation": "Viral epitope assay, not an identified arthritogenic peptide or disease rescue."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C08",
+      "source_id": "PMID:26130142",
+      "domain": "perturbation_evidence",
+      "subject": {
+        "kind": "gene",
+        "identifier": "ERAP1",
+        "label": "ERAP1",
+        "namespace": "HGNC-symbol"
+      },
+      "predicate": "silencing_decreases",
+      "object": {
+        "kind": "biomarker",
+        "identifier": "b27-fhc",
+        "label": "HLA-B27 free-heavy-chain surface expression",
+        "namespace": "AXIS-curated"
+      },
+      "statement": "ERAP1 silencing reduced HLA-B27 free-heavy-chain surface expression in the tested antigen-presenting cell models.",
+      "context": {
+        "experimental_system": "HeLa.B27 and C1R.B27 antigen-presenting cell models",
+        "hla_status": "HLA-B27 expressed",
+        "assay": "Antibody-based flow cytometry",
+        "endpoint": "Cell-surface free heavy chains",
+        "species": "Homo sapiens",
+        "comparison": "ERAP1 silencing versus control"
+      },
+      "locator": "Results, Figure 2",
+      "knowledge_kind": "source_assertion",
+      "inclusion_rationale": "Provides an atomic observation relevant to the evidence-to-experiment chain.",
+      "limitation": "Endpoint- and system-specific; other cell systems report a different direction."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C09",
+      "source_id": "PMID:26130142",
+      "domain": "disease_pharmacology",
+      "subject": {
+        "kind": "gene",
+        "identifier": "ERAP1",
+        "label": "ERAP1",
+        "namespace": "HGNC-symbol"
+      },
+      "predicate": "DG013A_treatment_decreases",
+      "object": {
+        "kind": "biomarker",
+        "identifier": "b27-fhc",
+        "label": "HLA-B27 free-heavy-chain surface expression",
+        "namespace": "AXIS-curated"
+      },
+      "statement": "DG013A treatment reduced free-heavy-chain expression in HeLa.B27 and C1R.B27 cells.",
+      "context": {
+        "experimental_system": "HeLa.B27 and C1R.B27 antigen-presenting cell models",
+        "hla_status": "HLA-B27 expressed",
+        "assay": "Antibody-based flow cytometry",
+        "endpoint": "Cell-surface free heavy chains",
+        "species": "Homo sapiens",
+        "treatment": "DG013A",
+        "comparison": "DG013A-treated versus control"
+      },
+      "locator": "Results, Figure 2E\u2013H",
+      "knowledge_kind": "source_assertion",
+      "inclusion_rationale": "Provides an atomic observation relevant to the evidence-to-experiment chain.",
+      "limitation": "DG013A is not selective for ERAP1; no clinical efficacy conclusion."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C10",
+      "source_id": "PMID:26130142",
+      "domain": "disease_pharmacology",
+      "subject": {
+        "kind": "gene",
+        "identifier": "ERAP1",
+        "label": "ERAP1",
+        "namespace": "HGNC-symbol"
+      },
+      "predicate": "APC_silencing_or_inhibition_suppresses",
+      "object": {
+        "kind": "biomarker",
+        "identifier": "th17-expansion",
+        "label": "Th17 expansion in AS CD4+ T-cell cocultures",
+        "namespace": "AXIS-curated"
+      },
+      "statement": "ERAP1 silencing or inhibition in antigen-presenting cells suppressed Th17 expansion in cocultures with AS CD4+ T cells.",
+      "context": {
+        "experimental_system": "HLA-B27-expressing APC and AS CD4+ T-cell coculture",
+        "population": "CD4+ T cells from patients with ankylosing spondylitis",
+        "hla_status": "HLA-B27 expressed by APCs",
+        "cell_type": "CD4+ T cells and antigen-presenting cells",
+        "assay": "Intracellular cytokine staining",
+        "endpoint": "Th17 expansion",
+        "species": "Homo sapiens"
+      },
+      "locator": "Abstract, Results; coculture experiments",
+      "knowledge_kind": "source_assertion",
+      "inclusion_rationale": "Provides an atomic observation relevant to the evidence-to-experiment chain.",
+      "limitation": "Ex vivo/coculture response does not establish in vivo efficacy or distinguish complete from partial inhibition."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C11",
+      "source_id": "PMID:26130142",
+      "domain": "disease_pharmacology",
+      "subject": {
+        "kind": "gene",
+        "identifier": "ERAP1",
+        "label": "ERAP1",
+        "namespace": "HGNC-symbol"
+      },
+      "predicate": "DG013A_also_inhibits",
+      "object": {
+        "kind": "biomarker",
+        "identifier": "other-aminopeptidases",
+        "label": "ERAP2 and LNPEP",
+        "namespace": "AXIS-curated"
+      },
+      "statement": "The study reports that DG013A also inhibits ERAP2 and LNPEP.",
+      "context": {
+        "treatment": "DG013A",
+        "experimental_system": "Pharmacological perturbation interpretation",
+        "endpoint": "Inhibitor target selectivity"
+      },
+      "locator": "Results, DG013A description; Discussion, selectivity limitation",
+      "knowledge_kind": "source_assertion",
+      "inclusion_rationale": "Provides an atomic observation relevant to the evidence-to-experiment chain.",
+      "limitation": "An author-reported pharmacological caveat, not a new AXIS selectivity measurement."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C12",
+      "source_id": "PMID:27107845",
+      "domain": "perturbation_evidence",
+      "subject": {
+        "kind": "gene",
+        "identifier": "ERAP1",
+        "label": "ERAP1",
+        "namespace": "HGNC-symbol"
+      },
+      "predicate": "knockdown_increases",
+      "object": {
+        "kind": "biomarker",
+        "identifier": "b27-fhc",
+        "label": "HLA-B27 free-heavy-chain surface expression",
+        "namespace": "AXIS-curated"
+      },
+      "statement": "ERAP1 shRNA knockdown increased surface HC10-reactive free heavy chains in the HLA-B27-transfected U937 system.",
+      "context": {
+        "experimental_system": "U937.B27 human monocytic cells with ERAP1-targeting shRNA",
+        "cell_type": "U937 monocytic cell line",
+        "hla_status": "HLA-B*27:05 transfected; endogenous HLA-B*18:01 and HLA-B*51:01",
+        "genotype": "U937 heterozygous at ERAP1 rs30187 and rs27044",
+        "assay": "Immunoprecipitation, immunoblot and flow cytometry",
+        "comparison": "ERAP1 shRNA versus scrambled shRNA",
+        "species": "Homo sapiens",
+        "endpoint": "HC10-reactive surface free-heavy-chain expression"
+      },
+      "locator": "Results, Figure 2; Methods, cell lines",
+      "knowledge_kind": "source_assertion",
+      "inclusion_rationale": "Provides an atomic observation relevant to the evidence-to-experiment chain.",
+      "limitation": "Different cell background, assay and HLA context from Chen; not a universal contradiction."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C13",
+      "source_id": "PMID:27107845",
+      "domain": "perturbation_evidence",
+      "subject": {
+        "kind": "gene",
+        "identifier": "ERAP1",
+        "label": "ERAP1",
+        "namespace": "HGNC-symbol"
+      },
+      "predicate": "knockdown_increases",
+      "object": {
+        "kind": "biomarker",
+        "identifier": "b27-dimers",
+        "label": "Disulfide-linked surface HLA-B27 dimers",
+        "namespace": "AXIS-curated"
+      },
+      "statement": "ERAP1 knockdown increased disulfide-linked HLA-B27 dimers on the surface of U937.B27 cells.",
+      "context": {
+        "experimental_system": "U937.B27 human monocytic cells with ERAP1-targeting shRNA",
+        "cell_type": "U937 monocytic cell line",
+        "hla_status": "HLA-B*27:05 transfected; endogenous HLA-B*18:01 and HLA-B*51:01",
+        "genotype": "U937 heterozygous at ERAP1 rs30187 and rs27044",
+        "assay": "Immunoprecipitation, immunoblot and flow cytometry",
+        "comparison": "ERAP1 shRNA versus scrambled shRNA",
+        "species": "Homo sapiens",
+        "endpoint": "Disulfide-linked HLA-B27 dimers"
+      },
+      "locator": "Results, Figure 3; Methods, cell lines",
+      "knowledge_kind": "source_assertion",
+      "inclusion_rationale": "Provides an atomic observation relevant to the evidence-to-experiment chain.",
+      "limitation": "A mechanistic cell-line endpoint; no clinical harm or benefit demonstrated."
+    }
+  ],
+  "evidence_assessments": [
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C01",
+      "subject": "question",
+      "role": "untyped_considered",
+      "reasoning": "Informs the central uncertainty; does not resolve it. Association does not establish therapeutic direction; AS is not all axSpA."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C02",
+      "subject": "question",
+      "role": "untyped_considered",
+      "reasoning": "Informs the central uncertainty; does not resolve it. Extends the HLA context of the earlier finding; not a refutation of its HLA-B27-positive association."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C03",
+      "subject": "question",
+      "role": "untyped_considered",
+      "reasoning": "Informs the central uncertainty; does not resolve it. General biochemical function, not an AS therapeutic experiment."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C04",
+      "subject": "question",
+      "role": "untyped_considered",
+      "reasoning": "Informs the central uncertainty; does not resolve it. Substrate dependence limits any simple global activity interpretation."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C05",
+      "subject": "question",
+      "role": "untyped_considered",
+      "reasoning": "Informs the central uncertainty; does not resolve it. Cell-line immunopeptidome result; not clinical benefit."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C06",
+      "subject": "question",
+      "role": "untyped_considered",
+      "reasoning": "Informs the central uncertainty; does not resolve it. Peptide-length change alone does not specify favorable disease biology."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C07",
+      "subject": "question",
+      "role": "untyped_considered",
+      "reasoning": "Informs the central uncertainty; does not resolve it. Viral epitope assay, not an identified arthritogenic peptide or disease rescue."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C08",
+      "subject": "question",
+      "role": "untyped_considered",
+      "reasoning": "Informs the central uncertainty; does not resolve it. Endpoint- and system-specific; other cell systems report a different direction."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C09",
+      "subject": "question",
+      "role": "untyped_considered",
+      "reasoning": "Informs the central uncertainty; does not resolve it. DG013A is not selective for ERAP1; no clinical efficacy conclusion."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C10",
+      "subject": "question",
+      "role": "untyped_considered",
+      "reasoning": "Informs the central uncertainty; does not resolve it. Ex vivo/coculture response does not establish in vivo efficacy or distinguish complete from partial inhibition."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C11",
+      "subject": "question",
+      "role": "untyped_considered",
+      "reasoning": "Informs the central uncertainty; does not resolve it. An author-reported pharmacological caveat, not a new AXIS selectivity measurement."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C12",
+      "subject": "question",
+      "role": "untyped_considered",
+      "reasoning": "Informs the central uncertainty; does not resolve it. Different cell background, assay and HLA context from Chen; not a universal contradiction."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C13",
+      "subject": "question",
+      "role": "untyped_considered",
+      "reasoning": "Informs the central uncertainty; does not resolve it. A mechanistic cell-line endpoint; no clinical harm or benefit demonstrated."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C09",
+      "subject": "inhibit",
+      "role": "weakly_supports",
+      "reasoning": "Cellular pharmacology is compatible with investigating reduced activity; magnitude and selectivity remain unresolved."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C10",
+      "subject": "inhibit",
+      "role": "weakly_supports",
+      "reasoning": "Coculture response supports further testing, not clinical efficacy or a preferred intervention."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C11",
+      "subject": "inhibit",
+      "role": "inconclusive",
+      "reasoning": "Off-target activity prevents attribution to selective ERAP1 modulation."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C12",
+      "subject": "inhibit",
+      "role": "inconclusive",
+      "reasoning": "Different direction in U937.B27 limits extrapolation between systems."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C13",
+      "subject": "inhibit",
+      "role": "inconclusive",
+      "reasoning": "Dimer endpoint is context-dependent and not a clinical outcome."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C09",
+      "subject": "partially_inhibit",
+      "role": "weakly_supports",
+      "reasoning": "Cellular pharmacology is compatible with investigating reduced activity; magnitude and selectivity remain unresolved."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C10",
+      "subject": "partially_inhibit",
+      "role": "weakly_supports",
+      "reasoning": "Coculture response supports further testing, not clinical efficacy or a preferred intervention."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C11",
+      "subject": "partially_inhibit",
+      "role": "inconclusive",
+      "reasoning": "Off-target activity prevents attribution to selective ERAP1 modulation."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C12",
+      "subject": "partially_inhibit",
+      "role": "inconclusive",
+      "reasoning": "Different direction in U937.B27 limits extrapolation between systems."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C13",
+      "subject": "partially_inhibit",
+      "role": "inconclusive",
+      "reasoning": "Dimer endpoint is context-dependent and not a clinical outcome."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C07",
+      "subject": "allele_specific_modulation",
+      "role": "neutral",
+      "reasoning": "Variant-dependent antigen presentation motivates a question about specificity but is not evidence for an allele-specific drug."
+    }
+  ],
+  "mechanistic_assessments": [
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C03",
+      "classification": "directly_demonstrated",
+      "reasoning": "Direct observation reported by the authors within the stored experimental context; not a demonstration of clinical benefit."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C05",
+      "classification": "directly_demonstrated",
+      "reasoning": "Direct observation reported by the authors within the stored experimental context; not a demonstration of clinical benefit."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C06",
+      "classification": "directly_demonstrated",
+      "reasoning": "Direct observation reported by the authors within the stored experimental context; not a demonstration of clinical benefit."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C07",
+      "classification": "directly_demonstrated",
+      "reasoning": "Direct observation reported by the authors within the stored experimental context; not a demonstration of clinical benefit."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C08",
+      "classification": "directly_demonstrated",
+      "reasoning": "Direct observation reported by the authors within the stored experimental context; not a demonstration of clinical benefit."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C10",
+      "classification": "directly_demonstrated",
+      "reasoning": "Direct observation reported by the authors within the stored experimental context; not a demonstration of clinical benefit."
+    },
+    {
+      "claim_id": "AXIS-ERAP1-CURATED-C13",
+      "classification": "directly_demonstrated",
+      "reasoning": "Direct observation reported by the authors within the stored experimental context; not a demonstration of clinical benefit."
+    }
+  ],
+  "experimental_measurements": [
+    {
+      "id": "measurement:maben:1",
+      "compound_id": "compound:maben-1",
+      "assay_id": "assay:maben:ERAP1-AMC",
+      "endpoint": "IC50",
+      "relation_operator": "=",
+      "value": 9.2,
+      "original_value": "9.2",
+      "original_unit": "\u00b5M",
+      "source_snapshot_id": "primary:maben-2020",
+      "source_record_id": "10.1021/acs.jmedchem.9b00293:1:ERAP1-AMC:IC50; ChEMBL activity 19151080",
+      "locator": "p.106, Dose dependence; Figure 2A",
+      "limitations": "No therapeutic efficacy or direct cellular target engagement demonstrated. Exact assay construct and tested substance form unresolved.",
+      "provider_pchembl": "5.04",
+      "provider_snapshot_id": "chembl:maben-37"
+    },
+    {
+      "id": "measurement:maben:2",
+      "compound_id": "compound:maben-1",
+      "assay_id": "assay:maben:ERAP1-pNA",
+      "endpoint": "Ki",
+      "relation_operator": "=",
+      "value": 51.7,
+      "original_value": "51.7",
+      "original_unit": "\u00b5M",
+      "source_snapshot_id": "primary:maben-2020",
+      "source_record_id": "10.1021/acs.jmedchem.9b00293:1:ERAP1-pNA:Ki; ChEMBL activity 19151185",
+      "locator": "p.108, mechanism studies; Figure 4A",
+      "limitations": "No therapeutic efficacy or direct cellular target engagement demonstrated. Exact assay construct and tested substance form unresolved.",
+      "uncertainty": "\u00b14.3 \u00b5M; uncertainty type not specified in prose",
+      "provider_pchembl": "4.29",
+      "provider_snapshot_id": "chembl:maben-37"
+    },
+    {
+      "id": "measurement:maben:3",
+      "compound_id": "compound:maben-2",
+      "assay_id": "assay:maben:ERAP1-AMC",
+      "endpoint": "IC50",
+      "relation_operator": "=",
+      "value": 6.9,
+      "original_value": "6.9",
+      "original_unit": "\u00b5M",
+      "source_snapshot_id": "primary:maben-2020",
+      "source_record_id": "10.1021/acs.jmedchem.9b00293:2:ERAP1-AMC:IC50",
+      "locator": "Table 1, compound 2",
+      "limitations": "No therapeutic efficacy or direct cellular target engagement demonstrated. Exact assay construct and tested substance form unresolved."
+    },
+    {
+      "id": "measurement:maben:4",
+      "compound_id": "compound:maben-2",
+      "assay_id": "assay:maben:ERAP2-AMC",
+      "endpoint": "IC50",
+      "relation_operator": ">",
+      "value": 200,
+      "original_value": "200",
+      "original_unit": "\u00b5M",
+      "source_snapshot_id": "primary:maben-2020",
+      "source_record_id": "10.1021/acs.jmedchem.9b00293:2:ERAP2-AMC:IC50",
+      "locator": "Table 1, compound 2",
+      "limitations": "No therapeutic efficacy or direct cellular target engagement demonstrated. Exact assay construct and tested substance form unresolved."
+    },
+    {
+      "id": "measurement:maben:5",
+      "compound_id": "compound:maben-2",
+      "assay_id": "assay:maben:LNPEP-AMC",
+      "endpoint": "IC50",
+      "relation_operator": ">",
+      "value": 200,
+      "original_value": "200",
+      "original_unit": "\u00b5M",
+      "source_snapshot_id": "primary:maben-2020",
+      "source_record_id": "10.1021/acs.jmedchem.9b00293:2:LNPEP-AMC:IC50",
+      "locator": "Table 1, compound 2; mouse IRAP",
+      "limitations": "No therapeutic efficacy or direct cellular target engagement demonstrated. Exact assay construct and tested substance form unresolved."
+    },
+    {
+      "id": "measurement:maben:6",
+      "compound_id": "compound:maben-2",
+      "assay_id": "assay:maben:ERAP1-WK10",
+      "endpoint": "IC50",
+      "relation_operator": "=",
+      "value": 6.9,
+      "original_value": "6.9",
+      "original_unit": "\u00b5M",
+      "source_snapshot_id": "primary:maben-2020",
+      "source_record_id": "10.1021/acs.jmedchem.9b00293:2:ERAP1-WK10:IC50",
+      "locator": "Table 1, compound 2, footnote a",
+      "limitations": "Partial inhibition: less than 90% at highest concentration tested. Not equivalent to unconstrained full-inhibition IC50."
+    },
+    {
+      "id": "measurement:maben:7",
+      "compound_id": "compound:maben-2",
+      "assay_id": "assay:maben:ERAP1-pNA",
+      "endpoint": "Ki",
+      "relation_operator": "=",
+      "value": 12.8,
+      "original_value": "12.8",
+      "original_unit": "\u00b5M",
+      "source_snapshot_id": "primary:maben-2020",
+      "source_record_id": "10.1021/acs.jmedchem.9b00293:2:ERAP1-pNA:Ki",
+      "locator": "p.108, mechanism studies; Figure 4B",
+      "limitations": "No therapeutic efficacy or direct cellular target engagement demonstrated. Exact assay construct and tested substance form unresolved.",
+      "uncertainty": "\u00b11.0 \u00b5M; uncertainty type not specified in prose"
+    },
+    {
+      "id": "measurement:maben:8",
+      "compound_id": "compound:maben-2",
+      "assay_id": "assay:maben:HeLa-presentation",
+      "endpoint": "IC50",
+      "relation_operator": "=",
+      "value": 45,
+      "original_value": "45",
+      "original_unit": "\u00b5M",
+      "source_snapshot_id": "primary:maben-2020",
+      "source_record_id": "10.1021/acs.jmedchem.9b00293:2:HeLa-presentation:IC50",
+      "locator": "p.112, Cellular inhibition; Figure 9D",
+      "limitations": "Antigen-presentation phenotype in engineered HeLa/model mouse MHC-I system. Not direct binding/occupancy, HLA-B27 engagement, axSpA disease response or clinical efficacy."
+    },
+    {
+      "id": "measurement:maben:9",
+      "compound_id": "compound:maben-3",
+      "assay_id": "assay:maben:ERAP1-AMC",
+      "endpoint": "AC50",
+      "relation_operator": "=",
+      "value": 4.1,
+      "original_value": "4.1",
+      "original_unit": "\u00b5M",
+      "source_snapshot_id": "primary:maben-2020",
+      "source_record_id": "10.1021/acs.jmedchem.9b00293:3:ERAP1-AMC:AC50; ChEMBL activity 19151136",
+      "locator": "Table 2, compound 3",
+      "limitations": "No therapeutic efficacy or direct cellular target engagement demonstrated. Exact assay construct and tested substance form unresolved.",
+      "provider_pchembl": "5.39",
+      "provider_snapshot_id": "chembl:maben-37"
+    },
+    {
+      "id": "measurement:maben:10",
+      "compound_id": "compound:maben-3",
+      "assay_id": "assay:maben:ERAP1-AMC",
+      "endpoint": "fold activity",
+      "relation_operator": "=",
+      "value": 4.1,
+      "original_value": "4.1",
+      "original_unit": "fold",
+      "source_snapshot_id": "primary:maben-2020",
+      "source_record_id": "10.1021/acs.jmedchem.9b00293:3:ERAP1-AMC:fold activity",
+      "locator": "Table 2, compound 3, footnote a",
+      "limitations": "No therapeutic efficacy or direct cellular target engagement demonstrated. Exact assay construct and tested substance form unresolved."
+    },
+    {
+      "id": "measurement:maben:11",
+      "compound_id": "compound:maben-3",
+      "assay_id": "assay:maben:ERAP2-AMC",
+      "endpoint": "IC50",
+      "relation_operator": ">",
+      "value": 200,
+      "original_value": "200",
+      "original_unit": "\u00b5M",
+      "source_snapshot_id": "primary:maben-2020",
+      "source_record_id": "10.1021/acs.jmedchem.9b00293:3:ERAP2-AMC:IC50",
+      "locator": "Table 2, compound 3",
+      "limitations": "No therapeutic efficacy or direct cellular target engagement demonstrated. Exact assay construct and tested substance form unresolved."
+    },
+    {
+      "id": "measurement:maben:12",
+      "compound_id": "compound:maben-3",
+      "assay_id": "assay:maben:LNPEP-AMC",
+      "endpoint": "IC50",
+      "relation_operator": ">",
+      "value": 200,
+      "original_value": "200",
+      "original_unit": "\u00b5M",
+      "source_snapshot_id": "primary:maben-2020",
+      "source_record_id": "10.1021/acs.jmedchem.9b00293:3:LNPEP-AMC:IC50",
+      "locator": "Table 2, compound 3; mouse IRAP",
+      "limitations": "No therapeutic efficacy or direct cellular target engagement demonstrated. Exact assay construct and tested substance form unresolved."
+    },
+    {
+      "id": "measurement:maben:13",
+      "compound_id": "compound:maben-3",
+      "assay_id": "assay:maben:ERAP1-WK10",
+      "endpoint": "IC50",
+      "relation_operator": "=",
+      "value": 5.3,
+      "original_value": "5.3",
+      "original_unit": "\u00b5M",
+      "source_snapshot_id": "primary:maben-2020",
+      "source_record_id": "10.1021/acs.jmedchem.9b00293:3:ERAP1-WK10:IC50; ChEMBL activity 19151158",
+      "locator": "Table 2, compound 3",
+      "limitations": "No therapeutic efficacy or direct cellular target engagement demonstrated. Exact assay construct and tested substance form unresolved.",
+      "provider_pchembl": "5.28",
+      "provider_snapshot_id": "chembl:maben-37"
+    },
+    {
+      "id": "measurement:maben:14",
+      "compound_id": "compound:maben-3",
+      "assay_id": "assay:maben:ERAP1-LF9",
+      "endpoint": "Ki",
+      "relation_operator": "=",
+      "value": 3.8,
+      "original_value": "3.8",
+      "original_unit": "\u00b5M",
+      "source_snapshot_id": "primary:maben-2020",
+      "source_record_id": "10.1021/acs.jmedchem.9b00293:3:ERAP1-LF9:Ki; ChEMBL activity 19151188",
+      "locator": "p.109, mechanism studies; Figure 5B",
+      "limitations": "No therapeutic efficacy or direct cellular target engagement demonstrated. Exact assay construct and tested substance form unresolved.",
+      "uncertainty": "\u00b10.7 \u00b5M; uncertainty type not specified in prose",
+      "provider_pchembl": "5.42",
+      "provider_snapshot_id": "chembl:maben-37"
+    },
+    {
+      "id": "measurement:maben:15",
+      "compound_id": "compound:maben-3",
+      "assay_id": "assay:maben:HeLa-presentation",
+      "endpoint": "IC50",
+      "relation_operator": "=",
+      "value": 1,
+      "original_value": "1",
+      "original_unit": "\u00b5M",
+      "source_snapshot_id": "primary:maben-2020",
+      "source_record_id": "10.1021/acs.jmedchem.9b00293:3:HeLa-presentation:IC50; ChEMBL activity 19151198",
+      "locator": "p.112, Cellular inhibition; Figure 9D",
+      "limitations": "Antigen-presentation phenotype, not target engagement, HLA-B27 or axSpA efficacy.",
+      "provider_pchembl": "6.00",
+      "provider_snapshot_id": "chembl:maben-37"
+    }
+  ],
+  "assay_contexts": [
+    {
+      "id": "assay:maben:ERAP1-AMC",
+      "name": "ERAP1-AMC",
+      "assay_type": "biochemical_activity",
+      "target_gene": "ERAP1",
+      "source_snapshot_id": "primary:maben-2020",
+      "source_assay_identifier": "10.1021/acs.jmedchem.9b00293:ERAP1-AMC",
+      "locator": "Experimental section, pp. 116\u2013118",
+      "taxon_id": 9606,
+      "reported_accession": "Q9NZ08",
+      "target_type": "source-reported recombinant protein",
+      "reported_construct": "Reported allelic variants; endogenous signal sequence and C-terminal 6xHis; assay-specific exact sequence unresolved",
+      "construct_mapping_status": "unknown",
+      "assay_format": "recombinant enzyme",
+      "biological_system": "Baculovirus/High Five insect-cell expressed enzyme",
+      "cell_line": null,
+      "substrate": "L-AMC",
+      "detection_method": "fluorescence 380/460 nm",
+      "conditions": [
+        {
+          "name": "buffer",
+          "value": "20 mM Tris-HCl; 100 mM NaCl; 0.01% w/v BSA",
+          "unit": null
+        },
+        {
+          "name": "pH",
+          "value": "7.5",
+          "unit": null
+        },
+        {
+          "name": "temperature",
+          "value": null,
+          "unit": "\u00b0C"
+        },
+        {
+          "name": "substrate concentration",
+          "value": "100",
+          "unit": "\u00b5M"
+        },
+        {
+          "name": "enzyme",
+          "value": "400 ng/well",
+          "unit": null
+        },
+        {
+          "name": "volume",
+          "value": "100",
+          "unit": "\u00b5L"
+        },
+        {
+          "name": "time sampling",
+          "value": "10 min intervals",
+          "unit": null
+        }
+      ],
+      "description": "Primary experimental context; not mapped to 3QNF or canonical sequence merely by gene name."
+    },
+    {
+      "id": "assay:maben:ERAP2-AMC",
+      "name": "ERAP2-AMC",
+      "assay_type": "biochemical_activity",
+      "target_gene": "ERAP2",
+      "source_snapshot_id": "primary:maben-2020",
+      "source_assay_identifier": "10.1021/acs.jmedchem.9b00293:ERAP2-AMC",
+      "locator": "Experimental section, pp. 116\u2013118",
+      "taxon_id": 9606,
+      "reported_accession": "Q6P179",
+      "target_type": "source-reported recombinant protein",
+      "reported_construct": "Asn392 variant; endogenous signal sequence and C-terminal 6xHis; exact sequence unknown",
+      "construct_mapping_status": "unknown",
+      "assay_format": "recombinant enzyme",
+      "biological_system": "Baculovirus/High Five insect-cell expressed enzyme",
+      "cell_line": null,
+      "substrate": "R-AMC",
+      "detection_method": "fluorescence 380/460 nm",
+      "conditions": [
+        {
+          "name": "buffer",
+          "value": "20 mM Tris-HCl; 100 mM NaCl; 0.01% w/v BSA",
+          "unit": null
+        },
+        {
+          "name": "pH",
+          "value": "7.5",
+          "unit": null
+        },
+        {
+          "name": "temperature",
+          "value": null,
+          "unit": "\u00b0C"
+        },
+        {
+          "name": "substrate concentration",
+          "value": "10",
+          "unit": "\u00b5M"
+        },
+        {
+          "name": "enzyme",
+          "value": "12.5 ng/well",
+          "unit": null
+        },
+        {
+          "name": "volume",
+          "value": "100",
+          "unit": "\u00b5L"
+        },
+        {
+          "name": "time sampling",
+          "value": "10 min intervals",
+          "unit": null
+        }
+      ],
+      "description": "Primary experimental context; not mapped to 3QNF or canonical sequence merely by gene name."
+    },
+    {
+      "id": "assay:maben:LNPEP-AMC",
+      "name": "LNPEP-AMC",
+      "assay_type": "biochemical_activity",
+      "target_gene": "LNPEP",
+      "source_snapshot_id": "primary:maben-2020",
+      "source_assay_identifier": "10.1021/acs.jmedchem.9b00293:LNPEP-AMC",
+      "locator": "Experimental section, pp. 116\u2013118",
+      "taxon_id": 10090,
+      "reported_accession": "Q8C129",
+      "target_type": "source-reported recombinant protein",
+      "reported_construct": "Luminal domain; endogenous signal sequence and C-terminal 6xHis; exact sequence unknown",
+      "construct_mapping_status": "unknown",
+      "assay_format": "recombinant enzyme",
+      "biological_system": "Baculovirus/High Five insect-cell expressed enzyme",
+      "cell_line": null,
+      "substrate": "L-AMC",
+      "detection_method": "fluorescence 380/460 nm",
+      "conditions": [
+        {
+          "name": "buffer",
+          "value": "20 mM Tris-HCl; 100 mM NaCl; 0.01% w/v BSA",
+          "unit": null
+        },
+        {
+          "name": "pH",
+          "value": "7.5",
+          "unit": null
+        },
+        {
+          "name": "temperature",
+          "value": null,
+          "unit": "\u00b0C"
+        },
+        {
+          "name": "substrate concentration",
+          "value": "100",
+          "unit": "\u00b5M"
+        },
+        {
+          "name": "enzyme",
+          "value": "40 ng/well",
+          "unit": null
+        },
+        {
+          "name": "volume",
+          "value": "100",
+          "unit": "\u00b5L"
+        },
+        {
+          "name": "time sampling",
+          "value": "10 min intervals",
+          "unit": null
+        }
+      ],
+      "description": "Primary experimental context; not mapped to 3QNF or canonical sequence merely by gene name."
+    },
+    {
+      "id": "assay:maben:ERAP1-WK10",
+      "name": "ERAP1-WK10",
+      "assay_type": "biochemical_activity",
+      "target_gene": "ERAP1",
+      "source_snapshot_id": "primary:maben-2020",
+      "source_assay_identifier": "10.1021/acs.jmedchem.9b00293:ERAP1-WK10",
+      "locator": "Experimental section, pp. 116\u2013118",
+      "taxon_id": 9606,
+      "reported_accession": "Q9NZ08",
+      "target_type": "source-reported recombinant protein",
+      "reported_construct": "Reported allelic variants; endogenous signal sequence and C-terminal 6xHis; assay-specific exact sequence unresolved",
+      "construct_mapping_status": "unknown",
+      "assay_format": "recombinant enzyme",
+      "biological_system": "Baculovirus/High Five insect-cell expressed enzyme",
+      "cell_line": null,
+      "substrate": "WRCYEKMALK",
+      "detection_method": "RapidFire LC-MS",
+      "conditions": [
+        {
+          "name": "buffer",
+          "value": "20 mM Tris-HCl; 100 mM NaCl; 0.01% w/v BSA",
+          "unit": null
+        },
+        {
+          "name": "pH",
+          "value": "7.5",
+          "unit": null
+        },
+        {
+          "name": "temperature",
+          "value": null,
+          "unit": "\u00b0C"
+        },
+        {
+          "name": "substrate concentration",
+          "value": "10",
+          "unit": "\u00b5M"
+        },
+        {
+          "name": "enzyme",
+          "value": "20 ng/well",
+          "unit": null
+        },
+        {
+          "name": "volume",
+          "value": "50",
+          "unit": "\u00b5L"
+        },
+        {
+          "name": "incubation time",
+          "value": "10",
+          "unit": "min"
+        }
+      ],
+      "description": "Primary experimental context; not mapped to 3QNF or canonical sequence merely by gene name."
+    },
+    {
+      "id": "assay:maben:ERAP1-pNA",
+      "name": "ERAP1-pNA",
+      "assay_type": "biochemical_activity",
+      "target_gene": "ERAP1",
+      "source_snapshot_id": "primary:maben-2020",
+      "source_assay_identifier": "10.1021/acs.jmedchem.9b00293:ERAP1-pNA",
+      "locator": "Experimental section, pp. 116\u2013118",
+      "taxon_id": 9606,
+      "reported_accession": "Q9NZ08",
+      "target_type": "source-reported recombinant protein",
+      "reported_construct": "Reported allelic variants; endogenous signal sequence and C-terminal 6xHis; assay-specific exact sequence unresolved",
+      "construct_mapping_status": "unknown",
+      "assay_format": "recombinant enzyme",
+      "biological_system": "Baculovirus/High Five insect-cell expressed enzyme",
+      "cell_line": null,
+      "substrate": "L-pNA concentration series",
+      "detection_method": "chromogenic initial-rate assay",
+      "conditions": [
+        {
+          "name": "buffer",
+          "value": "20 mM Tris-HCl; 100 mM NaCl; 0.01% w/v BSA",
+          "unit": null
+        },
+        {
+          "name": "pH",
+          "value": "7.5",
+          "unit": null
+        },
+        {
+          "name": "temperature",
+          "value": null,
+          "unit": "\u00b0C"
+        },
+        {
+          "name": "initial rate window",
+          "value": "5\u201310 min",
+          "unit": null
+        },
+        {
+          "name": "kinetic fit",
+          "value": "competitive allosteric inhibition",
+          "unit": null
+        }
+      ],
+      "description": "Primary experimental context; not mapped to 3QNF or canonical sequence merely by gene name."
+    },
+    {
+      "id": "assay:maben:ERAP1-LF9",
+      "name": "ERAP1-LF9",
+      "assay_type": "biochemical_activity",
+      "target_gene": "ERAP1",
+      "source_snapshot_id": "primary:maben-2020",
+      "source_assay_identifier": "10.1021/acs.jmedchem.9b00293:ERAP1-LF9",
+      "locator": "Experimental section, pp. 116\u2013118",
+      "taxon_id": 9606,
+      "reported_accession": "Q9NZ08",
+      "target_type": "source-reported recombinant protein",
+      "reported_construct": "Reported allelic variants; endogenous signal sequence and C-terminal 6xHis; assay-specific exact sequence unresolved",
+      "construct_mapping_status": "unknown",
+      "assay_format": "recombinant enzyme",
+      "biological_system": "Baculovirus/High Five insect-cell expressed enzyme",
+      "cell_line": null,
+      "substrate": "LVAFKARKF concentration series",
+      "detection_method": "ABTS/HRP/L-amino acid oxidase coupled absorbance 405 nm",
+      "conditions": [
+        {
+          "name": "buffer",
+          "value": "20 mM Tris-HCl; 100 mM NaCl; 0.01% w/v BSA",
+          "unit": null
+        },
+        {
+          "name": "pH",
+          "value": "7.5",
+          "unit": null
+        },
+        {
+          "name": "temperature",
+          "value": null,
+          "unit": "\u00b0C"
+        },
+        {
+          "name": "time course",
+          "value": "20",
+          "unit": "min"
+        },
+        {
+          "name": "sampling",
+          "value": "2.5",
+          "unit": "min"
+        },
+        {
+          "name": "kinetic fit",
+          "value": "competitive Michaelis\u2013Menten inhibition",
+          "unit": null
+        }
+      ],
+      "description": "Primary experimental context; not mapped to 3QNF or canonical sequence merely by gene name."
+    },
+    {
+      "id": "assay:maben:HeLa-presentation",
+      "name": "HeLa-presentation",
+      "assay_type": "cellular_phenotype",
+      "target_gene": "ERAP1",
+      "source_snapshot_id": "primary:maben-2020",
+      "source_assay_identifier": "10.1021/acs.jmedchem.9b00293:HeLa-presentation",
+      "locator": "Experimental section, pp. 116\u2013118",
+      "taxon_id": 9606,
+      "reported_accession": "Q9NZ08",
+      "target_type": "cellular endogenous target",
+      "reported_construct": "Endogenous ERAP1; sequence/alleles not resolved",
+      "construct_mapping_status": "unknown",
+      "assay_format": "cellular flow cytometry",
+      "biological_system": "HeLa expressing mouse H-2 Kb; modified vaccinia antigen constructs",
+      "cell_line": "HeLa",
+      "substrate": "ss-LEQLE-SIINFEKL; Ub-SIINFEKL control",
+      "detection_method": "25D1 flow cytometry",
+      "conditions": [
+        {
+          "name": "exposure",
+          "value": "16\u201324",
+          "unit": "h"
+        },
+        {
+          "name": "temperature",
+          "value": null,
+          "unit": "\u00b0C"
+        },
+        {
+          "name": "buffer",
+          "value": null,
+          "unit": null
+        }
+      ],
+      "description": "Primary experimental context; not mapped to 3QNF or canonical sequence merely by gene name."
+    }
+  ],
+  "references": [
+    [
+      "PMID:21743469",
+      "Interaction between ERAP1 and HLA-B27 in ankylosing spondylitis implicates peptide handling in the mechanism for HLA-B27 in disease susceptibility.",
+      "10.1038/ng.873"
+    ],
+    [
+      "PMID:25994336",
+      "Major histocompatibility complex associations of ankylosing spondylitis are complex and involve further epistasis with ERAP1.",
+      "10.1038/ncomms8146"
+    ],
+    [
+      "PMID:16286653",
+      "The ER aminopeptidase, ERAP1, trims precursors to lengths of MHC class I peptides by a \"molecular ruler\" mechanism.",
+      "10.1073/pnas.0500721102"
+    ],
+    [
+      "PMID:24504800",
+      "Critical role of endoplasmic reticulum aminopeptidase 1 in determining the length and sequence of peptides bound and presented by HLA-B27.",
+      "10.1002/art.38249"
+    ],
+    [
+      "PMID:26130142",
+      "Silencing or inhibition of endoplasmic reticulum aminopeptidase 1 (ERAP1) suppresses free heavy chain expression and Th17 responses in ankylosing spondylitis.",
+      "10.1136/annrheumdis-2014-206996"
+    ],
+    [
+      "PMID:27107845",
+      "ERAP1 reduces accumulation of aberrant and disulfide-linked forms of HLA-B27 on the cell surface.",
+      "10.1016/j.molimm.2016.04.002"
+    ],
+    [
+      "PMID:31841350",
+      "Maben et al. Discovery of Selective Inhibitors of Endoplasmic Reticulum Aminopeptidase 1. J Med Chem 2020;63:103-121.",
+      "10.1021/acs.jmedchem.9b00293"
+    ]
+  ],
+  "decision_snapshot": "state-snapshot.json#/decision",
+  "chemical_learning_snapshot": "state-snapshot.json#/learning",
+  "computational_snapshot": "state-snapshot.json#/campaign"
+}
