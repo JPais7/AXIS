@@ -1,0 +1,52 @@
+{
+  "cutoff": "2026-10-05",
+  "starting_sha": "1a8d0ffb39eb493e2d87abb568d70d4ab9cb283a",
+  "ending_sha": "1a8d0ffb39eb493e2d87abb568d70d4ab9cb283a",
+  "branch": "codex/erap1-data-rich-evidence-integration-2026",
+  "remote_main_verified": "d491ebe47ee0c40dfaa3823a44a9decd1afae29d",
+  "tracked_files_modified": 0,
+  "new_files": 19,
+  "working_tree": "uncommitted additions only; no commit, push or merge",
+  "scientific_tests": {
+    "focused_bradshaw": {"passed": 27, "seconds": 12.28},
+    "combined_historical_and_bradshaw": {"passed": 69, "seconds": 15.43},
+    "full_python_suite": {"passed": 760, "skipped": 2, "seconds": 247.99},
+    "offline_replay": "PASS; socket.connect disabled; originals not read during replay",
+    "baseline_digest_exact": true,
+    "canonical_snapshot_and_all_three_parent_packages_unchanged": true,
+    "decision_rules_unchanged": true,
+    "maben_engagement_not_transferred": true,
+    "mouse_disease_projection_removal_sensitivity": "same critical uncertainty and recommendation"
+  },
+  "typing": {"command": "PYTHONPATH=. mypy axis", "strict": true, "passed_source_files": 163},
+  "lint": {
+    "new_script_and_tests": "PASS; zero findings",
+    "global_existing_findings": 462,
+    "new_file_findings": 0,
+    "global_pass_claimed": false
+  },
+  "build": {
+    "backend": "poetry-core==2.5.0 in isolated temporary venv",
+    "wheel": "PASS",
+    "sdist": "PASS",
+    "frozen_resource_files_checked": 59,
+    "every_resource_byte_equal_to_source_in_both_distributions": true,
+    "licensed_primary_pdfs_coordinates_workbooks_distributed": false,
+    "new_package_files": 15,
+    "new_package_bytes": 1275604,
+    "largest_new_resource_bytes": 622421,
+    "wheel_sha256": "c58d974aae4ec5678da55ba8b500a32c0d00230d001403c6cc217efbad936cd3",
+    "sdist_sha256": "ac98a944486b8b504dc0c56b0a2a62cca0c385a21906fd6ece232a36a7f2943b"
+  },
+  "not_run": ["frontend validation", "production database mutation", "clinical validation", "predictive-model training"],
+  "stage_a": "A1",
+  "stage_b": "EXECUTED; DECISION STABLE",
+  "decision_state_v2": "decision-state:2:212f995ecc55c989",
+  "supersedes": "decision-state:1:cebbae3880aeec90",
+  "review_mode": "exploratory; curation pending independent scientific review",
+  "critical_uncertainty": "uncertainty:target_engagement",
+  "next_experiment": "decision:exp:chemical-genetic-engagement",
+  "learning": "MODEL_ELIGIBLE_WITH_CONDITIONS; no model trained; historical MODEL NOT BUILT preserved",
+  "verdict": "BLOCKER RESOLVED — DECISION STABLE — READY FOR INDEPENDENT SCIENTIFIC REVIEW WITH CONDITIONS",
+  "proposed_commit_message": "Resolve BRADSHAW assay provenance and record stable ERAP1 decision reassessment"
+}

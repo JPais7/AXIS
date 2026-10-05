@@ -1,0 +1,35 @@
+{
+  "comparisons": [
+    {
+      "condition": "preserve exclusions/replicate uncertainty and tested-form limits",
+      "families": "BRADSHAW internal biochemical",
+      "inference": "within-source Hap2/YTAFTIPSI SAR, not transferable absolute potency",
+      "status": "COMPARABLE"
+    },
+    {
+      "families": "BRADSHAW biochemical vs cellular",
+      "inference": "paired descriptive endpoints only; never pool; functional phenotype not occupancy",
+      "status": "NOT_COMPARABLE"
+    },
+    {
+      "condition": "temperature/preincubation/dose range/form unknown; distinct compounds/publications; no selectivity ratio",
+      "families": "BRADSHAW vs Tinworth biochemical",
+      "inference": "explicit common Liddle inheritance establishes method family, not numeric interchangeability",
+      "status": "PARTIALLY_COMPARABLE"
+    },
+    {
+      "families": "BRADSHAW vs historical Maben",
+      "inference": "different source assay/substrate/preparation; no pooling or engagement transfer",
+      "status": "NOT_COMPARABLE"
+    },
+    {
+      "families": "BRADSHAW allotype/substrate panel",
+      "inference": "context-specific characterization, not one pooled training endpoint",
+      "status": "NOT_COMPARABLE"
+    }
+  ],
+  "existing_rules_changed": false,
+  "numeric_selectivity_rule": "axis.pharmacology.selectivity.compare; unchanged; parent selectivity replay retains null ratios/bounds",
+  "qualitative_categories": "curated inference, not falsely presented as a generic numeric comparability engine",
+  "review_state": "pending_review"
+}

@@ -1,0 +1,62 @@
+{
+  "allotypes": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "clinical_efficacy": false,
+  "compound": "10.1021/acs.jmedchem.5c03071:compound:40",
+  "graph_values_digitized": false,
+  "locator": "main PDF p8 Results; p16 Figure16; p17 Methods",
+  "pooling": false,
+  "review_state": "pending_review",
+  "source": "10.1021/acs.jmedchem.5c03071",
+  "source_conclusion": "Potency/maximum response depend on allotype and substrate; series not progressed to preclinical candidate development due to context dependence and potency/exposure limitations",
+  "substrates": {
+    "EAAGIGILTV": {
+      "enzyme_nM": [
+        5,
+        2.5,
+        6,
+        7.5,
+        10,
+        10,
+        12,
+        7.5,
+        7.5,
+        30
+      ],
+      "product": "AGIGILTV"
+    },
+    "YTAFTIPSI": {
+      "censored_below_pIC50_4": [
+        4,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "enzyme_nM": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        10
+      ],
+      "product": "TAFTIPSI"
+    }
+  }
+}

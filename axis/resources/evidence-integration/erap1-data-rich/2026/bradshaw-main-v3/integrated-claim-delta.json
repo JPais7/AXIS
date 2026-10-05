@@ -1,0 +1,380 @@
+[
+  {
+    "contradicting_evidence": [],
+    "decision_input_admission": "Exploratory source-scoped readout; not auto-approved",
+    "domain_claim": {
+      "confidence": null,
+      "context": {
+        "allotype": null,
+        "assay": "antigen presentation",
+        "cell_type": "HeLa",
+        "comparison": null,
+        "endpoint": "SIINFEKL antigen presentation inhibited in HeLa; pIC50 7.5",
+        "experimental_system": null,
+        "genotype": null,
+        "hla_status": null,
+        "population": null,
+        "species": null,
+        "tissue": null,
+        "treatment": null
+      },
+      "identifier": "brad-v3:claim:bradshaw-21",
+      "knowledge_kind": "source_assertion",
+      "object": {
+        "identifier": "10.1021/acs.jmedchem.5c03071",
+        "kind": "study",
+        "label": "10.1021/acs.jmedchem.5c03071",
+        "namespace": "source"
+      },
+      "predicate": "SIINFEKL antigen presentation inhibited in HeLa; pIC50 7.5",
+      "provenance": {
+        "checksum": "63e41f98ff9c84e2c6f9b09d81631ce72ae74b98d22bdbb4611e9d0b23233e01",
+        "retrieved_at": "2026-10-05 00:00:00+00:00",
+        "source_identifier": "10.1021/acs.jmedchem.5c03071",
+        "source_kind": "publication",
+        "source_uri": "https://doi.org/10.1021/acs.jmedchem.5c03071",
+        "transformations": []
+      },
+      "subject": {
+        "identifier": "Q9NZ08",
+        "kind": "protein",
+        "label": "ERAP1",
+        "namespace": "UniProt"
+      }
+    },
+    "limitations": [
+      "Source-context curation pending expert review; no occupancy, matched chemical-genetic dependency or axSpA efficacy inferred",
+      "pending independent scientific review"
+    ],
+    "polarity": "supports",
+    "retrieval_timestamp_precision": "date-only footer; midnight is serialization convention, not recorded access time",
+    "review_state": "pending_review",
+    "scope": "compound/context specific endpoint; not direct cellular occupancy",
+    "source_artifact": "/Users/joaopais7/Downloads/jm5c03071.pdf",
+    "source_class": "peer_reviewed_primary_research",
+    "source_locator": "main p16 Table8,p17; SI S60; CSV compound:21",
+    "supporting_evidence": [
+      {
+        "locator": "main p16 Table8,p17; SI S60; CSV compound:21",
+        "sha256": "63e41f98ff9c84e2c6f9b09d81631ce72ae74b98d22bdbb4611e9d0b23233e01"
+      }
+    ]
+  },
+  {
+    "contradicting_evidence": [],
+    "decision_input_admission": "Exploratory source-scoped readout; not auto-approved",
+    "domain_claim": {
+      "confidence": null,
+      "context": {
+        "allotype": null,
+        "assay": "antigen presentation",
+        "cell_type": "HeLa",
+        "comparison": null,
+        "endpoint": "SIINFEKL antigen presentation inhibited in HeLa; pIC50 7.3",
+        "experimental_system": null,
+        "genotype": null,
+        "hla_status": null,
+        "population": null,
+        "species": null,
+        "tissue": null,
+        "treatment": null
+      },
+      "identifier": "brad-v3:claim:bradshaw-40",
+      "knowledge_kind": "source_assertion",
+      "object": {
+        "identifier": "10.1021/acs.jmedchem.5c03071",
+        "kind": "study",
+        "label": "10.1021/acs.jmedchem.5c03071",
+        "namespace": "source"
+      },
+      "predicate": "SIINFEKL antigen presentation inhibited in HeLa; pIC50 7.3",
+      "provenance": {
+        "checksum": "63e41f98ff9c84e2c6f9b09d81631ce72ae74b98d22bdbb4611e9d0b23233e01",
+        "retrieved_at": "2026-10-05 00:00:00+00:00",
+        "source_identifier": "10.1021/acs.jmedchem.5c03071",
+        "source_kind": "publication",
+        "source_uri": "https://doi.org/10.1021/acs.jmedchem.5c03071",
+        "transformations": []
+      },
+      "subject": {
+        "identifier": "Q9NZ08",
+        "kind": "protein",
+        "label": "ERAP1",
+        "namespace": "UniProt"
+      }
+    },
+    "limitations": [
+      "Source-context curation pending expert review; no occupancy, matched chemical-genetic dependency or axSpA efficacy inferred",
+      "pending independent scientific review"
+    ],
+    "polarity": "supports",
+    "retrieval_timestamp_precision": "date-only footer; midnight is serialization convention, not recorded access time",
+    "review_state": "pending_review",
+    "scope": "compound/context specific endpoint; not direct cellular occupancy",
+    "source_artifact": "/Users/joaopais7/Downloads/jm5c03071.pdf",
+    "source_class": "peer_reviewed_primary_research",
+    "source_locator": "main p16 Table8,p17; SI S60; CSV compound:40",
+    "supporting_evidence": [
+      {
+        "locator": "main p16 Table8,p17; SI S60; CSV compound:40",
+        "sha256": "63e41f98ff9c84e2c6f9b09d81631ce72ae74b98d22bdbb4611e9d0b23233e01"
+      }
+    ]
+  },
+  {
+    "contradicting_evidence": [],
+    "decision_input_admission": "Exploratory source-scoped readout; not auto-approved",
+    "domain_claim": {
+      "confidence": null,
+      "context": {
+        "allotype": null,
+        "assay": "antigen presentation",
+        "cell_type": "HeLa",
+        "comparison": null,
+        "endpoint": "HeLa antigen presentation inhibition pIC50 7.25; normalization KK",
+        "experimental_system": null,
+        "genotype": null,
+        "hla_status": null,
+        "population": null,
+        "species": null,
+        "tissue": null,
+        "treatment": null
+      },
+      "identifier": "brad-v3:claim:tinworth-21-KK",
+      "knowledge_kind": "source_assertion",
+      "object": {
+        "identifier": "10.1021/acs.jmedchem.6c00029",
+        "kind": "study",
+        "label": "10.1021/acs.jmedchem.6c00029",
+        "namespace": "source"
+      },
+      "predicate": "HeLa antigen presentation inhibition pIC50 7.25; normalization KK",
+      "provenance": {
+        "checksum": "2ff84c0d1bc55610a0bbba09e1639f6520fadb0b2e0ffbc6b0a09f724576e1e2",
+        "retrieved_at": "2026-10-05 19:33:45.889883+00:00",
+        "source_identifier": "10.1021/acs.jmedchem.6c00029",
+        "source_kind": "publication",
+        "source_uri": "https://www.biorxiv.org/content/10.1101/2025.11.17.686761v1.full.pdf",
+        "transformations": []
+      },
+      "subject": {
+        "identifier": "Q9NZ08",
+        "kind": "protein",
+        "label": "ERAP1",
+        "namespace": "UniProt"
+      }
+    },
+    "limitations": [
+      "Source-context curation pending expert review; no occupancy, matched chemical-genetic dependency or axSpA efficacy inferred",
+      "pending independent scientific review"
+    ],
+    "polarity": "supports",
+    "review_state": "pending_review",
+    "scope": "compound/context specific endpoint; not direct cellular occupancy",
+    "source_artifact": "targeted/tin-preprint.pdf",
+    "source_class": "preprint_methods_with_final_SI_concordance",
+    "source_locator": "final SI S5; preprint p15 Methods; assay-methods-v2",
+    "source_version_chain": [
+      "10.1101/2025.11.17.686761:v1",
+      "10.1021/acs.jmedchem.6c00029:SI; same publication programme not replication"
+    ],
+    "supporting_evidence": [
+      {
+        "locator": "final SI S5; preprint p15 Methods; assay-methods-v2",
+        "sha256": "2ff84c0d1bc55610a0bbba09e1639f6520fadb0b2e0ffbc6b0a09f724576e1e2"
+      }
+    ]
+  },
+  {
+    "contradicting_evidence": [],
+    "decision_input_admission": "Exploratory source-scoped readout; not auto-approved",
+    "domain_claim": {
+      "confidence": null,
+      "context": {
+        "allotype": null,
+        "assay": "antigen presentation",
+        "cell_type": "HeLa",
+        "comparison": null,
+        "endpoint": "HeLa antigen presentation inhibition pIC50 7.05; normalization compound6",
+        "experimental_system": null,
+        "genotype": null,
+        "hla_status": null,
+        "population": null,
+        "species": null,
+        "tissue": null,
+        "treatment": null
+      },
+      "identifier": "brad-v3:claim:tinworth-21-compound6",
+      "knowledge_kind": "source_assertion",
+      "object": {
+        "identifier": "10.1021/acs.jmedchem.6c00029",
+        "kind": "study",
+        "label": "10.1021/acs.jmedchem.6c00029",
+        "namespace": "source"
+      },
+      "predicate": "HeLa antigen presentation inhibition pIC50 7.05; normalization compound6",
+      "provenance": {
+        "checksum": "2ff84c0d1bc55610a0bbba09e1639f6520fadb0b2e0ffbc6b0a09f724576e1e2",
+        "retrieved_at": "2026-10-05 19:33:45.889883+00:00",
+        "source_identifier": "10.1021/acs.jmedchem.6c00029",
+        "source_kind": "publication",
+        "source_uri": "https://www.biorxiv.org/content/10.1101/2025.11.17.686761v1.full.pdf",
+        "transformations": []
+      },
+      "subject": {
+        "identifier": "Q9NZ08",
+        "kind": "protein",
+        "label": "ERAP1",
+        "namespace": "UniProt"
+      }
+    },
+    "limitations": [
+      "Source-context curation pending expert review; no occupancy, matched chemical-genetic dependency or axSpA efficacy inferred",
+      "pending independent scientific review"
+    ],
+    "polarity": "supports",
+    "review_state": "pending_review",
+    "scope": "compound/context specific endpoint; not direct cellular occupancy",
+    "source_artifact": "targeted/tin-preprint.pdf",
+    "source_class": "preprint_methods_with_final_SI_concordance",
+    "source_locator": "final SI S5; preprint p15 Methods; assay-methods-v2",
+    "source_version_chain": [
+      "10.1101/2025.11.17.686761:v1",
+      "10.1021/acs.jmedchem.6c00029:SI; same publication programme not replication"
+    ],
+    "supporting_evidence": [
+      {
+        "locator": "final SI S5; preprint p15 Methods; assay-methods-v2",
+        "sha256": "2ff84c0d1bc55610a0bbba09e1639f6520fadb0b2e0ffbc6b0a09f724576e1e2"
+      }
+    ]
+  },
+  {
+    "contradicting_evidence": [],
+    "decision_input_admission": "Exploratory source-scoped readout; not auto-approved",
+    "domain_claim": {
+      "confidence": null,
+      "context": {
+        "allotype": null,
+        "assay": "source-specific mouse model",
+        "cell_type": "CT26",
+        "comparison": null,
+        "endpoint": "Compound21 modifies CT26 MHC-I peptide repertoire; three biological replicates, LFQ; not compound-in-KO rescue",
+        "experimental_system": null,
+        "genotype": null,
+        "hla_status": null,
+        "population": null,
+        "species": null,
+        "tissue": null,
+        "treatment": null
+      },
+      "identifier": "brad-v3:claim:tinworth-CT26",
+      "knowledge_kind": "source_assertion",
+      "object": {
+        "identifier": "10.1021/acs.jmedchem.6c00029",
+        "kind": "study",
+        "label": "10.1021/acs.jmedchem.6c00029",
+        "namespace": "source"
+      },
+      "predicate": "Compound21 modifies CT26 MHC-I peptide repertoire; three biological replicates, LFQ; not compound-in-KO rescue",
+      "provenance": {
+        "checksum": "2ff84c0d1bc55610a0bbba09e1639f6520fadb0b2e0ffbc6b0a09f724576e1e2",
+        "retrieved_at": "2026-10-05 19:33:45.889883+00:00",
+        "source_identifier": "10.1021/acs.jmedchem.6c00029",
+        "source_kind": "publication",
+        "source_uri": "https://www.biorxiv.org/content/10.1101/2025.11.17.686761v1.full.pdf",
+        "transformations": []
+      },
+      "subject": {
+        "identifier": "Q9NZ08",
+        "kind": "protein",
+        "label": "ERAP1",
+        "namespace": "UniProt"
+      }
+    },
+    "limitations": [
+      "Source-context curation pending expert review; no occupancy, matched chemical-genetic dependency or axSpA efficacy inferred",
+      "pending independent scientific review"
+    ],
+    "polarity": "supports",
+    "review_state": "pending_review",
+    "scope": "compound/context specific endpoint; not direct cellular occupancy",
+    "source_artifact": "targeted/tin-preprint.pdf",
+    "source_class": "preprint_methods_with_final_SI_concordance",
+    "source_locator": "preprint p15,p16; final SI; methods-v2 CT26 row",
+    "source_version_chain": [
+      "10.1101/2025.11.17.686761:v1",
+      "10.1021/acs.jmedchem.6c00029:SI; same publication programme not replication"
+    ],
+    "supporting_evidence": [
+      {
+        "locator": "preprint p15,p16; final SI; methods-v2 CT26 row",
+        "sha256": "2ff84c0d1bc55610a0bbba09e1639f6520fadb0b2e0ffbc6b0a09f724576e1e2"
+      }
+    ]
+  },
+  {
+    "contradicting_evidence": [],
+    "decision_input_admission": "Exploratory source-scoped readout; not auto-approved",
+    "domain_claim": {
+      "confidence": null,
+      "context": {
+        "allotype": null,
+        "assay": "source-specific mouse model",
+        "cell_type": null,
+        "comparison": null,
+        "endpoint": "Source reports mouse CIA pathology/immune PD; not axSpA clinical efficacy",
+        "experimental_system": null,
+        "genotype": null,
+        "hla_status": null,
+        "population": null,
+        "species": null,
+        "tissue": null,
+        "treatment": null
+      },
+      "identifier": "brad-v3:claim:tinworth-CIA",
+      "knowledge_kind": "source_assertion",
+      "object": {
+        "identifier": "10.1021/acs.jmedchem.6c00029",
+        "kind": "study",
+        "label": "10.1021/acs.jmedchem.6c00029",
+        "namespace": "source"
+      },
+      "predicate": "Source reports mouse CIA pathology/immune PD; not axSpA clinical efficacy",
+      "provenance": {
+        "checksum": "2ff84c0d1bc55610a0bbba09e1639f6520fadb0b2e0ffbc6b0a09f724576e1e2",
+        "retrieved_at": "2026-10-05 19:33:45.889883+00:00",
+        "source_identifier": "10.1021/acs.jmedchem.6c00029",
+        "source_kind": "publication",
+        "source_uri": "https://www.biorxiv.org/content/10.1101/2025.11.17.686761v1.full.pdf",
+        "transformations": []
+      },
+      "subject": {
+        "identifier": "Q9NZ08",
+        "kind": "protein",
+        "label": "ERAP1",
+        "namespace": "UniProt"
+      }
+    },
+    "limitations": [
+      "Source-context curation pending expert review; no occupancy, matched chemical-genetic dependency or axSpA efficacy inferred",
+      "pending independent scientific review"
+    ],
+    "polarity": "supports",
+    "review_state": "pending_review",
+    "scope": "compound/context specific endpoint; not direct cellular occupancy",
+    "source_artifact": "targeted/tin-preprint.pdf",
+    "source_class": "preprint_methods_with_final_SI_concordance",
+    "source_locator": "final SI; preprint pp12-14,17",
+    "source_version_chain": [
+      "10.1101/2025.11.17.686761:v1",
+      "10.1021/acs.jmedchem.6c00029:SI; same publication programme not replication"
+    ],
+    "supporting_evidence": [
+      {
+        "locator": "final SI; preprint pp12-14,17",
+        "sha256": "2ff84c0d1bc55610a0bbba09e1639f6520fadb0b2e0ffbc6b0a09f724576e1e2"
+      }
+    ]
+  }
+]

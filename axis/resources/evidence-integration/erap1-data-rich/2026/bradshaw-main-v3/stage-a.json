@@ -1,0 +1,7 @@
+{
+  "blocker_resolved": true,
+  "failures": [],
+  "policy": "Explicit protocol chain; adjudicated version fallback; no guesses",
+  "stage": "A1",
+  "stage_b_permitted": true
+}

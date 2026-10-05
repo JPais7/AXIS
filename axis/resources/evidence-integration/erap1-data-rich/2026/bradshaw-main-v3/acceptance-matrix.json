@@ -1,0 +1,17 @@
+{
+  "Allotype/substrate context": "PASS",
+  "BRADSHAW assay completeness": "PASS WITH CONDITIONS",
+  "BRADSHAW assay identity": "PASS",
+  "BRADSHAW internal comparability": "PASS",
+  "Cellular endpoint integrity": "PASS",
+  "Chemical Learning eligibility": "PASS WITH CONDITIONS",
+  "Chemical identity": "PASS WITH CONDITIONS",
+  "Cross-programme comparability": "PASS WITH CONDITIONS",
+  "Decision causality": "PASS",
+  "Epistemic integrity": "PASS",
+  "External-review readiness": "PASS WITH CONDITIONS",
+  "Numerical integrity": "PASS WITH CONDITIONS",
+  "Offline reproducibility": "PASS",
+  "Provenance integrity": "PASS",
+  "Source authenticity": "PASS"
+}

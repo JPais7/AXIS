@@ -1,0 +1,38 @@
+{
+  "old_blocker": "RESOLVED: main explicit potency-method chain",
+  "remaining": [
+    {
+      "affected_inference": "cross-programme quantitative interchangeability; exact replication of experiments",
+      "blocks_current_decision": false,
+      "fields": [
+        "temperature",
+        "preincubation",
+        "concentration range",
+        "tested salt/form"
+      ],
+      "reason": "not required to establish source internal Hap2/YTAFTIPSI activity; no ratio/pooled potency admitted"
+    },
+    {
+      "affected_inference": "human allotype/HLA-B27 translation; matching control chemistry",
+      "blocks_current_decision": false,
+      "fields": [
+        "HeLa ERAP1 allotype",
+        "ERAP2",
+        "endogenous HLA",
+        "control inhibitor identity"
+      ],
+      "reason": "current question remains compound-specific engagement; no HLA-B27 efficacy or control-identity transfer asserted"
+    },
+    {
+      "affected_inference": "exact predictive fitting and replicate distribution",
+      "blocks_current_decision": false,
+      "fields": [
+        "main/SI discrepancy compound28",
+        "additional censored occasions21/28/33/44",
+        "missingN",
+        "singleton22/28"
+      ],
+      "reason": "excluded from fitting subset; qualitative tool compound40 evidence remains supported"
+    }
+  ]
+}
