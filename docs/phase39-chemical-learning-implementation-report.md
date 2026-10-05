@@ -49,8 +49,8 @@ Butina not used here; RDKit 2025.09.3, NumPy 2.5.1, SciPy 1.18.0, Python 3.14.6
   only observed records are 15 algorithmic scaffold-group records. No SAR hypothesis is
   proposed. Contradictions: none.
 * Eligibility: **not_eligible for all 9** (6 `SAR_ONLY`, 3 `INSUFFICIENT_DATA`); e.g.
-  ERAP1 L-AMC IC50: 2 exact compounds (policy minimum 20), 1 Murcko scaffold (minimum 5),
-  exact range 0.04 log10 (minimum 1). **MODEL NOT BUILT.** The same generic rules refuse
+  ERAP1 L-AMC IC50: 2 exact compounds (policy minimum 20), 2 Murcko scaffolds (minimum 5),
+  exact range 0.125 log10 (minimum 1). **MODEL NOT BUILT.** The same generic rules refuse
   the synthetic 3-compound context; no ERAP1 special case exists (tested).
 * What would improve learnability, tied to these limits: more compounds measured in one
   assay context (for ERAP1, the most populated is L-AMC IC50), spanning several scaffolds
