@@ -1,0 +1,58 @@
+[
+  {
+    "id": "PMC11647717",
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11647717/fullTextXML",
+    "status": "retrieved_for_review",
+    "sha256": "57e91b35dc285b3ab8240e6ea51b2e0984eace7f9119fafb352a27636228498d",
+    "local_path": "/tmp/axis-erap1-refresh-fulltext/PMC11647717.xml"
+  },
+  {
+    "id": "PMC9892207",
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9892207/fullTextXML",
+    "status": "unavailable",
+    "error": "HTTP Error 500: "
+  },
+  {
+    "id": "PMC8024916",
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8024916/fullTextXML",
+    "status": "retrieved_for_review",
+    "sha256": "6802e6de8041557bba69913adbb6f92300ba5c417afa769e05c0f8e7b4bb0432",
+    "local_path": "/tmp/axis-erap1-refresh-fulltext/PMC8024916.xml"
+  },
+  {
+    "source": "Corilagin full-text attempt",
+    "query": "PMID:40680611 full-text methods access",
+    "url": "https://www.sciencedirect.com/science/article/pii/S1567576925011701",
+    "method": "GET",
+    "executed_at": "2026-10-05T11:28:34.329965+00:00",
+    "errors": [
+      "HTTP Error 403: Forbidden"
+    ],
+    "pagination": "not_established",
+    "status": "unavailable"
+  },
+  {
+    "source": "Corilagin full-text attempt",
+    "query": "PMID:40680611 full-text methods access",
+    "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5093704",
+    "method": "GET",
+    "executed_at": "2026-10-05T11:28:34.458507+00:00",
+    "errors": [
+      "HTTP Error 403: Forbidden"
+    ],
+    "pagination": "not_established",
+    "status": "unavailable"
+  },
+  {
+    "source": "Corilagin full-text attempt",
+    "query": "PMID:40680611 full-text methods access",
+    "url": "https://api.elsevier.com/content/article/pii/S1567576925011701?httpAccept=text/xml",
+    "method": "GET",
+    "executed_at": "2026-10-05T11:28:34.542961+00:00",
+    "errors": [
+      "HTTP Error 429: Too Many Requests"
+    ],
+    "pagination": "not_established",
+    "status": "unavailable"
+  }
+]

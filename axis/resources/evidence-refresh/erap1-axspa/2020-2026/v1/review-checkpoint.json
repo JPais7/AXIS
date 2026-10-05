@@ -1,0 +1,67 @@
+{
+  "status": "incomplete_pending_full_text_and_screening",
+  "review_status": "pending_review",
+  "decision_state_v2_created": false,
+  "commercial_brief_v1_1_created": false,
+  "screening_counts": {
+    "unique_records": 1531,
+    "proposed_exclusion_not_final": 1183,
+    "awaiting_full_text": 265,
+    "awaiting_metadata_or_full_text": 82,
+    "already_indexed": 1
+  },
+  "material_sources": [
+    {
+      "doi": "10.1021/acsmedchemlett.4c00401",
+      "pmid": "39691536",
+      "access": "full_main_text_reviewed_supporting_information_pending",
+      "locator": "PMC11647717; Results and Discussion; Figures 1-3 and Tables 1-4",
+      "observations": [
+        "Regulatory-site inhibitor structures reported for compounds 1, 2, 7 and 13: 9GJN, 9GK6, 9GJS and 9GKE.",
+        "Compound 1 inhibits recombinant enzyme but lacks measurable cellular inhibition in the reported assay.",
+        "Compound 13 reported enzyme pIC50 8.6 and cellular antigen-presentation pIC50 7.7.",
+        "Antigen-presentation readout is functional cellular activity, not a direct intracellular occupancy measurement.",
+        "Compound 7 ERAP2 and IRAP measurements use different substrates and n=1; selectivity ratios require contextual assessment."
+      ],
+      "provisional_impact": "Changes available chemical matter and structure landscape; does not by itself establish axSpA efficacy or direct cellular engagement."
+    },
+    {
+      "doi": "10.1016/j.jbc.2021.100443",
+      "pmid": "33617882",
+      "access": "main_text_partially_reviewed",
+      "locator": "PMC8024916; Results Figures 1-4; Methods",
+      "observations": [
+        "Ten common allotypes characterized using recombinant enzyme; population analysis used 2504 individuals.",
+        "Enzyme activity rankings depend on substrate; up to 60-fold efficiency difference reported for YTAFTIPSI.",
+        "GSK849 activates small-substrate hydrolysis but inhibits the longer YTAFTIPSI substrate; inhibitor response also varies by allotype.",
+        "Different enzyme concentrations used for allotypes in inhibition assays; these conditions must accompany measurements."
+      ],
+      "provisional_impact": "Supports genotype- and substrate-matched assay design; generic ERAP1 activity is insufficient as a context-free readout."
+    },
+    {
+      "doi": "10.1016/j.intimp.2025.115180",
+      "pmid": "40680611",
+      "access": "abstract_and_publisher_introduction_only",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1567576925011701",
+      "reported_not_independently_verified": "Corilagin direct interaction with ERAP1 at cellular and protein levels and reversal of HLA-B27 model phenotypes.",
+      "required": "Full methods, figures, supplements, engagement assay modality, concentration and exposure matching, viability controls, genetic controls and selectivity conditions.",
+      "provisional_impact": "Potentially material for the current engagement uncertainty; neither resolved nor dismissed without methods."
+    },
+    {
+      "doi": "10.1021/acs.jafc.4c00957",
+      "pmid": "39024058",
+      "access": "abstract_and_publisher_metadata_only",
+      "url": "https://pubs.acs.org/doi/10.1021/acs.jafc.4c00957",
+      "reported_not_independently_verified": "Carnosic acid direct ERAP1 binding and reversal of HLA-B27-associated cellular phenotype.",
+      "required": "Full methods, figures and supplements; binding versus cellular engagement distinction, active exposures, genetic controls and assay comparability.",
+      "provisional_impact": "Potentially material chemistry and cellular evidence; no conclusion about clinical efficacy."
+    }
+  ],
+  "source_coverage_limits": [
+    "WHO ICTRP returned an HTML page, not verified registry search results.",
+    "OpenAlex pagination is not complete.",
+    "Semantic Scholar returned HTTP 429.",
+    "Preprint responses have not yet been integrated and linked to journal versions.",
+    "Citation expansion, full study-quality assessment, chemical extraction, DecisionState integration and regression validation remain incomplete."
+  ]
+}
