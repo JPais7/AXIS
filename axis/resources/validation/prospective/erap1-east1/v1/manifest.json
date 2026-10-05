@@ -1,0 +1,15 @@
+{
+  "files": {
+    "case.json": "b2c21d6c1099e0d0b145da8bd8389459c88007878ea643bc12f3fdd6daf42a05",
+    "evidence-snapshot.json": "4b5605dd962efe42e0c0c9f3300a536c7ab12682661c4baf3ea4cfedc17facf6",
+    "outcome-scenarios.json": "f43e118192b3a3c3267a5cfd16f221a74faa9397909d553fbcd4f20cdd87f03f",
+    "prospective-discriminators.json": "077674f468307345f2ecb2fe128c76a7052a906099f10044250890b952f295f7",
+    "source-index.json": "07703ee49afec8ab845b5dd96150247daeb62881e10996f9325b4b5d6a41f925",
+    "t0-state.json": "091b159fc68582ce5bc69caa1924125c997f62d03862d855deccac3dc2c32f83"
+  },
+  "frozen_at": "2026-10-05T17:46:36.536094+00:00",
+  "package_id": "AXIS-PROSPECTIVE-ERAP1-EAST1-001",
+  "package_version": "1.0.0",
+  "review_status": "pending_review",
+  "schema": "axis-prospective-freeze-1"
+}

@@ -1,0 +1,119 @@
+{
+  "items": [
+    {
+      "consequence": "strengthen_current_strategy",
+      "hypothesis_ids": [
+        "H1"
+      ],
+      "id": "A",
+      "interpretation": "Strongest support for the therapeutic chain; still assess subgroup and safety.",
+      "knowledge_kind": "ai_suggestion",
+      "observation": "Adequate exposure, sustained engagement, expected PD and credible clinical improvement",
+      "review_status": "pending_review",
+      "uncertainty_ids": [
+        "U1",
+        "U2",
+        "U3",
+        "U4"
+      ]
+    },
+    {
+      "consequence": "deprioritize_current_strategy",
+      "hypothesis_ids": [
+        "H2",
+        "H4"
+      ],
+      "id": "B",
+      "interpretation": "Weakens PD-to-disease translation, not target engagement.",
+      "knowledge_kind": "ai_suggestion",
+      "observation": "Engagement and PD without meaningful clinical improvement under interpretable conditions",
+      "review_status": "pending_review",
+      "uncertainty_ids": [
+        "U3",
+        "U4"
+      ]
+    },
+    {
+      "consequence": "change_mechanistic_model",
+      "hypothesis_ids": [
+        "H4"
+      ],
+      "id": "C",
+      "interpretation": "Weakens proposed PD bridge if assays, duration and context are adequate.",
+      "knowledge_kind": "ai_suggestion",
+      "observation": "Engagement without expected disease-relevant PD",
+      "review_status": "pending_review",
+      "uncertainty_ids": [
+        "U2",
+        "U3"
+      ]
+    },
+    {
+      "consequence": "weaken_current_strategy",
+      "hypothesis_ids": [
+        "H1",
+        "H5"
+      ],
+      "id": "D",
+      "interpretation": "Questions compound, compartment exposure, assay or achievable coverage; does not universally disprove ERAP1 biology.",
+      "knowledge_kind": "ai_suggestion",
+      "observation": "Adequate systemic exposure but insufficient engagement",
+      "review_status": "pending_review",
+      "uncertainty_ids": [
+        "U1"
+      ]
+    },
+    {
+      "consequence": "investigate_context_dependence",
+      "hypothesis_ids": [
+        "H3"
+      ],
+      "id": "E",
+      "interpretation": "Refine context-dependent hypothesis; prespecified versus exploratory interaction stays explicit.",
+      "knowledge_kind": "ai_suggestion",
+      "observation": "Engagement, PD and clinical signal confined to coherent biological subgroup",
+      "review_status": "pending_review",
+      "uncertainty_ids": [
+        "U5"
+      ]
+    },
+    {
+      "consequence": "stop_for_now",
+      "hypothesis_ids": [
+        "H5"
+      ],
+      "id": "F",
+      "interpretation": "Weakens current therapeutic strategy/modality; not automatic falsification of target biology.",
+      "knowledge_kind": "ai_suggestion",
+      "observation": "Required sustained pharmacology limited by safety/tolerability",
+      "review_status": "pending_review",
+      "uncertainty_ids": [
+        "U6",
+        "U1"
+      ]
+    },
+    {
+      "consequence": "require_replication",
+      "hypothesis_ids": [
+        "H1",
+        "H2",
+        "H3",
+        "H4",
+        "H5"
+      ],
+      "id": "G",
+      "interpretation": "No forced directional change; retain/refine uncertainty.",
+      "knowledge_kind": "ai_suggestion",
+      "observation": "Technically or biologically non-interpretable results",
+      "review_status": "pending_review",
+      "uncertainty_ids": [
+        "U1",
+        "U2",
+        "U3",
+        "U4",
+        "U5",
+        "U6"
+      ]
+    }
+  ]
+}

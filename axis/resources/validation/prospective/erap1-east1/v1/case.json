@@ -1,0 +1,263 @@
+{
+  "adapter_fingerprint": "4892631a21284583de50524df6096d04e03ee9888591bed20ff9caadbfc38ad2",
+  "adapter_version": "open-future-adapter-1",
+  "axis_version": "0.2.1.dev0",
+  "baseline": {
+    "axis_version": "0.2.1.dev0",
+    "branch": "validation/prospective-east1-erap1-axspa",
+    "clean_after_cache_archive": true,
+    "clean_confirmed_before_edits_at": "2026-10-05T17:32:04+00:00",
+    "dependencies": {
+      "build": "1.6.1",
+      "duckdb": "1.5.5",
+      "gemmi": "0.7.5",
+      "httpx": "0.28.1",
+      "mypy": "2.4.0",
+      "numpy": "2.5.1",
+      "pytest": "9.1.1",
+      "rdkit": "2025.9.3",
+      "ruff": "0.16.10",
+      "scipy": "1.18.0"
+    },
+    "excluded_unmerged_addendum": "codex/erap1-recent-evidence-addendum-2020-2026 @ 8702046a995ce7f09b9c15b3bd9cd004e4d8cd21; no resources imported",
+    "main_sha": "d491ebe47ee0c40dfaa3823a44a9decd1afae29d",
+    "python": "3.12.13 (main, Mar  3 2026, 12:39:30) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "recent_evidence_addendum_on_main": false,
+    "resource_manifests": {
+      "axis/resources/benchmarks/retrospective/erap1-axspa/v1/manifest.json": {
+        "sha256": "0fb3c3dedd1c507a820f45bafe95ae32753674323963745ff616819d1180291a",
+        "version": null
+      },
+      "axis/resources/cellular/erap1-axspa/v1/manifest.json": {
+        "sha256": "1358a372dbab5430bf521ec09f22750e573cc22c862660107e191879e225649c",
+        "version": "1.0.0"
+      },
+      "axis/resources/computational-discovery/erap1/v1/manifest.json": {
+        "sha256": "46b7b676fbde8e405ca483564b4a3e670cb4894956465f9c800e1a2ced144b1b",
+        "version": null
+      },
+      "axis/resources/decision/erap1-axspa/v1/manifest.json": {
+        "sha256": "7704249a99c0b449f721a67b0647f2448a0aed76a225ef320fb61fded5057618",
+        "version": "1.0.0"
+      },
+      "axis/resources/discovery/erap1-axspa/v1/manifest.json": {
+        "sha256": "eb2993f83a92d19f751e5637944dbb8321c4245192538811764f452568c4cc60",
+        "version": "1.0.0"
+      },
+      "axis/resources/experimental-results/scenario-signatures/erap1-axspa/v1/manifest.json": {
+        "sha256": "ff5ca9d3c0984fced51a8f683ea33cdfa7ae602942258f1f560fe8d4384515ac",
+        "version": "1.0.0"
+      },
+      "axis/resources/experimental-results/synthetic/erap1-decision-loop/v1/manifest.json": {
+        "sha256": "63e8fe71283dfc5374abae5ccb58ba12b268b40c5514c391b61a39cea8172dbf",
+        "version": "1.0.0"
+      },
+      "axis/resources/pharmacology/erap1/v1/manifest.json": {
+        "sha256": "4430abd5b2f7bf60b6fd55c450ad3546962284b82c58d0a85c4acb11754cdcdb",
+        "version": "erap1-pharmacology-v1"
+      },
+      "axis/resources/structures/erap1/3qnf/v1/manifest.json": {
+        "sha256": "1a3162c1b7d2fe8fffb55fc881d4cf914d6edf74595a18b18057f412f6e9421f",
+        "version": "1.0.0"
+      },
+      "axis/resources/targets/erap1/uniprot/v1/manifest.json": {
+        "sha256": "6c0c850e37e1f148618c5b5485b908264e03b3e9a899832bb85901266e7f2c6b",
+        "version": "1.0.0"
+      }
+    }
+  },
+  "canonical_decision": {
+    "critical_uncertainty_id": "uncertainty:target_engagement",
+    "evidence_digest": "cebbae3880aeec9084784f9f8df4a89abfe71a6058e3c924ce78651beaa44541",
+    "id": "decision-state:1:cebbae3880aeec90",
+    "path": "reports/commercial/erap1-axspa/v1/state-snapshot.json",
+    "recommended_experiment_id": "decision:exp:chemical-genetic-engagement",
+    "sha256": "83b2bcff0b58daccfeda58126d918d593e002e1499382f1ddfa450fe2737ee68"
+  },
+  "case_id": "AXIS-PROSPECTIVE-ERAP1-EAST1-001",
+  "clinical_programme": "EAST-1 / GRWD0715-AS-01 / NCT07047703",
+  "commercialization_blocker": false,
+  "context_variables": [
+    "ERAP1 allotype",
+    "HLA-B27 subtype",
+    "ERAP2",
+    "peptide substrate",
+    "cell/tissue",
+    "inhibitor mechanism",
+    "degree of inhibition",
+    "duration of inhibition",
+    "disease stage"
+  ],
+  "critical_basis": "First unadjudicated programme-level gate: sustained quantitative human engagement. PD, disease bridge, subgroup and window remain co-material, not replaced by historical compound question.",
+  "critical_uncertainty_id": "U1",
+  "current_position": "Biological rationale and programme-specific preliminary molecular/human signals warrant discriminating tests, not a trial-success prediction. Human disease-relevant PD, therapeutic benefit and axSpA efficacy are not established; responsive context and sustained window remain unresolved.",
+  "cutoff": "2026-10-05",
+  "dependency_modifiers": {
+    "U5": [
+      "U1",
+      "U2",
+      "U3",
+      "U4"
+    ],
+    "U6": [
+      "U1",
+      "U2",
+      "U3",
+      "U4"
+    ]
+  },
+  "disease": "axial spondyloarthritis",
+  "falsification_scope": "Adequate sustained engagement repeatedly lacking PD or controlled benefit weakens this therapeutic chain in tested contexts; safety-limited coverage weakens modality/compound. No universal target rejection from inadequate exposure, one subgroup or invalid assays.",
+  "frozen_at": "2026-10-05T17:46:36.536094+00:00",
+  "future_patient_results_identified": false,
+  "future_reveal_layers": [
+    {
+      "date": null,
+      "label": "T1",
+      "layer": "new PK/engagement"
+    },
+    {
+      "date": null,
+      "label": "T2",
+      "layer": "PD/translational biomarkers"
+    },
+    {
+      "date": null,
+      "label": "T3",
+      "layer": "preliminary patient clinical data"
+    },
+    {
+      "date": null,
+      "label": "T4",
+      "layer": "randomized/controlled efficacy"
+    }
+  ],
+  "hypotheses": [
+    {
+      "id": "H1",
+      "knowledge_kind": "ai_suggestion",
+      "label": "On-target therapeutic chain",
+      "review_status": "pending_review",
+      "statement": "Engagement changes pathogenic antigen processing and meaningfully benefits defined axSpA contexts.",
+      "status": "unresolved"
+    },
+    {
+      "id": "H2",
+      "knowledge_kind": "ai_suggestion",
+      "label": "Engagement and PD without clinical benefit",
+      "review_status": "pending_review",
+      "statement": "Molecular effects occur without material disease improvement.",
+      "status": "unresolved"
+    },
+    {
+      "id": "H3",
+      "knowledge_kind": "ai_suggestion",
+      "label": "Context-restricted benefit",
+      "review_status": "pending_review",
+      "statement": "Effects are confined to specific biological subgroups.",
+      "status": "unresolved"
+    },
+    {
+      "id": "H4",
+      "knowledge_kind": "ai_suggestion",
+      "label": "Incomplete mechanistic bridge",
+      "review_status": "pending_review",
+      "statement": "Peptide/immune effects are real but insufficiently causal for disease activity.",
+      "status": "unresolved"
+    },
+    {
+      "id": "H5",
+      "knowledge_kind": "ai_suggestion",
+      "label": "Therapeutic-window limitation",
+      "review_status": "pending_review",
+      "statement": "Required intensity/duration cannot be safely sustained.",
+      "status": "unresolved"
+    }
+  ],
+  "hypothesis": "Pharmacological ERAP1 modulation may alter HLA-B27-associated peptide processing and downstream immune recognition in biologically defined axSpA contexts.",
+  "hypothesis_origin": "AI-drafted working formulation, not investigator-approved",
+  "intervention": "GRWD0715",
+  "knowledge_kind": "ai_suggestion",
+  "limit": "Bounded searched public sources only; private results and unknown undiscovered sources cannot be excluded. Scientific content pending independent review.",
+  "off_target_boundary": "Specificity and interference controls remain required for programme attribution; absence of disclosed selectivity methods is not proof of off-target activity.",
+  "question": "Which public evidence supports context-specific ERAP1 modulation, what remains uncertain, and which future EAST-1 observations change that position?",
+  "reveal_policy": "Actual public sequence governs, not these nominal labels. Store each helper output as a new checksummed artifact; original T0 is read-only. Causal case-state proposals require independent adjudication before any separately versioned canonical DecisionState update through the existing Experimental Results Loop.",
+  "review_status": "pending_review",
+  "rules_fingerprint": "184a1e2949a61e362545e897de43890014bcdcac7191f621c84fb2b739cecd33",
+  "rules_version": "axis-decision-3",
+  "short_horizon_next": "Separate future design-partner case: unresolved decision, genuinely unknown outcome, external experiment owner, pre-result-only AXIS input, resolution within months, import via existing Experimental Results Loop. Not implemented here.",
+  "status": "LONG-HORIZON PROSPECTIVE CASE / FROZEN BEFORE FUTURE PATIENT RESULTS",
+  "strengthening_conditions": [
+    "Validated sustained engagement at tolerable achievable exposure, controls excluding surrogate-only interpretation.",
+    "Engagement precedes reproducible expected peptide and immune changes in disease-relevant systems, with orthogonal controls.",
+    "Credible clinically meaningful controlled improvement coherent with prior engagement/PD; reproducible effects and timing.",
+    "Reproducible biologically coherent subgroup interaction with exposure/engagement balance and multiplicity control.",
+    "Meaningful sustained PD/engagement compatible with acceptable patient safety across relevant duration."
+  ],
+  "target": "ERAP1",
+  "uncertainties": [
+    {
+      "category": "target_engagement",
+      "depends_on": [],
+      "id": "U1",
+      "question": "Sufficient sustained human ERAP1 engagement at achievable exposure",
+      "review_status": "pending_review",
+      "status": "open"
+    },
+    {
+      "category": "assay_translation",
+      "depends_on": [
+        "U1"
+      ],
+      "id": "U2",
+      "question": "Predicted human antigen-processing/immunological PD",
+      "review_status": "pending_review",
+      "status": "open"
+    },
+    {
+      "category": "mechanistic_bridge",
+      "depends_on": [
+        "U2"
+      ],
+      "id": "U3",
+      "question": "PD changes alter disease-relevant immune biology",
+      "review_status": "pending_review",
+      "status": "open"
+    },
+    {
+      "category": "clinical_translation",
+      "depends_on": [
+        "U3"
+      ],
+      "id": "U4",
+      "question": "Meaningful axSpA benefit",
+      "review_status": "pending_review",
+      "status": "open"
+    },
+    {
+      "category": "genetic_context",
+      "depends_on": [],
+      "id": "U5",
+      "question": "ERAP1/HLA/ERAP2/substrate/tissue-dependent response",
+      "review_status": "pending_review",
+      "status": "open"
+    },
+    {
+      "category": "other",
+      "depends_on": [
+        "U1"
+      ],
+      "id": "U6",
+      "question": "Acceptable sustained therapeutic window",
+      "review_status": "pending_review",
+      "status": "open"
+    }
+  ],
+  "weakening_conditions": [
+    "Insufficient engagement despite adequate systemic exposure; question compound/distribution/coverage, not all ERAP1 biology.",
+    "Adequate sustained engagement repeatedly fails to produce prespecified PD, or PD lacks disease-linked immune effects.",
+    "Adequate power/duration and confirmed engagement/PD repeatedly yield no meaningful controlled benefit.",
+    "Replicated adequately measured contexts fail to support proposed responsive subgroup; not universal failure by one subgroup.",
+    "Required pharmacology cannot be maintained because of safety/tolerability; distinguish target vs compound/modality risk."
+  ]
+}

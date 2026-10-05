@@ -1,0 +1,400 @@
+{
+  "claims": [
+    {
+      "evidence_class": "trial_registry",
+      "id": "R1",
+      "intervention": "GRWD0715",
+      "knowledge_kind": "source_assertion",
+      "layer": "trial",
+      "limits": "Planned design and enrollment, not observations; global allocation/masking fields cannot replace part-specific descriptions; selection excludes some comorbid contexts.",
+      "review_status": "pending_review",
+      "source_id": "NCT07047703",
+      "statement": "EAST1 / GRWD0715-AS-01 is a recruiting Phase I/II programme: A healthy-volunteer SAD, B patient MAD (28 days), C open-label safety extension, D randomized placebo-controlled patient expansion (up to 12 weeks). HLA-B27-positive axSpA is required; estimated enrollment 140; registry has no results."
+    },
+    {
+      "evidence_class": "trial_registry",
+      "id": "R2",
+      "intervention": "GRWD0715",
+      "knowledge_kind": "source_assertion",
+      "layer": "engagement",
+      "limits": "A dose-selection proxy is not measured GRWD0715 engagement; GRWD5769 and GRWD0715 are distinct compounds and indications.",
+      "review_status": "pending_review",
+      "source_id": "NCT07047703",
+      "statement": "Part B biologically active dose can be selected using steady-state mean Cavg >=1166 ng/mL, preliminary clinical activity or supporting PD. Exposure threshold uses a predicted relative IC50 and oncology GRWD5769 PK-PD modelling."
+    },
+    {
+      "evidence_class": "trial_registry",
+      "id": "R3",
+      "intervention": "GRWD0715",
+      "knowledge_kind": "source_assertion",
+      "layer": "clinical",
+      "limits": "Registered endpoints do not establish PD, benefit or an acceptable window.",
+      "review_status": "pending_review",
+      "source_id": "NCT07047703",
+      "statement": "Clinical, MRI and PK outcomes are planned. Primary completion April 2028 and study completion September 2028 are estimates; no public reveal dates are promised."
+    },
+    {
+      "evidence_class": "conference_evidence",
+      "id": "F1",
+      "intervention": "GRWD0715",
+      "knowledge_kind": "source_assertion",
+      "layer": "biochemical",
+      "limits": "Abstract only: construct/allotype, substrate sequences, complete assay conditions, replicates, uncertainty and comparable selectivity controls unavailable. Potency is source-reported, not normalized assay evidence.",
+      "review_status": "pending_review",
+      "source_id": "FOCIS2025:W146",
+      "statement": "The abstract reports inhibition of ERAP1 processing of putative GLRB, HelQ and SEC14L2 autoantigen precursors by GRWD0715, with IC50 60\u2013400 pM."
+    },
+    {
+      "evidence_class": "conference_evidence",
+      "id": "F2",
+      "intervention": "GRWD0715",
+      "knowledge_kind": "source_assertion",
+      "layer": "hla",
+      "limits": "Cell identities, HLA subtype, allotype, ERAP2, concentration/time, free exposure and quantitative peptide-level methods are not supplied.",
+      "review_status": "pending_review",
+      "source_id": "FOCIS2025:W146",
+      "statement": "The abstract reports reduced 7\u20139-residue HLA-B*27 peptides in joint-relevant cell lines exposed to GRWD0715."
+    },
+    {
+      "evidence_class": "conference_evidence",
+      "id": "F3",
+      "intervention": "GRWD0715",
+      "knowledge_kind": "source_assertion",
+      "layer": "immune",
+      "limits": "TCR sequences, controls/rescue, donor counts, assay details and numerical functional results unavailable. Neither target occupancy nor disease causality is established.",
+      "review_status": "pending_review",
+      "source_id": "FOCIS2025:W146",
+      "statement": "The abstract reports suppression of axSpA-associated-TCR-positive CD8 activation dependent on HLA-B*27 and autopeptide; P2-anchor interpretation is in silico."
+    },
+    {
+      "evidence_class": "sponsor_reported",
+      "id": "S1",
+      "intervention": "GRWD0715",
+      "knowledge_kind": "source_assertion",
+      "layer": "human",
+      "limits": "No public quantitative engagement, assay methodology, tissue coverage, exposure\u2013engagement relationship, participant-level PK or complete safety dataset. Preliminary human target engagement \u2014 sponsor reported; independent methodological adjudication unavailable.",
+      "review_status": "pending_review",
+      "source_id": "GREYWOLF:2026-09-08",
+      "statement": "Sponsor reports dose-proportional PK and ERAP1 engagement in the completed healthy-volunteer SAD portion, with no observed safety/tolerability concerns."
+    },
+    {
+      "evidence_class": "sponsor_reported",
+      "id": "S2",
+      "intervention": "GRWD0715",
+      "knowledge_kind": "source_assertion",
+      "layer": "clinical",
+      "limits": "Patient dosing and future plans are not patient efficacy results. No clinical benefit demonstrated in this release.",
+      "review_status": "pending_review",
+      "source_id": "GREYWOLF:2026-09-08",
+      "statement": "Sponsor announces first patient dosing in MAD, which is ongoing; PK/PD, biomarkers and preliminary clinical data are expected to inform a later placebo-controlled portion."
+    },
+    {
+      "evidence_class": "sponsor_reported",
+      "id": "P1",
+      "intervention": "GRWD0715",
+      "knowledge_kind": "source_assertion",
+      "layer": "programme",
+      "limits": "Mutable undated sponsor material; duplicate programme context, not independent replication; marketing cure wording not adopted.",
+      "review_status": "pending_review",
+      "source_id": "GREYWOLF:GRWD0715",
+      "statement": "The programme page identifies GRWD0715 as the oral ERAP1 autoimmunity programme."
+    },
+    {
+      "evidence_class": "trial_registry",
+      "id": "EU1",
+      "intervention": "GRWD0715",
+      "knowledge_kind": "source_assertion",
+      "layer": "trial",
+      "limits": "Full structured EU protocol not accessed; EU dates/participant counts not pooled with global registry. No result claims extracted.",
+      "review_status": "pending_review",
+      "source_id": "CTIS:2025-521315-39-00",
+      "statement": "Official CTIS public metadata associates 2025-521315-39-00 with GRWD0715-AS-01."
+    },
+    {
+      "evidence_class": "peer_reviewed_primary",
+      "id": "AXIS-ERAP1-CURATED-C01",
+      "intervention": null,
+      "knowledge_kind": "source_assertion",
+      "layer": "human_genetics",
+      "limits": "Inherited main AI curation remains pending independent review; study-specific context does not establish clinical direction.",
+      "review_status": "pending_review",
+      "source_id": "PMID:21743469",
+      "statement": "ERAP1 polymorphisms were associated with ankylosing spondylitis risk in HLA-B27-positive individuals in this study."
+    },
+    {
+      "evidence_class": "peer_reviewed_primary",
+      "id": "AXIS-ERAP1-CURATED-C02",
+      "intervention": null,
+      "knowledge_kind": "source_assertion",
+      "layer": "human_genetics",
+      "limits": "Inherited main AI curation remains pending independent review; study-specific context does not establish clinical direction.",
+      "review_status": "pending_review",
+      "source_id": "PMID:25994336",
+      "statement": "ERAP1 rs30187 was also associated with ankylosing spondylitis in HLA-B*40:01 carriers without HLA-B*27."
+    },
+    {
+      "evidence_class": "peer_reviewed_primary",
+      "id": "AXIS-ERAP1-CURATED-C03",
+      "intervention": null,
+      "knowledge_kind": "source_assertion",
+      "layer": "biological_function",
+      "limits": "Inherited main AI curation remains pending independent review; study-specific context does not establish clinical direction.",
+      "review_status": "pending_review",
+      "source_id": "PMID:16286653",
+      "statement": "Purified ERAP1 trimmed a model 13-residue precursor to a 9-residue product and then trimming stopped in that assay."
+    },
+    {
+      "evidence_class": "peer_reviewed_primary",
+      "id": "AXIS-ERAP1-CURATED-C04",
+      "intervention": null,
+      "knowledge_kind": "source_assertion",
+      "layer": "biological_function",
+      "limits": "Inherited main AI curation remains pending independent review; study-specific context does not establish clinical direction.",
+      "review_status": "pending_review",
+      "source_id": "PMID:16286653",
+      "statement": "ERAP1 processing activity depended on the substrate C-terminal residue in purified-enzyme assays."
+    },
+    {
+      "evidence_class": "peer_reviewed_primary",
+      "id": "AXIS-ERAP1-CURATED-C05",
+      "intervention": null,
+      "knowledge_kind": "source_assertion",
+      "layer": "hla_mechanism",
+      "limits": "Inherited main AI curation remains pending independent review; study-specific context does not establish clinical direction.",
+      "review_status": "pending_review",
+      "source_id": "PMID:24504800",
+      "statement": "ERAP1 silencing decreased the proportion of 9-residue HLA-B27-bound peptides in HeLa.B27 and C1R.B27 cells."
+    },
+    {
+      "evidence_class": "peer_reviewed_primary",
+      "id": "AXIS-ERAP1-CURATED-C06",
+      "intervention": null,
+      "knowledge_kind": "source_assertion",
+      "layer": "hla_mechanism",
+      "limits": "Inherited main AI curation remains pending independent review; study-specific context does not establish clinical direction.",
+      "review_status": "pending_review",
+      "source_id": "PMID:24504800",
+      "statement": "ERAP1 silencing increased the proportion of longer 11\u201313-residue HLA-B27-bound peptides in the tested cell lines."
+    },
+    {
+      "evidence_class": "peer_reviewed_primary",
+      "id": "AXIS-ERAP1-CURATED-C07",
+      "intervention": null,
+      "knowledge_kind": "source_assertion",
+      "layer": "hla_mechanism",
+      "limits": "Inherited main AI curation remains pending independent review; study-specific context does not establish clinical direction.",
+      "review_status": "pending_review",
+      "source_id": "PMID:24504800",
+      "statement": "The K528R ERAP1 variant reduced KK10-specific CTL recognition relative to wild type after extended KK10 minigene expression."
+    },
+    {
+      "evidence_class": "peer_reviewed_primary",
+      "id": "AXIS-ERAP1-CURATED-C08",
+      "intervention": null,
+      "knowledge_kind": "source_assertion",
+      "layer": "perturbation_evidence",
+      "limits": "Inherited main AI curation remains pending independent review; study-specific context does not establish clinical direction.",
+      "review_status": "pending_review",
+      "source_id": "PMID:26130142",
+      "statement": "ERAP1 silencing reduced HLA-B27 free-heavy-chain surface expression in the tested antigen-presenting cell models."
+    },
+    {
+      "evidence_class": "peer_reviewed_primary",
+      "id": "AXIS-ERAP1-CURATED-C09",
+      "intervention": null,
+      "knowledge_kind": "source_assertion",
+      "layer": "disease_pharmacology",
+      "limits": "Inherited main AI curation remains pending independent review; study-specific context does not establish clinical direction.",
+      "review_status": "pending_review",
+      "source_id": "PMID:26130142",
+      "statement": "DG013A treatment reduced free-heavy-chain expression in HeLa.B27 and C1R.B27 cells."
+    },
+    {
+      "evidence_class": "peer_reviewed_primary",
+      "id": "AXIS-ERAP1-CURATED-C10",
+      "intervention": null,
+      "knowledge_kind": "source_assertion",
+      "layer": "disease_pharmacology",
+      "limits": "Inherited main AI curation remains pending independent review; study-specific context does not establish clinical direction.",
+      "review_status": "pending_review",
+      "source_id": "PMID:26130142",
+      "statement": "ERAP1 silencing or inhibition in antigen-presenting cells suppressed Th17 expansion in cocultures with AS CD4+ T cells."
+    },
+    {
+      "evidence_class": "peer_reviewed_primary",
+      "id": "AXIS-ERAP1-CURATED-C11",
+      "intervention": null,
+      "knowledge_kind": "source_assertion",
+      "layer": "disease_pharmacology",
+      "limits": "Inherited main AI curation remains pending independent review; study-specific context does not establish clinical direction.",
+      "review_status": "pending_review",
+      "source_id": "PMID:26130142",
+      "statement": "The study reports that DG013A also inhibits ERAP2 and LNPEP."
+    },
+    {
+      "evidence_class": "peer_reviewed_primary",
+      "id": "AXIS-ERAP1-CURATED-C12",
+      "intervention": null,
+      "knowledge_kind": "source_assertion",
+      "layer": "perturbation_evidence",
+      "limits": "Inherited main AI curation remains pending independent review; study-specific context does not establish clinical direction.",
+      "review_status": "pending_review",
+      "source_id": "PMID:27107845",
+      "statement": "ERAP1 shRNA knockdown increased surface HC10-reactive free heavy chains in the HLA-B27-transfected U937 system."
+    },
+    {
+      "evidence_class": "peer_reviewed_primary",
+      "id": "AXIS-ERAP1-CURATED-C13",
+      "intervention": null,
+      "knowledge_kind": "source_assertion",
+      "layer": "perturbation_evidence",
+      "limits": "Inherited main AI curation remains pending independent review; study-specific context does not establish clinical direction.",
+      "review_status": "pending_review",
+      "source_id": "PMID:27107845",
+      "statement": "ERAP1 knockdown increased disulfide-linked HLA-B27 dimers on the surface of U937.B27 cells."
+    }
+  ],
+  "historical_compound_boundary": "GRWD0715 cannot establish cellular engagement for Maben compounds, DG013A or oncology GRWD5769. The canonical historical engagement uncertainty remains unchanged.",
+  "positions": [
+    {
+      "claim_ids": [
+        "AXIS-ERAP1-CURATED-C01",
+        "AXIS-ERAP1-CURATED-C03"
+      ],
+      "id": "target_biology",
+      "knowledge_kind": "axis_inference",
+      "rationale": "Genetic and processing support inherited from main; no new clinical proof.",
+      "review_status": "pending_review",
+      "status": "supported"
+    },
+    {
+      "claim_ids": [
+        "AXIS-ERAP1-CURATED-C01",
+        "AXIS-ERAP1-CURATED-C05"
+      ],
+      "id": "erap1_hla_b27",
+      "knowledge_kind": "axis_inference",
+      "rationale": "Genetic interaction and peptide processing in defined systems; broader axSpA extrapolation limited.",
+      "review_status": "pending_review",
+      "status": "supported"
+    },
+    {
+      "claim_ids": [
+        "AXIS-ERAP1-CURATED-C04",
+        "AXIS-ERAP1-CURATED-C07",
+        "AXIS-ERAP1-CURATED-C08",
+        "AXIS-ERAP1-CURATED-C12"
+      ],
+      "id": "context_dependence",
+      "knowledge_kind": "axis_inference",
+      "rationale": "Substrate/variant sensitivity and divergent cell-model findings oppose a universal inhibition-benefit direction. Recent unmerged addendum excluded; latest allotype literature not newly adjudicated here.",
+      "review_status": "pending_review",
+      "status": "supported_important"
+    },
+    {
+      "claim_ids": [
+        "F1",
+        "S1"
+      ],
+      "id": "pharmacological_tractability",
+      "knowledge_kind": "axis_inference",
+      "rationale": "Programme-specific conference inhibition and sponsor human signal strengthen feasibility provisionally, not definitive tractability across tissues/allotypes.",
+      "review_status": "pending_review",
+      "status": "preliminary_support"
+    },
+    {
+      "claim_ids": [
+        "F2",
+        "F3"
+      ],
+      "id": "molecular_pharmacology",
+      "knowledge_kind": "axis_inference",
+      "rationale": "Conference-only peptide and CD8 observations; full methods absent.",
+      "review_status": "pending_review",
+      "status": "preliminary_support"
+    },
+    {
+      "claim_ids": [
+        "S1"
+      ],
+      "id": "human_pk",
+      "knowledge_kind": "axis_inference",
+      "rationale": "Qualitative dose-proportional PK without numerical independent adjudication.",
+      "review_status": "pending_review",
+      "status": "preliminary_sponsor_reported"
+    },
+    {
+      "claim_ids": [
+        "S1",
+        "R2"
+      ],
+      "id": "human_engagement",
+      "knowledge_kind": "axis_inference",
+      "rationale": "Sponsor claim retained; exposure proxy not direct measurement.",
+      "review_status": "pending_review",
+      "status": "preliminary_sponsor_reported"
+    },
+    {
+      "claim_ids": [
+        "R3",
+        "S2"
+      ],
+      "id": "human_disease_pd",
+      "knowledge_kind": "axis_inference",
+      "rationale": "Endpoints planned, no public patient PD results identified in bounded sources.",
+      "review_status": "pending_review",
+      "status": "not_established"
+    },
+    {
+      "claim_ids": [
+        "S2",
+        "R3"
+      ],
+      "id": "therapeutic_benefit",
+      "knowledge_kind": "axis_inference",
+      "rationale": "No disease-modifying benefit established.",
+      "review_status": "pending_review",
+      "status": "not_established"
+    },
+    {
+      "claim_ids": [
+        "S2",
+        "R1"
+      ],
+      "id": "human_axspa_efficacy",
+      "knowledge_kind": "axis_inference",
+      "rationale": "Registry hasResults=false and sponsor reports dosing, not efficacy; private results unknown.",
+      "review_status": "pending_review",
+      "status": "not_demonstrated"
+    },
+    {
+      "claim_ids": [
+        "R1",
+        "AXIS-ERAP1-CURATED-C07"
+      ],
+      "id": "optimal_subgroup",
+      "knowledge_kind": "axis_inference",
+      "rationale": "HLA-B27 selection alone does not identify responsive allotype/subtype/ERAP2 subgroup.",
+      "review_status": "pending_review",
+      "status": "unresolved"
+    },
+    {
+      "claim_ids": [
+        "S1",
+        "R3"
+      ],
+      "id": "therapeutic_window",
+      "knowledge_kind": "axis_inference",
+      "rationale": "Healthy single-dose sponsor tolerability does not establish sustained patient window.",
+      "review_status": "pending_review",
+      "status": "unresolved"
+    }
+  ],
+  "unavailable": [
+    "FOCIS full poster/methods",
+    "quantitative human engagement and assay",
+    "patient PD/efficacy data",
+    "independently mapped chemical structure",
+    "full structured CTIS protocol"
+  ]
+}

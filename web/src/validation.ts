@@ -19,6 +19,7 @@ interface Assessment {
 }
 interface Diff { edges: Record<string, string[]>; explanations: Record<string, string[]>; uncertainties: Record<string, string[]>; critical_uncertainty: string[] | null; recommended_experiment: string[] | null; decision_changed: string }
 export interface CaseView {
+  prospective?: ProspectiveView;
   case_id: string; status: string; label: string;
   protocol: { cutoff: string; cutoff_rationale: string; question: string; selection_rationale: string; protocol_fingerprint: string; benchmark_kind: string; synthetic: boolean; horizon?: string | null; excluded_undated_records?: number };
   snapshots: { fingerprint: string; sources: SourceRow[]; records: Record<string, number> }[];
@@ -31,6 +32,36 @@ export interface CaseView {
 }
 
 const SYNTHETIC = 'SYNTHETIC / TEST ONLY / NOT SCIENTIFIC EVIDENCE';
+interface ProspectiveView {
+  case: { frozen_at: string; cutoff: string; current_position: string; status: string; strengthening_conditions: string[]; weakening_conditions: string[]; limit: string; uncertainties: { id: string; question: string; depends_on: string[] }[] };
+  state: { fingerprint: string };
+  evidence: { positions: { id: string; status: string; rationale: string }[]; claims: { id: string; statement: string; source_id: string; evidence_class: string; limits: string }[]; historical_compound_boundary: string };
+  sources: { sources: { id: string; url: string; evidence_class: string; access: string; available_by: string }[] };
+  discriminators: { id: string; measurement: string; strengthens: string; weakens: string; ambiguous: string; non_interpretable: string; uncertainty_ids: string[]; hypothesis_ids: string[]; consequences: Record<string, string> }[];
+  scenarios: { id: string; observation: string; interpretation: string; consequence: string }[];
+}
+
+export const prospectiveView = (view: CaseView): string => {
+  const p = view.prospective;
+  if (!p) return EmptyState('No frozen prospective case.');
+  const list = (items: string[]): string => `<ul>${items.map(x => `<li>${escape(x)}</li>`).join('')}</ul>`;
+  return `<section class="proposal-banner"><h2>Prospective case — EAST-1 / GRWD0715</h2><p>${escape(p.case.status)}</p><p>Technical freeze complete; independent scientific review pending. No trial-success prediction. Not a commercialization blocker.</p></section>
+  <section class="section"><h2>Frozen</h2><p>Cutoff ${escape(p.case.cutoff)} · UTC ${escape(p.case.frozen_at)}</p><p>T0 fingerprint <code>${escape(p.state.fingerprint)}</code></p></section>
+  <section class="section"><h2>Current position</h2><p>${escape(p.case.current_position)}</p>${list(p.evidence.positions.map(x => `${label(x.id)}: ${label(x.status)} — ${x.rationale}`))}</section>
+  <section class="section"><h2>Known — source-reported, review pending</h2>${p.evidence.claims.map(c => `<details><summary>${escape(c.id)} · ${escape(c.source_id)} · ${escape(label(c.evidence_class))}</summary><p>${escape(c.statement)}</p><p class="caption">${escape(c.limits)}</p></details>`).join('')}<p>${escape(p.evidence.historical_compound_boundary)}</p></section>
+  <section class="section"><h2>Unknown</h2>${list(p.case.uncertainties.map(u => `${u.id}: ${u.question}${u.depends_on.length ? ` (depends on ${u.depends_on.join(', ')})` : ''}`))}</section>
+  <section class="section"><h2>Future evidence that matters</h2>${p.discriminators.map(d => `<details><summary>${escape(d.id)} — ${escape(d.measurement)}</summary>${dl([
+    ['Tests', escape(`${d.uncertainty_ids.join(', ')} · ${d.hypothesis_ids.join(', ')}`)],
+    ['Strengthens', escape(d.strengthens)], ['Weakens', escape(d.weakens)],
+    ['Ambiguous', escape(d.ambiguous)], ['Non-interpretable', escape(d.non_interpretable)],
+    ['Consequences', escape(Object.entries(d.consequences).map(([k, v]) => `${k}: ${label(v)}`).join('; '))]
+  ])}</details>`).join('')}</section>
+  <section class="section"><h2>What would strengthen the hypothesis</h2>${list(p.case.strengthening_conditions)}</section>
+  <section class="section"><h2>What would weaken it</h2>${list(p.case.weakening_conditions)}</section>
+  <section class="section"><h2>Outcome scenarios</h2>${list(p.scenarios.map(s => `${s.id}: ${s.observation} — ${s.interpretation} → ${label(s.consequence)}`))}</section>
+  <section class="section"><h2>Reveals</h2><p>None yet. Future results are unknown, not a fabricated sealed outcome. Partial reveals preserve T0 and require independent review.</p></section>
+  <section class="section"><h2>Sources and limits</h2>${p.sources.sources.map(s => `<p><a href="${escape(s.url)}" target="_blank" rel="noopener noreferrer">${escape(s.id)}</a> · ${escape(label(s.evidence_class))} · available by ${escape(s.available_by)}<br>${escape(s.access)}</p>`).join('')}<p>${escape(p.case.limit)}</p></section>`;
+};
 const INVALID = 'INVALID — TEMPORAL LEAKAGE';
 const pill = (text: string): string => `<span class="badge">${escape(label(text))}</span>`;
 const dl = (rows: [string, string][]): string => `<dl class="context">${rows.map(([k, v]) => `<dt>${escape(k)}</dt><dd>${v}</dd>`).join('')}</dl>`;
@@ -124,6 +155,7 @@ export const reviewSection = (view: CaseView): string => `<section class="sectio
 export const limitsSection = (view: CaseView): string => `<section class="section"><h2>Limits</h2><ul class="plain"><li>${escape(view.protocol.selection_rationale)}</li>${(view.assessment?.limits ?? ['Retrospective: this cannot establish clinical efficacy or prospective validity.']).map(l => `<li>${escape(l)}</li>`).join('')}</ul><p class="caption">Protocol fingerprint <code>${escape(view.protocol.protocol_fingerprint.slice(0, 16))}</code>.</p></section>`;
 
 export const caseView = (view: CaseView): string => {
+  if (view.prospective) return prospectiveView(view);
   const invalid = view.status === 'invalid' || view.audits.some(a => !a.valid);
   return `${kindBanner(view.protocol)}<h2>${escape(view.case_id)} ${pill(view.status)}</h2><p class="intro">${escape(view.protocol.question)}</p>${leakageState(view)}${invalid ? '' : `${timeline(view)}${decisionAtT(view)}${revealSection(view)}${diffSection(view)}${matrixSection(view)}${baselineSection(view)}${reviewSection(view)}`}${limitsSection(view)}`;
 };

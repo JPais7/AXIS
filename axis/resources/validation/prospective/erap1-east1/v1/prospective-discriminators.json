@@ -1,0 +1,127 @@
+{
+  "items": [
+    {
+      "ambiguous": "Sponsor qualitative claim, Cavg proxy, single time point or unknown compartment/duration.",
+      "consequences": {
+        "ambiguous": "require_orthogonal_validation",
+        "non_interpretable": "require_replication",
+        "strengthens": "advance_to_next_evidence_layer",
+        "weakens": "weaken_current_strategy"
+      },
+      "hypothesis_ids": [
+        "H1",
+        "H2",
+        "H5"
+      ],
+      "id": "D1",
+      "knowledge_kind": "ai_suggestion",
+      "measurement": "Quantitative, target-specific engagement with PK/free exposure and time coverage in relevant human compartments",
+      "non_interpretable": "Unvalidated assay, interference, missing exposure or sampling information.",
+      "review_status": "pending_review",
+      "strengthens": "Validated sustained engagement at tolerable achievable exposure, controls excluding surrogate-only interpretation.",
+      "uncertainty_ids": [
+        "U1"
+      ],
+      "weakens": "Insufficient engagement despite adequate systemic exposure; question compound/distribution/coverage, not all ERAP1 biology."
+    },
+    {
+      "ambiguous": "Bulk nonspecific HLA shift, surrogate-only biomarker or discordant timing/context.",
+      "consequences": {
+        "ambiguous": "require_orthogonal_validation",
+        "non_interpretable": "require_replication",
+        "strengthens": "advance_to_next_evidence_layer",
+        "weakens": "change_mechanistic_model"
+      },
+      "hypothesis_ids": [
+        "H1",
+        "H2",
+        "H4"
+      ],
+      "id": "D2",
+      "knowledge_kind": "ai_suggestion",
+      "measurement": "Paired engagement and immunopeptidomics / disease-linked antigen and CD8 PD over dose/time",
+      "non_interpretable": "Batch effects, inadequate detection, missing paired exposure/engagement, unreliable controls.",
+      "review_status": "pending_review",
+      "strengthens": "Engagement precedes reproducible expected peptide and immune changes in disease-relevant systems, with orthogonal controls.",
+      "uncertainty_ids": [
+        "U2",
+        "U3"
+      ],
+      "weakens": "Adequate sustained engagement repeatedly fails to produce prespecified PD, or PD lacks disease-linked immune effects."
+    },
+    {
+      "ambiguous": "Uncontrolled preliminary signal, underpowered null, multiplicity, treatment confounding or insufficient duration.",
+      "consequences": {
+        "ambiguous": "require_orthogonal_validation",
+        "non_interpretable": "require_replication",
+        "strengthens": "strengthen_current_strategy",
+        "weakens": "deprioritize_current_strategy"
+      },
+      "hypothesis_ids": [
+        "H1",
+        "H2",
+        "H4"
+      ],
+      "id": "D3",
+      "knowledge_kind": "ai_suggestion",
+      "measurement": "Predefined clinical outcomes (ASDAS/ASAS40 and MRI where applicable), effect size/uncertainty, concurrent engagement/PD, appropriate randomized controls",
+      "non_interpretable": "Major missingness, protocol violations, unreliable endpoints or absent comparator.",
+      "review_status": "pending_review",
+      "strengthens": "Credible clinically meaningful controlled improvement coherent with prior engagement/PD; reproducible effects and timing.",
+      "uncertainty_ids": [
+        "U4",
+        "U3"
+      ],
+      "weakens": "Adequate power/duration and confirmed engagement/PD repeatedly yield no meaningful controlled benefit."
+    },
+    {
+      "ambiguous": "Post hoc small subgroup, incomplete genotyping or confounding; retain as hypothesis.",
+      "consequences": {
+        "ambiguous": "require_orthogonal_validation",
+        "non_interpretable": "require_replication",
+        "strengthens": "investigate_context_dependence",
+        "weakens": "change_mechanistic_model"
+      },
+      "hypothesis_ids": [
+        "H1",
+        "H2",
+        "H3",
+        "H4"
+      ],
+      "id": "D4",
+      "knowledge_kind": "ai_suggestion",
+      "measurement": "Prespecified ERAP1 allotype, HLA-B27 subtype, ERAP2, substrate/tissue and disease-stage interaction analyses",
+      "non_interpretable": "Misclassified genotype, inadequate subgroup size or incompatible assays.",
+      "review_status": "pending_review",
+      "strengthens": "Reproducible biologically coherent subgroup interaction with exposure/engagement balance and multiplicity control.",
+      "uncertainty_ids": [
+        "U5"
+      ],
+      "weakens": "Replicated adequately measured contexts fail to support proposed responsive subgroup; not universal failure by one subgroup."
+    },
+    {
+      "ambiguous": "Healthy single-dose tolerability, insufficient follow-up or poorly attributed events.",
+      "consequences": {
+        "ambiguous": "require_orthogonal_validation",
+        "non_interpretable": "require_replication",
+        "strengthens": "continue_current_strategy",
+        "weakens": "stop_for_now"
+      },
+      "hypothesis_ids": [
+        "H1",
+        "H5"
+      ],
+      "id": "D5",
+      "knowledge_kind": "ai_suggestion",
+      "measurement": "Dose/time matched adverse events, reversibility and sustained target coverage in patients",
+      "non_interpretable": "Incomplete safety capture or unknown actual exposure/dose adherence.",
+      "review_status": "pending_review",
+      "strengthens": "Meaningful sustained PD/engagement compatible with acceptable patient safety across relevant duration.",
+      "uncertainty_ids": [
+        "U6",
+        "U1"
+      ],
+      "weakens": "Required pharmacology cannot be maintained because of safety/tolerability; distinguish target vs compound/modality risk."
+    }
+  ]
+}

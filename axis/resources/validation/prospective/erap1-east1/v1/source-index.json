@@ -1,0 +1,236 @@
+{
+  "other_presentations": "No additional material presentation identified in focused public search; FOCIS programme/abstract-book entries duplicate W146, not independent evidence.",
+  "patents": "Sponsor reports a US grant but verified chemical identity/method mapping unavailable. No patent example is asserted to be GRWD0715. Not necessary to expand discovery search for this freeze.",
+  "search_log": [
+    {
+      "database": "Europe PMC",
+      "hit_count": 0,
+      "interpretation": "No indexed hits in this bounded query, not proof no publication exists.",
+      "query": "(GRWD0715 OR \"GRWD 0715\" OR \"GRWD-0715\") AND FIRST_PDATE:[1900-01-01 TO 2026-10-05]",
+      "response_sha256": "a53e46fa6c07ddba2c154d4142fa9e2dc70374a5bf72ed519e72b06ad61b4b6a",
+      "retrieved_at": "2026-10-05T17:32:37.983962+00:00"
+    }
+  ],
+  "sources": [
+    {
+      "access": "Official structured API; protocol/outcomes only; hasResults=false",
+      "availability_basis": "Dated publication/presentation or retained observation by cutoff",
+      "availability_kind": "bounded",
+      "available_by": "2026-09-18",
+      "checksum_scope": "response_bytes",
+      "dates": {
+        "conference_presentation_date": null,
+        "publication_date": "2025-07-02",
+        "registry_update_date": "2026-09-18",
+        "sponsor_announcement_date": null,
+        "study_date": "2025-07-28"
+      },
+      "evidence_class": "trial_registry",
+      "id": "NCT07047703",
+      "response_sha256": "a1e93c8d5ad40b09affe79efd546871dbb222b64fa1099e847d167a68a318e0e",
+      "retrieved_at": "2026-10-05T17:33:06+00:00",
+      "review_status": "pending_review",
+      "url": "https://clinicaltrials.gov/api/v2/studies/NCT07047703"
+    },
+    {
+      "access": "Official HTML abstract via web retrieval; full poster not obtained; direct HTTP 403",
+      "availability_basis": "Dated publication/presentation or retained observation by cutoff",
+      "availability_kind": "bounded",
+      "available_by": "2025-06-25",
+      "checksum_scope": "No raw response retained; compact paraphrase snapshot separately hashed",
+      "dates": {
+        "conference_presentation_date": "2025-06-25",
+        "publication_date": null,
+        "registry_update_date": null,
+        "sponsor_announcement_date": null,
+        "study_date": null
+      },
+      "evidence_class": "conference_evidence",
+      "id": "FOCIS2025:W146",
+      "response_sha256": null,
+      "retrieved_at": "2026-10-05T17:33:06+00:00",
+      "review_status": "pending_review",
+      "url": "https://focis-2025.eventscribe.net/fsPopup.asp?PresentationID=1615278&mode=presInfo"
+    },
+    {
+      "access": "Sponsor-authored dated release, syndicated by GlobeNewswire",
+      "availability_basis": "Dated publication/presentation or retained observation by cutoff",
+      "availability_kind": "bounded",
+      "available_by": "2026-09-08",
+      "checksum_scope": "response_bytes",
+      "dates": {
+        "conference_presentation_date": null,
+        "publication_date": "2026-09-08",
+        "registry_update_date": null,
+        "sponsor_announcement_date": "2026-09-08",
+        "study_date": null
+      },
+      "evidence_class": "sponsor_reported",
+      "id": "GREYWOLF:2026-09-08",
+      "response_sha256": "b7816333792b2c4bcd25689e3ce87dac01acb5b33f7f950ff78df18f1b7d1671",
+      "retrieved_at": "2026-10-05T17:33:06+00:00",
+      "review_status": "pending_review",
+      "url": "https://rss.globenewswire.com/news-release/2026/09/08/3357312/0/en/greywolf-therapeutics-doses-first-participants-with-axspa-in-novel-erap1-inhibitor-trial.html"
+    },
+    {
+      "access": "Undated mutable programme page; observed by cutoff, not dated to nominal August update",
+      "availability_basis": "Dated publication/presentation or retained observation by cutoff",
+      "availability_kind": "bounded",
+      "available_by": "2026-10-05",
+      "checksum_scope": "response_bytes",
+      "dates": {
+        "conference_presentation_date": null,
+        "publication_date": null,
+        "registry_update_date": null,
+        "sponsor_announcement_date": null,
+        "study_date": null
+      },
+      "evidence_class": "sponsor_reported",
+      "id": "GREYWOLF:GRWD0715",
+      "response_sha256": "5656826be90729d0fa1fa8ec1327cc5e258e6a25f683f14e9738f0a8a5ec3872",
+      "retrieved_at": "2026-10-05T17:33:06+00:00",
+      "review_status": "pending_review",
+      "url": "https://www.greywolftherapeutics.com/grwd0715"
+    },
+    {
+      "access": "PARTIAL ACCESS: official search metadata identifies trial; HTTP body is app shell, not adjudicated protocol",
+      "availability_basis": "Dated publication/presentation or retained observation by cutoff",
+      "availability_kind": "bounded",
+      "available_by": "2026-10-05",
+      "checksum_scope": "HTML app shell only; not scientific evidence body",
+      "dates": {
+        "conference_presentation_date": null,
+        "publication_date": null,
+        "registry_update_date": null,
+        "sponsor_announcement_date": null,
+        "study_date": null
+      },
+      "evidence_class": "trial_registry",
+      "id": "CTIS:2025-521315-39-00",
+      "response_sha256": "8734cbb42cde74ad98eb8a1a0eaf0965e9e15b059616a06c0ba5a2d466308d2d",
+      "retrieved_at": "2026-10-05T17:33:06+00:00",
+      "review_status": "pending_review",
+      "url": "https://euclinicaltrials.eu/ctis-public/view/2025-521315-39-00"
+    },
+    {
+      "access": "Inherited frozen main curation; no new full-text adjudication",
+      "availability_basis": "Dated publication/presentation or retained observation by cutoff",
+      "availability_kind": "bounded",
+      "available_by": "2011-12-31",
+      "checksum_scope": "Referenced baseline resource checksums; year-end is availability upper bound, not publication day",
+      "dates": {
+        "conference_presentation_date": null,
+        "publication_date": null,
+        "registry_update_date": null,
+        "sponsor_announcement_date": null,
+        "study_date": null
+      },
+      "evidence_class": "peer_reviewed_primary",
+      "id": "PMID:21743469",
+      "response_sha256": null,
+      "retrieved_at": "2026-10-05T17:33:06+00:00",
+      "review_status": "pending_review",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21743469/"
+    },
+    {
+      "access": "Inherited frozen main curation; no new full-text adjudication",
+      "availability_basis": "Dated publication/presentation or retained observation by cutoff",
+      "availability_kind": "bounded",
+      "available_by": "2015-12-31",
+      "checksum_scope": "Referenced baseline resource checksums; year-end is availability upper bound, not publication day",
+      "dates": {
+        "conference_presentation_date": null,
+        "publication_date": null,
+        "registry_update_date": null,
+        "sponsor_announcement_date": null,
+        "study_date": null
+      },
+      "evidence_class": "peer_reviewed_primary",
+      "id": "PMID:25994336",
+      "response_sha256": null,
+      "retrieved_at": "2026-10-05T17:33:06+00:00",
+      "review_status": "pending_review",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25994336/"
+    },
+    {
+      "access": "Inherited frozen main curation; no new full-text adjudication",
+      "availability_basis": "Dated publication/presentation or retained observation by cutoff",
+      "availability_kind": "bounded",
+      "available_by": "2005-12-31",
+      "checksum_scope": "Referenced baseline resource checksums; year-end is availability upper bound, not publication day",
+      "dates": {
+        "conference_presentation_date": null,
+        "publication_date": null,
+        "registry_update_date": null,
+        "sponsor_announcement_date": null,
+        "study_date": null
+      },
+      "evidence_class": "peer_reviewed_primary",
+      "id": "PMID:16286653",
+      "response_sha256": null,
+      "retrieved_at": "2026-10-05T17:33:06+00:00",
+      "review_status": "pending_review",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16286653/"
+    },
+    {
+      "access": "Inherited frozen main curation; no new full-text adjudication",
+      "availability_basis": "Dated publication/presentation or retained observation by cutoff",
+      "availability_kind": "bounded",
+      "available_by": "2014-12-31",
+      "checksum_scope": "Referenced baseline resource checksums; year-end is availability upper bound, not publication day",
+      "dates": {
+        "conference_presentation_date": null,
+        "publication_date": null,
+        "registry_update_date": null,
+        "sponsor_announcement_date": null,
+        "study_date": null
+      },
+      "evidence_class": "peer_reviewed_primary",
+      "id": "PMID:24504800",
+      "response_sha256": null,
+      "retrieved_at": "2026-10-05T17:33:06+00:00",
+      "review_status": "pending_review",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24504800/"
+    },
+    {
+      "access": "Inherited frozen main curation; no new full-text adjudication",
+      "availability_basis": "Dated publication/presentation or retained observation by cutoff",
+      "availability_kind": "bounded",
+      "available_by": "2016-12-31",
+      "checksum_scope": "Referenced baseline resource checksums; year-end is availability upper bound, not publication day",
+      "dates": {
+        "conference_presentation_date": null,
+        "publication_date": null,
+        "registry_update_date": null,
+        "sponsor_announcement_date": null,
+        "study_date": null
+      },
+      "evidence_class": "peer_reviewed_primary",
+      "id": "PMID:26130142",
+      "response_sha256": null,
+      "retrieved_at": "2026-10-05T17:33:06+00:00",
+      "review_status": "pending_review",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26130142/"
+    },
+    {
+      "access": "Inherited frozen main curation; no new full-text adjudication",
+      "availability_basis": "Dated publication/presentation or retained observation by cutoff",
+      "availability_kind": "bounded",
+      "available_by": "2016-12-31",
+      "checksum_scope": "Referenced baseline resource checksums; year-end is availability upper bound, not publication day",
+      "dates": {
+        "conference_presentation_date": null,
+        "publication_date": null,
+        "registry_update_date": null,
+        "sponsor_announcement_date": null,
+        "study_date": null
+      },
+      "evidence_class": "peer_reviewed_primary",
+      "id": "PMID:27107845",
+      "response_sha256": null,
+      "retrieved_at": "2026-10-05T17:33:06+00:00",
+      "review_status": "pending_review",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27107845/"
+    }
+  ]
+}

@@ -22,6 +22,7 @@ from axis.pharmacology.service import PharmacologyService
 from axis.storage import EvidenceStore, RecordNotFoundError
 from axis.structures.service import StructureIdentityService
 from axis.targets.identity import TargetIdentityService
+from axis.validation import prospective
 from axis.validation.service import BenchmarkError, BenchmarkService
 
 
@@ -99,12 +100,23 @@ class ReadAPI:
         }
 
     def _benchmarks(self, tail: list[str]) -> dict[str, Any]:
-        """Read-only retrospective-validation views; nothing is run or revealed."""
+        """Read-only validation views; nothing is run, approved or revealed."""
         service = BenchmarkService(self.store)
+        frozen = prospective.packages()
         if not tail:
-            return {"items": service.list_cases()}
+            return {
+                "items": service.list_cases()
+                + [prospective.case_row(p) for p in frozen]
+            }
         if tail == ["report"]:
             return {"markdown": service.report()}
+        for package in frozen:
+            if package["case.json"]["case_id"] == tail[0]:
+                if len(tail) != 1:
+                    raise RecordNotFoundError(
+                        "prospective view is read-only; no reveal endpoint"
+                    )
+                return prospective.view(package)
         try:
             view = service.view(tail[0])
         except BenchmarkError as error:

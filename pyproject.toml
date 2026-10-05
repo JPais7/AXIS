@@ -8,7 +8,7 @@ homepage = "https://github.com/JPais7/AXIS"
 repository = "https://github.com/JPais7/AXIS"
 readme = "README.md"
 packages = [{ include = "axis" }]
-include = ["axis/resources/demo/*.tsv", "axis/resources/demo/*.json", "axis/resources/discovery/**/*", "axis/resources/workspace/**/*", "axis/resources/targets/**/*", "axis/resources/structures/**/*", "axis/resources/pharmacology/**/*", "axis/resources/cellular/**/*", "axis/resources/benchmarks/**/*", "axis/resources/computational-discovery/**/*", "axis/resources/chemical-learning/**/*"]
+include = ["axis/resources/demo/*.tsv", "axis/resources/demo/*.json", "axis/resources/discovery/**/*", "axis/resources/workspace/**/*", "axis/resources/targets/**/*", "axis/resources/structures/**/*", "axis/resources/pharmacology/**/*", "axis/resources/cellular/**/*", "axis/resources/benchmarks/**/*", "axis/resources/validation/**/*", "axis/resources/computational-discovery/**/*", "axis/resources/chemical-learning/**/*"]
 keywords = [
     "bioinformatics",
     "transcriptomics",
@@ -77,6 +77,7 @@ select = ["E", "F", "I", "UP", "B", "SIM"]
 "scripts/verify_computational_wheel.py" = ["E501"]
 "scripts/verify_learning_wheel.py" = ["E501"]
 "scripts/build_learning_fixtures.py" = ["E501"]
+"scripts/freeze_east1.py" = ["E501"] # Source-linked scientific prose, not code lines.
 "tests/test_computational.py" = ["E501"]
 "tests/test_learning.py" = ["E501"]
 

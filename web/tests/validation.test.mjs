@@ -40,3 +40,17 @@ test('baseline and review stay separate from system output',()=>{
   const html=view.caseView(base());
   assert.match(html,/frozen before the reveal/i);assert.match(html,/never edits it/);
 });
+
+test('prospective freeze preserves source classes and unknown future', async()=>{
+  const root=new URL('../../axis/resources/validation/prospective/erap1-east1/v1/',import.meta.url);
+  const read=async name=>JSON.parse(await readFile(new URL(name,root),'utf8'));
+  const prospective={case:await read('case.json'),state:await read('t0-state.json'),evidence:await read('evidence-snapshot.json'),sources:await read('source-index.json'),discriminators:(await read('prospective-discriminators.json')).items,scenarios:(await read('outcome-scenarios.json')).items};
+  const html=view.caseView({prospective});
+  for(const title of ['Prospective case','Frozen','Current position','Unknown','Future evidence that matters','Outcome scenarios','Reveals']) assert.ok(html.includes(title));
+  assert.match(html,/independent scientific review pending/);
+  assert.match(html,/None yet/);
+  assert.match(html,/not a fabricated sealed outcome/);
+  assert.match(html,/sponsor reported/);
+  assert.match(html,/Maben/);
+  assert.doesNotMatch(html,/Retrospective:|EAST-1 will succeed|EAST-1 will fail/);
+});
