@@ -15,6 +15,7 @@ from typing import Any
 
 from axis.computational import chem, docking, prioritize, structure
 from axis.computational.epistemics import EpistemicError, validate_observation
+from axis.serialization import canonical_json
 from axis.storage import EvidenceStore
 
 CAMPAIGN_VERSION = "axis-campaign-1"
@@ -43,7 +44,7 @@ def now() -> datetime:
 
 
 def canonical(value: object) -> str:
-    return json.dumps(value, sort_keys=True, separators=(",", ":"), default=str)
+    return canonical_json(value)
 
 
 def digest(value: object) -> str:

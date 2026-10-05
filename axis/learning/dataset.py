@@ -7,9 +7,10 @@ and contradictory replicates are flagged rather than averaged away.
 """
 
 import hashlib
-import json
 import statistics
 from typing import Any
+
+from axis.serialization import canonical_json
 
 POLICY_VERSION = "axis-learning-dataset-1"
 CONCENTRATION_TO_NM = {"pM": 1e-3, "nM": 1.0, "uM": 1e3, "µM": 1e3, "mM": 1e6, "M": 1e9}
@@ -26,7 +27,7 @@ POLICY: dict[str, Any] = {
 
 
 def canonical(value: object) -> str:
-    return json.dumps(value, sort_keys=True, separators=(",", ":"), default=str)
+    return canonical_json(value)
 
 
 def digest(value: object) -> str:
