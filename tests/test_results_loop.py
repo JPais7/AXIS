@@ -1674,14 +1674,14 @@ def test_migration_010_is_additive_and_upgrades_from_009(tmp_path):
                     [int(item.name[:3]), item.name],
                 )
     with EvidenceStore(path) as store:
-        assert store.statistics().schema_version == 12
+        assert store.statistics().schema_version == 13
         protein, service = init(store)
         ResultsService(store).import_package(PROJECT, allow_synthetic=True)
     with EvidenceStore(path, read_only=True) as store:
-        assert store.statistics().schema_version == 12
+        assert store.statistics().schema_version == 13
         assert store.results.results(PROJECT)
     with EvidenceStore() as clean:
-        assert clean.statistics().schema_version == 12
+        assert clean.statistics().schema_version == 13
 
 
 def test_every_phase_36_rule_fired_in_this_module(world):

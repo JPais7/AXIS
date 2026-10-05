@@ -72,6 +72,9 @@ from axis.analysis import (
     WorkflowComparisonSummarizer,
     write_sample_sheet_template,
 )
+from axis.cli import (
+    learning as _learning,  # noqa: F401  (registers chemistry subcommands)
+)
 from axis.cli.benchmark import app as benchmark_app
 from axis.cli.campaign import campaign_app, chemistry_app, compound_app
 from axis.cli.cellular import app as cellular_app

@@ -8,7 +8,7 @@ homepage = "https://github.com/JPais7/AXIS"
 repository = "https://github.com/JPais7/AXIS"
 readme = "README.md"
 packages = [{ include = "axis" }]
-include = ["axis/resources/demo/*.tsv", "axis/resources/demo/*.json", "axis/resources/discovery/**/*", "axis/resources/workspace/**/*", "axis/resources/targets/**/*", "axis/resources/structures/**/*", "axis/resources/pharmacology/**/*", "axis/resources/cellular/**/*", "axis/resources/benchmarks/**/*", "axis/resources/computational-discovery/**/*"]
+include = ["axis/resources/demo/*.tsv", "axis/resources/demo/*.json", "axis/resources/discovery/**/*", "axis/resources/workspace/**/*", "axis/resources/targets/**/*", "axis/resources/structures/**/*", "axis/resources/pharmacology/**/*", "axis/resources/cellular/**/*", "axis/resources/benchmarks/**/*", "axis/resources/computational-discovery/**/*", "axis/resources/chemical-learning/**/*"]
 keywords = [
     "bioinformatics",
     "transcriptomics",
@@ -70,10 +70,15 @@ select = ["E", "F", "I", "UP", "B", "SIM"]
 "tests/test_results_loop.py" = ["E501"]
 "axis/computational/prioritize.py" = ["E501"]
 "axis/computational/service.py" = ["E501"]
+"axis/learning/*.py" = ["E501"]
+"axis/cli/learning.py" = ["E501"]
 "scripts/build_computational_fixtures.py" = ["E501"]
 "scripts/fetch_external_identities.py" = ["E501"]
 "scripts/verify_computational_wheel.py" = ["E501"]
+"scripts/verify_learning_wheel.py" = ["E501"]
+"scripts/build_learning_fixtures.py" = ["E501"]
 "tests/test_computational.py" = ["E501"]
+"tests/test_learning.py" = ["E501"]
 
 [tool.mypy]
 python_version = "3.12"

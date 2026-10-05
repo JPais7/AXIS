@@ -4,6 +4,7 @@ import { cellularContent, cellularDrawer } from './cellular';
 import { decisionContent, experimentDrawer, explanationDrawer } from './decision';
 import { experimentDetailDrawer, impactPreview, resultDrawer, resultsContent, reviewContent } from './results';
 import { campaignContent } from './campaign';
+import { learningContent } from './learning';
 import { validationContent } from './validation';
 import { mountStructure, structureContent } from './structure-ui';
 import { ProteinProvenance, TargetIdentityCard } from './protein';
@@ -73,6 +74,7 @@ async function content(project: Project): Promise<string> {
   if (route === 'review') return reviewContent(api,projectId);
   if (route === 'validation') return validationContent(api);
   if (route === 'campaigns') return campaignContent(api, projectId);
+  if (route === 'learning') return learningContent(api, projectId);
   if (['cellular','cellular-comparison','cellular-phenotypes','cellular-decision','cellular-next'].includes(route)) return cellularContent(api,projectId,route);
   if (route === 'structures') return structureContent(api,projectId);
   if (route === 'protein') {
@@ -116,7 +118,7 @@ async function render(): Promise<void> {
     projectId = nextProject;
   }
   route = parts[0] === 'projects' && parts[1] ? (parts[2] || 'overview') : (parts[0] || 'overview');
-  const allowed = ['home', 'projects', 'targets', 'overview', 'evidence', 'mechanism', 'perturbations', 'strategies', 'questions', 'experiments', 'sources','cellular','cellular-comparison','cellular-phenotypes','decision','cellular-decision','cellular-next','results','review','validation','campaigns'];
+  const allowed = ['home', 'projects', 'targets', 'overview', 'evidence', 'mechanism', 'perturbations', 'strategies', 'questions', 'experiments', 'sources','cellular','cellular-comparison','cellular-phenotypes','decision','cellular-decision','cellular-next','results','review','validation','campaigns','learning'];
   if (!allowed.includes(route) && !['protein','structures','chemistry','pharmacology','selectivity'].includes(route)) route = 'overview';
   const params = new URLSearchParams(location.search);
   offset = Number(params.get('offset')) || 0;
@@ -129,7 +131,7 @@ async function render(): Promise<void> {
       html = `<header class="project-header"><div class="eyebrow">DISCOVERY WORKSPACE</div><h1>${route === 'targets' ? 'Target Explorer' : route === 'home' ? 'Evidence to therapeutic decisions' : 'Discovery projects'}</h1><p>Inspect evidence, competing strategies and the uncertainty between them.</p></header><div class="source-grid">${page.items.map(item => `<a data-nav class="card project-card" href="/projects/${escape(item.project.project_id)}/overview"><span class="eyebrow">${item.project.project_id.includes('CURATED') ? 'SOURCE-GROUNDED VERTICAL' : 'DEVELOPMENT FIXTURE'}</span><h2>${escape(item.pair.target.label)} × ${escape(item.pair.disease.label)}</h2><p>${escape(item.project.objective)}</p><small>${escape(item.pair.indication_scope)}</small><p>Open project →</p></a>`).join('') || EmptyState('No projects imported. Import the frozen ERAP1 package explicitly before starting the server.')}</div>${pagination(page)}`;
     } else {
       const project = await api<Project>(`projects/${encodeURIComponent(projectId)}`);
-      const titles: Record<string, string> = { overview: 'ERAP1 × Axial Spondyloarthritis', evidence: 'Evidence', mechanism: 'Mechanism', perturbations: 'Perturbations', strategies: 'Competing intervention strategies', questions: 'Open questions', experiments: 'Next experiment', sources: 'Sources & provenance',cellular:'Cellular Evidence','cellular-comparison':'Genetic vs chemical','cellular-phenotypes':'HLA phenotype',decision:'Decision','cellular-decision':'Cellular decision view',results:'Experiments / Results',review:'Scientific review',validation:'Retrospective Validation',campaigns:'Computational Campaigns','cellular-next':'Next discriminating experiment' };
+      const titles: Record<string, string> = { overview: 'ERAP1 × Axial Spondyloarthritis', evidence: 'Evidence', mechanism: 'Mechanism', perturbations: 'Perturbations', strategies: 'Competing intervention strategies', questions: 'Open questions', experiments: 'Next experiment', sources: 'Sources & provenance',cellular:'Cellular Evidence','cellular-comparison':'Genetic vs chemical','cellular-phenotypes':'HLA phenotype',decision:'Decision','cellular-decision':'Cellular decision view',results:'Experiments / Results',review:'Scientific review',validation:'Retrospective Validation',campaigns:'Computational Campaigns',learning:'Chemical Learning','cellular-next':'Next discriminating experiment' };
       html = ProjectHeader(project, route === 'protein' ? 'Target / Protein' : route === 'structures' ? 'Experimental structures' : ({chemistry:'Chemistry',pharmacology:'Pharmacology',selectivity:'Selectivity'} as Record<string,string>)[route] || titles[route] || 'Overview') + await content(project);
     }
     if (current === generation) {

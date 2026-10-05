@@ -17,6 +17,7 @@ from axis.computational.service import CampaignError, CampaignService
 from axis.decision.service import DecisionService
 from axis.discovery.workspace import WorkspaceService, page
 from axis.experiments.results import ResultsService
+from axis.learning.service import LearningError, LearningService
 from axis.pharmacology.service import PharmacologyService
 from axis.storage import EvidenceStore, RecordNotFoundError
 from axis.structures.service import StructureIdentityService
@@ -152,17 +153,100 @@ class ReadAPI:
             "observations": view["observations"],
             "candidates": prio.get("panel", []),
             "rationale": [
-                {"compound_ref": e["compound_ref"], "why": e["why_this_molecule"],
-                 "against": e["strongest_reason_against"]}
+                {
+                    "compound_ref": e["compound_ref"],
+                    "why": e["why_this_molecule"],
+                    "against": e["strongest_reason_against"],
+                }
                 for e in prio.get("panel", [])
             ],
             "report": {"markdown": service.report(tail[0])},
             "reviews": view["reviews"],
         }
         if len(tail) == 2 and tail[1] in sections:
-            return {"campaign_id": tail[0], "label": view["campaign"]["label"],
-                    "section": tail[1], "value": sections[tail[1]]}
+            return {
+                "campaign_id": tail[0],
+                "label": view["campaign"]["label"],
+                "section": tail[1],
+                "value": sections[tail[1]],
+            }
         raise RecordNotFoundError("campaign route not found")
+
+    def _learning(self, project: str, tail: list[str]) -> dict[str, Any]:
+        """Read-only chemical-learning views; nothing is built, trained or predicted."""
+        service = LearningService(self.store)
+        repo = self.store.learning
+        if not tail:
+            return {
+                "datasets": service.datasets(project),
+                "comparability": service.comparability_matrix(project),
+                "models": [
+                    {
+                        "id": r["id"],
+                        "algorithm": r["algorithm"],
+                        "fingerprint": r["fingerprint"],
+                    }
+                    for r in repo.rows(
+                        "chemical_models", "WHERE project_id=?", [project]
+                    )
+                ],
+                "boundaries": [
+                    "measured activity is not a model prediction",
+                    "observed SAR is not inferred SAR",
+                ],
+            }
+        kind, rest = tail[0], tail[1:]
+        try:
+            if kind == "datasets" and rest:
+                return service.dataset(rest[0], project)
+            if kind == "datasets":
+                return {"items": service.datasets(project)}
+            if kind == "comparability":
+                return {"items": service.comparability_matrix(project)}
+            if kind == "sar" and rest:
+                service.dataset(rest[0], project)
+                return service.observed_sar(rest[0])
+            if kind == "eligibility" and rest:
+                service.dataset(rest[0], project)
+                rows = repo.rows(
+                    "model_eligibility_assessments", "WHERE dataset_id=?", [rest[0]]
+                )
+                return {
+                    "dataset_id": rest[0],
+                    "assessments": [r["payload"] for r in rows],
+                }
+            if kind == "models" and rest:
+                model = service.model(rest[0], project)
+                return {k: v for k, v in model.items() if k != "model"}
+            if kind == "models":
+                rows = repo.rows("chemical_models", "WHERE project_id=?", [project])
+                return {
+                    "items": [
+                        {
+                            "id": r["id"],
+                            "algorithm": r["algorithm"],
+                            "fingerprint": r["fingerprint"],
+                        }
+                        for r in rows
+                    ]
+                }
+            if kind == "predictions":
+                rows = repo.rows(
+                    "chemical_predictions", "WHERE project_id=?", [project]
+                )
+                return {"items": [r["payload"] for r in rows]}
+            if kind == "learning-state":
+                rows = repo.rows(
+                    "chemical_learning_states", "WHERE project_id=?", [project]
+                )
+                if not rows:
+                    raise RecordNotFoundError(
+                        "no chemical learning state has been recorded"
+                    )
+                return dict(rows[-1]["payload"])
+        except LearningError as error:
+            raise RecordNotFoundError(str(error)) from error
+        raise RecordNotFoundError("chemical-learning route not found")
 
     def _decision_diff(
         self, project: str, protein: str, versions: dict[str, str] | None
@@ -353,6 +437,12 @@ class ReadAPI:
             and parts[3] in {"campaigns", "chemical-hypotheses", "chemical-spaces"}
         ):
             return self._campaigns(parts[2], parts[3], parts[4:])
+        if (
+            len(parts) >= 4
+            and parts[:2] == ["api", "projects"]
+            and parts[3] == "chemical-learning"
+        ):
+            return self._learning(parts[2], parts[4:])
         chemical_filters: dict[str, str] = {
             key: query[key][0]
             for key in ("compound", "target", "endpoint", "assay_type", "source")

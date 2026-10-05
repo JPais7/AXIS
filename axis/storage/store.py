@@ -149,6 +149,9 @@ class EvidenceStore:
         from axis.storage.computational import ComputationalRepository
 
         self.computational = ComputationalRepository(self)
+        from axis.storage.learning import LearningRepository
+
+        self.learning = LearningRepository(self)
 
     def __enter__(self) -> Self:
         return self

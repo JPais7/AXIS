@@ -1239,7 +1239,7 @@ def test_migration_012_upgrades_from_the_phase_37_schema(tmp_path: Path) -> None
             "INSERT INTO benchmark_sets VALUES ('s','x','development',false,'t',current_timestamp)"
         )
     with EvidenceStore(db) as store:
-        assert store.statistics().schema_version == 12
+        assert store.statistics().schema_version == 13
         assert (
             store._connection.execute("SELECT count(*) FROM benchmark_sets").fetchone()[
                 0
@@ -1248,7 +1248,7 @@ def test_migration_012_upgrades_from_the_phase_37_schema(tmp_path: Path) -> None
         )  # Phase 3.7 data intact
         cid = finish(CampaignService(store), "synthetic-generic")
     with EvidenceStore(db, read_only=True) as store:
-        assert store.statistics().schema_version == 12
+        assert store.statistics().schema_version == 13
         assert CampaignService(store).view(cid)["prioritization"]["outcome"] == "panel"
 
 

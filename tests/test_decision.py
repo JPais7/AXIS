@@ -746,16 +746,16 @@ def test_migration_9_clean_and_legacy_upgrade(tmp_path):
                     [int(item.name[:3]), item.name],
                 )
     with EvidenceStore(path) as store:
-        assert store.statistics().schema_version == 12
+        assert store.statistics().schema_version == 13
         protein, service = init(store)
         service.build(PROJECT, protein, created_at=FIXED)
     with EvidenceStore(path, read_only=True) as store:
-        assert store.statistics().schema_version == 12
+        assert store.statistics().schema_version == 13
         assert store.decisions.latest_state(
             PROJECT, store.targets.project_ids(PROJECT)[0]
         )
     with EvidenceStore() as clean:
-        assert clean.statistics().schema_version == 12
+        assert clean.statistics().schema_version == 13
 
 
 def test_referential_integrity_and_child_rows(imported):
