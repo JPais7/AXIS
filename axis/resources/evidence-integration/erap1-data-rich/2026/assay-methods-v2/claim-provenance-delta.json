@@ -1,0 +1,110 @@
+[
+  {
+    "added_support": [
+      {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "artifact": "targeted/tin-preprint.pdf",
+        "bytes": 1588198,
+        "content_type": "application/pdf",
+        "public_available_date": "2025-11-17",
+        "publication_version": "10.1101/2025.11.17.686761:v1",
+        "redistributed": false,
+        "retrieved_at": "2026-10-05T19:33:45.889883+00:00",
+        "sha256": "2ff84c0d1bc55610a0bbba09e1639f6520fadb0b2e0ffbc6b0a09f724576e1e2",
+        "source_type": "preprint",
+        "url": "https://www.biorxiv.org/content/10.1101/2025.11.17.686761v1.full.pdf"
+      },
+      {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "artifact": "targeted/tin-preprint-si.pdf",
+        "bytes": 2720779,
+        "content_type": "application/pdf",
+        "public_available_date": "2025-11-17",
+        "publication_version": "10.1101/2025.11.17.686761:v1",
+        "redistributed": false,
+        "retrieved_at": "2026-10-05T19:35:20.904453+00:00",
+        "sha256": "0b9a9d9d18cf22b8f5f2e389e9dfee544925a6cb8343d8b98355d36d6812c7b8",
+        "source_type": "preprint SI",
+        "url": "https://www.biorxiv.org/content/biorxiv/early/2025/11/17/2025.11.17.686761/DC1/embed/media-1.pdf?download=true"
+      }
+    ],
+    "admission": "source context only; no integrated engine admission",
+    "delta": "Preprint methods recovered; final SI controls numbers",
+    "immutable_claim_replaced": false,
+    "parent_claim_id": "closure:claim:tinworth-controls",
+    "parent_envelope_sha256": "7b2d69803fc976ef150a7cc50e35f36b81244fa826a9ed6c0c685fead3384e9c",
+    "review_state": "pending_review"
+  },
+  {
+    "added_support": [
+      {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "artifact": "targeted/tin-preprint.pdf",
+        "bytes": 1588198,
+        "content_type": "application/pdf",
+        "public_available_date": "2025-11-17",
+        "publication_version": "10.1101/2025.11.17.686761:v1",
+        "redistributed": false,
+        "retrieved_at": "2026-10-05T19:33:45.889883+00:00",
+        "sha256": "2ff84c0d1bc55610a0bbba09e1639f6520fadb0b2e0ffbc6b0a09f724576e1e2",
+        "source_type": "preprint",
+        "url": "https://www.biorxiv.org/content/10.1101/2025.11.17.686761v1.full.pdf"
+      },
+      {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "artifact": "targeted/tin-preprint-si.pdf",
+        "bytes": 2720779,
+        "content_type": "application/pdf",
+        "public_available_date": "2025-11-17",
+        "publication_version": "10.1101/2025.11.17.686761:v1",
+        "redistributed": false,
+        "retrieved_at": "2026-10-05T19:35:20.904453+00:00",
+        "sha256": "0b9a9d9d18cf22b8f5f2e389e9dfee544925a6cb8343d8b98355d36d6812c7b8",
+        "source_type": "preprint SI",
+        "url": "https://www.biorxiv.org/content/biorxiv/early/2025/11/17/2025.11.17.686761/DC1/embed/media-1.pdf?download=true"
+      }
+    ],
+    "admission": "source context only; no integrated engine admission",
+    "delta": "Preprint methods recovered; final SI controls numbers",
+    "immutable_claim_replaced": false,
+    "parent_claim_id": "closure:claim:tinworth-dmpk",
+    "parent_envelope_sha256": "4127efd982dddd3de562fd0e9e595bd13828586cb62b17a23efdaab1d627648e",
+    "review_state": "pending_review"
+  },
+  {
+    "added_support": [
+      {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "artifact": "targeted/tin-preprint.pdf",
+        "bytes": 1588198,
+        "content_type": "application/pdf",
+        "public_available_date": "2025-11-17",
+        "publication_version": "10.1101/2025.11.17.686761:v1",
+        "redistributed": false,
+        "retrieved_at": "2026-10-05T19:33:45.889883+00:00",
+        "sha256": "2ff84c0d1bc55610a0bbba09e1639f6520fadb0b2e0ffbc6b0a09f724576e1e2",
+        "source_type": "preprint",
+        "url": "https://www.biorxiv.org/content/10.1101/2025.11.17.686761v1.full.pdf"
+      },
+      {
+        "accessibility": "LEGITIMATELY_ACCESSIBLE",
+        "artifact": "targeted/tin-preprint-si.pdf",
+        "bytes": 2720779,
+        "content_type": "application/pdf",
+        "public_available_date": "2025-11-17",
+        "publication_version": "10.1101/2025.11.17.686761:v1",
+        "redistributed": false,
+        "retrieved_at": "2026-10-05T19:35:20.904453+00:00",
+        "sha256": "0b9a9d9d18cf22b8f5f2e389e9dfee544925a6cb8343d8b98355d36d6812c7b8",
+        "source_type": "preprint SI",
+        "url": "https://www.biorxiv.org/content/biorxiv/early/2025/11/17/2025.11.17.686761/DC1/embed/media-1.pdf?download=true"
+      }
+    ],
+    "admission": "source context only; no integrated engine admission",
+    "delta": "Preprint methods recovered; final SI controls numbers",
+    "immutable_claim_replaced": false,
+    "parent_claim_id": "closure:claim:tinworth-cia",
+    "parent_envelope_sha256": "4fb87b58d1f7a98a6cf603a2367bfd5d4738f14ad5573f6ba37e1072c79e7d15",
+    "review_state": "pending_review"
+  }
+]

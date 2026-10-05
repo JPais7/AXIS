@@ -1,0 +1,22 @@
+{
+  "conditions": {
+    "Chemical Learning eligibility": "Explicit scientific refusal despite some prior numeric passes; no threshold changes or model",
+    "Claim-level evidence integration": "Defensible subset roundtripped in existing Claim store; rejected assays and final integrated engine inputs excluded",
+    "Offline reproducibility": "Refusal, admitted claims, selectivity and partial-audit computations replay; no completed integrated decision claimed"
+  },
+  "gates": {
+    "Assay normalization": "FAIL",
+    "Chemical Learning eligibility": "PASS WITH CONDITIONS",
+    "Chemical identity": "PASS WITH CONDITIONS",
+    "Claim-level evidence integration": "PASS WITH CONDITIONS",
+    "Data acquisition": "PASS WITH CONDITIONS",
+    "Data provenance": "PASS WITH CONDITIONS",
+    "Decision causality": "FAIL",
+    "Epistemic integrity": "PASS WITH CONDITIONS",
+    "External-review readiness": "FAIL",
+    "Immunopeptidome reproducibility": "PASS WITH CONDITIONS",
+    "Offline reproducibility": "PASS WITH CONDITIONS",
+    "Structural integration": "PASS WITH CONDITIONS"
+  },
+  "verdict": "NOT READY FOR INDEPENDENT SCIENTIFIC REVIEW"
+}

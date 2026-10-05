@@ -1,0 +1,23 @@
+{
+  "review_state": "pending_review",
+  "existing_rule": "axis.pharmacology.selectivity.compare; unchanged",
+  "numeric_selectivity": "See selectivity.json: executed on Tinworth compound21 inputs; no ratio or bound admitted",
+  "comparisons": [
+    {"families":"BRADSHAW within biochemical or within cellular", "status":"INSUFFICIENT_METHOD_INFORMATION", "reason":"Source endpoints/means/N/SD accessible; no explicit potency-method inheritance in SI"},
+    {"families":"Tinworth human biochemical within preprint programme", "status":"PARTIALLY_COMPARABLE", "reason":"Explicit Liddle inheritance recovers Hap2,1nM enzyme,5uM YTAFTIPSI,pH7,buffer,60min,RapidFire,4PL; temperature/dose range/preincubation and tested form not confirmed; final main consistency limited"},
+    {"families":"Tinworth HeLa within one normalization scheme", "status":"PARTIALLY_COMPARABLE", "reason":"40h reporter protocol inherited; final SI per-row replicate information controls; endogenous allotype/HLA/ERAP2 unresolved; no normalized learning admission"},
+    {"families":"Tinworth HeLa KK versus compound6 normalization", "status":"NOT_COMPARABLE", "reason":"Different low controls and baseline conventions; compound21 7.25 and7.05 are separate outputs, not independent samples to pool"},
+    {"families":"BRADSHAW versus Tinworth", "status":"INSUFFICIENT_METHOD_INFORMATION", "reason":"Cannot borrow Tinworth or Hryczanek protocol to fill BRADSHAW potency methods"},
+    {"families":"Either 2026 programme versus historical Maben", "status":"INSUFFICIENT_METHOD_INFORMATION", "reason":"No matched compound/form/construct/substrate/conditions; no new Maben occupancy experiment"},
+    {"families":"Tinworth ERAP1 versus ERAP2 or LNPEP", "status":"NOT_COMPARABLE", "reason":"YTAFTIPSI peptide versus Arg-AMC/Leu-AMC fluorescence; target preparation/conditions incomplete; actual existing rules refuse numeric ratios"},
+    {"families":"Tinworth human ERAP1 versus mouse ERAAP", "status":"NOT_COMPARABLE", "reason":"Different species/construct; no assay-concentration inheritance from human to mouse; substrate text conflict preserved"}
+  ],
+  "Chemical_Learning": {
+    "historical":"MODEL NOT BUILT",
+    "candidate_admission":"REFUSED_ASSAY_NORMALIZATION",
+    "new_existing_eligibility_run":false,
+    "reason":"Comparability, tested-form/stereo and replicate context not fully admissible; previous numeric diagnostics remain diagnostics, not scientific admission",
+    "predictive_model_built":false,
+    "pooling":false
+  }
+}

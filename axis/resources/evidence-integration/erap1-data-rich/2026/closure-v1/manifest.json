@@ -1,0 +1,36 @@
+{
+  "algorithm": "erap1-scientific-closure-1",
+  "boundary": "Completed bounded refusal audit, not an integrated DecisionState",
+  "checksums": {
+    "acceptance-matrix.json": "e685f47a4ccd40a1813915ff920976d3939b35fd3c6397758b5bbc2e19e47002",
+    "adjudication.json": "f0582fa17d97e1bd9a23e07373641bae532e28e8b72376049d01a3032e2b924b",
+    "assay-comparability.json": "644abccd778479a77a88cd1ed6e6db35ca6835ff53797bcb31a4b306dc3b7af7",
+    "bounded-gap-search.json": "1674b0b27f56461b1bc0612d98c45b1d5fb190280817e72a32cdc33a2cbc8f4f",
+    "causal-decision-diff.json": "c46a69a1829df61b3f7f7150715c634c26d9426599f72920d077ea1830ee3917",
+    "claim-curation.json": "79f892e0c11ce37cd29277c6003e248038355e4eb2275b465286e8cfe0f78497",
+    "decision-refusal.json": "e7bee38d7da75c09e61603adcbb80ccacb38b4c9e72d74a0c8a8b40de1b5e23a",
+    "integrated-claims.json": "e4ad709eb129118029a5203314384f1c1e78dc2aeacb81e6f72e0161f322729c",
+    "learning-eligibility.json": "682f84c08f4346fccdbb59def9986da80348833592be3d201c79569a9f87ebc4",
+    "repository-state.json": "4e9b95d47d17c9e766c982975ec8135e360933684da59ad183ee63d8f90b378f",
+    "source-adjudication.json": "8d4db74eb6715f50d9ac996d99350c3edee940e3f8b3a7a4bef1d74df82c1ec4",
+    "unresolved-blockers.json": "ee122589562101ac5318ddc99323f72907f6a767deca387484422c6dc8b64c2d",
+    "validation.json": "95a4cb5410f1a299a1baeb41c53e6f9207b492f6785dc9a6ca4041e75bdf48e5"
+  },
+  "code_sha256": "05b932f738512a4fd67eddf56aecee9ec3aff78bb6b27ed293cc4ccae195887d",
+  "cutoff": "2026-10-05",
+  "environment": {
+    "duckdb": "1.5.5",
+    "gemmi": "0.7.5",
+    "httpx": "0.28.1",
+    "mypy": "2.4.0",
+    "numpy": "2.5.1",
+    "pytest": "9.1.1",
+    "rdkit": "2025.9.3",
+    "ruff": "0.16.10",
+    "scipy": "1.18.0"
+  },
+  "random_seed": null,
+  "review_state": "pending_review",
+  "status": "NOT READY FOR INDEPENDENT SCIENTIFIC REVIEW",
+  "v1_manifest_sha256": "d343947367d17ec97da5fd6d3eb39597b186845d225812a9bad1ddac738c97f8"
+}

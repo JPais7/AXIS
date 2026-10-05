@@ -1,0 +1,12 @@
+{
+  "baseline_sha": "d491ebe47ee0c40dfaa3823a44a9decd1afae29d",
+  "branch": "codex/erap1-data-rich-evidence-integration-2026",
+  "canonical_before_sha256": "0dffb58a5b0a75320945ab1b5d31a07c4dfb036b545f74de550f347c32f2d991",
+  "canonical_commercial_snapshot_sha256": "83b2bcff0b58daccfeda58126d918d593e002e1499382f1ddfa450fe2737ee68",
+  "closure_changes": "uncommitted; no commit/push/merge authorized in this request",
+  "final_sha": "c901d3061a7f0d3d4f3169da99b7ad528834d9b9",
+  "frozen_v1_manifest_sha256": "d343947367d17ec97da5fd6d3eb39597b186845d225812a9bad1ddac738c97f8",
+  "remote_branch_verified_sha": "c901d3061a7f0d3d4f3169da99b7ad528834d9b9",
+  "remote_main_verified_sha": "d491ebe47ee0c40dfaa3823a44a9decd1afae29d",
+  "starting_sha": "c901d3061a7f0d3d4f3169da99b7ad528834d9b9"
+}

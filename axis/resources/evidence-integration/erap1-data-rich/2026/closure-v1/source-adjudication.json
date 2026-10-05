@@ -1,0 +1,703 @@
+{
+  "artifacts": [
+    {
+      "bytes": 3097335,
+      "cache_path": "9GJN.cif",
+      "retrieved_at": "2026-10-05T18:08:18.251105+00:00",
+      "sha256": "9793d0f77c6d4934a040d7642beb40f09938f934880d2dce5ed9cd0964973ef9",
+      "url": "https://files.rcsb.org/download/9GJN.cif"
+    },
+    {
+      "bytes": 1595880,
+      "cache_path": "9GJS.cif",
+      "retrieved_at": "2026-10-05T18:08:18.750476+00:00",
+      "sha256": "92d4b68f3f48d8cbc52b771918ef6819bdf7ced8f8708b087d916009c843f8ba",
+      "url": "https://files.rcsb.org/download/9GJS.cif"
+    },
+    {
+      "bytes": 1643013,
+      "cache_path": "9GK6.cif",
+      "retrieved_at": "2026-10-05T18:08:19.272407+00:00",
+      "sha256": "dfe3bf10a7cd37edc3ced30f085bc1158b26aceb38434e06160892188f07b68c",
+      "url": "https://files.rcsb.org/download/9GK6.cif"
+    },
+    {
+      "bytes": 912796,
+      "cache_path": "9GKE.cif",
+      "retrieved_at": "2026-10-05T18:08:19.733842+00:00",
+      "sha256": "f8037bf57fe55ef3cf3ce96762a9f53256ca4f72d23af8e07f31b48ee0eda4f3",
+      "url": "https://files.rcsb.org/download/9GKE.cif"
+    },
+    {
+      "bytes": 1623810,
+      "cache_path": "9TD3.cif",
+      "retrieved_at": "2026-10-05T18:08:20.247671+00:00",
+      "sha256": "0c3ac5f1032450d5a6fa871143d4672362e40a3ea70c08def315839aafe8298a",
+      "url": "https://files.rcsb.org/download/9TD3.cif"
+    },
+    {
+      "bytes": 1637438,
+      "cache_path": "9TD4.cif",
+      "retrieved_at": "2026-10-05T18:08:20.670976+00:00",
+      "sha256": "c2ecebe677c3cb7dda0a302d5c24208f60d243455999d7f2ac70ee56d95451de",
+      "url": "https://files.rcsb.org/download/9TD4.cif"
+    },
+    {
+      "bytes": 1650140,
+      "cache_path": "9TD5.cif",
+      "retrieved_at": "2026-10-05T18:08:20.250480+00:00",
+      "sha256": "3c04ff7331ada5f216e97e0ddcc14a111749f4df6948505fd4467d3e93cf3489",
+      "url": "https://files.rcsb.org/download/9TD5.cif"
+    },
+    {
+      "bytes": 1629723,
+      "cache_path": "9TD7.cif",
+      "retrieved_at": "2026-10-05T18:08:20.756989+00:00",
+      "sha256": "b9cc9d5f5f71a334f6f9b1b17fa1965fd2f0fcca5d3e2be80d45808dd83ae3b7",
+      "url": "https://files.rcsb.org/download/9TD7.cif"
+    },
+    {
+      "bytes": 1566839,
+      "cache_path": "9TF3.cif",
+      "retrieved_at": "2026-10-05T18:08:21.090958+00:00",
+      "sha256": "3d82784437279393c8bc2a966f3135bd0a97085173bcba49bf6b8eee708b15ff",
+      "url": "https://files.rcsb.org/download/9TF3.cif"
+    },
+    {
+      "bytes": 1617287,
+      "cache_path": "9TF4.cif",
+      "retrieved_at": "2026-10-05T18:08:21.259114+00:00",
+      "sha256": "a1dc071b438c2dfaf5f24650ec5348cab2a6fd0949e5fc27e02c77ac1c57ab93",
+      "url": "https://files.rcsb.org/download/9TF4.cif"
+    },
+    {
+      "bytes": 1594651,
+      "cache_path": "9TF6.cif",
+      "retrieved_at": "2026-10-05T18:08:21.692179+00:00",
+      "sha256": "2f41bafb77660fffc439b063667e86703948b4aa2ec030350ce9d933f052db17",
+      "url": "https://files.rcsb.org/download/9TF6.cif"
+    },
+    {
+      "bytes": 1613831,
+      "cache_path": "9TFN.cif",
+      "retrieved_at": "2026-10-05T18:08:21.702871+00:00",
+      "sha256": "57076f87c1fd05b1dcaed101da8a11d38fdad36a41eca00ad7f93d8c28ceba7b",
+      "url": "https://files.rcsb.org/download/9TFN.cif"
+    },
+    {
+      "bytes": 85760,
+      "cache_path": "PMC11647717.xml",
+      "retrieved_at": "2026-10-05T18:08:17.058292+00:00",
+      "sha256": "57e91b35dc285b3ab8240e6ea51b2e0984eace7f9119fafb352a27636228498d",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11647717/fullTextXML"
+    },
+    {
+      "bytes": 178568,
+      "cache_path": "PMC12136889.xml",
+      "retrieved_at": "2026-10-05T18:14:32.972905+00:00",
+      "sha256": "a58181eaa1dd56a4338492ced947655fdf728563fa10da0241e8b4070ea31b0d",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12136889/fullTextXML"
+    },
+    {
+      "bytes": 148749,
+      "cache_path": "PMC12779449.xml",
+      "retrieved_at": "2026-10-05T18:14:32.998100+00:00",
+      "sha256": "fae0250dd4948a0a8ae66fc304ebb7b280761cab8c205cf9cd194f7aaf57b9a7",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12779449/fullTextXML"
+    },
+    {
+      "bytes": 138479,
+      "cache_path": "PMC8024916.xml",
+      "retrieved_at": "2026-10-05T18:08:16.498945+00:00",
+      "sha256": "6802e6de8041557bba69913adbb6f92300ba5c417afa769e05c0f8e7b4bb0432",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8024916/fullTextXML"
+    },
+    {
+      "bytes": 159301,
+      "cache_path": "PMC9368314.xml",
+      "retrieved_at": "2026-10-05T18:08:16.499593+00:00",
+      "sha256": "616a010892105bdcd0248a14810cc730115945b859215fd4f292a860e3934d55",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9368314/fullTextXML"
+    },
+    {
+      "bytes": 86826,
+      "cache_path": "PMC9892207.bioc.xml",
+      "retrieved_at": "2026-10-05T18:23:52.770185+00:00",
+      "sha256": "4ada8762fcd0c71e4b6433fe8b46ae6018b7b5392c28ed2520dc4a67341dbda1",
+      "url": "https://www.ncbi.nlm.nih.gov/research/bionlp/RESTful/pmcoa.cgi/BioC_xml/PMC9892207/unicode"
+    },
+    {
+      "bytes": 26431,
+      "cache_path": "east1-registry.json",
+      "retrieved_at": "2026-10-05T18:23:08.664307+00:00",
+      "sha256": "a1e93c8d5ad40b09affe79efd546871dbb222b64fa1099e847d167a68a318e0e",
+      "url": "https://clinicaltrials.gov/api/v2/studies/NCT07047703"
+    },
+    {
+      "bytes": 44115,
+      "cache_path": "east1-sponsor.html",
+      "retrieved_at": "2026-10-05T18:23:52.770035+00:00",
+      "sha256": "5589c640a1a07ed07b24f59dd7163a7b8f79d7825745d40e6fca39a2f95c5bbf",
+      "url": "https://www.greywolftherapeutics.com/news/greywolftherapeutics-doses-first-participants-with-axspa-in-novel-erap1-inhibitor-trial"
+    },
+    {
+      "bytes": 1566750,
+      "cache_path": "focis2025.pdf",
+      "retrieved_at": "2026-10-05T18:23:08.652705+00:00",
+      "sha256": "9db935d477c3d0685425a539fc933f60e94aefb6fac6b3042b40e3fa36fec877",
+      "url": "https://focisnet.org/wp-content/uploads/2025-FINAL-ABSTRACT-SUPPLEMENT-06.23.25.pdf"
+    },
+    {
+      "bytes": 1792967,
+      "cache_path": "si/jm5c03071_si_001.pdf",
+      "retrieved_at": "2026-10-05T18:14:32.148499+00:00",
+      "sha256": "c4c3b8a379ea6db1c44dcd925bb5dabc6ed25a86028c98a52a4068eca28673bb",
+      "url": "https://ndownloader.figshare.com/files/63695172"
+    },
+    {
+      "bytes": 1979148,
+      "cache_path": "si/jm6c00029_si_001.pdf",
+      "retrieved_at": "2026-10-05T18:14:32.147786+00:00",
+      "sha256": "80a2836fee6bf9f437fce86a44478a9f230e37629cbd96cd1ddfcdf1aac4a3db",
+      "url": "https://ndownloader.figshare.com/files/65745763"
+    },
+    {
+      "bytes": 1245848,
+      "cache_path": "si/ml4c00401_si_001.pdf",
+      "retrieved_at": "2026-10-05T18:14:32.148378+00:00",
+      "sha256": "c80357c522330db09b0186f6aa6a3896d581f1ccc9c1d427f606671d8951d267",
+      "url": "https://ndownloader.figshare.com/files/50285819"
+    },
+    {
+      "bytes": 2687469,
+      "cache_path": "temponeras2023-valid.pdf",
+      "retrieved_at": "2026-10-05T18:23:52.769378+00:00",
+      "sha256": "0b7105319ed305d689647a7418564454669930b492050f62361a63e1fbfebe7e",
+      "url": "https://dspace.library.uu.nl/bitstreams/b432d0c6-2eef-45ed-b197-bc76898d4191/download"
+    }
+  ],
+  "assays": [
+    {
+      "admission": "SOURCE_REPORTED_SAR_ONLY",
+      "artifact": "PMC11647717.xml",
+      "context": "biochemical",
+      "fields": {
+        "construct_allotype": {
+          "state": "PARTIALLY VERIFIED",
+          "value": "Hap2 explicitly stated; exact assay preparation sequence/concentrations not independently resolved here"
+        },
+        "duration": {
+          "state": "PARTIALLY VERIFIED",
+          "value": null
+        },
+        "endpoint": {
+          "state": "VERIFIED",
+          "value": "ERAP1 pIC50"
+        },
+        "engagement_method": {
+          "state": "NOT APPLICABLE",
+          "value": "Isolated enzyme activity, not cellular occupancy"
+        },
+        "exposure": {
+          "state": "PARTIALLY VERIFIED",
+          "value": "Concentration-response endpoint; exact enzyme/substrate concentrations unresolved"
+        },
+        "protocol": {
+          "state": "PARTIALLY VERIFIED",
+          "value": "Mass-spectrometry detection of YTAFTIPSI cleavage to TAFTIPSI; source cites earlier protocol"
+        },
+        "substrate": {
+          "state": "VERIFIED",
+          "value": "YTAFTIPSI"
+        }
+      },
+      "id": "hry-2024-enzyme",
+      "locator": "Results: enzymatic assay paragraph; Hap2 discussion; SI S35 Table S1",
+      "pooling": "REFUSED with cellular data, counterscreens and 2026 publications",
+      "source": "10.1021/acsmedchemlett.4c00401"
+    },
+    {
+      "admission": "INTEGRATE_CONTEXT_SPECIFIC_PRESENTATION",
+      "artifact": "si/ml4c00401_si_001.pdf",
+      "context": "cellular antigen presentation",
+      "fields": {
+        "construct_allotype": {
+          "state": "PARTIALLY VERIFIED",
+          "value": "Endogenous HeLa ERAP1; allotype not reported in inspected methods"
+        },
+        "duration": {
+          "state": "VERIFIED",
+          "value": "40 h"
+        },
+        "endpoint": {
+          "state": "VERIFIED",
+          "value": "Antigen-presentation pIC50"
+        },
+        "engagement_method": {
+          "state": "NOT APPLICABLE",
+          "value": "Presentation assay does not directly measure occupancy"
+        },
+        "exposure": {
+          "state": "VERIFIED",
+          "value": "Concentration-response; DMSO 0.5%; control ERAP1 inhibitor 50 uM FAC"
+        },
+        "protocol": {
+          "state": "VERIFIED",
+          "value": "HeLa BacMam precursor and mouse H-2Kb/beta2m, 25.D1.16-APC flow cytometry, four-parameter concentration-response fit"
+        },
+        "substrate": {
+          "state": "VERIFIED",
+          "value": "LEQLESIINFEKL precursor; SIINFEKL presentation"
+        }
+      },
+      "id": "hry-2024-cell",
+      "locator": "S34 Cellular Antigen Presentation Assay; S36 Table S2",
+      "pooling": "REFUSED with biochemical endpoints and other publications",
+      "source": "10.1021/acsmedchemlett.4c00401"
+    },
+    {
+      "admission": "REFUSED_ASSAY_NORMALIZATION_AND_LEARNING",
+      "artifact": "si/jm5c03071_si_001.pdf",
+      "context": "biochemical",
+      "fields": {
+        "construct_allotype": {
+          "state": "INACCESSIBLE",
+          "value": null
+        },
+        "duration": {
+          "state": "INACCESSIBLE",
+          "value": null
+        },
+        "endpoint": {
+          "state": "VERIFIED",
+          "value": "ERAP1 pIC50, source aggregate mean and N/SD where listed"
+        },
+        "engagement_method": {
+          "state": "NOT APPLICABLE",
+          "value": "Biochemical endpoint does not establish cellular occupancy"
+        },
+        "exposure": {
+          "state": "INACCESSIBLE",
+          "value": null
+        },
+        "protocol": {
+          "state": "INACCESSIBLE",
+          "value": null
+        },
+        "substrate": {
+          "state": "INACCESSIBLE",
+          "value": null
+        }
+      },
+      "id": "bradshaw-2026-enzyme",
+      "locator": "Entire SI S1-S75 inspected; S60 Table S2; associated CSV source rows",
+      "pooling": "REFUSED; do not borrow Hryczanek protocol from a reference list",
+      "source": "10.1021/acs.jmedchem.5c03071"
+    },
+    {
+      "admission": "REFUSED_ASSAY_NORMALIZATION_AND_LEARNING",
+      "artifact": "si/jm5c03071_si_001.pdf",
+      "context": "cellular",
+      "fields": {
+        "construct_allotype": {
+          "state": "INACCESSIBLE",
+          "value": null
+        },
+        "duration": {
+          "state": "INACCESSIBLE",
+          "value": null
+        },
+        "endpoint": {
+          "state": "VERIFIED",
+          "value": "HeLa antigen presentation pIC50"
+        },
+        "engagement_method": {
+          "state": "INACCESSIBLE",
+          "value": "Presentation endpoint is not occupancy; separate direct-engagement experiment cannot be assessed from accessible SI"
+        },
+        "exposure": {
+          "state": "INACCESSIBLE",
+          "value": null
+        },
+        "protocol": {
+          "state": "INACCESSIBLE",
+          "value": null
+        },
+        "substrate": {
+          "state": "INACCESSIBLE",
+          "value": null
+        }
+      },
+      "id": "bradshaw-2026-cell",
+      "locator": "S60 Table S2; CSV column HeLa antigen presentation pIC50",
+      "pooling": "REFUSED",
+      "source": "10.1021/acs.jmedchem.5c03071"
+    },
+    {
+      "admission": "REFUSED_ASSAY_NORMALIZATION_AND_LEARNING",
+      "artifact": "si/jm6c00029_si_001.pdf",
+      "context": "biochemical",
+      "fields": {
+        "construct_allotype": {
+          "state": "INACCESSIBLE",
+          "value": null
+        },
+        "duration": {
+          "state": "INACCESSIBLE",
+          "value": null
+        },
+        "endpoint": {
+          "state": "VERIFIED",
+          "value": "ERAP1 pIC50"
+        },
+        "engagement_method": {
+          "state": "NOT APPLICABLE",
+          "value": "Biochemical endpoint does not establish cellular occupancy"
+        },
+        "exposure": {
+          "state": "INACCESSIBLE",
+          "value": null
+        },
+        "protocol": {
+          "state": "INACCESSIBLE",
+          "value": null
+        },
+        "substrate": {
+          "state": "INACCESSIBLE",
+          "value": null
+        }
+      },
+      "id": "tinworth-2026-enzyme",
+      "locator": "Entire SI S1-S38 inspected; S5 Supplementary Table 1; associated CSV",
+      "pooling": "REFUSED",
+      "source": "10.1021/acs.jmedchem.6c00029"
+    },
+    {
+      "admission": "REFUSED_ASSAY_NORMALIZATION_AND_LEARNING",
+      "artifact": "si/jm6c00029_si_001.pdf",
+      "context": "cellular",
+      "fields": {
+        "construct_allotype": {
+          "state": "INACCESSIBLE",
+          "value": null
+        },
+        "duration": {
+          "state": "INACCESSIBLE",
+          "value": null
+        },
+        "endpoint": {
+          "state": "VERIFIED",
+          "value": "HeLa antigen presentation pIC50"
+        },
+        "engagement_method": {
+          "state": "INACCESSIBLE",
+          "value": "No direct occupancy conclusion from presentation or X-ray structures"
+        },
+        "exposure": {
+          "state": "INACCESSIBLE",
+          "value": null
+        },
+        "protocol": {
+          "state": "PARTIALLY VERIFIED",
+          "value": "Two source control schemes, not interchangeable; full method inaccessible"
+        },
+        "substrate": {
+          "state": "PARTIALLY VERIFIED",
+          "value": "KK-SIINFEKL is a control label, not proof of the exact tested precursor or full protocol"
+        }
+      },
+      "id": "tinworth-2026-cell",
+      "locator": "S5 Supplementary Table 1; separate KK-SIINFEKL and compound-6 normalization columns",
+      "pooling": "REFUSED across control schemes and programmes",
+      "source": "10.1021/acs.jmedchem.6c00029"
+    },
+    {
+      "admission": "CONTEXTUALIZE_DMPK_ONLY",
+      "artifact": "si/jm6c00029_si_001.pdf",
+      "context": "in vitro DMPK, not human participant PK",
+      "fields": {
+        "construct_allotype": {
+          "state": "NOT APPLICABLE",
+          "value": null
+        },
+        "duration": {
+          "state": "VERIFIED",
+          "value": "Sampling 0-240 min"
+        },
+        "endpoint": {
+          "state": "VERIFIED",
+          "value": "Hepatocyte intrinsic clearance, scaled mL/min/kg; unbound estimate separately reported"
+        },
+        "engagement_method": {
+          "state": "NOT APPLICABLE",
+          "value": null
+        },
+        "exposure": {
+          "state": "VERIFIED",
+          "value": "0.5 uM compound, 0.5 million cells/mL"
+        },
+        "protocol": {
+          "state": "VERIFIED",
+          "value": "LC-MS/MS depletion in human hepatocytes, Williams Medium E, 37 C, 5% CO2, 200 rpm"
+        },
+        "substrate": {
+          "state": "NOT APPLICABLE",
+          "value": null
+        }
+      },
+      "id": "tinworth-2026-hepatocytes",
+      "locator": "S5 Supplementary Table 2",
+      "pooling": "No potency or human clinical inference",
+      "source": "10.1021/acs.jmedchem.6c00029"
+    },
+    {
+      "admission": "CONTEXTUALIZE_FIGURE_DESIGN_ONLY",
+      "artifact": "si/jm6c00029_si_001.pdf",
+      "context": "mouse collagen-induced arthritis; not axSpA",
+      "fields": {
+        "construct_allotype": {
+          "state": "INACCESSIBLE",
+          "value": null
+        },
+        "duration": {
+          "state": "PARTIALLY VERIFIED",
+          "value": "Termination day 36; treatment-start definition requires main methods"
+        },
+        "endpoint": {
+          "state": "VERIFIED",
+          "value": "Source pathology/bodyweight figures; not independently digitized or statistically reanalysed"
+        },
+        "engagement_method": {
+          "state": "INACCESSIBLE",
+          "value": null
+        },
+        "exposure": {
+          "state": "PARTIALLY VERIFIED",
+          "value": "Compound 21 GSK235, 30/90/270 mg/kg BID oral; measured exposure inaccessible"
+        },
+        "protocol": {
+          "state": "PARTIALLY VERIFIED",
+          "value": "Body weight/knee pathology, day 36; paw clinical scores D18-D36; randomization, group sizes and full design inaccessible"
+        },
+        "substrate": {
+          "state": "NOT APPLICABLE",
+          "value": null
+        }
+      },
+      "id": "tinworth-2026-cia",
+      "locator": "S2 Supplementary Figures 1/2; S7 Supplementary Table 4",
+      "pooling": "REFUSED as axSpA efficacy, target dependency or cellular engagement",
+      "source": "10.1021/acs.jmedchem.6c00029"
+    }
+  ],
+  "cutoff": "2026-10-05",
+  "publication_identity": [
+    {
+      "accessibility": "SUPPLEMENT_ACCESSIBLE",
+      "action": "INSUFFICIENT_ACCESS",
+      "boundary": "Access classification is claim-specific; indexed metadata does not imply full adjudication",
+      "doi": "10.1021/acs.jmedchem.5c03071",
+      "eligible_by_cutoff": true,
+      "first_publication_date": "2026-04-13",
+      "pmcid": null,
+      "pmid": "41973545",
+      "review_state": "pending_review",
+      "title": "Automated Molecular Design in BRADSHAW, Applied to the Optimization of ERAP1 Inhibitors."
+    },
+    {
+      "accessibility": "SUPPLEMENT_ACCESSIBLE",
+      "action": "INSUFFICIENT_ACCESS",
+      "boundary": "Access classification is claim-specific; indexed metadata does not imply full adjudication",
+      "doi": "10.1021/acs.jmedchem.6c00029",
+      "eligible_by_cutoff": true,
+      "first_publication_date": "2026-06-21",
+      "pmcid": null,
+      "pmid": "42324823",
+      "review_state": "pending_review",
+      "title": "Discovery of an Orally Available Potent ER Aminopeptidase 1 (ERAP1) Inhibitor That Enhances Antitumor Responses and Limits Inflammatory Autoimmunity &lt;i&gt;In Vivo&lt;/i&gt;."
+    },
+    {
+      "accessibility": "FULL_TEXT_ACCESSIBLE",
+      "action": "CONTEXTUALIZE",
+      "boundary": "Access classification is claim-specific; indexed metadata does not imply full adjudication",
+      "doi": "10.1021/acsmedchemlett.4c00401",
+      "eligible_by_cutoff": true,
+      "first_publication_date": "2024-11-06",
+      "pmcid": "PMC11647717",
+      "pmid": "39691536",
+      "review_state": "pending_review",
+      "title": "Optimization of Potent and Selective Cyclohexyl Acid ERAP1 Inhibitors Using Structure- and Property-Based Drug Design."
+    },
+    {
+      "accessibility": "FULL_TEXT_ACCESSIBLE",
+      "action": "CONTEXTUALIZE",
+      "boundary": "Access classification is claim-specific; indexed metadata does not imply full adjudication",
+      "doi": "10.1002/art.42327",
+      "eligible_by_cutoff": true,
+      "first_publication_date": "2022-12-28",
+      "pmcid": "PMC9892207",
+      "pmid": "36577442",
+      "review_state": "pending_review",
+      "title": "Paradoxical Effects of Endoplasmic Reticulum Aminopeptidase 1 Deficiency on HLA-B27 and Its Role as an Epistatic Modifier in Experimental Spondyloarthritis."
+    },
+    {
+      "accessibility": "FULL_TEXT_ACCESSIBLE",
+      "action": "CONTEXTUALIZE",
+      "boundary": "Access classification is claim-specific; indexed metadata does not imply full adjudication",
+      "doi": "10.3390/cells11152427",
+      "eligible_by_cutoff": true,
+      "first_publication_date": "2022-08-05",
+      "pmcid": "PMC9368314",
+      "pmid": "35954271",
+      "review_state": "pending_review",
+      "title": "Functional &lt;i&gt;ERAP1&lt;/i&gt; Variants Distinctively Associate with Ankylosing Spondylitis Susceptibility under the Influence of &lt;i&gt;HLA-B27&lt;/i&gt; in Taiwanese."
+    },
+    {
+      "accessibility": "FULL_TEXT_ACCESSIBLE",
+      "action": "CONTEXTUALIZE",
+      "boundary": "Access classification is claim-specific; indexed metadata does not imply full adjudication",
+      "doi": "10.1002/eji.202350449",
+      "eligible_by_cutoff": true,
+      "first_publication_date": "2023-05-15",
+      "pmcid": null,
+      "pmid": "37134263",
+      "review_state": "pending_review",
+      "title": "Distinct modulation of cellular immunopeptidome by the allosteric regulatory site of ER aminopeptidase 1."
+    },
+    {
+      "accessibility": "FULL_TEXT_ACCESSIBLE",
+      "action": "CONTEXTUALIZE",
+      "boundary": "Access classification is claim-specific; indexed metadata does not imply full adjudication",
+      "doi": "10.3389/fimmu.2024.1415964",
+      "eligible_by_cutoff": true,
+      "first_publication_date": "2024-10-18",
+      "pmcid": "PMC11527673",
+      "pmid": "39493758",
+      "review_state": "pending_review",
+      "title": "Polymorphic positions 349 and 725 of the autoimmunity-protective allotype 10 of ER aminopeptidase 1 are key in determining its unique enzymatic properties."
+    },
+    {
+      "accessibility": "FULL_TEXT_ACCESSIBLE",
+      "action": "CONTEXTUALIZE",
+      "boundary": "Access classification is claim-specific; indexed metadata does not imply full adjudication",
+      "doi": "10.3390/ijms241713335",
+      "eligible_by_cutoff": true,
+      "first_publication_date": "2023-08-28",
+      "pmcid": "PMC10488187",
+      "pmid": "37686141",
+      "review_state": "pending_review",
+      "title": "ERAP1 and ERAP2 Haplotypes Influence Suboptimal HLA-B*27:05-Restricted Anti-Viral CD8+ T Cell Responses Cross-Reactive to Self-Epitopes."
+    },
+    {
+      "accessibility": "FULL_TEXT_ACCESSIBLE",
+      "action": "CONTEXTUALIZE",
+      "boundary": "Access classification is claim-specific; indexed metadata does not imply full adjudication",
+      "doi": "10.1111/imm.70056",
+      "eligible_by_cutoff": true,
+      "first_publication_date": "2025-10-23",
+      "pmcid": "PMC12779449",
+      "pmid": "41130749",
+      "review_state": "pending_review",
+      "title": "ERAP1 Allotypes 2 and 10 Differentially Regulate the Immunopeptidome of Melanocytes."
+    },
+    {
+      "accessibility": "FULL_TEXT_ACCESSIBLE",
+      "action": "CONTEXTUALIZE",
+      "boundary": "Access classification is claim-specific; indexed metadata does not imply full adjudication",
+      "doi": "10.1016/j.jbc.2021.100443",
+      "eligible_by_cutoff": true,
+      "first_publication_date": "2021-01-01",
+      "pmcid": "PMC8024916",
+      "pmid": "33617882",
+      "review_state": "pending_review",
+      "title": "Common allotypes of ER aminopeptidase 1 have substrate-dependent and highly variable enzymatic properties."
+    },
+    {
+      "accessibility": "FULL_TEXT_ACCESSIBLE",
+      "action": "CONTEXTUALIZE",
+      "boundary": "Access classification is claim-specific; indexed metadata does not imply full adjudication",
+      "doi": "10.1016/j.mcpro.2025.100964",
+      "eligible_by_cutoff": true,
+      "first_publication_date": "2025-04-04",
+      "pmcid": "PMC12136889",
+      "pmid": "40189142",
+      "review_state": "pending_review",
+      "title": "ERAP1 Activity Modulates the Immunopeptidome but Also Affects the Proteome, Metabolism, and Stress Responses in Cancer Cells."
+    },
+    {
+      "accessibility": "METADATA_ONLY",
+      "action": "INSUFFICIENT_ACCESS",
+      "boundary": "Access classification is claim-specific; indexed metadata does not imply full adjudication",
+      "doi": "10.1074/mcp.m116.066241",
+      "eligible_by_cutoff": true,
+      "first_publication_date": "2017-02-10",
+      "pmcid": "PMC5383784",
+      "pmid": "28188227",
+      "review_state": "pending_review",
+      "title": "The Human Leukocyte Antigen (HLA)-B27 Peptidome <i>in Vivo</i>, in Spondyloarthritis-susceptible HLA-B27 Transgenic Rats and the Effect of Erap1 Deletion."
+    },
+    {
+      "accessibility": "METADATA_ONLY",
+      "action": "INSUFFICIENT_ACCESS",
+      "boundary": "Access classification is claim-specific; indexed metadata does not imply full adjudication",
+      "doi": "10.1074/mcp.ra117.000565",
+      "eligible_by_cutoff": true,
+      "first_publication_date": "2018-04-09",
+      "pmcid": "PMC6030728",
+      "pmid": "29632046",
+      "review_state": "pending_review",
+      "title": "Ranking the Contribution of Ankylosing Spondylitis-associated Endoplasmic Reticulum Aminopeptidase 1 (ERAP1) Polymorphisms to Shaping the HLA-B*27 Peptidome."
+    },
+    {
+      "accessibility": "METADATA_ONLY",
+      "action": "INSUFFICIENT_ACCESS",
+      "boundary": "Access classification is claim-specific; indexed metadata does not imply full adjudication",
+      "doi": "10.1073/pnas.1408882111",
+      "eligible_by_cutoff": true,
+      "first_publication_date": "2014-11-24",
+      "pmcid": "PMC4267330",
+      "pmid": "25422414",
+      "review_state": "pending_review",
+      "title": "Functionally distinct ERAP1 allotype combinations distinguish individuals with Ankylosing Spondylitis."
+    },
+    {
+      "accessibility": "METADATA_ONLY",
+      "action": "INSUFFICIENT_ACCESS",
+      "boundary": "Access classification is claim-specific; indexed metadata does not imply full adjudication",
+      "doi": "10.1073/pnas.1618856114",
+      "eligible_by_cutoff": true,
+      "first_publication_date": "2017-01-03",
+      "pmcid": "PMC5255627",
+      "pmid": "28049827",
+      "review_state": "pending_review",
+      "title": "ERAP1 association with ankylosing spondylitis is attributable to common genotypes rather than rare haplotype combinations."
+    }
+  ],
+  "publisher_attempts": [
+    {
+      "cache_path": "bradshaw-publisher.html",
+      "error": "HTTP Error 403: Forbidden",
+      "redistributed": false,
+      "request_body": null,
+      "retrieved_at": "2026-10-05T18:23:08.578129+00:00",
+      "status": "FAILED",
+      "url": "https://pubs.acs.org/doi/10.1021/acs.jmedchem.5c03071"
+    },
+    {
+      "cache_path": "tinworth-publisher.html",
+      "error": "HTTP Error 403: Forbidden",
+      "redistributed": false,
+      "request_body": null,
+      "retrieved_at": "2026-10-05T18:23:08.577593+00:00",
+      "status": "FAILED",
+      "url": "https://pubs.acs.org/doi/10.1021/acs.jmedchem.6c00029"
+    }
+  ],
+  "refused_promotions": [
+    "2026 assay protocol borrowed from 2024 reference or crystal construct",
+    "Tinworth CIA/cancer efficacy, dependency or occupancy without sufficient main methods",
+    "Sponsor/conference evidence promoted into independently adjudicated human results",
+    "New-compound engagement transferred to historical Maben chemistry"
+  ],
+  "review_state": "pending_review"
+}

@@ -1,0 +1,67 @@
+{
+  "review_state": "pending_review",
+  "relationship": {
+    "from": "10.1101/2025.11.17.686761:v1",
+    "to": "10.1021/acs.jmedchem.6c00029",
+    "predicate": "precursor_to",
+    "epistemic_kind": "axis_inference",
+    "independent_replication": false,
+    "evidence": [
+      "Same title, programme, 32-author sequence and GSK/Cellzome/Demokritos affiliations, compared with frozen Europe PMC final metadata",
+      "Compounds 1-21 retain labels and source-assigned configurations; GSK235 is compound21 in both versions",
+      "All 21 biochemical summary pIC50 values and 17 populated primary HeLa summary pIC50 values agree with final CSV, read with Tables1-4 footnotes",
+      "Preprint Table6 and final SI distinguish compound21 cellular7.05 from Tables1-4/CSV7.25"
+    ],
+    "limit": "bioRxiv API published field is NA; relation is adjudicated inference, not an official API publication link"
+  },
+  "dates": {
+    "cutoff": "2026-10-05",
+    "preprint_version1": "2025-11-17",
+    "preprint_SI": "2025-11-17",
+    "final_PubMed_epub": "2026-06-21",
+    "final_ACS_SI_release": "2026-06-22",
+    "BRADSHAW_epub_and_SI_release": "2026-04-13",
+    "retrieval": "2026-10-05",
+    "dataset_release": "No new deposited dataset acquired; existing v1 dataset release dates unchanged"
+  },
+  "preprint_summary_pIC50": {
+    "biochemical_1_to_21": [5.61,5.62,5.67,5.53,6.31,7.45,7.59,7.43,7.13,8.27,8.52,6.57,8.17,8.34,7.93,8.05,8.15,8.42,8.55,8.16,8.45],
+    "HeLa_1_to_21": [null,null,null,null,5.48,6.68,6.86,6.99,6.8,7.44,7.63,5.65,6.66,7.37,5.86,7.54,7.27,8.11,8.09,7.39,7.25],
+    "locator": "Preprint pp3,5-7 Tables1-4; final jm6c00029_si_002.csv; no new independent observations"
+  },
+  "comparisons": [
+    {
+      "item": "human biochemical and HeLa protocols",
+      "preprint": "p15 explicitly cites Liddle2020 ref31; modified cellular normalization cites Hryczanek2024 ref38",
+      "final": "Exact main methods inaccessible; SI numbers/control schemes agree within accessible scope",
+      "state": "PREPRINT_METHOD_FALLBACK_WITH_EXPLICIT_LIMITS",
+      "wording": "method obtained from preprint version; consistency with final publication assessed only to the extent publicly possible"
+    },
+    {
+      "item": "cellular normalization",
+      "preprint": "Tables1-4 KKSIINFEKL scheme; Table6 pharmacological control yields7.05 (unbound7.26)",
+      "final": "SI S5 Table1 adds per-row mean/SD/N and separates KK-SIINFEKL from compound6; compound21 KK n_in_mean1,n_total2; modified n_in_mean6,n_total6,SD0.08",
+      "state": "SCHEMES_REMAIN_SEPARATE"
+    },
+    {
+      "item": "structural numbering/figures",
+      "preprint": "p15 PDB identifiers are XXX placeholders; SI p4 compound21 resolution1.74A",
+      "final": "PDB identifiers available in deposited records; SI S6 resolution2.00A; deposited9TFN1.739A",
+      "state": "SOURCE_DISCREPANCY_RETAINED; no overwrite of v1"
+    },
+    {
+      "item": "SI layout and translational studies",
+      "preprint": "37 pages: immunopeptidomics/CIA main methods pp16-17; SI Table1 hepatocytes,Table2 structures,Table3 scoring,Table4 antibodies; CIA statistics SI p6",
+      "final": "38-page SI: potency/replicates Table1 added; hepatocyteTable2,structureTable3,scoringTable4,antibodiesTable5; no equivalence assumed for inaccessible final main figures/methods",
+      "state": "VERSION_LOCATORS_KEPT_SEPARATE"
+    }
+  ],
+  "language_adjudication": {
+    "direct_cellular_occupancy_demonstrated": false,
+    "preprint_TE": "pp9-10 calculated from unbound blood concentration, mouse biochemical pIC50 and maximal asymptote",
+    "presentation_and_immunopeptidome": "functional cellular pharmacology/PD; not direct occupancy",
+    "KO_comparison": "phenocopy comparison; not compound-in-KO epistasis or rescue",
+    "CIA": "mouse inflammatory autoimmunity; not axSpA",
+    "Maben": "No transfer of engagement to historical compounds"
+  }
+}

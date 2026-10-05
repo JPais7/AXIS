@@ -1,0 +1,38 @@
+{
+  "blockers": [
+    {
+      "id": "closure:blocker:2026-assay-context",
+      "legitimate_attempts": [
+        "Existing publisher HTTP 403 records in frozen v1/source-artifacts.json",
+        "Current direct publisher open checks again returned HTTP 403",
+        "Complete accessible supporting PDFs inspected for exact protocol; tables contain potency summaries but not sufficient assay methods"
+      ],
+      "materiality": "Required for admission of the priority 2026 chemistry into a defensible integrated pharmacology/learning reassessment; user stop condition applies",
+      "minimum_information": [
+        "Dated accessible primary methods explicitly linking the SI/CSV potency columns to their exact assays",
+        "For isolated-enzyme assays: ERAP1 preparation/construct and allotype, substrate and enzyme/substrate concentrations, incubation conditions and duration, endpoint/readout",
+        "For cellular assays: precursor/readout and normalization/control definition, compound exposure scheme and duration, ERAP1 context where stated; fields truly unreported must be confirmed from the methods rather than inferred from an inaccessible text"
+      ],
+      "not_required_to_unblock": [
+        "Positive efficacy result",
+        "New patient experiment",
+        "A predictive model",
+        "Resolution of historical Maben engagement",
+        "Independent reviewer approval by this AI"
+      ],
+      "sources": [
+        "10.1021/acs.jmedchem.5c03071",
+        "10.1021/acs.jmedchem.6c00029"
+      ],
+      "status": "UNRESOLVED",
+      "unblock_route": "Lawfully accessible full text or source-authored dated methods supplement; no paywall bypass or automatic author contact"
+    }
+  ],
+  "nonblocking_limitations": [
+    "Tinworth CIA/cancer exposure, genetic rescue and direct engagement cannot be fully adjudicated from the accessible SI; claims excluded rather than invented",
+    "Sponsor engagement methods not independently adjudicated; sponsor claims retained only in their own source class",
+    "No raw-MS reprocessing or independent peptide differential statistics",
+    "Historical compound engagement remains an experimental uncertainty, not a new closure prerequisite"
+  ],
+  "status": "SCIENTIFIC REASSESSMENT BLOCKED"
+}

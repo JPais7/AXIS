@@ -1,0 +1,13 @@
+{
+  "validation_scope": "Bounded closure refusal and admitted subset, not integrated DecisionState validation",
+  "environment": "/Users/joaopais7/axis-validation/bin/python, Python 3.12.13",
+  "focused_tests": {"command": "PYTHONPATH=. /Users/joaopais7/axis-validation/bin/pytest -q tests/test_erap1_scientific_closure.py", "passed": 14, "failed": 0},
+  "full_python_suite": {"command": "PYTHONPATH=. /Users/joaopais7/axis-validation/bin/pytest -q", "passed": 713, "skipped": 2, "failed": 0},
+  "strict_mypy": {"command": "PYTHONPATH=. /Users/joaopais7/axis-validation/bin/mypy axis --strict", "result": "PASS", "source_files": 163},
+  "changed_ruff": {"command": "/Users/joaopais7/axis-validation/bin/ruff check scripts/close_erap1_data_rich.py tests/test_erap1_scientific_closure.py", "result": "PASS"},
+  "global_ruff": {"command": "/Users/joaopais7/axis-validation/bin/ruff check .", "findings": 462, "scope": "Inherited baseline findings; not reported as a global pass"},
+  "offline_replay": {"command": "PYTHONPATH=. /Users/joaopais7/axis-validation/bin/python scripts/close_erap1_data_rich.py --replay", "result": "PASS", "claim_roundtrips": 34, "final_integrated_decision_replayed": false},
+  "source_and_wheel_build": {"command": "PYTHONPATH=. /Users/joaopais7/axis-validation/bin/python -m build", "result": "PASS", "isolated_backend": "poetry-core 2.5.0"},
+  "frozen_v1": {"comparison": "Every frozen v1 artifact versus git show starting HEAD:path", "result": "BYTE IDENTICAL"},
+  "not_run": ["Frontend tests/TypeScript/ESLint/frontend build: no UI change", "Migration-specific tests: no migration", "CLI/API-specific smoke: no CLI/API changes", "Raw-MS processing", "Independent peptide significance reconstruction", "Predictive model fitting", "Final integrated Decision Engine run"]
+}

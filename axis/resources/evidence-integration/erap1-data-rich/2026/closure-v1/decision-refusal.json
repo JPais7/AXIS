@@ -1,0 +1,208 @@
+{
+  "after": null,
+  "before": {
+    "critical_uncertainty_id": "uncertainty:target_engagement",
+    "evidence_digest": "cebbae3880aeec9084784f9f8df4a89abfe71a6058e3c924ce78651beaa44541",
+    "id": "decision-state:1:cebbae3880aeec90",
+    "recommended_experiment_id": "decision:exp:chemical-genetic-engagement",
+    "review_mode": "exploratory",
+    "rules_version": "axis-decision-3"
+  },
+  "before_summary": {
+    "critical_uncertainty_id": "uncertainty:target_engagement",
+    "edges": {
+      "biochemical": "supported",
+      "clinical": "not_assessed",
+      "disease": "not_assessed",
+      "engagement": "not_assessed",
+      "exposure": "supported",
+      "functional": "insufficient",
+      "hla": "supported",
+      "immune": "supported"
+    },
+    "explanations": {
+      "explanation:context": "viable",
+      "explanation:indirect": "viable",
+      "explanation:off_target": "viable",
+      "explanation:on_target": "partially_supported"
+    },
+    "no_experiment_message": null,
+    "recommendation_question": "Do the phenotype-producing compounds directly engage ERAP1 in cells at those exposures?",
+    "recommended_experiment_id": "decision:exp:chemical-genetic-engagement",
+    "rule_ids": [
+      "DECISION-BRIDGE-001",
+      "DECISION-CLIN-001",
+      "DECISION-CRIT-001",
+      "DECISION-CTX-001",
+      "DECISION-DEP-001",
+      "DECISION-DIS-001",
+      "DECISION-EXP-001",
+      "DECISION-EXP-002",
+      "DECISION-EXP-003",
+      "DECISION-EXP-004",
+      "DECISION-EXP-005",
+      "DECISION-EXPL-001",
+      "DECISION-EXPL-010",
+      "DECISION-EXPL-011",
+      "DECISION-EXPL-012",
+      "DECISION-EXPL-013",
+      "DECISION-GAP-001",
+      "DECISION-GAP-002",
+      "DECISION-REPRO-001",
+      "DECISION-SEL-001",
+      "DECISION-STRUCT-001"
+    ],
+    "supported_statements": [
+      "Biochemical activity is supported.",
+      "Cellular exposure is supported.",
+      "HLA / antigen-presentation molecular phenotype is supported.",
+      "Immune phenotype is supported."
+    ],
+    "uncertainties": {
+      "uncertainty:clinical_translation": {
+        "category": "clinical_translation",
+        "edges": [
+          "clinical"
+        ],
+        "refs": [
+          "clinical"
+        ],
+        "relevance": "peripheral",
+        "status": "not_actionable"
+      },
+      "uncertainty:disease_relevance": {
+        "category": "disease_relevance",
+        "edges": [
+          "disease"
+        ],
+        "refs": [
+          "disease"
+        ],
+        "relevance": "informative",
+        "status": "open"
+      },
+      "uncertainty:genetic_context": {
+        "category": "genetic_context",
+        "edges": [],
+        "refs": [
+          "HLA-B*27:05"
+        ],
+        "relevance": "decision_material",
+        "status": "open"
+      },
+      "uncertainty:mechanistic_bridge": {
+        "category": "mechanistic_bridge",
+        "edges": [],
+        "refs": [
+          "cellular:chen-coculture:functional",
+          "cellular:chen-dg013a-C1R.B27:functional",
+          "cellular:chen-dg013a-HeLa.B27:functional",
+          "cellular:chen-knockdown-C1R.B27:functional",
+          "cellular:chen-knockdown-HeLa.B27:functional",
+          "cellular:chen2014-peptidome:functional",
+          "cellular:chen2014-variant:functional",
+          "cellular:maben-2:functional",
+          "cellular:maben-3:functional",
+          "cellular:tran-dimer:functional",
+          "cellular:tran-fhc:functional"
+        ],
+        "relevance": "decision_material",
+        "status": "open"
+      },
+      "uncertainty:reproducibility": {
+        "category": "reproducibility",
+        "edges": [],
+        "refs": [
+          "cellular:chen-knockdown-C1R.B27:readout",
+          "cellular:chen-knockdown-HeLa.B27:readout",
+          "cellular:tran-fhc:readout"
+        ],
+        "relevance": "decision_material",
+        "status": "open"
+      },
+      "uncertainty:selectivity": {
+        "category": "selectivity",
+        "edges": [],
+        "refs": [
+          "selectivity:measurement:maben:10:measurement:maben:11",
+          "selectivity:measurement:maben:10:measurement:maben:12",
+          "selectivity:measurement:maben:13:measurement:maben:11",
+          "selectivity:measurement:maben:13:measurement:maben:12",
+          "selectivity:measurement:maben:14:measurement:maben:11",
+          "selectivity:measurement:maben:14:measurement:maben:12",
+          "selectivity:measurement:maben:1:ERAP2",
+          "selectivity:measurement:maben:1:LNPEP",
+          "selectivity:measurement:maben:2:ERAP2",
+          "selectivity:measurement:maben:2:LNPEP",
+          "selectivity:measurement:maben:3:measurement:maben:4",
+          "selectivity:measurement:maben:3:measurement:maben:5",
+          "selectivity:measurement:maben:6:measurement:maben:4",
+          "selectivity:measurement:maben:6:measurement:maben:5",
+          "selectivity:measurement:maben:7:measurement:maben:4",
+          "selectivity:measurement:maben:7:measurement:maben:5",
+          "selectivity:measurement:maben:9:measurement:maben:11",
+          "selectivity:measurement:maben:9:measurement:maben:12"
+        ],
+        "relevance": "decision_material",
+        "status": "open"
+      },
+      "uncertainty:structural_mechanism": {
+        "category": "structural_mechanism",
+        "edges": [],
+        "refs": [
+          "structure:pdb:3QNF:04b29d420769a6ce405c85d90e6888289de20381e17e64c1a31c3e4f835b8f75:2026-10-04T12:25:57+00:00:3654c195689a5327"
+        ],
+        "relevance": "peripheral",
+        "status": "not_actionable"
+      },
+      "uncertainty:target_dependency": {
+        "category": "target_dependency",
+        "edges": [],
+        "refs": [
+          "cellular:chen-dg013a-C1R.B27:hla",
+          "cellular:chen-dg013a-HeLa.B27:hla",
+          "cellular:chen-knockdown-C1R.B27:hla",
+          "cellular:chen-knockdown-HeLa.B27:hla",
+          "cellular:chen2014-peptidome:hla",
+          "cellular:chen2014-variant:immune",
+          "cellular:maben-2:hla",
+          "cellular:maben-3:hla",
+          "cellular:tran-dimer:hla",
+          "cellular:tran-fhc:hla"
+        ],
+        "relevance": "decision_material",
+        "status": "open"
+      },
+      "uncertainty:target_engagement": {
+        "category": "target_engagement",
+        "edges": [
+          "biochemical",
+          "engagement"
+        ],
+        "refs": [
+          "biochemical",
+          "cellular:chen-dg013a-C1R.B27:gap",
+          "cellular:chen-dg013a-C1R.B27:hla",
+          "cellular:chen-dg013a-HeLa.B27:gap",
+          "cellular:chen-dg013a-HeLa.B27:hla",
+          "cellular:maben-2:gap",
+          "cellular:maben-2:hla",
+          "cellular:maben-3:gap",
+          "cellular:maben-3:hla",
+          "engagement"
+        ],
+        "relevance": "decision_blocking",
+        "status": "open"
+      }
+    }
+  },
+  "blocker_ids": [
+    "closure:blocker:2026-assay-context"
+  ],
+  "candidate_created": false,
+  "existing_rules_fingerprint": "184a1e2949a61e362545e897de43890014bcdcac7191f621c84fb2b739cecd33",
+  "historical_state_modified": false,
+  "outcome": "C \u2014 REASSESSMENT BLOCKED",
+  "reason": "Exact assay context could not be recovered sufficiently for priority 2026 chemistry; apply user stop condition rather than infer protocols or treat structural-only analysis as full reassessment",
+  "status": "SCIENTIFIC REASSESSMENT BLOCKED"
+}

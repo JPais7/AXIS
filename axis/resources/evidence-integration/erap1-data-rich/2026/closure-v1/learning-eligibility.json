@@ -1,0 +1,4524 @@
+{
+  "candidate_version": "candidate-v2, unadmitted",
+  "closure_status": "MODEL NOT BUILT",
+  "eligibility_rerun_on_unadjudicated_records": false,
+  "historical_status": "MODEL NOT BUILT",
+  "hryczanek_scope": "Source-reported observed SAR and cellular protocol; not a newly admitted predictive learning dataset",
+  "model_built": false,
+  "prior_diagnostics_not_new_admission": true,
+  "prior_numerical_diagnostics": [
+    {
+      "dataset": {
+        "assay_context": {
+          "assay_type": "biochemical_activity",
+          "endpoint": "IC50",
+          "format": "10.1021/acs.jmedchem.5c03071|ERAP1 pIC50|UNADJUDICATED_PROTOCOL",
+          "substrate": "UNADJUDICATED",
+          "target": "ERAP1",
+          "taxon": 9606
+        },
+        "checksum": "4fb593e439b6065a1269e50cd0b1c34b60f1ca449f836ddb2bb7b199d4012b00",
+        "compound_values": [
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:1",
+            "contradictory": false,
+            "exact_values": [
+              7.943282347
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 7.943282347
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:10",
+            "contradictory": false,
+            "exact_values": [
+              7.943282347
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 7.943282347
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:11",
+            "contradictory": false,
+            "exact_values": [
+              25.118864315
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 25.118864315
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:12",
+            "contradictory": false,
+            "exact_values": [
+              12.589254118
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 12.589254118
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:13",
+            "contradictory": false,
+            "exact_values": [
+              1.995262315
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 1.995262315
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:14",
+            "contradictory": false,
+            "exact_values": [
+              63.095734448
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 63.095734448
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:15",
+            "contradictory": false,
+            "exact_values": [
+              50.118723363
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 50.118723363
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:16",
+            "contradictory": false,
+            "exact_values": [
+              630.95734448
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 630.95734448
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:17",
+            "contradictory": false,
+            "exact_values": [
+              10.0
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 10.0
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:18",
+            "contradictory": false,
+            "exact_values": [
+              398.107170553
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 398.107170553
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:2",
+            "contradictory": false,
+            "exact_values": [
+              25.118864315
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 25.118864315
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:21",
+            "contradictory": false,
+            "exact_values": [
+              1.0
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 1.0
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:22",
+            "contradictory": false,
+            "exact_values": [
+              39.810717055
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 39.810717055
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:23",
+            "contradictory": false,
+            "exact_values": [
+              1.995262315
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 1.995262315
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:24",
+            "contradictory": false,
+            "exact_values": [
+              2.511886432
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 2.511886432
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:25",
+            "contradictory": false,
+            "exact_values": [
+              7.943282347
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 7.943282347
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:26",
+            "contradictory": false,
+            "exact_values": [
+              10.0
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 10.0
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:27",
+            "contradictory": false,
+            "exact_values": [
+              3.981071706
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 3.981071706
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:28",
+            "contradictory": false,
+            "exact_values": [
+              158.489319246
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 158.489319246
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:29",
+            "contradictory": false,
+            "exact_values": [
+              398.107170553
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 398.107170553
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:3",
+            "contradictory": false,
+            "exact_values": [
+              7.943282347
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 7.943282347
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:30",
+            "contradictory": false,
+            "exact_values": [
+              1258.925411794
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 1258.925411794
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:31",
+            "contradictory": false,
+            "exact_values": [
+              5.011872336
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 5.011872336
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:32",
+            "contradictory": false,
+            "exact_values": [
+              6.309573445
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 6.309573445
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:33",
+            "contradictory": false,
+            "exact_values": [
+              2.511886432
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 2.511886432
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:34",
+            "contradictory": false,
+            "exact_values": [
+              31.622776602
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 31.622776602
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:35",
+            "contradictory": false,
+            "exact_values": [
+              31.622776602
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 31.622776602
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:36",
+            "contradictory": false,
+            "exact_values": [
+              12.589254118
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 12.589254118
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:37",
+            "contradictory": false,
+            "exact_values": [
+              501.187233627
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 501.187233627
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:38",
+            "contradictory": false,
+            "exact_values": [
+              12.589254118
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 12.589254118
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:39",
+            "contradictory": false,
+            "exact_values": [
+              1.0
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 1.0
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:4",
+            "contradictory": false,
+            "exact_values": [
+              12.589254118
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 12.589254118
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:40",
+            "contradictory": false,
+            "exact_values": [
+              12.589254118
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 12.589254118
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:41",
+            "contradictory": false,
+            "exact_values": [
+              15.848931925
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 15.848931925
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:42",
+            "contradictory": false,
+            "exact_values": [
+              12.589254118
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 12.589254118
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:43",
+            "contradictory": false,
+            "exact_values": [
+              10.0
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 10.0
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:44",
+            "contradictory": false,
+            "exact_values": [
+              10.0
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 10.0
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:5",
+            "contradictory": false,
+            "exact_values": [
+              50.118723363
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 50.118723363
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:6",
+            "contradictory": false,
+            "exact_values": [
+              19.95262315
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 19.95262315
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:7",
+            "contradictory": false,
+            "exact_values": [
+              50.118723363
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 50.118723363
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:8",
+            "contradictory": false,
+            "exact_values": [
+              3.16227766
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 3.16227766
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:9",
+            "contradictory": false,
+            "exact_values": [
+              2.511886432
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 2.511886432
+          }
+        ],
+        "compounds": [
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:1",
+            "smiles": "OC(=O)C1(CCCCC1)NC(=O)CN1C(=O)C(F)(F)Oc2ccc(Br)cc12"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:10",
+            "smiles": "OC(=O)C1(CCC(F)(F)CC1)NC(=O)Cn1c2cc(Br)ccc2sc1=O"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:11",
+            "smiles": "OC(=O)C1(CCC(F)(F)CC1)NC(=O)Cn1c2cc(Cl)ccc2sc1=O"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:12",
+            "smiles": "OC(=O)C1(CCCCC1)NC(=O)Cn1c2cc(Br)ccc2sc1=O"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:13",
+            "smiles": "OC(=O)C1(CCSCC1)NC(=O)Cn1c2cc(ccc2sc1=O)N1CCCC1"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:14",
+            "smiles": "OC(=O)C1(CCCCC1)NC(=O)Cn1c2cc(ccc2oc1=O)C1CCCOC1"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:15",
+            "smiles": "Cl.OC(=O)C1(CCSCC1)NCCn1c2cc(ccc2sc1=O)C(F)(F)F"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:16",
+            "smiles": "OC(=O)C1(CCSCC1)NC(=O)CN1C(=O)COc2c(F)cc(F)cc12"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:17",
+            "smiles": "CN(C(=O)Cn1c2cc(ccc2sc1=O)C(F)(F)F)C1(CCCCC1)C(O)=O"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:18",
+            "smiles": "OC(=O)C1(CCSCC1)NC(=O)Cn1c2cc(Br)ccc2oc1=O"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:2",
+            "smiles": "OC(=O)C1(CCCCC1)NC(=O)Cn1c2cc(Cl)ccc2sc1=O"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:21",
+            "smiles": "CN(C(=O)Cn1c2cc(ccc2sc1=O)-c1cccc(F)c1)C1(CCCCC1)C(O)=O"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:22",
+            "smiles": "OC(=O)C1(CCC(F)(F)CC1)NC(=O)Cn1c2cc(Oc3ccc(F)cc3)ccc2sc1=O"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:23",
+            "smiles": "CC(C)COc1ccc2sc(=O)n(CC(=O)N(C)C3(CCCCC3)C(O)=O)c2c1"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:24",
+            "smiles": "CN(C(=O)Cn1c2cc(ccc2sc1=O)N1CCC(F)(F)CC1)C1(CCCCC1)C(O)=O"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:25",
+            "smiles": "OC(=O)C1(CCC(F)(F)CC1)NC(=O)Cn1c2cc(ccc2sc1=O)C1CCCC1"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:26",
+            "smiles": "CCN(C(=O)Cn1c2cc(Cl)ccc2sc1=O)C1(CCCCC1)C(O)=O"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:27",
+            "smiles": "OC(=O)C1(CCSCC1)NC(=O)CN1C(=O)C(F)(F)Oc2ccc(Br)cc12"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:28",
+            "smiles": "OC(=O)C1(CCSCC1)NC(=O)Cn1c2cc(ccc2ccc1=O)N1CCC(F)(F)CC1"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:29",
+            "smiles": "OC(=O)C1(CCn2c3cc(ccc3sc2=O)C(F)(F)F)CCSCC1"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:3",
+            "smiles": "OC(=O)C1(CCCCC1)NC(=O)Cn1c2cc(ccc2oc1=O)-c1ccccc1"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:30",
+            "smiles": "OC(=O)C1(CCCCC1)NC(=S)Cn1c2cc(ccc2sc1=O)C(F)(F)F"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:31",
+            "smiles": "CN(C(=O)CN1C(=O)Cc2ccc(cc12)-c1ccccc1)C1(CCCCC1)C(O)=O"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:32",
+            "smiles": "OC(=O)C1(CCCCC1)NC(=O)CN1C(=O)C(F)(F)Oc2ccc(cc12)C(F)(F)F"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:33",
+            "smiles": "OC(=O)C1(CCC(F)(F)CC1)NC(=O)Cn1c2cc(cnc2sc1=O)-c1ccccc1"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:34",
+            "smiles": "OC(=O)C1(CCSCC1)NC(=O)Cn1c2cc(cnc2sc1=O)C(F)(F)F"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:35",
+            "smiles": "CN(C(=O)Cn1c2cc(cnc2sc1=O)C(F)(F)F)C1(CCCCC1)C(O)=O"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:36",
+            "smiles": "OC(=O)C1(CCSCC1)NC(=O)Cn1c2cc(Cl)cc(F)c2sc1=O"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:37",
+            "smiles": "OC(=O)C1(CCC(F)(F)CC1)NC(=O)Cn1c2c(Cl)cccc2sc1=O"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:38",
+            "smiles": "OC(=O)C1(CCCn2c3cc(ccc3sc2=O)C(=O)NC2CCC2)CCSCC1"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:39",
+            "smiles": "OC(=O)C1(CCSCC1)NCCn1c2cc(ccc2sc1=O)N1CCC(F)(F)CC1"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:4",
+            "smiles": "OC(=O)C1(CCCCC1)NC(=O)CN1C(=O)COc2ccc(cc12)-c1ccccc1"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:40",
+            "smiles": "OC(=O)C1(CCC(F)(F)CC1)NC(=O)Cn1c2cc(Br)cc(F)c2sc1=O"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:41",
+            "smiles": "CN(C(=O)CN1C(=O)C(F)(F)Oc2ccc(Cl)cc12)C1(CCC(F)(F)CC1)C(O)=O"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:42",
+            "smiles": "OC(=O)C1(CCSCC1)NC(=O)Cn1c2cc(Cl)ccc2sc1=O"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:43",
+            "smiles": "CN(C(=O)Cn1c2cc(cc(F)c2sc1=O)C(F)(F)F)C1(CCSCC1)C(O)=O"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:44",
+            "smiles": "OC(=O)C1(CCC(F)(F)CC1)NC(=O)Cn1c2cc(ccc2sc1=O)C1CC1"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:5",
+            "smiles": "OC(=O)C1(CCCCC1)NC(=O)CN1C(=O)COc2ccc(Br)cc12"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:6",
+            "smiles": "OC(=O)C1(CCSCC1)NC(=O)CN1C(=O)COc2ccc(cc12)C(F)(F)F"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:7",
+            "smiles": "CN(C(=O)CN1C(=O)COc2ccc(cc12)C(F)(F)F)C1(CCCCC1)C(O)=O"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:8",
+            "smiles": "OC(=O)C1(CCSCC1)NC(=O)Cn1c2cc(ccc2sc1=O)C1CCCC1"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:9",
+            "smiles": "OC(=O)C1(CCSCC1)NC(=O)Cn1c2cc(OC3CCCC3)ccc2sc1=O"
+          }
+        ],
+        "content_checksum": "e3e5bccd6ab68cea23af631359c4702fd6dab28e57356397c4cac3869b5f2e31",
+        "created_by": "axis.learning.dataset",
+        "endpoint": "IC50",
+        "exclusion_rules": [
+          "unit without a valid conversion"
+        ],
+        "id": "dataset:ERAP1|9606|biochemical_activity|10.1021/acs.jmedchem.5c03071|ERAP1 pIC50|UNADJUDICATED_PROTOCOL|UNADJUDICATED|IC50@r2",
+        "label": "Unadmitted v2 numerical diagnostic",
+        "logical_id": "dataset:ERAP1|9606|biochemical_activity|10.1021/acs.jmedchem.5c03071|ERAP1 pIC50|UNADJUDICATED_PROTOCOL|UNADJUDICATED|IC50",
+        "measurement_type": "IC50",
+        "measurements": [
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:10",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:10:ERAP1 pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 7.943282347,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 7.943282347242821,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:11",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:11:ERAP1 pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 25.118864315,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 25.11886431509582,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:12",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:12:ERAP1 pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 12.589254118,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 12.589254117941662,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:13",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:13:ERAP1 pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 1.995262315,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 1.9952623149688828,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:14",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:14:ERAP1 pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 63.095734448,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 63.0957344480193,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:15",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:15:ERAP1 pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 50.118723363,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 50.11872336272725,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:16",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:16:ERAP1 pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 630.95734448,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 630.957344480193,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:17",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:17:ERAP1 pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 10.0,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 10.0,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:18",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:18:ERAP1 pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 398.107170553,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 398.1071705534969,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:1",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:1:ERAP1 pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 7.943282347,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 7.943282347242821,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:21",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:21:ERAP1 pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 1.0,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 1.0,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:22",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:22:ERAP1 pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 39.810717055,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 39.81071705534969,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:23",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:23:ERAP1 pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 1.995262315,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 1.9952623149688828,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:24",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:24:ERAP1 pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 2.511886432,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 2.5118864315095824,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:25",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:25:ERAP1 pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 7.943282347,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 7.943282347242821,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:26",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:26:ERAP1 pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 10.0,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 10.0,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:27",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:27:ERAP1 pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 3.981071706,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 3.981071705534969,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:28",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:28:ERAP1 pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 158.489319246,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 158.48931924611142,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:29",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:29:ERAP1 pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 398.107170553,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 398.1071705534969,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:2",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:2:ERAP1 pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 25.118864315,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 25.11886431509582,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:30",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:30:ERAP1 pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 1258.925411794,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 1258.9254117941662,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:31",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:31:ERAP1 pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 5.011872336,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 5.011872336272715,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:32",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:32:ERAP1 pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 6.309573445,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 6.309573444801943,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:33",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:33:ERAP1 pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 2.511886432,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 2.5118864315095824,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:34",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:34:ERAP1 pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 31.622776602,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 31.622776601683793,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:35",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:35:ERAP1 pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 31.622776602,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 31.622776601683793,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:36",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:36:ERAP1 pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 12.589254118,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 12.589254117941662,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:37",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:37:ERAP1 pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 501.187233627,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 501.18723362727246,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:38",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:38:ERAP1 pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 12.589254118,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 12.589254117941662,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:39",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:39:ERAP1 pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 1.0,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 1.0,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:3",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:3:ERAP1 pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 7.943282347,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 7.943282347242821,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:40",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:40:ERAP1 pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 12.589254118,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 12.589254117941662,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:41",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:41:ERAP1 pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 15.848931925,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 15.848931924611142,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:42",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:42:ERAP1 pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 12.589254118,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 12.589254117941662,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:43",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:43:ERAP1 pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 10.0,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 10.0,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:44",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:44:ERAP1 pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 10.0,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 10.0,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:4",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:4:ERAP1 pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 12.589254118,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 12.589254117941662,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:5",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:5:ERAP1 pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 50.118723363,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 50.11872336272725,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:6",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:6:ERAP1 pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 19.95262315,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 19.952623149688787,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:7",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:7:ERAP1 pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 50.118723363,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 50.11872336272725,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:8",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:8:ERAP1 pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 3.16227766,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 3.1622776601683795,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:9",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:9:ERAP1 pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 2.511886432,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 2.5118864315095824,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          }
+        ],
+        "policy": {
+          "censoring": "retain_with_operator; a boundary is never an exact value",
+          "contradiction_ratio": 3.0,
+          "normalisation": "concentration units to nM only; no endpoint conversion",
+          "pooling": "none across assay contexts",
+          "replicates": "retain_individual; per-compound median of exact values for modelling",
+          "version": "axis-learning-dataset-1"
+        },
+        "policy_fingerprint": "880a8e6fd17896f65e6a9458aca580f968a5be6b5145856fec89945188c509cb",
+        "project_id": "AXIS-DD-ERAP1-CURATED-001",
+        "provenance": "Explicit pIC50 conversion; source assay methods remain unadjudicated",
+        "review_state": "pending_review",
+        "revision": 2,
+        "synthetic": false,
+        "target": "ERAP1",
+        "unit": "nM"
+      },
+      "model_built": false,
+      "numerical_policy_assessment": {
+        "checks": [
+          {
+            "blocking": true,
+            "check": "single assay context",
+            "detail": "dataset is one context by construction",
+            "passed": true
+          },
+          {
+            "blocking": true,
+            "check": "valid structures",
+            "detail": "0 compounds have an unparseable structure",
+            "passed": true
+          },
+          {
+            "blocking": true,
+            "check": "sample size",
+            "detail": "42 compounds with an exact value; policy minimum 20",
+            "passed": true
+          },
+          {
+            "blocking": true,
+            "check": "chemical diversity",
+            "detail": "26 Murcko scaffolds among exact-value compounds; minimum 5",
+            "passed": true
+          },
+          {
+            "blocking": false,
+            "check": "series concentration",
+            "detail": "largest scaffold group holds 21% of exact-value compounds",
+            "passed": true
+          },
+          {
+            "blocking": true,
+            "check": "censoring",
+            "detail": "0 of 42 compounds have only censored values",
+            "passed": true
+          },
+          {
+            "blocking": true,
+            "check": "activity range",
+            "detail": "exact values span 3.10 log10 units; minimum 1.0",
+            "passed": true
+          },
+          {
+            "blocking": false,
+            "check": "contradictory measurements",
+            "detail": "0 compounds with contradictory exact values (kept, excluded from fitting)",
+            "passed": true
+          },
+          {
+            "blocking": true,
+            "check": "duplicate structures",
+            "detail": "42 compound references, 42 distinct structures",
+            "passed": true
+          }
+        ],
+        "conclusion": "eligible",
+        "counts": {
+          "activity_range_log10": 3.1,
+          "censored_only": 0,
+          "compounds": 42,
+          "contradictory": 0,
+          "exact": 42,
+          "scaffolds": 26
+        },
+        "dataset_id": "dataset:ERAP1|9606|biochemical_activity|10.1021/acs.jmedchem.5c03071|ERAP1 pIC50|UNADJUDICATED_PROTOCOL|UNADJUDICATED|IC50@r2",
+        "model_built": false,
+        "policy": {
+          "max_censored_fraction": 0.5,
+          "max_contradictory_fraction": 0.2,
+          "max_dominant_scaffold_fraction": 0.7,
+          "min_activity_range_log10": 1.0,
+          "min_compounds_per_scaffold_for_scaffold_split": 1,
+          "min_exact_compounds": 20,
+          "min_per_class": 5,
+          "min_scaffolds": 5,
+          "rationale": "A regression evaluated on held-out scaffolds needs enough exact, chemically varied, mutually comparable measurements for a test partition to contain more than a handful of compounds.",
+          "version": "axis-model-eligibility-1"
+        },
+        "policy_fingerprint": "f0ba60960e3044f2bbb0910242ea3a09f4ced35e0d842ff3a66d1dbc7ed163f1",
+        "readiness": "MODEL_ELIGIBLE",
+        "reasons": [],
+        "task": "regression"
+      },
+      "scientific_admission": "REFUSED: unresolved exact assay protocol/context"
+    },
+    {
+      "dataset": {
+        "assay_context": {
+          "assay_type": "cellular_activity",
+          "endpoint": "IC50",
+          "format": "10.1021/acs.jmedchem.5c03071|HeLa cellular antigen presentation pIC50|UNADJUDICATED_PROTOCOL",
+          "substrate": "UNADJUDICATED",
+          "target": "ERAP1",
+          "taxon": 9606
+        },
+        "checksum": "c479e6dbe6f2160950f9cd95ccb71556330c2b94f1e466557cb253aebab79de7",
+        "compound_values": [
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:1",
+            "contradictory": false,
+            "exact_values": [
+              251.188643151
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 251.188643151
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:10",
+            "contradictory": false,
+            "exact_values": [
+              100.0
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 100.0
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:11",
+            "contradictory": false,
+            "exact_values": [
+              158.489319246
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 158.489319246
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:12",
+            "contradictory": false,
+            "exact_values": [
+              501.187233627
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 501.187233627
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:14",
+            "contradictory": false,
+            "exact_values": [
+              7943.282347243
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 7943.282347243
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:15",
+            "contradictory": false,
+            "exact_values": [
+              158.489319246
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 158.489319246
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:17",
+            "contradictory": false,
+            "exact_values": [
+              79.432823472
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 79.432823472
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:2",
+            "contradictory": false,
+            "exact_values": [
+              316.227766017
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 316.227766017
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:21",
+            "contradictory": false,
+            "exact_values": [
+              31.622776602
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 31.622776602
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:22",
+            "contradictory": false,
+            "exact_values": [
+              5011.872336273
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 5011.872336273
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:23",
+            "contradictory": false,
+            "exact_values": [
+              15.848931925
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 15.848931925
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:24",
+            "contradictory": false,
+            "exact_values": [
+              31.622776602
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 31.622776602
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:25",
+            "contradictory": false,
+            "exact_values": [
+              251.188643151
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 251.188643151
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:26",
+            "contradictory": false,
+            "exact_values": [
+              63.095734448
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 63.095734448
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:27",
+            "contradictory": false,
+            "exact_values": [
+              63.095734448
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 63.095734448
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:28",
+            "contradictory": false,
+            "exact_values": [
+              3981.071705535
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 3981.071705535
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:29",
+            "contradictory": false,
+            "exact_values": [
+              6309.573444802
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 6309.573444802
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:3",
+            "contradictory": false,
+            "exact_values": [
+              199.526231497
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 199.526231497
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:30",
+            "contradictory": false,
+            "exact_values": [
+              19952.623149689
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 19952.623149689
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:31",
+            "contradictory": false,
+            "exact_values": [
+              125.892541179
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 125.892541179
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:32",
+            "contradictory": false,
+            "exact_values": [
+              63.095734448
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 63.095734448
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:33",
+            "contradictory": false,
+            "exact_values": [
+              251.188643151
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 251.188643151
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:34",
+            "contradictory": false,
+            "exact_values": [
+              501.187233627
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 501.187233627
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:35",
+            "contradictory": false,
+            "exact_values": [
+              316.227766017
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 316.227766017
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:36",
+            "contradictory": false,
+            "exact_values": [
+              31.622776602
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 31.622776602
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:38",
+            "contradictory": false,
+            "exact_values": [
+              100.0
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 100.0
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:39",
+            "contradictory": false,
+            "exact_values": [
+              7.943282347
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 7.943282347
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:40",
+            "contradictory": false,
+            "exact_values": [
+              50.118723363
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 50.118723363
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:41",
+            "contradictory": false,
+            "exact_values": [
+              251.188643151
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 251.188643151
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:42",
+            "contradictory": false,
+            "exact_values": [
+              63.095734448
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 63.095734448
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:43",
+            "contradictory": false,
+            "exact_values": [
+              316.227766017
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 316.227766017
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:44",
+            "contradictory": false,
+            "exact_values": [
+              251.188643151
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 251.188643151
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:5",
+            "contradictory": false,
+            "exact_values": [
+              1000.0
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 1000.0
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:6",
+            "contradictory": false,
+            "exact_values": [
+              501.187233627
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 501.187233627
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:7",
+            "contradictory": false,
+            "exact_values": [
+              158.489319246
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 158.489319246
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:8",
+            "contradictory": false,
+            "exact_values": [
+              39.810717055
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 39.810717055
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:9",
+            "contradictory": false,
+            "exact_values": [
+              39.810717055
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.5c03071"
+            ],
+            "value": 39.810717055
+          }
+        ],
+        "compounds": [
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:1",
+            "smiles": "OC(=O)C1(CCCCC1)NC(=O)CN1C(=O)C(F)(F)Oc2ccc(Br)cc12"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:10",
+            "smiles": "OC(=O)C1(CCC(F)(F)CC1)NC(=O)Cn1c2cc(Br)ccc2sc1=O"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:11",
+            "smiles": "OC(=O)C1(CCC(F)(F)CC1)NC(=O)Cn1c2cc(Cl)ccc2sc1=O"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:12",
+            "smiles": "OC(=O)C1(CCCCC1)NC(=O)Cn1c2cc(Br)ccc2sc1=O"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:14",
+            "smiles": "OC(=O)C1(CCCCC1)NC(=O)Cn1c2cc(ccc2oc1=O)C1CCCOC1"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:15",
+            "smiles": "Cl.OC(=O)C1(CCSCC1)NCCn1c2cc(ccc2sc1=O)C(F)(F)F"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:17",
+            "smiles": "CN(C(=O)Cn1c2cc(ccc2sc1=O)C(F)(F)F)C1(CCCCC1)C(O)=O"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:2",
+            "smiles": "OC(=O)C1(CCCCC1)NC(=O)Cn1c2cc(Cl)ccc2sc1=O"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:21",
+            "smiles": "CN(C(=O)Cn1c2cc(ccc2sc1=O)-c1cccc(F)c1)C1(CCCCC1)C(O)=O"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:22",
+            "smiles": "OC(=O)C1(CCC(F)(F)CC1)NC(=O)Cn1c2cc(Oc3ccc(F)cc3)ccc2sc1=O"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:23",
+            "smiles": "CC(C)COc1ccc2sc(=O)n(CC(=O)N(C)C3(CCCCC3)C(O)=O)c2c1"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:24",
+            "smiles": "CN(C(=O)Cn1c2cc(ccc2sc1=O)N1CCC(F)(F)CC1)C1(CCCCC1)C(O)=O"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:25",
+            "smiles": "OC(=O)C1(CCC(F)(F)CC1)NC(=O)Cn1c2cc(ccc2sc1=O)C1CCCC1"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:26",
+            "smiles": "CCN(C(=O)Cn1c2cc(Cl)ccc2sc1=O)C1(CCCCC1)C(O)=O"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:27",
+            "smiles": "OC(=O)C1(CCSCC1)NC(=O)CN1C(=O)C(F)(F)Oc2ccc(Br)cc12"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:28",
+            "smiles": "OC(=O)C1(CCSCC1)NC(=O)Cn1c2cc(ccc2ccc1=O)N1CCC(F)(F)CC1"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:29",
+            "smiles": "OC(=O)C1(CCn2c3cc(ccc3sc2=O)C(F)(F)F)CCSCC1"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:3",
+            "smiles": "OC(=O)C1(CCCCC1)NC(=O)Cn1c2cc(ccc2oc1=O)-c1ccccc1"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:30",
+            "smiles": "OC(=O)C1(CCCCC1)NC(=S)Cn1c2cc(ccc2sc1=O)C(F)(F)F"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:31",
+            "smiles": "CN(C(=O)CN1C(=O)Cc2ccc(cc12)-c1ccccc1)C1(CCCCC1)C(O)=O"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:32",
+            "smiles": "OC(=O)C1(CCCCC1)NC(=O)CN1C(=O)C(F)(F)Oc2ccc(cc12)C(F)(F)F"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:33",
+            "smiles": "OC(=O)C1(CCC(F)(F)CC1)NC(=O)Cn1c2cc(cnc2sc1=O)-c1ccccc1"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:34",
+            "smiles": "OC(=O)C1(CCSCC1)NC(=O)Cn1c2cc(cnc2sc1=O)C(F)(F)F"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:35",
+            "smiles": "CN(C(=O)Cn1c2cc(cnc2sc1=O)C(F)(F)F)C1(CCCCC1)C(O)=O"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:36",
+            "smiles": "OC(=O)C1(CCSCC1)NC(=O)Cn1c2cc(Cl)cc(F)c2sc1=O"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:38",
+            "smiles": "OC(=O)C1(CCCn2c3cc(ccc3sc2=O)C(=O)NC2CCC2)CCSCC1"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:39",
+            "smiles": "OC(=O)C1(CCSCC1)NCCn1c2cc(ccc2sc1=O)N1CCC(F)(F)CC1"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:40",
+            "smiles": "OC(=O)C1(CCC(F)(F)CC1)NC(=O)Cn1c2cc(Br)cc(F)c2sc1=O"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:41",
+            "smiles": "CN(C(=O)CN1C(=O)C(F)(F)Oc2ccc(Cl)cc12)C1(CCC(F)(F)CC1)C(O)=O"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:42",
+            "smiles": "OC(=O)C1(CCSCC1)NC(=O)Cn1c2cc(Cl)ccc2sc1=O"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:43",
+            "smiles": "CN(C(=O)Cn1c2cc(cc(F)c2sc1=O)C(F)(F)F)C1(CCSCC1)C(O)=O"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:44",
+            "smiles": "OC(=O)C1(CCC(F)(F)CC1)NC(=O)Cn1c2cc(ccc2sc1=O)C1CC1"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:5",
+            "smiles": "OC(=O)C1(CCCCC1)NC(=O)CN1C(=O)COc2ccc(Br)cc12"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:6",
+            "smiles": "OC(=O)C1(CCSCC1)NC(=O)CN1C(=O)COc2ccc(cc12)C(F)(F)F"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:7",
+            "smiles": "CN(C(=O)CN1C(=O)COc2ccc(cc12)C(F)(F)F)C1(CCCCC1)C(O)=O"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:8",
+            "smiles": "OC(=O)C1(CCSCC1)NC(=O)Cn1c2cc(ccc2sc1=O)C1CCCC1"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:9",
+            "smiles": "OC(=O)C1(CCSCC1)NC(=O)Cn1c2cc(OC3CCCC3)ccc2sc1=O"
+          }
+        ],
+        "content_checksum": "2eacd91784081b004afe86944d67d59cea0726b4d3b7e20f9695599c53c7ca62",
+        "created_by": "axis.learning.dataset",
+        "endpoint": "IC50",
+        "exclusion_rules": [
+          "unit without a valid conversion"
+        ],
+        "id": "dataset:ERAP1|9606|cellular_activity|10.1021/acs.jmedchem.5c03071|HeLa cellular antigen presentation pIC50|UNADJUDICATED_PROTOCOL|UNADJUDICATED|IC50@r2",
+        "label": "Unadmitted v2 numerical diagnostic",
+        "logical_id": "dataset:ERAP1|9606|cellular_activity|10.1021/acs.jmedchem.5c03071|HeLa cellular antigen presentation pIC50|UNADJUDICATED_PROTOCOL|UNADJUDICATED|IC50",
+        "measurement_type": "IC50",
+        "measurements": [
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:10",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:10:HeLa cellular antigen presentation pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 100.0,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 100.0,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:11",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:11:HeLa cellular antigen presentation pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 158.489319246,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 158.48931924611142,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:12",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:12:HeLa cellular antigen presentation pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 501.187233627,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 501.18723362727246,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:14",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:14:HeLa cellular antigen presentation pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 7943.282347243,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 7943.282347242822,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:15",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:15:HeLa cellular antigen presentation pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 158.489319246,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 158.48931924611142,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:17",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:17:HeLa cellular antigen presentation pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 79.432823472,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 79.43282347242821,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:1",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:1:HeLa cellular antigen presentation pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 251.188643151,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 251.18864315095823,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:21",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:21:HeLa cellular antigen presentation pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 31.622776602,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 31.622776601683793,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:22",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:22:HeLa cellular antigen presentation pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 5011.872336273,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 5011.872336272725,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:23",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:23:HeLa cellular antigen presentation pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 15.848931925,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 15.848931924611142,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:24",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:24:HeLa cellular antigen presentation pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 31.622776602,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 31.622776601683793,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:25",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:25:HeLa cellular antigen presentation pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 251.188643151,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 251.18864315095823,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:26",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:26:HeLa cellular antigen presentation pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 63.095734448,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 63.0957344480193,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:27",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:27:HeLa cellular antigen presentation pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 63.095734448,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 63.0957344480193,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:28",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:28:HeLa cellular antigen presentation pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 3981.071705535,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 3981.071705534969,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:29",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:29:HeLa cellular antigen presentation pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 6309.573444802,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 6309.57344480193,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:2",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:2:HeLa cellular antigen presentation pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 316.227766017,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 316.22776601683796,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:30",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:30:HeLa cellular antigen presentation pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 19952.623149689,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 19952.62314968879,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:31",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:31:HeLa cellular antigen presentation pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 125.892541179,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 125.89254117941661,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:32",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:32:HeLa cellular antigen presentation pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 63.095734448,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 63.0957344480193,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:33",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:33:HeLa cellular antigen presentation pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 251.188643151,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 251.18864315095823,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:34",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:34:HeLa cellular antigen presentation pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 501.187233627,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 501.18723362727246,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:35",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:35:HeLa cellular antigen presentation pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 316.227766017,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 316.22776601683796,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:36",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:36:HeLa cellular antigen presentation pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 31.622776602,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 31.622776601683793,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:38",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:38:HeLa cellular antigen presentation pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 100.0,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 100.0,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:39",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:39:HeLa cellular antigen presentation pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 7.943282347,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 7.943282347242821,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:3",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:3:HeLa cellular antigen presentation pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 199.526231497,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 199.52623149688787,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:40",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:40:HeLa cellular antigen presentation pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 50.118723363,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 50.11872336272725,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:41",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:41:HeLa cellular antigen presentation pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 251.188643151,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 251.18864315095823,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:42",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:42:HeLa cellular antigen presentation pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 63.095734448,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 63.0957344480193,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:43",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:43:HeLa cellular antigen presentation pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 316.227766017,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 316.22776601683796,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:44",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:44:HeLa cellular antigen presentation pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 251.188643151,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 251.18864315095823,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:5",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:5:HeLa cellular antigen presentation pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 1000.0,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 1000.0,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:6",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:6:HeLa cellular antigen presentation pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 501.187233627,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 501.18723362727246,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:7",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:7:HeLa cellular antigen presentation pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 158.489319246,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 158.48931924611142,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:8",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:8:HeLa cellular antigen presentation pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 39.810717055,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 39.81071705534969,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.5c03071:compound:9",
+            "date": "2026-04-13",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.5c03071:compound:9:HeLa cellular antigen presentation pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 39.810717055,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 39.81071705534969,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.5c03071",
+            "transformation": "x1 (nM to nM)"
+          }
+        ],
+        "policy": {
+          "censoring": "retain_with_operator; a boundary is never an exact value",
+          "contradiction_ratio": 3.0,
+          "normalisation": "concentration units to nM only; no endpoint conversion",
+          "pooling": "none across assay contexts",
+          "replicates": "retain_individual; per-compound median of exact values for modelling",
+          "version": "axis-learning-dataset-1"
+        },
+        "policy_fingerprint": "880a8e6fd17896f65e6a9458aca580f968a5be6b5145856fec89945188c509cb",
+        "project_id": "AXIS-DD-ERAP1-CURATED-001",
+        "provenance": "Explicit pIC50 conversion; source assay methods remain unadjudicated",
+        "review_state": "pending_review",
+        "revision": 2,
+        "synthetic": false,
+        "target": "ERAP1",
+        "unit": "nM"
+      },
+      "model_built": false,
+      "numerical_policy_assessment": {
+        "checks": [
+          {
+            "blocking": true,
+            "check": "single assay context",
+            "detail": "dataset is one context by construction",
+            "passed": true
+          },
+          {
+            "blocking": true,
+            "check": "valid structures",
+            "detail": "0 compounds have an unparseable structure",
+            "passed": true
+          },
+          {
+            "blocking": true,
+            "check": "sample size",
+            "detail": "37 compounds with an exact value; policy minimum 20",
+            "passed": true
+          },
+          {
+            "blocking": true,
+            "check": "chemical diversity",
+            "detail": "23 Murcko scaffolds among exact-value compounds; minimum 5",
+            "passed": true
+          },
+          {
+            "blocking": false,
+            "check": "series concentration",
+            "detail": "largest scaffold group holds 22% of exact-value compounds",
+            "passed": true
+          },
+          {
+            "blocking": true,
+            "check": "censoring",
+            "detail": "0 of 37 compounds have only censored values",
+            "passed": true
+          },
+          {
+            "blocking": true,
+            "check": "activity range",
+            "detail": "exact values span 3.40 log10 units; minimum 1.0",
+            "passed": true
+          },
+          {
+            "blocking": false,
+            "check": "contradictory measurements",
+            "detail": "0 compounds with contradictory exact values (kept, excluded from fitting)",
+            "passed": true
+          },
+          {
+            "blocking": true,
+            "check": "duplicate structures",
+            "detail": "37 compound references, 37 distinct structures",
+            "passed": true
+          }
+        ],
+        "conclusion": "eligible",
+        "counts": {
+          "activity_range_log10": 3.4,
+          "censored_only": 0,
+          "compounds": 37,
+          "contradictory": 0,
+          "exact": 37,
+          "scaffolds": 23
+        },
+        "dataset_id": "dataset:ERAP1|9606|cellular_activity|10.1021/acs.jmedchem.5c03071|HeLa cellular antigen presentation pIC50|UNADJUDICATED_PROTOCOL|UNADJUDICATED|IC50@r2",
+        "model_built": false,
+        "policy": {
+          "max_censored_fraction": 0.5,
+          "max_contradictory_fraction": 0.2,
+          "max_dominant_scaffold_fraction": 0.7,
+          "min_activity_range_log10": 1.0,
+          "min_compounds_per_scaffold_for_scaffold_split": 1,
+          "min_exact_compounds": 20,
+          "min_per_class": 5,
+          "min_scaffolds": 5,
+          "rationale": "A regression evaluated on held-out scaffolds needs enough exact, chemically varied, mutually comparable measurements for a test partition to contain more than a handful of compounds.",
+          "version": "axis-model-eligibility-1"
+        },
+        "policy_fingerprint": "f0ba60960e3044f2bbb0910242ea3a09f4ced35e0d842ff3a66d1dbc7ed163f1",
+        "readiness": "MODEL_ELIGIBLE",
+        "reasons": [],
+        "task": "regression"
+      },
+      "scientific_admission": "REFUSED: unresolved exact assay protocol/context"
+    },
+    {
+      "dataset": {
+        "assay_context": {
+          "assay_type": "biochemical_activity",
+          "endpoint": "IC50",
+          "format": "10.1021/acs.jmedchem.6c00029|ERAP1 pIC50|UNADJUDICATED_PROTOCOL",
+          "substrate": "UNADJUDICATED",
+          "target": "ERAP1",
+          "taxon": 9606
+        },
+        "checksum": "4f45f24dc6a943bfef59cf35fb96f07c74b09d0327ce26158ea17d495573c8db",
+        "compound_values": [
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:1",
+            "contradictory": false,
+            "exact_values": [
+              2454.708915685
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.6c00029"
+            ],
+            "value": 2454.708915685
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:10",
+            "contradictory": false,
+            "exact_values": [
+              5.370317964
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.6c00029"
+            ],
+            "value": 5.370317964
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:11",
+            "contradictory": false,
+            "exact_values": [
+              3.01995172
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.6c00029"
+            ],
+            "value": 3.01995172
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:12",
+            "contradictory": false,
+            "exact_values": [
+              269.153480393
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.6c00029"
+            ],
+            "value": 269.153480393
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:13",
+            "contradictory": false,
+            "exact_values": [
+              6.760829754
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.6c00029"
+            ],
+            "value": 6.760829754
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:14",
+            "contradictory": false,
+            "exact_values": [
+              4.570881896
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.6c00029"
+            ],
+            "value": 4.570881896
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:15",
+            "contradictory": false,
+            "exact_values": [
+              11.748975549
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.6c00029"
+            ],
+            "value": 11.748975549
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:16",
+            "contradictory": false,
+            "exact_values": [
+              8.912509381
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.6c00029"
+            ],
+            "value": 8.912509381
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:17",
+            "contradictory": false,
+            "exact_values": [
+              7.079457844
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.6c00029"
+            ],
+            "value": 7.079457844
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:18",
+            "contradictory": false,
+            "exact_values": [
+              3.801893963
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.6c00029"
+            ],
+            "value": 3.801893963
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:19",
+            "contradictory": false,
+            "exact_values": [
+              2.818382931
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.6c00029"
+            ],
+            "value": 2.818382931
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:2",
+            "contradictory": false,
+            "exact_values": [
+              2398.832919019
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.6c00029"
+            ],
+            "value": 2398.832919019
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:20",
+            "contradictory": false,
+            "exact_values": [
+              6.918309709
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.6c00029"
+            ],
+            "value": 6.918309709
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:21",
+            "contradictory": false,
+            "exact_values": [
+              3.548133892
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.6c00029"
+            ],
+            "value": 3.548133892
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:3",
+            "contradictory": false,
+            "exact_values": [
+              2137.962089502
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.6c00029"
+            ],
+            "value": 2137.962089502
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:4",
+            "contradictory": false,
+            "exact_values": [
+              2951.209226666
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.6c00029"
+            ],
+            "value": 2951.209226666
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:5",
+            "contradictory": false,
+            "exact_values": [
+              489.778819368
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.6c00029"
+            ],
+            "value": 489.778819368
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:6",
+            "contradictory": false,
+            "exact_values": [
+              35.481338923
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.6c00029"
+            ],
+            "value": 35.481338923
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:7",
+            "contradictory": false,
+            "exact_values": [
+              25.703957828
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.6c00029"
+            ],
+            "value": 25.703957828
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:8",
+            "contradictory": false,
+            "exact_values": [
+              37.15352291
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.6c00029"
+            ],
+            "value": 37.15352291
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:9",
+            "contradictory": false,
+            "exact_values": [
+              74.13102413
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.6c00029"
+            ],
+            "value": 74.13102413
+          }
+        ],
+        "compounds": [
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:1",
+            "smiles": "Cc1ccc(C#N)c(N2C[C@@H](C(=O)O)[C@H](C(C)C)C2)n1"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:10",
+            "smiles": "CC(C)[C@@H]1CN(c2nc(NC3CCCC3)ccc2C#N)C[C@H]1C(=O)O |&1:3,21|"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:11",
+            "smiles": "CC(C)[C@@H]1CN(c2nc(NC3CCCCC3)ccc2C#N)C[C@H]1C(=O)O |&1:3,22|"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:12",
+            "smiles": "CC(C)[C@@H]1CN(c2nc(N[C@@H]3CCOC3)ccc2C#N)C[C@H]1C(=O)O |a:10,&1:3,21|"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:13",
+            "smiles": "CC(C)[C@@H]1CN(c2nc(N[C@H]3CCOC3)ccc2C#N)C[C@H]1C(=O)O |a:10,&1:3,21|"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:14",
+            "smiles": "CC(C)[C@@H]1CN(c2nc(NC3CCC(F)(F)CC3)ccc2C#N)C[C@H]1C(=O)O |&1:3,24|"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:15",
+            "smiles": "CC(C)[C@@H]1CN(c2nc(NC3CCOCC3)ccc2C#N)C[C@H]1C(=O)O |&1:3,22|"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:16",
+            "smiles": "CC(C)[C@@H]1CN(c2nc(NCC3CC3)ccc2C#N)C[C@H]1C(=O)O |&1:3,20|"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:17",
+            "smiles": "CC(C)[C@@H]1CN(c2nc(NCC3CCC3)ccc2C#N)C[C@H]1C(=O)O |&1:3,21|"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:18",
+            "smiles": "Cc1cc(NC2CCC(F)(F)CC2)nc(N2C[C@H](C(=O)O)[C@@H](C(C)C)C2)c1C#N |&1:17,21|"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:19",
+            "smiles": "Cc1cc(NC2CCC(F)(F)CC2)nc(N2C[C@H](C(=O)O)[C@@H](C(C)C)C2)c1C#N"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:2",
+            "smiles": "Cc1ccc(C#N)c(N2C[C@H](C(=O)O)[C@@H](C(C)C)C2)n1"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:20",
+            "smiles": "Cc1cc(NC2CCC(F)(F)CC2)nc(N2C[C@@H](C(=O)O)[C@H](C(C)C)C2)c1C#N"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:21",
+            "smiles": "Cc1cc(NC2(C)CCOCC2)nc(N2C[C@H](C(=O)O)[C@@H](C(C)C)C2)c1C#N |a:16,20|"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:3",
+            "smiles": "Cc1ccc(C#N)c(N2C[C@H](C(=O)O)[C@@H](C(C)C)C2)n1 |&1:10,14|"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:4",
+            "smiles": "COc1ccc(C#N)c(N2C[C@H](C(=O)O)[C@@H](C(C)C)C2)n1 |&1:11,15|"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:5",
+            "smiles": "CC(C)[C@@H]1CN(c2nc(N)ccc2C#N)C[C@H]1C(=O)O |&1:3,16|"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:6",
+            "smiles": "CC(C)Nc1ccc(C#N)c(N2C[C@H](C(=O)O)[C@@H](C(C)C)C2)n1 |&1:13,17|"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:7",
+            "smiles": "CC(C)[C@@H]1CN(c2nc(NC3CC3)ccc2C#N)C[C@H]1C(=O)O |&1:3,19|"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:8",
+            "smiles": "CC(C)[C@H]1CN(c2nc(NC3CC3)ccc2C#N)C[C@@H]1C(=O)O |a:3,19|"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:9",
+            "smiles": "CC(C)[C@@H]1CN(c2nc(NC3CC3)ccc2C#N)C[C@H]1C(=O)O |a:3,19|"
+          }
+        ],
+        "content_checksum": "abb2e7e86ae20dcb478a01f93cc56af47d9c0febe382f284d69edc1a717cd032",
+        "created_by": "axis.learning.dataset",
+        "endpoint": "IC50",
+        "exclusion_rules": [
+          "unit without a valid conversion"
+        ],
+        "id": "dataset:ERAP1|9606|biochemical_activity|10.1021/acs.jmedchem.6c00029|ERAP1 pIC50|UNADJUDICATED_PROTOCOL|UNADJUDICATED|IC50@r2",
+        "label": "Unadmitted v2 numerical diagnostic",
+        "logical_id": "dataset:ERAP1|9606|biochemical_activity|10.1021/acs.jmedchem.6c00029|ERAP1 pIC50|UNADJUDICATED_PROTOCOL|UNADJUDICATED|IC50",
+        "measurement_type": "IC50",
+        "measurements": [
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:10",
+            "date": "2026-06-22",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.6c00029:compound:10:ERAP1 pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 5.370317964,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 5.370317963702533,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.6c00029",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:11",
+            "date": "2026-06-22",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.6c00029:compound:11:ERAP1 pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 3.01995172,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 3.019951720402019,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.6c00029",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:12",
+            "date": "2026-06-22",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.6c00029:compound:12:ERAP1 pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 269.153480393,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 269.1534803926914,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.6c00029",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:13",
+            "date": "2026-06-22",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.6c00029:compound:13:ERAP1 pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 6.760829754,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 6.760829753919819,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.6c00029",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:14",
+            "date": "2026-06-22",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.6c00029:compound:14:ERAP1 pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 4.570881896,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 4.570881896148752,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.6c00029",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:15",
+            "date": "2026-06-22",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.6c00029:compound:15:ERAP1 pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 11.748975549,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 11.748975549395302,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.6c00029",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:16",
+            "date": "2026-06-22",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.6c00029:compound:16:ERAP1 pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 8.912509381,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 8.91250938133744,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.6c00029",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:17",
+            "date": "2026-06-22",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.6c00029:compound:17:ERAP1 pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 7.079457844,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 7.079457843841373,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.6c00029",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:18",
+            "date": "2026-06-22",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.6c00029:compound:18:ERAP1 pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 3.801893963,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 3.801893963205613,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.6c00029",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:19",
+            "date": "2026-06-22",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.6c00029:compound:19:ERAP1 pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 2.818382931,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 2.8183829312644493,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.6c00029",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:1",
+            "date": "2026-06-22",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.6c00029:compound:1:ERAP1 pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 2454.708915685,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 2454.7089156850284,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.6c00029",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:20",
+            "date": "2026-06-22",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.6c00029:compound:20:ERAP1 pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 6.918309709,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 6.918309709189363,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.6c00029",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:21",
+            "date": "2026-06-22",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.6c00029:compound:21:ERAP1 pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 3.548133892,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 3.5481338923357604,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.6c00029",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:2",
+            "date": "2026-06-22",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.6c00029:compound:2:ERAP1 pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 2398.832919019,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 2398.83291901949,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.6c00029",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:3",
+            "date": "2026-06-22",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.6c00029:compound:3:ERAP1 pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 2137.962089502,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 2137.9620895022326,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.6c00029",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:4",
+            "date": "2026-06-22",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.6c00029:compound:4:ERAP1 pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 2951.209226666,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 2951.209226666384,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.6c00029",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:5",
+            "date": "2026-06-22",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.6c00029:compound:5:ERAP1 pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 489.778819368,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 489.77881936844665,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.6c00029",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:6",
+            "date": "2026-06-22",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.6c00029:compound:6:ERAP1 pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 35.481338923,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 35.481338923357534,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.6c00029",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:7",
+            "date": "2026-06-22",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.6c00029:compound:7:ERAP1 pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 25.703957828,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 25.703957827688647,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.6c00029",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:8",
+            "date": "2026-06-22",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.6c00029:compound:8:ERAP1 pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 37.15352291,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 37.15352290971728,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.6c00029",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:9",
+            "date": "2026-06-22",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.6c00029:compound:9:ERAP1 pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 74.13102413,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 74.13102413009177,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.6c00029",
+            "transformation": "x1 (nM to nM)"
+          }
+        ],
+        "policy": {
+          "censoring": "retain_with_operator; a boundary is never an exact value",
+          "contradiction_ratio": 3.0,
+          "normalisation": "concentration units to nM only; no endpoint conversion",
+          "pooling": "none across assay contexts",
+          "replicates": "retain_individual; per-compound median of exact values for modelling",
+          "version": "axis-learning-dataset-1"
+        },
+        "policy_fingerprint": "880a8e6fd17896f65e6a9458aca580f968a5be6b5145856fec89945188c509cb",
+        "project_id": "AXIS-DD-ERAP1-CURATED-001",
+        "provenance": "Explicit pIC50 conversion; source assay methods remain unadjudicated",
+        "review_state": "pending_review",
+        "revision": 2,
+        "synthetic": false,
+        "target": "ERAP1",
+        "unit": "nM"
+      },
+      "model_built": false,
+      "numerical_policy_assessment": {
+        "checks": [
+          {
+            "blocking": true,
+            "check": "single assay context",
+            "detail": "dataset is one context by construction",
+            "passed": true
+          },
+          {
+            "blocking": true,
+            "check": "valid structures",
+            "detail": "0 compounds have an unparseable structure",
+            "passed": true
+          },
+          {
+            "blocking": true,
+            "check": "sample size",
+            "detail": "21 compounds with an exact value; policy minimum 20",
+            "passed": true
+          },
+          {
+            "blocking": true,
+            "check": "chemical diversity",
+            "detail": "9 Murcko scaffolds among exact-value compounds; minimum 5",
+            "passed": true
+          },
+          {
+            "blocking": false,
+            "check": "series concentration",
+            "detail": "largest scaffold group holds 29% of exact-value compounds",
+            "passed": true
+          },
+          {
+            "blocking": true,
+            "check": "censoring",
+            "detail": "0 of 21 compounds have only censored values",
+            "passed": true
+          },
+          {
+            "blocking": true,
+            "check": "activity range",
+            "detail": "exact values span 3.02 log10 units; minimum 1.0",
+            "passed": true
+          },
+          {
+            "blocking": false,
+            "check": "contradictory measurements",
+            "detail": "0 compounds with contradictory exact values (kept, excluded from fitting)",
+            "passed": true
+          },
+          {
+            "blocking": true,
+            "check": "duplicate structures",
+            "detail": "21 compound references, 18 distinct structures",
+            "passed": false
+          }
+        ],
+        "conclusion": "not_eligible",
+        "counts": {
+          "activity_range_log10": 3.02,
+          "censored_only": 0,
+          "compounds": 21,
+          "contradictory": 0,
+          "exact": 21,
+          "scaffolds": 9
+        },
+        "dataset_id": "dataset:ERAP1|9606|biochemical_activity|10.1021/acs.jmedchem.6c00029|ERAP1 pIC50|UNADJUDICATED_PROTOCOL|UNADJUDICATED|IC50@r2",
+        "model_built": false,
+        "policy": {
+          "max_censored_fraction": 0.5,
+          "max_contradictory_fraction": 0.2,
+          "max_dominant_scaffold_fraction": 0.7,
+          "min_activity_range_log10": 1.0,
+          "min_compounds_per_scaffold_for_scaffold_split": 1,
+          "min_exact_compounds": 20,
+          "min_per_class": 5,
+          "min_scaffolds": 5,
+          "rationale": "A regression evaluated on held-out scaffolds needs enough exact, chemically varied, mutually comparable measurements for a test partition to contain more than a handful of compounds.",
+          "version": "axis-model-eligibility-1"
+        },
+        "policy_fingerprint": "f0ba60960e3044f2bbb0910242ea3a09f4ced35e0d842ff3a66d1dbc7ed163f1",
+        "readiness": "SAR_ONLY",
+        "reasons": [
+          "duplicate structures: 21 compound references, 18 distinct structures"
+        ],
+        "task": "regression"
+      },
+      "scientific_admission": "REFUSED: unresolved exact assay protocol/context"
+    },
+    {
+      "dataset": {
+        "assay_context": {
+          "assay_type": "cellular_activity",
+          "endpoint": "IC50",
+          "format": "10.1021/acs.jmedchem.6c00029|HeLa antigen presentation pIC50|UNADJUDICATED_PROTOCOL",
+          "substrate": "UNADJUDICATED",
+          "target": "ERAP1",
+          "taxon": 9606
+        },
+        "checksum": "37ee12293808db28da191b96945be6c1cbfb810dc18f4a14086cc1aac441ac5e",
+        "compound_values": [
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:10",
+            "contradictory": false,
+            "exact_values": [
+              36.307805477
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.6c00029"
+            ],
+            "value": 36.307805477
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:11",
+            "contradictory": false,
+            "exact_values": [
+              23.442288153
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.6c00029"
+            ],
+            "value": 23.442288153
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:12",
+            "contradictory": false,
+            "exact_values": [
+              2238.721138568
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.6c00029"
+            ],
+            "value": 2238.721138568
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:13",
+            "contradictory": false,
+            "exact_values": [
+              218.776162395
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.6c00029"
+            ],
+            "value": 218.776162395
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:14",
+            "contradictory": false,
+            "exact_values": [
+              42.65795188
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.6c00029"
+            ],
+            "value": 42.65795188
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:15",
+            "contradictory": false,
+            "exact_values": [
+              1380.384264603
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.6c00029"
+            ],
+            "value": 1380.384264603
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:16",
+            "contradictory": false,
+            "exact_values": [
+              28.840315031
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.6c00029"
+            ],
+            "value": 28.840315031
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:17",
+            "contradictory": false,
+            "exact_values": [
+              53.703179637
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.6c00029"
+            ],
+            "value": 53.703179637
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:18",
+            "contradictory": false,
+            "exact_values": [
+              7.762471166
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.6c00029"
+            ],
+            "value": 7.762471166
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:19",
+            "contradictory": false,
+            "exact_values": [
+              8.128305162
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.6c00029"
+            ],
+            "value": 8.128305162
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:20",
+            "contradictory": false,
+            "exact_values": [
+              40.73802778
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.6c00029"
+            ],
+            "value": 40.73802778
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:21",
+            "contradictory": false,
+            "exact_values": [
+              56.234132519
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.6c00029"
+            ],
+            "value": 56.234132519
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:5",
+            "contradictory": false,
+            "exact_values": [
+              3311.311214826
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.6c00029"
+            ],
+            "value": 3311.311214826
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:6",
+            "contradictory": false,
+            "exact_values": [
+              208.929613085
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.6c00029"
+            ],
+            "value": 208.929613085
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:7",
+            "contradictory": false,
+            "exact_values": [
+              138.03842646
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.6c00029"
+            ],
+            "value": 138.03842646
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:8",
+            "contradictory": false,
+            "exact_values": [
+              102.329299228
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.6c00029"
+            ],
+            "value": 102.329299228
+          },
+          {
+            "censored": [],
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:9",
+            "contradictory": false,
+            "exact_values": [
+              158.489319246
+            ],
+            "n_measurements": 1,
+            "operator": "=",
+            "replicate_policy": "single",
+            "sources": [
+              "10.1021/acs.jmedchem.6c00029"
+            ],
+            "value": 158.489319246
+          }
+        ],
+        "compounds": [
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:10",
+            "smiles": "CC(C)[C@@H]1CN(c2nc(NC3CCCC3)ccc2C#N)C[C@H]1C(=O)O |&1:3,21|"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:11",
+            "smiles": "CC(C)[C@@H]1CN(c2nc(NC3CCCCC3)ccc2C#N)C[C@H]1C(=O)O |&1:3,22|"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:12",
+            "smiles": "CC(C)[C@@H]1CN(c2nc(N[C@@H]3CCOC3)ccc2C#N)C[C@H]1C(=O)O |a:10,&1:3,21|"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:13",
+            "smiles": "CC(C)[C@@H]1CN(c2nc(N[C@H]3CCOC3)ccc2C#N)C[C@H]1C(=O)O |a:10,&1:3,21|"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:14",
+            "smiles": "CC(C)[C@@H]1CN(c2nc(NC3CCC(F)(F)CC3)ccc2C#N)C[C@H]1C(=O)O |&1:3,24|"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:15",
+            "smiles": "CC(C)[C@@H]1CN(c2nc(NC3CCOCC3)ccc2C#N)C[C@H]1C(=O)O |&1:3,22|"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:16",
+            "smiles": "CC(C)[C@@H]1CN(c2nc(NCC3CC3)ccc2C#N)C[C@H]1C(=O)O |&1:3,20|"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:17",
+            "smiles": "CC(C)[C@@H]1CN(c2nc(NCC3CCC3)ccc2C#N)C[C@H]1C(=O)O |&1:3,21|"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:18",
+            "smiles": "Cc1cc(NC2CCC(F)(F)CC2)nc(N2C[C@H](C(=O)O)[C@@H](C(C)C)C2)c1C#N |&1:17,21|"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:19",
+            "smiles": "Cc1cc(NC2CCC(F)(F)CC2)nc(N2C[C@H](C(=O)O)[C@@H](C(C)C)C2)c1C#N"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:20",
+            "smiles": "Cc1cc(NC2CCC(F)(F)CC2)nc(N2C[C@@H](C(=O)O)[C@H](C(C)C)C2)c1C#N"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:21",
+            "smiles": "Cc1cc(NC2(C)CCOCC2)nc(N2C[C@H](C(=O)O)[C@@H](C(C)C)C2)c1C#N |a:16,20|"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:5",
+            "smiles": "CC(C)[C@@H]1CN(c2nc(N)ccc2C#N)C[C@H]1C(=O)O |&1:3,16|"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:6",
+            "smiles": "CC(C)Nc1ccc(C#N)c(N2C[C@H](C(=O)O)[C@@H](C(C)C)C2)n1 |&1:13,17|"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:7",
+            "smiles": "CC(C)[C@@H]1CN(c2nc(NC3CC3)ccc2C#N)C[C@H]1C(=O)O |&1:3,19|"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:8",
+            "smiles": "CC(C)[C@H]1CN(c2nc(NC3CC3)ccc2C#N)C[C@@H]1C(=O)O |a:3,19|"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:9",
+            "smiles": "CC(C)[C@@H]1CN(c2nc(NC3CC3)ccc2C#N)C[C@H]1C(=O)O |a:3,19|"
+          }
+        ],
+        "content_checksum": "01ac76778fb58dc47652c608eec52774561a76be925c623ad9f7dfa2ba6a23c4",
+        "created_by": "axis.learning.dataset",
+        "endpoint": "IC50",
+        "exclusion_rules": [
+          "unit without a valid conversion"
+        ],
+        "id": "dataset:ERAP1|9606|cellular_activity|10.1021/acs.jmedchem.6c00029|HeLa antigen presentation pIC50|UNADJUDICATED_PROTOCOL|UNADJUDICATED|IC50@r2",
+        "label": "Unadmitted v2 numerical diagnostic",
+        "logical_id": "dataset:ERAP1|9606|cellular_activity|10.1021/acs.jmedchem.6c00029|HeLa antigen presentation pIC50|UNADJUDICATED_PROTOCOL|UNADJUDICATED|IC50",
+        "measurement_type": "IC50",
+        "measurements": [
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:10",
+            "date": "2026-06-22",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.6c00029:compound:10:HeLa antigen presentation pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 36.307805477,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 36.3078054770101,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.6c00029",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:11",
+            "date": "2026-06-22",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.6c00029:compound:11:HeLa antigen presentation pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 23.442288153,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 23.442288153199225,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.6c00029",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:12",
+            "date": "2026-06-22",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.6c00029:compound:12:HeLa antigen presentation pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 2238.721138568,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 2238.7211385683377,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.6c00029",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:13",
+            "date": "2026-06-22",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.6c00029:compound:13:HeLa antigen presentation pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 218.776162395,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 218.77616239495518,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.6c00029",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:14",
+            "date": "2026-06-22",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.6c00029:compound:14:HeLa antigen presentation pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 42.65795188,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 42.65795188015925,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.6c00029",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:15",
+            "date": "2026-06-22",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.6c00029:compound:15:HeLa antigen presentation pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 1380.384264603,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 1380.3842646028838,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.6c00029",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:16",
+            "date": "2026-06-22",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.6c00029:compound:16:HeLa antigen presentation pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 28.840315031,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 28.84031503126606,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.6c00029",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:17",
+            "date": "2026-06-22",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.6c00029:compound:17:HeLa antigen presentation pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 53.703179637,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 53.70317963702533,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.6c00029",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:18",
+            "date": "2026-06-22",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.6c00029:compound:18:HeLa antigen presentation pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 7.762471166,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 7.762471166286928,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.6c00029",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:19",
+            "date": "2026-06-22",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.6c00029:compound:19:HeLa antigen presentation pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 8.128305162,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 8.128305161640995,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.6c00029",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:20",
+            "date": "2026-06-22",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.6c00029:compound:20:HeLa antigen presentation pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 40.73802778,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 40.7380277804113,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.6c00029",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:21",
+            "date": "2026-06-22",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.6c00029:compound:21:HeLa antigen presentation pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 56.234132519,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 56.23413251903491,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.6c00029",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:5",
+            "date": "2026-06-22",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.6c00029:compound:5:HeLa antigen presentation pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 3311.311214826,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 3311.311214825908,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.6c00029",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:6",
+            "date": "2026-06-22",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.6c00029:compound:6:HeLa antigen presentation pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 208.929613085,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 208.92961308540407,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.6c00029",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:7",
+            "date": "2026-06-22",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.6c00029:compound:7:HeLa antigen presentation pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 138.03842646,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 138.03842646028838,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.6c00029",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:8",
+            "date": "2026-06-22",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.6c00029:compound:8:HeLa antigen presentation pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 102.329299228,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 102.32929922807536,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.6c00029",
+            "transformation": "x1 (nM to nM)"
+          },
+          {
+            "compound_ref": "10.1021/acs.jmedchem.6c00029:compound:9",
+            "date": "2026-06-22",
+            "exclusion_reason": null,
+            "id": "10.1021/acs.jmedchem.6c00029:compound:9:HeLa antigen presentation pIC50",
+            "included": true,
+            "normalized_unit": "nM",
+            "normalized_value": 158.489319246,
+            "operator": "=",
+            "original_unit": "nM",
+            "original_value": 158.48931924611142,
+            "replicate_group": "published aggregate, not individual replicates",
+            "source": "10.1021/acs.jmedchem.6c00029",
+            "transformation": "x1 (nM to nM)"
+          }
+        ],
+        "policy": {
+          "censoring": "retain_with_operator; a boundary is never an exact value",
+          "contradiction_ratio": 3.0,
+          "normalisation": "concentration units to nM only; no endpoint conversion",
+          "pooling": "none across assay contexts",
+          "replicates": "retain_individual; per-compound median of exact values for modelling",
+          "version": "axis-learning-dataset-1"
+        },
+        "policy_fingerprint": "880a8e6fd17896f65e6a9458aca580f968a5be6b5145856fec89945188c509cb",
+        "project_id": "AXIS-DD-ERAP1-CURATED-001",
+        "provenance": "Explicit pIC50 conversion; source assay methods remain unadjudicated",
+        "review_state": "pending_review",
+        "revision": 2,
+        "synthetic": false,
+        "target": "ERAP1",
+        "unit": "nM"
+      },
+      "model_built": false,
+      "numerical_policy_assessment": {
+        "checks": [
+          {
+            "blocking": true,
+            "check": "single assay context",
+            "detail": "dataset is one context by construction",
+            "passed": true
+          },
+          {
+            "blocking": true,
+            "check": "valid structures",
+            "detail": "0 compounds have an unparseable structure",
+            "passed": true
+          },
+          {
+            "blocking": true,
+            "check": "sample size",
+            "detail": "17 compounds with an exact value; policy minimum 20",
+            "passed": false
+          },
+          {
+            "blocking": true,
+            "check": "chemical diversity",
+            "detail": "9 Murcko scaffolds among exact-value compounds; minimum 5",
+            "passed": true
+          },
+          {
+            "blocking": false,
+            "check": "series concentration",
+            "detail": "largest scaffold group holds 29% of exact-value compounds",
+            "passed": true
+          },
+          {
+            "blocking": true,
+            "check": "censoring",
+            "detail": "0 of 17 compounds have only censored values",
+            "passed": true
+          },
+          {
+            "blocking": true,
+            "check": "activity range",
+            "detail": "exact values span 2.63 log10 units; minimum 1.0",
+            "passed": true
+          },
+          {
+            "blocking": false,
+            "check": "contradictory measurements",
+            "detail": "0 compounds with contradictory exact values (kept, excluded from fitting)",
+            "passed": true
+          },
+          {
+            "blocking": true,
+            "check": "duplicate structures",
+            "detail": "17 compound references, 15 distinct structures",
+            "passed": false
+          }
+        ],
+        "conclusion": "not_eligible",
+        "counts": {
+          "activity_range_log10": 2.63,
+          "censored_only": 0,
+          "compounds": 17,
+          "contradictory": 0,
+          "exact": 17,
+          "scaffolds": 9
+        },
+        "dataset_id": "dataset:ERAP1|9606|cellular_activity|10.1021/acs.jmedchem.6c00029|HeLa antigen presentation pIC50|UNADJUDICATED_PROTOCOL|UNADJUDICATED|IC50@r2",
+        "model_built": false,
+        "policy": {
+          "max_censored_fraction": 0.5,
+          "max_contradictory_fraction": 0.2,
+          "max_dominant_scaffold_fraction": 0.7,
+          "min_activity_range_log10": 1.0,
+          "min_compounds_per_scaffold_for_scaffold_split": 1,
+          "min_exact_compounds": 20,
+          "min_per_class": 5,
+          "min_scaffolds": 5,
+          "rationale": "A regression evaluated on held-out scaffolds needs enough exact, chemically varied, mutually comparable measurements for a test partition to contain more than a handful of compounds.",
+          "version": "axis-model-eligibility-1"
+        },
+        "policy_fingerprint": "f0ba60960e3044f2bbb0910242ea3a09f4ced35e0d842ff3a66d1dbc7ed163f1",
+        "readiness": "SAR_ONLY",
+        "reasons": [
+          "sample size: 17 compounds with an exact value; policy minimum 20",
+          "duplicate structures: 17 compound references, 15 distinct structures"
+        ],
+        "task": "regression"
+      },
+      "scientific_admission": "REFUSED: unresolved exact assay protocol/context"
+    }
+  ],
+  "reason": "2026 biochemical/cellular assay context remains insufficiently adjudicated; numerical thresholds alone cannot admit records",
+  "thresholds_changed": false
+}

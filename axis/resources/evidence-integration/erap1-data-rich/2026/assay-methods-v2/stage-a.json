@@ -1,0 +1,28 @@
+{
+  "blocker_resolved": false,
+  "failures": [
+    {
+      "assay": "bradshaw-2026-enzyme",
+      "final_context_adjudicated": false,
+      "missing": [
+        "construct",
+        "substrate",
+        "incubation duration",
+        "readout"
+      ]
+    },
+    {
+      "assay": "bradshaw-2026-cell",
+      "final_context_adjudicated": false,
+      "missing": [
+        "construct",
+        "substrate",
+        "incubation duration",
+        "readout"
+      ]
+    }
+  ],
+  "policy": "Explicit protocol chain; adjudicated version fallback; no guesses",
+  "stage": "A2",
+  "stage_b_permitted": false
+}

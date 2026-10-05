@@ -1,0 +1,172 @@
+{
+  "cutoff": "2026-10-05",
+  "review_state": "pending_review",
+  "assays": [
+    {
+      "id": "hry-2024-enzyme",
+      "source": "10.1021/acsmedchemlett.4c00401",
+      "artifact": "PMC11647717.xml",
+      "locator": "Results: enzymatic assay paragraph; Hap2 discussion; SI S35 Table S1",
+      "context": "biochemical",
+      "fields": {
+        "protocol": {"state": "PARTIALLY VERIFIED", "value": "Mass-spectrometry detection of YTAFTIPSI cleavage to TAFTIPSI; source cites earlier protocol"},
+        "construct_allotype": {"state": "PARTIALLY VERIFIED", "value": "Hap2 explicitly stated; exact assay preparation sequence/concentrations not independently resolved here"},
+        "substrate": {"state": "VERIFIED", "value": "YTAFTIPSI"},
+        "endpoint": {"state": "VERIFIED", "value": "ERAP1 pIC50"},
+        "duration": {"state": "PARTIALLY VERIFIED", "value": null},
+        "exposure": {"state": "PARTIALLY VERIFIED", "value": "Concentration-response endpoint; exact enzyme/substrate concentrations unresolved"},
+        "engagement_method": {"state": "NOT APPLICABLE", "value": "Isolated enzyme activity, not cellular occupancy"}
+      },
+      "admission": "SOURCE_REPORTED_SAR_ONLY",
+      "pooling": "REFUSED with cellular data, counterscreens and 2026 publications"
+    },
+    {
+      "id": "hry-2024-cell",
+      "source": "10.1021/acsmedchemlett.4c00401",
+      "artifact": "si/ml4c00401_si_001.pdf",
+      "locator": "S34 Cellular Antigen Presentation Assay; S36 Table S2",
+      "context": "cellular antigen presentation",
+      "fields": {
+        "protocol": {"state": "VERIFIED", "value": "HeLa BacMam precursor and mouse H-2Kb/beta2m, 25.D1.16-APC flow cytometry, four-parameter concentration-response fit"},
+        "construct_allotype": {"state": "PARTIALLY VERIFIED", "value": "Endogenous HeLa ERAP1; allotype not reported in inspected methods"},
+        "substrate": {"state": "VERIFIED", "value": "LEQLESIINFEKL precursor; SIINFEKL presentation"},
+        "endpoint": {"state": "VERIFIED", "value": "Antigen-presentation pIC50"},
+        "duration": {"state": "VERIFIED", "value": "40 h"},
+        "exposure": {"state": "VERIFIED", "value": "Concentration-response; DMSO 0.5%; control ERAP1 inhibitor 50 uM FAC"},
+        "engagement_method": {"state": "NOT APPLICABLE", "value": "Presentation assay does not directly measure occupancy"}
+      },
+      "admission": "INTEGRATE_CONTEXT_SPECIFIC_PRESENTATION",
+      "pooling": "REFUSED with biochemical endpoints and other publications"
+    },
+    {
+      "id": "bradshaw-2026-enzyme",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "artifact": "si/jm5c03071_si_001.pdf",
+      "locator": "Entire SI S1-S75 inspected; S60 Table S2; associated CSV source rows",
+      "context": "biochemical",
+      "fields": {
+        "protocol": {"state": "INACCESSIBLE", "value": null},
+        "construct_allotype": {"state": "INACCESSIBLE", "value": null},
+        "substrate": {"state": "INACCESSIBLE", "value": null},
+        "endpoint": {"state": "VERIFIED", "value": "ERAP1 pIC50, source aggregate mean and N/SD where listed"},
+        "duration": {"state": "INACCESSIBLE", "value": null},
+        "exposure": {"state": "INACCESSIBLE", "value": null},
+        "engagement_method": {"state": "NOT APPLICABLE", "value": "Biochemical endpoint does not establish cellular occupancy"}
+      },
+      "admission": "REFUSED_ASSAY_NORMALIZATION_AND_LEARNING",
+      "pooling": "REFUSED; do not borrow Hryczanek protocol from a reference list"
+    },
+    {
+      "id": "bradshaw-2026-cell",
+      "source": "10.1021/acs.jmedchem.5c03071",
+      "artifact": "si/jm5c03071_si_001.pdf",
+      "locator": "S60 Table S2; CSV column HeLa antigen presentation pIC50",
+      "context": "cellular",
+      "fields": {
+        "protocol": {"state": "INACCESSIBLE", "value": null},
+        "construct_allotype": {"state": "INACCESSIBLE", "value": null},
+        "substrate": {"state": "INACCESSIBLE", "value": null},
+        "endpoint": {"state": "VERIFIED", "value": "HeLa antigen presentation pIC50"},
+        "duration": {"state": "INACCESSIBLE", "value": null},
+        "exposure": {"state": "INACCESSIBLE", "value": null},
+        "engagement_method": {"state": "INACCESSIBLE", "value": "Presentation endpoint is not occupancy; separate direct-engagement experiment cannot be assessed from accessible SI"}
+      },
+      "admission": "REFUSED_ASSAY_NORMALIZATION_AND_LEARNING",
+      "pooling": "REFUSED"
+    },
+    {
+      "id": "tinworth-2026-enzyme",
+      "source": "10.1021/acs.jmedchem.6c00029",
+      "artifact": "si/jm6c00029_si_001.pdf",
+      "locator": "Entire SI S1-S38 inspected; S5 Supplementary Table 1; associated CSV",
+      "context": "biochemical",
+      "fields": {
+        "protocol": {"state": "INACCESSIBLE", "value": null},
+        "construct_allotype": {"state": "INACCESSIBLE", "value": null},
+        "substrate": {"state": "INACCESSIBLE", "value": null},
+        "endpoint": {"state": "VERIFIED", "value": "ERAP1 pIC50"},
+        "duration": {"state": "INACCESSIBLE", "value": null},
+        "exposure": {"state": "INACCESSIBLE", "value": null},
+        "engagement_method": {"state": "NOT APPLICABLE", "value": "Biochemical endpoint does not establish cellular occupancy"}
+      },
+      "admission": "REFUSED_ASSAY_NORMALIZATION_AND_LEARNING",
+      "pooling": "REFUSED"
+    },
+    {
+      "id": "tinworth-2026-cell",
+      "source": "10.1021/acs.jmedchem.6c00029",
+      "artifact": "si/jm6c00029_si_001.pdf",
+      "locator": "S5 Supplementary Table 1; separate KK-SIINFEKL and compound-6 normalization columns",
+      "context": "cellular",
+      "fields": {
+        "protocol": {"state": "PARTIALLY VERIFIED", "value": "Two source control schemes, not interchangeable; full method inaccessible"},
+        "construct_allotype": {"state": "INACCESSIBLE", "value": null},
+        "substrate": {"state": "PARTIALLY VERIFIED", "value": "KK-SIINFEKL is a control label, not proof of the exact tested precursor or full protocol"},
+        "endpoint": {"state": "VERIFIED", "value": "HeLa antigen presentation pIC50"},
+        "duration": {"state": "INACCESSIBLE", "value": null},
+        "exposure": {"state": "INACCESSIBLE", "value": null},
+        "engagement_method": {"state": "INACCESSIBLE", "value": "No direct occupancy conclusion from presentation or X-ray structures"}
+      },
+      "admission": "REFUSED_ASSAY_NORMALIZATION_AND_LEARNING",
+      "pooling": "REFUSED across control schemes and programmes"
+    },
+    {
+      "id": "tinworth-2026-hepatocytes",
+      "source": "10.1021/acs.jmedchem.6c00029",
+      "artifact": "si/jm6c00029_si_001.pdf",
+      "locator": "S5 Supplementary Table 2",
+      "context": "in vitro DMPK, not human participant PK",
+      "fields": {
+        "protocol": {"state": "VERIFIED", "value": "LC-MS/MS depletion in human hepatocytes, Williams Medium E, 37 C, 5% CO2, 200 rpm"},
+        "construct_allotype": {"state": "NOT APPLICABLE", "value": null},
+        "substrate": {"state": "NOT APPLICABLE", "value": null},
+        "endpoint": {"state": "VERIFIED", "value": "Hepatocyte intrinsic clearance, scaled mL/min/kg; unbound estimate separately reported"},
+        "duration": {"state": "VERIFIED", "value": "Sampling 0-240 min"},
+        "exposure": {"state": "VERIFIED", "value": "0.5 uM compound, 0.5 million cells/mL"},
+        "engagement_method": {"state": "NOT APPLICABLE", "value": null}
+      },
+      "admission": "CONTEXTUALIZE_DMPK_ONLY",
+      "pooling": "No potency or human clinical inference"
+    },
+    {
+      "id": "tinworth-2026-cia",
+      "source": "10.1021/acs.jmedchem.6c00029",
+      "artifact": "si/jm6c00029_si_001.pdf",
+      "locator": "S2 Supplementary Figures 1/2; S7 Supplementary Table 4",
+      "context": "mouse collagen-induced arthritis; not axSpA",
+      "fields": {
+        "protocol": {"state": "PARTIALLY VERIFIED", "value": "Body weight/knee pathology, day 36; paw clinical scores D18-D36; randomization, group sizes and full design inaccessible"},
+        "construct_allotype": {"state": "INACCESSIBLE", "value": null},
+        "substrate": {"state": "NOT APPLICABLE", "value": null},
+        "endpoint": {"state": "VERIFIED", "value": "Source pathology/bodyweight figures; not independently digitized or statistically reanalysed"},
+        "duration": {"state": "PARTIALLY VERIFIED", "value": "Termination day 36; treatment-start definition requires main methods"},
+        "exposure": {"state": "PARTIALLY VERIFIED", "value": "Compound 21 GSK235, 30/90/270 mg/kg BID oral; measured exposure inaccessible"},
+        "engagement_method": {"state": "INACCESSIBLE", "value": null}
+      },
+      "admission": "CONTEXTUALIZE_FIGURE_DESIGN_ONLY",
+      "pooling": "REFUSED as axSpA efficacy, target dependency or cellular engagement"
+    }
+  ],
+  "blockers": [
+    {
+      "id": "closure:blocker:2026-assay-context",
+      "status": "UNRESOLVED",
+      "materiality": "Required for admission of the priority 2026 chemistry into a defensible integrated pharmacology/learning reassessment; user stop condition applies",
+      "sources": ["10.1021/acs.jmedchem.5c03071", "10.1021/acs.jmedchem.6c00029"],
+      "minimum_information": [
+        "Dated accessible primary methods explicitly linking the SI/CSV potency columns to their exact assays",
+        "For isolated-enzyme assays: ERAP1 preparation/construct and allotype, substrate and enzyme/substrate concentrations, incubation conditions and duration, endpoint/readout",
+        "For cellular assays: precursor/readout and normalization/control definition, compound exposure scheme and duration, ERAP1 context where stated; fields truly unreported must be confirmed from the methods rather than inferred from an inaccessible text"
+      ],
+      "not_required_to_unblock": ["Positive efficacy result", "New patient experiment", "A predictive model", "Resolution of historical Maben engagement", "Independent reviewer approval by this AI"],
+      "legitimate_attempts": ["Existing publisher HTTP 403 records in frozen v1/source-artifacts.json", "Current direct publisher open checks again returned HTTP 403", "Complete accessible supporting PDFs inspected for exact protocol; tables contain potency summaries but not sufficient assay methods"],
+      "unblock_route": "Lawfully accessible full text or source-authored dated methods supplement; no paywall bypass or automatic author contact"
+    }
+  ],
+  "nonblocking_limitations": [
+    "Tinworth CIA/cancer exposure, genetic rescue and direct engagement cannot be fully adjudicated from the accessible SI; claims excluded rather than invented",
+    "Sponsor engagement methods not independently adjudicated; sponsor claims retained only in their own source class",
+    "No raw-MS reprocessing or independent peptide differential statistics",
+    "Historical compound engagement remains an experimental uncertainty, not a new closure prerequisite"
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "advanced_question": {
+    "epistemic_kind": "axis_inference",
+    "scope": "Mechanistic framing only; not an engine-selected uncertainty or validated protective processing state",
+    "status": "QUESTION PARTIALLY ADVANCED",
+    "supporting_claims": [
+      "closure:claim:substrate-dependence",
+      "closure:claim:temponeras-mode",
+      "closure:claim:2025-b3p-design",
+      "closure:claim:tran-gut",
+      "closure:claim:allotype2025-design"
+    ]
+  },
+  "commercial_scope": "No final scientific decision update available; a future evidence addendum remains conditional on scientific closure/review",
+  "commercial_update": "NO UPDATE JUSTIFIED",
+  "decision_changes": {
+    "critical_uncertainty": {
+      "changed": null,
+      "reason": "Final integrated DecisionState creation refused"
+    },
+    "next_experiment": {
+      "changed": null,
+      "reason": "Final integrated DecisionState creation refused"
+    },
+    "programme_pharmacological_tractability": {
+      "changed": null,
+      "reason": "Final integrated DecisionState creation refused"
+    },
+    "structural_tractability": {
+      "changed": null,
+      "reason": "Final integrated DecisionState creation refused"
+    },
+    "therapeutic_strategy": {
+      "changed": null,
+      "reason": "Final integrated DecisionState creation refused"
+    }
+  },
+  "historical_maben_engagement": {
+    "changed": false,
+    "reason": "No admitted new source directly tests historical compounds at phenotype-active exposures",
+    "status": "UNRESOLVED"
+  },
+  "learning_admission": {
+    "after": "MODEL NOT BUILT",
+    "before": "MODEL NOT BUILT",
+    "changed": false,
+    "reason": "Unadjudicated contexts, not failure of every numerical threshold"
+  },
+  "nondecision_observations": {
+    "new_structures": {
+      "added": 12,
+      "claim_ids": [
+        "closure:claim:structure:9GJN",
+        "closure:claim:structure:9GJS",
+        "closure:claim:structure:9GK6",
+        "closure:claim:structure:9GKE",
+        "closure:claim:structure:9TD3",
+        "closure:claim:structure:9TD5",
+        "closure:claim:structure:9TD4",
+        "closure:claim:structure:9TD7",
+        "closure:claim:structure:9TF3",
+        "closure:claim:structure:9TF4",
+        "closure:claim:structure:9TF6",
+        "closure:claim:structure:9TFN"
+      ],
+      "rule_boundary": "DECISION-STRUCT-001: structure cannot resolve engagement/dependency"
+    },
+    "processed_peptide_replay": "Reproduces sequence counts/source classifications, not independent statistical or raw-MS results"
+  },
+  "status": "NOT ASSESSABLE: no defensible integrated AFTER"
+}
