@@ -10,3 +10,6 @@
 *.docx binary
 *.pdf binary
 *.cif binary
+# Frozen source tables: preserve bytes and trailing empty TSV fields.
+axis/resources/evidence-integration/erap1-data-rich/2026/v1/inputs/*.txt -text whitespace=-blank-at-eol
+axis/resources/evidence-integration/erap1-data-rich/2026/v1/inputs/*.tsv -text whitespace=-blank-at-eol
