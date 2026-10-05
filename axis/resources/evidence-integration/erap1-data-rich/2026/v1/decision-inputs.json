@@ -1,0 +1,2968 @@
+{
+  "baseline": {
+    "candidates": [
+      {
+        "endpoint_description": "HLA-B27 surface phenotype and peptide-length distribution per context.",
+        "experiment_id": "decision:exp:allotype-matched-panel",
+        "experimental_system": "Isogenic cells expressing defined ERAP1 allotypes and HLA-B27 subtypes",
+        "intervention_description": "The same ERAP1 perturbation across the allotype and subtype matrix.",
+        "knowledge_kind": "ai_suggestion",
+        "profile": {
+          "addressed_gap_ids": [],
+          "complexity": "high",
+          "confounders_addressed": [
+            "background genetic differences (isogenic design)"
+          ],
+          "considered_for": [
+            "genetic_context",
+            "reproducibility"
+          ],
+          "context_requirements": {
+            "erap1_allotype": "multiple defined allotypes",
+            "hla": "multiple HLA-B27 subtypes"
+          },
+          "controls_negative": [
+            "vehicle",
+            "ERAP1-null arm in each subtype"
+          ],
+          "controls_positive": [],
+          "cost": null,
+          "disease_relevance": "molecular HLA-B27 context only; not disease rescue",
+          "experiment_id": "decision:exp:allotype-matched-panel",
+          "limitations": [
+            "Does not test compound engagement",
+            "Isogenic systems are not patient cells"
+          ],
+          "prerequisites": [
+            [
+              "isogenic ERAP1 allotype and HLA-B27 subtype models",
+              "not_established"
+            ]
+          ],
+          "primary_endpoint": "Direction and size of the phenotype across allotype and subtype",
+          "purpose": "test_context_dependence",
+          "required": {
+            "assays": [
+              "HLA-B27 surface phenotype assay",
+              "immunopeptidomics"
+            ],
+            "models": [
+              "isogenic allotype and subtype panel"
+            ],
+            "reagents": []
+          },
+          "role": "mechanism_discrimination",
+          "secondary_endpoints": [
+            "peptide-length distribution"
+          ],
+          "target_proximity": "pathway_proximal",
+          "time_estimate": "unknown"
+        },
+        "rationale": "Test whether the effect of ERAP1 perturbation depends on ERAP1 allotype and HLA-B27 subtype in matched isogenic backgrounds.",
+        "result_claim_id": null,
+        "scenarios": [
+          {
+            "consequence": {
+              "category": "investigate_context_dependence",
+              "new_uncertainty": null,
+              "statement": "If the effect varies with background, the strategy would need to be defined per allotype and subtype before any further decision."
+            },
+            "effects": {
+              "explanation:context": {
+                "effect": "strengthens",
+                "rationale": "Behaviour tracks background."
+              },
+              "explanation:indirect": {
+                "effect": "does_not_discriminate",
+                "rationale": "Not separated by this outcome."
+              },
+              "explanation:off_target": {
+                "effect": "does_not_discriminate",
+                "rationale": "Not separated by this outcome."
+              },
+              "explanation:on_target": {
+                "effect": "does_not_discriminate",
+                "rationale": "Not separated by this outcome."
+              }
+            },
+            "interpretation": "The effect is context dependent.",
+            "kind": "alternative",
+            "outcome": "Direction or magnitude of the effect varies by allotype or subtype.",
+            "scenario_id": "decision:exp:allotype-matched-panel:s1"
+          },
+          {
+            "consequence": {
+              "category": "advance_to_next_evidence_layer",
+              "new_uncertainty": null,
+              "statement": "If the effect is consistent across contexts, the context uncertainty would be resolved for the current decision and compound-level engagement and dependence would become the limiting evidence."
+            },
+            "effects": {
+              "explanation:context": {
+                "effect": "weakens",
+                "rationale": "No dependence on background observed."
+              },
+              "explanation:indirect": {
+                "effect": "does_not_discriminate",
+                "rationale": "Not separated."
+              },
+              "explanation:off_target": {
+                "effect": "does_not_discriminate",
+                "rationale": "Genetic perturbation does not involve the compound."
+              },
+              "explanation:on_target": {
+                "effect": "strengthens",
+                "rationale": "A general effect is compatible with a direct consequence of ERAP1 perturbation."
+              }
+            },
+            "interpretation": "The effect is general to ERAP1 perturbation in these contexts.",
+            "kind": "supportive",
+            "outcome": "The effect is consistent across the matched allotypes and subtypes.",
+            "scenario_id": "decision:exp:allotype-matched-panel:s2"
+          },
+          {
+            "consequence": {
+              "category": "require_replication",
+              "new_uncertainty": "panel comparability",
+              "statement": "If the panel is not matched, the context uncertainty would remain open and the panel would need to be rebuilt."
+            },
+            "effects": {
+              "explanation:context": {
+                "effect": "does_not_discriminate",
+                "rationale": "Technical limitation."
+              },
+              "explanation:indirect": {
+                "effect": "does_not_discriminate",
+                "rationale": "Technical limitation."
+              },
+              "explanation:off_target": {
+                "effect": "does_not_discriminate",
+                "rationale": "Technical limitation."
+              },
+              "explanation:on_target": {
+                "effect": "does_not_discriminate",
+                "rationale": "Technical limitation."
+              }
+            },
+            "interpretation": "No inference is permitted.",
+            "kind": "non_interpretable",
+            "outcome": "The panel is not isogenic or its expression levels differ.",
+            "scenario_id": "decision:exp:allotype-matched-panel:s3"
+          }
+        ],
+        "status": "proposed",
+        "title": "Matched ERAP1 allotype and HLA-B27 subtype panel"
+      },
+      {
+        "endpoint_description": "Cellular ERAP1 engagement and the source-linked HLA-B27 phenotype, measured separately with a viability readout.",
+        "experiment_id": "decision:exp:chemical-genetic-engagement",
+        "experimental_system": "HLA-B27-positive cell system with wild-type, ERAP1-depleted or null, and ERAP1-rescued arms in a matched genetic background",
+        "intervention_description": "Compound at phenotype-active exposures versus vehicle and an inactive analogue in each arm; ERAP1 genetic depletion and re-expression as the genetic comparison.",
+        "knowledge_kind": "ai_suggestion",
+        "profile": {
+          "addressed_gap_ids": [
+            "cellular:chen-dg013a-HeLa.B27:gap",
+            "cellular:chen-dg013a-C1R.B27:gap",
+            "cellular:maben-2:gap",
+            "cellular:maben-3:gap"
+          ],
+          "complexity": "high",
+          "confounders_addressed": [
+            "off-target activity (genetic comparison)",
+            "exposure-dependent toxicity (viability measured separately)"
+          ],
+          "considered_for": [
+            "target_engagement",
+            "target_dependency"
+          ],
+          "context_requirements": {
+            "erap1_allotype": "report and match across arms",
+            "hla": "HLA-B27 subtype to be chosen and reported"
+          },
+          "controls_negative": [
+            "vehicle",
+            "ERAP1-null or ERAP1-depleted arm of the same background",
+            "structurally related inactive analogue, if one is established (none identified in the curated corpus)"
+          ],
+          "controls_positive": [
+            "none established in the curated corpus; a reference ERAP1 ligand with demonstrated cellular engagement would be required"
+          ],
+          "cost": null,
+          "disease_relevance": "molecular HLA-B27 context only; not disease rescue",
+          "experiment_id": "decision:exp:chemical-genetic-engagement",
+          "limitations": [
+            "Does not resolve selectivity against other proteins",
+            "Single cellular system; disease relevance and patient-derived cells are not addressed",
+            "A null or rescue model does not reproduce partial pharmacological inhibition"
+          ],
+          "prerequisites": [
+            [
+              "validated compound identity (the DG013A label is not resolved to one substance)",
+              "not_established"
+            ],
+            [
+              "cellular target-engagement readout",
+              "not_established"
+            ],
+            [
+              "ERAP1-null and rescue HLA-B27 model",
+              "not_established"
+            ],
+            [
+              "HLA-B27-positive cell line",
+              "available_in_corpus"
+            ]
+          ],
+          "primary_endpoint": "Compound-dependent ERAP1 engagement at the exposures that produce the phenotype, together with phenotype attenuation in ERAP1-null cells",
+          "purpose": "discriminate_mechanism",
+          "required": {
+            "assays": [
+              "cellular engagement assay",
+              "HLA-B27 surface phenotype assay"
+            ],
+            "models": [
+              "HLA-B27-positive ERAP1-null and rescue cells"
+            ],
+            "reagents": [
+              "engagement readout reagent",
+              "inactive analogue"
+            ]
+          },
+          "role": "mechanism_discrimination",
+          "secondary_endpoints": [
+            "HLA-B27 free-heavy-chain surface phenotype",
+            "cell viability at the tested exposures",
+            "restoration of phenotype after ERAP1 re-expression"
+          ],
+          "target_proximity": "target_proximal",
+          "time_estimate": "unknown"
+        },
+        "rationale": "Compare the compound in HLA-B27 cells with and without ERAP1, with ERAP1 re-expression, while measuring cellular engagement and the source-linked phenotype in the same system, so that attribution to ERAP1 can be tested directly.",
+        "result_claim_id": null,
+        "scenarios": [
+          {
+            "consequence": {
+              "category": "strengthen_current_strategy",
+              "new_uncertainty": null,
+              "statement": "If engagement and ERAP1-dependence are both observed, the current evidence would support continuing the ERAP1 strategy for this compound in this context, with selectivity and context still to be addressed."
+            },
+            "effects": {
+              "explanation:context": {
+                "effect": "does_not_discriminate",
+                "rationale": "A single matched background does not test context."
+              },
+              "explanation:indirect": {
+                "effect": "does_not_discriminate",
+                "rationale": "An indirect pathway downstream of ERAP1 is also ERAP1-dependent."
+              },
+              "explanation:off_target": {
+                "effect": "weakens",
+                "rationale": "Phenotype requires ERAP1 and is restored by re-expression."
+              },
+              "explanation:on_target": {
+                "effect": "strengthens",
+                "rationale": "Engagement and genetic dependence both align with the phenotype."
+              }
+            },
+            "interpretation": "Compatible with ERAP1-dependent action at these exposures in this system.",
+            "kind": "supportive",
+            "outcome": "Engagement is detected at phenotype-active exposures in wild-type cells; the phenotype is attenuated in ERAP1-null cells and restored by ERAP1 re-expression.",
+            "scenario_id": "decision:exp:chemical-genetic-engagement:s1"
+          },
+          {
+            "consequence": {
+              "category": "weaken_current_strategy",
+              "new_uncertainty": null,
+              "statement": "If the phenotype persists without ERAP1, the compound would no longer support an ERAP1-dependent strategy and alternative chemotypes would need their own engagement and dependency evidence."
+            },
+            "effects": {
+              "explanation:context": {
+                "effect": "does_not_discriminate",
+                "rationale": "One background."
+              },
+              "explanation:indirect": {
+                "effect": "weakens",
+                "rationale": "An ERAP1-dependent indirect pathway would also be lost in null cells."
+              },
+              "explanation:off_target": {
+                "effect": "strengthens",
+                "rationale": "A target-independent phenotype is the expected pattern of off-target action."
+              },
+              "explanation:on_target": {
+                "effect": "weakens",
+                "rationale": "The phenotype is independent of ERAP1."
+              }
+            },
+            "interpretation": "The phenotype does not require ERAP1 in this system.",
+            "kind": "negative",
+            "outcome": "Engagement is detected in wild-type cells, but the phenotype persists unchanged in ERAP1-null cells.",
+            "scenario_id": "decision:exp:chemical-genetic-engagement:s2"
+          },
+          {
+            "consequence": {
+              "category": "change_mechanistic_model",
+              "new_uncertainty": null,
+              "statement": "If the phenotype is ERAP1-dependent without detectable engagement, the mechanistic model would change toward an indirect route and the strategy would need re-justification."
+            },
+            "effects": {
+              "explanation:context": {
+                "effect": "does_not_discriminate",
+                "rationale": "One background."
+              },
+              "explanation:indirect": {
+                "effect": "strengthens",
+                "rationale": "ERAP1-dependent phenotype without direct engagement fits an indirect route."
+              },
+              "explanation:off_target": {
+                "effect": "weakens",
+                "rationale": "The phenotype is ERAP1-dependent."
+              },
+              "explanation:on_target": {
+                "effect": "weakens",
+                "rationale": "Direct modulation is not supported by the engagement assay."
+              }
+            },
+            "interpretation": "ERAP1 contributes, but not through detectable binding of this compound.",
+            "kind": "alternative",
+            "outcome": "No engagement signal is detected in a validated assay, yet the phenotype is attenuated in ERAP1-null cells.",
+            "scenario_id": "decision:exp:chemical-genetic-engagement:s3"
+          },
+          {
+            "consequence": {
+              "category": "investigate_context_dependence",
+              "new_uncertainty": null,
+              "statement": "If engagement or dependence varies with background, the next evidence needed would be a matched allotype and HLA-B27 subtype comparison before any strategy decision."
+            },
+            "effects": {
+              "explanation:context": {
+                "effect": "strengthens",
+                "rationale": "Behaviour tracks background."
+              },
+              "explanation:indirect": {
+                "effect": "does_not_discriminate",
+                "rationale": "Not separated by this outcome."
+              },
+              "explanation:off_target": {
+                "effect": "does_not_discriminate",
+                "rationale": "Not separated by this outcome."
+              },
+              "explanation:on_target": {
+                "effect": "does_not_discriminate",
+                "rationale": "Holds in some contexts only."
+              }
+            },
+            "interpretation": "The result is context dependent.",
+            "kind": "alternative",
+            "outcome": "Engagement and ERAP1-dependence differ between HLA-B27 backgrounds or ERAP1 allotypes.",
+            "scenario_id": "decision:exp:chemical-genetic-engagement:s4"
+          },
+          {
+            "consequence": {
+              "category": "require_replication",
+              "new_uncertainty": "validity of the null or rescue model",
+              "statement": "If the experiment is non-interpretable, the uncertainty would remain open and the model and controls would need to be validated before repeating it."
+            },
+            "effects": {
+              "explanation:context": {
+                "effect": "does_not_discriminate",
+                "rationale": "Technical failure is not a biological negative."
+              },
+              "explanation:indirect": {
+                "effect": "does_not_discriminate",
+                "rationale": "Technical failure is not a biological negative."
+              },
+              "explanation:off_target": {
+                "effect": "does_not_discriminate",
+                "rationale": "Technical failure is not a biological negative."
+              },
+              "explanation:on_target": {
+                "effect": "does_not_discriminate",
+                "rationale": "Technical failure is not a biological negative."
+              }
+            },
+            "interpretation": "No inference about engagement or dependence is permitted.",
+            "kind": "non_interpretable",
+            "outcome": "The null or rescue model is not validated, or toxicity confounds the phenotype.",
+            "scenario_id": "decision:exp:chemical-genetic-engagement:s5"
+          }
+        ],
+        "status": "proposed",
+        "title": "Matched-genotype chemical-genetic experiment with an engagement readout"
+      },
+      {
+        "endpoint_description": "Compound-dependent cellular ERAP1 engagement signal.",
+        "experiment_id": "decision:exp:engagement-assay",
+        "experimental_system": "HLA-B27-positive cell line with a matched ERAP1-depleted control",
+        "intervention_description": "Compound concentration series spanning the phenotype-active exposures versus vehicle.",
+        "knowledge_kind": "ai_suggestion",
+        "profile": {
+          "addressed_gap_ids": [
+            "cellular:chen-dg013a-HeLa.B27:gap",
+            "cellular:chen-dg013a-C1R.B27:gap",
+            "cellular:maben-2:gap",
+            "cellular:maben-3:gap"
+          ],
+          "complexity": "moderate",
+          "confounders_addressed": [
+            "exposure-dependent toxicity (viability measured separately)"
+          ],
+          "considered_for": [
+            "target_engagement"
+          ],
+          "context_requirements": {
+            "hla": "HLA-B27 subtype to be chosen and reported"
+          },
+          "controls_negative": [
+            "vehicle",
+            "ERAP1-depleted cells of the same background"
+          ],
+          "controls_positive": [
+            "none established in the curated corpus; a reference ERAP1 ligand with demonstrated cellular engagement would be required"
+          ],
+          "cost": null,
+          "disease_relevance": "molecular HLA-B27 context only; not disease rescue",
+          "experiment_id": "decision:exp:engagement-assay",
+          "limitations": [
+            "Engagement does not show dependence of the phenotype on ERAP1",
+            "Does not resolve selectivity",
+            "Single system"
+          ],
+          "prerequisites": [
+            [
+              "validated compound identity (the DG013A label is not resolved to one substance)",
+              "not_established"
+            ],
+            [
+              "cellular target-engagement readout",
+              "not_established"
+            ],
+            [
+              "HLA-B27-positive cell line",
+              "available_in_corpus"
+            ]
+          ],
+          "primary_endpoint": "Compound-dependent ERAP1 engagement at phenotype-active exposures",
+          "purpose": "establish_target_engagement",
+          "required": {
+            "assays": [
+              "cellular engagement assay"
+            ],
+            "models": [
+              "HLA-B27-positive cell line",
+              "ERAP1-depleted control"
+            ],
+            "reagents": [
+              "engagement readout reagent"
+            ]
+          },
+          "role": "mechanism_discrimination",
+          "secondary_endpoints": [
+            "engagement across the concentration series",
+            "viability at tested exposures"
+          ],
+          "target_proximity": "target_proximal",
+          "time_estimate": "unknown"
+        },
+        "rationale": "Measure whether the compound engages ERAP1 in cells at the exposures that produce the reported HLA-B27 phenotype, using ERAP1-depleted cells as a specificity control.",
+        "result_claim_id": null,
+        "scenarios": [
+          {
+            "consequence": {
+              "category": "require_orthogonal_validation",
+              "new_uncertainty": null,
+              "statement": "If engagement is detected, the current evidence would support on-target action at these exposures, but dependency and selectivity remain open and orthogonal validation would be required."
+            },
+            "effects": {
+              "explanation:context": {
+                "effect": "does_not_discriminate",
+                "rationale": "One system."
+              },
+              "explanation:indirect": {
+                "effect": "does_not_discriminate",
+                "rationale": "Engagement does not show proximal catalytic modulation."
+              },
+              "explanation:off_target": {
+                "effect": "does_not_discriminate",
+                "rationale": "Engagement does not exclude additional off-target contribution."
+              },
+              "explanation:on_target": {
+                "effect": "strengthens",
+                "rationale": "Engagement closes the biochemical-to-cellular link."
+              }
+            },
+            "interpretation": "The compound reaches and binds ERAP1 in cells at these exposures.",
+            "kind": "supportive",
+            "outcome": "Engagement is detected at phenotype-active exposures and is absent in ERAP1-depleted cells.",
+            "scenario_id": "decision:exp:engagement-assay:s1"
+          },
+          {
+            "consequence": {
+              "category": "weaken_current_strategy",
+              "new_uncertainty": null,
+              "statement": "If no engagement is detected in a validated assay, an on-target explanation for this compound's phenotype would be weakened and the compound would be a poor basis for the ERAP1 strategy."
+            },
+            "effects": {
+              "explanation:context": {
+                "effect": "does_not_discriminate",
+                "rationale": "One system."
+              },
+              "explanation:indirect": {
+                "effect": "weakens",
+                "rationale": "An indirect route through ERAP1 still requires ERAP1 modulation."
+              },
+              "explanation:off_target": {
+                "effect": "strengthens",
+                "rationale": "Phenotype without engagement is the expected off-target pattern."
+              },
+              "explanation:on_target": {
+                "effect": "weakens",
+                "rationale": "No engagement at active exposures."
+              }
+            },
+            "interpretation": "The phenotype is unlikely to arise from direct engagement at these exposures.",
+            "kind": "negative",
+            "outcome": "No engagement at phenotype-active exposures in a validated assay.",
+            "scenario_id": "decision:exp:engagement-assay:s2"
+          },
+          {
+            "consequence": {
+              "category": "change_mechanistic_model",
+              "new_uncertainty": null,
+              "statement": "If engagement requires far higher exposures than the phenotype, the mechanistic model would change and the phenotype would need another explanation."
+            },
+            "effects": {
+              "explanation:context": {
+                "effect": "does_not_discriminate",
+                "rationale": "One system."
+              },
+              "explanation:indirect": {
+                "effect": "does_not_discriminate",
+                "rationale": "Not separated by this outcome."
+              },
+              "explanation:off_target": {
+                "effect": "strengthens",
+                "rationale": "A more potent target is implied."
+              },
+              "explanation:on_target": {
+                "effect": "weakens",
+                "rationale": "Exposures do not align."
+              }
+            },
+            "interpretation": "Phenotype and engagement are not aligned in exposure.",
+            "kind": "alternative",
+            "outcome": "Engagement occurs only at exposures well above those producing the phenotype.",
+            "scenario_id": "decision:exp:engagement-assay:s3"
+          },
+          {
+            "consequence": {
+              "category": "require_replication",
+              "new_uncertainty": "assay validity",
+              "statement": "If the assay is non-interpretable, the uncertainty would remain open and the assay would need to be re-established before the question can be addressed."
+            },
+            "effects": {
+              "explanation:context": {
+                "effect": "does_not_discriminate",
+                "rationale": "Technical failure is not a biological negative."
+              },
+              "explanation:indirect": {
+                "effect": "does_not_discriminate",
+                "rationale": "Technical failure is not a biological negative."
+              },
+              "explanation:off_target": {
+                "effect": "does_not_discriminate",
+                "rationale": "Technical failure is not a biological negative."
+              },
+              "explanation:on_target": {
+                "effect": "does_not_discriminate",
+                "rationale": "Technical failure is not a biological negative."
+              }
+            },
+            "interpretation": "No inference about engagement is permitted.",
+            "kind": "non_interpretable",
+            "outcome": "The assay fails its vehicle or positive-control criteria.",
+            "scenario_id": "decision:exp:engagement-assay:s4"
+          }
+        ],
+        "status": "proposed",
+        "title": "Cellular ERAP1 target-engagement measurement at phenotype-active exposures"
+      },
+      {
+        "endpoint_description": "Engagement and phenotype concentration-response curves in the same system.",
+        "experiment_id": "decision:exp:engagement-phenotype-alignment",
+        "experimental_system": "HLA-B27-positive cell line",
+        "intervention_description": "Compound concentration series versus vehicle.",
+        "knowledge_kind": "ai_suggestion",
+        "profile": {
+          "addressed_gap_ids": [
+            "cellular:chen-dg013a-HeLa.B27:gap",
+            "cellular:chen-dg013a-C1R.B27:gap",
+            "cellular:maben-2:gap",
+            "cellular:maben-3:gap"
+          ],
+          "complexity": "moderate",
+          "confounders_addressed": [],
+          "considered_for": [
+            "target_engagement"
+          ],
+          "context_requirements": {},
+          "controls_negative": [
+            "vehicle"
+          ],
+          "controls_positive": [],
+          "cost": null,
+          "disease_relevance": "molecular HLA-B27 context only; not disease rescue",
+          "experiment_id": "decision:exp:engagement-phenotype-alignment",
+          "limitations": [
+            "Alignment is correlational",
+            "Does not test dependence on ERAP1",
+            "Requires the same engagement readout as a direct engagement measurement"
+          ],
+          "prerequisites": [
+            [
+              "cellular target-engagement readout",
+              "not_established"
+            ],
+            [
+              "validated compound identity (the DG013A label is not resolved to one substance)",
+              "not_established"
+            ]
+          ],
+          "primary_endpoint": "Alignment of engagement and phenotype concentration-response",
+          "purpose": "characterize_pharmacology",
+          "required": {
+            "assays": [
+              "cellular engagement assay"
+            ],
+            "models": [
+              "HLA-B27-positive cell line"
+            ],
+            "reagents": [
+              "engagement readout reagent"
+            ]
+          },
+          "role": "characterization",
+          "secondary_endpoints": [
+            "viability across the series"
+          ],
+          "target_proximity": "target_proximal",
+          "time_estimate": "unknown"
+        },
+        "rationale": "Measure engagement and the HLA-B27 phenotype across the same concentration series to test whether they align.",
+        "result_claim_id": null,
+        "scenarios": [
+          {
+            "consequence": {
+              "category": "require_orthogonal_validation",
+              "new_uncertainty": null,
+              "statement": "If the curves align, the current evidence would support continued investigation, but alignment alone would not establish dependence and orthogonal validation would be required."
+            },
+            "effects": {
+              "explanation:context": {
+                "effect": "does_not_discriminate",
+                "rationale": "One system."
+              },
+              "explanation:indirect": {
+                "effect": "does_not_discriminate",
+                "rationale": "Not separated."
+              },
+              "explanation:off_target": {
+                "effect": "does_not_discriminate",
+                "rationale": "Alignment does not exclude a co-potent off-target."
+              },
+              "explanation:on_target": {
+                "effect": "strengthens",
+                "rationale": "Exposure alignment."
+              }
+            },
+            "interpretation": "Consistent with, but not proof of, engagement-driven phenotype.",
+            "kind": "supportive",
+            "outcome": "Engagement and phenotype concentration-response curves align.",
+            "scenario_id": "decision:exp:engagement-phenotype-alignment:s1"
+          },
+          {
+            "consequence": {
+              "category": "weaken_current_strategy",
+              "new_uncertainty": null,
+              "statement": "If the phenotype occurs without engagement, an on-target explanation for the compound would be weakened."
+            },
+            "effects": {
+              "explanation:context": {
+                "effect": "does_not_discriminate",
+                "rationale": "One system."
+              },
+              "explanation:indirect": {
+                "effect": "does_not_discriminate",
+                "rationale": "Not separated."
+              },
+              "explanation:off_target": {
+                "effect": "strengthens",
+                "rationale": "Expected off-target pattern."
+              },
+              "explanation:on_target": {
+                "effect": "weakens",
+                "rationale": "Phenotype without engagement."
+              }
+            },
+            "interpretation": "Phenotype is not accounted for by engagement.",
+            "kind": "negative",
+            "outcome": "The phenotype occurs at concentrations without detectable engagement.",
+            "scenario_id": "decision:exp:engagement-phenotype-alignment:s2"
+          },
+          {
+            "consequence": {
+              "category": "require_replication",
+              "new_uncertainty": "assay sensitivity",
+              "statement": "If assay sensitivity is inadequate, the uncertainty would remain open and the assay would need to be improved before repeating."
+            },
+            "effects": {
+              "explanation:context": {
+                "effect": "does_not_discriminate",
+                "rationale": "Technical limitation."
+              },
+              "explanation:indirect": {
+                "effect": "does_not_discriminate",
+                "rationale": "Technical limitation."
+              },
+              "explanation:off_target": {
+                "effect": "does_not_discriminate",
+                "rationale": "Technical limitation."
+              },
+              "explanation:on_target": {
+                "effect": "does_not_discriminate",
+                "rationale": "Technical limitation."
+              }
+            },
+            "interpretation": "No inference is permitted.",
+            "kind": "non_interpretable",
+            "outcome": "Assay sensitivity is inadequate to place engagement across the series.",
+            "scenario_id": "decision:exp:engagement-phenotype-alignment:s3"
+          }
+        ],
+        "status": "proposed",
+        "title": "Concentration-response alignment of engagement and phenotype"
+      },
+      {
+        "endpoint_description": "The same HLA-B27 surface phenotype with engagement measured.",
+        "experiment_id": "decision:exp:orthogonal-chemical-probe",
+        "experimental_system": "HLA-B27-positive cell line",
+        "intervention_description": "A second, structurally unrelated ERAP1 modulator versus the original compound.",
+        "knowledge_kind": "ai_suggestion",
+        "profile": {
+          "addressed_gap_ids": [],
+          "complexity": "high",
+          "confounders_addressed": [
+            "chemotype-specific off-target activity"
+          ],
+          "considered_for": [
+            "selectivity",
+            "target_dependency"
+          ],
+          "context_requirements": {},
+          "controls_negative": [
+            "vehicle",
+            "inactive analogue of the second probe, if established"
+          ],
+          "controls_positive": [],
+          "cost": null,
+          "disease_relevance": "molecular HLA-B27 context only; not disease rescue",
+          "experiment_id": "decision:exp:orthogonal-chemical-probe",
+          "limitations": [
+            "Requires a probe that does not yet exist in the curated corpus",
+            "Does not by itself show dependence on ERAP1"
+          ],
+          "prerequisites": [
+            [
+              "selective, chemically distinct ERAP1 probe with cellular engagement",
+              "not_established"
+            ],
+            [
+              "cellular target-engagement readout",
+              "not_established"
+            ]
+          ],
+          "primary_endpoint": "Phenotype reproduced by a chemically distinct modulator with engagement",
+          "purpose": "resolve_selectivity",
+          "required": {
+            "assays": [
+              "cellular engagement assay"
+            ],
+            "models": [
+              "HLA-B27-positive cell line"
+            ],
+            "reagents": [
+              "chemically distinct ERAP1 probe"
+            ]
+          },
+          "role": "mechanism_discrimination",
+          "secondary_endpoints": [
+            "engagement of each probe"
+          ],
+          "target_proximity": "target_proximal",
+          "time_estimate": "unknown"
+        },
+        "rationale": "Test whether a chemically distinct ERAP1 modulator with demonstrated engagement reproduces the phenotype, separating chemotype-specific off-target effects from target biology.",
+        "result_claim_id": null,
+        "scenarios": [
+          {
+            "consequence": {
+              "category": "strengthen_current_strategy",
+              "new_uncertainty": null,
+              "statement": "If a distinct probe with engagement reproduces the phenotype, the current evidence would support continuing the ERAP1 strategy across chemotypes."
+            },
+            "effects": {
+              "explanation:context": {
+                "effect": "does_not_discriminate",
+                "rationale": "One system."
+              },
+              "explanation:indirect": {
+                "effect": "does_not_discriminate",
+                "rationale": "Not separated."
+              },
+              "explanation:off_target": {
+                "effect": "weakens",
+                "rationale": "A shared off-target is less likely."
+              },
+              "explanation:on_target": {
+                "effect": "strengthens",
+                "rationale": "Two chemotypes converge."
+              }
+            },
+            "interpretation": "The phenotype tracks ERAP1 modulation across chemotypes.",
+            "kind": "supportive",
+            "outcome": "The distinct probe engages ERAP1 and reproduces the phenotype.",
+            "scenario_id": "decision:exp:orthogonal-chemical-probe:s1"
+          },
+          {
+            "consequence": {
+              "category": "weaken_current_strategy",
+              "new_uncertainty": null,
+              "statement": "If a distinct engaged probe does not reproduce the phenotype, the original phenotype would be attributed to the chemotype and the ERAP1 strategy would be weakened."
+            },
+            "effects": {
+              "explanation:context": {
+                "effect": "does_not_discriminate",
+                "rationale": "One system."
+              },
+              "explanation:indirect": {
+                "effect": "does_not_discriminate",
+                "rationale": "Not separated."
+              },
+              "explanation:off_target": {
+                "effect": "strengthens",
+                "rationale": "Chemotype-specific effect."
+              },
+              "explanation:on_target": {
+                "effect": "weakens",
+                "rationale": "Engagement without phenotype."
+              }
+            },
+            "interpretation": "The phenotype is specific to the original chemotype.",
+            "kind": "negative",
+            "outcome": "The distinct probe engages ERAP1 but does not reproduce the phenotype.",
+            "scenario_id": "decision:exp:orthogonal-chemical-probe:s2"
+          },
+          {
+            "consequence": {
+              "category": "require_replication",
+              "new_uncertainty": "availability of a selective probe",
+              "statement": "If no probe qualifies, the selectivity uncertainty would remain open and a suitable probe would need to be established first."
+            },
+            "effects": {
+              "explanation:context": {
+                "effect": "does_not_discriminate",
+                "rationale": "No valid probe."
+              },
+              "explanation:indirect": {
+                "effect": "does_not_discriminate",
+                "rationale": "No valid probe."
+              },
+              "explanation:off_target": {
+                "effect": "does_not_discriminate",
+                "rationale": "No valid probe."
+              },
+              "explanation:on_target": {
+                "effect": "does_not_discriminate",
+                "rationale": "No valid probe."
+              }
+            },
+            "interpretation": "No inference is permitted.",
+            "kind": "non_interpretable",
+            "outcome": "No probe meets the engagement criteria.",
+            "scenario_id": "decision:exp:orthogonal-chemical-probe:s3"
+          }
+        ],
+        "status": "proposed",
+        "title": "Chemically distinct ERAP1 probe at the same endpoint"
+      },
+      {
+        "endpoint_description": "The same HLA-B27 surface phenotype.",
+        "experiment_id": "decision:exp:phenotype-replication",
+        "experimental_system": "The system of the source study",
+        "intervention_description": "Same compound and exposure as the source study.",
+        "knowledge_kind": "ai_suggestion",
+        "profile": {
+          "addressed_gap_ids": [],
+          "complexity": "low",
+          "confounders_addressed": [],
+          "considered_for": [
+            "target_engagement",
+            "reproducibility"
+          ],
+          "context_requirements": {},
+          "controls_negative": [
+            "vehicle"
+          ],
+          "controls_positive": [],
+          "cost": null,
+          "disease_relevance": "molecular HLA-B27 context only; not disease rescue",
+          "experiment_id": "decision:exp:phenotype-replication",
+          "limitations": [
+            "Does not measure engagement, dependence or selectivity",
+            "Every outcome weakens or leaves unchanged all compound-based explanations together"
+          ],
+          "prerequisites": [
+            [
+              "validated compound identity (the DG013A label is not resolved to one substance)",
+              "not_established"
+            ]
+          ],
+          "primary_endpoint": "Reproducibility of the reported surface phenotype",
+          "purpose": "replicate_finding",
+          "required": {
+            "assays": [
+              "HLA-B27 surface phenotype assay"
+            ],
+            "models": [
+              "the source study system"
+            ],
+            "reagents": []
+          },
+          "role": "replication",
+          "secondary_endpoints": [],
+          "target_proximity": "downstream",
+          "time_estimate": "unknown"
+        },
+        "rationale": "Repeat the source phenotype assay with more replicates to improve precision. It is listed because it is a common first impulse, not because it addresses engagement.",
+        "result_claim_id": null,
+        "scenarios": [
+          {
+            "consequence": {
+              "category": "continue_current_strategy",
+              "new_uncertainty": null,
+              "statement": "If the phenotype reproduces, the current evidence would be unchanged with respect to ERAP1 attribution and the uncertainty about engagement would remain."
+            },
+            "effects": {
+              "explanation:context": {
+                "effect": "does_not_discriminate",
+                "rationale": "Same system."
+              },
+              "explanation:indirect": {
+                "effect": "does_not_discriminate",
+                "rationale": "Replication does not test attribution."
+              },
+              "explanation:off_target": {
+                "effect": "does_not_discriminate",
+                "rationale": "Replication does not test attribution."
+              },
+              "explanation:on_target": {
+                "effect": "does_not_discriminate",
+                "rationale": "Replication does not test attribution."
+              }
+            },
+            "interpretation": "Improves confidence that the phenotype is reproducible; says nothing about its cause.",
+            "kind": "supportive",
+            "outcome": "The phenotype reproduces with the same direction and similar magnitude.",
+            "scenario_id": "decision:exp:phenotype-replication:s1"
+          },
+          {
+            "consequence": {
+              "category": "require_replication",
+              "new_uncertainty": null,
+              "statement": "If the phenotype does not reproduce, all compound-based explanations would weaken together and the original finding would need independent replication before any strategy decision."
+            },
+            "effects": {
+              "explanation:context": {
+                "effect": "does_not_discriminate",
+                "rationale": "Same system."
+              },
+              "explanation:indirect": {
+                "effect": "weakens",
+                "rationale": "No phenotype to attribute."
+              },
+              "explanation:off_target": {
+                "effect": "weakens",
+                "rationale": "No phenotype to attribute."
+              },
+              "explanation:on_target": {
+                "effect": "weakens",
+                "rationale": "No phenotype to attribute."
+              }
+            },
+            "interpretation": "The original phenotype is not robust in this setting.",
+            "kind": "negative",
+            "outcome": "The phenotype does not reproduce.",
+            "scenario_id": "decision:exp:phenotype-replication:s2"
+          },
+          {
+            "consequence": {
+              "category": "require_replication",
+              "new_uncertainty": "assay validity",
+              "statement": "If the assay is non-interpretable, nothing would change and the assay would need to be repeated."
+            },
+            "effects": {
+              "explanation:context": {
+                "effect": "does_not_discriminate",
+                "rationale": "Technical failure."
+              },
+              "explanation:indirect": {
+                "effect": "does_not_discriminate",
+                "rationale": "Technical failure."
+              },
+              "explanation:off_target": {
+                "effect": "does_not_discriminate",
+                "rationale": "Technical failure."
+              },
+              "explanation:on_target": {
+                "effect": "does_not_discriminate",
+                "rationale": "Technical failure."
+              }
+            },
+            "interpretation": "No inference is permitted.",
+            "kind": "non_interpretable",
+            "outcome": "The assay fails its quality criteria.",
+            "scenario_id": "decision:exp:phenotype-replication:s3"
+          }
+        ],
+        "status": "proposed",
+        "title": "Repeat the reported HLA-B27 phenotype with additional replicates"
+      }
+    ],
+    "constraints": null,
+    "evidence": {
+      "biochemical_ids": [
+        "measurement:maben:1",
+        "measurement:maben:10",
+        "measurement:maben:13",
+        "measurement:maben:14",
+        "measurement:maben:2",
+        "measurement:maben:3",
+        "measurement:maben:6",
+        "measurement:maben:7",
+        "measurement:maben:9"
+      ],
+      "compound_coverage": {
+        "compounds": [
+          {
+            "biochemical": true,
+            "cellular_phenotype": false,
+            "compound_id": "compound:maben-1"
+          },
+          {
+            "biochemical": true,
+            "cellular_phenotype": true,
+            "compound_id": "compound:maben-2"
+          },
+          {
+            "biochemical": true,
+            "cellular_phenotype": true,
+            "compound_id": "compound:maben-3"
+          }
+        ],
+        "unresolved_identity_perturbagens": [
+          "DG013A"
+        ]
+      },
+      "compound_dependency_supported_ids": [],
+      "compound_dependency_uncertain_ids": [
+        "cellular:chen-dg013a-C1R.B27:hla",
+        "cellular:chen-dg013a-HeLa.B27:hla",
+        "cellular:maben-2:hla",
+        "cellular:maben-3:hla"
+      ],
+      "compound_phenotype_ids": [
+        "cellular:chen-dg013a-C1R.B27:hla",
+        "cellular:chen-dg013a-HeLa.B27:hla",
+        "cellular:maben-2:hla",
+        "cellular:maben-3:hla"
+      ],
+      "concordance": {
+        "concordant": 0,
+        "discordant": 0,
+        "discordant_ids": [],
+        "not_comparable": 6
+      },
+      "context_of": {
+        "cellular:chen-coculture:immune": "HeLa.B27/C1R.B27 + AS CD4+ T cells / HLA-B*27:05",
+        "cellular:chen-dg013a-C1R.B27:hla": "C1R.B27 / HLA-B*27:05",
+        "cellular:chen-dg013a-HeLa.B27:hla": "HeLa.B27 / HLA-B*27:05",
+        "cellular:chen-knockdown-C1R.B27:hla": "C1R.B27 / HLA-B*27:05",
+        "cellular:chen-knockdown-HeLa.B27:hla": "HeLa.B27 / HLA-B*27:05",
+        "cellular:chen2014-peptidome:hla": "HeLa.B27/C1R.B27 / no HLA allele reported",
+        "cellular:chen2014-variant:immune": "HLA-B27 cells; line not verified in abstract / no HLA allele reported",
+        "cellular:maben-2:hla": "Engineered HeLa H-2Kb / no HLA allele reported",
+        "cellular:maben-3:hla": "Engineered HeLa H-2Kb / no HLA allele reported",
+        "cellular:tran-dimer:hla": "U937.B27 / HLA-B*27:05",
+        "cellular:tran-fhc:hla": "U937.B27 / HLA-B*27:05"
+      },
+      "contexts": {
+        "allotype_reported": false,
+        "hla_alleles": [
+          "HLA-B*27:05"
+        ],
+        "unmatched_context_experiments": 4
+      },
+      "contributions": [],
+      "edges": {
+        "biochemical": {
+          "ids": [
+            "measurement:maben:1",
+            "measurement:maben:10",
+            "measurement:maben:13",
+            "measurement:maben:14",
+            "measurement:maben:2",
+            "measurement:maben:3",
+            "measurement:maben:6",
+            "measurement:maben:7",
+            "measurement:maben:9"
+          ],
+          "state": "supported"
+        },
+        "clinical": {
+          "ids": [],
+          "state": "not_assessed"
+        },
+        "disease": {
+          "ids": [],
+          "state": "not_assessed"
+        },
+        "engagement": {
+          "ids": [
+            "cellular:chen-coculture:engagement",
+            "cellular:chen-dg013a-C1R.B27:engagement",
+            "cellular:chen-dg013a-HeLa.B27:engagement",
+            "cellular:chen-knockdown-C1R.B27:engagement",
+            "cellular:chen-knockdown-HeLa.B27:engagement",
+            "cellular:chen2014-peptidome:engagement",
+            "cellular:chen2014-variant:engagement",
+            "cellular:maben-2:engagement",
+            "cellular:maben-3:engagement",
+            "cellular:tran-dimer:engagement",
+            "cellular:tran-fhc:engagement"
+          ],
+          "state": "not_assessed"
+        },
+        "exposure": {
+          "ids": [
+            "cellular:chen-dg013a-C1R.B27:exposure",
+            "cellular:chen-dg013a-HeLa.B27:exposure",
+            "cellular:maben-2:exposure",
+            "cellular:maben-3:exposure"
+          ],
+          "state": "supported"
+        },
+        "functional": {
+          "ids": [
+            "cellular:chen-coculture:functional",
+            "cellular:chen-dg013a-C1R.B27:functional",
+            "cellular:chen-dg013a-HeLa.B27:functional",
+            "cellular:chen-knockdown-C1R.B27:functional",
+            "cellular:chen-knockdown-HeLa.B27:functional",
+            "cellular:chen2014-peptidome:functional",
+            "cellular:chen2014-variant:functional",
+            "cellular:maben-2:functional",
+            "cellular:maben-3:functional",
+            "cellular:tran-dimer:functional",
+            "cellular:tran-fhc:functional"
+          ],
+          "state": "insufficient"
+        },
+        "hla": {
+          "ids": [
+            "cellular:chen-dg013a-C1R.B27:hla",
+            "cellular:chen-dg013a-HeLa.B27:hla",
+            "cellular:chen-knockdown-C1R.B27:hla",
+            "cellular:chen-knockdown-HeLa.B27:hla",
+            "cellular:chen2014-peptidome:hla",
+            "cellular:maben-2:hla",
+            "cellular:maben-3:hla",
+            "cellular:tran-dimer:hla",
+            "cellular:tran-fhc:hla"
+          ],
+          "state": "supported"
+        },
+        "immune": {
+          "ids": [
+            "cellular:chen-coculture:immune",
+            "cellular:chen2014-variant:immune"
+          ],
+          "state": "supported"
+        }
+      },
+      "functional_insufficient_ids": [
+        "cellular:chen-coculture:functional",
+        "cellular:chen-dg013a-C1R.B27:functional",
+        "cellular:chen-dg013a-HeLa.B27:functional",
+        "cellular:chen-knockdown-C1R.B27:functional",
+        "cellular:chen-knockdown-HeLa.B27:functional",
+        "cellular:chen2014-peptidome:functional",
+        "cellular:chen2014-variant:functional",
+        "cellular:maben-2:functional",
+        "cellular:maben-3:functional",
+        "cellular:tran-dimer:functional",
+        "cellular:tran-fhc:functional"
+      ],
+      "gap_ids": [
+        "cellular:chen-dg013a-C1R.B27:gap",
+        "cellular:chen-dg013a-HeLa.B27:gap",
+        "cellular:maben-2:gap",
+        "cellular:maben-3:gap"
+      ],
+      "gap_scopes": {
+        "cellular:chen-dg013a-C1R.B27:gap": "perturbagen:DG013A",
+        "cellular:chen-dg013a-HeLa.B27:gap": "perturbagen:DG013A",
+        "cellular:maben-2:gap": "compound:compound:maben-2",
+        "cellular:maben-3:gap": "compound:compound:maben-3"
+      },
+      "genetic_dependency_ids": [
+        "cellular:chen-knockdown-C1R.B27:hla",
+        "cellular:chen-knockdown-HeLa.B27:hla",
+        "cellular:chen2014-peptidome:hla",
+        "cellular:chen2014-variant:immune",
+        "cellular:tran-dimer:hla",
+        "cellular:tran-fhc:hla"
+      ],
+      "genetic_phenotype_ids": [
+        "cellular:chen-coculture:immune",
+        "cellular:chen-knockdown-C1R.B27:hla",
+        "cellular:chen-knockdown-HeLa.B27:hla",
+        "cellular:chen2014-peptidome:hla",
+        "cellular:chen2014-variant:immune",
+        "cellular:tran-dimer:hla",
+        "cellular:tran-fhc:hla"
+      ],
+      "required_scopes": [
+        {
+          "scope_id": "compound:maben-2",
+          "scope_type": "compound"
+        },
+        {
+          "scope_id": "compound:maben-3",
+          "scope_type": "compound"
+        },
+        {
+          "scope_id": "DG013A",
+          "scope_type": "perturbagen"
+        }
+      ],
+      "review": {
+        "accepted": 0,
+        "pending_expert_review": 37
+      },
+      "review_mode": "exploratory",
+      "selectivity": {
+        "by_status": {
+          "Not assessed": 4,
+          "Not directly comparable": 14
+        },
+        "comparable": 0,
+        "comparable_ids": [],
+        "total": 18,
+        "unresolved_ids": [
+          "selectivity:measurement:maben:10:measurement:maben:11",
+          "selectivity:measurement:maben:10:measurement:maben:12",
+          "selectivity:measurement:maben:13:measurement:maben:11",
+          "selectivity:measurement:maben:13:measurement:maben:12",
+          "selectivity:measurement:maben:14:measurement:maben:11",
+          "selectivity:measurement:maben:14:measurement:maben:12",
+          "selectivity:measurement:maben:1:ERAP2",
+          "selectivity:measurement:maben:1:LNPEP",
+          "selectivity:measurement:maben:2:ERAP2",
+          "selectivity:measurement:maben:2:LNPEP",
+          "selectivity:measurement:maben:3:measurement:maben:4",
+          "selectivity:measurement:maben:3:measurement:maben:5",
+          "selectivity:measurement:maben:6:measurement:maben:4",
+          "selectivity:measurement:maben:6:measurement:maben:5",
+          "selectivity:measurement:maben:7:measurement:maben:4",
+          "selectivity:measurement:maben:7:measurement:maben:5",
+          "selectivity:measurement:maben:9:measurement:maben:11",
+          "selectivity:measurement:maben:9:measurement:maben:12"
+        ]
+      },
+      "source_disagreements": [
+        {
+          "directions": [
+            "decrease",
+            "increase"
+          ],
+          "endpoint": "surface free heavy chain",
+          "readout_ids": [
+            "cellular:chen-knockdown-C1R.B27:readout",
+            "cellular:chen-knockdown-HeLa.B27:readout",
+            "cellular:tran-fhc:readout"
+          ]
+        }
+      ],
+      "strategy_ids": [
+        "AXIS-ERAP1-CURATED-STRATEGY-allele_specific_modulation",
+        "AXIS-ERAP1-CURATED-STRATEGY-allosterically_modulate",
+        "AXIS-ERAP1-CURATED-STRATEGY-inhibit",
+        "AXIS-ERAP1-CURATED-STRATEGY-partially_inhibit"
+      ],
+      "structure_ids": [
+        "structure:pdb:3QNF:04b29d420769a6ce405c85d90e6888289de20381e17e64c1a31c3e4f835b8f75:2026-10-04T12:25:57+00:00:3654c195689a5327"
+      ],
+      "target_label": "ERAP1",
+      "unexpected_results": []
+    },
+    "explanations": [
+      {
+        "created_by": "AXIS AI-assisted suggestion",
+        "epistemic_kind": "alternative_mechanistic_explanation",
+        "ground": "context_dependent",
+        "hypothesis_id": "AXIS-ERAP1-CURATED-HYP-001",
+        "hypothesis_revision": 1,
+        "id": "explanation:context",
+        "knowledge_kind": "ai_suggestion",
+        "label": "Context-dependent effect",
+        "project_id": "AXIS-DD-ERAP1-CURATED-001",
+        "statement": "The effect depends on HLA-B27 subtype or ERAP1 allotype context rather than being a general consequence of ERAP1 modulation.",
+        "supersedes_id": null
+      },
+      {
+        "created_by": "AXIS AI-assisted suggestion",
+        "epistemic_kind": "alternative_mechanistic_explanation",
+        "ground": "indirect_pathway",
+        "hypothesis_id": "AXIS-ERAP1-CURATED-HYP-001",
+        "hypothesis_revision": 1,
+        "id": "explanation:indirect",
+        "knowledge_kind": "ai_suggestion",
+        "label": "Indirect pathway",
+        "project_id": "AXIS-DD-ERAP1-CURATED-001",
+        "statement": "ERAP1 is perturbed, but the HLA-B27-related phenotype arises through an indirect pathway rather than proximal catalytic modulation.",
+        "supersedes_id": null
+      },
+      {
+        "created_by": "AXIS AI-assisted suggestion",
+        "epistemic_kind": "alternative_mechanistic_explanation",
+        "ground": "off_target",
+        "hypothesis_id": "AXIS-ERAP1-CURATED-HYP-001",
+        "hypothesis_revision": 1,
+        "id": "explanation:off_target",
+        "knowledge_kind": "ai_suggestion",
+        "label": "Off-target activity",
+        "project_id": "AXIS-DD-ERAP1-CURATED-001",
+        "statement": "The phenotype arises primarily from compound activity at targets other than ERAP1 (for example ERAP2 or unrelated proteins).",
+        "supersedes_id": null
+      },
+      {
+        "created_by": "AXIS AI-assisted suggestion",
+        "epistemic_kind": "alternative_mechanistic_explanation",
+        "ground": "on_target",
+        "hypothesis_id": "AXIS-ERAP1-CURATED-HYP-001",
+        "hypothesis_revision": 1,
+        "id": "explanation:on_target",
+        "knowledge_kind": "ai_suggestion",
+        "label": "On-target ERAP1 modulation",
+        "project_id": "AXIS-DD-ERAP1-CURATED-001",
+        "statement": "The HLA-B27-related cellular phenotype produced by the compounds arises from direct modulation of ERAP1 in those cells.",
+        "supersedes_id": null
+      }
+    ],
+    "hypothesis": {
+      "description": "Pharmacological modulation of ERAP1 can alter HLA-B27-related antigen-processing biology in a direction relevant to axial spondyloarthritis in appropriate genetic and cellular contexts.",
+      "id": "AXIS-ERAP1-CURATED-HYP-001",
+      "revision": 1,
+      "state": "draft",
+      "title": "Pharmacological ERAP1 modulation as an axSpA intervention strategy (working formulation)"
+    },
+    "promoted": [],
+    "results_ledger": [],
+    "review": {
+      "designs": {
+        "decision:exp:allotype-matched-panel": "pending",
+        "decision:exp:chemical-genetic-engagement": "pending",
+        "decision:exp:engagement-assay": "pending",
+        "decision:exp:engagement-phenotype-alignment": "pending",
+        "decision:exp:orthogonal-chemical-probe": "pending",
+        "decision:exp:phenotype-replication": "pending"
+      },
+      "mappings": {
+        "decision:exp:allotype-matched-panel:s1|explanation:context": "pending",
+        "decision:exp:allotype-matched-panel:s1|explanation:indirect": "pending",
+        "decision:exp:allotype-matched-panel:s1|explanation:off_target": "pending",
+        "decision:exp:allotype-matched-panel:s1|explanation:on_target": "pending",
+        "decision:exp:allotype-matched-panel:s2|explanation:context": "pending",
+        "decision:exp:allotype-matched-panel:s2|explanation:indirect": "pending",
+        "decision:exp:allotype-matched-panel:s2|explanation:off_target": "pending",
+        "decision:exp:allotype-matched-panel:s2|explanation:on_target": "pending",
+        "decision:exp:allotype-matched-panel:s3|explanation:context": "pending",
+        "decision:exp:allotype-matched-panel:s3|explanation:indirect": "pending",
+        "decision:exp:allotype-matched-panel:s3|explanation:off_target": "pending",
+        "decision:exp:allotype-matched-panel:s3|explanation:on_target": "pending",
+        "decision:exp:chemical-genetic-engagement:s1|explanation:context": "pending",
+        "decision:exp:chemical-genetic-engagement:s1|explanation:indirect": "pending",
+        "decision:exp:chemical-genetic-engagement:s1|explanation:off_target": "pending",
+        "decision:exp:chemical-genetic-engagement:s1|explanation:on_target": "pending",
+        "decision:exp:chemical-genetic-engagement:s2|explanation:context": "pending",
+        "decision:exp:chemical-genetic-engagement:s2|explanation:indirect": "pending",
+        "decision:exp:chemical-genetic-engagement:s2|explanation:off_target": "pending",
+        "decision:exp:chemical-genetic-engagement:s2|explanation:on_target": "pending",
+        "decision:exp:chemical-genetic-engagement:s3|explanation:context": "pending",
+        "decision:exp:chemical-genetic-engagement:s3|explanation:indirect": "pending",
+        "decision:exp:chemical-genetic-engagement:s3|explanation:off_target": "pending",
+        "decision:exp:chemical-genetic-engagement:s3|explanation:on_target": "pending",
+        "decision:exp:chemical-genetic-engagement:s4|explanation:context": "pending",
+        "decision:exp:chemical-genetic-engagement:s4|explanation:indirect": "pending",
+        "decision:exp:chemical-genetic-engagement:s4|explanation:off_target": "pending",
+        "decision:exp:chemical-genetic-engagement:s4|explanation:on_target": "pending",
+        "decision:exp:chemical-genetic-engagement:s5|explanation:context": "pending",
+        "decision:exp:chemical-genetic-engagement:s5|explanation:indirect": "pending",
+        "decision:exp:chemical-genetic-engagement:s5|explanation:off_target": "pending",
+        "decision:exp:chemical-genetic-engagement:s5|explanation:on_target": "pending",
+        "decision:exp:engagement-assay:s1|explanation:context": "pending",
+        "decision:exp:engagement-assay:s1|explanation:indirect": "pending",
+        "decision:exp:engagement-assay:s1|explanation:off_target": "pending",
+        "decision:exp:engagement-assay:s1|explanation:on_target": "pending",
+        "decision:exp:engagement-assay:s2|explanation:context": "pending",
+        "decision:exp:engagement-assay:s2|explanation:indirect": "pending",
+        "decision:exp:engagement-assay:s2|explanation:off_target": "pending",
+        "decision:exp:engagement-assay:s2|explanation:on_target": "pending",
+        "decision:exp:engagement-assay:s3|explanation:context": "pending",
+        "decision:exp:engagement-assay:s3|explanation:indirect": "pending",
+        "decision:exp:engagement-assay:s3|explanation:off_target": "pending",
+        "decision:exp:engagement-assay:s3|explanation:on_target": "pending",
+        "decision:exp:engagement-assay:s4|explanation:context": "pending",
+        "decision:exp:engagement-assay:s4|explanation:indirect": "pending",
+        "decision:exp:engagement-assay:s4|explanation:off_target": "pending",
+        "decision:exp:engagement-assay:s4|explanation:on_target": "pending",
+        "decision:exp:engagement-phenotype-alignment:s1|explanation:context": "pending",
+        "decision:exp:engagement-phenotype-alignment:s1|explanation:indirect": "pending",
+        "decision:exp:engagement-phenotype-alignment:s1|explanation:off_target": "pending",
+        "decision:exp:engagement-phenotype-alignment:s1|explanation:on_target": "pending",
+        "decision:exp:engagement-phenotype-alignment:s2|explanation:context": "pending",
+        "decision:exp:engagement-phenotype-alignment:s2|explanation:indirect": "pending",
+        "decision:exp:engagement-phenotype-alignment:s2|explanation:off_target": "pending",
+        "decision:exp:engagement-phenotype-alignment:s2|explanation:on_target": "pending",
+        "decision:exp:engagement-phenotype-alignment:s3|explanation:context": "pending",
+        "decision:exp:engagement-phenotype-alignment:s3|explanation:indirect": "pending",
+        "decision:exp:engagement-phenotype-alignment:s3|explanation:off_target": "pending",
+        "decision:exp:engagement-phenotype-alignment:s3|explanation:on_target": "pending",
+        "decision:exp:orthogonal-chemical-probe:s1|explanation:context": "pending",
+        "decision:exp:orthogonal-chemical-probe:s1|explanation:indirect": "pending",
+        "decision:exp:orthogonal-chemical-probe:s1|explanation:off_target": "pending",
+        "decision:exp:orthogonal-chemical-probe:s1|explanation:on_target": "pending",
+        "decision:exp:orthogonal-chemical-probe:s2|explanation:context": "pending",
+        "decision:exp:orthogonal-chemical-probe:s2|explanation:indirect": "pending",
+        "decision:exp:orthogonal-chemical-probe:s2|explanation:off_target": "pending",
+        "decision:exp:orthogonal-chemical-probe:s2|explanation:on_target": "pending",
+        "decision:exp:orthogonal-chemical-probe:s3|explanation:context": "pending",
+        "decision:exp:orthogonal-chemical-probe:s3|explanation:indirect": "pending",
+        "decision:exp:orthogonal-chemical-probe:s3|explanation:off_target": "pending",
+        "decision:exp:orthogonal-chemical-probe:s3|explanation:on_target": "pending",
+        "decision:exp:phenotype-replication:s1|explanation:context": "pending",
+        "decision:exp:phenotype-replication:s1|explanation:indirect": "pending",
+        "decision:exp:phenotype-replication:s1|explanation:off_target": "pending",
+        "decision:exp:phenotype-replication:s1|explanation:on_target": "pending",
+        "decision:exp:phenotype-replication:s2|explanation:context": "pending",
+        "decision:exp:phenotype-replication:s2|explanation:indirect": "pending",
+        "decision:exp:phenotype-replication:s2|explanation:off_target": "pending",
+        "decision:exp:phenotype-replication:s2|explanation:on_target": "pending",
+        "decision:exp:phenotype-replication:s3|explanation:context": "pending",
+        "decision:exp:phenotype-replication:s3|explanation:indirect": "pending",
+        "decision:exp:phenotype-replication:s3|explanation:off_target": "pending",
+        "decision:exp:phenotype-replication:s3|explanation:on_target": "pending"
+      },
+      "mode": "exploratory",
+      "policy_id": "decision-review-policy-v1"
+    },
+    "statuses": {}
+  },
+  "structural_only": {
+    "candidates": [
+      {
+        "endpoint_description": "HLA-B27 surface phenotype and peptide-length distribution per context.",
+        "experiment_id": "decision:exp:allotype-matched-panel",
+        "experimental_system": "Isogenic cells expressing defined ERAP1 allotypes and HLA-B27 subtypes",
+        "intervention_description": "The same ERAP1 perturbation across the allotype and subtype matrix.",
+        "knowledge_kind": "ai_suggestion",
+        "profile": {
+          "addressed_gap_ids": [],
+          "complexity": "high",
+          "confounders_addressed": [
+            "background genetic differences (isogenic design)"
+          ],
+          "considered_for": [
+            "genetic_context",
+            "reproducibility"
+          ],
+          "context_requirements": {
+            "erap1_allotype": "multiple defined allotypes",
+            "hla": "multiple HLA-B27 subtypes"
+          },
+          "controls_negative": [
+            "vehicle",
+            "ERAP1-null arm in each subtype"
+          ],
+          "controls_positive": [],
+          "cost": null,
+          "disease_relevance": "molecular HLA-B27 context only; not disease rescue",
+          "experiment_id": "decision:exp:allotype-matched-panel",
+          "limitations": [
+            "Does not test compound engagement",
+            "Isogenic systems are not patient cells"
+          ],
+          "prerequisites": [
+            [
+              "isogenic ERAP1 allotype and HLA-B27 subtype models",
+              "not_established"
+            ]
+          ],
+          "primary_endpoint": "Direction and size of the phenotype across allotype and subtype",
+          "purpose": "test_context_dependence",
+          "required": {
+            "assays": [
+              "HLA-B27 surface phenotype assay",
+              "immunopeptidomics"
+            ],
+            "models": [
+              "isogenic allotype and subtype panel"
+            ],
+            "reagents": []
+          },
+          "role": "mechanism_discrimination",
+          "secondary_endpoints": [
+            "peptide-length distribution"
+          ],
+          "target_proximity": "pathway_proximal",
+          "time_estimate": "unknown"
+        },
+        "rationale": "Test whether the effect of ERAP1 perturbation depends on ERAP1 allotype and HLA-B27 subtype in matched isogenic backgrounds.",
+        "result_claim_id": null,
+        "scenarios": [
+          {
+            "consequence": {
+              "category": "investigate_context_dependence",
+              "new_uncertainty": null,
+              "statement": "If the effect varies with background, the strategy would need to be defined per allotype and subtype before any further decision."
+            },
+            "effects": {
+              "explanation:context": {
+                "effect": "strengthens",
+                "rationale": "Behaviour tracks background."
+              },
+              "explanation:indirect": {
+                "effect": "does_not_discriminate",
+                "rationale": "Not separated by this outcome."
+              },
+              "explanation:off_target": {
+                "effect": "does_not_discriminate",
+                "rationale": "Not separated by this outcome."
+              },
+              "explanation:on_target": {
+                "effect": "does_not_discriminate",
+                "rationale": "Not separated by this outcome."
+              }
+            },
+            "interpretation": "The effect is context dependent.",
+            "kind": "alternative",
+            "outcome": "Direction or magnitude of the effect varies by allotype or subtype.",
+            "scenario_id": "decision:exp:allotype-matched-panel:s1"
+          },
+          {
+            "consequence": {
+              "category": "advance_to_next_evidence_layer",
+              "new_uncertainty": null,
+              "statement": "If the effect is consistent across contexts, the context uncertainty would be resolved for the current decision and compound-level engagement and dependence would become the limiting evidence."
+            },
+            "effects": {
+              "explanation:context": {
+                "effect": "weakens",
+                "rationale": "No dependence on background observed."
+              },
+              "explanation:indirect": {
+                "effect": "does_not_discriminate",
+                "rationale": "Not separated."
+              },
+              "explanation:off_target": {
+                "effect": "does_not_discriminate",
+                "rationale": "Genetic perturbation does not involve the compound."
+              },
+              "explanation:on_target": {
+                "effect": "strengthens",
+                "rationale": "A general effect is compatible with a direct consequence of ERAP1 perturbation."
+              }
+            },
+            "interpretation": "The effect is general to ERAP1 perturbation in these contexts.",
+            "kind": "supportive",
+            "outcome": "The effect is consistent across the matched allotypes and subtypes.",
+            "scenario_id": "decision:exp:allotype-matched-panel:s2"
+          },
+          {
+            "consequence": {
+              "category": "require_replication",
+              "new_uncertainty": "panel comparability",
+              "statement": "If the panel is not matched, the context uncertainty would remain open and the panel would need to be rebuilt."
+            },
+            "effects": {
+              "explanation:context": {
+                "effect": "does_not_discriminate",
+                "rationale": "Technical limitation."
+              },
+              "explanation:indirect": {
+                "effect": "does_not_discriminate",
+                "rationale": "Technical limitation."
+              },
+              "explanation:off_target": {
+                "effect": "does_not_discriminate",
+                "rationale": "Technical limitation."
+              },
+              "explanation:on_target": {
+                "effect": "does_not_discriminate",
+                "rationale": "Technical limitation."
+              }
+            },
+            "interpretation": "No inference is permitted.",
+            "kind": "non_interpretable",
+            "outcome": "The panel is not isogenic or its expression levels differ.",
+            "scenario_id": "decision:exp:allotype-matched-panel:s3"
+          }
+        ],
+        "status": "proposed",
+        "title": "Matched ERAP1 allotype and HLA-B27 subtype panel"
+      },
+      {
+        "endpoint_description": "Cellular ERAP1 engagement and the source-linked HLA-B27 phenotype, measured separately with a viability readout.",
+        "experiment_id": "decision:exp:chemical-genetic-engagement",
+        "experimental_system": "HLA-B27-positive cell system with wild-type, ERAP1-depleted or null, and ERAP1-rescued arms in a matched genetic background",
+        "intervention_description": "Compound at phenotype-active exposures versus vehicle and an inactive analogue in each arm; ERAP1 genetic depletion and re-expression as the genetic comparison.",
+        "knowledge_kind": "ai_suggestion",
+        "profile": {
+          "addressed_gap_ids": [
+            "cellular:chen-dg013a-HeLa.B27:gap",
+            "cellular:chen-dg013a-C1R.B27:gap",
+            "cellular:maben-2:gap",
+            "cellular:maben-3:gap"
+          ],
+          "complexity": "high",
+          "confounders_addressed": [
+            "off-target activity (genetic comparison)",
+            "exposure-dependent toxicity (viability measured separately)"
+          ],
+          "considered_for": [
+            "target_engagement",
+            "target_dependency"
+          ],
+          "context_requirements": {
+            "erap1_allotype": "report and match across arms",
+            "hla": "HLA-B27 subtype to be chosen and reported"
+          },
+          "controls_negative": [
+            "vehicle",
+            "ERAP1-null or ERAP1-depleted arm of the same background",
+            "structurally related inactive analogue, if one is established (none identified in the curated corpus)"
+          ],
+          "controls_positive": [
+            "none established in the curated corpus; a reference ERAP1 ligand with demonstrated cellular engagement would be required"
+          ],
+          "cost": null,
+          "disease_relevance": "molecular HLA-B27 context only; not disease rescue",
+          "experiment_id": "decision:exp:chemical-genetic-engagement",
+          "limitations": [
+            "Does not resolve selectivity against other proteins",
+            "Single cellular system; disease relevance and patient-derived cells are not addressed",
+            "A null or rescue model does not reproduce partial pharmacological inhibition"
+          ],
+          "prerequisites": [
+            [
+              "validated compound identity (the DG013A label is not resolved to one substance)",
+              "not_established"
+            ],
+            [
+              "cellular target-engagement readout",
+              "not_established"
+            ],
+            [
+              "ERAP1-null and rescue HLA-B27 model",
+              "not_established"
+            ],
+            [
+              "HLA-B27-positive cell line",
+              "available_in_corpus"
+            ]
+          ],
+          "primary_endpoint": "Compound-dependent ERAP1 engagement at the exposures that produce the phenotype, together with phenotype attenuation in ERAP1-null cells",
+          "purpose": "discriminate_mechanism",
+          "required": {
+            "assays": [
+              "cellular engagement assay",
+              "HLA-B27 surface phenotype assay"
+            ],
+            "models": [
+              "HLA-B27-positive ERAP1-null and rescue cells"
+            ],
+            "reagents": [
+              "engagement readout reagent",
+              "inactive analogue"
+            ]
+          },
+          "role": "mechanism_discrimination",
+          "secondary_endpoints": [
+            "HLA-B27 free-heavy-chain surface phenotype",
+            "cell viability at the tested exposures",
+            "restoration of phenotype after ERAP1 re-expression"
+          ],
+          "target_proximity": "target_proximal",
+          "time_estimate": "unknown"
+        },
+        "rationale": "Compare the compound in HLA-B27 cells with and without ERAP1, with ERAP1 re-expression, while measuring cellular engagement and the source-linked phenotype in the same system, so that attribution to ERAP1 can be tested directly.",
+        "result_claim_id": null,
+        "scenarios": [
+          {
+            "consequence": {
+              "category": "strengthen_current_strategy",
+              "new_uncertainty": null,
+              "statement": "If engagement and ERAP1-dependence are both observed, the current evidence would support continuing the ERAP1 strategy for this compound in this context, with selectivity and context still to be addressed."
+            },
+            "effects": {
+              "explanation:context": {
+                "effect": "does_not_discriminate",
+                "rationale": "A single matched background does not test context."
+              },
+              "explanation:indirect": {
+                "effect": "does_not_discriminate",
+                "rationale": "An indirect pathway downstream of ERAP1 is also ERAP1-dependent."
+              },
+              "explanation:off_target": {
+                "effect": "weakens",
+                "rationale": "Phenotype requires ERAP1 and is restored by re-expression."
+              },
+              "explanation:on_target": {
+                "effect": "strengthens",
+                "rationale": "Engagement and genetic dependence both align with the phenotype."
+              }
+            },
+            "interpretation": "Compatible with ERAP1-dependent action at these exposures in this system.",
+            "kind": "supportive",
+            "outcome": "Engagement is detected at phenotype-active exposures in wild-type cells; the phenotype is attenuated in ERAP1-null cells and restored by ERAP1 re-expression.",
+            "scenario_id": "decision:exp:chemical-genetic-engagement:s1"
+          },
+          {
+            "consequence": {
+              "category": "weaken_current_strategy",
+              "new_uncertainty": null,
+              "statement": "If the phenotype persists without ERAP1, the compound would no longer support an ERAP1-dependent strategy and alternative chemotypes would need their own engagement and dependency evidence."
+            },
+            "effects": {
+              "explanation:context": {
+                "effect": "does_not_discriminate",
+                "rationale": "One background."
+              },
+              "explanation:indirect": {
+                "effect": "weakens",
+                "rationale": "An ERAP1-dependent indirect pathway would also be lost in null cells."
+              },
+              "explanation:off_target": {
+                "effect": "strengthens",
+                "rationale": "A target-independent phenotype is the expected pattern of off-target action."
+              },
+              "explanation:on_target": {
+                "effect": "weakens",
+                "rationale": "The phenotype is independent of ERAP1."
+              }
+            },
+            "interpretation": "The phenotype does not require ERAP1 in this system.",
+            "kind": "negative",
+            "outcome": "Engagement is detected in wild-type cells, but the phenotype persists unchanged in ERAP1-null cells.",
+            "scenario_id": "decision:exp:chemical-genetic-engagement:s2"
+          },
+          {
+            "consequence": {
+              "category": "change_mechanistic_model",
+              "new_uncertainty": null,
+              "statement": "If the phenotype is ERAP1-dependent without detectable engagement, the mechanistic model would change toward an indirect route and the strategy would need re-justification."
+            },
+            "effects": {
+              "explanation:context": {
+                "effect": "does_not_discriminate",
+                "rationale": "One background."
+              },
+              "explanation:indirect": {
+                "effect": "strengthens",
+                "rationale": "ERAP1-dependent phenotype without direct engagement fits an indirect route."
+              },
+              "explanation:off_target": {
+                "effect": "weakens",
+                "rationale": "The phenotype is ERAP1-dependent."
+              },
+              "explanation:on_target": {
+                "effect": "weakens",
+                "rationale": "Direct modulation is not supported by the engagement assay."
+              }
+            },
+            "interpretation": "ERAP1 contributes, but not through detectable binding of this compound.",
+            "kind": "alternative",
+            "outcome": "No engagement signal is detected in a validated assay, yet the phenotype is attenuated in ERAP1-null cells.",
+            "scenario_id": "decision:exp:chemical-genetic-engagement:s3"
+          },
+          {
+            "consequence": {
+              "category": "investigate_context_dependence",
+              "new_uncertainty": null,
+              "statement": "If engagement or dependence varies with background, the next evidence needed would be a matched allotype and HLA-B27 subtype comparison before any strategy decision."
+            },
+            "effects": {
+              "explanation:context": {
+                "effect": "strengthens",
+                "rationale": "Behaviour tracks background."
+              },
+              "explanation:indirect": {
+                "effect": "does_not_discriminate",
+                "rationale": "Not separated by this outcome."
+              },
+              "explanation:off_target": {
+                "effect": "does_not_discriminate",
+                "rationale": "Not separated by this outcome."
+              },
+              "explanation:on_target": {
+                "effect": "does_not_discriminate",
+                "rationale": "Holds in some contexts only."
+              }
+            },
+            "interpretation": "The result is context dependent.",
+            "kind": "alternative",
+            "outcome": "Engagement and ERAP1-dependence differ between HLA-B27 backgrounds or ERAP1 allotypes.",
+            "scenario_id": "decision:exp:chemical-genetic-engagement:s4"
+          },
+          {
+            "consequence": {
+              "category": "require_replication",
+              "new_uncertainty": "validity of the null or rescue model",
+              "statement": "If the experiment is non-interpretable, the uncertainty would remain open and the model and controls would need to be validated before repeating it."
+            },
+            "effects": {
+              "explanation:context": {
+                "effect": "does_not_discriminate",
+                "rationale": "Technical failure is not a biological negative."
+              },
+              "explanation:indirect": {
+                "effect": "does_not_discriminate",
+                "rationale": "Technical failure is not a biological negative."
+              },
+              "explanation:off_target": {
+                "effect": "does_not_discriminate",
+                "rationale": "Technical failure is not a biological negative."
+              },
+              "explanation:on_target": {
+                "effect": "does_not_discriminate",
+                "rationale": "Technical failure is not a biological negative."
+              }
+            },
+            "interpretation": "No inference about engagement or dependence is permitted.",
+            "kind": "non_interpretable",
+            "outcome": "The null or rescue model is not validated, or toxicity confounds the phenotype.",
+            "scenario_id": "decision:exp:chemical-genetic-engagement:s5"
+          }
+        ],
+        "status": "proposed",
+        "title": "Matched-genotype chemical-genetic experiment with an engagement readout"
+      },
+      {
+        "endpoint_description": "Compound-dependent cellular ERAP1 engagement signal.",
+        "experiment_id": "decision:exp:engagement-assay",
+        "experimental_system": "HLA-B27-positive cell line with a matched ERAP1-depleted control",
+        "intervention_description": "Compound concentration series spanning the phenotype-active exposures versus vehicle.",
+        "knowledge_kind": "ai_suggestion",
+        "profile": {
+          "addressed_gap_ids": [
+            "cellular:chen-dg013a-HeLa.B27:gap",
+            "cellular:chen-dg013a-C1R.B27:gap",
+            "cellular:maben-2:gap",
+            "cellular:maben-3:gap"
+          ],
+          "complexity": "moderate",
+          "confounders_addressed": [
+            "exposure-dependent toxicity (viability measured separately)"
+          ],
+          "considered_for": [
+            "target_engagement"
+          ],
+          "context_requirements": {
+            "hla": "HLA-B27 subtype to be chosen and reported"
+          },
+          "controls_negative": [
+            "vehicle",
+            "ERAP1-depleted cells of the same background"
+          ],
+          "controls_positive": [
+            "none established in the curated corpus; a reference ERAP1 ligand with demonstrated cellular engagement would be required"
+          ],
+          "cost": null,
+          "disease_relevance": "molecular HLA-B27 context only; not disease rescue",
+          "experiment_id": "decision:exp:engagement-assay",
+          "limitations": [
+            "Engagement does not show dependence of the phenotype on ERAP1",
+            "Does not resolve selectivity",
+            "Single system"
+          ],
+          "prerequisites": [
+            [
+              "validated compound identity (the DG013A label is not resolved to one substance)",
+              "not_established"
+            ],
+            [
+              "cellular target-engagement readout",
+              "not_established"
+            ],
+            [
+              "HLA-B27-positive cell line",
+              "available_in_corpus"
+            ]
+          ],
+          "primary_endpoint": "Compound-dependent ERAP1 engagement at phenotype-active exposures",
+          "purpose": "establish_target_engagement",
+          "required": {
+            "assays": [
+              "cellular engagement assay"
+            ],
+            "models": [
+              "HLA-B27-positive cell line",
+              "ERAP1-depleted control"
+            ],
+            "reagents": [
+              "engagement readout reagent"
+            ]
+          },
+          "role": "mechanism_discrimination",
+          "secondary_endpoints": [
+            "engagement across the concentration series",
+            "viability at tested exposures"
+          ],
+          "target_proximity": "target_proximal",
+          "time_estimate": "unknown"
+        },
+        "rationale": "Measure whether the compound engages ERAP1 in cells at the exposures that produce the reported HLA-B27 phenotype, using ERAP1-depleted cells as a specificity control.",
+        "result_claim_id": null,
+        "scenarios": [
+          {
+            "consequence": {
+              "category": "require_orthogonal_validation",
+              "new_uncertainty": null,
+              "statement": "If engagement is detected, the current evidence would support on-target action at these exposures, but dependency and selectivity remain open and orthogonal validation would be required."
+            },
+            "effects": {
+              "explanation:context": {
+                "effect": "does_not_discriminate",
+                "rationale": "One system."
+              },
+              "explanation:indirect": {
+                "effect": "does_not_discriminate",
+                "rationale": "Engagement does not show proximal catalytic modulation."
+              },
+              "explanation:off_target": {
+                "effect": "does_not_discriminate",
+                "rationale": "Engagement does not exclude additional off-target contribution."
+              },
+              "explanation:on_target": {
+                "effect": "strengthens",
+                "rationale": "Engagement closes the biochemical-to-cellular link."
+              }
+            },
+            "interpretation": "The compound reaches and binds ERAP1 in cells at these exposures.",
+            "kind": "supportive",
+            "outcome": "Engagement is detected at phenotype-active exposures and is absent in ERAP1-depleted cells.",
+            "scenario_id": "decision:exp:engagement-assay:s1"
+          },
+          {
+            "consequence": {
+              "category": "weaken_current_strategy",
+              "new_uncertainty": null,
+              "statement": "If no engagement is detected in a validated assay, an on-target explanation for this compound's phenotype would be weakened and the compound would be a poor basis for the ERAP1 strategy."
+            },
+            "effects": {
+              "explanation:context": {
+                "effect": "does_not_discriminate",
+                "rationale": "One system."
+              },
+              "explanation:indirect": {
+                "effect": "weakens",
+                "rationale": "An indirect route through ERAP1 still requires ERAP1 modulation."
+              },
+              "explanation:off_target": {
+                "effect": "strengthens",
+                "rationale": "Phenotype without engagement is the expected off-target pattern."
+              },
+              "explanation:on_target": {
+                "effect": "weakens",
+                "rationale": "No engagement at active exposures."
+              }
+            },
+            "interpretation": "The phenotype is unlikely to arise from direct engagement at these exposures.",
+            "kind": "negative",
+            "outcome": "No engagement at phenotype-active exposures in a validated assay.",
+            "scenario_id": "decision:exp:engagement-assay:s2"
+          },
+          {
+            "consequence": {
+              "category": "change_mechanistic_model",
+              "new_uncertainty": null,
+              "statement": "If engagement requires far higher exposures than the phenotype, the mechanistic model would change and the phenotype would need another explanation."
+            },
+            "effects": {
+              "explanation:context": {
+                "effect": "does_not_discriminate",
+                "rationale": "One system."
+              },
+              "explanation:indirect": {
+                "effect": "does_not_discriminate",
+                "rationale": "Not separated by this outcome."
+              },
+              "explanation:off_target": {
+                "effect": "strengthens",
+                "rationale": "A more potent target is implied."
+              },
+              "explanation:on_target": {
+                "effect": "weakens",
+                "rationale": "Exposures do not align."
+              }
+            },
+            "interpretation": "Phenotype and engagement are not aligned in exposure.",
+            "kind": "alternative",
+            "outcome": "Engagement occurs only at exposures well above those producing the phenotype.",
+            "scenario_id": "decision:exp:engagement-assay:s3"
+          },
+          {
+            "consequence": {
+              "category": "require_replication",
+              "new_uncertainty": "assay validity",
+              "statement": "If the assay is non-interpretable, the uncertainty would remain open and the assay would need to be re-established before the question can be addressed."
+            },
+            "effects": {
+              "explanation:context": {
+                "effect": "does_not_discriminate",
+                "rationale": "Technical failure is not a biological negative."
+              },
+              "explanation:indirect": {
+                "effect": "does_not_discriminate",
+                "rationale": "Technical failure is not a biological negative."
+              },
+              "explanation:off_target": {
+                "effect": "does_not_discriminate",
+                "rationale": "Technical failure is not a biological negative."
+              },
+              "explanation:on_target": {
+                "effect": "does_not_discriminate",
+                "rationale": "Technical failure is not a biological negative."
+              }
+            },
+            "interpretation": "No inference about engagement is permitted.",
+            "kind": "non_interpretable",
+            "outcome": "The assay fails its vehicle or positive-control criteria.",
+            "scenario_id": "decision:exp:engagement-assay:s4"
+          }
+        ],
+        "status": "proposed",
+        "title": "Cellular ERAP1 target-engagement measurement at phenotype-active exposures"
+      },
+      {
+        "endpoint_description": "Engagement and phenotype concentration-response curves in the same system.",
+        "experiment_id": "decision:exp:engagement-phenotype-alignment",
+        "experimental_system": "HLA-B27-positive cell line",
+        "intervention_description": "Compound concentration series versus vehicle.",
+        "knowledge_kind": "ai_suggestion",
+        "profile": {
+          "addressed_gap_ids": [
+            "cellular:chen-dg013a-HeLa.B27:gap",
+            "cellular:chen-dg013a-C1R.B27:gap",
+            "cellular:maben-2:gap",
+            "cellular:maben-3:gap"
+          ],
+          "complexity": "moderate",
+          "confounders_addressed": [],
+          "considered_for": [
+            "target_engagement"
+          ],
+          "context_requirements": {},
+          "controls_negative": [
+            "vehicle"
+          ],
+          "controls_positive": [],
+          "cost": null,
+          "disease_relevance": "molecular HLA-B27 context only; not disease rescue",
+          "experiment_id": "decision:exp:engagement-phenotype-alignment",
+          "limitations": [
+            "Alignment is correlational",
+            "Does not test dependence on ERAP1",
+            "Requires the same engagement readout as a direct engagement measurement"
+          ],
+          "prerequisites": [
+            [
+              "cellular target-engagement readout",
+              "not_established"
+            ],
+            [
+              "validated compound identity (the DG013A label is not resolved to one substance)",
+              "not_established"
+            ]
+          ],
+          "primary_endpoint": "Alignment of engagement and phenotype concentration-response",
+          "purpose": "characterize_pharmacology",
+          "required": {
+            "assays": [
+              "cellular engagement assay"
+            ],
+            "models": [
+              "HLA-B27-positive cell line"
+            ],
+            "reagents": [
+              "engagement readout reagent"
+            ]
+          },
+          "role": "characterization",
+          "secondary_endpoints": [
+            "viability across the series"
+          ],
+          "target_proximity": "target_proximal",
+          "time_estimate": "unknown"
+        },
+        "rationale": "Measure engagement and the HLA-B27 phenotype across the same concentration series to test whether they align.",
+        "result_claim_id": null,
+        "scenarios": [
+          {
+            "consequence": {
+              "category": "require_orthogonal_validation",
+              "new_uncertainty": null,
+              "statement": "If the curves align, the current evidence would support continued investigation, but alignment alone would not establish dependence and orthogonal validation would be required."
+            },
+            "effects": {
+              "explanation:context": {
+                "effect": "does_not_discriminate",
+                "rationale": "One system."
+              },
+              "explanation:indirect": {
+                "effect": "does_not_discriminate",
+                "rationale": "Not separated."
+              },
+              "explanation:off_target": {
+                "effect": "does_not_discriminate",
+                "rationale": "Alignment does not exclude a co-potent off-target."
+              },
+              "explanation:on_target": {
+                "effect": "strengthens",
+                "rationale": "Exposure alignment."
+              }
+            },
+            "interpretation": "Consistent with, but not proof of, engagement-driven phenotype.",
+            "kind": "supportive",
+            "outcome": "Engagement and phenotype concentration-response curves align.",
+            "scenario_id": "decision:exp:engagement-phenotype-alignment:s1"
+          },
+          {
+            "consequence": {
+              "category": "weaken_current_strategy",
+              "new_uncertainty": null,
+              "statement": "If the phenotype occurs without engagement, an on-target explanation for the compound would be weakened."
+            },
+            "effects": {
+              "explanation:context": {
+                "effect": "does_not_discriminate",
+                "rationale": "One system."
+              },
+              "explanation:indirect": {
+                "effect": "does_not_discriminate",
+                "rationale": "Not separated."
+              },
+              "explanation:off_target": {
+                "effect": "strengthens",
+                "rationale": "Expected off-target pattern."
+              },
+              "explanation:on_target": {
+                "effect": "weakens",
+                "rationale": "Phenotype without engagement."
+              }
+            },
+            "interpretation": "Phenotype is not accounted for by engagement.",
+            "kind": "negative",
+            "outcome": "The phenotype occurs at concentrations without detectable engagement.",
+            "scenario_id": "decision:exp:engagement-phenotype-alignment:s2"
+          },
+          {
+            "consequence": {
+              "category": "require_replication",
+              "new_uncertainty": "assay sensitivity",
+              "statement": "If assay sensitivity is inadequate, the uncertainty would remain open and the assay would need to be improved before repeating."
+            },
+            "effects": {
+              "explanation:context": {
+                "effect": "does_not_discriminate",
+                "rationale": "Technical limitation."
+              },
+              "explanation:indirect": {
+                "effect": "does_not_discriminate",
+                "rationale": "Technical limitation."
+              },
+              "explanation:off_target": {
+                "effect": "does_not_discriminate",
+                "rationale": "Technical limitation."
+              },
+              "explanation:on_target": {
+                "effect": "does_not_discriminate",
+                "rationale": "Technical limitation."
+              }
+            },
+            "interpretation": "No inference is permitted.",
+            "kind": "non_interpretable",
+            "outcome": "Assay sensitivity is inadequate to place engagement across the series.",
+            "scenario_id": "decision:exp:engagement-phenotype-alignment:s3"
+          }
+        ],
+        "status": "proposed",
+        "title": "Concentration-response alignment of engagement and phenotype"
+      },
+      {
+        "endpoint_description": "The same HLA-B27 surface phenotype with engagement measured.",
+        "experiment_id": "decision:exp:orthogonal-chemical-probe",
+        "experimental_system": "HLA-B27-positive cell line",
+        "intervention_description": "A second, structurally unrelated ERAP1 modulator versus the original compound.",
+        "knowledge_kind": "ai_suggestion",
+        "profile": {
+          "addressed_gap_ids": [],
+          "complexity": "high",
+          "confounders_addressed": [
+            "chemotype-specific off-target activity"
+          ],
+          "considered_for": [
+            "selectivity",
+            "target_dependency"
+          ],
+          "context_requirements": {},
+          "controls_negative": [
+            "vehicle",
+            "inactive analogue of the second probe, if established"
+          ],
+          "controls_positive": [],
+          "cost": null,
+          "disease_relevance": "molecular HLA-B27 context only; not disease rescue",
+          "experiment_id": "decision:exp:orthogonal-chemical-probe",
+          "limitations": [
+            "Requires a probe that does not yet exist in the curated corpus",
+            "Does not by itself show dependence on ERAP1"
+          ],
+          "prerequisites": [
+            [
+              "selective, chemically distinct ERAP1 probe with cellular engagement",
+              "not_established"
+            ],
+            [
+              "cellular target-engagement readout",
+              "not_established"
+            ]
+          ],
+          "primary_endpoint": "Phenotype reproduced by a chemically distinct modulator with engagement",
+          "purpose": "resolve_selectivity",
+          "required": {
+            "assays": [
+              "cellular engagement assay"
+            ],
+            "models": [
+              "HLA-B27-positive cell line"
+            ],
+            "reagents": [
+              "chemically distinct ERAP1 probe"
+            ]
+          },
+          "role": "mechanism_discrimination",
+          "secondary_endpoints": [
+            "engagement of each probe"
+          ],
+          "target_proximity": "target_proximal",
+          "time_estimate": "unknown"
+        },
+        "rationale": "Test whether a chemically distinct ERAP1 modulator with demonstrated engagement reproduces the phenotype, separating chemotype-specific off-target effects from target biology.",
+        "result_claim_id": null,
+        "scenarios": [
+          {
+            "consequence": {
+              "category": "strengthen_current_strategy",
+              "new_uncertainty": null,
+              "statement": "If a distinct probe with engagement reproduces the phenotype, the current evidence would support continuing the ERAP1 strategy across chemotypes."
+            },
+            "effects": {
+              "explanation:context": {
+                "effect": "does_not_discriminate",
+                "rationale": "One system."
+              },
+              "explanation:indirect": {
+                "effect": "does_not_discriminate",
+                "rationale": "Not separated."
+              },
+              "explanation:off_target": {
+                "effect": "weakens",
+                "rationale": "A shared off-target is less likely."
+              },
+              "explanation:on_target": {
+                "effect": "strengthens",
+                "rationale": "Two chemotypes converge."
+              }
+            },
+            "interpretation": "The phenotype tracks ERAP1 modulation across chemotypes.",
+            "kind": "supportive",
+            "outcome": "The distinct probe engages ERAP1 and reproduces the phenotype.",
+            "scenario_id": "decision:exp:orthogonal-chemical-probe:s1"
+          },
+          {
+            "consequence": {
+              "category": "weaken_current_strategy",
+              "new_uncertainty": null,
+              "statement": "If a distinct engaged probe does not reproduce the phenotype, the original phenotype would be attributed to the chemotype and the ERAP1 strategy would be weakened."
+            },
+            "effects": {
+              "explanation:context": {
+                "effect": "does_not_discriminate",
+                "rationale": "One system."
+              },
+              "explanation:indirect": {
+                "effect": "does_not_discriminate",
+                "rationale": "Not separated."
+              },
+              "explanation:off_target": {
+                "effect": "strengthens",
+                "rationale": "Chemotype-specific effect."
+              },
+              "explanation:on_target": {
+                "effect": "weakens",
+                "rationale": "Engagement without phenotype."
+              }
+            },
+            "interpretation": "The phenotype is specific to the original chemotype.",
+            "kind": "negative",
+            "outcome": "The distinct probe engages ERAP1 but does not reproduce the phenotype.",
+            "scenario_id": "decision:exp:orthogonal-chemical-probe:s2"
+          },
+          {
+            "consequence": {
+              "category": "require_replication",
+              "new_uncertainty": "availability of a selective probe",
+              "statement": "If no probe qualifies, the selectivity uncertainty would remain open and a suitable probe would need to be established first."
+            },
+            "effects": {
+              "explanation:context": {
+                "effect": "does_not_discriminate",
+                "rationale": "No valid probe."
+              },
+              "explanation:indirect": {
+                "effect": "does_not_discriminate",
+                "rationale": "No valid probe."
+              },
+              "explanation:off_target": {
+                "effect": "does_not_discriminate",
+                "rationale": "No valid probe."
+              },
+              "explanation:on_target": {
+                "effect": "does_not_discriminate",
+                "rationale": "No valid probe."
+              }
+            },
+            "interpretation": "No inference is permitted.",
+            "kind": "non_interpretable",
+            "outcome": "No probe meets the engagement criteria.",
+            "scenario_id": "decision:exp:orthogonal-chemical-probe:s3"
+          }
+        ],
+        "status": "proposed",
+        "title": "Chemically distinct ERAP1 probe at the same endpoint"
+      },
+      {
+        "endpoint_description": "The same HLA-B27 surface phenotype.",
+        "experiment_id": "decision:exp:phenotype-replication",
+        "experimental_system": "The system of the source study",
+        "intervention_description": "Same compound and exposure as the source study.",
+        "knowledge_kind": "ai_suggestion",
+        "profile": {
+          "addressed_gap_ids": [],
+          "complexity": "low",
+          "confounders_addressed": [],
+          "considered_for": [
+            "target_engagement",
+            "reproducibility"
+          ],
+          "context_requirements": {},
+          "controls_negative": [
+            "vehicle"
+          ],
+          "controls_positive": [],
+          "cost": null,
+          "disease_relevance": "molecular HLA-B27 context only; not disease rescue",
+          "experiment_id": "decision:exp:phenotype-replication",
+          "limitations": [
+            "Does not measure engagement, dependence or selectivity",
+            "Every outcome weakens or leaves unchanged all compound-based explanations together"
+          ],
+          "prerequisites": [
+            [
+              "validated compound identity (the DG013A label is not resolved to one substance)",
+              "not_established"
+            ]
+          ],
+          "primary_endpoint": "Reproducibility of the reported surface phenotype",
+          "purpose": "replicate_finding",
+          "required": {
+            "assays": [
+              "HLA-B27 surface phenotype assay"
+            ],
+            "models": [
+              "the source study system"
+            ],
+            "reagents": []
+          },
+          "role": "replication",
+          "secondary_endpoints": [],
+          "target_proximity": "downstream",
+          "time_estimate": "unknown"
+        },
+        "rationale": "Repeat the source phenotype assay with more replicates to improve precision. It is listed because it is a common first impulse, not because it addresses engagement.",
+        "result_claim_id": null,
+        "scenarios": [
+          {
+            "consequence": {
+              "category": "continue_current_strategy",
+              "new_uncertainty": null,
+              "statement": "If the phenotype reproduces, the current evidence would be unchanged with respect to ERAP1 attribution and the uncertainty about engagement would remain."
+            },
+            "effects": {
+              "explanation:context": {
+                "effect": "does_not_discriminate",
+                "rationale": "Same system."
+              },
+              "explanation:indirect": {
+                "effect": "does_not_discriminate",
+                "rationale": "Replication does not test attribution."
+              },
+              "explanation:off_target": {
+                "effect": "does_not_discriminate",
+                "rationale": "Replication does not test attribution."
+              },
+              "explanation:on_target": {
+                "effect": "does_not_discriminate",
+                "rationale": "Replication does not test attribution."
+              }
+            },
+            "interpretation": "Improves confidence that the phenotype is reproducible; says nothing about its cause.",
+            "kind": "supportive",
+            "outcome": "The phenotype reproduces with the same direction and similar magnitude.",
+            "scenario_id": "decision:exp:phenotype-replication:s1"
+          },
+          {
+            "consequence": {
+              "category": "require_replication",
+              "new_uncertainty": null,
+              "statement": "If the phenotype does not reproduce, all compound-based explanations would weaken together and the original finding would need independent replication before any strategy decision."
+            },
+            "effects": {
+              "explanation:context": {
+                "effect": "does_not_discriminate",
+                "rationale": "Same system."
+              },
+              "explanation:indirect": {
+                "effect": "weakens",
+                "rationale": "No phenotype to attribute."
+              },
+              "explanation:off_target": {
+                "effect": "weakens",
+                "rationale": "No phenotype to attribute."
+              },
+              "explanation:on_target": {
+                "effect": "weakens",
+                "rationale": "No phenotype to attribute."
+              }
+            },
+            "interpretation": "The original phenotype is not robust in this setting.",
+            "kind": "negative",
+            "outcome": "The phenotype does not reproduce.",
+            "scenario_id": "decision:exp:phenotype-replication:s2"
+          },
+          {
+            "consequence": {
+              "category": "require_replication",
+              "new_uncertainty": "assay validity",
+              "statement": "If the assay is non-interpretable, nothing would change and the assay would need to be repeated."
+            },
+            "effects": {
+              "explanation:context": {
+                "effect": "does_not_discriminate",
+                "rationale": "Technical failure."
+              },
+              "explanation:indirect": {
+                "effect": "does_not_discriminate",
+                "rationale": "Technical failure."
+              },
+              "explanation:off_target": {
+                "effect": "does_not_discriminate",
+                "rationale": "Technical failure."
+              },
+              "explanation:on_target": {
+                "effect": "does_not_discriminate",
+                "rationale": "Technical failure."
+              }
+            },
+            "interpretation": "No inference is permitted.",
+            "kind": "non_interpretable",
+            "outcome": "The assay fails its quality criteria.",
+            "scenario_id": "decision:exp:phenotype-replication:s3"
+          }
+        ],
+        "status": "proposed",
+        "title": "Repeat the reported HLA-B27 phenotype with additional replicates"
+      }
+    ],
+    "constraints": null,
+    "evidence": {
+      "biochemical_ids": [
+        "measurement:maben:1",
+        "measurement:maben:10",
+        "measurement:maben:13",
+        "measurement:maben:14",
+        "measurement:maben:2",
+        "measurement:maben:3",
+        "measurement:maben:6",
+        "measurement:maben:7",
+        "measurement:maben:9"
+      ],
+      "compound_coverage": {
+        "compounds": [
+          {
+            "biochemical": true,
+            "cellular_phenotype": false,
+            "compound_id": "compound:maben-1"
+          },
+          {
+            "biochemical": true,
+            "cellular_phenotype": true,
+            "compound_id": "compound:maben-2"
+          },
+          {
+            "biochemical": true,
+            "cellular_phenotype": true,
+            "compound_id": "compound:maben-3"
+          }
+        ],
+        "unresolved_identity_perturbagens": [
+          "DG013A"
+        ]
+      },
+      "compound_dependency_supported_ids": [],
+      "compound_dependency_uncertain_ids": [
+        "cellular:chen-dg013a-C1R.B27:hla",
+        "cellular:chen-dg013a-HeLa.B27:hla",
+        "cellular:maben-2:hla",
+        "cellular:maben-3:hla"
+      ],
+      "compound_phenotype_ids": [
+        "cellular:chen-dg013a-C1R.B27:hla",
+        "cellular:chen-dg013a-HeLa.B27:hla",
+        "cellular:maben-2:hla",
+        "cellular:maben-3:hla"
+      ],
+      "concordance": {
+        "concordant": 0,
+        "discordant": 0,
+        "discordant_ids": [],
+        "not_comparable": 6
+      },
+      "context_of": {
+        "cellular:chen-coculture:immune": "HeLa.B27/C1R.B27 + AS CD4+ T cells / HLA-B*27:05",
+        "cellular:chen-dg013a-C1R.B27:hla": "C1R.B27 / HLA-B*27:05",
+        "cellular:chen-dg013a-HeLa.B27:hla": "HeLa.B27 / HLA-B*27:05",
+        "cellular:chen-knockdown-C1R.B27:hla": "C1R.B27 / HLA-B*27:05",
+        "cellular:chen-knockdown-HeLa.B27:hla": "HeLa.B27 / HLA-B*27:05",
+        "cellular:chen2014-peptidome:hla": "HeLa.B27/C1R.B27 / no HLA allele reported",
+        "cellular:chen2014-variant:immune": "HLA-B27 cells; line not verified in abstract / no HLA allele reported",
+        "cellular:maben-2:hla": "Engineered HeLa H-2Kb / no HLA allele reported",
+        "cellular:maben-3:hla": "Engineered HeLa H-2Kb / no HLA allele reported",
+        "cellular:tran-dimer:hla": "U937.B27 / HLA-B*27:05",
+        "cellular:tran-fhc:hla": "U937.B27 / HLA-B*27:05"
+      },
+      "contexts": {
+        "allotype_reported": false,
+        "hla_alleles": [
+          "HLA-B*27:05"
+        ],
+        "unmatched_context_experiments": 4
+      },
+      "contributions": [],
+      "edges": {
+        "biochemical": {
+          "ids": [
+            "measurement:maben:1",
+            "measurement:maben:10",
+            "measurement:maben:13",
+            "measurement:maben:14",
+            "measurement:maben:2",
+            "measurement:maben:3",
+            "measurement:maben:6",
+            "measurement:maben:7",
+            "measurement:maben:9"
+          ],
+          "state": "supported"
+        },
+        "clinical": {
+          "ids": [],
+          "state": "not_assessed"
+        },
+        "disease": {
+          "ids": [],
+          "state": "not_assessed"
+        },
+        "engagement": {
+          "ids": [
+            "cellular:chen-coculture:engagement",
+            "cellular:chen-dg013a-C1R.B27:engagement",
+            "cellular:chen-dg013a-HeLa.B27:engagement",
+            "cellular:chen-knockdown-C1R.B27:engagement",
+            "cellular:chen-knockdown-HeLa.B27:engagement",
+            "cellular:chen2014-peptidome:engagement",
+            "cellular:chen2014-variant:engagement",
+            "cellular:maben-2:engagement",
+            "cellular:maben-3:engagement",
+            "cellular:tran-dimer:engagement",
+            "cellular:tran-fhc:engagement"
+          ],
+          "state": "not_assessed"
+        },
+        "exposure": {
+          "ids": [
+            "cellular:chen-dg013a-C1R.B27:exposure",
+            "cellular:chen-dg013a-HeLa.B27:exposure",
+            "cellular:maben-2:exposure",
+            "cellular:maben-3:exposure"
+          ],
+          "state": "supported"
+        },
+        "functional": {
+          "ids": [
+            "cellular:chen-coculture:functional",
+            "cellular:chen-dg013a-C1R.B27:functional",
+            "cellular:chen-dg013a-HeLa.B27:functional",
+            "cellular:chen-knockdown-C1R.B27:functional",
+            "cellular:chen-knockdown-HeLa.B27:functional",
+            "cellular:chen2014-peptidome:functional",
+            "cellular:chen2014-variant:functional",
+            "cellular:maben-2:functional",
+            "cellular:maben-3:functional",
+            "cellular:tran-dimer:functional",
+            "cellular:tran-fhc:functional"
+          ],
+          "state": "insufficient"
+        },
+        "hla": {
+          "ids": [
+            "cellular:chen-dg013a-C1R.B27:hla",
+            "cellular:chen-dg013a-HeLa.B27:hla",
+            "cellular:chen-knockdown-C1R.B27:hla",
+            "cellular:chen-knockdown-HeLa.B27:hla",
+            "cellular:chen2014-peptidome:hla",
+            "cellular:maben-2:hla",
+            "cellular:maben-3:hla",
+            "cellular:tran-dimer:hla",
+            "cellular:tran-fhc:hla"
+          ],
+          "state": "supported"
+        },
+        "immune": {
+          "ids": [
+            "cellular:chen-coculture:immune",
+            "cellular:chen2014-variant:immune"
+          ],
+          "state": "supported"
+        }
+      },
+      "functional_insufficient_ids": [
+        "cellular:chen-coculture:functional",
+        "cellular:chen-dg013a-C1R.B27:functional",
+        "cellular:chen-dg013a-HeLa.B27:functional",
+        "cellular:chen-knockdown-C1R.B27:functional",
+        "cellular:chen-knockdown-HeLa.B27:functional",
+        "cellular:chen2014-peptidome:functional",
+        "cellular:chen2014-variant:functional",
+        "cellular:maben-2:functional",
+        "cellular:maben-3:functional",
+        "cellular:tran-dimer:functional",
+        "cellular:tran-fhc:functional"
+      ],
+      "gap_ids": [
+        "cellular:chen-dg013a-C1R.B27:gap",
+        "cellular:chen-dg013a-HeLa.B27:gap",
+        "cellular:maben-2:gap",
+        "cellular:maben-3:gap"
+      ],
+      "gap_scopes": {
+        "cellular:chen-dg013a-C1R.B27:gap": "perturbagen:DG013A",
+        "cellular:chen-dg013a-HeLa.B27:gap": "perturbagen:DG013A",
+        "cellular:maben-2:gap": "compound:compound:maben-2",
+        "cellular:maben-3:gap": "compound:compound:maben-3"
+      },
+      "genetic_dependency_ids": [
+        "cellular:chen-knockdown-C1R.B27:hla",
+        "cellular:chen-knockdown-HeLa.B27:hla",
+        "cellular:chen2014-peptidome:hla",
+        "cellular:chen2014-variant:immune",
+        "cellular:tran-dimer:hla",
+        "cellular:tran-fhc:hla"
+      ],
+      "genetic_phenotype_ids": [
+        "cellular:chen-coculture:immune",
+        "cellular:chen-knockdown-C1R.B27:hla",
+        "cellular:chen-knockdown-HeLa.B27:hla",
+        "cellular:chen2014-peptidome:hla",
+        "cellular:chen2014-variant:immune",
+        "cellular:tran-dimer:hla",
+        "cellular:tran-fhc:hla"
+      ],
+      "required_scopes": [
+        {
+          "scope_id": "compound:maben-2",
+          "scope_type": "compound"
+        },
+        {
+          "scope_id": "compound:maben-3",
+          "scope_type": "compound"
+        },
+        {
+          "scope_id": "DG013A",
+          "scope_type": "perturbagen"
+        }
+      ],
+      "review": {
+        "accepted": 0,
+        "pending_expert_review": 37
+      },
+      "review_mode": "exploratory",
+      "selectivity": {
+        "by_status": {
+          "Not assessed": 4,
+          "Not directly comparable": 14
+        },
+        "comparable": 0,
+        "comparable_ids": [],
+        "total": 18,
+        "unresolved_ids": [
+          "selectivity:measurement:maben:10:measurement:maben:11",
+          "selectivity:measurement:maben:10:measurement:maben:12",
+          "selectivity:measurement:maben:13:measurement:maben:11",
+          "selectivity:measurement:maben:13:measurement:maben:12",
+          "selectivity:measurement:maben:14:measurement:maben:11",
+          "selectivity:measurement:maben:14:measurement:maben:12",
+          "selectivity:measurement:maben:1:ERAP2",
+          "selectivity:measurement:maben:1:LNPEP",
+          "selectivity:measurement:maben:2:ERAP2",
+          "selectivity:measurement:maben:2:LNPEP",
+          "selectivity:measurement:maben:3:measurement:maben:4",
+          "selectivity:measurement:maben:3:measurement:maben:5",
+          "selectivity:measurement:maben:6:measurement:maben:4",
+          "selectivity:measurement:maben:6:measurement:maben:5",
+          "selectivity:measurement:maben:7:measurement:maben:4",
+          "selectivity:measurement:maben:7:measurement:maben:5",
+          "selectivity:measurement:maben:9:measurement:maben:11",
+          "selectivity:measurement:maben:9:measurement:maben:12"
+        ]
+      },
+      "source_disagreements": [
+        {
+          "directions": [
+            "decrease",
+            "increase"
+          ],
+          "endpoint": "surface free heavy chain",
+          "readout_ids": [
+            "cellular:chen-knockdown-C1R.B27:readout",
+            "cellular:chen-knockdown-HeLa.B27:readout",
+            "cellular:tran-fhc:readout"
+          ]
+        }
+      ],
+      "strategy_ids": [
+        "AXIS-ERAP1-CURATED-STRATEGY-allele_specific_modulation",
+        "AXIS-ERAP1-CURATED-STRATEGY-allosterically_modulate",
+        "AXIS-ERAP1-CURATED-STRATEGY-inhibit",
+        "AXIS-ERAP1-CURATED-STRATEGY-partially_inhibit"
+      ],
+      "structure_ids": [
+        "structure:pdb:3QNF:04b29d420769a6ce405c85d90e6888289de20381e17e64c1a31c3e4f835b8f75:2026-10-04T12:25:57+00:00:3654c195689a5327",
+        "structure:pdb:9GJN:9793d0f77c6d4934a040d7642beb40f09938f934880d2dce5ed9cd0964973ef9:2026-10-05T18:08:18.251105+00:00:3654c195689a5327",
+        "structure:pdb:9GJS:92d4b68f3f48d8cbc52b771918ef6819bdf7ced8f8708b087d916009c843f8ba:2026-10-05T18:08:18.750476+00:00:3654c195689a5327",
+        "structure:pdb:9GK6:dfe3bf10a7cd37edc3ced30f085bc1158b26aceb38434e06160892188f07b68c:2026-10-05T18:08:19.272407+00:00:3654c195689a5327",
+        "structure:pdb:9GKE:f8037bf57fe55ef3cf3ce96762a9f53256ca4f72d23af8e07f31b48ee0eda4f3:2026-10-05T18:08:19.733842+00:00:3654c195689a5327",
+        "structure:pdb:9TD3:0c3ac5f1032450d5a6fa871143d4672362e40a3ea70c08def315839aafe8298a:2026-10-05T18:08:20.247671+00:00:3654c195689a5327",
+        "structure:pdb:9TD4:c2ecebe677c3cb7dda0a302d5c24208f60d243455999d7f2ac70ee56d95451de:2026-10-05T18:08:20.670976+00:00:3654c195689a5327",
+        "structure:pdb:9TD5:3c04ff7331ada5f216e97e0ddcc14a111749f4df6948505fd4467d3e93cf3489:2026-10-05T18:08:20.250480+00:00:3654c195689a5327",
+        "structure:pdb:9TD7:b9cc9d5f5f71a334f6f9b1b17fa1965fd2f0fcca5d3e2be80d45808dd83ae3b7:2026-10-05T18:08:20.756989+00:00:3654c195689a5327",
+        "structure:pdb:9TF3:3d82784437279393c8bc2a966f3135bd0a97085173bcba49bf6b8eee708b15ff:2026-10-05T18:08:21.090958+00:00:3654c195689a5327",
+        "structure:pdb:9TF4:a1dc071b438c2dfaf5f24650ec5348cab2a6fd0949e5fc27e02c77ac1c57ab93:2026-10-05T18:08:21.259114+00:00:3654c195689a5327",
+        "structure:pdb:9TF6:2f41bafb77660fffc439b063667e86703948b4aa2ec030350ce9d933f052db17:2026-10-05T18:08:21.692179+00:00:3654c195689a5327",
+        "structure:pdb:9TFN:57076f87c1fd05b1dcaed101da8a11d38fdad36a41eca00ad7f93d8c28ceba7b:2026-10-05T18:08:21.702871+00:00:3654c195689a5327"
+      ],
+      "target_label": "ERAP1",
+      "unexpected_results": []
+    },
+    "explanations": [
+      {
+        "created_by": "AXIS AI-assisted suggestion",
+        "epistemic_kind": "alternative_mechanistic_explanation",
+        "ground": "context_dependent",
+        "hypothesis_id": "AXIS-ERAP1-CURATED-HYP-001",
+        "hypothesis_revision": 1,
+        "id": "explanation:context",
+        "knowledge_kind": "ai_suggestion",
+        "label": "Context-dependent effect",
+        "project_id": "AXIS-DD-ERAP1-CURATED-001",
+        "statement": "The effect depends on HLA-B27 subtype or ERAP1 allotype context rather than being a general consequence of ERAP1 modulation.",
+        "supersedes_id": null
+      },
+      {
+        "created_by": "AXIS AI-assisted suggestion",
+        "epistemic_kind": "alternative_mechanistic_explanation",
+        "ground": "indirect_pathway",
+        "hypothesis_id": "AXIS-ERAP1-CURATED-HYP-001",
+        "hypothesis_revision": 1,
+        "id": "explanation:indirect",
+        "knowledge_kind": "ai_suggestion",
+        "label": "Indirect pathway",
+        "project_id": "AXIS-DD-ERAP1-CURATED-001",
+        "statement": "ERAP1 is perturbed, but the HLA-B27-related phenotype arises through an indirect pathway rather than proximal catalytic modulation.",
+        "supersedes_id": null
+      },
+      {
+        "created_by": "AXIS AI-assisted suggestion",
+        "epistemic_kind": "alternative_mechanistic_explanation",
+        "ground": "off_target",
+        "hypothesis_id": "AXIS-ERAP1-CURATED-HYP-001",
+        "hypothesis_revision": 1,
+        "id": "explanation:off_target",
+        "knowledge_kind": "ai_suggestion",
+        "label": "Off-target activity",
+        "project_id": "AXIS-DD-ERAP1-CURATED-001",
+        "statement": "The phenotype arises primarily from compound activity at targets other than ERAP1 (for example ERAP2 or unrelated proteins).",
+        "supersedes_id": null
+      },
+      {
+        "created_by": "AXIS AI-assisted suggestion",
+        "epistemic_kind": "alternative_mechanistic_explanation",
+        "ground": "on_target",
+        "hypothesis_id": "AXIS-ERAP1-CURATED-HYP-001",
+        "hypothesis_revision": 1,
+        "id": "explanation:on_target",
+        "knowledge_kind": "ai_suggestion",
+        "label": "On-target ERAP1 modulation",
+        "project_id": "AXIS-DD-ERAP1-CURATED-001",
+        "statement": "The HLA-B27-related cellular phenotype produced by the compounds arises from direct modulation of ERAP1 in those cells.",
+        "supersedes_id": null
+      }
+    ],
+    "hypothesis": {
+      "description": "Pharmacological modulation of ERAP1 can alter HLA-B27-related antigen-processing biology in a direction relevant to axial spondyloarthritis in appropriate genetic and cellular contexts.",
+      "id": "AXIS-ERAP1-CURATED-HYP-001",
+      "revision": 1,
+      "state": "draft",
+      "title": "Pharmacological ERAP1 modulation as an axSpA intervention strategy (working formulation)"
+    },
+    "promoted": [],
+    "results_ledger": [],
+    "review": {
+      "designs": {
+        "decision:exp:allotype-matched-panel": "pending",
+        "decision:exp:chemical-genetic-engagement": "pending",
+        "decision:exp:engagement-assay": "pending",
+        "decision:exp:engagement-phenotype-alignment": "pending",
+        "decision:exp:orthogonal-chemical-probe": "pending",
+        "decision:exp:phenotype-replication": "pending"
+      },
+      "mappings": {
+        "decision:exp:allotype-matched-panel:s1|explanation:context": "pending",
+        "decision:exp:allotype-matched-panel:s1|explanation:indirect": "pending",
+        "decision:exp:allotype-matched-panel:s1|explanation:off_target": "pending",
+        "decision:exp:allotype-matched-panel:s1|explanation:on_target": "pending",
+        "decision:exp:allotype-matched-panel:s2|explanation:context": "pending",
+        "decision:exp:allotype-matched-panel:s2|explanation:indirect": "pending",
+        "decision:exp:allotype-matched-panel:s2|explanation:off_target": "pending",
+        "decision:exp:allotype-matched-panel:s2|explanation:on_target": "pending",
+        "decision:exp:allotype-matched-panel:s3|explanation:context": "pending",
+        "decision:exp:allotype-matched-panel:s3|explanation:indirect": "pending",
+        "decision:exp:allotype-matched-panel:s3|explanation:off_target": "pending",
+        "decision:exp:allotype-matched-panel:s3|explanation:on_target": "pending",
+        "decision:exp:chemical-genetic-engagement:s1|explanation:context": "pending",
+        "decision:exp:chemical-genetic-engagement:s1|explanation:indirect": "pending",
+        "decision:exp:chemical-genetic-engagement:s1|explanation:off_target": "pending",
+        "decision:exp:chemical-genetic-engagement:s1|explanation:on_target": "pending",
+        "decision:exp:chemical-genetic-engagement:s2|explanation:context": "pending",
+        "decision:exp:chemical-genetic-engagement:s2|explanation:indirect": "pending",
+        "decision:exp:chemical-genetic-engagement:s2|explanation:off_target": "pending",
+        "decision:exp:chemical-genetic-engagement:s2|explanation:on_target": "pending",
+        "decision:exp:chemical-genetic-engagement:s3|explanation:context": "pending",
+        "decision:exp:chemical-genetic-engagement:s3|explanation:indirect": "pending",
+        "decision:exp:chemical-genetic-engagement:s3|explanation:off_target": "pending",
+        "decision:exp:chemical-genetic-engagement:s3|explanation:on_target": "pending",
+        "decision:exp:chemical-genetic-engagement:s4|explanation:context": "pending",
+        "decision:exp:chemical-genetic-engagement:s4|explanation:indirect": "pending",
+        "decision:exp:chemical-genetic-engagement:s4|explanation:off_target": "pending",
+        "decision:exp:chemical-genetic-engagement:s4|explanation:on_target": "pending",
+        "decision:exp:chemical-genetic-engagement:s5|explanation:context": "pending",
+        "decision:exp:chemical-genetic-engagement:s5|explanation:indirect": "pending",
+        "decision:exp:chemical-genetic-engagement:s5|explanation:off_target": "pending",
+        "decision:exp:chemical-genetic-engagement:s5|explanation:on_target": "pending",
+        "decision:exp:engagement-assay:s1|explanation:context": "pending",
+        "decision:exp:engagement-assay:s1|explanation:indirect": "pending",
+        "decision:exp:engagement-assay:s1|explanation:off_target": "pending",
+        "decision:exp:engagement-assay:s1|explanation:on_target": "pending",
+        "decision:exp:engagement-assay:s2|explanation:context": "pending",
+        "decision:exp:engagement-assay:s2|explanation:indirect": "pending",
+        "decision:exp:engagement-assay:s2|explanation:off_target": "pending",
+        "decision:exp:engagement-assay:s2|explanation:on_target": "pending",
+        "decision:exp:engagement-assay:s3|explanation:context": "pending",
+        "decision:exp:engagement-assay:s3|explanation:indirect": "pending",
+        "decision:exp:engagement-assay:s3|explanation:off_target": "pending",
+        "decision:exp:engagement-assay:s3|explanation:on_target": "pending",
+        "decision:exp:engagement-assay:s4|explanation:context": "pending",
+        "decision:exp:engagement-assay:s4|explanation:indirect": "pending",
+        "decision:exp:engagement-assay:s4|explanation:off_target": "pending",
+        "decision:exp:engagement-assay:s4|explanation:on_target": "pending",
+        "decision:exp:engagement-phenotype-alignment:s1|explanation:context": "pending",
+        "decision:exp:engagement-phenotype-alignment:s1|explanation:indirect": "pending",
+        "decision:exp:engagement-phenotype-alignment:s1|explanation:off_target": "pending",
+        "decision:exp:engagement-phenotype-alignment:s1|explanation:on_target": "pending",
+        "decision:exp:engagement-phenotype-alignment:s2|explanation:context": "pending",
+        "decision:exp:engagement-phenotype-alignment:s2|explanation:indirect": "pending",
+        "decision:exp:engagement-phenotype-alignment:s2|explanation:off_target": "pending",
+        "decision:exp:engagement-phenotype-alignment:s2|explanation:on_target": "pending",
+        "decision:exp:engagement-phenotype-alignment:s3|explanation:context": "pending",
+        "decision:exp:engagement-phenotype-alignment:s3|explanation:indirect": "pending",
+        "decision:exp:engagement-phenotype-alignment:s3|explanation:off_target": "pending",
+        "decision:exp:engagement-phenotype-alignment:s3|explanation:on_target": "pending",
+        "decision:exp:orthogonal-chemical-probe:s1|explanation:context": "pending",
+        "decision:exp:orthogonal-chemical-probe:s1|explanation:indirect": "pending",
+        "decision:exp:orthogonal-chemical-probe:s1|explanation:off_target": "pending",
+        "decision:exp:orthogonal-chemical-probe:s1|explanation:on_target": "pending",
+        "decision:exp:orthogonal-chemical-probe:s2|explanation:context": "pending",
+        "decision:exp:orthogonal-chemical-probe:s2|explanation:indirect": "pending",
+        "decision:exp:orthogonal-chemical-probe:s2|explanation:off_target": "pending",
+        "decision:exp:orthogonal-chemical-probe:s2|explanation:on_target": "pending",
+        "decision:exp:orthogonal-chemical-probe:s3|explanation:context": "pending",
+        "decision:exp:orthogonal-chemical-probe:s3|explanation:indirect": "pending",
+        "decision:exp:orthogonal-chemical-probe:s3|explanation:off_target": "pending",
+        "decision:exp:orthogonal-chemical-probe:s3|explanation:on_target": "pending",
+        "decision:exp:phenotype-replication:s1|explanation:context": "pending",
+        "decision:exp:phenotype-replication:s1|explanation:indirect": "pending",
+        "decision:exp:phenotype-replication:s1|explanation:off_target": "pending",
+        "decision:exp:phenotype-replication:s1|explanation:on_target": "pending",
+        "decision:exp:phenotype-replication:s2|explanation:context": "pending",
+        "decision:exp:phenotype-replication:s2|explanation:indirect": "pending",
+        "decision:exp:phenotype-replication:s2|explanation:off_target": "pending",
+        "decision:exp:phenotype-replication:s2|explanation:on_target": "pending",
+        "decision:exp:phenotype-replication:s3|explanation:context": "pending",
+        "decision:exp:phenotype-replication:s3|explanation:indirect": "pending",
+        "decision:exp:phenotype-replication:s3|explanation:off_target": "pending",
+        "decision:exp:phenotype-replication:s3|explanation:on_target": "pending"
+      },
+      "mode": "exploratory",
+      "policy_id": "decision-review-policy-v1"
+    },
+    "statuses": {}
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "algorithm": "erap1-data-rich-audit-1",
+  "baseline_main_sha": "d491ebe47ee0c40dfaa3823a44a9decd1afae29d",
+  "boundary": "Incomplete candidate audit, not a final scientifically reassessed DecisionState",
+  "checksums": {
+    "before.json": "0dffb58a5b0a75320945ab1b5d31a07c4dfb036b545f74de550f347c32f2d991",
+    "chemical-datasets.json": "e0f78a2a02b107b4b89d768bb75ceb014d5a04b4c64a83d66cee74529ed1fda7",
+    "computational-replications.json": "6efe1f74b4356dd25f9f58b66c7663bcabf8c44b65f81968afc1e6233fa7337b",
+    "data-access.json": "13d42fac69d5bee66ae91de98c47eb7fffa7ad8d86df17c8ce49105e9a59b61f",
+    "decision-impact.json": "fb80ea06db3851370927c92c3091a5ece77e80ee084687a9a29a7efd7f71284b",
+    "decision-inputs.json": "d960b71f43ff7c5b150d4496a27e62e3393c4e01035bfe8ce49a5aa18a7d8232",
+    "immunopeptidome-datasets.json": "51e3d09f4c6094c64a9c1f52346acb7b0e01fa6fbc3e4e1645efc12330a578a1",
+    "inputs/2025-supplement-peptides.json": "5c13dd6d645d329bcc755c1a3b8195f2968ce28e6417eafe885d0268ca5a6c06",
+    "inputs/Peptide_List_PartI.txt": "ff6e38bbef4ede13238d043072eecc8d290c57da729e03b611a857bf6a4b7abe",
+    "inputs/Peptide_List_PartII.txt": "03ff88b7add6a5aa4ded75faa0ab7f59de954d09a41aad9952c1cb11237b0b38",
+    "inputs/report.pr_matrix.tsv": "7ab2e2a935c32da0d28db9e4791961df32ec630c966efd5d04b3f3875a72d2e2",
+    "source-artifacts.json": "f9ed32f51917f4217720194c5a5bea1c66e571cc9a1c96f313621f0bf591b238",
+    "structure-index.json": "18c7b45403965b3681a7610d61a557332be206c85844591e345b538af6e809de",
+    "study-index.json": "403468418bf94ca881bae8d5bbfecb72dc439bcaddf3ec9ea1df8773467b2ae3"
+  },
+  "cutoff": "2026-10-05",
+  "package_version": "1",
+  "review_state": "pending_review",
+  "status": "NOT READY FOR INDEPENDENT SCIENTIFIC REVIEW"
+}

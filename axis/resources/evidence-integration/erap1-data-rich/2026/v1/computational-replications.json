@@ -1,0 +1,188 @@
+{
+  "algorithm": "erap1-data-rich-audit-1",
+  "code_hashes": {
+    "axis/evidence_integration.py": "7bcd1dbfd2b0871be508c46bd7f012bf55d0dc3d9b639a128028bfa7f7ca49cd",
+    "axis/sources/pdb.py": "505f46337dd6237aa285e2c4d71cd90f26bb1161ddfc62daced56dfc245cdf2d",
+    "scripts/build_erap1_data_rich.py": "d323448bd3b2356e52773c890931029321dd110c1ffd0f06358450061ddfeb76"
+  },
+  "dependencies": {
+    "duckdb": "1.5.5",
+    "gemmi": "0.7.5",
+    "httpx": "0.28.1",
+    "mypy": "2.4.0",
+    "numpy": "2.5.1",
+    "pytest": "9.1.1",
+    "rdkit": "2025.9.3",
+    "ruff": "0.16.10",
+    "scipy": "1.18.0"
+  },
+  "deterministic": true,
+  "peptides": {
+    "2025_supplement": {
+      "classification_counts": {
+        "inhibitor diff expressed+unique": {
+          "common": 265,
+          "downregulated_or_wt_unique": 146,
+          "upregulated_or_unique": 321
+        },
+        "ko diff expressed+unique": {
+          "common": 233,
+          "downregulated_or_wt_unique": 238,
+          "upregulated_or_unique": 263
+        }
+      },
+      "classification_union": {
+        "inhibitor diff expressed+unique": 732,
+        "ko diff expressed+unique": 732
+      },
+      "epistemic_type": "axis_observation",
+      "raw_ms_reprocessing": "NOT PERFORMED",
+      "review_state": "pending_review",
+      "scope": "Counts of source-classified processed sequences; source q-values not independently recomputed",
+      "source": "10.1016/j.mcpro.2025.100964",
+      "unique_sequences_8_16": 734,
+      "upregulated_or_unique_overlap": {
+        "conditions": [
+          "inhibitor diff expressed+unique",
+          "ko diff expressed+unique"
+        ],
+        "intersection": 198,
+        "jaccard": 0.5129533678756477,
+        "union": 386
+      }
+    },
+    "PXD054491": {
+      "epistemic_type": "axis_observation",
+      "input_sha256": "ff6e38bbef4ede13238d043072eecc8d290c57da729e03b611a857bf6a4b7abe",
+      "length_distribution": {
+        "7": 8,
+        "8": 17,
+        "9": 302,
+        "10": 91,
+        "11": 47,
+        "12": 19,
+        "13": 13,
+        "14": 9,
+        "15": 17,
+        "16": 14,
+        "17": 12,
+        "18": 12,
+        "19": 8,
+        "20": 14,
+        "21": 7,
+        "22": 6,
+        "23": 4,
+        "24": 9,
+        "25": 5
+      },
+      "rows": 614,
+      "scope": "all sequences in supplied processed export; not condition-specific detections",
+      "unique_sequences": 614
+    },
+    "PXD054494": {
+      "epistemic_type": "axis_observation",
+      "input_sha256": "03ff88b7add6a5aa4ded75faa0ab7f59de954d09a41aad9952c1cb11237b0b38",
+      "length_distribution": {
+        "7": 5,
+        "8": 14,
+        "9": 173,
+        "10": 110,
+        "11": 46,
+        "12": 21,
+        "13": 15,
+        "14": 9,
+        "15": 8,
+        "16": 10,
+        "17": 7,
+        "18": 7,
+        "19": 4,
+        "20": 5,
+        "21": 4,
+        "22": 1,
+        "23": 2
+      },
+      "rows": 441,
+      "scope": "all sequences in supplied processed export; not condition-specific detections",
+      "unique_sequences": 441
+    },
+    "PXD066752": {
+      "algorithm": "erap1-data-rich-audit-1",
+      "biological_replicates": {
+        "Allotype 10": 3,
+        "Allotype 2": 3
+      },
+      "conditions": [
+        "Allotype 10",
+        "Allotype 2"
+      ],
+      "descriptive_abundance_direction": {
+        "first_higher": 1034,
+        "second_higher": 1128
+      },
+      "epistemic_type": "axis_observation",
+      "hla_assignment_and_motifs": "NOT PERFORMED; raw matrix contains no source HLA assignment",
+      "input_sha256": "7ab2e2a935c32da0d28db9e4791961df32ec630c966efd5d04b3f3875a72d2e2",
+      "intersection": 2162,
+      "jaccard": 0.9298924731182796,
+      "length_distribution": {
+        "Allotype 10": {
+          "8": 148,
+          "9": 1546,
+          "10": 335,
+          "11": 124,
+          "12": 25,
+          "13": 8,
+          "14": 9
+        },
+        "Allotype 2": {
+          "8": 172,
+          "9": 1592,
+          "10": 336,
+          "11": 131,
+          "12": 36,
+          "13": 12,
+          "14": 13
+        }
+      },
+      "parameters": {
+        "biological_replicates": "mean observed biological values",
+        "length": [
+          8,
+          14
+        ],
+        "missing": "not imputed; conditional on observed values",
+        "precursors": "sum per sequence/run",
+        "technical_replicates": "mean observed runs per biological replicate"
+      },
+      "raw_ms_reprocessing": "NOT PERFORMED",
+      "review_state": "pending_review",
+      "statistical_differential_expression": "NOT PERFORMED; no technical-run pseudoreplication",
+      "union": 2325,
+      "unique": {
+        "Allotype 10": 33,
+        "Allotype 2": 130
+      }
+    }
+  },
+  "random_seed": null,
+  "source_conclusion_reproduced": {
+    "PXD066752": {
+      "agreement": "EXACT for sequence-set counts, not differential-expression/motif conclusions",
+      "axis_observation": {
+        "intersection": 2162,
+        "union": 2325,
+        "unique": {
+          "Allotype 10": 33,
+          "Allotype 2": 130
+        }
+      },
+      "source": "10.1111/imm.70056 Figure 3A",
+      "source_assertion": {
+        "allotype_10_unique": 33,
+        "allotype_2_unique": 130,
+        "intersection": 2162,
+        "union": 2325
+      }
+    }
+  }
+}
