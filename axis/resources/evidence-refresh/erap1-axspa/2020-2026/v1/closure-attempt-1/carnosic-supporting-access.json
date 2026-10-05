@@ -1,0 +1,32 @@
+{
+  "metadata_attempts": [
+    {
+      "source": "ACS public Figshare supplement",
+      "url": "https://api.figshare.com/v2/articles/26326955",
+      "method": "GET",
+      "executed_at": "2026-10-05T12:28:42.275048+00:00",
+      "http_status": 200,
+      "content_type": "application/json",
+      "bytes": 7156,
+      "response_sha256": "05a9a06e0bb8462110c662107fadfc9f03f71152f8d9c8a3dc5a340f96ef4718",
+      "status": "retrieved_response_not_automatically_full_text"
+    }
+  ],
+  "doi": "10.1021/acs.jafc.4c00957.s001",
+  "resource_doi": "10.1021/acs.jafc.4c00957",
+  "license": {
+    "value": 10,
+    "name": "CC BY-NC 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc/4.0/"
+  },
+  "files": [
+    {
+      "name": "jf4c00957_si_001.pdf",
+      "url": "https://ndownloader.figshare.com/files/47768567",
+      "sha256": "345124af5f80697ddfed75981016df940cb1f4dc2c9529d177dc63e29e38fbde",
+      "bytes": 1043294,
+      "status": "retrieved_outside_repository_for_reading",
+      "cache_is_not_replay_input": true
+    }
+  ]
+}

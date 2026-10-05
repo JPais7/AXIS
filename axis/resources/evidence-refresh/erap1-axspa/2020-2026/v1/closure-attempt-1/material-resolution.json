@@ -1,0 +1,49 @@
+{
+  "status": "NOT READY FOR MERGE",
+  "scientific_review_status": "pending_review",
+  "starting_sha": "e066d7dbe3e024e4bc544246cd836c14d82aaff2",
+  "final_evidence_set_frozen": false,
+  "DecisionState_v2_created": false,
+  "causal_diff_created": false,
+  "corilagin": {
+    "doi": "10.1016/j.intimp.2025.115180",
+    "status": "material_full_text_unavailable",
+    "sources_attempted": ["OpenAlex public locations", "Europe PMC public access metadata", "Crossref official text-mining links", "Publisher HTML", "Public SSRN preprint", "Public Figshare metadata search"],
+    "access_findings": [
+      "OpenAlex reports closed access, no OA URL and no repository full-text location.",
+      "Europe PMC reports no PMCID and subscription-required full text.",
+      "Publisher and SSRN attempts returned HTTP 403.",
+      "Official Crossref text/xml endpoint returned HTTP 200 with 1855 bytes; XML contains coredata only, no article methods or results. This is METADATA_ONLY, not full-text retrieval.",
+      "Official text/plain link returned HTTP 400."
+    ],
+    "materiality_rationale": "Accessible primary publisher text reports direct ERAP1 interaction at cellular and protein levels. The assay modality, live-cell versus lysate context, exposure, phenotype-exposure matching and genetic controls could resolve or refine the baseline engagement/dependency bottleneck. Missing methods therefore cannot be treated as a negative finding or dismissed as non-material.",
+    "closure_requires": ["Main article or lawfully accessible accepted manuscript/preprint", "Relevant supplements", "Engagement assay method, cell/ERAP1 context and results", "Compound and phenotype exposure matching", "Genetic dependency/rescue controls and viability controls", "Comparator assay conditions and replication"]
+  },
+  "carnosic_acid": {
+    "doi": "10.1021/acs.jafc.4c00957",
+    "status": "supplement_resolved_main_article_still_unavailable",
+    "sources_attempted": ["OpenAlex public locations", "Europe PMC public access metadata", "Crossref official PDF link", "Publisher full HTML", "ACS public Figshare supplement"],
+    "access_findings": [
+      "OpenAlex reports closed access, no OA URL and no repository full-text location.",
+      "Europe PMC reports no PMCID and subscription-required full text.",
+      "Official PDF and publisher full HTML attempts returned HTTP 403.",
+      "Official supplement 10.1021/acs.jafc.4c00957.s001, Figshare article 26326955, retrieved publicly and all six pages inspected as text and rendered images. PDF retained outside repository only."
+    ],
+    "supplement_observations": [
+      {"kind": "source_assertion", "locator": "SI page S5, Figure S3A", "text": "Compound 3-23 has reported ERAP1 L-AMC hydrolysis IC50 = 10.73 micromolar.", "review_status": "pending_review"},
+      {"kind": "source_assertion", "locator": "SI page S5, Figure S3B", "text": "Compound 3-23 has reported ERAP1 VAFKARAF peptide assay IC50 = 16.98 micromolar.", "review_status": "pending_review"},
+      {"kind": "source_assertion", "locator": "SI page S5, Figure S3C", "text": "Compound 3-23 has reported ERAP2 R-AMC hydrolysis IC50 > 200 micromolar.", "operator": ">", "review_status": "pending_review"},
+      {"kind": "axis_inference", "locator": "SI pages S2-S6, Tables S1-S2 and Figures S1-S5", "text": "The six-page supplement contains mutation, biochemical and computational material, not the cellular engagement/phenotype methods needed for the decision. Do not infer absence of such experiments in the unavailable main article.", "review_status": "pending_review"}
+    ],
+    "identity_boundary": "The supplement labels the assayed material compound 3-23. Do not map this label to a chemically verified carnosic-acid record without the source identity bridge and structural/purity audit.",
+    "selectivity_boundary": "ERAP1 and ERAP2 endpoints use different substrates. Preserve censoring; no numerical selectivity ratio or context-free learning label imported.",
+    "closure_requires": ["Main article or lawfully accessible accepted manuscript", "Binding and cellular methods, dose/exposure and control figures", "Compound 3-23 identity mapping", "Relevant assay conditions and biological replication"]
+  },
+  "independent_remaining_blockers": [
+    "Original checkpoint still has 1530 records without final adjudication; proposed exclusions are not scientific exclusions.",
+    "Supplemental OpenAlex/preprint/citation/registry/structure candidates have not been fully linked, deduplicated and screened into a final included set.",
+    "Whole-set scientific curation and impact assessment are incomplete; a final evidence set cannot be frozen.",
+    "DecisionState v2 and causal diff remain deliberately absent, not fabricated or manually forced."
+  ],
+  "stop_reason": "A decision-material full-text blocker remains after legitimate public access attempts. Stop here under the user's explicit stop condition. No paywall bypass, external author message, purchase, scientific acceptance, final evidence freeze or decision-state creation was performed."
+}

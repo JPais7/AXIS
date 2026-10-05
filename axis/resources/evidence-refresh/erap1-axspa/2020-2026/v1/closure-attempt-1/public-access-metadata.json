@@ -1,0 +1,412 @@
+{
+  "papers": [
+    {
+      "doi": "10.1016/j.intimp.2025.115180",
+      "openalex": {
+        "id": "https://openalex.org/W4412522223",
+        "open_access": {
+          "is_oa": false,
+          "oa_status": "closed",
+          "oa_url": null,
+          "any_repository_has_fulltext": false
+        },
+        "locations": [
+          {
+            "id": "doi:10.1016/j.intimp.2025.115180",
+            "is_oa": false,
+            "landing_page_url": "https://doi.org/10.1016/j.intimp.2025.115180",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S158377717",
+              "display_name": "International Immunopharmacology",
+              "issn_l": "1567-5769",
+              "issn": [
+                "1567-5769",
+                "1878-1705"
+              ],
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": true,
+              "listed_in": [
+                "cwts-core",
+                "doyens",
+                "jufo-1",
+                "medline"
+              ],
+              "host_organization": "https://openalex.org/P4310320990",
+              "host_organization_name": "Elsevier BV",
+              "host_organization_lineage": [
+                "https://openalex.org/P4310320990"
+              ],
+              "host_organization_lineage_names": [
+                "Elsevier BV"
+              ],
+              "type": "journal"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": "International Immunopharmacology",
+            "raw_type": "journal-article"
+          },
+          {
+            "id": "pmid:40680611",
+            "is_oa": false,
+            "landing_page_url": "https://pubmed.ncbi.nlm.nih.gov/40680611",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4306525036",
+              "display_name": "PubMed",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I1299303238",
+              "host_organization_name": "National Institutes of Health",
+              "host_organization_lineage": [
+                "https://openalex.org/I1299303238"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": "International immunopharmacology",
+            "raw_type": "Journal Article"
+          }
+        ],
+        "best_oa_location": null
+      },
+      "crossref": {
+        "link": [
+          {
+            "URL": "https://api.elsevier.com/content/article/PII:S1567576925011701?httpAccept=text/xml",
+            "content-type": "text/xml",
+            "content-version": "vor",
+            "intended-application": "text-mining"
+          },
+          {
+            "URL": "https://api.elsevier.com/content/article/PII:S1567576925011701?httpAccept=text/plain",
+            "content-type": "text/plain",
+            "content-version": "vor",
+            "intended-application": "text-mining"
+          }
+        ],
+        "license": [
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2025,
+                  10,
+                  1
+                ]
+              ],
+              "date-time": "2025-10-01T00:00:00Z",
+              "timestamp": 1759276800000
+            },
+            "content-version": "tdm",
+            "delay-in-days": 0,
+            "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2025,
+                  10,
+                  1
+                ]
+              ],
+              "date-time": "2025-10-01T00:00:00Z",
+              "timestamp": 1759276800000
+            },
+            "content-version": "tdm",
+            "delay-in-days": 0,
+            "URL": "https://www.elsevier.com/legal/tdmrep-license"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2025,
+                  10,
+                  1
+                ]
+              ],
+              "date-time": "2025-10-01T00:00:00Z",
+              "timestamp": 1759276800000
+            },
+            "content-version": "stm-asf",
+            "delay-in-days": 0,
+            "URL": "https://doi.org/10.15223/policy-017"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2025,
+                  10,
+                  1
+                ]
+              ],
+              "date-time": "2025-10-01T00:00:00Z",
+              "timestamp": 1759276800000
+            },
+            "content-version": "stm-asf",
+            "delay-in-days": 0,
+            "URL": "https://doi.org/10.15223/policy-037"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2025,
+                  10,
+                  1
+                ]
+              ],
+              "date-time": "2025-10-01T00:00:00Z",
+              "timestamp": 1759276800000
+            },
+            "content-version": "stm-asf",
+            "delay-in-days": 0,
+            "URL": "https://doi.org/10.15223/policy-012"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2025,
+                  10,
+                  1
+                ]
+              ],
+              "date-time": "2025-10-01T00:00:00Z",
+              "timestamp": 1759276800000
+            },
+            "content-version": "stm-asf",
+            "delay-in-days": 0,
+            "URL": "https://doi.org/10.15223/policy-029"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2025,
+                  10,
+                  1
+                ]
+              ],
+              "date-time": "2025-10-01T00:00:00Z",
+              "timestamp": 1759276800000
+            },
+            "content-version": "stm-asf",
+            "delay-in-days": 0,
+            "URL": "https://doi.org/10.15223/policy-004"
+          }
+        ],
+        "relation": {}
+      },
+      "epmc_access": [
+        {
+          "id": "40680611",
+          "pmcid": null,
+          "isOpenAccess": "N",
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1016/j.intimp.2025.115180"
+              }
+            ]
+          },
+          "firstPublicationDate": "2025-07-18"
+        }
+      ]
+    },
+    {
+      "doi": "10.1021/acs.jafc.4c00957",
+      "openalex": {
+        "id": "https://openalex.org/W4400773381",
+        "open_access": {
+          "is_oa": false,
+          "oa_status": "closed",
+          "oa_url": null,
+          "any_repository_has_fulltext": false
+        },
+        "locations": [
+          {
+            "id": "doi:10.1021/acs.jafc.4c00957",
+            "is_oa": false,
+            "landing_page_url": "https://doi.org/10.1021/acs.jafc.4c00957",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S134644764",
+              "display_name": "Journal of Agricultural and Food Chemistry",
+              "issn_l": "0021-8561",
+              "issn": [
+                "0021-8561",
+                "1520-5118"
+              ],
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": true,
+              "listed_in": [
+                "cwts-core",
+                "jufo-3",
+                "ki-jl-2",
+                "medline",
+                "norway-2"
+              ],
+              "host_organization": "https://openalex.org/P4310320006",
+              "host_organization_name": "American Chemical Society",
+              "host_organization_lineage": [
+                "https://openalex.org/P4310320006"
+              ],
+              "host_organization_lineage_names": [
+                "American Chemical Society"
+              ],
+              "type": "journal"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": "Journal of Agricultural and Food Chemistry",
+            "raw_type": "journal-article"
+          },
+          {
+            "id": "pmid:39024058",
+            "is_oa": false,
+            "landing_page_url": "https://pubmed.ncbi.nlm.nih.gov/39024058",
+            "pdf_url": null,
+            "source": {
+              "id": "https://openalex.org/S4306525036",
+              "display_name": "PubMed",
+              "issn_l": null,
+              "issn": null,
+              "is_oa": false,
+              "is_in_doaj": false,
+              "is_core": false,
+              "listed_in": [],
+              "host_organization": "https://openalex.org/I1299303238",
+              "host_organization_name": "National Institutes of Health",
+              "host_organization_lineage": [
+                "https://openalex.org/I1299303238"
+              ],
+              "host_organization_lineage_names": [],
+              "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true,
+            "raw_source_name": "Journal of agricultural and food chemistry",
+            "raw_type": "Journal Article"
+          }
+        ],
+        "best_oa_location": null
+      },
+      "crossref": {
+        "link": [
+          {
+            "URL": "https://pubs.acs.org/doi/pdf/10.1021/acs.jafc.4c00957",
+            "content-type": "application/pdf",
+            "content-version": "vor",
+            "intended-application": "unspecified"
+          },
+          {
+            "URL": "https://pubs.acs.org/doi/pdf/10.1021/acs.jafc.4c00957",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "license": [
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2024,
+                  7,
+                  18
+                ]
+              ],
+              "date-time": "2024-07-18T00:00:00Z",
+              "timestamp": 1721260800000
+            },
+            "content-version": "stm-asf",
+            "delay-in-days": 0,
+            "URL": "https://doi.org/10.15223/policy-029"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2024,
+                  7,
+                  18
+                ]
+              ],
+              "date-time": "2024-07-18T00:00:00Z",
+              "timestamp": 1721260800000
+            },
+            "content-version": "stm-asf",
+            "delay-in-days": 0,
+            "URL": "https://doi.org/10.15223/policy-037"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2024,
+                  7,
+                  18
+                ]
+              ],
+              "date-time": "2024-07-18T00:00:00Z",
+              "timestamp": 1721260800000
+            },
+            "content-version": "stm-asf",
+            "delay-in-days": 0,
+            "URL": "https://doi.org/10.15223/policy-045"
+          }
+        ],
+        "relation": {}
+      },
+      "epmc_access": [
+        {
+          "id": "39024058",
+          "pmcid": null,
+          "isOpenAccess": "N",
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1021/acs.jafc.4c00957"
+              }
+            ]
+          },
+          "firstPublicationDate": "2024-07-18"
+        }
+      ]
+    }
+  ],
+  "figshare_search": []
+}

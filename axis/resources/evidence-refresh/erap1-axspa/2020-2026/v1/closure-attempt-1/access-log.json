@@ -1,0 +1,106 @@
+[
+  {
+    "source": "OpenAlex public locations",
+    "url": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1016%2Fj.intimp.2025.115180",
+    "method": "GET",
+    "executed_at": "2026-10-05T12:25:37.571410+00:00",
+    "http_status": 200,
+    "content_type": "application/json",
+    "bytes": 30689,
+    "response_sha256": "061c9857fb14fcaa507427b7b3a8d5665edcbe7cc213111b3a259bec1df3aa7c",
+    "status": "retrieved_response_not_automatically_full_text"
+  },
+  {
+    "source": "Crossref full-text links",
+    "url": "https://api.crossref.org/works/10.1016%2Fj.intimp.2025.115180",
+    "method": "GET",
+    "executed_at": "2026-10-05T12:25:38.021756+00:00",
+    "http_status": 200,
+    "content_type": "application/json",
+    "bytes": 21783,
+    "response_sha256": "b71dbb7c0b27466e43908529df5d8eee1b2bd9e4bef6c967ffafdffb255abd93",
+    "status": "retrieved_response_not_automatically_full_text"
+  },
+  {
+    "source": "Europe PMC public access metadata",
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2Fj.intimp.2025.115180%22&format=json&resultType=core",
+    "method": "GET",
+    "executed_at": "2026-10-05T12:25:38.543736+00:00",
+    "http_status": 200,
+    "content_type": "application/json;charset=UTF-8",
+    "bytes": 9524,
+    "response_sha256": "b5e8dfa27377020689e9e1e9e93f904f606cc62e9b45263918391d4c7f0b1ced",
+    "status": "retrieved_response_not_automatically_full_text"
+  },
+  {
+    "source": "OpenAlex public locations",
+    "url": "https://api.openalex.org/works/https%3A%2F%2Fdoi.org%2F10.1021%2Facs.jafc.4c00957",
+    "method": "GET",
+    "executed_at": "2026-10-05T12:25:38.811070+00:00",
+    "http_status": 200,
+    "content_type": "application/json",
+    "bytes": 34894,
+    "response_sha256": "5a5a4d51f921845d06363cbb3ee38ca21f43a727f3d0810e9aaf38912e53bca8",
+    "status": "retrieved_response_not_automatically_full_text"
+  },
+  {
+    "source": "Crossref full-text links",
+    "url": "https://api.crossref.org/works/10.1021%2Facs.jafc.4c00957",
+    "method": "GET",
+    "executed_at": "2026-10-05T12:25:39.159286+00:00",
+    "http_status": 200,
+    "content_type": "application/json",
+    "bytes": 12917,
+    "response_sha256": "6556035e4b611d9be6c47780261774f9f551044c1b4335ce9553c6411f9fa321",
+    "status": "retrieved_response_not_automatically_full_text"
+  },
+  {
+    "source": "Europe PMC public access metadata",
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1021%2Facs.jafc.4c00957%22&format=json&resultType=core",
+    "method": "GET",
+    "executed_at": "2026-10-05T12:25:39.559500+00:00",
+    "http_status": 200,
+    "content_type": "application/json;charset=UTF-8",
+    "bytes": 9817,
+    "response_sha256": "4485c8e4bbc1a5c12d492828e9443245b75497c3008edfb198f49912699d7cb0",
+    "status": "retrieved_response_not_automatically_full_text"
+  },
+  {
+    "source": "ACS Figshare public supporting-information search",
+    "url": "https://api.figshare.com/v2/articles/search",
+    "method": "POST",
+    "executed_at": "2026-10-05T12:25:39.759193+00:00",
+    "http_status": 200,
+    "content_type": "application/json",
+    "bytes": 2,
+    "response_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "status": "retrieved_response_not_automatically_full_text"
+  },
+  {
+    "source": "Corilagin publisher",
+    "url": "https://www.sciencedirect.com/science/article/pii/S1567576925011701",
+    "method": "GET",
+    "executed_at": "2026-10-05T12:25:40.025411+00:00",
+    "status": "unavailable",
+    "error": "HTTP Error 403: Forbidden",
+    "http_status": 403
+  },
+  {
+    "source": "Corilagin public preprint",
+    "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5093704",
+    "method": "GET",
+    "executed_at": "2026-10-05T12:25:40.103285+00:00",
+    "status": "unavailable",
+    "error": "HTTP Error 403: Forbidden",
+    "http_status": 403
+  },
+  {
+    "source": "Carnosic publisher",
+    "url": "https://pubs.acs.org/doi/full/10.1021/acs.jafc.4c00957",
+    "method": "GET",
+    "executed_at": "2026-10-05T12:25:40.189271+00:00",
+    "status": "unavailable",
+    "error": "HTTP Error 403: Forbidden",
+    "http_status": 403
+  }
+]
