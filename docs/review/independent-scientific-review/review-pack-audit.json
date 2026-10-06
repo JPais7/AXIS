@@ -1,0 +1,766 @@
+{
+  "candidate_sha": "0dc0ac13746f2e7107abc128d1471a7a99e3f64e",
+  "classification": "DECISION STABLE",
+  "conditions": [
+    "Independent scientific review pending",
+    "Tinworth final main remains inaccessible; accessible preprint/SI provenance identified",
+    "Seven readable pages used rather than compressing primary references into six"
+  ],
+  "critical_uncertainty": "uncertainty:target_engagement",
+  "cross_document_consistency": "PASS",
+  "decision_state_v1": "decision-state:1:cebbae3880aeec90",
+  "decision_state_v2": "decision-state:2:212f995ecc55c989",
+  "evidence_cutoff": "2026-10-05",
+  "generation_dependencies": "Python, reportlab, pypdf; PDF content is derived from fixed Git objects, no network",
+  "generator_versions": {
+    "pypdf": "6.10.0",
+    "reportlab": "4.4.9"
+  },
+  "input_sha256": {
+    "54ea4ef1fe3e53c34a405b9dc98ba41f5a4d6996:docs/releases/independent-review-handoff-2026-10-06.md": "dae7c8b77e7a23293c3b1de0002adb0190e2273842a7d830b57d42b31bd4edea",
+    "d11128538a2723737eced46be73d40cef56f43db:axis/resources/discovery/erap1-axspa/v1/manifest.json": "eb2993f83a92d19f751e5637944dbb8321c4245192538811764f452568c4cc60",
+    "d11128538a2723737eced46be73d40cef56f43db:axis/resources/evidence-integration/erap1-data-rich/2026/assay-methods-v2/source-artifacts.json": "9862a41fc07b030ca328d9197964e061f15db4e39b82094130141c66f17a5f90",
+    "d11128538a2723737eced46be73d40cef56f43db:axis/resources/evidence-integration/erap1-data-rich/2026/bradshaw-main-v3/allotype-substrate-context.json": "5d1b516478ccf19d5875d49140f9a16cbfa5eaf7563ce86342c2c61b141f22c9",
+    "d11128538a2723737eced46be73d40cef56f43db:axis/resources/evidence-integration/erap1-data-rich/2026/bradshaw-main-v3/assay-comparability.json": "2663dd50137fea8d8d066eeab6caf11bcf79ad8141a4c1dd75223c84f6904f16",
+    "d11128538a2723737eced46be73d40cef56f43db:axis/resources/evidence-integration/erap1-data-rich/2026/bradshaw-main-v3/causal-decision-diff.json": "eba1a9a17d3ef4009c29c99e40ffaef8f1e5577d9de46183075c2744d5d423f7",
+    "d11128538a2723737eced46be73d40cef56f43db:axis/resources/evidence-integration/erap1-data-rich/2026/bradshaw-main-v3/decision-state-v2.json": "2b7dff92da698229b4065b37d0ead41c6c57467894a5688c7273a0918b290ea9",
+    "d11128538a2723737eced46be73d40cef56f43db:axis/resources/evidence-integration/erap1-data-rich/2026/bradshaw-main-v3/learning-eligibility.json": "3b4557fdc11bc9ca07e42a769d76170435f5e5f3ef27297874f4f85cae044c4b",
+    "d11128538a2723737eced46be73d40cef56f43db:axis/resources/evidence-integration/erap1-data-rich/2026/bradshaw-main-v3/localized-uncertainty.json": "b87c546b6ec2671e0a0f0e08ee73b4f71d72f212b86768cf3543a0fd22c5e6dd",
+    "d11128538a2723737eced46be73d40cef56f43db:axis/resources/evidence-integration/erap1-data-rich/2026/bradshaw-main-v3/manifest.json": "a3de30a81ecc4574662cf133083503ae4a5d89a63116d617e9a1c11f47efdd3a",
+    "d11128538a2723737eced46be73d40cef56f43db:axis/resources/evidence-integration/erap1-data-rich/2026/bradshaw-main-v3/source-provenance.json": "3d629ea7bf4b91b780a2907abdace8d8da07b9544e1510b93576586b6a4a72c2",
+    "d11128538a2723737eced46be73d40cef56f43db:axis/resources/evidence-integration/erap1-data-rich/2026/v1/study-index.json": "403468418bf94ca881bae8d5bbfecb72dc439bcaddf3ec9ea1df8773467b2ae3",
+    "d11128538a2723737eced46be73d40cef56f43db:axis/resources/pharmacology/erap1/v1/chembl-extract.json": "c967f225c19e6d46eacf268bac81b6a818ba85150e94563d501beb05edad273b",
+    "d11128538a2723737eced46be73d40cef56f43db:docs/axis-repository-consolidation-2026.md": "a6599e37e9110361e14ec587696ed5a38764386ca357725a1a1195a432cc7a16",
+    "d11128538a2723737eced46be73d40cef56f43db:docs/erap1-bradshaw-final-reassessment-2026.md": "c9aabef3f8c8478ae92b410fac3795e8b30a029ac6d1b981861d59a5555b5025",
+    "d11128538a2723737eced46be73d40cef56f43db:docs/erap1-current-scientific-state.md": "e59f3b5db8dde05a79a1bd7c37b1761f0f3c222101246ff814b83abc4dcbd01d",
+    "d11128538a2723737eced46be73d40cef56f43db:reports/commercial/erap1-axspa/v1/state-snapshot.json": "83b2bcff0b58daccfeda58126d918d593e002e1499382f1ddfa450fe2737ee68"
+  },
+  "link_check_scope": "Git object targets verified locally; no new evidence retrieved or remote DOI availability asserted",
+  "pack_date": "2026-10-06",
+  "pack_version": "1.0",
+  "pages": 7,
+  "pdf_sha256": "73a78f2e83ebaa73bd5eb7b1890eadebbe8d575920cafabafc50ee952b743097",
+  "primary_reference_count": 12,
+  "primary_references": [
+    {
+      "doi": "10.1038/ng.873",
+      "note": "Frozen discovery provenance; access is claim-specific.",
+      "title": "Interaction between ERAP1 and HLA-B27 in ankylosing spondylitis implicates peptide handling in the mechanism for HLA-B27 in disease susceptibility.",
+      "year": "2011"
+    },
+    {
+      "doi": "10.1038/ncomms8146",
+      "note": "Frozen discovery provenance; access is claim-specific.",
+      "title": "Major histocompatibility complex associations of ankylosing spondylitis are complex and involve further epistasis with ERAP1.",
+      "year": "2015"
+    },
+    {
+      "doi": "10.1073/pnas.0500721102",
+      "note": "Frozen discovery provenance; access is claim-specific.",
+      "title": "The ER aminopeptidase, ERAP1, trims precursors to lengths of MHC class I peptides by a \"molecular ruler\" mechanism.",
+      "year": "2005"
+    },
+    {
+      "doi": "10.1002/art.38249",
+      "note": "Frozen discovery provenance; access is claim-specific.",
+      "title": "Critical role of endoplasmic reticulum aminopeptidase 1 in determining the length and sequence of peptides bound and presented by HLA-B27.",
+      "year": "2014"
+    },
+    {
+      "doi": "10.1136/annrheumdis-2014-206996",
+      "note": "Frozen discovery provenance; access is claim-specific.",
+      "title": "Silencing or inhibition of endoplasmic reticulum aminopeptidase 1 (ERAP1) suppresses free heavy chain expression and Th17 responses in ankylosing spondylitis.",
+      "year": "2016"
+    },
+    {
+      "doi": "10.1016/j.molimm.2016.04.002",
+      "note": "Frozen discovery provenance; access is claim-specific.",
+      "title": "ERAP1 reduces accumulation of aberrant and disulfide-linked forms of HLA-B27 on the cell surface.",
+      "year": "2016"
+    },
+    {
+      "doi": "10.1021/acs.jmedchem.9b00293",
+      "note": "Historical biochemical/cellular compounds; not direct cellular occupancy.",
+      "title": "Discovery of Selective Inhibitors of Endoplasmic Reticulum Aminopeptidase 1.",
+      "year": "2020"
+    },
+    {
+      "doi": "10.1016/j.jbc.2021.100443",
+      "note": "Frozen allotype/substrate or cellular immunopeptidome context.",
+      "title": "Common allotypes of ER aminopeptidase 1 have substrate-dependent and highly variable enzymatic properties.",
+      "year": "2021"
+    },
+    {
+      "doi": "10.1002/eji.202350449",
+      "note": "Frozen allotype/substrate or cellular immunopeptidome context.",
+      "title": "Distinct modulation of cellular immunopeptidome by the allosteric regulatory site of ER aminopeptidase 1.",
+      "year": "2023"
+    },
+    {
+      "doi": "10.1021/acs.jmedchem.5c03071",
+      "note": "Law et al.; main p4-5, p17/ref22; SI S60/Table S2. Institutional access; PDF not redistributed.",
+      "title": "Automated Molecular Design in BRADSHAW, Applied to the Optimization of ERAP1 Inhibitors",
+      "year": "2026"
+    },
+    {
+      "doi": "10.1021/acs.jmedchem.6c00029",
+      "note": "Tinworth programme. Methods rely on accessible preprint 10.1101/2025.11.17.686761 v1/SI; final main inaccessible in frozen scope. One publication chain, not independent replication.",
+      "title": "Discovery of an Orally Available Potent ER Aminopeptidase 1 (ERAP1) Inhibitor That Enhances Antitumor Responses and Limits Inflammatory Autoimmunity In Vivo.",
+      "year": "2026"
+    },
+    {
+      "doi": "10.1021/acs.jmedchem.9b02123",
+      "note": "Bibliographic locator retained without inventing an unrecorded title; main p8(H), linked explicitly by BRADSHAW p17/ref22.",
+      "title": "Liddle et al. - ERAP1 biochemical assay-method source",
+      "year": "2020"
+    }
+  ],
+  "provenance_links": [
+    {
+      "git_object_exists": true,
+      "label": "Current scientific state",
+      "url": "https://github.com/JPais7/AXIS/blob/d11128538a2723737eced46be73d40cef56f43db/docs/erap1-current-scientific-state.md"
+    },
+    {
+      "git_object_exists": true,
+      "label": "BRADSHAW reassessment",
+      "url": "https://github.com/JPais7/AXIS/blob/d11128538a2723737eced46be73d40cef56f43db/docs/erap1-bradshaw-final-reassessment-2026.md"
+    },
+    {
+      "git_object_exists": true,
+      "label": "DecisionState v2",
+      "url": "https://github.com/JPais7/AXIS/blob/d11128538a2723737eced46be73d40cef56f43db/axis/resources/evidence-integration/erap1-data-rich/2026/bradshaw-main-v3/decision-state-v2.json"
+    },
+    {
+      "git_object_exists": true,
+      "label": "Causal diff",
+      "url": "https://github.com/JPais7/AXIS/blob/d11128538a2723737eced46be73d40cef56f43db/axis/resources/evidence-integration/erap1-data-rich/2026/bradshaw-main-v3/causal-decision-diff.json"
+    },
+    {
+      "git_object_exists": true,
+      "label": "Assay comparability",
+      "url": "https://github.com/JPais7/AXIS/blob/d11128538a2723737eced46be73d40cef56f43db/axis/resources/evidence-integration/erap1-data-rich/2026/bradshaw-main-v3/assay-comparability.json"
+    },
+    {
+      "git_object_exists": true,
+      "label": "Evidence manifest",
+      "url": "https://github.com/JPais7/AXIS/blob/d11128538a2723737eced46be73d40cef56f43db/axis/resources/evidence-integration/erap1-data-rich/2026/bradshaw-main-v3/manifest.json"
+    },
+    {
+      "git_object_exists": true,
+      "label": "Independent-review handoff",
+      "url": "https://github.com/JPais7/AXIS/blob/54ea4ef1fe3e53c34a405b9dc98ba41f5a4d6996/docs/releases/independent-review-handoff-2026-10-06.md"
+    }
+  ],
+  "recommended_experiment": "decision:exp:chemical-genetic-engagement",
+  "reference_sha": "84ecc56e74747bdee12ecdf15b9a80bc760798f4",
+  "schema_version": 1,
+  "scientific_sha": "d11128538a2723737eced46be73d40cef56f43db",
+  "scientific_state_changed": false,
+  "source_branch": "codex/independent-review-freeze-2026",
+  "starting_sha": "54ea4ef1fe3e53c34a405b9dc98ba41f5a4d6996",
+  "statement_audit": [
+    {
+      "classification": "directly supported",
+      "source": "axis/resources/evidence-integration/erap1-data-rich/2026/bradshaw-main-v3/decision-state-v2.json",
+      "text": "Version 1.0 | 6 October 2026 | Independent review pending"
+    },
+    {
+      "classification": "directly supported",
+      "source": "axis/resources/evidence-integration/erap1-data-rich/2026/bradshaw-main-v3/decision-state-v2.json",
+      "text": "Evidence cutoff: <b>2026-10-05</b><br/>Frozen scientific/runtime state:<br/>d11128538a2723737eced46be73d40cef56f43db"
+    },
+    {
+      "classification": "repository-derived inference",
+      "source": "docs/axis-repository-consolidation-2026.md",
+      "text": "AXIS is a scientific decision system designed to make the reasoning between evidence, uncertainty and the next discriminating experiment explicit and auditable. In this case, it links source-scoped ERAP1 evidence to categorical assessments, competing explanations and conditional experimental consequences. It preserves distinctions between source assertions, calculations, inferences and proposed experiments. The present pack summarizes one frozen exploratory decision for expert criticism; it does not present AXIS as an autonomous scientist or treat automated reproducibility as scientific approval."
+    },
+    {
+      "classification": "reviewer question",
+      "source": "axis/resources/evidence-integration/erap1-data-rich/2026/bradshaw-main-v3/decision-state-v2.json",
+      "text": "This is a request for independent scientific criticism, not endorsement."
+    },
+    {
+      "classification": "reviewer question",
+      "source": "axis/resources/evidence-integration/erap1-data-rich/2026/bradshaw-main-v3/decision-state-v2.json",
+      "text": "We are not asking whether you endorse AXIS. We are asking where this scientific decision may be wrong."
+    },
+    {
+      "classification": "reviewer question",
+      "source": "axis/resources/evidence-integration/erap1-data-rich/2026/bradshaw-main-v3/decision-state-v2.json",
+      "text": "Please seek factual errors, overclaims, material missing evidence within scope, inappropriate evidence transfer, flawed assay comparisons, mechanistic reasoning errors, incorrect uncertainty prioritization and weaknesses in the next experiment."
+    },
+    {
+      "classification": "reviewer question",
+      "source": "axis/resources/evidence-integration/erap1-data-rich/2026/bradshaw-main-v3/decision-state-v2.json",
+      "text": "Read pages 2-5 for the decision in approximately 10 minutes. Use the questions, primary references and immutable repository links on pages 6-7 for a 30-60 minute audit."
+    },
+    {
+      "classification": "limitation",
+      "source": "docs/erap1-current-scientific-state.md",
+      "text": "AXIS has not been independently scientifically validated."
+    },
+    {
+      "classification": "limitation",
+      "source": "axis/resources/evidence-integration/erap1-data-rich/2026/bradshaw-main-v3/decision-state-v2.json",
+      "text": "This document summarizes a frozen scientific decision analysis for independent review. It is not clinical guidance, evidence of therapeutic efficacy, regulatory advice, or an endorsement of ERAP1 as a validated therapeutic target."
+    },
+    {
+      "classification": "repository-derived inference",
+      "source": "axis/resources/evidence-integration/erap1-data-rich/2026/bradshaw-main-v3/decision-state-v2.json",
+      "text": "Genetics \u2192 Mechanism \u2192 Structure \u2192 Chemistry \u2192 Cellular pharmacology \u2192 Target engagement \u2192 Disease translation"
+    },
+    {
+      "classification": "repository-derived inference",
+      "source": "Frozen DecisionState v2, assay-comparability registry, or reviewer response instructions; see input bindings",
+      "table_row": [
+        "Genetics",
+        "ERAP1 \u00d7 HLA association recorded; association does not establish therapeutic direction."
+      ]
+    },
+    {
+      "classification": "repository-derived inference",
+      "source": "Frozen DecisionState v2, assay-comparability registry, or reviewer response instructions; see input bindings",
+      "table_row": [
+        "Mechanism",
+        "Peptide-processing context; functional edge: INSUFFICIENT."
+      ]
+    },
+    {
+      "classification": "repository-derived inference",
+      "source": "Frozen DecisionState v2, assay-comparability registry, or reviewer response instructions; see input bindings",
+      "table_row": [
+        "Structure",
+        "13 mapped structures in v2; 12 added since canonical v1. Binding/design context, not cellular occupancy."
+      ]
+    },
+    {
+      "classification": "repository-derived inference",
+      "source": "Frozen DecisionState v2, assay-comparability registry, or reviewer response instructions; see input bindings",
+      "table_row": [
+        "Chemistry",
+        "Biochemical edge: SUPPORTED. Defined preparations and assay contexts only."
+      ]
+    },
+    {
+      "classification": "repository-derived inference",
+      "source": "Frozen DecisionState v2, assay-comparability registry, or reviewer response instructions; see input bindings",
+      "table_row": [
+        "Cellular pharmacology",
+        "HLA-phenotype edge: SUPPORTED. Reporter/peptidome changes are not direct engagement."
+      ]
+    },
+    {
+      "classification": "repository-derived inference",
+      "source": "Frozen DecisionState v2, assay-comparability registry, or reviewer response instructions; see input bindings",
+      "table_row": [
+        "Target engagement",
+        "Engagement edge: NOT_ASSESSED. Historical compound-specific attribution unresolved."
+      ]
+    },
+    {
+      "classification": "repository-derived inference",
+      "source": "Frozen DecisionState v2, assay-comparability registry, or reviewer response instructions; see input bindings",
+      "table_row": [
+        "Disease translation",
+        "Disease-model edge: SUPPORTED; clinical edge: NOT_ASSESSED. No established human axSpA efficacy."
+      ]
+    },
+    {
+      "classification": "directly supported",
+      "source": "axis/resources/evidence-integration/erap1-data-rich/2026/bradshaw-main-v3/causal-decision-diff.json",
+      "text": "DECISION STABLE"
+    },
+    {
+      "classification": "repository-derived inference",
+      "source": "axis/resources/evidence-integration/erap1-data-rich/2026/bradshaw-main-v3/causal-decision-diff.json",
+      "text": "Expanded evidence coverage did not change the critical uncertainty, next experiment or strategy identifiers. This is not a claim that all evidence or uncertainty states are unchanged."
+    },
+    {
+      "classification": "repository-derived inference",
+      "source": "axis/resources/evidence-integration/erap1-data-rich/2026/bradshaw-main-v3/decision-state-v2.json",
+      "text": "Do the phenotype-producing compounds directly engage ERAP1 in cells at those exposures?"
+    },
+    {
+      "classification": "repository-derived inference",
+      "source": "axis/resources/evidence-integration/erap1-data-rich/2026/bradshaw-main-v3/decision-state-v2.json",
+      "text": "Matched-genotype chemical-genetic experiment with an engagement readout"
+    },
+    {
+      "classification": "limitation",
+      "source": "axis/resources/evidence-integration/erap1-data-rich/2026/bradshaw-main-v3/decision-state-v2.json",
+      "text": "Engagement at phenotype-active exposure, coupled to a matched null/rescue comparison, can strengthen or weaken compound-specific attribution. The proposal is not performed or investigator-approved; feasibility remains unknown."
+    },
+    {
+      "classification": "directly supported",
+      "source": "axis/resources/evidence-integration/erap1-data-rich/2026/bradshaw-main-v3/decision-state-v2.json",
+      "text": "<b>Supporting continued investigation</b>"
+    },
+    {
+      "classification": "directly supported",
+      "source": "axis/resources/discovery/erap1-axspa/v1/manifest.json",
+      "text": "ERAP1/HLA genetic associations motivate peptide-handling biology, not a prescribed intervention. [1,2]"
+    },
+    {
+      "classification": "directly supported",
+      "source": "axis/resources/discovery/erap1-axspa/v1/manifest.json",
+      "text": "Peptide trimming and HLA-B27 repertoire effects provide mechanistic context; cellular responses are system-specific. [3-6]"
+    },
+    {
+      "classification": "directly supported",
+      "source": "axis/resources/evidence-integration/erap1-data-rich/2026/v1/study-index.json",
+      "text": "Allotype/substrate dependence is experimentally characterized and material to interpretation. [8,9]"
+    },
+    {
+      "classification": "directly supported",
+      "source": "docs/erap1-bradshaw-final-reassessment-2026.md",
+      "text": "Ligand-bound experimental regulatory-site structures and measured chemistry support design/tractability under recorded construct and assay contexts. [7,10-12]"
+    },
+    {
+      "classification": "directly supported",
+      "source": "docs/erap1-bradshaw-final-reassessment-2026.md",
+      "text": "BRADSHAW establishes defined Hap2/YTAFTIPSI biochemical activity and HeLa antigen-presentation pharmacology. Tinworth adds separate programme evidence; neither transfers occupancy to Maben compounds. [10-12]"
+    },
+    {
+      "classification": "directly supported",
+      "source": "axis/resources/evidence-integration/erap1-data-rich/2026/bradshaw-main-v3/decision-state-v2.json",
+      "text": "<b>Limiting the decision</b>"
+    },
+    {
+      "classification": "limitation",
+      "source": "axis/resources/evidence-integration/erap1-data-rich/2026/bradshaw-main-v3/decision-state-v2.json",
+      "text": "Historical phenotype-producing Maben compounds lack demonstrated compound-specific direct cellular engagement in the curated decision. Off-target and indirect explanations remain viable. [7]"
+    },
+    {
+      "classification": "limitation",
+      "source": "axis/resources/evidence-integration/erap1-data-rich/2026/bradshaw-main-v3/decision-state-v2.json",
+      "text": "Biochemical inhibition, cellular antigen presentation, engagement and disease modification are different evidence classes."
+    },
+    {
+      "classification": "limitation",
+      "source": "axis/resources/evidence-integration/erap1-data-rich/2026/bradshaw-main-v3/decision-state-v2.json",
+      "text": "Unreported context and allotype/substrate dependence restrict pooling and transfer. Chen and Tran report different free-heavy-chain directions in different systems. [5,6]"
+    },
+    {
+      "classification": "limitation",
+      "source": "docs/erap1-current-scientific-state.md",
+      "text": "No established human axSpA therapeutic efficacy follows from these preclinical data. Independent review remains pending; no predictive model was trained."
+    },
+    {
+      "classification": "repository-derived inference",
+      "source": "Frozen DecisionState v2, assay-comparability registry, or reviewer response instructions; see input bindings",
+      "table_row": [
+        "BRADSHAW internal biochemical",
+        "COMPARABLE"
+      ]
+    },
+    {
+      "classification": "repository-derived inference",
+      "source": "Frozen DecisionState v2, assay-comparability registry, or reviewer response instructions; see input bindings",
+      "table_row": [
+        "BRADSHAW biochemical vs cellular",
+        "NOT_COMPARABLE"
+      ]
+    },
+    {
+      "classification": "repository-derived inference",
+      "source": "Frozen DecisionState v2, assay-comparability registry, or reviewer response instructions; see input bindings",
+      "table_row": [
+        "BRADSHAW vs Tinworth biochemical",
+        "PARTIALLY_COMPARABLE"
+      ]
+    },
+    {
+      "classification": "repository-derived inference",
+      "source": "Frozen DecisionState v2, assay-comparability registry, or reviewer response instructions; see input bindings",
+      "table_row": [
+        "BRADSHAW vs historical Maben",
+        "NOT_COMPARABLE"
+      ]
+    },
+    {
+      "classification": "repository-derived inference",
+      "source": "Frozen DecisionState v2, assay-comparability registry, or reviewer response instructions; see input bindings",
+      "table_row": [
+        "BRADSHAW allotype/substrate panel",
+        "NOT_COMPARABLE"
+      ]
+    },
+    {
+      "classification": "repository-derived inference",
+      "source": "docs/erap1-bradshaw-final-reassessment-2026.md",
+      "text": "Chemical tractability is better established than therapeutic causality in this frozen corpus."
+    },
+    {
+      "classification": "limitation",
+      "source": "axis/resources/evidence-integration/erap1-data-rich/2026/bradshaw-main-v3/assay-comparability.json",
+      "text": "COMPARABLE is confined to source-specific Hap2/YTAFTIPSI SAR with exclusions; PARTIALLY_COMPARABLE establishes a method family, not quantitative interchangeability, selectivity ratios or pooling."
+    },
+    {
+      "classification": "repository-derived inference",
+      "source": "axis/resources/evidence-integration/erap1-data-rich/2026/bradshaw-main-v3/decision-state-v2.json",
+      "text": "Observed activity + cellular phenotype \u2192 competing explanations \u2192 unresolved engagement \u2192 matched engagement/null/rescue experiment \u2192 prospective outcome \u2192 decision consequence"
+    },
+    {
+      "classification": "repository-derived inference",
+      "source": "Frozen DecisionState v2, assay-comparability registry, or reviewer response instructions; see input bindings",
+      "table_row": [
+        "Context-dependent effect",
+        "VIABLE: The effect depends on HLA-B27 subtype or ERAP1 allotype context rather than being a general consequence of ERAP1 modulation."
+      ]
+    },
+    {
+      "classification": "repository-derived inference",
+      "source": "Frozen DecisionState v2, assay-comparability registry, or reviewer response instructions; see input bindings",
+      "table_row": [
+        "Indirect pathway",
+        "VIABLE: ERAP1 is perturbed, but the HLA-B27-related phenotype arises through an indirect pathway rather than proximal catalytic modulation."
+      ]
+    },
+    {
+      "classification": "repository-derived inference",
+      "source": "Frozen DecisionState v2, assay-comparability registry, or reviewer response instructions; see input bindings",
+      "table_row": [
+        "Off-target activity",
+        "VIABLE: The phenotype arises primarily from compound activity at targets other than ERAP1 (for example ERAP2 or unrelated proteins)."
+      ]
+    },
+    {
+      "classification": "repository-derived inference",
+      "source": "Frozen DecisionState v2, assay-comparability registry, or reviewer response instructions; see input bindings",
+      "table_row": [
+        "On-target ERAP1 modulation",
+        "PARTIALLY_SUPPORTED: The HLA-B27-related cellular phenotype produced by the compounds arises from direct modulation of ERAP1 in those cells."
+      ]
+    },
+    {
+      "classification": "repository-derived inference",
+      "source": "axis/resources/evidence-integration/erap1-data-rich/2026/bradshaw-main-v3/decision-state-v2.json",
+      "text": "HLA-B27-positive cell system with wild-type, ERAP1-depleted or null, and ERAP1-rescued arms in a matched genetic background. Compound at phenotype-active exposures versus vehicle and an inactive analogue in each arm; ERAP1 genetic depletion and re-expression as the genetic comparison."
+    },
+    {
+      "classification": "repository-derived inference",
+      "source": "axis/resources/evidence-integration/erap1-data-rich/2026/bradshaw-main-v3/decision-state-v2.json",
+      "text": "<b>Primary endpoint:</b> Compound-dependent ERAP1 engagement at the exposures that produce the phenotype, together with phenotype attenuation in ERAP1-null cells. <b>Context:</b> report/match ERAP1 allotype; choose/report HLA-B27 subtype. Measure viability separately and use the same phenotype-active exposures."
+    },
+    {
+      "classification": "limitation",
+      "source": "axis/resources/evidence-integration/erap1-data-rich/2026/bradshaw-main-v3/decision-state-v2.json",
+      "text": "<b>Controls and feasibility:</b> vehicle; matched ERAP1-null/depleted cells; rescue; inactive analogue only if established (none identified). No qualifying positive-control ligand is established in the curated corpus. Compound identity, engagement readout and null/rescue validation remain prerequisites; cost/time and local feasibility are unknown."
+    },
+    {
+      "classification": "repository-derived inference",
+      "source": "Frozen DecisionState v2, assay-comparability registry, or reviewer response instructions; see input bindings",
+      "table_row": [
+        "s1",
+        "Engagement + attenuation in null + rescue",
+        "Strengthen this compound/context strategy; indirect downstream action and broader context are not excluded."
+      ]
+    },
+    {
+      "classification": "repository-derived inference",
+      "source": "Frozen DecisionState v2, assay-comparability registry, or reviewer response instructions; see input bindings",
+      "table_row": [
+        "s2",
+        "Engagement + phenotype unchanged in null",
+        "Weaken ERAP1 attribution; alternative chemotypes require their own evidence."
+      ]
+    },
+    {
+      "classification": "repository-derived inference",
+      "source": "Frozen DecisionState v2, assay-comparability registry, or reviewer response instructions; see input bindings",
+      "table_row": [
+        "s3",
+        "No signal in validated assay + attenuation in null",
+        "Change mechanistic model toward an indirect route; re-justify strategy."
+      ]
+    },
+    {
+      "classification": "repository-derived inference",
+      "source": "Frozen DecisionState v2, assay-comparability registry, or reviewer response instructions; see input bindings",
+      "table_row": [
+        "s4",
+        "Engagement/dependency vary by background",
+        "Investigate matched allotype/HLA context before strategy choice."
+      ]
+    },
+    {
+      "classification": "repository-derived inference",
+      "source": "Frozen DecisionState v2, assay-comparability registry, or reviewer response instructions; see input bindings",
+      "table_row": [
+        "s5",
+        "Invalid null/rescue or toxicity confounding",
+        "No mechanistic inference; validate controls/model and repeat."
+      ]
+    },
+    {
+      "classification": "limitation",
+      "source": "axis/resources/evidence-integration/erap1-data-rich/2026/bradshaw-main-v3/decision-state-v2.json",
+      "text": "A single system does not establish patient relevance. Null/rescue is not partial pharmacological inhibition; selectivity against other proteins remains unresolved. No scenario has occurred in this reassessment."
+    },
+    {
+      "classification": "directly supported",
+      "source": "axis/resources/evidence-integration/erap1-data-rich/2026/bradshaw-main-v3/causal-decision-diff.json",
+      "text": "The causal diff records expanded structural, chemical and cellular evidence coverage. Twelve source-mapped structures were added since canonical v1; these provide regulatory-site design context, not occupancy. [7,10-12]"
+    },
+    {
+      "classification": "directly supported",
+      "source": "docs/erap1-bradshaw-final-reassessment-2026.md",
+      "text": "Legitimate access to the BRADSHAW main article resolved the assay-identity blocker. Page 17/reference 22 explicitly links to Liddle 2020: purified Hap2, YTAFTIPSI cleavage and RapidFire MS. This chain supports constrained interpretation, not inferred equivalence based on programme similarity. [10,12]"
+    },
+    {
+      "classification": "directly supported",
+      "source": "docs/erap1-current-scientific-state.md",
+      "text": "Conservative BRADSHAW subsets retain 38 biochemical compounds/24 Murcko scaffolds and 31 cellular compounds/19 scaffolds. Scientific eligibility is MODEL_ELIGIBLE_WITH_CONDITIONS; no model was trained. Tinworth remains separate SAR-only evidence. [10,11]"
+    },
+    {
+      "classification": "limitation",
+      "source": "axis/resources/evidence-integration/erap1-data-rich/2026/bradshaw-main-v3/decision-state-v2.json",
+      "text": "Historical Maben compound-specific engagement remains unresolved. Biochemical potency does not establish cellular engagement; a cellular phenotype does not establish a therapeutic mechanism. Later programme evidence cannot supply occupancy for earlier compounds."
+    },
+    {
+      "classification": "limitation",
+      "source": "docs/erap1-bradshaw-final-reassessment-2026.md",
+      "text": "Critical uncertainty and the recommended chemical-genetic engagement experiment remain unchanged. Strategy identifiers are stable. No protective human peptide state, optimal modulation magnitude or human axSpA efficacy is established."
+    },
+    {
+      "classification": "limitation",
+      "source": "axis/resources/evidence-integration/erap1-data-rich/2026/bradshaw-main-v3/localized-uncertainty.json",
+      "text": "Unknown temperature, preincubation, dose range and tested form restrict exact replication and cross-programme comparison. HeLa ERAP1 allotype, ERAP2, endogenous HLA and control-inhibitor identity remain unconfirmed."
+    },
+    {
+      "classification": "limitation",
+      "source": "docs/erap1-bradshaw-final-reassessment-2026.md",
+      "text": "Compound 28 retains the main/SI discrepancy (cellular pIC50 5.3 versus 5.4). Censored occasions for 21/28/33/44, singleton observations and missing N are preserved and excluded where required for fitting. No bound becomes an exact value."
+    },
+    {
+      "classification": "repository-derived inference",
+      "source": "docs/axis-repository-consolidation-2026.md",
+      "text": "<b>Source assertion</b>: what a publication reports. <b>AXIS observation</b>: recorded extraction/calculation. <b>AXIS inference</b>: scoped interpretation. <b>AI suggestion</b>: competing explanations/experiment/scenarios. <b>Researcher hypothesis</b>: proposed mechanism. <b>Experimental result</b>: an observed performed experiment, not a prospective scenario. These kinds are not interchangeable; pending reviews remain pending."
+    },
+    {
+      "classification": "limitation",
+      "source": "axis/resources/evidence-integration/erap1-data-rich/2026/bradshaw-main-v3/decision-state-v2.json",
+      "text": "The disease-model edge is SUPPORTED in v2 while clinical translation remains NOT_ASSESSED. Animal/cellular evidence is not human axSpA efficacy; the stable decision concerns the still-missing compound-specific engagement link."
+    },
+    {
+      "classification": "reviewer question",
+      "source": "axis/resources/evidence-integration/erap1-data-rich/2026/bradshaw-main-v3/decision-state-v2.json",
+      "text": "1. Is the ERAP1/HLA-B27/spondyloarthritis biology represented accurately?"
+    },
+    {
+      "classification": "reviewer question",
+      "source": "axis/resources/evidence-integration/erap1-data-rich/2026/bradshaw-main-v3/decision-state-v2.json",
+      "text": "2. Is any material evidence overstated?"
+    },
+    {
+      "classification": "reviewer question",
+      "source": "axis/resources/evidence-integration/erap1-data-rich/2026/bradshaw-main-v3/decision-state-v2.json",
+      "text": "3. Is important evidence missing within the stated scope and cutoff?"
+    },
+    {
+      "classification": "reviewer question",
+      "source": "axis/resources/evidence-integration/erap1-data-rich/2026/bradshaw-main-v3/decision-state-v2.json",
+      "text": "4. Are assay contexts and comparability restrictions appropriate?"
+    },
+    {
+      "classification": "reviewer question",
+      "source": "axis/resources/evidence-integration/erap1-data-rich/2026/bradshaw-main-v3/decision-state-v2.json",
+      "text": "5. Is allotype/substrate dependence represented appropriately?"
+    },
+    {
+      "classification": "reviewer question",
+      "source": "axis/resources/evidence-integration/erap1-data-rich/2026/bradshaw-main-v3/decision-state-v2.json",
+      "text": "6. Are biochemical activity, phenotype and direct engagement sufficiently distinct?"
+    },
+    {
+      "classification": "reviewer question",
+      "source": "axis/resources/evidence-integration/erap1-data-rich/2026/bradshaw-main-v3/decision-state-v2.json",
+      "text": "7. Is historical Maben evidence correctly separated from later programme tractability?"
+    },
+    {
+      "classification": "reviewer question",
+      "source": "axis/resources/evidence-integration/erap1-data-rich/2026/bradshaw-main-v3/decision-state-v2.json",
+      "text": "8. Is direct cellular engagement the most important unresolved decision uncertainty?"
+    },
+    {
+      "classification": "reviewer question",
+      "source": "axis/resources/evidence-integration/erap1-data-rich/2026/bradshaw-main-v3/decision-state-v2.json",
+      "text": "9. Does the chemical-genetic experiment discriminate the major explanations?"
+    },
+    {
+      "classification": "reviewer question",
+      "source": "axis/resources/evidence-integration/erap1-data-rich/2026/bradshaw-main-v3/decision-state-v2.json",
+      "text": "10. Is DECISION STABLE a scientifically defensible interpretation?"
+    },
+    {
+      "classification": "reviewer question",
+      "source": "axis/resources/evidence-integration/erap1-data-rich/2026/bradshaw-main-v3/decision-state-v2.json",
+      "text": "What is the strongest scientific reason this decision could be wrong?"
+    },
+    {
+      "classification": "repository-derived inference",
+      "source": "Frozen DecisionState v2, assay-comparability registry, or reviewer response instructions; see input bindings",
+      "table_row": [
+        "Severity",
+        "CRITICAL / MAJOR / MINOR / NO_ISSUE"
+      ]
+    },
+    {
+      "classification": "repository-derived inference",
+      "source": "Frozen DecisionState v2, assay-comparability registry, or reviewer response instructions; see input bindings",
+      "table_row": [
+        "Claim/artifact",
+        "Provide exact locator"
+      ]
+    },
+    {
+      "classification": "repository-derived inference",
+      "source": "Frozen DecisionState v2, assay-comparability registry, or reviewer response instructions; see input bindings",
+      "table_row": [
+        "Evidence/source",
+        "Provide exact locator"
+      ]
+    },
+    {
+      "classification": "repository-derived inference",
+      "source": "Frozen DecisionState v2, assay-comparability registry, or reviewer response instructions; see input bindings",
+      "table_row": [
+        "Rationale",
+        "Explain the scientific concern"
+      ]
+    },
+    {
+      "classification": "repository-derived inference",
+      "source": "Frozen DecisionState v2, assay-comparability registry, or reviewer response instructions; see input bindings",
+      "table_row": [
+        "Recommended correction",
+        "Describe the remedy"
+      ]
+    },
+    {
+      "classification": "repository-derived inference",
+      "source": "Frozen DecisionState v2, assay-comparability registry, or reviewer response instructions; see input bindings",
+      "table_row": [
+        "Changes decision?",
+        "YES / NO / UNCERTAIN; explain"
+      ]
+    },
+    {
+      "classification": "directly supported",
+      "source": "axis/resources/evidence-integration/erap1-data-rich/2026/bradshaw-main-v3/decision-state-v2.json",
+      "text": "Cutoff 2026-10-05 | Decision: DECISION STABLE<br/>Scientific/runtime: d11128538a2723737eced46be73d40cef56f43db<br/>Scientific reference: 84ecc56e74747bdee12ecdf15b9a80bc760798f4<br/>v1: decision-state:1:cebbae3880aeec90 | v2: decision-state:2:212f995ecc55c989<br/>Critical: uncertainty:target_engagement<br/>Next: decision:exp:chemical-genetic-engagement"
+    },
+    {
+      "classification": "limitation",
+      "source": "axis/resources/evidence-integration/erap1-data-rich/2026/bradshaw-main-v3/decision-state-v2.json",
+      "text": "Every material AXIS conclusion is intended to be traceable from conclusion \u2192 claim \u2192 evidence \u2192 experiment/source. This is an intended audit chain, not certification of completeness or factual accuracy."
+    },
+    {
+      "classification": "directly supported",
+      "source": "docs/erap1-current-scientific-state.md",
+      "text": "<link href=\"https://github.com/JPais7/AXIS/blob/d11128538a2723737eced46be73d40cef56f43db/docs/erap1-current-scientific-state.md\" color=\"#20776E\">Current scientific state</link> - immutable d111285"
+    },
+    {
+      "classification": "directly supported",
+      "source": "docs/erap1-bradshaw-final-reassessment-2026.md",
+      "text": "<link href=\"https://github.com/JPais7/AXIS/blob/d11128538a2723737eced46be73d40cef56f43db/docs/erap1-bradshaw-final-reassessment-2026.md\" color=\"#20776E\">BRADSHAW reassessment</link> - immutable d111285"
+    },
+    {
+      "classification": "directly supported",
+      "source": "axis/resources/evidence-integration/erap1-data-rich/2026/bradshaw-main-v3/decision-state-v2.json",
+      "text": "<link href=\"https://github.com/JPais7/AXIS/blob/d11128538a2723737eced46be73d40cef56f43db/axis/resources/evidence-integration/erap1-data-rich/2026/bradshaw-main-v3/decision-state-v2.json\" color=\"#20776E\">DecisionState v2</link> - immutable d111285"
+    },
+    {
+      "classification": "directly supported",
+      "source": "axis/resources/evidence-integration/erap1-data-rich/2026/bradshaw-main-v3/causal-decision-diff.json",
+      "text": "<link href=\"https://github.com/JPais7/AXIS/blob/d11128538a2723737eced46be73d40cef56f43db/axis/resources/evidence-integration/erap1-data-rich/2026/bradshaw-main-v3/causal-decision-diff.json\" color=\"#20776E\">Causal diff</link> - immutable d111285"
+    },
+    {
+      "classification": "directly supported",
+      "source": "axis/resources/evidence-integration/erap1-data-rich/2026/bradshaw-main-v3/assay-comparability.json",
+      "text": "<link href=\"https://github.com/JPais7/AXIS/blob/d11128538a2723737eced46be73d40cef56f43db/axis/resources/evidence-integration/erap1-data-rich/2026/bradshaw-main-v3/assay-comparability.json\" color=\"#20776E\">Assay comparability</link> - immutable d111285"
+    },
+    {
+      "classification": "directly supported",
+      "source": "axis/resources/evidence-integration/erap1-data-rich/2026/bradshaw-main-v3/manifest.json",
+      "text": "<link href=\"https://github.com/JPais7/AXIS/blob/d11128538a2723737eced46be73d40cef56f43db/axis/resources/evidence-integration/erap1-data-rich/2026/bradshaw-main-v3/manifest.json\" color=\"#20776E\">Evidence manifest</link> - immutable d111285"
+    },
+    {
+      "classification": "directly supported",
+      "source": "docs/releases/independent-review-handoff-2026-10-06.md",
+      "text": "<link href=\"https://github.com/JPais7/AXIS/blob/54ea4ef1fe3e53c34a405b9dc98ba41f5a4d6996/docs/releases/independent-review-handoff-2026-10-06.md\" color=\"#20776E\">Independent-review handoff</link> - immutable 54ea4ef"
+    },
+    {
+      "classification": "directly supported",
+      "source": "frozen primary provenance",
+      "text": "<b>[1] Interaction between ERAP1 and HLA-B27 in ankylosing spondylitis implicates peptide handling in the mechanism for HLA-B27 in disease susceptibility.</b> (2011).<br/><link href=\"https://doi.org/10.1038/ng.873\" color=\"#20776E\">DOI: 10.1038/ng.873</link><br/>Frozen discovery provenance; access is claim-specific."
+    },
+    {
+      "classification": "directly supported",
+      "source": "frozen primary provenance",
+      "text": "<b>[2] Major histocompatibility complex associations of ankylosing spondylitis are complex and involve further epistasis with ERAP1.</b> (2015).<br/><link href=\"https://doi.org/10.1038/ncomms8146\" color=\"#20776E\">DOI: 10.1038/ncomms8146</link><br/>Frozen discovery provenance; access is claim-specific."
+    },
+    {
+      "classification": "directly supported",
+      "source": "frozen primary provenance",
+      "text": "<b>[3] The ER aminopeptidase, ERAP1, trims precursors to lengths of MHC class I peptides by a &quot;molecular ruler&quot; mechanism.</b> (2005).<br/><link href=\"https://doi.org/10.1073/pnas.0500721102\" color=\"#20776E\">DOI: 10.1073/pnas.0500721102</link><br/>Frozen discovery provenance; access is claim-specific."
+    },
+    {
+      "classification": "directly supported",
+      "source": "frozen primary provenance",
+      "text": "<b>[4] Critical role of endoplasmic reticulum aminopeptidase 1 in determining the length and sequence of peptides bound and presented by HLA-B27.</b> (2014).<br/><link href=\"https://doi.org/10.1002/art.38249\" color=\"#20776E\">DOI: 10.1002/art.38249</link><br/>Frozen discovery provenance; access is claim-specific."
+    },
+    {
+      "classification": "directly supported",
+      "source": "frozen primary provenance",
+      "text": "<b>[5] Silencing or inhibition of endoplasmic reticulum aminopeptidase 1 (ERAP1) suppresses free heavy chain expression and Th17 responses in ankylosing spondylitis.</b> (2016).<br/><link href=\"https://doi.org/10.1136/annrheumdis-2014-206996\" color=\"#20776E\">DOI: 10.1136/annrheumdis-2014-206996</link><br/>Frozen discovery provenance; access is claim-specific."
+    },
+    {
+      "classification": "directly supported",
+      "source": "frozen primary provenance",
+      "text": "<b>[6] ERAP1 reduces accumulation of aberrant and disulfide-linked forms of HLA-B27 on the cell surface.</b> (2016).<br/><link href=\"https://doi.org/10.1016/j.molimm.2016.04.002\" color=\"#20776E\">DOI: 10.1016/j.molimm.2016.04.002</link><br/>Frozen discovery provenance; access is claim-specific."
+    },
+    {
+      "classification": "directly supported",
+      "source": "frozen primary provenance",
+      "text": "<b>[7] Discovery of Selective Inhibitors of Endoplasmic Reticulum Aminopeptidase 1.</b> (2020).<br/><link href=\"https://doi.org/10.1021/acs.jmedchem.9b00293\" color=\"#20776E\">DOI: 10.1021/acs.jmedchem.9b00293</link><br/>Historical biochemical/cellular compounds; not direct cellular occupancy."
+    },
+    {
+      "classification": "directly supported",
+      "source": "frozen primary provenance",
+      "text": "<b>[8] Common allotypes of ER aminopeptidase 1 have substrate-dependent and highly variable enzymatic properties.</b> (2021).<br/><link href=\"https://doi.org/10.1016/j.jbc.2021.100443\" color=\"#20776E\">DOI: 10.1016/j.jbc.2021.100443</link><br/>Frozen allotype/substrate or cellular immunopeptidome context."
+    },
+    {
+      "classification": "directly supported",
+      "source": "frozen primary provenance",
+      "text": "<b>[9] Distinct modulation of cellular immunopeptidome by the allosteric regulatory site of ER aminopeptidase 1.</b> (2023).<br/><link href=\"https://doi.org/10.1002/eji.202350449\" color=\"#20776E\">DOI: 10.1002/eji.202350449</link><br/>Frozen allotype/substrate or cellular immunopeptidome context."
+    },
+    {
+      "classification": "directly supported",
+      "source": "frozen primary provenance",
+      "text": "<b>[10] Automated Molecular Design in BRADSHAW, Applied to the Optimization of ERAP1 Inhibitors</b> (2026).<br/><link href=\"https://doi.org/10.1021/acs.jmedchem.5c03071\" color=\"#20776E\">DOI: 10.1021/acs.jmedchem.5c03071</link><br/>Law et al.; main p4-5, p17/ref22; SI S60/Table S2. Institutional access; PDF not redistributed."
+    },
+    {
+      "classification": "directly supported",
+      "source": "frozen primary provenance",
+      "text": "<b>[11] Discovery of an Orally Available Potent ER Aminopeptidase 1 (ERAP1) Inhibitor That Enhances Antitumor Responses and Limits Inflammatory Autoimmunity In Vivo.</b> (2026).<br/><link href=\"https://doi.org/10.1021/acs.jmedchem.6c00029\" color=\"#20776E\">DOI: 10.1021/acs.jmedchem.6c00029</link><br/>Tinworth programme. Methods rely on accessible preprint 10.1101/2025.11.17.686761 v1/SI; final main inaccessible in frozen scope. One publication chain, not independent replication."
+    },
+    {
+      "classification": "directly supported",
+      "source": "frozen primary provenance",
+      "text": "<b>[12] Liddle et al. - ERAP1 biochemical assay-method source</b> (2020).<br/><link href=\"https://doi.org/10.1021/acs.jmedchem.9b02123\" color=\"#20776E\">DOI: 10.1021/acs.jmedchem.9b02123</link><br/>Bibliographic locator retained without inventing an unrecorded title; main p8(H), linked explicitly by BRADSHAW p17/ref22."
+    },
+    {
+      "classification": "limitation",
+      "source": "axis/resources/evidence-integration/erap1-data-rich/2026/bradshaw-main-v3/decision-state-v2.json",
+      "text": "References are selected from the frozen corpus, not a new systematic search. Metadata/abstract access is not full-text adjudication. The later BRADSHAW v3 access record supersedes its older insufficient-access label; Tinworth final-main restrictions remain. Licensed primary PDFs are not included. Missing engagement in this corpus is not a claim that no engagement evidence exists anywhere."
+    },
+    {
+      "classification": "reviewer question",
+      "source": "axis/resources/evidence-integration/erap1-data-rich/2026/bradshaw-main-v3/decision-state-v2.json",
+      "text": "Please return structured criticism of the decision and its provenance. Independent scientific review remains pending."
+    }
+  ],
+  "visual_qa": "PASS: all seven rendered pages manually inspected; revised pages 4/6 rechecked"
+}
